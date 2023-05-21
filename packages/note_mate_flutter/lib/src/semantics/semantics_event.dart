@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/semantics/semantics_event.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/semantics.dart' as _i4;
 
 /// class AnnounceSemanticsEvent extends SemanticsEvent
-class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Mate {
+class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent
+    with _i2.Mate {
   /// AnnounceSemanticsEvent AnnounceSemanticsEvent(String message, TextDirection textDirection, {Assertiveness assertiveness = Assertiveness.polite})
   AnnounceSemanticsEvent$Mate(
     /// requiredParameters: String message
@@ -50,7 +51,8 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Ma
 }
 
 /// class TooltipSemanticsEvent extends SemanticsEvent
-class TooltipSemanticsEvent$Mate extends _i1.TooltipSemanticsEvent with _i2.Mate {
+class TooltipSemanticsEvent$Mate extends _i1.TooltipSemanticsEvent
+    with _i2.Mate {
   /// TooltipSemanticsEvent TooltipSemanticsEvent(String message)
   TooltipSemanticsEvent$Mate(
 

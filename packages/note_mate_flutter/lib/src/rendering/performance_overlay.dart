@@ -2,10 +2,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/performance_overlay.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class RenderPerformanceOverlay extends RenderBox
-class RenderPerformanceOverlay$Mate extends _i1.RenderPerformanceOverlay with _i2.Mate {
+class RenderPerformanceOverlay$Mate extends _i1.RenderPerformanceOverlay
+    with _i2.Mate {
   /// RenderPerformanceOverlay RenderPerformanceOverlay({int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   RenderPerformanceOverlay$Mate({
     /// optionalParameters: {int optionsMask = 0} , default:processed=IntegerLiteralImpl
@@ -51,8 +52,10 @@ class RenderPerformanceOverlay$Mate extends _i1.RenderPerformanceOverlay with _i
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
   }
 

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/floating_action_button_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/rendering/box.dart' as _i5;
@@ -12,7 +12,8 @@ import 'package:flutter/src/material/material_state.dart' as _i8;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i9;
 
 /// class FloatingActionButtonThemeData with Diagnosticable
-class FloatingActionButtonThemeData$Mate extends _i1.FloatingActionButtonThemeData with _i2.Mate {
+class FloatingActionButtonThemeData$Mate
+    extends _i1.FloatingActionButtonThemeData with _i2.Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
     /// optionalParameters: {Color? foregroundColor} , default:none
@@ -178,7 +179,8 @@ class FloatingActionButtonThemeData$Mate extends _i1.FloatingActionButtonThemeDa
             init: extendedTextStyle,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

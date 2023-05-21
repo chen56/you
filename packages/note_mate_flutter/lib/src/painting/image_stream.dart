@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/painting/image_stream.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'dart:async' as _i4;
 import 'package:flutter/src/foundation/assertions.dart' as _i5;
@@ -128,7 +128,8 @@ class ImageChunkEvent$Mate extends _i1.ImageChunkEvent with _i2.Mate {
 }
 
 /// class OneFrameImageStreamCompleter extends ImageStreamCompleter
-class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter with _i2.Mate {
+class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter
+    with _i2.Mate {
   /// OneFrameImageStreamCompleter OneFrameImageStreamCompleter(Future<ImageInfo> image, {Iterable<DiagnosticsNode> Function()? informationCollector})
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
@@ -161,7 +162,8 @@ class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter
 }
 
 /// class MultiFrameImageStreamCompleter extends ImageStreamCompleter
-class MultiFrameImageStreamCompleter$Mate extends _i1.MultiFrameImageStreamCompleter with _i2.Mate {
+class MultiFrameImageStreamCompleter$Mate
+    extends _i1.MultiFrameImageStreamCompleter with _i2.Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
     /// optionalParameters: {required Future<Codec> codec} , default:none

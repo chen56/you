@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 import 'package:note/note_core.dart';
 
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,

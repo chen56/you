@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/dropdown.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/alignment.dart' as _i5;
@@ -89,7 +89,8 @@ class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
-class DropdownButtonHideUnderline$Mate extends _i1.DropdownButtonHideUnderline with _i2.Mate {
+class DropdownButtonHideUnderline$Mate extends _i1.DropdownButtonHideUnderline
+    with _i2.Mate {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -388,7 +389,8 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
-class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> with _i2.Mate {
+class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T>
+    with _i2.Mate {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/force_press.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/recognizer.dart' as _i4;
 
@@ -50,7 +50,8 @@ class ForcePressDetails$Mate extends _i1.ForcePressDetails with _i2.Mate {
 }
 
 /// class ForcePressGestureRecognizer extends OneSequenceGestureRecognizer
-class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer with _i2.Mate {
+class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer
+    with _i2.Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
     /// optionalParameters: {double startPressure = 0.4} , default:processed=DoubleLiteralImpl

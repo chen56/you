@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/fade_in_image.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/image_provider.dart' as _i4;
 import 'package:flutter/src/widgets/image.dart' as _i5;
@@ -90,7 +90,8 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder':
+              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,
@@ -305,7 +306,8 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder':
+              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,
@@ -561,7 +563,8 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder':
+              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,

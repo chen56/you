@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/foundation/stack_frame.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class StackFrame
 class StackFrame$Mate extends _i1.StackFrame with _i2.Mate {

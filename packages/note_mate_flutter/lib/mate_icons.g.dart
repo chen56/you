@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/material.dart' as _i1;
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 
 IconRegister registerIcon() {
   IconRegister result = IconRegister("Icons", "package:flutter/material.dart");

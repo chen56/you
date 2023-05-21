@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/popup_menu.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
@@ -119,7 +119,8 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
             init: textStyle,
             isNamed: true,
           ),
-          'labelTextStyle': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
+          'labelTextStyle':
+              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
@@ -157,7 +158,8 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
 }
 
 /// class CheckedPopupMenuItem<T> extends PopupMenuItem<T>
-class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.Mate {
+class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T>
+    with _i2.Mate {
   /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
   CheckedPopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none

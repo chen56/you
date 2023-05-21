@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 typedef OnClick = void Function();
@@ -14,7 +14,8 @@ void isInt<T>() {
 
 void main() {
   late ObjectParam obj;
-  Editors editors = Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
+  Editors editors =
+      Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
   setUp(() {
     obj = ObjectParam.root(editors: editors);
   });
@@ -27,7 +28,8 @@ void main() {
       // ObjectParam sub = obj.useObject("sub", null);
       // sub.use("age", 22);
 
-      expect(obj.toCodeExpressionString(), "ObjectParam(offset: 10, end: 20, )");
+      expect(
+          obj.toCodeExpressionString(), "ObjectParam(offset: 10, end: 20, )");
     });
   });
 }

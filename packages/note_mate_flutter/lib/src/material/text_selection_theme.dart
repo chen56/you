@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/text_selection_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class TextSelectionThemeData with Diagnosticable
-class TextSelectionThemeData$Mate extends _i1.TextSelectionThemeData with _i2.Mate {
+class TextSelectionThemeData$Mate extends _i1.TextSelectionThemeData
+    with _i2.Mate {
   /// TextSelectionThemeData TextSelectionThemeData({Color? cursorColor, Color? selectionColor, Color? selectionHandleColor})
   TextSelectionThemeData$Mate({
     /// optionalParameters: {Color? cursorColor} , default:none

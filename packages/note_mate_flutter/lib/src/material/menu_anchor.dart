@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/menu_anchor.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/material/menu_style.dart' as _i5;
@@ -836,7 +836,8 @@ class DismissMenuAction$Mate extends _i1.DismissMenuAction with _i2.Mate {
         super() {
     mateBuilderName = 'DismissMenuAction';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
+    mateBuilder =
+        (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
   }
 
   @override
@@ -844,7 +845,8 @@ class DismissMenuAction$Mate extends _i1.DismissMenuAction with _i2.Mate {
 }
 
 /// class MenuAcceleratorCallbackBinding extends InheritedWidget
-class MenuAcceleratorCallbackBinding$Mate extends _i1.MenuAcceleratorCallbackBinding with _i2.Mate {
+class MenuAcceleratorCallbackBinding$Mate
+    extends _i1.MenuAcceleratorCallbackBinding with _i2.Mate {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
     /// optionalParameters: {Key? key} , default:none

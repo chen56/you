@@ -2,14 +2,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/tab_scaffold.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/cupertino/bottom_tab_bar.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'dart:ui' as _i6;
 
 /// class CupertinoTabController extends ChangeNotifier
-class CupertinoTabController$Mate extends _i1.CupertinoTabController with _i2.Mate {
+class CupertinoTabController$Mate extends _i1.CupertinoTabController
+    with _i2.Mate {
   /// CupertinoTabController CupertinoTabController({int initialIndex = 0})
   CupertinoTabController$Mate(
       {
@@ -26,7 +27,8 @@ class CupertinoTabController$Mate extends _i1.CupertinoTabController with _i2.Ma
         super() {
     mateBuilderName = 'CupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
+    mateBuilder = (p) => CupertinoTabController$Mate(
+        initialIndex: p.get('initialIndex').build());
   }
 
   @override
@@ -114,7 +116,8 @@ class CupertinoTabScaffold$Mate extends _i1.CupertinoTabScaffold with _i2.Mate {
 }
 
 /// class RestorableCupertinoTabController extends RestorableChangeNotifier<CupertinoTabController>
-class RestorableCupertinoTabController$Mate extends _i1.RestorableCupertinoTabController with _i2.Mate {
+class RestorableCupertinoTabController$Mate
+    extends _i1.RestorableCupertinoTabController with _i2.Mate {
   /// RestorableCupertinoTabController RestorableCupertinoTabController({int initialIndex = 0})
   RestorableCupertinoTabController$Mate(
       {
@@ -131,7 +134,8 @@ class RestorableCupertinoTabController$Mate extends _i1.RestorableCupertinoTabCo
         super() {
     mateBuilderName = 'RestorableCupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
+    mateBuilder = (p) => RestorableCupertinoTabController$Mate(
+        initialIndex: p.get('initialIndex').build());
   }
 
   @override

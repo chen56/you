@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class ScrollController extends ChangeNotifier
 class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
@@ -50,7 +50,8 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
 }
 
 /// class TrackingScrollController extends ScrollController
-class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i2.Mate {
+class TrackingScrollController$Mate extends _i1.TrackingScrollController
+    with _i2.Mate {
   /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   TrackingScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl

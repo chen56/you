@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/notification_listener.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class NotificationListener<T extends Notification> extends ProxyWidget
-class NotificationListener$Mate<T extends _i1.Notification> extends _i1.NotificationListener<T> with _i2.Mate {
+class NotificationListener$Mate<T extends _i1.Notification>
+    extends _i1.NotificationListener<T> with _i2.Mate {
   /// NotificationListener<T> NotificationListener({Key? key, required Widget child, bool Function(T)? onNotification})
   NotificationListener$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -29,7 +30,8 @@ class NotificationListener$Mate<T extends _i1.Notification> extends _i1.Notifica
             init: child,
             isNamed: true,
           ),
-          'onNotification': _i2.BuilderArg<_i1.NotificationListenerCallback<T>?>(
+          'onNotification':
+              _i2.BuilderArg<_i1.NotificationListenerCallback<T>?>(
             name: 'onNotification',
             init: onNotification,
             isNamed: true,

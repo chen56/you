@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/performance_overlay.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 
 /// class PerformanceOverlay extends LeafRenderObjectWidget
@@ -61,8 +61,10 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
   }
 
@@ -110,8 +112,10 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
   }
 

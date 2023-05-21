@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/long_press.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/animation.dart' as _i4;
 import 'package:flutter/src/gestures/velocity_tracker.dart' as _i5;
@@ -54,7 +54,8 @@ class LongPressDownDetails$Mate extends _i1.LongPressDownDetails with _i2.Mate {
 }
 
 /// class LongPressStartDetails
-class LongPressStartDetails$Mate extends _i1.LongPressStartDetails with _i2.Mate {
+class LongPressStartDetails$Mate extends _i1.LongPressStartDetails
+    with _i2.Mate {
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
@@ -89,7 +90,8 @@ class LongPressStartDetails$Mate extends _i1.LongPressStartDetails with _i2.Mate
 }
 
 /// class LongPressMoveUpdateDetails
-class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails with _i2.Mate {
+class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails
+    with _i2.Mate {
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
@@ -188,7 +190,8 @@ class LongPressEndDetails$Mate extends _i1.LongPressEndDetails with _i2.Mate {
 }
 
 /// class LongPressGestureRecognizer extends PrimaryPointerGestureRecognizer
-class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer with _i2.Mate {
+class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer
+    with _i2.Mate {
   /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter})
   LongPressGestureRecognizer$Mate({
     /// optionalParameters: {Duration? duration} , default:none

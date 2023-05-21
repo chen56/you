@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/snapshot_widget.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -25,7 +25,8 @@ class SnapshotController$Mate extends _i1.SnapshotController with _i2.Mate {
         super() {
     mateBuilderName = 'SnapshotController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
+    mateBuilder = (p) => SnapshotController$Mate(
+        allowSnapshotting: p.get('allowSnapshotting').build());
   }
 
   @override

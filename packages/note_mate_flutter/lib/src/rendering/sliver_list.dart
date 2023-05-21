@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/sliver_list.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/rendering/sliver_multi_box_adaptor.dart' as _i3;
 
 /// class RenderSliverList extends RenderSliverMultiBoxAdaptor
@@ -22,7 +22,8 @@ class RenderSliverList$Mate extends _i1.RenderSliverList with _i2.Mate {
         super() {
     mateBuilderName = 'RenderSliverList';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => RenderSliverList$Mate(childManager: p.get('childManager').build());
+    mateBuilder = (p) =>
+        RenderSliverList$Mate(childManager: p.get('childManager').build());
   }
 
   @override

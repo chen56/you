@@ -15,7 +15,7 @@ import 'package:flutter/rendering.dart' as _i11;
 import 'package:meta/meta_meta.dart' as _i12;
 import 'package:flutter/material.dart' as _i13;
 import 'package:material_color_utilities/material_color_utilities.dart' as _i14;
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 
 EnumRegister registerEnum() {
   EnumRegister result = EnumRegister();

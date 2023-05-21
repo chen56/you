@@ -2,14 +2,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/input_date_picker_form_field.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/material/date.dart' as _i5;
 import 'package:flutter/src/services/text_input.dart' as _i6;
 
 /// class InputDatePickerFormField extends StatefulWidget
-class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i2.Mate {
+class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField
+    with _i2.Mate {
   /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false})
   InputDatePickerFormField$Mate({
     /// optionalParameters: {Key? key} , default:none

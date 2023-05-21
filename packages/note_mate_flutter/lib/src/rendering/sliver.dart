@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/sliver.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/basic_types.dart' as _i3;
 import 'package:flutter/src/rendering/viewport_offset.dart' as _i4;
 import 'package:flutter/src/gestures/hit_test.dart' as _i5;
@@ -240,7 +240,8 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
           paintOrigin: p.get('paintOrigin').build(),
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
-          maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
+          maxScrollObstructionExtent:
+              p.get('maxScrollObstructionExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),
@@ -320,7 +321,8 @@ class SliverHitTestEntry$Mate extends _i1.SliverHitTestEntry with _i2.Mate {
 }
 
 /// class RenderSliverToBoxAdapter extends RenderSliverSingleBoxAdapter
-class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter with _i2.Mate {
+class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter
+    with _i2.Mate {
   /// RenderSliverToBoxAdapter RenderSliverToBoxAdapter({RenderBox? child})
   RenderSliverToBoxAdapter$Mate(
       {
@@ -336,7 +338,8 @@ class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter with _i
         super() {
     mateBuilderName = 'RenderSliverToBoxAdapter';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
+    mateBuilder =
+        (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
   }
 
   @override

@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/painting/beveled_rectangle_border.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/painting/border_radius.dart' as _i5;
 
 /// class BeveledRectangleBorder extends OutlinedBorder
-class BeveledRectangleBorder$Mate extends _i1.BeveledRectangleBorder with _i2.Mate {
+class BeveledRectangleBorder$Mate extends _i1.BeveledRectangleBorder
+    with _i2.Mate {
   /// BeveledRectangleBorder BeveledRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   BeveledRectangleBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/slider_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -267,7 +267,8 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
             init: rangeTrackShape,
             isNamed: true,
           ),
-          'rangeValueIndicatorShape': _i2.BuilderArg<_i1.RangeSliderValueIndicatorShape?>(
+          'rangeValueIndicatorShape':
+              _i2.BuilderArg<_i1.RangeSliderValueIndicatorShape?>(
             name: 'rangeValueIndicatorShape',
             init: rangeValueIndicatorShape,
             isNamed: true,
@@ -292,7 +293,8 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
             init: thumbSelector,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -307,14 +309,19 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
           inactiveTrackColor: p.get('inactiveTrackColor').build(),
           secondaryActiveTrackColor: p.get('secondaryActiveTrackColor').build(),
           disabledActiveTrackColor: p.get('disabledActiveTrackColor').build(),
-          disabledInactiveTrackColor: p.get('disabledInactiveTrackColor').build(),
-          disabledSecondaryActiveTrackColor: p.get('disabledSecondaryActiveTrackColor').build(),
+          disabledInactiveTrackColor:
+              p.get('disabledInactiveTrackColor').build(),
+          disabledSecondaryActiveTrackColor:
+              p.get('disabledSecondaryActiveTrackColor').build(),
           activeTickMarkColor: p.get('activeTickMarkColor').build(),
           inactiveTickMarkColor: p.get('inactiveTickMarkColor').build(),
-          disabledActiveTickMarkColor: p.get('disabledActiveTickMarkColor').build(),
-          disabledInactiveTickMarkColor: p.get('disabledInactiveTickMarkColor').build(),
+          disabledActiveTickMarkColor:
+              p.get('disabledActiveTickMarkColor').build(),
+          disabledInactiveTickMarkColor:
+              p.get('disabledInactiveTickMarkColor').build(),
           thumbColor: p.get('thumbColor').build(),
-          overlappingShapeStrokeColor: p.get('overlappingShapeStrokeColor').build(),
+          overlappingShapeStrokeColor:
+              p.get('overlappingShapeStrokeColor').build(),
           disabledThumbColor: p.get('disabledThumbColor').build(),
           overlayColor: p.get('overlayColor').build(),
           valueIndicatorColor: p.get('valueIndicatorColor').build(),
@@ -340,7 +347,8 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
 }
 
 /// class RoundSliderTickMarkShape extends SliderTickMarkShape
-class RoundSliderTickMarkShape$Mate extends _i1.RoundSliderTickMarkShape with _i2.Mate {
+class RoundSliderTickMarkShape$Mate extends _i1.RoundSliderTickMarkShape
+    with _i2.Mate {
   /// RoundSliderTickMarkShape RoundSliderTickMarkShape({double? tickMarkRadius})
   RoundSliderTickMarkShape$Mate(
       {
@@ -356,7 +364,8 @@ class RoundSliderTickMarkShape$Mate extends _i1.RoundSliderTickMarkShape with _i
         super() {
     mateBuilderName = 'RoundSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
+    mateBuilder = (p) => RoundSliderTickMarkShape$Mate(
+        tickMarkRadius: p.get('tickMarkRadius').build());
   }
 
   @override
@@ -364,7 +373,8 @@ class RoundSliderTickMarkShape$Mate extends _i1.RoundSliderTickMarkShape with _i
 }
 
 /// class RoundRangeSliderTickMarkShape extends RangeSliderTickMarkShape
-class RoundRangeSliderTickMarkShape$Mate extends _i1.RoundRangeSliderTickMarkShape with _i2.Mate {
+class RoundRangeSliderTickMarkShape$Mate
+    extends _i1.RoundRangeSliderTickMarkShape with _i2.Mate {
   /// RoundRangeSliderTickMarkShape RoundRangeSliderTickMarkShape({double? tickMarkRadius})
   RoundRangeSliderTickMarkShape$Mate(
       {
@@ -380,7 +390,8 @@ class RoundRangeSliderTickMarkShape$Mate extends _i1.RoundRangeSliderTickMarkSha
         super() {
     mateBuilderName = 'RoundRangeSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
+    mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(
+        tickMarkRadius: p.get('tickMarkRadius').build());
   }
 
   @override
@@ -388,7 +399,8 @@ class RoundRangeSliderTickMarkShape$Mate extends _i1.RoundRangeSliderTickMarkSha
 }
 
 /// class RoundSliderThumbShape extends SliderComponentShape
-class RoundSliderThumbShape$Mate extends _i1.RoundSliderThumbShape with _i2.Mate {
+class RoundSliderThumbShape$Mate extends _i1.RoundSliderThumbShape
+    with _i2.Mate {
   /// RoundSliderThumbShape RoundSliderThumbShape({double enabledThumbRadius = 10.0, double? disabledThumbRadius, double elevation = 1.0, double pressedElevation = 6.0})
   RoundSliderThumbShape$Mate({
     /// optionalParameters: {double enabledThumbRadius = 10.0} , default:processed=DoubleLiteralImpl
@@ -443,7 +455,8 @@ class RoundSliderThumbShape$Mate extends _i1.RoundSliderThumbShape with _i2.Mate
 }
 
 /// class RoundRangeSliderThumbShape extends RangeSliderThumbShape
-class RoundRangeSliderThumbShape$Mate extends _i1.RoundRangeSliderThumbShape with _i2.Mate {
+class RoundRangeSliderThumbShape$Mate extends _i1.RoundRangeSliderThumbShape
+    with _i2.Mate {
   /// RoundRangeSliderThumbShape RoundRangeSliderThumbShape({double enabledThumbRadius = 10.0, double? disabledThumbRadius, double elevation = 1.0, double pressedElevation = 6.0})
   RoundRangeSliderThumbShape$Mate({
     /// optionalParameters: {double enabledThumbRadius = 10.0} , default:processed=DoubleLiteralImpl
@@ -498,7 +511,8 @@ class RoundRangeSliderThumbShape$Mate extends _i1.RoundRangeSliderThumbShape wit
 }
 
 /// class RoundSliderOverlayShape extends SliderComponentShape
-class RoundSliderOverlayShape$Mate extends _i1.RoundSliderOverlayShape with _i2.Mate {
+class RoundSliderOverlayShape$Mate extends _i1.RoundSliderOverlayShape
+    with _i2.Mate {
   /// RoundSliderOverlayShape RoundSliderOverlayShape({double overlayRadius = 24.0})
   RoundSliderOverlayShape$Mate(
       {
@@ -515,7 +529,8 @@ class RoundSliderOverlayShape$Mate extends _i1.RoundSliderOverlayShape with _i2.
         super() {
     mateBuilderName = 'RoundSliderOverlayShape';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build());
+    mateBuilder = (p) => RoundSliderOverlayShape$Mate(
+        overlayRadius: p.get('overlayRadius').build());
   }
 
   @override

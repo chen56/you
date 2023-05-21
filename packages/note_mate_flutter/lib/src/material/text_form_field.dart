@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/text_form_field.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/editable_text.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
@@ -468,17 +468,20 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i4.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i4.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
+          'spellCheckConfiguration':
+              _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i25.TextMagnifierConfiguration?>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i25.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -530,7 +533,8 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           cursorColor: p.get('cursorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           buildCounter: p.get('buildCounter').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -538,7 +542,8 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           scrollController: p.get('scrollController').build(),
           restorationId: p.get('restorationId').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           mouseCursor: p.get('mouseCursor').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),

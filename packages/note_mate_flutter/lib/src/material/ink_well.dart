@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/ink_well.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/gestures/tap.dart' as _i5;
@@ -237,7 +237,8 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -523,7 +524,8 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

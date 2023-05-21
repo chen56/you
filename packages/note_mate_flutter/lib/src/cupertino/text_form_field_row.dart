@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/text_form_field_row.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
@@ -23,7 +23,8 @@ import 'package:flutter/src/widgets/text_selection.dart' as _i19;
 import 'package:flutter/src/widgets/scroll_physics.dart' as _i20;
 
 /// class CupertinoTextFormFieldRow extends FormField<String>
-class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with _i2.Mate {
+class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow
+    with _i2.Mate {
   /// CupertinoTextFormFieldRow CupertinoTextFormFieldRow({Key? key, Widget? prefix, EdgeInsetsGeometry? padding, TextEditingController? controller, String? initialValue, FocusNode? focusNode, BoxDecoration? decoration, TextInputType? keyboardType, TextCapitalization textCapitalization = TextCapitalization.none, TextInputAction? textInputAction, TextStyle? style, StrutStyle? strutStyle, TextDirection? textDirection, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, bool autofocus = false, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, void Function(String)? onChanged, void Function()? onTap, void Function()? onEditingComplete, void Function(String)? onFieldSubmitted, void Function(String?)? onSaved, String? Function(String?)? validator, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Color? cursorColor, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints, AutovalidateMode autovalidateMode = AutovalidateMode.disabled, String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder})
   CupertinoTextFormFieldRow$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -426,7 +427,8 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             init: placeholderStyle,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
@@ -477,7 +479,8 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
           cursorColor: p.get('cursorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/switch_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/material_state.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/material/theme_data.dart' as _i5;
@@ -49,7 +49,8 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'trackOutlineColor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -59,12 +60,14 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
             init: materialTapTargetSize,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i6.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

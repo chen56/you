@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/text_selection.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/text_input.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/rendering/layer.dart' as _i5;
@@ -144,7 +144,8 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -280,17 +281,20 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: startHandlesVisible,
             isNamed: true,
           ),
-          'onStartHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
+          'onStartHandleDragStart':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
             name: 'onStartHandleDragStart',
             init: onStartHandleDragStart,
             isNamed: true,
           ),
-          'onStartHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
+          'onStartHandleDragUpdate':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
             name: 'onStartHandleDragUpdate',
             init: onStartHandleDragUpdate,
             isNamed: true,
           ),
-          'onStartHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
+          'onStartHandleDragEnd':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
             name: 'onStartHandleDragEnd',
             init: onStartHandleDragEnd,
             isNamed: true,
@@ -310,17 +314,20 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: endHandlesVisible,
             isNamed: true,
           ),
-          'onEndHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
+          'onEndHandleDragStart':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
             name: 'onEndHandleDragStart',
             init: onEndHandleDragStart,
             isNamed: true,
           ),
-          'onEndHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
+          'onEndHandleDragUpdate':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
             name: 'onEndHandleDragUpdate',
             init: onEndHandleDragUpdate,
             isNamed: true,
           ),
-          'onEndHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
+          'onEndHandleDragEnd':
+              _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
             name: 'onEndHandleDragEnd',
             init: onEndHandleDragEnd,
             isNamed: true,
@@ -376,7 +383,8 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: onSelectionHandleTapped,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -420,14 +428,16 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
 }
 
 /// class TextSelectionGestureDetectorBuilder
-class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureDetectorBuilder with _i2.Mate {
+class TextSelectionGestureDetectorBuilder$Mate
+    extends _i1.TextSelectionGestureDetectorBuilder with _i2.Mate {
   /// TextSelectionGestureDetectorBuilder TextSelectionGestureDetectorBuilder({required TextSelectionGestureDetectorBuilderDelegate delegate})
   TextSelectionGestureDetectorBuilder$Mate(
       {
       /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , default:none
       required super.delegate})
       : mateParams = {
-          'delegate': _i2.BuilderArg<_i1.TextSelectionGestureDetectorBuilderDelegate>(
+          'delegate':
+              _i2.BuilderArg<_i1.TextSelectionGestureDetectorBuilderDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -436,7 +446,8 @@ class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureD
         super() {
     mateBuilderName = 'TextSelectionGestureDetectorBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
+    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(
+        delegate: p.get('delegate').build());
   }
 
   @override
@@ -444,7 +455,8 @@ class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureD
 }
 
 /// class TextSelectionGestureDetector extends StatefulWidget
-class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector with _i2.Mate {
+class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
+    with _i2.Mate {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -511,7 +523,8 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
             init: onTapDown,
             isNamed: true,
           ),
-          'onForcePressStart': _i2.BuilderArg<_i18.GestureForcePressStartCallback?>(
+          'onForcePressStart':
+              _i2.BuilderArg<_i18.GestureForcePressStartCallback?>(
             name: 'onForcePressStart',
             init: onForcePressStart,
             isNamed: true,
@@ -541,17 +554,20 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
             init: onSingleTapCancel,
             isNamed: true,
           ),
-          'onSingleLongTapStart': _i2.BuilderArg<_i20.GestureLongPressStartCallback?>(
+          'onSingleLongTapStart':
+              _i2.BuilderArg<_i20.GestureLongPressStartCallback?>(
             name: 'onSingleLongTapStart',
             init: onSingleLongTapStart,
             isNamed: true,
           ),
-          'onSingleLongTapMoveUpdate': _i2.BuilderArg<_i20.GestureLongPressMoveUpdateCallback?>(
+          'onSingleLongTapMoveUpdate':
+              _i2.BuilderArg<_i20.GestureLongPressMoveUpdateCallback?>(
             name: 'onSingleLongTapMoveUpdate',
             init: onSingleLongTapMoveUpdate,
             isNamed: true,
           ),
-          'onSingleLongTapEnd': _i2.BuilderArg<_i20.GestureLongPressEndCallback?>(
+          'onSingleLongTapEnd':
+              _i2.BuilderArg<_i20.GestureLongPressEndCallback?>(
             name: 'onSingleLongTapEnd',
             init: onSingleLongTapEnd,
             isNamed: true,
@@ -566,12 +582,14 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
             init: onTripleTapDown,
             isNamed: true,
           ),
-          'onDragSelectionStart': _i2.BuilderArg<_i17.GestureTapDragStartCallback?>(
+          'onDragSelectionStart':
+              _i2.BuilderArg<_i17.GestureTapDragStartCallback?>(
             name: 'onDragSelectionStart',
             init: onDragSelectionStart,
             isNamed: true,
           ),
-          'onDragSelectionUpdate': _i2.BuilderArg<_i17.GestureTapDragUpdateCallback?>(
+          'onDragSelectionUpdate':
+              _i2.BuilderArg<_i17.GestureTapDragUpdateCallback?>(
             name: 'onDragSelectionUpdate',
             init: onDragSelectionUpdate,
             isNamed: true,
@@ -622,7 +640,8 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
 }
 
 /// class ClipboardStatusNotifier extends ValueNotifier<ClipboardStatus> with WidgetsBindingObserver
-class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.Mate {
+class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier
+    with _i2.Mate {
   /// ClipboardStatusNotifier ClipboardStatusNotifier({ClipboardStatus value = ClipboardStatus.unknown})
   ClipboardStatusNotifier$Mate(
       {
@@ -639,7 +658,8 @@ class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.
         super() {
     mateBuilderName = 'ClipboardStatusNotifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
+    mateBuilder =
+        (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
   }
 
   @override

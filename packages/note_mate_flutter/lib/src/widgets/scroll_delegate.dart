@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scroll_delegate.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
 
 /// class SliverChildBuilderDelegate extends SliverChildDelegate
-class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate with _i2.Mate {
+class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate
+    with _i2.Mate {
   /// SliverChildBuilderDelegate SliverChildBuilderDelegate(Widget? Function(BuildContext, int) builder, {int? Function(Key)? findChildIndexCallback, int? childCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildBuilderDelegate$Mate(
     /// requiredParameters: Widget? Function(BuildContext, int) builder
@@ -97,7 +98,8 @@ class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate wit
 }
 
 /// class SliverChildListDelegate extends SliverChildDelegate
-class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.Mate {
+class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate
+    with _i2.Mate {
   /// SliverChildListDelegate SliverChildListDelegate(List<Widget> children, {bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildListDelegate$Mate(
     /// requiredParameters: List<Widget> children

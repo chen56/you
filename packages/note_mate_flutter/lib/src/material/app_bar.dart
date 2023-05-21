@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/app_bar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/preferred_size.dart' as _i5;
@@ -154,7 +154,8 @@ class AppBar$Mate extends _i1.AppBar with _i2.Mate {
             init: scrolledUnderElevation,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

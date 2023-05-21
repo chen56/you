@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/paragraph.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/inline_span.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/text_painter.dart' as _i5;
@@ -12,7 +12,8 @@ import 'package:flutter/src/rendering/box.dart' as _i8;
 import 'package:flutter/src/rendering/selection.dart' as _i9;
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
-class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSemanticsTag with _i2.Mate {
+class PlaceholderSpanIndexSemanticsTag$Mate
+    extends _i1.PlaceholderSpanIndexSemanticsTag with _i2.Mate {
   /// PlaceholderSpanIndexSemanticsTag PlaceholderSpanIndexSemanticsTag(int index)
   PlaceholderSpanIndexSemanticsTag$Mate(
 
@@ -28,7 +29,8 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSema
         super() {
     mateBuilderName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
+    mateBuilder =
+        (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
   }
 
   @override

@@ -179,12 +179,12 @@ option() {
 }
 
 # 项目init
-/get?() {
-  /get?shortHelp() { cat <<<"all: pub get"; }
-  /get() {
-    /exec flutter pub get
-  }
-}
+#/get?() {
+#  /get?shortHelp() { cat <<<"all: pub get"; }
+#  /get() {
+#    /exec flutter pub get
+#  }
+#}
 
 # patterns 无法使用，error：flutter build web
 #  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
@@ -216,12 +216,12 @@ option() {
   }
 }
 
-/test?() {
-  /test?shortHelp() { cat <<<"test"; }
-  /test() {
-    /exec flutter test
-  }
-}
+#/test?() {
+#  /test?shortHelp() { cat <<<"test"; }
+#  /test() {
+#    /exec flutter test
+#  }
+#}
 
 /preview?() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }

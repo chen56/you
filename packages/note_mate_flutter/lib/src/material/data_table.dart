@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/data_table.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
 import 'package:flutter/src/material/material_state.dart' as _i4;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i5;
@@ -55,7 +55,8 @@ class DataColumn$Mate extends _i1.DataColumn with _i2.Mate {
             init: onSort,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -128,7 +129,8 @@ class DataRow$Mate extends _i1.DataRow with _i2.Mate {
             init: color,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -202,7 +204,8 @@ class DataRow$Mate extends _i1.DataRow with _i2.Mate {
             init: color,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -421,7 +424,8 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
             init: decoration,
             isNamed: true,
           ),
-          'dataRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+          'dataRowColor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
             name: 'dataRowColor',
             init: dataRowColor,
             isNamed: true,
@@ -441,7 +445,8 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
             init: dataTextStyle,
             isNamed: true,
           ),
-          'headingRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+          'headingRowColor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
             name: 'headingRowColor',
             init: headingRowColor,
             isNamed: true,
@@ -612,7 +617,8 @@ class TableRowInkWell$Mate extends _i1.TableRowInkWell with _i2.Mate {
             init: onSecondaryTapDown,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

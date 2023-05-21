@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/pen_markdown.dart';

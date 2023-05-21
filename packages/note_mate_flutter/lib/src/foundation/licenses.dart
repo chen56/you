@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/foundation/licenses.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class LicenseParagraph
 class LicenseParagraph$Mate extends _i1.LicenseParagraph with _i2.Mate {
@@ -39,7 +39,8 @@ class LicenseParagraph$Mate extends _i1.LicenseParagraph with _i2.Mate {
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
-class LicenseEntryWithLineBreaks$Mate extends _i1.LicenseEntryWithLineBreaks with _i2.Mate {
+class LicenseEntryWithLineBreaks$Mate extends _i1.LicenseEntryWithLineBreaks
+    with _i2.Mate {
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages

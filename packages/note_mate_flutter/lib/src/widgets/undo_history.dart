@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/undo_history.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
@@ -128,7 +128,8 @@ class UndoHistoryValue$Mate extends _i1.UndoHistoryValue with _i2.Mate {
 }
 
 /// class UndoHistoryController extends ValueNotifier<UndoHistoryValue>
-class UndoHistoryController$Mate extends _i1.UndoHistoryController with _i2.Mate {
+class UndoHistoryController$Mate extends _i1.UndoHistoryController
+    with _i2.Mate {
   /// UndoHistoryController UndoHistoryController({UndoHistoryValue? value})
   UndoHistoryController$Mate(
       {
@@ -144,7 +145,8 @@ class UndoHistoryController$Mate extends _i1.UndoHistoryController with _i2.Mate
         super() {
     mateBuilderName = 'UndoHistoryController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => UndoHistoryController$Mate(value: p.get('value').build());
+    mateBuilder =
+        (p) => UndoHistoryController$Mate(value: p.get('value').build());
   }
 
   @override

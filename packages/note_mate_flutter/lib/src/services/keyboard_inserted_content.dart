@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/keyboard_inserted_content.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:typed_data' as _i3;
 
 /// class KeyboardInsertedContent
-class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent with _i2.Mate {
+class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent
+    with _i2.Mate {
   /// KeyboardInsertedContent KeyboardInsertedContent({required String mimeType, required String uri, Uint8List? data})
   KeyboardInsertedContent$Mate({
     /// optionalParameters: {required String mimeType} , default:none
@@ -59,7 +60,8 @@ class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent with _i2.
         super.fromJson() {
     mateBuilderName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
+    mateBuilder =
+        (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
   }
 
   @override

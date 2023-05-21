@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/painting/image_provider.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/asset_bundle.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/foundation/platform.dart' as _i5;
@@ -306,7 +306,8 @@ class ExactAssetImage$Mate extends _i1.ExactAssetImage with _i2.Mate {
 }
 
 /// class NetworkImageLoadException implements Exception
-class NetworkImageLoadException$Mate extends _i1.NetworkImageLoadException with _i2.Mate {
+class NetworkImageLoadException$Mate extends _i1.NetworkImageLoadException
+    with _i2.Mate {
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
     /// optionalParameters: {required int statusCode} , default:none

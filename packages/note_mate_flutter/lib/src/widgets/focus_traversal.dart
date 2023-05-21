@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/focus_traversal.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
@@ -56,7 +56,8 @@ class LexicalFocusOrder$Mate extends _i1.LexicalFocusOrder with _i2.Mate {
 }
 
 /// class OrderedTraversalPolicy extends FocusTraversalPolicy with DirectionalFocusTraversalPolicyMixin
-class OrderedTraversalPolicy$Mate extends _i1.OrderedTraversalPolicy with _i2.Mate {
+class OrderedTraversalPolicy$Mate extends _i1.OrderedTraversalPolicy
+    with _i2.Mate {
   /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary})
   OrderedTraversalPolicy$Mate(
       {
@@ -72,7 +73,8 @@ class OrderedTraversalPolicy$Mate extends _i1.OrderedTraversalPolicy with _i2.Ma
         super() {
     mateBuilderName = 'OrderedTraversalPolicy';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
+    mateBuilder = (p) =>
+        OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
   }
 
   @override
@@ -210,7 +212,8 @@ class RequestFocusIntent$Mate extends _i1.RequestFocusIntent with _i2.Mate {
 }
 
 /// class DirectionalFocusIntent extends Intent
-class DirectionalFocusIntent$Mate extends _i1.DirectionalFocusIntent with _i2.Mate {
+class DirectionalFocusIntent$Mate extends _i1.DirectionalFocusIntent
+    with _i2.Mate {
   /// DirectionalFocusIntent DirectionalFocusIntent(TraversalDirection direction, {bool ignoreTextFields = true})
   DirectionalFocusIntent$Mate(
     /// requiredParameters: TraversalDirection direction
@@ -244,7 +247,8 @@ class DirectionalFocusIntent$Mate extends _i1.DirectionalFocusIntent with _i2.Ma
 }
 
 /// class ExcludeFocusTraversal extends StatelessWidget
-class ExcludeFocusTraversal$Mate extends _i1.ExcludeFocusTraversal with _i2.Mate {
+class ExcludeFocusTraversal$Mate extends _i1.ExcludeFocusTraversal
+    with _i2.Mate {
   /// ExcludeFocusTraversal ExcludeFocusTraversal({Key? key, bool excluding = true, required Widget child})
   ExcludeFocusTraversal$Mate({
     /// optionalParameters: {Key? key} , default:none

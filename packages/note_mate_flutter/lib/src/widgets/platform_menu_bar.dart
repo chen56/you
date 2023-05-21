@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/platform_menu_bar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i3;
 import 'package:flutter/src/services/platform_channel.dart' as _i4;
 import 'package:flutter/src/foundation/key.dart' as _i5;
@@ -11,7 +11,8 @@ import 'dart:ui' as _i7;
 import 'package:flutter/src/widgets/actions.dart' as _i8;
 
 /// class ShortcutSerialization
-class ShortcutSerialization$Mate extends _i1.ShortcutSerialization with _i2.Mate {
+class ShortcutSerialization$Mate extends _i1.ShortcutSerialization
+    with _i2.Mate {
   /// ShortcutSerialization ShortcutSerialization.character(String character, {bool alt = false, bool control = false, bool meta = false})
   ShortcutSerialization$Mate.character(
     /// requiredParameters: String character
@@ -123,7 +124,8 @@ class ShortcutSerialization$Mate extends _i1.ShortcutSerialization with _i2.Mate
 }
 
 /// class DefaultPlatformMenuDelegate extends PlatformMenuDelegate
-class DefaultPlatformMenuDelegate$Mate extends _i1.DefaultPlatformMenuDelegate with _i2.Mate {
+class DefaultPlatformMenuDelegate$Mate extends _i1.DefaultPlatformMenuDelegate
+    with _i2.Mate {
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
@@ -139,7 +141,8 @@ class DefaultPlatformMenuDelegate$Mate extends _i1.DefaultPlatformMenuDelegate w
         super() {
     mateBuilderName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
+    mateBuilder = (p) =>
+        DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
   }
 
   @override
@@ -242,7 +245,8 @@ class PlatformMenu$Mate extends _i1.PlatformMenu with _i2.Mate {
 }
 
 /// class PlatformMenuItemGroup extends PlatformMenuItem
-class PlatformMenuItemGroup$Mate extends _i1.PlatformMenuItemGroup with _i2.Mate {
+class PlatformMenuItemGroup$Mate extends _i1.PlatformMenuItemGroup
+    with _i2.Mate {
   /// PlatformMenuItemGroup PlatformMenuItemGroup({required List<PlatformMenuItem> members})
   PlatformMenuItemGroup$Mate(
       {
@@ -258,7 +262,8 @@ class PlatformMenuItemGroup$Mate extends _i1.PlatformMenuItemGroup with _i2.Mate
         super() {
     mateBuilderName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
+    mateBuilder =
+        (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
   }
 
   @override
@@ -318,7 +323,8 @@ class PlatformMenuItem$Mate extends _i1.PlatformMenuItem with _i2.Mate {
 }
 
 /// class PlatformProvidedMenuItem extends PlatformMenuItem
-class PlatformProvidedMenuItem$Mate extends _i1.PlatformProvidedMenuItem with _i2.Mate {
+class PlatformProvidedMenuItem$Mate extends _i1.PlatformProvidedMenuItem
+    with _i2.Mate {
   /// PlatformProvidedMenuItem PlatformProvidedMenuItem({required PlatformProvidedMenuItemType type, bool enabled = true})
   PlatformProvidedMenuItem$Mate({
     /// optionalParameters: {required PlatformProvidedMenuItemType type} , default:none

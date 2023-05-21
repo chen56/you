@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/default_selection_style.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class DefaultSelectionStyle extends InheritedTheme
-class DefaultSelectionStyle$Mate extends _i1.DefaultSelectionStyle with _i2.Mate {
+class DefaultSelectionStyle$Mate extends _i1.DefaultSelectionStyle
+    with _i2.Mate {
   /// DefaultSelectionStyle DefaultSelectionStyle({Key? key, Color? cursorColor, Color? selectionColor, required Widget child})
   DefaultSelectionStyle$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -70,7 +71,8 @@ class DefaultSelectionStyle$Mate extends _i1.DefaultSelectionStyle with _i2.Mate
         super.fallback() {
     mateBuilderName = 'DefaultSelectionStyle.fallback';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
+    mateBuilder =
+        (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
   }
 
   @override

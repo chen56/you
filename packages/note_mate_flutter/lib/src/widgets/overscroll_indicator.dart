@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/overscroll_indicator.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -10,7 +10,8 @@ import 'package:flutter/src/widgets/scroll_notification.dart' as _i6;
 import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class GlowingOverscrollIndicator extends StatefulWidget
-class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator with _i2.Mate {
+class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator
+    with _i2.Mate {
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -61,7 +62,8 @@ class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator wit
             init: color,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,
@@ -91,7 +93,8 @@ class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator wit
 }
 
 /// class StretchingOverscrollIndicator extends StatefulWidget
-class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicator with _i2.Mate {
+class StretchingOverscrollIndicator$Mate
+    extends _i1.StretchingOverscrollIndicator with _i2.Mate {
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -119,7 +122,8 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
             init: axisDirection,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,
@@ -153,7 +157,8 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
 }
 
 /// class OverscrollIndicatorNotification extends Notification with ViewportNotificationMixin
-class OverscrollIndicatorNotification$Mate extends _i1.OverscrollIndicatorNotification with _i2.Mate {
+class OverscrollIndicatorNotification$Mate
+    extends _i1.OverscrollIndicatorNotification with _i2.Mate {
   /// OverscrollIndicatorNotification OverscrollIndicatorNotification({required bool leading})
   OverscrollIndicatorNotification$Mate(
       {
@@ -169,7 +174,8 @@ class OverscrollIndicatorNotification$Mate extends _i1.OverscrollIndicatorNotifi
         super() {
     mateBuilderName = 'OverscrollIndicatorNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
+    mateBuilder = (p) =>
+        OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
   }
 
   @override

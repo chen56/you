@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/multidrag.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/recognizer.dart' as _i4;
 
 /// class ImmediateMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class ImmediateMultiDragGestureRecognizer$Mate extends _i1.ImmediateMultiDragGestureRecognizer with _i2.Mate {
+class ImmediateMultiDragGestureRecognizer$Mate
+    extends _i1.ImmediateMultiDragGestureRecognizer with _i2.Mate {
   /// ImmediateMultiDragGestureRecognizer ImmediateMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ImmediateMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -50,7 +51,8 @@ class ImmediateMultiDragGestureRecognizer$Mate extends _i1.ImmediateMultiDragGes
 }
 
 /// class HorizontalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class HorizontalMultiDragGestureRecognizer$Mate extends _i1.HorizontalMultiDragGestureRecognizer with _i2.Mate {
+class HorizontalMultiDragGestureRecognizer$Mate
+    extends _i1.HorizontalMultiDragGestureRecognizer with _i2.Mate {
   /// HorizontalMultiDragGestureRecognizer HorizontalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   HorizontalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -93,7 +95,8 @@ class HorizontalMultiDragGestureRecognizer$Mate extends _i1.HorizontalMultiDragG
 }
 
 /// class VerticalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class VerticalMultiDragGestureRecognizer$Mate extends _i1.VerticalMultiDragGestureRecognizer with _i2.Mate {
+class VerticalMultiDragGestureRecognizer$Mate
+    extends _i1.VerticalMultiDragGestureRecognizer with _i2.Mate {
   /// VerticalMultiDragGestureRecognizer VerticalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   VerticalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -136,7 +139,8 @@ class VerticalMultiDragGestureRecognizer$Mate extends _i1.VerticalMultiDragGestu
 }
 
 /// class DelayedMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class DelayedMultiDragGestureRecognizer$Mate extends _i1.DelayedMultiDragGestureRecognizer with _i2.Mate {
+class DelayedMultiDragGestureRecognizer$Mate
+    extends _i1.DelayedMultiDragGestureRecognizer with _i2.Mate {
   /// DelayedMultiDragGestureRecognizer DelayedMultiDragGestureRecognizer({Duration delay = kLongPressTimeout, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   DelayedMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Duration delay = kLongPressTimeout} , default:unprocessed=SimpleIdentifierImpl

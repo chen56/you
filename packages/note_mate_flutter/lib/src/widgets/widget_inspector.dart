@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/widget_inspector.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i5;
@@ -30,7 +30,8 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'selectButtonBuilder': _i2.BuilderArg<_i1.InspectorSelectButtonBuilder?>(
+          'selectButtonBuilder':
+              _i2.BuilderArg<_i1.InspectorSelectButtonBuilder?>(
             name: 'selectButtonBuilder',
             init: selectButtonBuilder,
             isNamed: true,
@@ -51,7 +52,8 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
 }
 
 /// class DevToolsDeepLinkProperty extends DiagnosticsProperty<String>
-class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty with _i2.Mate {
+class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty
+    with _i2.Mate {
   /// DevToolsDeepLinkProperty DevToolsDeepLinkProperty(String description, String url)
   DevToolsDeepLinkProperty$Mate(
     /// requiredParameters: String description
@@ -85,7 +87,8 @@ class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty with _i
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
-class InspectorSerializationDelegate$Mate extends _i1.InspectorSerializationDelegate with _i2.Mate {
+class InspectorSerializationDelegate$Mate
+    extends _i1.InspectorSerializationDelegate with _i2.Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , default:none
@@ -168,12 +171,14 @@ class InspectorSerializationDelegate$Mate extends _i1.InspectorSerializationDele
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
-          maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
+          maxDescendantsTruncatableNode:
+              p.get('maxDescendantsTruncatableNode').build(),
           expandPropertyValues: p.get('expandPropertyValues').build(),
           subtreeDepth: p.get('subtreeDepth').build(),
           includeProperties: p.get('includeProperties').build(),
           service: p.get('service').build(),
-          addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
+          addAdditionalPropertiesCallback:
+              p.get('addAdditionalPropertiesCallback').build(),
         );
   }
 

@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/sliver_prototype_extent_list.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_delegate.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with _i2.Mate {
+class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList
+    with _i2.Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none

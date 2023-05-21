@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/switch_list_tile.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -201,7 +201,8 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'trackOutlineColor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -227,7 +228,8 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -552,7 +554,8 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'trackOutlineColor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -578,7 +581,8 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

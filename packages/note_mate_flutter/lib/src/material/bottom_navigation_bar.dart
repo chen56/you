@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/bottom_navigation_bar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/bottom_navigation_bar_item.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
@@ -193,7 +193,8 @@ class BottomNavigationBar$Mate extends _i1.BottomNavigationBar with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'landscapeLayout': _i2.BuilderArg<_i1.BottomNavigationBarLandscapeLayout?>(
+          'landscapeLayout':
+              _i2.BuilderArg<_i1.BottomNavigationBarLandscapeLayout?>(
             name: 'landscapeLayout',
             init: landscapeLayout,
             isNamed: true,

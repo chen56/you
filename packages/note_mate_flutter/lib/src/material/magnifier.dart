@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/magnifier.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i4;
 import 'package:flutter/src/widgets/magnifier.dart' as _i5;
@@ -106,7 +106,8 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Magnifier$Mate(
           key: p.get('key').build(),
-          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset:
+              p.get('additionalFocalPointOffset').build(),
           borderRadius: p.get('borderRadius').build(),
           filmColor: p.get('filmColor').build(),
           shadows: p.get('shadows').build(),

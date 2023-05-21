@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/text_field.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/editable_text.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
@@ -487,7 +487,8 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: autofillHints,
             isNamed: true,
           ),
-          'contentInsertionConfiguration': _i2.BuilderArg<_i4.ContentInsertionConfiguration?>(
+          'contentInsertionConfiguration':
+              _i2.BuilderArg<_i4.ContentInsertionConfiguration?>(
             name: 'contentInsertionConfiguration',
             init: contentInsertionConfiguration,
             isNamed: true,
@@ -515,7 +516,8 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i4.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i4.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
@@ -526,12 +528,14 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
+          'spellCheckConfiguration':
+              _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -584,7 +588,8 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           onTapOutside: p.get('onTapOutside').build(),
@@ -593,11 +598,13 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           canRequestFocus: p.get('canRequestFocus').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),

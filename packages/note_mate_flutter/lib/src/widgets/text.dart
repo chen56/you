@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/text.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/text_style.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -123,7 +123,8 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
         super.fallback() {
     mateBuilderName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
+    mateBuilder =
+        (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
   }
 
   @override
@@ -131,7 +132,8 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with _i2.Mate {
+class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior
+    with _i2.Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , default:none

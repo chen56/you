@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/text_editing.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class TextSelection extends TextRange
@@ -99,7 +99,8 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
         super.fromPosition() {
     mateBuilderName = 'TextSelection.fromPosition';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
+    mateBuilder =
+        (p) => TextSelection$Mate.fromPosition(p.get('position').value);
   }
 
   @override

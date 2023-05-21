@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/toggle_buttons_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/text_style.dart' as _i3;
 import 'package:flutter/src/rendering/box.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -11,7 +11,8 @@ import 'package:flutter/src/foundation/key.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class ToggleButtonsThemeData with Diagnosticable
-class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData with _i2.Mate {
+class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData
+    with _i2.Mate {
   /// ToggleButtonsThemeData ToggleButtonsThemeData({TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth})
   ToggleButtonsThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none

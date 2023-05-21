@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/foundation/basic_types.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class CachingIterable<E> extends Iterable<E>
 class CachingIterable$Mate<E> extends _i1.CachingIterable<E> with _i2.Mate {
@@ -21,7 +21,8 @@ class CachingIterable$Mate<E> extends _i1.CachingIterable<E> with _i2.Mate {
         super() {
     mateBuilderName = 'CachingIterable';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder = (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
+    mateBuilder =
+        (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
   }
 
   @override

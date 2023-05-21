@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/events.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/animation.dart' as _i4;
 
@@ -1748,7 +1748,8 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
 }
 
 /// class PointerScrollInertiaCancelEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollInertiaCancelEvent
-class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCancelEvent with _i2.Mate {
+class PointerScrollInertiaCancelEvent$Mate
+    extends _i1.PointerScrollInertiaCancelEvent with _i2.Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -1890,7 +1891,8 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
 }
 
 /// class PointerPanZoomStartEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomStartEvent
-class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i2.Mate {
+class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent
+    with _i2.Mate {
   /// PointerPanZoomStartEvent PointerPanZoomStartEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomStartEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -1966,7 +1968,8 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
 }
 
 /// class PointerPanZoomUpdateEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomUpdateEvent
-class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with _i2.Mate {
+class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent
+    with _i2.Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -2082,7 +2085,8 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
 }
 
 /// class PointerPanZoomEndEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomEndEvent
-class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Mate {
+class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent
+    with _i2.Mate {
   /// PointerPanZoomEndEvent PointerPanZoomEndEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomEndEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl

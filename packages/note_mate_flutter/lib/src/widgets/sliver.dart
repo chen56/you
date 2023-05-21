@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/sliver.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_delegate.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -262,7 +262,8 @@ class SliverList$Mate extends _i1.SliverList with _i2.Mate {
 }
 
 /// class SliverFixedExtentList extends SliverMultiBoxAdaptorWidget
-class SliverFixedExtentList$Mate extends _i1.SliverFixedExtentList with _i2.Mate {
+class SliverFixedExtentList$Mate extends _i1.SliverFixedExtentList
+    with _i2.Mate {
   /// SliverFixedExtentList SliverFixedExtentList({Key? key, required SliverChildDelegate delegate, required double itemExtent})
   SliverFixedExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -719,7 +720,8 @@ class SliverGrid$Mate extends _i1.SliverGrid with _i2.Mate {
 }
 
 /// class SliverMultiBoxAdaptorElement extends RenderObjectElement implements RenderSliverBoxChildManager
-class SliverMultiBoxAdaptorElement$Mate extends _i1.SliverMultiBoxAdaptorElement with _i2.Mate {
+class SliverMultiBoxAdaptorElement$Mate extends _i1.SliverMultiBoxAdaptorElement
+    with _i2.Mate {
   /// SliverMultiBoxAdaptorElement SliverMultiBoxAdaptorElement(SliverMultiBoxAdaptorWidget widget, {bool replaceMovedChildren = false})
   SliverMultiBoxAdaptorElement$Mate(
     /// requiredParameters: SliverMultiBoxAdaptorWidget widget

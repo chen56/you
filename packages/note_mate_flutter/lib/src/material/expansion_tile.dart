@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/expansion_tile.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
@@ -226,7 +226,8 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
           initiallyExpanded: p.get('initiallyExpanded').build(),
           maintainState: p.get('maintainState').build(),
           tilePadding: p.get('tilePadding').build(),
-          expandedCrossAxisAlignment: p.get('expandedCrossAxisAlignment').build(),
+          expandedCrossAxisAlignment:
+              p.get('expandedCrossAxisAlignment').build(),
           expandedAlignment: p.get('expandedAlignment').build(),
           childrenPadding: p.get('childrenPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),

@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/multitap.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/recognizer.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;
 
 /// class DoubleTapGestureRecognizer extends GestureRecognizer
-class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer with _i2.Mate {
+class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer
+    with _i2.Mate {
   /// DoubleTapGestureRecognizer DoubleTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   DoubleTapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -51,7 +52,8 @@ class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer wit
 }
 
 /// class MultiTapGestureRecognizer extends GestureRecognizer
-class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with _i2.Mate {
+class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer
+    with _i2.Mate {
   /// MultiTapGestureRecognizer MultiTapGestureRecognizer({Duration longTapDelay = Duration.zero, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   MultiTapGestureRecognizer$Mate({
     /// optionalParameters: {Duration longTapDelay = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -168,7 +170,8 @@ class SerialTapDownDetails$Mate extends _i1.SerialTapDownDetails with _i2.Mate {
 }
 
 /// class SerialTapCancelDetails
-class SerialTapCancelDetails$Mate extends _i1.SerialTapCancelDetails with _i2.Mate {
+class SerialTapCancelDetails$Mate extends _i1.SerialTapCancelDetails
+    with _i2.Mate {
   /// SerialTapCancelDetails SerialTapCancelDetails({int count = 1})
   SerialTapCancelDetails$Mate(
       {
@@ -185,7 +188,8 @@ class SerialTapCancelDetails$Mate extends _i1.SerialTapCancelDetails with _i2.Ma
         super() {
     mateBuilderName = 'SerialTapCancelDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
-    mateBuilder = (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
+    mateBuilder =
+        (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
   }
 
   @override
@@ -247,7 +251,8 @@ class SerialTapUpDetails$Mate extends _i1.SerialTapUpDetails with _i2.Mate {
 }
 
 /// class SerialTapGestureRecognizer extends GestureRecognizer
-class SerialTapGestureRecognizer$Mate extends _i1.SerialTapGestureRecognizer with _i2.Mate {
+class SerialTapGestureRecognizer$Mate extends _i1.SerialTapGestureRecognizer
+    with _i2.Mate {
   /// SerialTapGestureRecognizer SerialTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   SerialTapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none

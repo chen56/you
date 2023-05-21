@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/dialog.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
@@ -101,7 +101,8 @@ class CupertinoAlertDialog$Mate extends _i1.CupertinoAlertDialog with _i2.Mate {
 }
 
 /// class CupertinoPopupSurface extends StatelessWidget
-class CupertinoPopupSurface$Mate extends _i1.CupertinoPopupSurface with _i2.Mate {
+class CupertinoPopupSurface$Mate extends _i1.CupertinoPopupSurface
+    with _i2.Mate {
   /// CupertinoPopupSurface CupertinoPopupSurface({Key? key, bool isSurfacePainted = true, Widget? child})
   CupertinoPopupSurface$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -224,7 +225,8 @@ class CupertinoActionSheet$Mate extends _i1.CupertinoActionSheet with _i2.Mate {
 }
 
 /// class CupertinoActionSheetAction extends StatelessWidget
-class CupertinoActionSheetAction$Mate extends _i1.CupertinoActionSheetAction with _i2.Mate {
+class CupertinoActionSheetAction$Mate extends _i1.CupertinoActionSheetAction
+    with _i2.Mate {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -287,7 +289,8 @@ class CupertinoActionSheetAction$Mate extends _i1.CupertinoActionSheetAction wit
 }
 
 /// class CupertinoDialogAction extends StatelessWidget
-class CupertinoDialogAction$Mate extends _i1.CupertinoDialogAction with _i2.Mate {
+class CupertinoDialogAction$Mate extends _i1.CupertinoDialogAction
+    with _i2.Mate {
   /// CupertinoDialogAction CupertinoDialogAction({Key? key, void Function()? onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, TextStyle? textStyle, required Widget child})
   CupertinoDialogAction$Mate({
     /// optionalParameters: {Key? key} , default:none

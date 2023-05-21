@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/radio_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/material_state.dart' as _i3;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -32,7 +32,8 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
     super.visualDensity,
   })  : mateParams = {
-          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -42,7 +43,8 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
             init: fillColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

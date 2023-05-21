@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/editable.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/inline_span.dart' as _i4;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i5;
@@ -453,7 +453,8 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
           devicePixelRatio: p.get('devicePixelRatio').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').build(),
           promptRectRange: p.get('promptRectRange').build(),
           promptRectColor: p.get('promptRectColor').build(),

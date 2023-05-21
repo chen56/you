@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/platform_view.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/platform_views.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/gestures/recognizer.dart' as _i5;
@@ -34,7 +34,8 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -84,7 +85,8 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -105,7 +107,8 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
 }
 
 /// class PlatformViewRenderBox extends RenderBox with _PlatformViewGestureMixin
-class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox with _i2.Mate {
+class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox
+    with _i2.Mate {
   /// PlatformViewRenderBox PlatformViewRenderBox({required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewRenderBox$Mate({
     /// optionalParameters: {required PlatformViewController controller} , default:none
@@ -127,7 +130,8 @@ class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox with _i2.Mate
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/selectable_text.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
@@ -248,12 +248,14 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -282,7 +284,8 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -523,12 +526,14 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -557,7 +562,8 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),

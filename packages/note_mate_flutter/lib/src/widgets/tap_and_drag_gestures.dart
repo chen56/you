@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/tap_and_drag_gestures.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;
@@ -362,7 +362,8 @@ class TapDragEndDetails$Mate extends _i1.TapDragEndDetails with _i2.Mate {
 }
 
 /// class TapAndHorizontalDragGestureRecognizer extends BaseTapAndDragGestureRecognizer
-class TapAndHorizontalDragGestureRecognizer$Mate extends _i1.TapAndHorizontalDragGestureRecognizer with _i2.Mate {
+class TapAndHorizontalDragGestureRecognizer$Mate
+    extends _i1.TapAndHorizontalDragGestureRecognizer with _i2.Mate {
   /// TapAndHorizontalDragGestureRecognizer TapAndHorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices})
   TapAndHorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -396,7 +397,8 @@ class TapAndHorizontalDragGestureRecognizer$Mate extends _i1.TapAndHorizontalDra
 }
 
 /// class TapAndPanGestureRecognizer extends BaseTapAndDragGestureRecognizer
-class TapAndPanGestureRecognizer$Mate extends _i1.TapAndPanGestureRecognizer with _i2.Mate {
+class TapAndPanGestureRecognizer$Mate extends _i1.TapAndPanGestureRecognizer
+    with _i2.Mate {
   /// TapAndPanGestureRecognizer TapAndPanGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices})
   TapAndPanGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -430,7 +432,8 @@ class TapAndPanGestureRecognizer$Mate extends _i1.TapAndPanGestureRecognizer wit
 }
 
 /// class TapAndDragGestureRecognizer extends BaseTapAndDragGestureRecognizer
-class TapAndDragGestureRecognizer$Mate extends _i1.TapAndDragGestureRecognizer with _i2.Mate {
+class TapAndDragGestureRecognizer$Mate extends _i1.TapAndDragGestureRecognizer
+    with _i2.Mate {
   /// TapAndDragGestureRecognizer TapAndDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices})
   TapAndDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none

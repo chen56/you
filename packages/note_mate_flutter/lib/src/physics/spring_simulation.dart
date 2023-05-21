@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/physics/spring_simulation.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/physics/tolerance.dart' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 
@@ -149,7 +149,8 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
 }
 
 /// class ScrollSpringSimulation extends SpringSimulation
-class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Mate {
+class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation
+    with _i2.Mate {
   /// ScrollSpringSimulation ScrollSpringSimulation(SpringDescription spring, double start, double end, double velocity, {Tolerance tolerance = Tolerance.defaultTolerance})
   ScrollSpringSimulation$Mate(
     /// requiredParameters: SpringDescription spring

@@ -2,10 +2,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/raw_keyboard_windows.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class RawKeyEventDataWindows extends RawKeyEventData
-class RawKeyEventDataWindows$Mate extends _i1.RawKeyEventDataWindows with _i2.Mate {
+class RawKeyEventDataWindows$Mate extends _i1.RawKeyEventDataWindows
+    with _i2.Mate {
   /// RawKeyEventDataWindows RawKeyEventDataWindows({int keyCode = 0, int scanCode = 0, int characterCodePoint = 0, int modifiers = 0})
   RawKeyEventDataWindows$Mate({
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl

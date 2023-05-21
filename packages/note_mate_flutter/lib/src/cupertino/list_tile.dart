@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/list_tile.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:async' as _i5;
@@ -252,7 +252,8 @@ class CupertinoListTile$Mate extends _i1.CupertinoListTile with _i2.Mate {
 }
 
 /// class CupertinoListTileChevron extends StatelessWidget
-class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron with _i2.Mate {
+class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron
+    with _i2.Mate {
   /// CupertinoListTileChevron CupertinoListTileChevron({Key? key})
   CupertinoListTileChevron$Mate(
       {
@@ -268,7 +269,8 @@ class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron with _i
         super() {
     mateBuilderName = 'CupertinoListTileChevron';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
+    mateBuilder =
+        (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
   }
 
   @override

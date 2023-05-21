@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/text_editing_delta.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/text_editing.dart' as _i3;
 import 'dart:ui' as _i4;
 
 /// class TextEditingDeltaInsertion extends TextEditingDelta
-class TextEditingDeltaInsertion$Mate extends _i1.TextEditingDeltaInsertion with _i2.Mate {
+class TextEditingDeltaInsertion$Mate extends _i1.TextEditingDeltaInsertion
+    with _i2.Mate {
   /// TextEditingDeltaInsertion TextEditingDeltaInsertion({required String oldText, required String textInserted, required int insertionOffset, required TextSelection selection, required TextRange composing})
   TextEditingDeltaInsertion$Mate({
     /// optionalParameters: {required String oldText} , default:none
@@ -68,7 +69,8 @@ class TextEditingDeltaInsertion$Mate extends _i1.TextEditingDeltaInsertion with 
 }
 
 /// class TextEditingDeltaDeletion extends TextEditingDelta
-class TextEditingDeltaDeletion$Mate extends _i1.TextEditingDeltaDeletion with _i2.Mate {
+class TextEditingDeltaDeletion$Mate extends _i1.TextEditingDeltaDeletion
+    with _i2.Mate {
   /// TextEditingDeltaDeletion TextEditingDeltaDeletion({required String oldText, required TextRange deletedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaDeletion$Mate({
     /// optionalParameters: {required String oldText} , default:none
@@ -120,7 +122,8 @@ class TextEditingDeltaDeletion$Mate extends _i1.TextEditingDeltaDeletion with _i
 }
 
 /// class TextEditingDeltaReplacement extends TextEditingDelta
-class TextEditingDeltaReplacement$Mate extends _i1.TextEditingDeltaReplacement with _i2.Mate {
+class TextEditingDeltaReplacement$Mate extends _i1.TextEditingDeltaReplacement
+    with _i2.Mate {
   /// TextEditingDeltaReplacement TextEditingDeltaReplacement({required String oldText, required String replacementText, required TextRange replacedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaReplacement$Mate({
     /// optionalParameters: {required String oldText} , default:none
@@ -181,7 +184,8 @@ class TextEditingDeltaReplacement$Mate extends _i1.TextEditingDeltaReplacement w
 }
 
 /// class TextEditingDeltaNonTextUpdate extends TextEditingDelta
-class TextEditingDeltaNonTextUpdate$Mate extends _i1.TextEditingDeltaNonTextUpdate with _i2.Mate {
+class TextEditingDeltaNonTextUpdate$Mate
+    extends _i1.TextEditingDeltaNonTextUpdate with _i2.Mate {
   /// TextEditingDeltaNonTextUpdate TextEditingDeltaNonTextUpdate({required String oldText, required TextSelection selection, required TextRange composing})
   TextEditingDeltaNonTextUpdate$Mate({
     /// optionalParameters: {required String oldText} , default:none

@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/context_menu_button_item.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 
 /// class ContextMenuButtonItem
-class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate {
+class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem
+    with _i2.Mate {
   /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
     /// optionalParameters: {required void Function() onPressed} , default:none

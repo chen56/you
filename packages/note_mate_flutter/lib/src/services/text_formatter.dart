@@ -2,10 +2,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/text_formatter.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class FilteringTextInputFormatter extends TextInputFormatter
-class FilteringTextInputFormatter$Mate extends _i1.FilteringTextInputFormatter with _i2.Mate {
+class FilteringTextInputFormatter$Mate extends _i1.FilteringTextInputFormatter
+    with _i2.Mate {
   /// FilteringTextInputFormatter FilteringTextInputFormatter(Pattern filterPattern, {required bool allow, String replacementString = ''})
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
@@ -104,7 +105,8 @@ class FilteringTextInputFormatter$Mate extends _i1.FilteringTextInputFormatter w
 }
 
 /// class LengthLimitingTextInputFormatter extends TextInputFormatter
-class LengthLimitingTextInputFormatter$Mate extends _i1.LengthLimitingTextInputFormatter with _i2.Mate {
+class LengthLimitingTextInputFormatter$Mate
+    extends _i1.LengthLimitingTextInputFormatter with _i2.Mate {
   /// LengthLimitingTextInputFormatter LengthLimitingTextInputFormatter(int? maxLength, {MaxLengthEnforcement? maxLengthEnforcement})
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength

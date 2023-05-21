@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/elevated_button_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/button_style.dart' as _i3;
 import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class ElevatedButtonThemeData with Diagnosticable
-class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData with _i2.Mate {
+class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData
+    with _i2.Mate {
   /// ElevatedButtonThemeData ElevatedButtonThemeData({ButtonStyle? style})
   ElevatedButtonThemeData$Mate(
       {
@@ -24,7 +25,8 @@ class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData with _i2.
         super() {
     mateBuilderName = 'ElevatedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder =
+        (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

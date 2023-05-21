@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/search_field.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/editable_text.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
@@ -19,7 +19,8 @@ import 'package:flutter/src/cupertino/text_field.dart' as _i15;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i16;
 
 /// class CupertinoSearchTextField extends StatefulWidget
-class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i2.Mate {
+class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField
+    with _i2.Mate {
   /// CupertinoSearchTextField CupertinoSearchTextField({Key? key, TextEditingController? controller, void Function(String)? onChanged, void Function(String)? onSubmitted, TextStyle? style, String? placeholder, TextStyle? placeholderStyle, BoxDecoration? decoration, Color? backgroundColor, BorderRadius? borderRadius, TextInputType? keyboardType = TextInputType.text, EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8), Color itemColor = CupertinoColors.secondaryLabel, double itemSize = 20.0, EdgeInsetsGeometry prefixInsets = const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3), Widget prefixIcon = const Icon(CupertinoIcons.search), EdgeInsetsGeometry suffixInsets = const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2), Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill), OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing, void Function()? onSuffixTap, String? restorationId, FocusNode? focusNode, SmartQuotesType? smartQuotesType, SmartDashesType? smartDashesType, bool enableIMEPersonalizedLearning = true, bool autofocus = false, void Function()? onTap, bool autocorrect = true, bool? enabled})
   CupertinoSearchTextField$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -290,7 +291,8 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
           focusNode: p.get('focusNode').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           smartDashesType: p.get('smartDashesType').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           autofocus: p.get('autofocus').build(),
           onTap: p.get('onTap').build(),
           autocorrect: p.get('autocorrect').build(),

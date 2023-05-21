@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/dropdown_menu_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/text_style.dart' as _i3;
 import 'package:flutter/src/material/input_decorator.dart' as _i4;
 import 'package:flutter/src/material/menu_style.dart' as _i5;
@@ -10,7 +10,8 @@ import 'package:flutter/src/foundation/key.dart' as _i6;
 import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class DropdownMenuThemeData with Diagnosticable
-class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData with _i2.Mate {
+class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData
+    with _i2.Mate {
   /// DropdownMenuThemeData DropdownMenuThemeData({TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle})
   DropdownMenuThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none

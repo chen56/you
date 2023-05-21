@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/calendar_date_picker.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/material/date.dart' as _i5;
@@ -71,7 +71,8 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
             init: onDateChanged,
             isNamed: true,
           ),
-          'onDisplayedMonthChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
+          'onDisplayedMonthChanged':
+              _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
             name: 'onDisplayedMonthChanged',
             init: onDisplayedMonthChanged,
             isNamed: true,

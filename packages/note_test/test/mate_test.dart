@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note_mate_flutter/material.dart';
 
@@ -75,7 +75,8 @@ void main() {
     });
 
     test('declare(Meta?)', () {
-      BuilderArg<Container?> p = root.use<Container?>("mate", Container$Mate(width: 100));
+      BuilderArg<Container?> p =
+          root.use<Container?>("mate", Container$Mate(width: 100));
       expect(p, root.get("mate"));
 
       expect(p.value is Container$Mate, true);

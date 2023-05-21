@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/selection_container.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/rendering/selection.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -88,7 +88,8 @@ class SelectionContainer$Mate extends _i1.SelectionContainer with _i2.Mate {
 }
 
 /// class SelectionRegistrarScope extends InheritedWidget
-class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope with _i2.Mate {
+class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope
+    with _i2.Mate {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
     /// optionalParameters: {Key? key} , default:none

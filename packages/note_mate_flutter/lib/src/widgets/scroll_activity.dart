@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scroll_activity.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/drag_details.dart' as _i4;
 import 'package:flutter/src/physics/simulation.dart' as _i5;
@@ -120,7 +120,8 @@ class ScrollDragController$Mate extends _i1.ScrollDragController with _i2.Mate {
           details: p.get('details').build(),
           onDragCanceled: p.get('onDragCanceled').build(),
           carriedVelocity: p.get('carriedVelocity').build(),
-          motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
+          motionStartDistanceThreshold:
+              p.get('motionStartDistanceThreshold').build(),
         );
   }
 
@@ -163,7 +164,8 @@ class DragScrollActivity$Mate extends _i1.DragScrollActivity with _i2.Mate {
 }
 
 /// class BallisticScrollActivity extends ScrollActivity
-class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity with _i2.Mate {
+class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity
+    with _i2.Mate {
   /// BallisticScrollActivity BallisticScrollActivity(ScrollActivityDelegate delegate, Simulation simulation, TickerProvider vsync, bool shouldIgnorePointer)
   BallisticScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate

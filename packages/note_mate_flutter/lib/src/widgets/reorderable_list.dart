@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/reorderable_list.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
@@ -186,7 +186,8 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior': _i2.BuilderArg<_i12.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior':
+              _i2.BuilderArg<_i12.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -238,7 +239,8 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
 }
 
 /// class SliverReorderableList extends StatefulWidget
-class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate {
+class SliverReorderableList$Mate extends _i1.SliverReorderableList
+    with _i2.Mate {
   /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator})
   SliverReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -344,7 +346,8 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
 }
 
 /// class ReorderableDragStartListener extends StatelessWidget
-class ReorderableDragStartListener$Mate extends _i1.ReorderableDragStartListener with _i2.Mate {
+class ReorderableDragStartListener$Mate extends _i1.ReorderableDragStartListener
+    with _i2.Mate {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -397,7 +400,8 @@ class ReorderableDragStartListener$Mate extends _i1.ReorderableDragStartListener
 }
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
-class ReorderableDelayedDragStartListener$Mate extends _i1.ReorderableDelayedDragStartListener with _i2.Mate {
+class ReorderableDelayedDragStartListener$Mate
+    extends _i1.ReorderableDelayedDragStartListener with _i2.Mate {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none

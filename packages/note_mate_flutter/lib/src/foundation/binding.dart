@@ -2,10 +2,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/foundation/binding.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class DebugReassembleConfig
-class DebugReassembleConfig$Mate extends _i1.DebugReassembleConfig with _i2.Mate {
+class DebugReassembleConfig$Mate extends _i1.DebugReassembleConfig
+    with _i2.Mate {
   /// DebugReassembleConfig DebugReassembleConfig({String? widgetName})
   DebugReassembleConfig$Mate(
       {
@@ -21,7 +22,8 @@ class DebugReassembleConfig$Mate extends _i1.DebugReassembleConfig with _i2.Mate
         super() {
     mateBuilderName = 'DebugReassembleConfig';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder = (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build());
+    mateBuilder = (p) =>
+        DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build());
   }
 
   @override

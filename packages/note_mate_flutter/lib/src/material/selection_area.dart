@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/selection_area.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/widgets/text_selection.dart' as _i5;
@@ -52,17 +52,20 @@ class SelectionArea$Mate extends _i1.SelectionArea with _i2.Mate {
             init: selectionControls,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i6.SelectableRegionContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i6.SelectableRegionContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i7.TextMagnifierConfiguration?>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i7.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
           ),
-          'onSelectionChanged': _i2.BuilderArg<_i8.ValueChanged<_i9.SelectedContent?>?>(
+          'onSelectionChanged':
+              _i2.BuilderArg<_i8.ValueChanged<_i9.SelectedContent?>?>(
             name: 'onSelectionChanged',
             init: onSelectionChanged,
             isNamed: true,

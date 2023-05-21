@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/animation/tween.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
 
@@ -41,7 +41,8 @@ class Tween$Mate<T extends Object?> extends _i1.Tween<T> with _i2.Mate {
 }
 
 /// class ReverseTween<T extends Object?> extends Tween<T>
-class ReverseTween$Mate<T extends Object?> extends _i1.ReverseTween<T> with _i2.Mate {
+class ReverseTween$Mate<T extends Object?> extends _i1.ReverseTween<T>
+    with _i2.Mate {
   /// ReverseTween<T> ReverseTween(Tween<T> parent)
   ReverseTween$Mate(
 

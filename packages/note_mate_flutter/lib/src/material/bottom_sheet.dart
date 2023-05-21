@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/bottom_sheet.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/animation/animation_controller.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -174,7 +174,8 @@ class BottomSheet$Mate extends _i1.BottomSheet with _i2.Mate {
 }
 
 /// class ModalBottomSheetRoute<T> extends PopupRoute<T>
-class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i2.Mate {
+class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T>
+    with _i2.Mate {
   /// ModalBottomSheetRoute<T> ModalBottomSheetRoute({required Widget Function(BuildContext) builder, CapturedThemes? capturedThemes, String? barrierLabel, String? barrierOnTapHint, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, Color? modalBarrierColor, bool isDismissible = true, bool enableDrag = true, bool? showDragHandle, required bool isScrollControlled, RouteSettings? settings, AnimationController? transitionAnimationController, Offset? anchorPoint, bool useSafeArea = false})
   ModalBottomSheetRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
@@ -308,7 +309,8 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i
             init: settings,
             isNamed: true,
           ),
-          'transitionAnimationController': _i2.BuilderArg<_i4.AnimationController?>(
+          'transitionAnimationController':
+              _i2.BuilderArg<_i4.AnimationController?>(
             name: 'transitionAnimationController',
             init: transitionAnimationController,
             isNamed: true,
@@ -344,7 +346,8 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i
           showDragHandle: p.get('showDragHandle').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
           settings: p.get('settings').build(),
-          transitionAnimationController: p.get('transitionAnimationController').build(),
+          transitionAnimationController:
+              p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );

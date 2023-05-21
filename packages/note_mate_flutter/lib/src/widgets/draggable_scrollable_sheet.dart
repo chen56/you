@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/draggable_scrollable_sheet.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class DraggableScrollableSheet extends StatefulWidget
-class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i2.Mate {
+class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet
+    with _i2.Mate {
   /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, required Widget Function(BuildContext, ScrollController) builder})
   DraggableScrollableSheet$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -118,7 +119,8 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
 }
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
-class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotification with _i2.Mate {
+class DraggableScrollableNotification$Mate
+    extends _i1.DraggableScrollableNotification with _i2.Mate {
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , default:none
@@ -179,7 +181,8 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
-class DraggableScrollableActuator$Mate extends _i1.DraggableScrollableActuator with _i2.Mate {
+class DraggableScrollableActuator$Mate extends _i1.DraggableScrollableActuator
+    with _i2.Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , default:none

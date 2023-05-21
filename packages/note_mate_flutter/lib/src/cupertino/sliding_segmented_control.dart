@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/sliding_segmented_control.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
@@ -11,7 +11,8 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i7;
 import 'package:flutter/cupertino.dart' as _i8;
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
-class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegmentedControl<T> with _i2.Mate {
+class CupertinoSlidingSegmentedControl$Mate<T>
+    extends _i1.CupertinoSlidingSegmentedControl<T> with _i2.Mate {
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/app.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/navigator.dart' as _i5;
@@ -123,7 +123,8 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: onGenerateRoute,
             isNamed: true,
           ),
-          'onGenerateInitialRoutes': _i2.BuilderArg<_i1.InitialRouteListFactory?>(
+          'onGenerateInitialRoutes':
+              _i2.BuilderArg<_i1.InitialRouteListFactory?>(
             name: 'onGenerateInitialRoutes',
             init: onGenerateInitialRoutes,
             isNamed: true,
@@ -189,17 +190,20 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates':
+              _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
           ),
-          'localeListResolutionCallback': _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
+          'localeListResolutionCallback':
+              _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
             name: 'localeListResolutionCallback',
             init: localeListResolutionCallback,
             isNamed: true,
           ),
-          'localeResolutionCallback': _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
+          'localeResolutionCallback':
+              _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
             name: 'localeResolutionCallback',
             init: localeResolutionCallback,
             isNamed: true,
@@ -245,12 +249,14 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+          'inspectorSelectButtonBuilder':
+              _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
             name: 'inspectorSelectButtonBuilder',
             init: inspectorSelectButtonBuilder,
             isNamed: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts':
+              _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
@@ -287,16 +293,21 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder:
+              p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
@@ -388,12 +399,14 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i12.RouteInformationProvider?>(
+          'routeInformationProvider':
+              _i2.BuilderArg<_i12.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i12.RouteInformationParser<Object>?>(
+          'routeInformationParser':
+              _i2.BuilderArg<_i12.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
@@ -444,17 +457,20 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates':
+              _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
           ),
-          'localeListResolutionCallback': _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
+          'localeListResolutionCallback':
+              _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
             name: 'localeListResolutionCallback',
             init: localeListResolutionCallback,
             isNamed: true,
           ),
-          'localeResolutionCallback': _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
+          'localeResolutionCallback':
+              _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
             name: 'localeResolutionCallback',
             init: localeResolutionCallback,
             isNamed: true,
@@ -500,12 +516,14 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+          'inspectorSelectButtonBuilder':
+              _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
             name: 'inspectorSelectButtonBuilder',
             init: inspectorSelectButtonBuilder,
             isNamed: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts':
+              _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
@@ -538,16 +556,21 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder:
+              p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),

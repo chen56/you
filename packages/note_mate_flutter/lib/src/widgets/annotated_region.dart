@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/annotated_region.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class AnnotatedRegion<T extends Object> extends SingleChildRenderObjectWidget
-class AnnotatedRegion$Mate<T extends Object> extends _i1.AnnotatedRegion<T> with _i2.Mate {
+class AnnotatedRegion$Mate<T extends Object> extends _i1.AnnotatedRegion<T>
+    with _i2.Mate {
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
     /// optionalParameters: {Key? key} , default:none

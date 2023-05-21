@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/tabs.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
@@ -265,7 +265,8 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             isNamed: true,
             defaultValue: _i12.DragStartBehavior.start,
           ),
-          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -311,7 +312,8 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           isScrollable: p.get('isScrollable').build(),
           padding: p.get('padding').build(),
           indicatorColor: p.get('indicatorColor').build(),
-          automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').build(),
+          automaticIndicatorColorAdjustment:
+              p.get('automaticIndicatorColorAdjustment').build(),
           indicatorWeight: p.get('indicatorWeight').build(),
           indicatorPadding: p.get('indicatorPadding').build(),
           indicator: p.get('indicator').build(),
@@ -505,7 +507,8 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             isNamed: true,
             defaultValue: _i12.DragStartBehavior.start,
           ),
-          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -551,7 +554,8 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           isScrollable: p.get('isScrollable').build(),
           padding: p.get('padding').build(),
           indicatorColor: p.get('indicatorColor').build(),
-          automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').build(),
+          automaticIndicatorColorAdjustment:
+              p.get('automaticIndicatorColorAdjustment').build(),
           indicatorWeight: p.get('indicatorWeight').build(),
           indicatorPadding: p.get('indicatorPadding').build(),
           indicator: p.get('indicator').build(),
@@ -660,7 +664,8 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
 }
 
 /// class TabPageSelectorIndicator extends StatelessWidget
-class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator with _i2.Mate {
+class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator
+    with _i2.Mate {
   /// TabPageSelectorIndicator TabPageSelectorIndicator({Key? key, required Color backgroundColor, required Color borderColor, required double size, BorderStyle borderStyle = BorderStyle.solid})
   TabPageSelectorIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none

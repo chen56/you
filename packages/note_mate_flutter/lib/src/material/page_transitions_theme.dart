@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/page_transitions_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/platform.dart' as _i3;
 
 /// class ZoomPageTransitionsBuilder extends PageTransitionsBuilder
-class ZoomPageTransitionsBuilder$Mate extends _i1.ZoomPageTransitionsBuilder with _i2.Mate {
+class ZoomPageTransitionsBuilder$Mate extends _i1.ZoomPageTransitionsBuilder
+    with _i2.Mate {
   /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowSnapshotting = true, bool allowEnterRouteSnapshotting = true})
   ZoomPageTransitionsBuilder$Mate({
     /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
@@ -33,7 +34,8 @@ class ZoomPageTransitionsBuilder$Mate extends _i1.ZoomPageTransitionsBuilder wit
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ZoomPageTransitionsBuilder$Mate(
           allowSnapshotting: p.get('allowSnapshotting').build(),
-          allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build(),
+          allowEnterRouteSnapshotting:
+              p.get('allowEnterRouteSnapshotting').build(),
         );
   }
 
@@ -49,7 +51,8 @@ class PageTransitionsTheme$Mate extends _i1.PageTransitionsTheme with _i2.Mate {
       /// optionalParameters: {Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders} , default:unprocessed=SimpleIdentifierImpl
       super.builders})
       : mateParams = {
-          'builders': _i2.BuilderArg<Map<_i3.TargetPlatform, _i1.PageTransitionsBuilder>>(
+          'builders': _i2.BuilderArg<
+              Map<_i3.TargetPlatform, _i1.PageTransitionsBuilder>>(
             name: 'builders',
             init: builders,
             isNamed: true,
@@ -58,7 +61,8 @@ class PageTransitionsTheme$Mate extends _i1.PageTransitionsTheme with _i2.Mate {
         super() {
     mateBuilderName = 'PageTransitionsTheme';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
+    mateBuilder =
+        (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
   }
 
   @override

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -204,7 +204,8 @@ class CupertinoThemeData$Mate extends _i1.CupertinoThemeData with _i2.Mate {
 }
 
 /// class NoDefaultCupertinoThemeData
-class NoDefaultCupertinoThemeData$Mate extends _i1.NoDefaultCupertinoThemeData with _i2.Mate {
+class NoDefaultCupertinoThemeData$Mate extends _i1.NoDefaultCupertinoThemeData
+    with _i2.Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
     /// optionalParameters: {Brightness? brightness} , default:none

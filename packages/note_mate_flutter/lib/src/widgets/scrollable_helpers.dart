@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scrollable_helpers.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/basic_types.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i4;
 import 'package:flutter/src/widgets/scroll_physics.dart' as _i5;
@@ -158,7 +158,8 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
 }
 
 /// class EdgeDraggingAutoScroller
-class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i2.Mate {
+class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller
+    with _i2.Mate {
   /// EdgeDraggingAutoScroller EdgeDraggingAutoScroller(ScrollableState scrollable, {void Function()? onScrollViewScrolled, double velocityScalar = _kDefaultAutoScrollVelocityScalar})
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
@@ -200,7 +201,8 @@ class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i
 }
 
 /// class ScrollIncrementDetails
-class ScrollIncrementDetails$Mate extends _i1.ScrollIncrementDetails with _i2.Mate {
+class ScrollIncrementDetails$Mate extends _i1.ScrollIncrementDetails
+    with _i2.Mate {
   /// ScrollIncrementDetails ScrollIncrementDetails({required ScrollIncrementType type, required ScrollMetrics metrics})
   ScrollIncrementDetails$Mate({
     /// optionalParameters: {required ScrollIncrementType type} , default:none

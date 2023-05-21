@@ -10,7 +10,7 @@ ENV FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 WORKDIR ./note
 
 RUN echo 'Please use china net, Because we use flutter-io.cn mirror'
-RUN ./bake get
+RUN ./bake2 get
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
 RUN ./bake build --base-href "/note/"
 

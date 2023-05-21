@@ -2,12 +2,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/tweens.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/fractional_offset.dart' as _i3;
 import 'package:flutter/src/painting/alignment.dart' as _i4;
 
 /// class FractionalOffsetTween extends Tween<FractionalOffset?>
-class FractionalOffsetTween$Mate extends _i1.FractionalOffsetTween with _i2.Mate {
+class FractionalOffsetTween$Mate extends _i1.FractionalOffsetTween
+    with _i2.Mate {
   /// FractionalOffsetTween FractionalOffsetTween({FractionalOffset? begin, FractionalOffset? end})
   FractionalOffsetTween$Mate({
     /// optionalParameters: {FractionalOffset? begin} , default:none
@@ -75,7 +76,8 @@ class AlignmentTween$Mate extends _i1.AlignmentTween with _i2.Mate {
 }
 
 /// class AlignmentGeometryTween extends Tween<AlignmentGeometry?>
-class AlignmentGeometryTween$Mate extends _i1.AlignmentGeometryTween with _i2.Mate {
+class AlignmentGeometryTween$Mate extends _i1.AlignmentGeometryTween
+    with _i2.Mate {
   /// AlignmentGeometryTween AlignmentGeometryTween({AlignmentGeometry? begin, AlignmentGeometry? end})
   AlignmentGeometryTween$Mate({
     /// optionalParameters: {AlignmentGeometry? begin} , default:none

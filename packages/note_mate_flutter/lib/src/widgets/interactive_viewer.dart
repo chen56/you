@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/interactive_viewer.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/cupertino.dart' as _i5;
@@ -126,7 +126,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: onInteractionStart,
             isNamed: true,
           ),
-          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+          'onInteractionUpdate':
+              _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
             name: 'onInteractionUpdate',
             init: onInteractionUpdate,
             isNamed: true,
@@ -148,7 +149,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: scaleFactor,
             isNamed: true,
           ),
-          'transformationController': _i2.BuilderArg<_i1.TransformationController?>(
+          'transformationController':
+              _i2.BuilderArg<_i1.TransformationController?>(
             name: 'transformationController',
             init: transformationController,
             isNamed: true,
@@ -181,7 +183,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
           constrained: p.get('constrained').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -298,7 +301,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: onInteractionStart,
             isNamed: true,
           ),
-          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+          'onInteractionUpdate':
+              _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
             name: 'onInteractionUpdate',
             init: onInteractionUpdate,
             isNamed: true,
@@ -321,7 +325,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             isNamed: true,
             defaultValue: 200.0,
           ),
-          'transformationController': _i2.BuilderArg<_i1.TransformationController?>(
+          'transformationController':
+              _i2.BuilderArg<_i1.TransformationController?>(
             name: 'transformationController',
             init: transformationController,
             isNamed: true,
@@ -353,7 +358,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
           boundaryMargin: p.get('boundaryMargin').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -372,7 +378,8 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
 }
 
 /// class TransformationController extends ValueNotifier<Matrix4>
-class TransformationController$Mate extends _i1.TransformationController with _i2.Mate {
+class TransformationController$Mate extends _i1.TransformationController
+    with _i2.Mate {
   /// TransformationController TransformationController([Matrix4? value])
   TransformationController$Mate(
 

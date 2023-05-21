@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/picker.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/list_wheel_scroll_view.dart' as _i5;
@@ -278,7 +278,8 @@ class CupertinoPicker$Mate extends _i1.CupertinoPicker with _i2.Mate {
 }
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
-class CupertinoPickerDefaultSelectionOverlay$Mate extends _i1.CupertinoPickerDefaultSelectionOverlay with _i2.Mate {
+class CupertinoPickerDefaultSelectionOverlay$Mate
+    extends _i1.CupertinoPickerDefaultSelectionOverlay with _i2.Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/modal_barrier.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i5;
@@ -69,7 +69,8 @@ class ModalBarrier$Mate extends _i1.ModalBarrier with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'clipDetailsNotifier': _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
+          'clipDetailsNotifier':
+              _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
             name: 'clipDetailsNotifier',
             init: clipDetailsNotifier,
             isNamed: true,
@@ -89,7 +90,8 @@ class ModalBarrier$Mate extends _i1.ModalBarrier with _i2.Mate {
           dismissible: p.get('dismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
@@ -158,7 +160,8 @@ class AnimatedModalBarrier$Mate extends _i1.AnimatedModalBarrier with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'clipDetailsNotifier': _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
+          'clipDetailsNotifier':
+              _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
             name: 'clipDetailsNotifier',
             init: clipDetailsNotifier,
             isNamed: true,
@@ -177,7 +180,8 @@ class AnimatedModalBarrier$Mate extends _i1.AnimatedModalBarrier with _i2.Mate {
           color: p.get('color').build(),
           dismissible: p.get('dismissible').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),

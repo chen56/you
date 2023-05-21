@@ -2,14 +2,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/tab_indicator.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/border_radius.dart' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'package:flutter/cupertino.dart' as _i6;
 
 /// class UnderlineTabIndicator extends Decoration
-class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate {
+class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator
+    with _i2.Mate {
   /// UnderlineTabIndicator UnderlineTabIndicator({BorderRadius? borderRadius, BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white), EdgeInsetsGeometry insets = EdgeInsets.zero})
   UnderlineTabIndicator$Mate({
     /// optionalParameters: {BorderRadius? borderRadius} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/primary_scroll_controller.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i4;
 import 'package:flutter/src/foundation/platform.dart' as _i5;
@@ -11,7 +11,8 @@ import 'package:flutter/cupertino.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class PrimaryScrollController extends InheritedWidget
-class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.Mate {
+class PrimaryScrollController$Mate extends _i1.PrimaryScrollController
+    with _i2.Mate {
   /// PrimaryScrollController PrimaryScrollController({Key? key, required ScrollController controller, Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms, Axis? scrollDirection = Axis.vertical, required Widget child})
   PrimaryScrollController$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -39,7 +40,8 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
             init: controller,
             isNamed: true,
           ),
-          'automaticallyInheritForPlatforms': _i2.BuilderArg<Set<_i5.TargetPlatform>>(
+          'automaticallyInheritForPlatforms':
+              _i2.BuilderArg<Set<_i5.TargetPlatform>>(
             name: 'automaticallyInheritForPlatforms',
             init: automaticallyInheritForPlatforms,
             isNamed: true,
@@ -62,7 +64,8 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
-          automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').build(),
+          automaticallyInheritForPlatforms:
+              p.get('automaticallyInheritForPlatforms').build(),
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );

@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/system_chrome.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class ApplicationSwitcherDescription
-class ApplicationSwitcherDescription$Mate extends _i1.ApplicationSwitcherDescription with _i2.Mate {
+class ApplicationSwitcherDescription$Mate
+    extends _i1.ApplicationSwitcherDescription with _i2.Mate {
   /// ApplicationSwitcherDescription ApplicationSwitcherDescription({String? label, int? primaryColor})
   ApplicationSwitcherDescription$Mate({
     /// optionalParameters: {String? label} , default:none
@@ -113,13 +114,17 @@ class SystemUiOverlayStyle$Mate extends _i1.SystemUiOverlayStyle with _i2.Mate {
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SystemUiOverlayStyle$Mate(
           systemNavigationBarColor: p.get('systemNavigationBarColor').build(),
-          systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').build(),
-          systemNavigationBarIconBrightness: p.get('systemNavigationBarIconBrightness').build(),
-          systemNavigationBarContrastEnforced: p.get('systemNavigationBarContrastEnforced').build(),
+          systemNavigationBarDividerColor:
+              p.get('systemNavigationBarDividerColor').build(),
+          systemNavigationBarIconBrightness:
+              p.get('systemNavigationBarIconBrightness').build(),
+          systemNavigationBarContrastEnforced:
+              p.get('systemNavigationBarContrastEnforced').build(),
           statusBarColor: p.get('statusBarColor').build(),
           statusBarBrightness: p.get('statusBarBrightness').build(),
           statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
-          systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
+          systemStatusBarContrastEnforced:
+              p.get('systemStatusBarContrastEnforced').build(),
         );
   }
 

@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/sliver_persistent_header.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/basic_types.dart' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;
 
 /// class OverScrollHeaderStretchConfiguration
-class OverScrollHeaderStretchConfiguration$Mate extends _i1.OverScrollHeaderStretchConfiguration with _i2.Mate {
+class OverScrollHeaderStretchConfiguration$Mate
+    extends _i1.OverScrollHeaderStretchConfiguration with _i2.Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
@@ -43,8 +44,8 @@ class OverScrollHeaderStretchConfiguration$Mate extends _i1.OverScrollHeaderStre
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
-class PersistentHeaderShowOnScreenConfiguration$Mate extends _i1.PersistentHeaderShowOnScreenConfiguration
-    with _i2.Mate {
+class PersistentHeaderShowOnScreenConfiguration$Mate
+    extends _i1.PersistentHeaderShowOnScreenConfiguration with _i2.Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
@@ -80,7 +81,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends _i1.PersistentHeade
 }
 
 /// class FloatingHeaderSnapConfiguration
-class FloatingHeaderSnapConfiguration$Mate extends _i1.FloatingHeaderSnapConfiguration with _i2.Mate {
+class FloatingHeaderSnapConfiguration$Mate
+    extends _i1.FloatingHeaderSnapConfiguration with _i2.Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , default:processed=PrefixedIdentifierImpl

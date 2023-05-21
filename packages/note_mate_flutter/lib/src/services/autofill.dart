@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/autofill.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/text_input.dart' as _i3;
 
 /// class AutofillConfiguration
-class AutofillConfiguration$Mate extends _i1.AutofillConfiguration with _i2.Mate {
+class AutofillConfiguration$Mate extends _i1.AutofillConfiguration
+    with _i2.Mate {
   /// AutofillConfiguration AutofillConfiguration({required String uniqueIdentifier, required List<String> autofillHints, required TextEditingValue currentEditingValue, String? hintText})
   AutofillConfiguration$Mate({
     /// optionalParameters: {required String uniqueIdentifier} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/dialog.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
@@ -353,7 +353,8 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: actionsAlignment,
             isNamed: true,
           ),
-          'actionsOverflowAlignment': _i2.BuilderArg<_i13.OverflowBarAlignment?>(
+          'actionsOverflowAlignment':
+              _i2.BuilderArg<_i13.OverflowBarAlignment?>(
             name: 'actionsOverflowAlignment',
             init: actionsOverflowAlignment,
             isNamed: true,
@@ -445,7 +446,8 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
           actionsAlignment: p.get('actionsAlignment').build(),
           actionsOverflowAlignment: p.get('actionsOverflowAlignment').build(),
           actionsOverflowDirection: p.get('actionsOverflowDirection').build(),
-          actionsOverflowButtonSpacing: p.get('actionsOverflowButtonSpacing').build(),
+          actionsOverflowButtonSpacing:
+              p.get('actionsOverflowButtonSpacing').build(),
           buttonPadding: p.get('buttonPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),

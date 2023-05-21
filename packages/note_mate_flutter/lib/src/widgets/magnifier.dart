@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/magnifier.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/animation/animation_controller.dart' as _i4;
 import 'package:flutter/src/painting/box_shadow.dart' as _i5;
@@ -64,7 +64,8 @@ class MagnifierInfo$Mate extends _i1.MagnifierInfo with _i2.Mate {
 }
 
 /// class TextMagnifierConfiguration
-class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration with _i2.Mate {
+class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration
+    with _i2.Mate {
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
     /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , default:none
@@ -90,7 +91,8 @@ class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration wit
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
-          shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
+          shouldDisplayHandlesInMagnifier:
+              p.get('shouldDisplayHandlesInMagnifier').build(),
         );
   }
 
@@ -115,7 +117,8 @@ class MagnifierController$Mate extends _i1.MagnifierController with _i2.Mate {
         super() {
     mateBuilderName = 'MagnifierController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
+    mateBuilder = (p) => MagnifierController$Mate(
+        animationController: p.get('animationController').build());
   }
 
   @override

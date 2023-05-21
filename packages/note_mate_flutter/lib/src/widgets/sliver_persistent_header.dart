@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/sliver_persistent_header.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 
 /// class SliverPersistentHeader extends StatelessWidget
-class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader with _i2.Mate {
+class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader
+    with _i2.Mate {
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
     /// optionalParameters: {Key? key} , default:none

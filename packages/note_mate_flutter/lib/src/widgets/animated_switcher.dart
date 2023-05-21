@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/animated_switcher.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
@@ -69,7 +69,8 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
             isNamed: true,
             defaultValue: _i6.Curves.linear,
           ),
-          'transitionBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
+          'transitionBuilder':
+              _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
             name: 'transitionBuilder',
             init: transitionBuilder,
             isNamed: true,

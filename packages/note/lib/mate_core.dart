@@ -337,7 +337,8 @@ class ObjectParam extends Param {
           args: {},
           builder: builder,
           //根对象
-          builderRefer: code.refer("ObjectParam", "package:note/mate.dart"),
+          builderRefer:
+              code.refer("ObjectParam", "package:note/mate_core.dart"),
           editors: editors,
         );
 

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/magnifier.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;
@@ -15,7 +15,8 @@ import 'package:flutter/src/painting/borders.dart' as _i11;
 import 'package:flutter/src/animation/animation.dart' as _i12;
 
 /// class CupertinoTextMagnifier extends StatefulWidget
-class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Mate {
+class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier
+    with _i2.Mate {
   /// CupertinoTextMagnifier CupertinoTextMagnifier({Key? key, Curve animationCurve = Curves.easeOut, required MagnifierController controller, double dragResistance = 10.0, double hideBelowThreshold = 48.0, double horizontalScreenEdgePadding = 10.0, required ValueNotifier<MagnifierInfo> magnifierInfo})
   CupertinoTextMagnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -88,7 +89,8 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
           controller: p.get('controller').build(),
           dragResistance: p.get('dragResistance').build(),
           hideBelowThreshold: p.get('hideBelowThreshold').build(),
-          horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
+          horizontalScreenEdgePadding:
+              p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
   }
@@ -166,7 +168,8 @@ class CupertinoMagnifier$Mate extends _i1.CupertinoMagnifier with _i2.Mate {
           key: p.get('key').build(),
           size: p.get('size').build(),
           borderRadius: p.get('borderRadius').build(),
-          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset:
+              p.get('additionalFocalPointOffset').build(),
           shadows: p.get('shadows').build(),
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/scrollbar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
@@ -79,7 +79,8 @@ class Scrollbar$Mate extends _i1.Scrollbar with _i2.Mate {
             init: radius,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

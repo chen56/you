@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/expansion_tile_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/edge_insets.dart' as _i4;
 import 'package:flutter/src/painting/alignment.dart' as _i5;
@@ -11,7 +11,8 @@ import 'package:flutter/src/foundation/key.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class ExpansionTileThemeData with Diagnosticable
-class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Mate {
+class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData
+    with _i2.Mate {
   /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior})
   ExpansionTileThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none

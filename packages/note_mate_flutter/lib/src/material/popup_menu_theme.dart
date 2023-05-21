@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/popup_menu_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
@@ -75,7 +75,8 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
             init: textStyle,
             isNamed: true,
           ),
-          'labelTextStyle': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.TextStyle?>?>(
+          'labelTextStyle':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i5.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
@@ -85,7 +86,8 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i6.MaterialStateProperty<_i7.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i7.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

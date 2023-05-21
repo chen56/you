@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/bottom_navigation_bar_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/widgets/icon_theme_data.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
@@ -13,7 +13,8 @@ import 'package:flutter/src/foundation/key.dart' as _i9;
 import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class BottomNavigationBarThemeData with Diagnosticable
-class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData with _i2.Mate {
+class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
+    with _i2.Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
@@ -118,12 +119,14 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
             init: enableFeedback,
             isNamed: true,
           ),
-          'landscapeLayout': _i2.BuilderArg<_i6.BottomNavigationBarLandscapeLayout?>(
+          'landscapeLayout':
+              _i2.BuilderArg<_i6.BottomNavigationBarLandscapeLayout?>(
             name: 'landscapeLayout',
             init: landscapeLayout,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -155,7 +158,8 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
 }
 
 /// class BottomNavigationBarTheme extends InheritedWidget
-class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme with _i2.Mate {
+class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme
+    with _i2.Mate {
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/router.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
@@ -58,12 +58,14 @@ class RouterConfig$Mate<T> extends _i1.RouterConfig<T> with _i2.Mate {
     /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , default:none
     super.backButtonDispatcher,
   })  : mateParams = {
-          'routeInformationProvider': _i2.BuilderArg<_i1.RouteInformationProvider?>(
+          'routeInformationProvider':
+              _i2.BuilderArg<_i1.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i1.RouteInformationParser<T>?>(
+          'routeInformationParser':
+              _i2.BuilderArg<_i1.RouteInformationParser<T>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
@@ -121,12 +123,14 @@ class Router$Mate<T> extends _i1.Router<T> with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i1.RouteInformationProvider?>(
+          'routeInformationProvider':
+              _i2.BuilderArg<_i1.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i1.RouteInformationParser<T>?>(
+          'routeInformationParser':
+              _i2.BuilderArg<_i1.RouteInformationParser<T>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
@@ -165,7 +169,8 @@ class Router$Mate<T> extends _i1.Router<T> with _i2.Mate {
 }
 
 /// class ChildBackButtonDispatcher extends BackButtonDispatcher
-class ChildBackButtonDispatcher$Mate extends _i1.ChildBackButtonDispatcher with _i2.Mate {
+class ChildBackButtonDispatcher$Mate extends _i1.ChildBackButtonDispatcher
+    with _i2.Mate {
   /// ChildBackButtonDispatcher ChildBackButtonDispatcher(BackButtonDispatcher parent)
   ChildBackButtonDispatcher$Mate(
 
@@ -211,7 +216,8 @@ class BackButtonListener$Mate extends _i1.BackButtonListener with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'onBackButtonPressed': _i2.BuilderArg<_i5.ValueGetter<_i6.Future<bool>>>(
+          'onBackButtonPressed':
+              _i2.BuilderArg<_i5.ValueGetter<_i6.Future<bool>>>(
             name: 'onBackButtonPressed',
             init: onBackButtonPressed,
             isNamed: true,
@@ -232,7 +238,8 @@ class BackButtonListener$Mate extends _i1.BackButtonListener with _i2.Mate {
 }
 
 /// class PlatformRouteInformationProvider extends RouteInformationProvider with WidgetsBindingObserver, ChangeNotifier
-class PlatformRouteInformationProvider$Mate extends _i1.PlatformRouteInformationProvider with _i2.Mate {
+class PlatformRouteInformationProvider$Mate
+    extends _i1.PlatformRouteInformationProvider with _i2.Mate {
   /// PlatformRouteInformationProvider PlatformRouteInformationProvider({required RouteInformation initialRouteInformation})
   PlatformRouteInformationProvider$Mate(
       {
@@ -248,8 +255,8 @@ class PlatformRouteInformationProvider$Mate extends _i1.PlatformRouteInformation
         super() {
     mateBuilderName = 'PlatformRouteInformationProvider';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
+    mateBuilder = (p) => PlatformRouteInformationProvider$Mate(
+        initialRouteInformation: p.get('initialRouteInformation').build());
   }
 
   @override

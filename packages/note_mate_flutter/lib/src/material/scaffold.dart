@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/scaffold.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/edge_insets.dart' as _i6;
 import 'package:flutter/src/widgets/preferred_size.dart' as _i7;
-import 'package:flutter/src/material/floating_action_button_location.dart' as _i8;
+import 'package:flutter/src/material/floating_action_button_location.dart'
+    as _i8;
 import 'package:flutter/src/painting/alignment.dart' as _i9;
 import 'package:flutter/cupertino.dart' as _i10;
 import 'package:flutter/src/material/drawer.dart' as _i11;
@@ -50,7 +51,8 @@ class ScaffoldMessenger$Mate extends _i1.ScaffoldMessenger with _i2.Mate {
 }
 
 /// class ScaffoldPrelayoutGeometry
-class ScaffoldPrelayoutGeometry$Mate extends _i1.ScaffoldPrelayoutGeometry with _i2.Mate {
+class ScaffoldPrelayoutGeometry$Mate extends _i1.ScaffoldPrelayoutGeometry
+    with _i2.Mate {
   /// ScaffoldPrelayoutGeometry ScaffoldPrelayoutGeometry({required Size bottomSheetSize, required double contentBottom, required double contentTop, required Size floatingActionButtonSize, required EdgeInsets minInsets, required EdgeInsets minViewPadding, required Size scaffoldSize, required Size snackBarSize, required Size materialBannerSize, required TextDirection textDirection})
   ScaffoldPrelayoutGeometry$Mate({
     /// optionalParameters: {required Size bottomSheetSize} , default:none
@@ -288,12 +290,14 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
             init: floatingActionButton,
             isNamed: true,
           ),
-          'floatingActionButtonLocation': _i2.BuilderArg<_i8.FloatingActionButtonLocation?>(
+          'floatingActionButtonLocation':
+              _i2.BuilderArg<_i8.FloatingActionButtonLocation?>(
             name: 'floatingActionButtonLocation',
             init: floatingActionButtonLocation,
             isNamed: true,
           ),
-          'floatingActionButtonAnimator': _i2.BuilderArg<_i8.FloatingActionButtonAnimator?>(
+          'floatingActionButtonAnimator':
+              _i2.BuilderArg<_i8.FloatingActionButtonAnimator?>(
             name: 'floatingActionButtonAnimator',
             init: floatingActionButtonAnimator,
             isNamed: true,
@@ -409,8 +413,10 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
           appBar: p.get('appBar').build(),
           body: p.get('body').build(),
           floatingActionButton: p.get('floatingActionButton').build(),
-          floatingActionButtonLocation: p.get('floatingActionButtonLocation').build(),
-          floatingActionButtonAnimator: p.get('floatingActionButtonAnimator').build(),
+          floatingActionButtonLocation:
+              p.get('floatingActionButtonLocation').build(),
+          floatingActionButtonAnimator:
+              p.get('floatingActionButtonAnimator').build(),
           persistentFooterButtons: p.get('persistentFooterButtons').build(),
           persistentFooterAlignment: p.get('persistentFooterAlignment').build(),
           drawer: p.get('drawer').build(),
@@ -427,8 +433,10 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
           extendBodyBehindAppBar: p.get('extendBodyBehindAppBar').build(),
           drawerScrimColor: p.get('drawerScrimColor').build(),
           drawerEdgeDragWidth: p.get('drawerEdgeDragWidth').build(),
-          drawerEnableOpenDragGesture: p.get('drawerEnableOpenDragGesture').build(),
-          endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').build(),
+          drawerEnableOpenDragGesture:
+              p.get('drawerEnableOpenDragGesture').build(),
+          endDrawerEnableOpenDragGesture:
+              p.get('endDrawerEnableOpenDragGesture').build(),
           restorationId: p.get('restorationId').build(),
         );
   }

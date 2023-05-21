@@ -2,15 +2,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/binding.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i3;
 import 'package:flutter/src/gestures/events.dart' as _i4;
 import 'package:flutter/src/gestures/hit_test.dart' as _i5;
 import 'package:flutter/src/foundation/assertions.dart' as _i6;
 
 /// class FlutterErrorDetailsForPointerEventDispatcher extends FlutterErrorDetails
-class FlutterErrorDetailsForPointerEventDispatcher$Mate extends _i1.FlutterErrorDetailsForPointerEventDispatcher
-    with _i2.Mate {
+class FlutterErrorDetailsForPointerEventDispatcher$Mate
+    extends _i1.FlutterErrorDetailsForPointerEventDispatcher with _i2.Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
     /// optionalParameters: {required Object exception} , default:none

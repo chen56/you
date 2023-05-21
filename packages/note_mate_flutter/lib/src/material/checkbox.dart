@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/checkbox.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i5;
@@ -124,7 +124,8 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -308,7 +309,8 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

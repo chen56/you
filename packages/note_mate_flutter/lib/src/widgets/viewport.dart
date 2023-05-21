@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/viewport.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
 import 'package:flutter/cupertino.dart' as _i5;
@@ -123,7 +123,8 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
 }
 
 /// class ShrinkWrappingViewport extends MultiChildRenderObjectWidget
-class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport with _i2.Mate {
+class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport
+    with _i2.Mate {
   /// ShrinkWrappingViewport ShrinkWrappingViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   ShrinkWrappingViewport$Mate({
     /// optionalParameters: {Key? key} , default:none

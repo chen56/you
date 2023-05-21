@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/single_child_scroll_view.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
 import 'package:flutter/cupertino.dart' as _i5;
@@ -16,7 +16,8 @@ import 'dart:ui' as _i12;
 import 'package:flutter/src/widgets/scroll_view.dart' as _i13;
 
 /// class SingleChildScrollView extends StatelessWidget
-class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate {
+class SingleChildScrollView$Mate extends _i1.SingleChildScrollView
+    with _i2.Mate {
   /// SingleChildScrollView SingleChildScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, EdgeInsetsGeometry? padding, bool? primary, ScrollPhysics? physics, ScrollController? controller, Widget? child, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual})
   SingleChildScrollView$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -114,7 +115,8 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
             init: restorationId,
             isNamed: true,
           ),
-          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior':
+              _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,

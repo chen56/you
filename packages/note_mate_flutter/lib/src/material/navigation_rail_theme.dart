@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/navigation_rail_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/text_style.dart' as _i4;
 import 'package:flutter/src/widgets/icon_theme_data.dart' as _i5;
@@ -12,7 +12,8 @@ import 'package:flutter/src/foundation/key.dart' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class NavigationRailThemeData with Diagnosticable
-class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData with _i2.Mate {
+class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData
+    with _i2.Mate {
   /// NavigationRailThemeData NavigationRailThemeData({Color? backgroundColor, double? elevation, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? groupAlignment, NavigationRailLabelType? labelType, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape, double? minWidth, double? minExtendedWidth})
   NavigationRailThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none

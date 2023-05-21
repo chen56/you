@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/tab_bar_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/decoration.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/material/tabs.dart' as _i5;
@@ -97,7 +97,8 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
             init: unselectedLabelStyle,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i4.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i4.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -107,7 +108,8 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
             init: splashFactory,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i10.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i10.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

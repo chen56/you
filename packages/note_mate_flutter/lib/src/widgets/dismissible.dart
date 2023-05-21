@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/dismissible.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -111,7 +111,8 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
             init: resizeDuration,
             isNamed: true,
           ),
-          'dismissThresholds': _i2.BuilderArg<Map<_i1.DismissDirection, double>>(
+          'dismissThresholds':
+              _i2.BuilderArg<Map<_i1.DismissDirection, double>>(
             name: 'dismissThresholds',
             init: dismissThresholds,
             isNamed: true,

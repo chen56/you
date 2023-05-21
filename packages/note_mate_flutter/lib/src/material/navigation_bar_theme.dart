@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/navigation_bar_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/material/material_state.dart' as _i5;
@@ -13,7 +13,8 @@ import 'package:flutter/src/foundation/key.dart' as _i9;
 import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class NavigationBarThemeData with Diagnosticable
-class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Mate {
+class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData
+    with _i2.Mate {
   /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBarThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
@@ -81,17 +82,20 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
             init: indicatorShape,
             isNamed: true,
           ),
-          'labelTextStyle': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
+          'labelTextStyle':
+              _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
           ),
-          'iconTheme': _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
+          'iconTheme':
+              _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
           ),
-          'labelBehavior': _i2.BuilderArg<_i8.NavigationDestinationLabelBehavior?>(
+          'labelBehavior':
+              _i2.BuilderArg<_i8.NavigationDestinationLabelBehavior?>(
             name: 'labelBehavior',
             init: labelBehavior,
             isNamed: true,

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/data_table_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/decoration.dart' as _i3;
 import 'package:flutter/src/material/material_state.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -62,7 +62,8 @@ class DataTableThemeData$Mate extends _i1.DataTableThemeData with _i2.Mate {
             init: decoration,
             isNamed: true,
           ),
-          'dataRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
+          'dataRowColor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
             name: 'dataRowColor',
             init: dataRowColor,
             isNamed: true,
@@ -82,7 +83,8 @@ class DataTableThemeData$Mate extends _i1.DataTableThemeData with _i2.Mate {
             init: dataTextStyle,
             isNamed: true,
           ),
-          'headingRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
+          'headingRowColor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
             name: 'headingRowColor',
             init: headingRowColor,
             isNamed: true,
@@ -117,12 +119,14 @@ class DataTableThemeData$Mate extends _i1.DataTableThemeData with _i2.Mate {
             init: checkboxHorizontalMargin,
             isNamed: true,
           ),
-          'headingCellCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
+          'headingCellCursor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
             name: 'headingCellCursor',
             init: headingCellCursor,
             isNamed: true,
           ),
-          'dataRowCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
+          'dataRowCursor':
+              _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
             name: 'dataRowCursor',
             init: dataRowCursor,
             isNamed: true,

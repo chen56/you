@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/tween_animation_builder.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/animation/tween.dart' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
@@ -12,7 +12,8 @@ import 'dart:ui' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class TweenAnimationBuilder<T extends Object?> extends ImplicitlyAnimatedWidget
-class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBuilder<T> with _i2.Mate {
+class TweenAnimationBuilder$Mate<T extends Object?>
+    extends _i1.TweenAnimationBuilder<T> with _i2.Mate {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none

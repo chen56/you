@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/scrollbar_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/material_state.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/foundation/key.dart' as _i5;
@@ -75,7 +75,8 @@ class ScrollbarThemeData$Mate extends _i1.ScrollbarThemeData with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackBorderColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'trackBorderColor':
+              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'trackBorderColor',
             init: trackBorderColor,
             isNamed: true,

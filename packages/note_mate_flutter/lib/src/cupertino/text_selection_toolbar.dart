@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/text_selection_toolbar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class CupertinoTextSelectionToolbar extends StatelessWidget
-class CupertinoTextSelectionToolbar$Mate extends _i1.CupertinoTextSelectionToolbar with _i2.Mate {
+class CupertinoTextSelectionToolbar$Mate
+    extends _i1.CupertinoTextSelectionToolbar with _i2.Mate {
   /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder})
   CupertinoTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none

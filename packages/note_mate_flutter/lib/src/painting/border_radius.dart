@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/painting/border_radius.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class BorderRadius extends BorderRadiusGeometry
@@ -158,7 +158,8 @@ class BorderRadius$Mate extends _i1.BorderRadius with _i2.Mate {
 }
 
 /// class BorderRadiusDirectional extends BorderRadiusGeometry
-class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.Mate {
+class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional
+    with _i2.Mate {
   /// BorderRadiusDirectional BorderRadiusDirectional.all(Radius radius)
   BorderRadiusDirectional$Mate.all(
 
@@ -174,7 +175,8 @@ class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.
         super.all() {
     mateBuilderName = 'BorderRadiusDirectional.all';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.circular(double radius)
@@ -192,7 +194,8 @@ class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.
         super.circular() {
     mateBuilderName = 'BorderRadiusDirectional.circular';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})

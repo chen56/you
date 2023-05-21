@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/display_feature_sub_screen.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class DisplayFeatureSubScreen extends StatelessWidget
-class DisplayFeatureSubScreen$Mate extends _i1.DisplayFeatureSubScreen with _i2.Mate {
+class DisplayFeatureSubScreen$Mate extends _i1.DisplayFeatureSubScreen
+    with _i2.Mate {
   /// DisplayFeatureSubScreen DisplayFeatureSubScreen({Key? key, Offset? anchorPoint, required Widget child})
   DisplayFeatureSubScreen$Mate({
     /// optionalParameters: {Key? key} , default:none

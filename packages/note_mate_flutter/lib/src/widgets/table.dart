@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/table.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/decoration.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -112,7 +112,8 @@ class Table$Mate extends _i1.Table with _i2.Mate {
             init: border,
             isNamed: true,
           ),
-          'defaultVerticalAlignment': _i2.BuilderArg<_i6.TableCellVerticalAlignment>(
+          'defaultVerticalAlignment':
+              _i2.BuilderArg<_i6.TableCellVerticalAlignment>(
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,

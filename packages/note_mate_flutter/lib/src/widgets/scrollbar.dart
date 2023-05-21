@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scrollbar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
@@ -336,7 +336,8 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
             isNamed: true,
             defaultValue: Duration.zero,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

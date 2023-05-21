@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/navigation_drawer.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -117,7 +117,8 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination with _i2.Mate {
+class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination
+    with _i2.Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , default:none

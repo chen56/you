@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/custom_paint.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/semantics/semantics.dart' as _i5;
@@ -11,7 +11,8 @@ import 'package:flutter/animation.dart' as _i7;
 import 'package:flutter/src/rendering/box.dart' as _i8;
 
 /// class CustomPainterSemantics
-class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics with _i2.Mate {
+class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics
+    with _i2.Mate {
   /// CustomPainterSemantics CustomPainterSemantics({Key? key, required Rect rect, required SemanticsProperties properties, Matrix4? transform, Set<SemanticsTag>? tags})
   CustomPainterSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none

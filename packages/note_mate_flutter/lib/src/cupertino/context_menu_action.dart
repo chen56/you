@@ -2,14 +2,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/context_menu_action.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/widgets/icon_data.dart' as _i6;
 
 /// class CupertinoContextMenuAction extends StatefulWidget
-class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction with _i2.Mate {
+class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction
+    with _i2.Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
     /// optionalParameters: {Key? key} , default:none

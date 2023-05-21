@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/action_icons_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
 import 'package:flutter/src/foundation/key.dart' as _i4;
 
@@ -50,7 +50,8 @@ class ActionIconThemeData$Mate extends _i1.ActionIconThemeData with _i2.Mate {
           backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
           closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
-          endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
+          endDrawerButtonIconBuilder:
+              p.get('endDrawerButtonIconBuilder').build(),
         );
   }
 

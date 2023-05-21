@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/table.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/rendering/table_border.dart' as _i4;
 import 'package:flutter/src/painting/decoration.dart' as _i5;
@@ -253,7 +253,8 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
             isNamed: true,
             defaultValue: _i7.ImageConfiguration.empty,
           ),
-          'defaultVerticalAlignment': _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
+          'defaultVerticalAlignment':
+              _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,

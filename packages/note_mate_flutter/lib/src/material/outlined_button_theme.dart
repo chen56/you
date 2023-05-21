@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/outlined_button_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/button_style.dart' as _i3;
 import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class OutlinedButtonThemeData with Diagnosticable
-class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData with _i2.Mate {
+class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData
+    with _i2.Mate {
   /// OutlinedButtonThemeData OutlinedButtonThemeData({ButtonStyle? style})
   OutlinedButtonThemeData$Mate(
       {
@@ -24,7 +25,8 @@ class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData with _i2.
         super() {
     mateBuilderName = 'OutlinedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder =
+        (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

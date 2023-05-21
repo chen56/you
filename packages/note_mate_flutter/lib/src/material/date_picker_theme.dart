@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/date_picker_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
@@ -165,27 +165,32 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
             init: dayStyle,
             isNamed: true,
           ),
-          'dayForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'dayForegroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'dayForegroundColor',
             init: dayForegroundColor,
             isNamed: true,
           ),
-          'dayBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'dayBackgroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'dayBackgroundColor',
             init: dayBackgroundColor,
             isNamed: true,
           ),
-          'dayOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'dayOverlayColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'dayOverlayColor',
             init: dayOverlayColor,
             isNamed: true,
           ),
-          'todayForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'todayForegroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'todayForegroundColor',
             init: todayForegroundColor,
             isNamed: true,
           ),
-          'todayBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'todayBackgroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'todayBackgroundColor',
             init: todayBackgroundColor,
             isNamed: true,
@@ -200,17 +205,20 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
             init: yearStyle,
             isNamed: true,
           ),
-          'yearForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'yearForegroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'yearForegroundColor',
             init: yearForegroundColor,
             isNamed: true,
           ),
-          'yearBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'yearBackgroundColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'yearBackgroundColor',
             init: yearBackgroundColor,
             isNamed: true,
           ),
-          'yearOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'yearOverlayColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'yearOverlayColor',
             init: yearOverlayColor,
             isNamed: true,
@@ -265,7 +273,8 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
             init: rangeSelectionBackgroundColor,
             isNamed: true,
           ),
-          'rangeSelectionOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+          'rangeSelectionOverlayColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
             name: 'rangeSelectionOverlayColor',
             init: rangeSelectionOverlayColor,
             isNamed: true,
@@ -296,17 +305,25 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
           yearForegroundColor: p.get('yearForegroundColor').build(),
           yearBackgroundColor: p.get('yearBackgroundColor').build(),
           yearOverlayColor: p.get('yearOverlayColor').build(),
-          rangePickerBackgroundColor: p.get('rangePickerBackgroundColor').build(),
+          rangePickerBackgroundColor:
+              p.get('rangePickerBackgroundColor').build(),
           rangePickerElevation: p.get('rangePickerElevation').build(),
           rangePickerShadowColor: p.get('rangePickerShadowColor').build(),
-          rangePickerSurfaceTintColor: p.get('rangePickerSurfaceTintColor').build(),
+          rangePickerSurfaceTintColor:
+              p.get('rangePickerSurfaceTintColor').build(),
           rangePickerShape: p.get('rangePickerShape').build(),
-          rangePickerHeaderBackgroundColor: p.get('rangePickerHeaderBackgroundColor').build(),
-          rangePickerHeaderForegroundColor: p.get('rangePickerHeaderForegroundColor').build(),
-          rangePickerHeaderHeadlineStyle: p.get('rangePickerHeaderHeadlineStyle').build(),
-          rangePickerHeaderHelpStyle: p.get('rangePickerHeaderHelpStyle').build(),
-          rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
-          rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
+          rangePickerHeaderBackgroundColor:
+              p.get('rangePickerHeaderBackgroundColor').build(),
+          rangePickerHeaderForegroundColor:
+              p.get('rangePickerHeaderForegroundColor').build(),
+          rangePickerHeaderHeadlineStyle:
+              p.get('rangePickerHeaderHeadlineStyle').build(),
+          rangePickerHeaderHelpStyle:
+              p.get('rangePickerHeaderHelpStyle').build(),
+          rangeSelectionBackgroundColor:
+              p.get('rangeSelectionBackgroundColor').build(),
+          rangeSelectionOverlayColor:
+              p.get('rangeSelectionOverlayColor').build(),
         );
   }
 

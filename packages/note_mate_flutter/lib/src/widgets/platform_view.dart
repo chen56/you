@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/platform_view.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/services/platform_views.dart' as _i4;
 import 'package:flutter/src/rendering/platform_view.dart' as _i5;
@@ -53,7 +53,8 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated':
+              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -69,7 +70,8 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             init: layoutDirection,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -149,7 +151,8 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated':
+              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -175,7 +178,8 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             init: creationParamsCodec,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -223,7 +227,8 @@ class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated':
+              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -269,7 +274,8 @@ class PlatformViewLink$Mate extends _i1.PlatformViewLink with _i2.Mate {
             init: surfaceFactory,
             isNamed: true,
           ),
-          'onCreatePlatformView': _i2.BuilderArg<_i1.CreatePlatformViewCallback>(
+          'onCreatePlatformView':
+              _i2.BuilderArg<_i1.CreatePlatformViewCallback>(
             name: 'onCreatePlatformView',
             init: onCreatePlatformView,
             isNamed: true,
@@ -326,7 +332,8 @@ class PlatformViewSurface$Mate extends _i1.PlatformViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -378,7 +385,8 @@ class AndroidViewSurface$Mate extends _i1.AndroidViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<
+              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,

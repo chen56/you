@@ -576,7 +576,7 @@ all() {
     (cd packages/note_test;         _run "$@";  )
 }
 
-bake.cmd.set --cmd note              --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
+bake.cmd.set --cmd note              --usage "./$BAKE_FILE note [any command]"              --summary "<project> run cmd on project"
 bake.cmd.set --cmd note_app          --usage "./$BAKE_FILE note_app [any command]"
 bake.cmd.set --cmd note_mate         --usage "./$BAKE_FILE note_mate [any command]"
 bake.cmd.set --cmd note_mate_flutter --usage "./$BAKE_FILE note_mate_flutter [any command]"
@@ -588,10 +588,11 @@ note_mate_flutter() ( cd packages/note_mate_flutter;     _run "$@";  )
 note_test() (         cd packages/note_test;             _run "$@";  )
 
 
-bake.cmd.set --cmd dep --usage "./$BAKE_FILE pub" --summary "<shortcut> ./bake all flutter pub get"
-dep(){
-  _run all flutter pub get
-}
+bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
+get(){ _run all flutter pub get; }
+
+bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> ./bake test flutter pub get"
+test(){ _run all flutter test; }
 
 ####################################################
 # app entry script & _root cmd

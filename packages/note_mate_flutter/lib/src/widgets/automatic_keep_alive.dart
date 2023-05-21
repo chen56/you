@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/automatic_keep_alive.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i5;
@@ -42,7 +42,8 @@ class AutomaticKeepAlive$Mate extends _i1.AutomaticKeepAlive with _i2.Mate {
 }
 
 /// class KeepAliveNotification extends Notification
-class KeepAliveNotification$Mate extends _i1.KeepAliveNotification with _i2.Mate {
+class KeepAliveNotification$Mate extends _i1.KeepAliveNotification
+    with _i2.Mate {
   /// KeepAliveNotification KeepAliveNotification(Listenable handle)
   KeepAliveNotification$Mate(
 

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/list_tile_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
 import 'package:flutter/src/material/list_tile.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -155,7 +155,8 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -183,7 +184,8 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle:
+              p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           tileColor: p.get('tileColor').build(),
           selectedTileColor: p.get('selectedTileColor').build(),
@@ -316,7 +318,8 @@ class ListTileTheme$Mate extends _i1.ListTileTheme with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor':
+              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

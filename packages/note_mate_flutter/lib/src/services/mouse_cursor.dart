@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/mouse_cursor.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 
 /// class MouseCursorManager
 class MouseCursorManager$Mate extends _i1.MouseCursorManager with _i2.Mate {
@@ -21,7 +21,8 @@ class MouseCursorManager$Mate extends _i1.MouseCursorManager with _i2.Mate {
         super() {
     mateBuilderName = 'MouseCursorManager';
     matePackageUrl = 'package:flutter/services.dart';
-    mateBuilder = (p) => MouseCursorManager$Mate(p.get('fallbackMouseCursor').value);
+    mateBuilder =
+        (p) => MouseCursorManager$Mate(p.get('fallbackMouseCursor').value);
   }
 
   @override

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/list_tile.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/material/theme_data.dart' as _i5;
@@ -324,7 +324,8 @@ class ListTile$Mate extends _i1.ListTile with _i2.Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle:
+              p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           enabled: p.get('enabled').build(),
           onTap: p.get('onTap').build(),

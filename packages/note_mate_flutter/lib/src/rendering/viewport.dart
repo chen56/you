@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/viewport.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
 import 'package:flutter/cupertino.dart' as _i5;
@@ -146,7 +146,8 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
 }
 
 /// class RenderShrinkWrappingViewport extends RenderViewportBase<SliverLogicalContainerParentData>
-class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport with _i2.Mate {
+class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
+    with _i2.Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl

@@ -2,7 +2,7 @@
 
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
-import 'package:note/mate.dart';
+import 'package:note/mate_core.dart';
 import 'package:note/utils.dart';
 import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;

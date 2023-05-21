@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/nav_bar.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/box_border.dart' as _i5;
@@ -10,7 +10,8 @@ import 'dart:ui' as _i6;
 import 'package:flutter/src/painting/edge_insets.dart' as _i7;
 
 /// class CupertinoNavigationBar extends StatefulWidget implements ObstructingPreferredSizeWidget
-class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar with _i2.Mate {
+class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar
+    with _i2.Mate {
   /// CupertinoNavigationBar CupertinoNavigationBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag})
   CupertinoNavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -146,7 +147,8 @@ class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar with _i2.Ma
 }
 
 /// class CupertinoSliverNavigationBar extends StatefulWidget
-class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar with _i2.Mate {
+class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar
+    with _i2.Mate {
   /// CupertinoSliverNavigationBar CupertinoSliverNavigationBar({Key? key, Widget? largeTitle, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyTitle = true, bool alwaysShowMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag, bool stretch = false})
   CupertinoSliverNavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -311,7 +313,8 @@ class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar
 }
 
 /// class CupertinoNavigationBarBackButton extends StatelessWidget
-class CupertinoNavigationBarBackButton$Mate extends _i1.CupertinoNavigationBarBackButton with _i2.Mate {
+class CupertinoNavigationBarBackButton$Mate
+    extends _i1.CupertinoNavigationBarBackButton with _i2.Mate {
   /// CupertinoNavigationBarBackButton CupertinoNavigationBarBackButton({Key? key, Color? color, String? previousPageTitle, void Function()? onPressed})
   CupertinoNavigationBarBackButton$Mate({
     /// optionalParameters: {Key? key} , default:none

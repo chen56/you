@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/text_button_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/button_style.dart' as _i3;
 import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -24,7 +24,8 @@ class TextButtonThemeData$Mate extends _i1.TextButtonThemeData with _i2.Mate {
         super() {
     mateBuilderName = 'TextButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder =
+        (p) => TextButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

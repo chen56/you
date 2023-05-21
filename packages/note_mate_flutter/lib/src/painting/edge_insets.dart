@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/painting/edge_insets.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class EdgeInsets extends EdgeInsetsGeometry
@@ -184,7 +184,8 @@ class EdgeInsets$Mate extends _i1.EdgeInsets with _i2.Mate {
 }
 
 /// class EdgeInsetsDirectional extends EdgeInsetsGeometry
-class EdgeInsetsDirectional$Mate extends _i1.EdgeInsetsDirectional with _i2.Mate {
+class EdgeInsetsDirectional$Mate extends _i1.EdgeInsetsDirectional
+    with _i2.Mate {
   /// EdgeInsetsDirectional EdgeInsetsDirectional.fromSTEB(double start, double top, double end, double bottom)
   EdgeInsetsDirectional$Mate.fromSTEB(
     /// requiredParameters: double start

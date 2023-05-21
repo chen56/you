@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/slider.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -144,7 +144,8 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
             init: thumbColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -154,7 +155,8 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
-          'semanticFormatterCallback': _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
+          'semanticFormatterCallback':
+              _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
             name: 'semanticFormatterCallback',
             init: semanticFormatterCallback,
             isNamed: true,
@@ -333,12 +335,14 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
             init: thumbColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor':
+              _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'semanticFormatterCallback': _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
+          'semanticFormatterCallback':
+              _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
             name: 'semanticFormatterCallback',
             init: semanticFormatterCallback,
             isNamed: true,

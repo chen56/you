@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/restoration.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/services/restoration.dart' as _i5;
@@ -51,7 +51,8 @@ class RestorationScope$Mate extends _i1.RestorationScope with _i2.Mate {
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope with _i2.Mate {
+class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope
+    with _i2.Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none

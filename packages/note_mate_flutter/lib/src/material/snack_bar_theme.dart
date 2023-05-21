@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/snack_bar_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/text_style.dart' as _i4;
 import 'package:flutter/src/painting/borders.dart' as _i5;
@@ -142,7 +142,8 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
           closeIconColor: p.get('closeIconColor').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
           actionBackgroundColor: p.get('actionBackgroundColor').build(),
-          disabledActionBackgroundColor: p.get('disabledActionBackgroundColor').build(),
+          disabledActionBackgroundColor:
+              p.get('disabledActionBackgroundColor').build(),
         );
   }
 

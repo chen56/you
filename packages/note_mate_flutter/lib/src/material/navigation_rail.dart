@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/navigation_rail.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
@@ -210,7 +210,8 @@ class NavigationRail$Mate extends _i1.NavigationRail with _i2.Mate {
 }
 
 /// class NavigationRailDestination
-class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with _i2.Mate {
+class NavigationRailDestination$Mate extends _i1.NavigationRailDestination
+    with _i2.Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , default:none

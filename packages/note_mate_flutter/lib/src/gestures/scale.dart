@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/scale.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/animation.dart' as _i4;
 import 'package:flutter/src/gestures/velocity_tracker.dart' as _i5;
@@ -197,7 +197,8 @@ class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
 }
 
 /// class ScaleGestureRecognizer extends OneSequenceGestureRecognizer
-class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Mate {
+class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer
+    with _i2.Mate {
   /// ScaleGestureRecognizer ScaleGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter, DragStartBehavior dragStartBehavior = DragStartBehavior.down, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor})
   ScaleGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -260,7 +261,8 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Ma
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor:
+              p.get('trackpadScrollToScaleFactor').build(),
         );
   }
 

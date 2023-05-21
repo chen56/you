@@ -2,13 +2,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/segmented_button_theme.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/material/button_style.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/key.dart' as _i5;
 
 /// class SegmentedButtonThemeData with Diagnosticable
-class SegmentedButtonThemeData$Mate extends _i1.SegmentedButtonThemeData with _i2.Mate {
+class SegmentedButtonThemeData$Mate extends _i1.SegmentedButtonThemeData
+    with _i2.Mate {
   /// SegmentedButtonThemeData SegmentedButtonThemeData({ButtonStyle? style, Widget? selectedIcon})
   SegmentedButtonThemeData$Mate({
     /// optionalParameters: {ButtonStyle? style} , default:none

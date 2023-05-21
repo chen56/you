@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/physics/friction_simulation.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/physics/tolerance.dart' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 
@@ -69,7 +69,8 @@ class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
 }
 
 /// class BoundedFrictionSimulation extends FrictionSimulation
-class BoundedFrictionSimulation$Mate extends _i1.BoundedFrictionSimulation with _i2.Mate {
+class BoundedFrictionSimulation$Mate extends _i1.BoundedFrictionSimulation
+    with _i2.Mate {
   /// BoundedFrictionSimulation BoundedFrictionSimulation(double drag, double position, double velocity, double _minX, double _maxX)
   BoundedFrictionSimulation$Mate(
     /// requiredParameters: double drag

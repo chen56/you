@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/sliver_fixed_extent_list.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/rendering/sliver_multi_box_adaptor.dart' as _i3;
 
 /// class RenderSliverFixedExtentList extends RenderSliverFixedExtentBoxAdaptor
-class RenderSliverFixedExtentList$Mate extends _i1.RenderSliverFixedExtentList with _i2.Mate {
+class RenderSliverFixedExtentList$Mate extends _i1.RenderSliverFixedExtentList
+    with _i2.Mate {
   /// RenderSliverFixedExtentList RenderSliverFixedExtentList({required RenderSliverBoxChildManager childManager, required double itemExtent})
   RenderSliverFixedExtentList$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none

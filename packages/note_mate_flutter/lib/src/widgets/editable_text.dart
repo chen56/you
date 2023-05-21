@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/editable_text.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/services/text_input.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/services/keyboard_inserted_content.dart' as _i5;
@@ -29,7 +29,8 @@ import 'package:flutter/src/widgets/magnifier.dart' as _i25;
 import 'package:flutter/src/widgets/undo_history.dart' as _i26;
 
 /// class TextEditingController extends ValueNotifier<TextEditingValue>
-class TextEditingController$Mate extends _i1.TextEditingController with _i2.Mate {
+class TextEditingController$Mate extends _i1.TextEditingController
+    with _i2.Mate {
   /// TextEditingController TextEditingController({String? text})
   TextEditingController$Mate(
       {
@@ -45,7 +46,8 @@ class TextEditingController$Mate extends _i1.TextEditingController with _i2.Mate
         super() {
     mateBuilderName = 'TextEditingController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
+    mateBuilder =
+        (p) => TextEditingController$Mate(text: p.get('text').build());
   }
 
   /// TextEditingController TextEditingController.fromValue(TextEditingValue? value)
@@ -63,7 +65,8 @@ class TextEditingController$Mate extends _i1.TextEditingController with _i2.Mate
         super.fromValue() {
     mateBuilderName = 'TextEditingController.fromValue';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
+    mateBuilder =
+        (p) => TextEditingController$Mate.fromValue(p.get('value').value);
   }
 
   @override
@@ -127,7 +130,8 @@ class ToolbarOptions$Mate extends _i1.ToolbarOptions with _i2.Mate {
 }
 
 /// class ContentInsertionConfiguration
-class ContentInsertionConfiguration$Mate extends _i1.ContentInsertionConfiguration with _i2.Mate {
+class ContentInsertionConfiguration$Mate
+    extends _i1.ContentInsertionConfiguration with _i2.Mate {
   /// ContentInsertionConfiguration ContentInsertionConfiguration({required void Function(KeyboardInsertedContent) onContentInserted, List<String> allowedMimeTypes = kDefaultContentInsertionMimeTypes})
   ContentInsertionConfiguration$Mate({
     /// optionalParameters: {required void Function(KeyboardInsertedContent) onContentInserted} , default:none
@@ -136,7 +140,8 @@ class ContentInsertionConfiguration$Mate extends _i1.ContentInsertionConfigurati
     /// optionalParameters: {List<String> allowedMimeTypes = kDefaultContentInsertionMimeTypes} , default:unprocessed=SimpleIdentifierImpl
     super.allowedMimeTypes,
   })  : mateParams = {
-          'onContentInserted': _i2.BuilderArg<_i4.ValueChanged<_i5.KeyboardInsertedContent>>(
+          'onContentInserted':
+              _i2.BuilderArg<_i4.ValueChanged<_i5.KeyboardInsertedContent>>(
             name: 'onContentInserted',
             init: onContentInserted,
             isNamed: true,
@@ -713,22 +718,26 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'contentInsertionConfiguration': _i2.BuilderArg<_i1.ContentInsertionConfiguration?>(
+          'contentInsertionConfiguration':
+              _i2.BuilderArg<_i1.ContentInsertionConfiguration?>(
             name: 'contentInsertionConfiguration',
             init: contentInsertionConfiguration,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i1.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder':
+              _i2.BuilderArg<_i1.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
+          'spellCheckConfiguration':
+              _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i25.TextMagnifierConfiguration>(
+          'magnifierConfiguration':
+              _i2.BuilderArg<_i25.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -797,18 +806,22 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
           scrollPadding: p.get('scrollPadding').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
-          autocorrectionTextRectColor: p.get('autocorrectionTextRectColor').build(),
+          autocorrectionTextRectColor:
+              p.get('autocorrectionTextRectColor').build(),
           autofillHints: p.get('autofillHints').build(),
           autofillClient: p.get('autofillClient').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),

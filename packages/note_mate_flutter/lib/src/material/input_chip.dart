@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/input_chip.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
@@ -310,7 +310,8 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage:
+              p.get('deleteButtonTooltipMessage').build(),
           onPressed: p.get('onPressed').build(),
           pressElevation: p.get('pressElevation').build(),
           disabledColor: p.get('disabledColor').build(),

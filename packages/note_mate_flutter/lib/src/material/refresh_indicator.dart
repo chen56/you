@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/material/refresh_indicator.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
@@ -86,7 +86,8 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             init: backgroundColor,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,
@@ -208,7 +209,8 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             init: backgroundColor,
             isNamed: true,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate':
+              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

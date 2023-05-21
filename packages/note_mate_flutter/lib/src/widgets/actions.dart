@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/actions.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
@@ -65,7 +65,8 @@ class ActionListener$Mate extends _i1.ActionListener with _i2.Mate {
 }
 
 /// class CallbackAction<T extends Intent> extends Action<T>
-class CallbackAction$Mate<T extends _i1.Intent> extends _i1.CallbackAction<T> with _i2.Mate {
+class CallbackAction$Mate<T extends _i1.Intent> extends _i1.CallbackAction<T>
+    with _i2.Mate {
   /// CallbackAction<T> CallbackAction({required Object? Function(T) onInvoke})
   CallbackAction$Mate(
       {
@@ -81,7 +82,8 @@ class CallbackAction$Mate<T extends _i1.Intent> extends _i1.CallbackAction<T> wi
         super() {
     mateBuilderName = 'CallbackAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
+    mateBuilder =
+        (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
   }
 
   @override
@@ -141,7 +143,8 @@ class Actions$Mate extends _i1.Actions with _i2.Mate {
 }
 
 /// class FocusableActionDetector extends StatefulWidget
-class FocusableActionDetector$Mate extends _i1.FocusableActionDetector with _i2.Mate {
+class FocusableActionDetector$Mate extends _i1.FocusableActionDetector
+    with _i2.Mate {
   /// FocusableActionDetector FocusableActionDetector({Key? key, bool enabled = true, FocusNode? focusNode, bool autofocus = false, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, void Function(bool)? onShowFocusHighlight, void Function(bool)? onShowHoverHighlight, void Function(bool)? onFocusChange, MouseCursor mouseCursor = MouseCursor.defer, bool includeFocusSemantics = true, required Widget child})
   FocusableActionDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -330,7 +333,8 @@ class DoNothingAction$Mate extends _i1.DoNothingAction with _i2.Mate {
         super() {
     mateBuilderName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
+    mateBuilder =
+        (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
   }
 
   @override
@@ -354,7 +358,8 @@ class PrioritizedIntents$Mate extends _i1.PrioritizedIntents with _i2.Mate {
         super() {
     mateBuilderName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
+    mateBuilder = (p) => PrioritizedIntents$Mate(
+        orderedIntents: p.get('orderedIntents').build());
   }
 
   @override

@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/context_menu_controller.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class ContextMenuController
-class ContextMenuController$Mate extends _i1.ContextMenuController with _i2.Mate {
+class ContextMenuController$Mate extends _i1.ContextMenuController
+    with _i2.Mate {
   /// ContextMenuController ContextMenuController({void Function()? onRemove})
   ContextMenuController$Mate(
       {
@@ -22,7 +23,8 @@ class ContextMenuController$Mate extends _i1.ContextMenuController with _i2.Mate
         super() {
     mateBuilderName = 'ContextMenuController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').build());
+    mateBuilder =
+        (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').build());
   }
 
   @override

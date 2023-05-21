@@ -2,11 +2,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/cupertino/icon_theme_data.dart' as _i1;
-import 'package:note/mate.dart' as _i2;
+import 'package:note/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class CupertinoIconThemeData extends IconThemeData with Diagnosticable
-class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData with _i2.Mate {
+class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData
+    with _i2.Mate {
   /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows})
   CupertinoIconThemeData$Mate({
     /// optionalParameters: {double? size} , default:none
