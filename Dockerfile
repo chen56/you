@@ -1,4 +1,4 @@
-FROM fischerscode/flutter:3.10.0 as ci
+FROM fischerscode/flutter:3.10.1 as ci
 
 ARG test=on
 
@@ -11,7 +11,7 @@ WORKDIR ./note
 
 RUN echo 'Please use china net, Because we use flutter-io.cn mirror'
 RUN ./bake get
-RUN [ "$test" = "on" ] && ./bake test || true
+RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
 RUN ./bake build --base-href "/note/"
 
 #

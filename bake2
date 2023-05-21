@@ -452,7 +452,7 @@ function bake.help()(
 
   echo "
 Usage:
-  bake $(echo $(bake.str.split "$cmd" .)) [options] [args]
+  ./$BAKE_FILE $(echo $(bake.str.split "$cmd" .)) [options] [args]
 
 Available Options:"
   for optPath in $(bake.opt.list "$cmd"); do
@@ -471,7 +471,7 @@ Available Commands:"
   for subcmdName in $(bake.cmd.children "$cmd"); do
 
     # only show public cmd if not verbose
-    if [[ "$verbose" == "" && "$subcmdName" == _* ]]; then
+    if [[ "$verbose" == "" && ("$subcmdName" == _* || "$subcmdName" == bake*) ]]; then
        continue
     fi
 
