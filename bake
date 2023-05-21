@@ -389,6 +389,10 @@ option() {
       run "$@"
     )
     (
+      cd packages/note_mate
+      run "$@"
+    )
+    (
       cd packages/note_app
       run "$@"
     )

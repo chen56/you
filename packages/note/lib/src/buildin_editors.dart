@@ -1,7 +1,6 @@
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:note/mate.dart';
 import 'package:note/note_core.dart';
 

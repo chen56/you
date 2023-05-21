@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: note,note_mate_flutter
+dependency_overrides:
+  note:
+    path: ../note

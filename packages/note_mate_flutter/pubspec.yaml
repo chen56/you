@@ -13,6 +13,7 @@ dependencies:
 #  flutter:
 #    sdk: flutter
   note:
+  note_mate:
 
 dev_dependencies:
   lints: ^2.0.0
