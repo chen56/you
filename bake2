@@ -41,12 +41,12 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #    是bake()的子命令，即便未定义父命令，也可以通过父命令列子命令看帮助:
 #      ./bake2 bake -h           # 运行子命令,或看帮助
 #      ./bake2 bake opt -h       # 运行子命令,或看帮助
-#      ./bake2 bake.opt.set -h   # 运行子命令,或看帮助
-#      ./bake2 bake.opt.set -h   # 由于规则1，可直接用函数名运行子命令
+#      ./bake2 bake opt set -h   # 运行子命令,或看帮助
+#      ./bake2 bake opt set -h   # 由于规则1，可直接用函数名运行子命令
 # 3. 你可以定义根命令"_root()"
 #      ./bake2                   # 如果有_root()函数，就执行它
 # 4. 像其他高级语言的cli工具一样，用简单变量就可以获取命令option:
-#    # a. 先在命令函数前定义options
+#    # a. 先在bake文件里里定义app options
 #      bake.opt.set --cmd build --name "target" --type string
 #    # b. 解析和使用option
 #      function build() {
@@ -101,6 +101,7 @@ _on_error() {
   _stack_frame
 }
 # Add the error catch first
+#https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-trap
 trap "_on_error" ERR
 # todo trap exit and kill all subprocess
 

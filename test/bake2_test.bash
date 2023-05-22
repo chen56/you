@@ -94,7 +94,7 @@ assert(){
 #######################################################
 ## study bash or some other
 #######################################################
-
+# IFS : https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05
 study.bash.string_escape(){
   # $'' 语法
   assert $'1\n2' @is '1
