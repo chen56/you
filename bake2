@@ -4,7 +4,6 @@ set -o errexit # -e
 set -o functrace # -T If set, any trap on DEBUG and RETURN are inherited by shell functions
 set -o pipefail  # default pipeline status==last command status, If set, status=any command fail
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
-# todo trap exit and kill all subprocess
 
 # v0.2.20230521 - It can run normally on macos
 #
@@ -38,17 +37,17 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #      ./bake [all function]     # bake内的所有函数均可以在脚本外直接运行
 #      ./bake _self              # 比如这个内部函数, 看bake内部变量，调试脚本用
 #      ./bake2 test              # 你如果定义过test()函数，就可以这样运行
-# 2. 带"."的函数，形成父子命令，比如 bake.opt.add()函数是bake.opt()的子命令，bake.opt()
+# 2. 带"."的函数，形成父子命令，比如 bake.opt.set()函数是bake.opt()的子命令，bake.opt()
 #    是bake()的子命令，即便未定义父命令，也可以通过父命令列子命令看帮助:
 #      ./bake2 bake -h           # 运行子命令,或看帮助
 #      ./bake2 bake opt -h       # 运行子命令,或看帮助
-#      ./bake2 bake opt add -h   # 运行子命令,或看帮助
-#      ./bake2 bake.opt.add -h   # 由于规则1，可直接用函数名运行子命令
+#      ./bake2 bake.opt.set -h   # 运行子命令,或看帮助
+#      ./bake2 bake.opt.set -h   # 由于规则1，可直接用函数名运行子命令
 # 3. 你可以定义根命令"_root()"
 #      ./bake2                   # 如果有_root()函数，就执行它
 # 4. 像其他高级语言的cli工具一样，用简单变量就可以获取命令option:
 #    # a. 先在命令函数前定义options
-#      bake.opt.add --cmd build --name "target" --type string
+#      bake.opt.set --cmd build --name "target" --type string
 #    # b. 解析和使用option
 #      function build() {
 #         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
@@ -67,18 +66,18 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #     ./bake _self        # For example, this internal function,
 #                         # see bake internal variables, used to debug scripts
 #     ./bake2 test        # If you have a test() function, you can run it like this
-# 2. Functions with "." is parent-child commands, such as bake.opt.add() function
+# 2. Functions with "." is parent-child commands, such as bake.opt.set() function
 #    is a subcommand of bake.opt(), bake.opt()  is a subcommand of bake(),
 #    even the parent command is not defined, you can also view the help :
 #     ./bake2 bake -h          # Run subcommands, or see help
 #     ./bake2 bake opt -h      # Run subcommands, or see help
-#     ./bake2 bake opt add -h  # Run subcommands, or see help
-#     ./bake2 bake.opt.add -h  # Due to rule 1, the subcommand can be run directly with the function name
+#     ./bake2 bake.opt.set -h  # Run subcommands, or see help
+#     ./bake2 bake.opt.set -h  # Due to rule 1, the subcommand can be run directly with the function name
 # 3. You can define the root command "_root()"
 #     ./bake2                  # If there is a _root() function, execute it
 # 4. Like other high-level language cli tools, command options can be obtained with simple variables:
 #     # a. Define options before the command function
-#     bake.opt.add --cmd build --name "target" --type string
+#     bake.opt.set --cmd build --name "target" --type string
 #     # b. Parse and use option
 #       function build() {
 #         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
@@ -97,12 +96,23 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 # https://github.com/spf13/pflag
 # https://oclif.io/docs/flags
 
+_on_error() {
+  echo "trapped an error: ↑ , trace: ↓" >&2
+  _stack_frame
+}
+# Add the error catch first
+trap "_on_error" ERR
+# todo trap exit and kill all subprocess
+
+
+# check bake dependencies
 if ((BASH_VERSINFO[0] < 4)); then
   echo "Error: It's 2082 ，Your bash is still this version(BASH_VERSINFO: ${BASH_VERSINFO[*]})，Please install bash 4+:
   apt install bash  # ubuntu
   brew install bash # mac"
   exit 1
 fi
+
 
 # copy from flutter
 # ----------------------
@@ -122,14 +132,23 @@ function _readlink() (
   done
   echo "$file"
 )
+# bake context
+BAKE_PATH="$(_readlink "${BASH_SOURCE[0]}")"
+BAKE_DIR="$(dirname "$BAKE_PATH")"
+BAKE_FILE="$(basename "$BAKE_PATH")"
+cd "${BAKE_DIR}" # set workdir
+
+_current_dir() {
+  echo "${PWD/#$HOME/\~}" # replace $HOME with "~"
+}
 _error(){
-  echo -e "ERROR $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+  echo -e "ERROR $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 _log(){
-  echo -e "INFO  $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+  echo -e "INFO  $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 _debug(){
-  echo -e "DEBUG $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+  echo -e "DEBUG $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 # list internal var , used to debug bake self
 function _self()(
@@ -148,10 +167,6 @@ function _self()(
   done | sort
 )
 
-_on_error() {
-  echo "trapped an error: ↑ , trace: ↓" >&2
-  _stack_frame
-}
 
 # Usage: _stack_frame
 _stack_frame() {
@@ -173,18 +188,10 @@ _stack_frame() {
     i=$((i + 1))
   done
 }
-# Add the error catch first
-trap " set +x; _on_error " ERR
 
 ##########################################
 # bake common script
 ##########################################
-BAKE_PATH="$(_readlink "${BASH_SOURCE[0]}")"
-BAKE_DIR="$(dirname "$BAKE_PATH")"
-BAKE_FILE="$(basename "$BAKE_PATH")"
-
-# set workdir
-cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
 # use ./bake2 _self to see internal var
@@ -314,9 +321,9 @@ function bake.cmd.list_down(){
 }
 
 
-# Usage: bake.opt.list <cmd>
+# Usage: bake.opt.cmd_opts <cmd>
 # return optionDataPath list
-function bake.opt.list(){
+function bake.opt.cmd_opts(){
   local cmd=$1
   local upCmds;
   readarray -t upCmds <<< "$(bake.cmd.list_up "$cmd")"
@@ -333,8 +340,8 @@ function bake.opt.list(){
   done | sort
 }
 
-# only use by bake.opt.add,
-# because "bake.opt.add" is meta function, use this func to add self
+# only use by bake.opt.set,
+# because "bake.opt.set" is meta function, use this func to add self
 bake.opt._internal_add(){
   local cmd="$1" opt="$2" type="$3" required="$4" abbr="$5" help="$6"
   _data[$cmd/opts/$opt]="type:opt"
@@ -344,14 +351,14 @@ bake.opt._internal_add(){
   _data[$cmd/opts/$opt/abbr]="$abbr"
   _data[$cmd/opts/$opt/optHelp]="$optHelp"
 }
-bake.opt._internal_add bake.opt.add "cmd" "string" "true" "" "cmd name"
-bake.opt._internal_add bake.opt.add "name" "string" "true" "" "option name"
-bake.opt._internal_add bake.opt.add "type" "string" "true" "" "option type"
-bake.opt._internal_add bake.opt.add "required" "bool" "false" "" "option required"
-bake.opt._internal_add bake.opt.add "abbr" "string" "false" "" "option abbr"
+bake.opt._internal_add bake.opt.set "cmd" "string" "true" "" "cmd name"
+bake.opt._internal_add bake.opt.set "name" "string" "true" "" "option name"
+bake.opt._internal_add bake.opt.set "type" "string" "true" "" "option type"
+bake.opt._internal_add bake.opt.set "required" "bool" "false" "" "option required"
+bake.opt._internal_add bake.opt.set "abbr" "string" "false" "" "option abbr"
 # avoid use 'help' as  option name,because it is root command option
-bake.opt._internal_add bake.opt.add "optHelp" "string" "false" "" "option help"
-bake.opt.add(){
+bake.opt._internal_add bake.opt.set "optHelp" "string" "false" "" "option help"
+bake.opt.set(){
   local selfCmd="${FUNCNAME[0]}"
   eval "$(bake.opt.parse "$selfCmd" "$@")"
 #  bake.opt.parse "$selfCmd" "$@" > /dev/null
@@ -374,7 +381,7 @@ bake.opt.add(){
 }
 
 
-# only use by bake.opt.add,
+# only use by bake.opt.set,
 function bake.opt.value(){
   local cmd="$1" opt="$2"
   printf '%s' "${_data["$cmd/opts/$opt/value"]}"
@@ -385,10 +392,10 @@ function bake.opt.parse() {
     shift
     local optCount; optCount=0
     local result;
-    # while bake.opt.list
+    # while bake.opt.cmd_opts
     local optList
     # sort: root option first , priority low -> priority high: _root>pub>pub.get
-    readarray -t optList < <(bake.opt.list "$cmd" | bake.str.revertLines )
+    readarray -t optList < <(bake.opt.cmd_opts "$cmd" | bake.str.revertLines )
     # convert to associative arrays , use to check if a opt is in optMap
     declare -A optMap;
     declare -A optNameMap;
@@ -445,10 +452,10 @@ function bake.opt.parse() {
     result+="local optCount=$optCount;\n"
     echo -e "$result" # -e show raw string
 }
-bake.opt.add --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
-bake.opt.add --cmd bake.cmd.set --name "usage"       --type string --optHelp "usage"
-bake.opt.add --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
-bake.opt.add --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+bake.opt.set --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt.set --cmd bake.cmd.set --name "usage"       --type string --optHelp "usage"
+bake.opt.set --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.opt.set --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
 
 function bake.cmd.set(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
@@ -488,25 +495,35 @@ function bake.cmd.register() {
 }
 
 function bake.help()(
-  cmd="$1"
+  local cmd="$1"; shift
   local selfCmd="${FUNCNAME[0]}"
   eval "$(bake.opt.parse "$selfCmd" "$@")"
 
   local usage; usage="${_data[${cmd}/usage]}"
   if [[ "$usage" != "" ]]; then
-    echo -e "\nUsage($cmd):  $usage \n"
+    echo -e "\nUsage:  $usage "
+  else
+    echo -e "\nUsage:  ./$BAKE_FILE $(bake.str.split "$cmd" "." | tr "\n" " ") [options] [args...]"
   fi
+
+  echo
+
+  echo "Currently running: $(_current_dir)/$BAKE_FILE $cmd $@"
+
+  echo
 
   if [[ "${_data[${cmd}/description]}" != "" ]]; then
-     echo "${_data[${cmd}/description]}"
+     echo "Description: ${_data[${cmd}/description]}"
+  elif [[ "${_data[${cmd}/summary]}" != "" ]]; then
+     echo "Description: ${_data[${cmd}/summary]}"
   else
-     echo "${_data[${cmd}/summary]}"
+     echo "no description"
   fi
 
-  echo "
+  echo
 
-Available Options:"
-  for optPath in $(bake.opt.list "$cmd"); do
+  echo "Available Options:"
+  for optPath in $(bake.opt.cmd_opts "$cmd"); do
     local opt; opt=$(bake.path.basename "$optPath")
     local optName; optName=${_data[$optPath/name]}
     local optType; optType=${_data[$optPath/type]}
@@ -568,11 +585,11 @@ function bake.go() {
 
     eval "$(bake.opt.parse "$cmd" "$@")"
 
-    if [[ "$help" == "true" ]] ; then bake.help "$cmd" ; return 0;  fi
+    if [[ "$help" == "true" ]] ; then bake.help "$cmd" "$@"; return 0;  fi
 
 #    # parse opts
     if ! declare -f "$cmd" >/dev/null 2>&1; then
-      if [[ "${_cmdTree[$cmd]}" == "PARENT_CMD_NOT_FUNC" ]] ; then bake.help "$cmd" ; return 0; fi
+      if [[ "${_cmdTree[$cmd]}" == "PARENT_CMD_NOT_FUNC" ]] ; then bake.help "$cmd" "$@" ; return 0; fi
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
       return 1
     fi
@@ -581,8 +598,8 @@ function bake.go() {
 }
 
 # _root is special cmd, bake add some common options to this cmd, you can add yourself options
-bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
-bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
+bake.opt.set --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
+bake.opt.set --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # bake common script end line.
@@ -597,10 +614,10 @@ bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbos
 # 此位置以上的全都是bake工具脚本，copy走可以直接用，之下的为项目特定cmd，自己弄
 ####################################################################################
 # print first, then _run
-_run() {
+function _run() {
   local project; project=$(basename "$PWD")
-  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
-  _log "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
+#  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
+  _log "${FUNCNAME[1]}() ▶︎【$*】"
   "$@"
   return $?
 }
@@ -616,6 +633,7 @@ bake.cmd.set --cmd _root \
   --usage "./$BAKE_FILE [cmd] [opts] [args...]" \
   --summary "flutter-note build cli." \
   --description "$(cat <<- EOF
+
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
@@ -639,7 +657,7 @@ _root(){
 bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project"\
   --usage "Usage: ./$BAKE_FILE all [any command]"
 
-all() {
+function all() {
     #       目录中有"pubspec.yaml"的，认为是flutter项目
     #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
     #          # 用括号()开启子进程执行，可以不影响当前进程的环境
@@ -658,19 +676,21 @@ bake.cmd.set --cmd note_app          --usage "./$BAKE_FILE note_app [any command
 bake.cmd.set --cmd note_mate         --usage "./$BAKE_FILE note_mate [any command]"
 bake.cmd.set --cmd note_mate_flutter --usage "./$BAKE_FILE note_mate_flutter [any command]"
 bake.cmd.set --cmd note_test         --usage "./$BAKE_FILE note_test [any command]"
-note() (              cd packages/note;                  _run "$@";  )
-note_app() (          cd packages/note_app;              _run "$@";  )
-note_mate() (         cd packages/note_mate;             _run "$@";  )
-note_mate_flutter() ( cd packages/note_mate_flutter;     _run "$@";  )
-note_test() (         cd packages/note_test;             _run "$@";  )
-
+function note() (              cd packages/note;                  _run "$@";  )
+function note_app() (          cd packages/note_app;              _run "$@";  )
+function note_mate() (         cd packages/note_mate;             _run "$@";  )
+function note_mate_flutter() ( cd packages/note_mate_flutter;     _run "$@";  )
+function note_test() (         cd packages/note_test;             _run "$@";  )
 
 bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
-get(){ _run all flutter pub get; }
+function get() {
+  _run all flutter pub get ;
+}
 
 bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> run all tests in all projects"
-test(){
-  ./test/bake2_test.bash
+
+function test() {
+  ./test/bake2_test.bash test
   _run all flutter test;
 }
 

@@ -19,6 +19,7 @@ function _readlink() (
 
 TEST_PATH="$(_readlink "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
+TEST_FILE="$(basename "$TEST_PATH")"
 
 source "$TEST_DIR/../bake2" --lib_mode
 
@@ -26,13 +27,9 @@ bake.assert.fail() {
   echo "$@" >&2
 }
 
-function bake.test(){
-  local testName="$1"
-  echo "run test - $testName"
-}
 # 查找出所有test_函数并执行
 # 这种测试有点麻烦，不如bake.test
-function bake.test.runTest() {
+function bake.test.all() {
     while IFS=$'\n' read -r functionName ; do
       [[ "$functionName" != test.* ]] && continue ;
       # run test
@@ -88,10 +85,17 @@ assert(){
   "$2" "$actual" "$3" "$4"
 }
 
-test.assert_sample(){
-  assert $((1+1)) @is 2
-}
-test.bash_string_escape(){
+# above is test framework
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# below is test case
+
+#######################################################
+## study bash or some other
+#######################################################
+
+study.bash.string_escape(){
   # $'' 语法
   assert $'1\n2' @is '1
 2'
@@ -103,6 +107,21 @@ test.bash_string_escape(){
   x="1
 2"
   assert "$(printf '%q' "$x" )" @is "$'1\n2'"
+}
+study.bash.read(){
+  local expected="";
+  echo -e "1\n2" | while read -r x ; do
+    expected+="$1,"
+  done
+  assert "$expected" @is '1,2,'
+}
+
+#######################################################
+## bake test case
+#######################################################
+
+test.assert_sample(){
+  assert $((1+1)) @is 2
 }
 
 test.bake.path.dirname(){
@@ -150,7 +169,7 @@ test.bake.cmd.list_up(){
   assert "$(bake.cmd.list_up '')" @is "_root"
 }
 test.bake.cmd.children(){
-  assert "$(bake.cmd.children bake.test)" @is_escape "runTest"
+  assert "$(bake.cmd.children bake.test)" @is_escape "all"
 }
 
 test.bake.str.split(){
@@ -182,53 +201,55 @@ test.bake.cmd.register()(
     @contains "test.bake.cmd.register"
 )
 test.data.children(){
-  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"
+  assert "$(bake.data.children "bake.opt.set/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"
 }
 
-test.bake.opt.list(){
-  assert "$(bake.opt.list "_root")" @is \
+test.bake.opt.cmd_opts(){
+  assert "$(bake.opt.cmd_opts "_root")" @is \
 "_root/opts/help
 _root/opts/verbose"
 
   # "include parent option"
-  assert "$(bake.opt.list "bake.opt.add")" @is \
+  assert "$(bake.opt.cmd_opts "bake.opt.set")" @is \
 "_root/opts/help
 _root/opts/verbose
-bake.opt.add/opts/abbr
-bake.opt.add/opts/cmd
-bake.opt.add/opts/name
-bake.opt.add/opts/optHelp
-bake.opt.add/opts/required
-bake.opt.add/opts/type"
+bake.opt.set/opts/abbr
+bake.opt.set/opts/cmd
+bake.opt.set/opts/name
+bake.opt.set/opts/optHelp
+bake.opt.set/opts/required
+bake.opt.set/opts/type"
 }
 
 test.cmd.parse(){
 
-  assert "$(bake.opt.parse "bake.opt.add" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
+  assert "$(bake.opt.parse "bake.opt.set" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
 
   # no exists cmd
   assert "$(bake.opt.parse "no.exists.func" --type bool)" @is "local optCount=0;"
 
   # no exists option
-  assert "$(bake.opt.parse "bake.opt.add" --no_exists_opt)" @is "local optCount=0;"
+  assert "$(bake.opt.parse "bake.opt.set" --no_exists_opt)" @is "local optCount=0;"
 }
 
-test.bake.opt.add(){
-  bake.opt.add --cmd "test.opt.add" --name boolopt --type bool
+test.bake.opt.set(){
+  bake.opt.set --cmd "test.opt.add" --name boolopt --type bool
 }
 test.bake.opt.value.parse_and_get_value(){
-  bake.opt.add --cmd "test.opt.add" --name xxx --type string
+  bake.opt.set --cmd "test.opt.add" --name xxx --type string
   bake.opt.parse "test.opt.add" --xxx chen >/dev/null
   assert "$(bake.opt.value "test.opt.add" "xxx")" @is "chen"
 }
 
+function test(){
+  bake.test.all
+}
 
-# init
-bake.cmd.register
+# override test
+_root(){
+  echo "you can run
+   ./test/$TEST_FILE test -h       # test subcommands
+   ./test/$TEST_FILE test          # or run all test in this file"
+}
 
-bake.test.runTest
-
-#bake.opt.parse2 "bake.opt.add" --type bool
-
-#bake.str.revertLines <<< "$(echo -e "a\nb\nc")"
-#echo -e "a\nb\nc" | bake.str.revertLines
+bake.go "$@"
