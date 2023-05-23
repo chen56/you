@@ -395,67 +395,133 @@ function bake.opt.value(){
   printf '%s' "${_data["$cmd/opts/$opt/value"]}"
 }
 # Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
-function bake.opt.parse() {
+function bake.opt.parse_old() {
     local cmd; cmd="${1:_root}"
     shift
-    # can use to: shift $optCount
-    local optCount; optCount=0
-    local result;
-   # collect opt from command chain : _root>pub>pub.get
-    # sort: root option first , priority low -> priority high:
-    local optList; readarray -t optList < <(bake.opt.cmd_chain_opts "$cmd" | bake.str.revertLines )
-    # convert to associative arrays , use to check if a opt is in optMap
-    # key is -h --help ... candidate words , value is optPath
-    declare -A optMatchMap;
-    declare -A matched; # optPath: matched optPath array
-    for optPath in "${optList[@]}"; do
+    # key is -h --help ... candidate words ,
+    # value is optPath
+    declare -A allOptOnCmdChain;
+
+    # dynamic opt variable map : optPath:optVarName
+    # Why use dynamic variables: because the variable name is not fixed
+    # and We want to manipulate arrays(list type opt) more conveniently
+    declare -A matchedOptVars;
+
+    # collect opt from command chain : _root>pub>pub.get
+    #   root option first , priority low -> priority high:
+    for optPath in $(bake.opt.cmd_chain_opts "$cmd" | bake.str.revertLines ); do
       local opt ; opt=$(bake.path.basename "$optPath")
       local abbr ; abbr=${_data["$optPath/abbr"]}
-      optMatchMap["--$opt"]="${optPath}"
-      if [[ "$abbr" != "" ]] ; then optMatchMap["-$abbr"]="${optPath}" ; fi
+      allOptOnCmdChain["--$opt"]="${optPath}"
+      if [[ "$abbr" != "" ]] ; then allOptOnCmdChain["-$abbr"]="${optPath}" ; fi
     done
+
+
+    # can use to: shift $optShift
+    local optShift; optShift=0
+
 
     # while all args , until it is not opt
     while (( $# > 0 )); do
-      # find $1 arg in optMatchMap, guess $1 is a "-h" "-help" ...
-      local optPath; optPath=${optMatchMap[$1]}
+      # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
+      local optPath; optPath=${allOptOnCmdChain[$1]}
       # if next arg not a opt , parsing complete;
       if [[ "$optPath" == "" ]] ; then break;  fi
+
+      # matched, save it
       local opt; opt=$(bake.path.basename "$optPath")
+
+      matchedOptVars["$optPath"]="__matched_opt_$opt"
+      # reference to the current dynamic  opt variable
+      declare -n matched_opt=${matchedOptVars[$optPath]};
+
       # remove the prefix：build.@fields.opts.base_uri => base_uri
       local optType; optType=${_data["$optPath/type"]}
 
       case $optType in
         bool)   _data[$optPath/value]=true;
-                optCount=$((optCount+1)) ;
-                result+="declare $opt=true;\n"
-                shift;;
+                matched_opt=true;
+                optShift=$((optShift+1)) ;  shift;;
         string) [[ "$2" == "" ]] && echo "error: opt need a value: --$opt <value> " >&2 && return 1 ;
-                local optValue; optValue="$(printf '%q' "$2")";
-                _data[$optPath/value]="$optValue";
-                optCount=$((optCount+1))
-                result+="declare $opt=$optValue;\n"
-                shift 2 ;;
+                matched_opt="$2";
+                optShift=$((optShift+1)) ; shift 2 ;;
         list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
-                local optValue; optValue="$2";
-                local length; length=${_cmdTree[$optPath/value]};
-                if [[  "$length" == "" ]] ;then
-                  length=1
-                  result+="declare $opt;\n"
-                else
-                  length=$((length+1))
-                fi
-                local index ; index=$((length-1))
-                _data[$optPath/value]="$length";
-                _data[$optPath/value/$index]="$optValue";
-                arr+=("$value")
-                result+="${opt}+=($(printf '%q',"$optValue"));\n"
-                shift 2 ;;
+                # array add element
+                matched_opt+=("$2");
+                optShift=$((optShift+2)) ; shift 2 ;;
         *) echo "parse error: not support $cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
       esac
     done
-    result+="declare optCount=$optCount;\n"
-    echo -e "$result" # -e show raw string
+
+    local resultStr;
+    for optPath in "${!matchedOptVars[@]}";do
+      local opt; opt=$(bake.path.basename "$optPath")
+      declare -n matched_opt="${matchedOptVars[$optPath]}";
+      resultStr+="$(printf 'declare %s=%q;\\n' "$opt" "$matched_opt"  )"
+    done
+    resultStr+="declare optShift=$optShift;\n"
+    echo -e "$resultStr" # -e show raw string
+}
+
+# Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
+function bake.opt.parse() {
+    local cmd; cmd="${1:_root}"
+    shift # shift cmd arg, left all is options maybe
+    # key is -h --help ... candidate words ,
+    # value is optPath
+    declare -A allOptOnCmdChain;
+    # collect opt from command chain : _root>pub>pub.get
+    #   root option first , priority low -> priority high:
+    for optPath in $(bake.opt.cmd_chain_opts "$cmd" | bake.str.revertLines ); do
+      local opt ; opt=$(bake.path.basename "$optPath")
+      local abbr ; abbr=${_data["$optPath/abbr"]}
+      allOptOnCmdChain["--$opt"]="${optPath}"
+      if [[ "$abbr" != "" ]] ; then allOptOnCmdChain["-$abbr"]="${optPath}" ; fi
+    done
+
+    # dynamic opt variable map : optPath:optVarName
+    # Why use dynamic variables: because the variable name is not fixed
+    # and We want to manipulate arrays(list type opt) more conveniently
+    local -A optVars;
+    local -i optShift; optShift=0
+
+    # while all args , until it is not opt
+    while (( $# > 0 )); do
+      # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
+      local optPath; optPath=${allOptOnCmdChain[$1]}
+      # if next arg not a opt , parsing complete;
+      if [[ "${optPath}" == "" ]] ; then break;  fi
+
+      local opt; opt=$(bake.path.basename "$optPath")
+      local optType; optType=${_data["$optPath/type"]}
+
+      optVars["$optPath"]="_opt_value_$opt"
+      declare "${optVars[$optPath]}"
+      # reference to the current dynamic  opt variable
+      declare -n currentOptValue=${optVars[$optPath]};
+#      echo "list opt: $optPath:[$optType] -  $1 = $2" >&2
+
+      case $optType in
+        bool)   currentOptValue=true
+                shift ; (( optShift+=1 )) ;;
+        string) [[ ! "${2+declare}" ]] && echo "error: opt need a value: $arg <value> " >&2 && return 1 ;
+                currentOptValue="$2"
+                shift 2 ; (( optShift+=2 )) ;;
+        list)   [[ ! "${2+declare}" ]] && echo "error: opt need a value: $arg <value> " >&2 && return 1 ;
+                currentOptValue+=("$2"); # array add
+                shift 2 ; (( optShift+=2 )) ;;
+        *) echo "parse error: not support $optPath.type: <$optType> " >&2 ; return 1 ;;
+      esac
+    done
+
+    local resultStr;
+    for optPath in "${!optVars[@]}";do
+      declare "${optVars[$optPath]}" # declare dynamic variable
+      local declareStr; declareStr=$(declare -p "${optVars[$optPath]}")
+      resultStr+="${declareStr/#declare*_opt_value_/declare };\n"
+    done
+    resultStr+="declare optShift=$optShift;\n"
+    echo -e "$resultStr" # -e show raw string
 }
 bake.opt.set --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
 bake.opt.set --cmd bake.cmd.set --name "usage"       --type string --optHelp "usage"

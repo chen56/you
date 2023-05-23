@@ -62,7 +62,9 @@ function bake.test.all() {
   if [[ "$actual" != "$expected" ]] ; then
     bake.assert.fail "assert is fail: $msg
      actual  : [$actual]
+     escape  : [$(printf '%q' "$actual")]
      is not  : [$expected]
+     escape  : [$(printf '%q' "$expected")]
      "
      echo "diff------------------------->" >&2
      diff <(echo -e "$expected") <(echo -e "$actual") >&2
@@ -377,23 +379,24 @@ bake.opt.set/opts/type"
 }
 
 test.cmd.parse(){
+  bake.opt.set --cmd "test.cmd.parse" --name stringOpt --type string
+  bake.opt.set --cmd "test.cmd.parse" --name boolOpt --type bool
+  bake.opt.set --cmd "test.cmd.parse" --name listOpt --type list
 
-  assert "$(bake.opt.parse "bake.opt.set" --type bool)" @is "declare type=bool;
-declare optCount=1;"
-
-  # no exists cmd
-  assert "$(bake.opt.parse "no.exists.func" --type bool)" @is "declare optCount=0;"
-
-  # no exists option
-  assert "$(bake.opt.parse "bake.opt.set" --no_exists_opt)" @is "declare optCount=0;"
-
+  assert "$(bake.opt.parse "test.cmd.parse" --boolOpt )" @is 'declare boolOpt="true";
+declare optShift=1;'
+  assert "$(bake.opt.parse "test.cmd.parse" --stringOpt "1 2" )" @is 'declare stringOpt="1 2";
+declare optShift=2;'
 
   # list type option
-  bake.opt.set --cmd "test.cmd.parse" --name listopt --type list
-  bake.opt.parse "test.cmd.parse" --listopt a --listopt b
-  # fixme list opt
-#  assert "$(bake.opt.parse "test.cmd.parse" --listopt a --listopt b )" @is "declare optCount=0;"
+  assert "$(bake.opt.parse "test.cmd.parse" --listOpt "a 1" --listOpt "b 2" )" @is 'declare listOpt=([0]="a 1" [1]="b 2");
+declare optShift=4;'
 
+  # no exists cmd
+  assert "$(bake.opt.parse "no.exists.func" --unknow_opt bool)" @is "declare optShift=0;"
+
+  # no exists option
+  assert "$(bake.opt.parse "test.cmd.parse" --no_exists_opt)" @is "declare optShift=0;"
 }
 
 test.bake.opt.set()(
