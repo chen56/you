@@ -229,6 +229,14 @@ bake.str.split() {
   readarray -t arr < <(printf '%s' "${str//$delimiter/$'\n'}")
   printf '%s\n' "${arr[@]}"
 }
+
+# Usage: bake.array.to_escape_str [...array]
+# bake.array.to_escape_str a b c    =>
+#bake.array.to_escape_str(){
+#    local arr=("$@")
+#    local str; printf -v str '%q ' "${arr[@]}"
+#    printf '%s' "$str"
+#}
 # Usage: bake.str.revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
 function bake.str.revertLines(){
   sed '1!G;h;$!d'  # sed magic
@@ -310,9 +318,9 @@ bake.cmd.children() (
   done | sort -u
 )
 
-# Usage: bake.cmd.list_up <cmd>
-# sample: bake.cmd.list_up a.b      => "a.b\n", "a\n", "_root"
-function bake.cmd.list_up(){
+# Usage: bake.cmd.up_chain <cmd>
+# sample: bake.cmd.up_chain a.b      => "a.b\n", "a\n", "_root"
+function bake.cmd.up_chain(){
   local path="${1:-_root}"
   local up="$path"
   while [[ "$up" != "" ]]; do
@@ -321,20 +329,20 @@ function bake.cmd.list_up(){
   done
   if [[ "$path" != "_root" ]]; then printf "_root\n"; fi
 }
-# Usage: bake.cmd.list_down <cmd>
-# reverse of bake.cmd.list_up
-function bake.cmd.list_down(){
-  bake.cmd.list_up "$1" | bake.str.revertLines ;
-#  bake.cmd.list_up "$1" | tail -r; # macos bsd only, not work on linux
+# Usage: bake.cmd.down_chain <cmd>
+# reverse of bake.cmd.up_chain
+function bake.cmd.down_chain(){
+  bake.cmd.up_chain "$1" | bake.str.revertLines ;
+#  bake.cmd.up_chain "$1" | tail -r; # macos bsd only, not work on linux
 }
 
 
-# Usage: bake.opt.cmd_opts <cmd>
+# Usage: bake.opt.cmd_chain_opts <cmd>
 # return optionDataPath list
-function bake.opt.cmd_opts(){
+function bake.opt.cmd_chain_opts(){
   local cmd=$1
   local upCmds;
-  readarray -t upCmds <<< "$(bake.cmd.list_up "$cmd")"
+  readarray -t upCmds <<< "$(bake.cmd.up_chain "$cmd")"
 
   local key
   for key in "${!_data[@]}"; do
@@ -390,26 +398,27 @@ function bake.opt.value(){
 function bake.opt.parse() {
     local cmd; cmd="${1:_root}"
     shift
+    # can use to: shift $optCount
     local optCount; optCount=0
     local result;
-    # while bake.opt.cmd_opts
-    local optList
-    # collect opt chain : _root>pub>pub.get
+   # collect opt from command chain : _root>pub>pub.get
     # sort: root option first , priority low -> priority high:
-    readarray -t optList < <(bake.opt.cmd_opts "$cmd" | bake.str.revertLines )
+    local optList; readarray -t optList < <(bake.opt.cmd_chain_opts "$cmd" | bake.str.revertLines )
     # convert to associative arrays , use to check if a opt is in optMap
-    declare -A optMap;
+    # key is -h --help ... candidate words , value is optPath
+    declare -A optMatchMap;
+    declare -A matched; # optPath: matched optPath array
     for optPath in "${optList[@]}"; do
       local opt ; opt=$(bake.path.basename "$optPath")
       local abbr ; abbr=${_data["$optPath/abbr"]}
-      optMap["--$opt"]="${optPath}"
-      if [[ "$abbr" != "" ]] ; then optMap["-$abbr"]="${optPath}" ; fi
+      optMatchMap["--$opt"]="${optPath}"
+      if [[ "$abbr" != "" ]] ; then optMatchMap["-$abbr"]="${optPath}" ; fi
     done
 
     # while all args , until it is not opt
     while (( $# > 0 )); do
-      # find $1 arg in optMap, guess $1 is a "-h" "-help" ...
-      local optPath; optPath=${optMap[$1]}
+      # find $1 arg in optMatchMap, guess $1 is a "-h" "-help" ...
+      local optPath; optPath=${optMatchMap[$1]}
       # if next arg not a opt , parsing complete;
       if [[ "$optPath" == "" ]] ; then break;  fi
       local opt; opt=$(bake.path.basename "$optPath")
@@ -419,20 +428,20 @@ function bake.opt.parse() {
       case $optType in
         bool)   _data[$optPath/value]=true;
                 optCount=$((optCount+1)) ;
-                result+="local $opt=true;\n"
+                result+="declare $opt=true;\n"
                 shift;;
         string) [[ "$2" == "" ]] && echo "error: opt need a value: --$opt <value> " >&2 && return 1 ;
                 local optValue; optValue="$(printf '%q' "$2")";
                 _data[$optPath/value]="$optValue";
                 optCount=$((optCount+1))
-                result+="local $opt=$optValue;\n"
+                result+="declare $opt=$optValue;\n"
                 shift 2 ;;
         list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
                 local optValue; optValue="$2";
                 local length; length=${_cmdTree[$optPath/value]};
                 if [[  "$length" == "" ]] ;then
                   length=1
-                  result+="local $opt;\n"
+                  result+="declare $opt;\n"
                 else
                   length=$((length+1))
                 fi
@@ -440,12 +449,12 @@ function bake.opt.parse() {
                 _data[$optPath/value]="$length";
                 _data[$optPath/value/$index]="$optValue";
                 arr+=("$value")
-                result+="${option}+=($(printf '%q',"$optValue"));\n"
+                result+="${opt}+=($(printf '%q',"$optValue"));\n"
                 shift 2 ;;
         *) echo "parse error: not support $cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
       esac
     done
-    result+="local optCount=$optCount;\n"
+    result+="declare optCount=$optCount;\n"
     echo -e "$result" # -e show raw string
 }
 bake.opt.set --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
@@ -474,7 +483,7 @@ function bake.cmd.register() {
         echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
       local upCmd
-      for upCmd in $(bake.cmd.list_up "$functionName");do
+      for upCmd in $(bake.cmd.up_chain "$functionName");do
         # if upCmd is a function , set upCmd value to data path
         if compgen -A function | grep -q "^$upCmd$" ; then
           _cmdTree["$upCmd"]="$upCmd"
@@ -518,7 +527,7 @@ function bake.help()(
   echo
 
   echo "Available Options:"
-  for optPath in $(bake.opt.cmd_opts "$cmd"); do
+  for optPath in $(bake.opt.cmd_chain_opts "$cmd"); do
     local opt; opt=$(bake.path.basename "$optPath")
     local name; name=${_data[$optPath/name]}
     local type; type=${_data[$optPath/type]}

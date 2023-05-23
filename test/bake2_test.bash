@@ -21,6 +21,8 @@ TEST_PATH="$(_readlink "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 
+source "$TEST_DIR/../bake2"
+
 
 bake.assert.fail() {
   echo "$@" >&2
@@ -47,10 +49,10 @@ function bake.test.all() {
   escaped="${escaped%\'*}" # "str'" remove end "'"  => "str"
   if [[ "$escaped" != "$expected" ]] ; then
     bake.assert.fail "assert is_escape fail: $msg
-     actual  : $escaped
-     expected: $expected"
+     actual       : [$escaped]
+     is not escape: [$expected]"
      echo "diff------------------------->" >&2
-     diff <(echo -e "$actual") <(echo -e "$expected") >&2
+     diff <(echo -e "$expected") <(echo -e "$actual") >&2
      return 2
   fi
 }
@@ -59,19 +61,20 @@ function bake.test.all() {
   local actual="$1" expected="$2" msg="$3"
   if [[ "$actual" != "$expected" ]] ; then
     bake.assert.fail "assert is fail: $msg
-     actual  : $actual
-     expected: $expected"
+     actual  : [$actual]
+     is not  : [$expected]
+     "
      echo "diff------------------------->" >&2
-     diff <(echo -e "$actual") <(echo -e "$expected") >&2
+     diff <(echo -e "$expected") <(echo -e "$actual") >&2
      return 2
   fi
 }
 @contains(){
   local actual="$1" expected="$2" msg="$3"
   if [[ "$actual" != *"$expected"* ]] ; then
-    bake.assert.fail "assert contains fail: $msg
-     actual  : $actual
-     expected: $expected"
+    bake.assert.fail "assert fail: $msg
+     actual         : [$actual]
+     is not contains: [$expected]"
      return 2
   fi
 }
@@ -94,7 +97,7 @@ assert(){
 ## study bash or some other
 #######################################################
 # IFS : https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05
-study.bash.string_escape(){
+study.string.escape(){
   # $'' 语法
   assert $'1\n2' @is '1
 2'
@@ -107,12 +110,162 @@ study.bash.string_escape(){
 2"
   assert "$(printf '%q' "$x" )" @is "$'1\n2'"
 }
-study.bash.read(){
+study.read(){
   local expected="";
   echo -e "1\n2" | while read -r x ; do
     expected+="$1,"
   done
   assert "$expected" @is '1,2,'
+}
+study.function.return(){
+  (
+    s(){
+      printf "%s" "a b
+c d";
+    }
+    str="$(s)"
+    assert "${str}" @is $'a b\nc d'
+    printf "${str}" | od -c -td1
+    read -a arr <<< "${str}"
+        assert "${#arr[@]}" @is 2
+  )
+
+  (
+    # 需重新构造更清洗的用例
+    q(){
+      printf "%q" "a b
+c d";
+    }
+    str="$(q)"
+    assert "${str}" @is "$'a b\nc d'"
+    printf "${str}" | od -c -td1
+    read -a arr <<< "${str}"
+    # read 按IFS默认$' \n\t'，即用<space>, <newline>,<tab>分词
+    # 由于printf "%q"会对非打印字符进行转义，<newline>已经被转为\和n，所以read分词时，
+    # 并没有任何<newline>
+    assert "${#arr[@]}" @is 3
+    assert "$(printf '[%s]' "${arr[@]}" )" @is "[$'a][bnc][d']"
+
+    IFS=$'\n' read -a arr <<< "${str}"
+    # 我们重设分词符号只有$'\n', 但其实<newline>已被转义，所以并没有任何<newline>
+    assert "${#arr[@]}" @is 1
+    assert "$(printf '[%s]' "${arr[@]}" )" @is "[$'a bnc d']"
+
+    # 函数的开发者有职责自己先区分好，我这个函数的输出，什么算是1行，算是1行的，就用printf "%q"转义
+    # 那么，函数的调用者就有机会决定怎么分词
+    # 函数的调用者有职责，对函数返回的字符串，自己先区分好，我拿到的函数输出，要不要分行处理
+    # 就用IFS=$'\n' read -a arr <<< "${str}"分词
+  )
+}
+
+
+# give a string, it is use by printf "%q" to escape
+# return a string ,it is unescape string
+#  https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
+function bake.str.decode(){
+  local str="$1"
+  str="${str#$\'}" # "$'str'" remove begin "$'" => "str'"
+  str="${str%\'*}" # "str'" remove end "'"  => "str"
+  printf '%b' "$str"
+}
+
+test.study.declare(){
+  (
+    declare a=1 b=2
+    assert "$a" @is "1"
+    assert "$b" @is "2"
+  )
+
+  (
+    s='a=1 b=2'
+    declare $(printf "%s" "$s")
+    assert "$a" @is "1"
+    assert "$b" @is "2"
+  )
+  (
+    s='a=1 b=2'
+    declare $(printf "%s" "$s")
+    assert "$a" @is "1"
+    assert "$b" @is "2"
+  )
+
+    # declare ansi c quoting $''
+  (
+    err=$( declare $(printf "%s" "a=$'1 2'") 2>&1  ) || true
+    assert "$err" @contains "2'': not a valid identifier"
+  )
+
+  (
+
+    IFS=$'\n'
+    declare $(printf "%s" "a=$'1 2'
+b=$'3 4'")
+    assert "$a" @is "$'1 2'"
+    assert "$b" @is "$'3 4'"
+  )
+
+  (
+    # 目前看declare的脚本注射是比较安全的
+    # "|| true" 防止set -o errexit
+    err=$( declare $(printf "%s" 'a=1 b=2 ls -al -- ll') 2>&1  ) || true
+    assert "$err" @contains "-al': not a valid identifier"
+    err=$( declare $(printf "%s" 'a=$(ls -al)') 2>&1  ) || true
+    assert "$err" @contains "-al)': not a valid identifier"
+    err=$( declare $(printf "%s" 'a=b $(ls)=x') 2>&1  ) || true
+    assert "$err" @contains $"ls)=x': not a valid identifier"
+    err=$( declare $(printf "%s" 'a=b `ls`=x') 2>&1  ) || true
+    assert "$err" @contains "=x': not a valid identifier"
+  )
+
+}
+# eval 用起来比declare 省心多了
+test.study.eval(){
+  (
+    eval "a=$'1 2' b=$'3 4'"
+    assert "$a" @is "1 2"
+    assert "$b" @is "3 4"
+  )
+
+  {
+  # 包含换行符也没问题
+    eval "a=$'1 2'
+          b=$'3 4'"
+    assert "$a" @is "1 2"
+    assert "$b" @is "3 4"
+  }
+
+  (
+  # 数组也没问题
+    eval "a=($'1 2'
+    $'3\n4')"
+    assert "${#a[@]}" @is 2
+    assert "${a[0]}" @is "1 2"
+    assert "${a[1]}" @is $'3\n4'
+  )
+
+  {
+  # 关联数组也没问题
+    eval "declare -A a=([a]=$'1\n2' [b]=$'2' )"
+    assert "${#a[@]}" @is 2
+    assert "${a[a]}" @is $'1\n2'
+    assert "${a[b]}" @is $'2'
+  }
+  (
+    # 用$'' ANSI C Quoting格式看来也是安全的
+    eval "a=$'1 2' b=$'3 4 script inject not work'"
+    assert "$a" @is "1 2"
+    assert "$b" @is "3 4 script inject not work"
+  )
+}
+
+study.array(){
+  a=("line1 a
+line2" x)
+    assert "$(printf "[%s]" ${a[@]})" @is $'[line1][a][line2][x]'
+    assert "$(printf "[%s]" ${a[@]})" @is $'[line1][a][line2][x]'
+    # 由于"$@" 特殊语法，数组可已包含空格换行符， 不影响分词
+    assert "$(printf "[%s]" "${a[@]}")" @is $'[line1 a\nline2][x]'
+
 }
 
 #######################################################
@@ -162,10 +315,10 @@ test.bake.str.cutLeft(){
 }
 
 
-test.bake.cmd.list_up(){
-  assert "$(bake.cmd.list_up a.b)" @is_escape "a.b\na\n_root"
-  assert "$(bake.cmd.list_up '_root')" @is "_root"
-  assert "$(bake.cmd.list_up '')" @is "_root"
+test.bake.cmd.up_chain(){
+  assert "$(bake.cmd.up_chain a.b)" @is_escape "a.b\na\n_root"
+  assert "$(bake.cmd.up_chain '_root')" @is "_root"
+  assert "$(bake.cmd.up_chain '')" @is "_root"
 }
 test.bake.cmd.children(){
   assert "$(bake.cmd.children bake.test)" @is_escape "all"
@@ -203,14 +356,14 @@ test.data.children(){
   assert "$(bake.data.children "bake.opt.set/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
 }
 
-test.bake.opt.cmd_opts(){
-  assert "$(bake.opt.cmd_opts "_root")" @is \
+test.bake.opt.cmd_chain_opts(){
+  assert "$(bake.opt.cmd_chain_opts "_root")" @is \
 "_root/opts/help
 _root/opts/log
 _root/opts/verbose"
 
   # "include parent option"
-  assert "$(bake.opt.cmd_opts "bake.opt.set")" @is \
+  assert "$(bake.opt.cmd_chain_opts "bake.opt.set")" @is \
 "_root/opts/help
 _root/opts/log
 _root/opts/verbose
@@ -225,13 +378,22 @@ bake.opt.set/opts/type"
 
 test.cmd.parse(){
 
-  assert "$(bake.opt.parse "bake.opt.set" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
+  assert "$(bake.opt.parse "bake.opt.set" --type bool)" @is "declare type=bool;
+declare optCount=1;"
 
   # no exists cmd
-  assert "$(bake.opt.parse "no.exists.func" --type bool)" @is "local optCount=0;"
+  assert "$(bake.opt.parse "no.exists.func" --type bool)" @is "declare optCount=0;"
 
   # no exists option
-  assert "$(bake.opt.parse "bake.opt.set" --no_exists_opt)" @is "local optCount=0;"
+  assert "$(bake.opt.parse "bake.opt.set" --no_exists_opt)" @is "declare optCount=0;"
+
+
+  # list type option
+  bake.opt.set --cmd "test.cmd.parse" --name listopt --type list
+  bake.opt.parse "test.cmd.parse" --listopt a --listopt b
+  # fixme list opt
+#  assert "$(bake.opt.parse "test.cmd.parse" --listopt a --listopt b )" @is "declare optCount=0;"
+
 }
 
 test.bake.opt.set()(
@@ -256,5 +418,4 @@ _root(){
    ./test/$TEST_FILE test          # or run all test in this file"
 }
 
-source "$TEST_DIR/../bake2"
 bake.go "$@"
