@@ -139,18 +139,25 @@ BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}" # set workdir
 
+declare -r _LOG_LEVELS=(error info debug )
+declare            LOG=${LOG:-info}
 _current_dir() {
   echo "${PWD/#$HOME/\~}" # replace $HOME with "~"
 }
 _error(){
-  echo -e "ERROR $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
+  if [[ "${_LOG_LEVELS[@]:0}" != *"$LOG"* ]]; then return 0; fi
+  echo -e "ERROR $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2;
 }
-_log(){
+_info(){
+  if [[ "${_LOG_LEVELS[@]:1}" != *"$LOG"* ]]; then return 0; fi
   echo -e "INFO  $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 _debug(){
+  if [[ "${_LOG_LEVELS[@]:2}" != *"$LOG"* ]]; then return 0; fi
   echo -e "DEBUG $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
 }
+_debug "LOG level is $LOG :===${_LOG_LEVELS[@]:0}==="
+
 # list internal var , used to debug bake self
 function _self()(
   echo '# bake _self internal var'
@@ -344,30 +351,24 @@ function bake.opt.cmd_opts(){
 # only use by bake.opt.set,
 # because "bake.opt.set" is meta function, use this func to add self
 bake.opt._internal_add(){
-  local cmd="$1" opt="$2" type="$3" required="$4" abbr="$5" help="$6"
+  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" help="$7"
   _data[$cmd/opts/$opt]="type:opt"
   _data[$cmd/opts/$opt/name]="$opt"
   _data[$cmd/opts/$opt/type]="$type"
   _data[$cmd/opts/$opt/required]="$required"
   _data[$cmd/opts/$opt/abbr]="$abbr"
+  _data[$cmd/opts/$opt/default]="$default"
   _data[$cmd/opts/$opt/optHelp]="$optHelp"
 }
-bake.opt._internal_add bake.opt.set "cmd" "string" "true" "" "cmd name"
-bake.opt._internal_add bake.opt.set "name" "string" "true" "" "option name"
-bake.opt._internal_add bake.opt.set "type" "string" "true" "" "option type"
-bake.opt._internal_add bake.opt.set "required" "bool" "false" "" "option required"
-bake.opt._internal_add bake.opt.set "abbr" "string" "false" "" "option abbr"
-# avoid use 'help' as  option name,because it is root command option
-bake.opt._internal_add bake.opt.set "optHelp" "string" "false" "" "option help"
+bake.opt._internal_add bake.opt.set "cmd"      "string"  "true"  ""      ""       "cmd name"
+bake.opt._internal_add bake.opt.set "name"     "string"  "true"  ""      ""       "option name"
+bake.opt._internal_add bake.opt.set "type"     "string"  "true"  ""      ""       "option type"
+bake.opt._internal_add bake.opt.set "required" "bool"    "false" "false" ""  "option required"
+bake.opt._internal_add bake.opt.set "abbr"      "string" "false" ""      ""       "option abbr"
+bake.opt._internal_add bake.opt.set "default"   "string" "false" ""      ""       "option abbr"
+bake.opt._internal_add bake.opt.set "optHelp"   "string" "false" ""      ""       "option help"
 bake.opt.set(){
-  local selfCmd="${FUNCNAME[0]}"
-  eval "$(bake.opt.parse "$selfCmd" "$@")"
-#  bake.opt.parse "$selfCmd" "$@" > /dev/null
-#  local name; name="$(bake.opt.value "$selfCmd" "name")"
-#  local cmd; cmd="$(bake.opt.value "$selfCmd" "cmd")"
-#  local type; type="$(bake.opt.value "$selfCmd" "type")"
-#  local abbr; abbr="$(bake.opt.value "$selfCmd" "abbr")"
-#  local optHelp; optHelp="$(bake.opt.value "$selfCmd" "optHelp")"
+  eval "$(bake.opt.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]] ;then
     echo "error: option [--name] required " >&2 && return 1 ;
   fi
@@ -377,10 +378,8 @@ bake.opt.set(){
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
     echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
   fi
-#  bake.opt._internal_add "cmd" "string" "true" "" "cmd name"
-  bake.opt._internal_add "$cmd" "$name" "$type" "$required" "$abbr" "$optHelp"
+  bake.opt._internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$optHelp"
 }
-
 
 # only use by bake.opt.set,
 function bake.opt.value(){
@@ -395,17 +394,16 @@ function bake.opt.parse() {
     local result;
     # while bake.opt.cmd_opts
     local optList
-    # sort: root option first , priority low -> priority high: _root>pub>pub.get
+    # collect opt chain : _root>pub>pub.get
+    # sort: root option first , priority low -> priority high:
     readarray -t optList < <(bake.opt.cmd_opts "$cmd" | bake.str.revertLines )
     # convert to associative arrays , use to check if a opt is in optMap
     declare -A optMap;
-    declare -A optNameMap;
     for optPath in "${optList[@]}"; do
       local opt ; opt=$(bake.path.basename "$optPath")
       local abbr ; abbr=${_data["$optPath/abbr"]}
       optMap["--$opt"]="${optPath}"
       if [[ "$abbr" != "" ]] ; then optMap["-$abbr"]="${optPath}" ; fi
-      optNameMap["$optPath"]="$opt"
     done
 
     # while all args , until it is not opt
@@ -414,10 +412,7 @@ function bake.opt.parse() {
       local optPath; optPath=${optMap[$1]}
       # if next arg not a opt , parsing complete;
       if [[ "$optPath" == "" ]] ; then break;  fi
-      # "${pathLikeStr##*$delimiter}"
-#      local opt; opt=$(bake.path.basename "$optPath")
-      local opt; opt=${optNameMap["$optPath"]}
-#      echo "opt:$optPath   -   ${optNameMap["$optPath"]}" >&2
+      local opt; opt=$(bake.path.basename "$optPath")
       # remove the prefix：build.@fields.opts.base_uri => base_uri
       local optType; optType=${_data["$optPath/type"]}
 
@@ -497,8 +492,7 @@ function bake.cmd.register() {
 
 function bake.help()(
   local cmd="$1"; shift
-  local selfCmd="${FUNCNAME[0]}"
-  eval "$(bake.opt.parse "$selfCmd" "$@")"
+  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
 
   local usage; usage="${_data[${cmd}/usage]}"
   if [[ "$usage" != "" ]]; then
@@ -526,11 +520,23 @@ function bake.help()(
   echo "Available Options:"
   for optPath in $(bake.opt.cmd_opts "$cmd"); do
     local opt; opt=$(bake.path.basename "$optPath")
-    local optName; optName=${_data[$optPath/name]}
-    local optType; optType=${_data[$optPath/type]}
-    local optAbbr; optAbbr=${_data[$optPath/abbr]}
+    local name; name=${_data[$optPath/name]}
+    local type; type=${_data[$optPath/type]}
+    local required; required=${_data[$optPath/required]}
+    local abbr; abbr=${_data[$optPath/abbr]}
+    local default; default=${_data[$optPath/default]}
     local optHelp; optHelp="${_data[$optPath/optHelp]}"
-    printf " --%-15s -%-5s %-10s %b\n" "$optName" "$optAbbr" "$optType" "$optHelp"
+
+    local optArg=""
+    if [[ "$type" == "string" ]] ;then
+        if [[ "$default" != "" ]] ; then
+          optArg+="<$type:${default}>";
+        else
+          optArg="<$type>"
+        fi
+    fi
+
+    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArg" "$abbr" "$type" "$required" "$optHelp"
   done
 
 
@@ -540,7 +546,9 @@ Available Commands:"
   for subcmdName in $(bake.cmd.children "$cmd"); do
 
     # only show public cmd if not verbose
-    if [[ "$verbose" == "" && ("$subcmdName" == _* || "$subcmdName" == bake*) ]]; then
+    if [[ "$verbose" == "" && ("$subcmdName" == _* \
+                            || "$subcmdName" == bake*) \
+                            || "$subcmdName" == @*  ]]; then
        continue
     fi
 
@@ -566,7 +574,7 @@ Available Commands:"
 )
 
 function bake.go() {
-    # init
+    # init register all cmd
     bake.cmd.register
 
     # parse cmd :
@@ -587,6 +595,7 @@ function bake.go() {
     eval "$(bake.opt.parse "$cmd" "$@")"
 
     if [[ "$help" == "true" ]] ; then bake.help "$cmd" "$@"; return 0;  fi
+    if [[ "$log" != "" ]]      ; then LOG="$log";  fi
 
 #    # parse opts
     if ! declare -f "$cmd" >/dev/null 2>&1; then
@@ -598,9 +607,17 @@ function bake.go() {
     $cmd "$@"
 }
 
-# _root is special cmd, bake add some common options to this cmd, you can add yourself options
-bake.opt.set --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
-bake.opt.set --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
+# _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
+bake.opt.set --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
+bake.opt.set --cmd _root --name "verbose" --abbr v --type bool   --default false --optHelp "verbose, show more info, more hidden commands"
+bake.opt.set --cmd _root --name "log"              --type string --default info  --optHelp "log level: debug, info, error"
+
+# BASH_SOURCE > 1 , means bake import from other script, it is lib mode
+# lib mod is not load app function, so we need to stop here
+if (( ${#BASH_SOURCE[@]} > 1   )) ; then
+  _debug "【${BAKE_FILE}】 call by other script【$(printf " ▶︎ %s" "${BASH_SOURCE[@]}")】, lib mode on, not load below app script" >&2
+  return 0
+fi
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # bake common script end line.
@@ -618,7 +635,7 @@ bake.opt.set --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbos
 function _run() {
   local project; project=$(basename "$PWD")
 #  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
-  _log "${FUNCNAME[1]}() ▶︎【$*】"
+  _debug "${FUNCNAME[1]}() ▶︎【$*】"
   "$@"
   return $?
 }
@@ -699,9 +716,4 @@ function test() {
 # app entry script & _root cmd
 ####################################################
 
-# lib_mode use for other script import
-if [[ "$1" == "--lib_mode"  ]]; then
-  echo "lib_mode import: $BAKE_PATH"
-else
-  bake.go "$@"
-fi
+bake.go "$@"

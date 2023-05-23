@@ -21,7 +21,6 @@ TEST_PATH="$(_readlink "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 
-source "$TEST_DIR/../bake2" --lib_mode
 
 bake.assert.fail() {
   echo "$@" >&2
@@ -201,20 +200,23 @@ test.bake.cmd.register()(
     @contains "test.bake.cmd.register"
 )
 test.data.children(){
-  assert "$(bake.data.children "bake.opt.set/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"
+  assert "$(bake.data.children "bake.opt.set/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
 }
 
 test.bake.opt.cmd_opts(){
   assert "$(bake.opt.cmd_opts "_root")" @is \
 "_root/opts/help
+_root/opts/log
 _root/opts/verbose"
 
   # "include parent option"
   assert "$(bake.opt.cmd_opts "bake.opt.set")" @is \
 "_root/opts/help
+_root/opts/log
 _root/opts/verbose
 bake.opt.set/opts/abbr
 bake.opt.set/opts/cmd
+bake.opt.set/opts/default
 bake.opt.set/opts/name
 bake.opt.set/opts/optHelp
 bake.opt.set/opts/required
@@ -232,14 +234,16 @@ test.cmd.parse(){
   assert "$(bake.opt.parse "bake.opt.set" --no_exists_opt)" @is "local optCount=0;"
 }
 
-test.bake.opt.set(){
+test.bake.opt.set()(
   bake.opt.set --cmd "test.opt.add" --name boolopt --type bool
-}
-test.bake.opt.value.parse_and_get_value(){
+)
+
+test.bake.opt.value.parse_and_get_value()(
   bake.opt.set --cmd "test.opt.add" --name xxx --type string
-  bake.opt.parse "test.opt.add" --xxx chen >/dev/null
-  assert "$(bake.opt.value "test.opt.add" "xxx")" @is "chen"
-}
+  eval "$(bake.opt.parse "test.opt.add" --xxx chen)"
+  assert "$xxx" @is "chen"
+)
+
 
 function test(){
   bake.test.all
@@ -252,4 +256,5 @@ _root(){
    ./test/$TEST_FILE test          # or run all test in this file"
 }
 
+source "$TEST_DIR/../bake2"
 bake.go "$@"
