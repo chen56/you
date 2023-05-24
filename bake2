@@ -482,8 +482,6 @@ bake.opt.set --cmd bake.cmd.set --name "summary"     --type string --optHelp "su
 bake.opt.set --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
 
 function bake.cmd.set(){
-  bake.opt.parse "${FUNCNAME[0]}" "$@"
-
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
   if [[ "$cmd" == "" ]]; then
@@ -591,9 +589,11 @@ Available Commands:"
 
     # 第二行开始，都补空格
     local summary usage
-    summary="${_data[$subCmd/summary]:--}"
+    summary="${_data[$subCmd/summary]}"
     usage="${_data[$subCmd/usage]}"
-    [[ "$usage" != "" ]] &&  summary+="\nUsage: $usage"
+    if [[ "$usage" != "" ]];then
+      [[ "$summary" == "" ]] && summary="Usage: $usage" || summary+="\nUsage: $usage"
+    fi
     summary="$(echo -e "$summary")" #  backslash escapes interpretation
 
     local padding; padding=$(printf %-$((maxLengthOfCmd + 6))b "")
@@ -605,6 +605,7 @@ Available Commands:"
 
 function bake.go() {
     # init register all cmd
+
     bake.cmd.register
 
     # parse cmd :
@@ -621,7 +622,6 @@ function bake.go() {
     done
 
     if [[ "$cmd" == "" ]] ; then cmd="_root" ; fi
-
     eval "$(bake.opt.parse "$cmd" "$@")"
 
     if [[ "$help" == "true" ]] ; then bake.help "$cmd" "$@"; return 0;  fi
@@ -670,7 +670,6 @@ function _run() {
   return $?
 }
 
-
 ##########################################
 # app cmd script
 # 应用的命令脚本
@@ -697,6 +696,7 @@ Samples:
 
 EOF
 )"
+
 _root(){
   # default run
   _run get
