@@ -160,17 +160,22 @@ c d";
     # 就用IFS=$'\n' read -a arr <<< "${str}"分词
   )
 }
-
-
-# give a string, it is use by printf "%q" to escape
-# return a string ,it is unescape string
-#  https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
-function bake.str.decode(){
-  local str="$1"
-  str="${str#$\'}" # "$'str'" remove begin "$'" => "str'"
-  str="${str%\'*}" # "str'" remove end "'"  => "str"
-  printf '%b' "$str"
+# Usage: pipe <callback> [args...]
+# callback: callback <line>
+# Sample: cat file | pipe echo
+study.pipe(){
+  local func="$1" ; shift;
+  for arg in "$@"; do
+  $func "$arg"
+  done
+  if ! [[ -t 0 ]]; then
+    while  read line; do
+      $func "$line"
+    done
+  fi
 }
+
+
 function test.bake.str.escape() {
     assert "$(bake.str.escape $'1')"     @is "'1'"
     assert "$(bake.str.escape $'1 ')"    @is "'1 '"
@@ -434,5 +439,6 @@ _root(){
    ./test/$TEST_FILE test -h       # test subcommands
    ./test/$TEST_FILE test          # or run all test in this file"
 }
+
 
 bake.go "$@"

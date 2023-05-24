@@ -228,27 +228,26 @@ TYPE_CMD="type:cmd"
 bake.str.cutLeft(){ printf "${1#$2}"; }
 
 # escape to 'xxx' or $'xxx'
+#  https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
 bake.str.escape() {
   #  from 2016 bash 4.4
   #  ${parameter@Q} : quoted in a format that can be reused as input
   # to 'xxx' or $'xxx'
-#  printf '%s' "${1@Q}" ;
-  for e  in "$@"; do
-    printf '%s\n' "${e@Q}" ;
-  done
+  printf '%s\n' "${1@Q}" ;
 }
-
 # unescape from 'xxx' or $'xxx'
 bake.str.unescape() {
-  for e in "$@"; do
-    local result=${e}
-    [[ "$e" == "\$'"*"'" ]] && result="${e:2:-1}"
-    [[ "$e" == "'"*"'" ]] && result="${e:1:-1}"
-
-    #  from 2016 bash 4.4
-    #  ${parameter@E} expanded as with the $'...' quoting mechansim
-    printf '%s' "${result@E}" ;
-  done
+  local str=${1}
+  # $'xx' => xx
+  if [[ "$str" == "\$'"*"'" ]]; then
+    str="${str:2:-1}"
+  # 'xx' => xx
+  elif  [[ "${str}" == "'"*"'" ]]; then
+    str="${str:1:-1}"
+  fi
+  #  from 2016 bash 4.4
+  #  ${parameter@E} expanded as with the $'...' quoting mechansim
+  printf '%s' "${str@E}" ;
 }
 
 # Usage: bake.str.split <str> [delimiter:default /]
@@ -261,15 +260,10 @@ bake.str.split() {
   printf '%s\n' "${arr[@]}"
 }
 
-# Usage: bake.array.to_escape_str [...array]
-# bake.array.to_escape_str a b c    =>
-#bake.array.to_escape_str(){
-#    local arr=("$@")
-#    local str; printf -v str '%q ' "${arr[@]}"
-#    printf '%s' "$str"
-#}
 # Usage: bake.str.revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
 function bake.str.revertLines(){
+  # cat xxx | tail -r; # macos bsd only, not work on linux
+  # so use sed
   sed '1!G;h;$!d'  # sed magic
 }
 
@@ -315,7 +309,6 @@ bake.data.children() {
       # remove prefix : key:build/opts/dir/type/x leftPathToBeCut:build/opts => dir/type/x
       child=$(bake.str.cutLeft "$key" "$path/")
       # remove suffix:  dir/type/x => dir
-#      child=${child%%/*}
       child=$(bake.path.first "$child" "/")
       printf '%s\n' "$child"
     fi
@@ -350,7 +343,7 @@ bake.cmd.children() (
 )
 
 # Usage: bake.cmd.up_chain <cmd>
-# sample: bake.cmd.up_chain a.b      => "a.b\n", "a\n", "_root"
+# sample: bake.cmd.up_chain a.b      => "a.b", "a", "_root"
 function bake.cmd.up_chain(){
   local path="${1:-_root}"
   local up="$path"
@@ -364,7 +357,6 @@ function bake.cmd.up_chain(){
 # reverse of bake.cmd.up_chain
 function bake.cmd.down_chain(){
   bake.cmd.up_chain "$1" | bake.str.revertLines ;
-#  bake.cmd.up_chain "$1" | tail -r; # macos bsd only, not work on linux
 }
 
 
@@ -484,64 +476,6 @@ function bake.opt.parse() {
     echo -e "$resultStr" # echo -e : unescapes backslash
 }
 
-
-# Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
-function bake.opt.parsenew() {
-    local cmd; cmd="${1:_root}"
-    shift # shift cmd arg, left all is options maybe
-    # key is -h --help ... candidate words ,
-    # value is optPath
-    declare -A allOptOnCmdChain;
-    # collect opt from command chain : _root>pub>pub.get
-    #   root option first , priority low -> priority high:
-    for optPath in $(bake.opt.cmd_chain_opts "$cmd" | bake.str.revertLines ); do
-      local opt ; opt=$(bake.path.basename "$optPath")
-      local abbr ; abbr=${_data["$optPath/abbr"]}
-      allOptOnCmdChain["--$opt"]="${optPath}"
-      if [[ "$abbr" != "" ]] ; then allOptOnCmdChain["-$abbr"]="${optPath}" ; fi
-    done
-
-    # dynamic opt variable map : optPath:optVarName
-    # Why use dynamic variables: because the variable name is not fixed
-    # and We want to manipulate arrays(list type opt) more conveniently
-    local -A optVars;
-    local totalArgs=$#
-    # while all args , until it is not opt
-    while (( $# > 0 )); do
-      # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
-      local optPath; optPath=${allOptOnCmdChain[$1]}
-      # if next arg not a opt , parsing complete;
-      if [[ "${optPath}" == "" ]] ; then break;  fi
-      local optName;optName=$(bake.path.basename "$optPath")
-      # _opt_value_ prefix : avoid conflicts in the current context
-      optVars["$optPath"]="_opt_value_$(bake.path.basename "$optPath")"
-      declare "${optVars[$optPath]}"
-      # reference to the current dynamic  opt variable
-      declare -n currentOptValue=${optVars[$optPath]};
-
-      local optType; optType=${_data["$optPath/type"]}
-      case $optType in
-        bool)  declare -p $optName=true
-               printf "\n" "$(declare -p $optName)"
-               shift 1  ;;
-        string) [[ ! "${2+declare}" ]] && echo "parse error: opt need a value: $arg <value> " >&2 && return 1 ;
-               declare -p $optName="$2"
-               printf "%s\n" "$(declare -p $optName)"
-               shift 2  ;;
-        list)   [[ ! "${2+declare}" ]] && echo "parse error: opt need a value: $arg <value> " >&2 && return 1 ;
-               printf "declare %s+=($'%q');\n" "$optName" "$2"
-               shift 2  ;;
-        *) echo "parse error: not support $optPath.type: <$optType> " >&2 ; return 1 ;;
-      esac
-    done
-
-#    local resultStr;
-#    for optPath in "${!optVars[@]}";do
-#      local declareStr; declareStr=$(declare -p "${optVars[$optPath]}")
-#      resultStr+="${declareStr/#*_opt_value_/declare };\n"
-#    done
-    printf 'declare optShift=%s;\n' "$(( totalArgs - $# ))"
-}
 bake.opt.set --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
 bake.opt.set --cmd bake.cmd.set --name "usage"       --type string --optHelp "usage"
 bake.opt.set --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
