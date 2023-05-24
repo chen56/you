@@ -61,10 +61,11 @@ function bake.test.all() {
   local actual="$1" expected="$2" msg="$3"
   if [[ "$actual" != "$expected" ]] ; then
     bake.assert.fail "assert is fail: $msg
-     actual  : [$actual]
-     escape  : [$(printf '%q' "$actual")]
-     is not  : [$expected]
-     escape  : [$(printf '%q' "$expected")]
+     actual         : [$actual]
+     is not         : [$expected]
+     --------------------------------------------------
+     actual escape  : [$(printf '%q' "$actual")]
+     is not escape  : [$(printf '%q' "$expected")]
      "
      echo "diff------------------------->" >&2
      diff <(echo -e "$expected") <(echo -e "$actual") >&2
@@ -170,7 +171,19 @@ function bake.str.decode(){
   str="${str%\'*}" # "str'" remove end "'"  => "str"
   printf '%b' "$str"
 }
-
+function test.bake.str.escape() {
+    assert "$(bake.str.escape $'1')"     @is "'1'"
+    assert "$(bake.str.escape $'1 ')"    @is "'1 '"
+    assert "$(bake.str.escape $'1 2 "')" @is "'1 2 \"'"
+    assert "$(bake.str.escape $'1 "')"   @is "'1 \"'"
+    assert "$(bake.str.escape $'1 2\n')" @is "\$'1 2\n'"
+}
+function test.bake.str.unescape() {
+    assert "$(bake.str.unescape "$(bake.str.escape $'1'    )")"      @is $'1'
+    assert "$(bake.str.unescape "$(bake.str.escape $'1 2'  )")"      @is $'1 2'
+    assert "$(bake.str.unescape "$(bake.str.escape $'1 " ' )")"      @is $'1 " '
+    assert "$(bake.str.unescape "$(bake.str.escape $'1 \n ' )")"     @is $'1 \n '
+}
 test.study.declare(){
   (
     declare a=1 b=2
@@ -405,6 +418,7 @@ test.bake.opt.set()(
 
 test.bake.opt.value.parse_and_get_value()(
   bake.opt.set --cmd "test.opt.add" --name xxx --type string
+  echo $(bake.opt.parse "test.opt.add" --xxx chen)
   eval "$(bake.opt.parse "test.opt.add" --xxx chen)"
   assert "$xxx" @is "chen"
 )
