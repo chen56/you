@@ -1,8 +1,8 @@
-# melos_managed_dependency_overrides: note,note_mate_flutter
+# melos_managed_dependency_overrides: note,mate_flutter
 dependency_overrides:
   note:
     path: ../note
-  note_mate:
-    path: ../note_mate
-  note_mate_flutter:
-    path: ../note_mate_flutter
+  mate:
+    path: ../mate
+  mate_flutter:
+    path: ../mate_flutter

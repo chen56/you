@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note/mate_core.dart';
 import 'package:note/note_dev_gen.dart' as note_gen;
-import 'package:note_mate_flutter/cupertino.dart';
+import 'package:mate_flutter/cupertino.dart';
 
 void main() {
   group("gen pages", () {

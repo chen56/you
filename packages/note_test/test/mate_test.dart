@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate_core.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note_mate_flutter/material.dart';
+import 'package:mate_flutter/material.dart';
 
 void main() {
   late ObjectParam root;

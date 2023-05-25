@@ -5,9 +5,9 @@ import 'package:note/note_core.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
-// import 'package:note_mate_flutter/mate_icons.g.dart' deferred as deferred_icons;
+// import 'package:mate_flutter/mate_icons.g.dart' deferred as deferred_icons;
 
-import 'package:note_mate_flutter/material.dart';
+import 'package:mate_flutter/material.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "Icon",

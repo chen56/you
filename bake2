@@ -713,21 +713,21 @@ function all() {
     #        done
     (cd packages/learn_dart;        _run "$@";  )
     (cd packages/note;              _run "$@";  )
-    (cd packages/note_mate_flutter; _run "$@";  )
-    (cd packages/note_mate;         _run "$@";  )
+    (cd packages/mate_flutter; _run "$@";  )
+    (cd packages/mate;         _run "$@";  )
     (cd packages/note_app;          _run "$@";  )
     (cd packages/note_test;         _run "$@";  )
 }
 
 bake.cmd.set --cmd note              --usage "./$BAKE_FILE note [any command]"              --summary "<project> run cmd on project"
 bake.cmd.set --cmd note_app          --usage "./$BAKE_FILE note_app [any command]"
-bake.cmd.set --cmd note_mate         --usage "./$BAKE_FILE note_mate [any command]"
-bake.cmd.set --cmd note_mate_flutter --usage "./$BAKE_FILE note_mate_flutter [any command]"
+bake.cmd.set --cmd mate         --usage "./$BAKE_FILE mate [any command]"
+bake.cmd.set --cmd mate_flutter --usage "./$BAKE_FILE mate_flutter [any command]"
 bake.cmd.set --cmd note_test         --usage "./$BAKE_FILE note_test [any command]"
 function note() (              cd packages/note;                  _run "$@";  )
 function note_app() (          cd packages/note_app;              _run "$@";  )
-function note_mate() (         cd packages/note_mate;             _run "$@";  )
-function note_mate_flutter() ( cd packages/note_mate_flutter;     _run "$@";  )
+function mate() (         cd packages/mate;             _run "$@";  )
+function mate_flutter() ( cd packages/mate_flutter;     _run "$@";  )
 function note_test() (         cd packages/note_test;             _run "$@";  )
 
 bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"

@@ -312,11 +312,11 @@ option() {
       run dart run tools/gen.dart
     )
     (
-      cd packages/note_mate_flutter
+      cd packages/mate_flutter
       run flutter test  tools/gen_mates.dart
     )
     (
-      cd packages/note_mate_flutter
+      cd packages/mate_flutter
       run flutter test  tools/gen_mate_icons.dart
     )
   }
@@ -326,7 +326,7 @@ option() {
     /regen() {
       echo "regen1"
       run rm -f packages/note_app/lib/pages.g.dart
-      run rm -rf packages/note_mate_flutter/lib
+      run rm -rf packages/mate_flutter/lib
       /gen
     }
 }
@@ -385,11 +385,11 @@ option() {
       run "$@"
     )
     (
-      cd packages/note_mate_flutter
+      cd packages/mate_flutter
       run "$@"
     )
     (
-      cd packages/note_mate
+      cd packages/mate
       run "$@"
     )
     (

@@ -2,5 +2,5 @@
 dependency_overrides:
   note:
     path: ../note
-  note_mate:
-    path: ../note_mate
+  mate:
+    path: ../mate

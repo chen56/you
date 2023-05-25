@@ -5,14 +5,14 @@ import 'package:note/mate_core.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/note_layout.dart';
-import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
+import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
 import 'package:note/note_dev.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
-// import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
+// import 'package:mate_flutter/mate_icons.g.dart' as flutter_icons;
 
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>

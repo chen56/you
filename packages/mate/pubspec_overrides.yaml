@@ -2,7 +2,3 @@
 dependency_overrides:
   note:
     path: ../note
-  mate:
-    path: ../mate
-  mate_flutter:
-    path: ../mate_flutter
