@@ -1,12 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note/mate_core.dart';
-import 'package:note/mate_note.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
-import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
 import 'sys.dart';
@@ -15,6 +12,7 @@ import 'sys.dart';
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
+  final NoteSystem noteSystem;
   final Note<T> current;
   final Note tree;
   final bool defaultCodeExpand;
@@ -22,6 +20,7 @@ class LayoutScreen<T> extends StatefulWidget with Screen<T> {
 
   LayoutScreen({
     super.key,
+    required this.noteSystem,
     required this.tree,
     required this.current,
     required this.editors,
@@ -62,11 +61,13 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
           cell,
           outline: outline,
           editors: widget.editors,
+          contentFactory: widget.noteSystem.contentFactory,
         );
 
     Pen pen = Pen.build(
       context,
       widget.current,
+      contentFactory: widget.noteSystem.contentFactory,
       defaultCodeExpand: widget.defaultCodeExpand,
     );
     return (
@@ -326,154 +327,6 @@ class _OutlineView extends StatelessWidget {
   }
 }
 
-class _MateSampleWidget extends StatelessWidget {
-  final ObjectParam rootParam;
-  final Editors editors;
-  final String title;
-  final MateSample content;
-  final NoteCell cell;
-  const _MateSampleWidget({
-    // ignore: unused_element
-    super.key,
-    required this.rootParam,
-    required this.editors,
-    required this.title,
-    required this.content,
-    required this.cell,
-  });
-
-  static Widget responsiveUI({
-    required BuildContext context,
-    required Widget paramView,
-    required Widget codeView,
-    required MateSample content,
-  }) {
-    WindowClass win = WindowClass.of(context);
-
-    // screen large enough
-    if (win == WindowClass.expanded) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (content.isShowCode) Expanded(child: codeView),
-          if (content.isShowParamEditor) Expanded(child: paramView),
-        ],
-      );
-    }
-
-    // screen large not enough
-    var codeViewFillWidth = LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        return SizedBox(width: constraints.maxWidth, child: codeView);
-      },
-    );
-    return Column(
-      // mainAxisAlignment: MainAxisAlignment.start,
-      // crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (content.isShowCode) codeViewFillWidth,
-        if (content.isShowParamEditor) paramView,
-      ],
-    );
-  }
-
-  Widget buildParamRow(BuildContext context, Param param) {
-    var nameWidget = Container(
-      padding: EdgeInsets.only(left: param.level * 15),
-      child: param.nameWidget(context, editors),
-    );
-
-    var row = Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(flex: 40, child: nameWidget),
-        // Flexible(child: param.valueWidget(context, editors)),
-        Expanded(flex: 60, child: param.valueWidget(context, editors)),
-      ],
-    );
-    // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
-    // ignore: unused_local_variable
-    var padding = Padding(
-      // 缩进模仿树形
-      padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
-      child: Container(
-        decoration: const BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey))),
-        height: 30,
-        child: row,
-      ),
-    );
-
-    return padding;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // codeView do not listen param changed, because we want keep Input widget
-    var paramView = Column(
-      children: [
-        ...rootParam
-            // hide null value
-            .flat(test: (param) => param.isShow)
-            .map((param) => buildParamRow(context, param))
-      ],
-    );
-
-    // codeView listen param changed
-    var codeView = ListenableBuilder(
-      listenable: rootParam,
-      builder: (context, _) {
-        return HighlightView(
-          // The original code to be highlighted
-          content.toSampleCode(cell, rootParam, editors),
-
-          // Specify language
-          // It is recommended to give it a value for performance
-          language: 'dart',
-
-          // Specify highlight theme
-          // All available themes are listed in `themes` folder
-          theme: vs2015Theme,
-
-          // Specify padding
-          padding: const EdgeInsets.all(6),
-        );
-      },
-    );
-    var paramAndCodeView = responsiveUI(
-        context: context,
-        codeView: codeView,
-        paramView: paramView,
-        content: content);
-
-    return Card(
-      elevation: 5,
-      child: ListenableBuilder(
-        listenable: rootParam,
-        builder: (context, _) {
-          var renderView = rootParam.build() as Widget;
-
-          return Column(
-            children: [
-              ExpansionTile(
-                initiallyExpanded: false,
-                expandedAlignment: Alignment.topLeft,
-                expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                title: Row(children: [Text(title)]),
-                children: [
-                  paramAndCodeView,
-                ],
-              ),
-              renderView,
-            ],
-          );
-        },
-      ),
-    );
-  }
-}
-
 ///
 /// code | codeView
 /// bar  | -------------------
@@ -482,37 +335,16 @@ class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
   final Editors editors;
+  final NoteContentFactory contentFactory;
+  // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
     this.cell, {
     // ignore: unused_element
     super.key,
     required this.outline,
     required this.editors,
+    required this.contentFactory,
   });
-
-  Widget contentToWidget(BuildContext context, NoteContent e) {
-    if (e is MarkdownContent) {
-      return MarkdownContentWidget(outline: outline, content: e.content);
-    }
-    if (e is WidgetContent) {
-      return e.widget;
-    }
-    if (e is MateSample) {
-      return _MateSampleWidget(
-        content: e,
-        rootParam: e.mate.toRootParam(editors: editors),
-        editors: editors,
-        title: "展开代码(手机上暂时无法编辑文本、数字参数)",
-        cell: cell,
-      );
-    }
-
-    if (e is ObjectContent) {
-      return SelectableText("${e.object}");
-    }
-
-    throw UnimplementedError("NoteContent not implemented : $e");
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -537,8 +369,9 @@ class _NoteCellView extends StatelessWidget {
     var cellView = ListenableBuilder(
       listenable: cell,
       builder: (context, child) {
-        Iterable<Widget> contentWidgets =
-            cell.contents.map((e) => contentToWidget(context, e));
+        Iterable<Widget> contentWidgets = cell.contents.map((e) =>
+            contentFactory.build(
+                context, e, ContentArg(cell: cell, outline: outline)));
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {

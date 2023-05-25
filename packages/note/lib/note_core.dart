@@ -2,8 +2,6 @@
 
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
-import 'package:note/mate_core.dart';
-import 'package:note/mate_note.dart';
 import 'package:note/utils.dart';
 import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;
@@ -42,6 +40,11 @@ NoteSourceData _emptyPageGenInfo = (
   // meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
+
+class NoteSystem {
+  final NoteContentFactory contentFactory;
+  NoteSystem({required this.contentFactory});
+}
 
 /// 可序列化的config 数据
 class NoteConf {
@@ -289,6 +292,8 @@ class Note<T> {
 ///
 
 class Pen {
+  final NoteContentFactory contentFactory;
+
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   // void cell(CellBuilder builder);
@@ -304,6 +309,7 @@ class Pen {
   Pen.build(
     BuildContext context,
     this.path, {
+    required this.contentFactory,
     required this.defaultCodeExpand,
   }) {
     assert(path.source._pageGenInfo.cells.isNotEmpty,
@@ -312,6 +318,7 @@ class Pen {
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
+        contentFactory: contentFactory,
         pen: this,
         index: i,
         pageSource: path.source,
@@ -369,8 +376,19 @@ class Pen {
   // }
 }
 
+abstract class NoteContentFactory {
+  NoteContent create(Object? data);
+  Widget build(BuildContext context, NoteContent content, ContentArg arg);
+}
+
 /// note content is not widget , it is data.
-class NoteContent {}
+abstract class NoteContent {}
+
+class ContentArg {
+  final NoteCell cell;
+  final Outline outline;
+  ContentArg({required this.cell, required this.outline});
+}
 
 class MarkdownContent extends NoteContent {
   final String content;
@@ -613,6 +631,7 @@ enum CellType {
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
+  final NoteContentFactory contentFactory;
   final List<NoteContent> _contents = List.empty(growable: true);
 
   // index use to find code
@@ -621,6 +640,7 @@ class NoteCell extends ChangeNotifier {
   late final CellSource source;
 
   NoteCell({
+    required this.contentFactory,
     required this.pen,
     required this.index,
     required NoteSource pageSource,
@@ -667,19 +687,7 @@ class NoteCell extends ChangeNotifier {
   }
 
   void call(Object? object) {
-    if (object is NoteContent) {
-      _add(object);
-      return;
-    }
-    if (object is Mate) {
-      _add(MateSample(object));
-      return;
-    }
-    if (object is Widget) {
-      _add(WidgetContent(object));
-      return;
-    }
-    _add(ObjectContent(object));
+    _add(contentFactory.create(object));
   }
 
   void _add(NoteContent content) {
