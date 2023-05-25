@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 204,
+          end: 199,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # Material)
         (
           cellType: 'body',
-          offset: 204,
-          end: 344,
+          offset: 199,
+          end: 339,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 344,
-          end: 346,
+          offset: 339,
+          end: 341,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfY29yZS5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJNYXRlcmlhbDPmpoLop4giLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBNYXRlcmlhbDMKCj4gTWF0ZXJpYWwzIOe7hOS7tue0ouW8leWPguiAgzoKPiA8aHR0cHM6Ly9hcGkuZmx1dHRlci5kZXYvZmx1dHRlci9tYXRlcmlhbC9UaGVtZURhdGEvdXNlTWF0ZXJpYWwzLmh0bWw+CgoKCiAgJycnKTsKfQo="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGUuZGFydCc7CgpOb3RlQ29uZlBhcnQgcGFnZSA9IE5vdGVDb25mUGFydCgKICBzaG9ydFRpdGxlOiAiTWF0ZXJpYWwz5qaC6KeIIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgTWF0ZXJpYWwzCgo+IE1hdGVyaWFsMyDnu4Tku7bntKLlvJXlj4LogIM6Cj4gPGh0dHBzOi8vYXBpLmZsdXR0ZXIuZGV2L2ZsdXR0ZXIvbWF0ZXJpYWwvVGhlbWVEYXRhL3VzZU1hdGVyaWFsMy5odG1sPgoKCgogICcnJyk7Cn0K"
     );

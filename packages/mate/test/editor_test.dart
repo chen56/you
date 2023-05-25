@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_core.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note/note_core.dart';
+import 'package:mate/mate_note.dart';
 
 typedef OnClick = void Function();
 // ignore: camel_case_types

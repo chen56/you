@@ -2,10 +2,9 @@
 
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
-import 'package:note/content_markdown.dart';
+import 'package:note/src/content_builtin.dart';
 import 'package:note/utils.dart';
 import 'dart:convert';
-import 'package:code_builder/code_builder.dart' as code;
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
 typedef DeferredNoteConf = Future<NoteConfPart> Function();
@@ -356,10 +355,10 @@ class Pen {
     currentCell = cells[nextCellIndex];
   }
 
-  /// markdown 独占一个新cell
-  void markdown(String content) {
-    currentCell.print(MarkdownContent(content));
-  }
+  // /// markdown 独占一个新cell
+  // void markdown(String content) {
+  //   currentCell.print(MarkdownContent(content));
+  // }
 
   void call(Object? object) {
     currentCell.print(object);
@@ -382,115 +381,8 @@ class Pen {
 // }
 }
 
-class NoteContentExtensions {
-  final List<NoteContentExtension> contentExtensions;
-
-  NoteContentExtensions.ext(List<NoteContentExtension> contentExtensions)
-      : contentExtensions = [
-          ...contentExtensions,
-          MarkdownContentExtension(),
-          WidgetContentExtension(),
-          ObjectContentExtension(),
-        ];
-
-  NoteWidgetMinin create(Object? data, ContentArg arg) {
-    for (var ext in contentExtensions) {
-      var w = ext.create(data, arg);
-      if (w != null) {
-        return w;
-      }
-    }
-    throw Exception(
-        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
-  }
-}
-
-abstract class NoteContentExtension {
-  NoteWidgetMinin? create(Object? data, ContentArg arg);
-}
-
 /// note content is not widget , it is data.
 abstract class NoteContent {}
-
-class ContentArg {
-  final NoteCell cell;
-  final Outline outline;
-
-  ContentArg({required this.cell, required this.outline});
-}
-
-class ObjectContentExtension extends NoteContentExtension {
-  ObjectContentExtension();
-
-  @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
-    return ObjectContentWidget(content: ObjectContent(data));
-  }
-}
-
-class ObjectContent extends NoteContent {
-  final Object? object;
-
-  ObjectContent(this.object);
-
-  @override
-  String toString() {
-    return "ObjectNote('${object?.toString()}')";
-  }
-}
-
-class ObjectContentWidget extends StatelessWidget with NoteWidgetMinin {
-  final ObjectContent content;
-
-  const ObjectContentWidget({super.key, required this.content});
-
-  @override
-  get isMarkdown => false;
-
-  @override
-  Widget build(BuildContext context) {
-    return SelectableText("${content.object}");
-  }
-}
-
-class WidgetContentExtension extends NoteContentExtension {
-  WidgetContentExtension();
-
-  @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
-    if (data is Widget) {
-      return WidgetContentWidget(content: WidgetContent(data));
-    } else if (data is WidgetContent) {
-      return WidgetContentWidget(content: data);
-    }
-    return null;
-  }
-}
-
-class WidgetContentWidget extends StatelessWidget with NoteWidgetMinin {
-  final WidgetContent content;
-
-  const WidgetContentWidget({super.key, required this.content});
-
-  @override
-  get isMarkdown => false;
-
-  @override
-  Widget build(BuildContext context) {
-    return content.widget;
-  }
-}
-
-class WidgetContent extends NoteContent {
-  final Widget widget;
-
-  WidgetContent(this.widget);
-
-  @override
-  String toString() {
-    return "WidgetNote('${widget.runtimeType}')";
-  }
-}
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -749,10 +641,6 @@ class NoteCell extends ChangeNotifier {
     call(object);
   }
 
-  void markdown(String content) {
-    call(MarkdownContent(content));
-  }
-
   bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
     return _contents.every((e) => e.isMarkdown);
@@ -794,16 +682,4 @@ class NoteCell extends ChangeNotifier {
   String toString() {
     return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
-}
-
-extension NoteSampleExt on Object {
-  static final _code = Expando<code.Expression>();
-
-  //todo 收缩sampleCode和sampleCodeStr为一个属性
-  code.Expression? get sampleCode => _code[this];
-
-  set sampleCode(code.Expression? v) => _code[this] = v;
-
-  set sampleCodeStr(String? v) =>
-      _code[this] = v == null ? null : code.CodeExpression(code.Code(v));
 }

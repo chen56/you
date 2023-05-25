@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/note_core.dart';
+import 'package:note/note.dart';
 
 import 'package:note_app/note_app.dart';
 

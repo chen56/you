@@ -6,7 +6,114 @@ import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/utils_core.dart';
 
-class MarkdownContentExtension extends NoteContentExtension {
+class NoteContentExtensions {
+  final List<NoteContentExt> contentExtensions;
+
+  NoteContentExtensions.ext(List<NoteContentExt> contentExtensions)
+      : contentExtensions = [
+          ...contentExtensions,
+          MarkdownContentExtension(),
+          WidgetContentExtension(),
+          _ObjectContentExt(),
+        ];
+
+  NoteWidgetMinin create(Object? data, ContentArg arg) {
+    for (var ext in contentExtensions) {
+      var w = ext.create(data, arg);
+      if (w != null) {
+        return w;
+      }
+    }
+    throw Exception(
+        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
+  }
+}
+
+abstract class NoteContentExt {
+  NoteWidgetMinin? create(Object? data, ContentArg arg);
+}
+
+class ContentArg {
+  final NoteCell cell;
+  final Outline outline;
+
+  ContentArg({required this.cell, required this.outline});
+}
+
+class _ObjectContentExt extends NoteContentExt {
+  _ObjectContentExt();
+
+  @override
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    return ObjectContentWidget(content: ObjectContent(data));
+  }
+}
+
+class ObjectContent extends NoteContent {
+  final Object? object;
+
+  ObjectContent(this.object);
+
+  @override
+  String toString() {
+    return "ObjectNote('${object?.toString()}')";
+  }
+}
+
+class ObjectContentWidget extends StatelessWidget with NoteWidgetMinin {
+  final ObjectContent content;
+
+  const ObjectContentWidget({super.key, required this.content});
+
+  @override
+  get isMarkdown => false;
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectableText("${content.object}");
+  }
+}
+
+class WidgetContentExtension extends NoteContentExt {
+  WidgetContentExtension();
+
+  @override
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    if (data is Widget) {
+      return WidgetContentWidget(content: WidgetContent(data));
+    } else if (data is WidgetContent) {
+      return WidgetContentWidget(content: data);
+    }
+    return null;
+  }
+}
+
+class WidgetContentWidget extends StatelessWidget with NoteWidgetMinin {
+  final WidgetContent content;
+
+  const WidgetContentWidget({super.key, required this.content});
+
+  @override
+  get isMarkdown => false;
+
+  @override
+  Widget build(BuildContext context) {
+    return content.widget;
+  }
+}
+
+class WidgetContent extends NoteContent {
+  final Widget widget;
+
+  WidgetContent(this.widget);
+
+  @override
+  String toString() {
+    return "WidgetNote('${widget.runtimeType}')";
+  }
+}
+
+class MarkdownContentExtension extends NoteContentExt {
   MarkdownContentExtension();
 
   @override
@@ -17,6 +124,18 @@ class MarkdownContentExtension extends NoteContentExtension {
       return WidgetContentWidget(content: data);
     }
     return null;
+  }
+}
+
+extension MarkdownCellExtension on NoteCell {
+  void markdown(String content) {
+    call(MarkdownContent(content));
+  }
+}
+
+extension MarkdownPenExtension on Pen {
+  void markdown(String content) {
+    call(MarkdownContent(content));
   }
 }
 

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 305,
+          end: 300,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # devtool )
         (
           cellType: 'body',
-          offset: 305,
-          end: 403,
+          offset: 300,
+          end: 398,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 403,
-          end: 405,
+          offset: 398,
+          end: 400,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9jb3JlLmRhcnQnOwoKaW1wb3J0ICdwYWNrYWdlOm5vdGVfYXBwL25vdGVfYXBwLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogImRldnRvb2wiLAogIGJ1aWxkZXI6IGJ1aWxkLAogIGxheW91dDogTGF5b3V0cy5kZWZhdWx0TGF5b3V0KGRlZmF1bHRDb2RlRXhwYW5kOiB0cnVlKSwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIGFzeW5jIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgZGV2dG9vbCAKCmZsdXR0ZXIg5byA5Y+R5qih5byP55qE6LCD6K+V5bel5YW3LCDnlKjkuo7mn6XnnIvnu4Tku7bmoJEsIOafpeeci+aXpeW/lywg5p+l55yL5oCn6IO9LCDmn6XnnIvlhoXlrZgsIOafpeeci+e9kee7nOivt+axguetieetiQogICcnJyk7Cn0K"
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCmltcG9ydCAncGFja2FnZTpub3RlX2FwcC9ub3RlX2FwcC5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJkZXZ0b29sIiwKICBidWlsZGVyOiBidWlsZCwKICBsYXlvdXQ6IExheW91dHMuZGVmYXVsdExheW91dChkZWZhdWx0Q29kZUV4cGFuZDogdHJ1ZSksCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSBhc3luYyB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIGRldnRvb2wgCgpmbHV0dGVyIOW8gOWPkeaooeW8j+eahOiwg+ivleW3peWFtywg55So5LqO5p+l55yL57uE5Lu25qCRLCDmn6XnnIvml6Xlv5csIOafpeeci+aAp+iDvSwg5p+l55yL5YaF5a2YLCDmn6XnnIvnvZHnu5zor7fmsYLnrYnnrYkKICAnJycpOwp9Cg=="
     );

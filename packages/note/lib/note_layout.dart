@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
+import 'package:note/src/content_builtin.dart';
 import 'package:note/src/flutter_highlight.dart';
 
 import 'sys.dart';

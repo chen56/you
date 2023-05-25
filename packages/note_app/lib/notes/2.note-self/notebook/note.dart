@@ -5,7 +5,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
-import 'package:note/note_core.dart';
+import 'package:note/note.dart';
 import 'package:note_app/note_app.dart';
 import 'package:mate_flutter/material.dart';
 
@@ -92,10 +92,10 @@ notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter
 """);
 
   print.$____________________________________________________________________();
-  // 形式1：
-  print(ObjectContent("hello"));
-  // 形式2：简化形式，自动转ObjectNote(object.toString())
   print("hello");
+  print(1);
+  print(true);
+  print(["a", "b", "c"]);
 
   print.$____________________________________________________________________();
   print.markdown("""
@@ -113,10 +113,6 @@ notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter
 """);
 
   print.$____________________________________________________________________();
-  // 形式1：
-  print(WidgetContent(
-      Container(width: 100, height: 100, color: Colors.deepPurple)));
-  // 形式2：简化形式，Widget 如果没有被识别为其他内容，就原本的显示出来
   print(Container(width: 100, height: 100, color: Colors.blue));
 
   print.$____________________________________________________________________();

@@ -95,7 +95,7 @@ import 'notes/zdraft/state/1.vanilla_state/note.g.dart' as notes_zdraft_state_va
 import 'notes/zdraft/state/note.g.dart' as notes_zdraft_state_g;
 import 'notes/zdraft/state/StatefulBuilder/note.g.dart' as notes_zdraft_state_StatefulBuilder_g;
 import 'notes/zdraft/web_optimization/note.g.dart' as notes_zdraft_web_optimization_g;
-import 'package:note/note_core.dart';
+import 'package:note/note.dart';
 
 abstract class BaseNotes {
   static final Note<void> rootroot = Note.root();

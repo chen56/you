@@ -154,7 +154,7 @@ class NoteGenerator {
       }))
       ..body.add(
         code.Code("""
-      import 'package:note/note_core.dart';
+      import 'package:note/note.dart';
       
       abstract class BaseNotes {
         static final Note<void> rootroot = Note.root();
@@ -559,7 +559,8 @@ class _FindMateSampleStatement extends GeneralizingAstVisitor {
 
   @override
   visitInstanceCreationExpression(InstanceCreationExpression node) {
-    if ("${node.constructorName.type.name}" == "MateSample") {
+    // todo careful , this api is change from name to name2, not check
+    if ("${node.constructorName.type.name2}" == "MateSample") {
       collect.add((nodeType: nodeType, node: _findFirstParentStatement(node)));
     }
     return super.visitInstanceCreationExpression(node);

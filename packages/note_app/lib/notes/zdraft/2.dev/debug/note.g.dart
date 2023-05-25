@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 205,
+          end: 200,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 打印组件树  )
         (
           cellType: 'body',
-          offset: 205,
-          end: 425,
+          offset: 200,
+          end: 420,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 425,
-          end: 427,
+          offset: 420,
+          end: 422,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9jb3JlLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogImRlYnVn55u45YWzIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIGFzeW5jIHsKICBwcmludC5tYXJrZG93bihyJycnCiMjIOaJk+WNsOe7hOS7tuagkSAKCmBgYGRhcnQKcHJpbnQoV2lkZ2V0SW5zcGVjdG9yU2VydmljZS5pbnN0YW5jZS5nZXRSb290V2lkZ2V0U3VtbWFyeVRyZWUoImdyb3VwTmFtZSIpKTsKCnByaW50KFdpZGdldHNCaW5kaW5nLmluc3RhbmNlLnJlbmRlclZpZXdFbGVtZW50Py50b0RpYWdub3N0aWNzTm9kZSgpLnRvU3RyaW5nRGVlcCgpKTsKYGBgCgogICcnJyk7Cn0K"
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJkZWJ1Z+ebuOWFsyIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSBhc3luYyB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIyDmiZPljbDnu4Tku7bmoJEgCgpgYGBkYXJ0CnByaW50KFdpZGdldEluc3BlY3RvclNlcnZpY2UuaW5zdGFuY2UuZ2V0Um9vdFdpZGdldFN1bW1hcnlUcmVlKCJncm91cE5hbWUiKSk7CgpwcmludChXaWRnZXRzQmluZGluZy5pbnN0YW5jZS5yZW5kZXJWaWV3RWxlbWVudD8udG9EaWFnbm9zdGljc05vZGUoKS50b1N0cmluZ0RlZXAoKSk7CmBgYAoKICAnJycpOwp9Cg=="
     );

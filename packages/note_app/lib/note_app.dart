@@ -4,7 +4,7 @@ import 'package:note/log.dart';
 import 'package:mate/mate_core.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/navigator_v2.dart';
-import 'package:note/note_core.dart';
+import 'package:note/note.dart';
 import 'package:note/note_layout.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';

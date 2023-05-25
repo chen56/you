@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:mate/mate_core.dart';
+import 'package:note/note.dart';
 import 'package:note/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/sys.dart';
@@ -9,7 +10,7 @@ import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page
 
-class MateContentExt extends NoteContentExtension {
+class MateContentExt extends NoteContentExt {
   final Editors editors;
 
   MateContentExt({required this.editors});
@@ -33,6 +34,18 @@ class MateContentExt extends NoteContentExtension {
       cell: arg.cell,
     );
   }
+}
+
+extension NoteSampleExt on Object {
+  static final _code = Expando<code.Expression>();
+
+  //todo 收缩sampleCode和sampleCodeStr为一个属性
+  code.Expression? get sampleCode => _code[this];
+
+  set sampleCode(code.Expression? v) => _code[this] = v;
+
+  set sampleCodeStr(String? v) =>
+      _code[this] = v == null ? null : code.CodeExpression(code.Code(v));
 }
 
 class MateSampleContent extends NoteContent {

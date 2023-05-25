@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 200,
+          end: 195,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r'''  # 布局  ## )
         (
           cellType: 'body',
-          offset: 200,
-          end: 541,
+          offset: 195,
+          end: 536,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 541,
-          end: 543,
+          offset: 536,
+          end: 538,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9jb3JlLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogImxheW91dOW4g+WxgCIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwoKIyDluIPlsYAKCiMjIOe6puadnwoKTGF5b3V0QnVpbGRlcgoKIyMg5by55oCn5biD5bGACgotIEZsZXggPGh0dHBzOi8vYXBpLmZsdXR0ZXItaW8uY24vZmx1dHRlci93aWRnZXRzL0ZsZXgtY2xhc3MuaHRtbD4KICAtIFJvdwogIC0gQ29sdW1uCgojIyDluIPlsYDmlYXpmpzlpITnkIbvvJpJbnRyaW5zaWNIZWlnaHQKUm93KAogICAgICAgIG1haW5BeGlzU2l6ZTogTWFpbkF4aXNTaXplLm1pbiwKICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgSW50cmluc2ljSGVpZ2h0KAogICAgICAgICAgICBjaGlsZDogbmF2aWdhdGlvblJhaWwsCiAgICAgICAgICApCiAgICAgICAgXSwKICAgICAgKQoKICAnJycpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJsYXlvdXTluIPlsYAiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKCiMg5biD5bGACgojIyDnuqbmnZ8KCkxheW91dEJ1aWxkZXIKCiMjIOW8ueaAp+W4g+WxgAoKLSBGbGV4IDxodHRwczovL2FwaS5mbHV0dGVyLWlvLmNuL2ZsdXR0ZXIvd2lkZ2V0cy9GbGV4LWNsYXNzLmh0bWw+CiAgLSBSb3cKICAtIENvbHVtbgoKIyMg5biD5bGA5pWF6Zqc5aSE55CG77yaSW50cmluc2ljSGVpZ2h0ClJvdygKICAgICAgICBtYWluQXhpc1NpemU6IE1haW5BeGlzU2l6ZS5taW4sCiAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgIEludHJpbnNpY0hlaWdodCgKICAgICAgICAgICAgY2hpbGQ6IG5hdmlnYXRpb25SYWlsLAogICAgICAgICAgKQogICAgICAgIF0sCiAgICAgICkKCiAgJycnKTsKfQo="
     );
