@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/animated_size.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/scheduler/ticker.dart' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;

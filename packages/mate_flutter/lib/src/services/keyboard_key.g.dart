@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 
 /// class LogicalKeyboardKey extends KeyboardKey
 class LogicalKeyboardKey$Mate extends _i1.LogicalKeyboardKey with _i2.Mate {

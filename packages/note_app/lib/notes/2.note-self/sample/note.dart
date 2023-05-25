@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/mate_note.dart';
+import 'package:mate/mate_note.dart';
 import 'package:note/note_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:mate_flutter/material.dart';

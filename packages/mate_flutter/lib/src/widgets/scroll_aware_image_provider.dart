@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scroll_aware_image_provider.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/disposable_build_context.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/image_provider.dart' as _i5;

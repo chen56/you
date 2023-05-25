@@ -2,7 +2,7 @@ import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/src/buildin_editors.dart';
+import 'package:mate/buildin_editors.dart';
 import 'package:note/utils.dart' as utils;
 
 final defaultEmitter =
@@ -338,7 +338,7 @@ class ObjectParam extends Param {
           builder: builder,
           //根对象
           builderRefer:
-              code.refer("ObjectParam", "package:note/mate_core.dart"),
+              code.refer("ObjectParam", "package:mate/mate_core.dart"),
           editors: editors,
         );
 

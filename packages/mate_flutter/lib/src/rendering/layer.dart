@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/rendering/layer.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/animation.dart' as _i4;
 import 'package:vector_math/vector_math_64.dart' as _i5;

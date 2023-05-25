@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:note/mate_core.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
@@ -16,14 +15,12 @@ class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final Note<T> current;
   final Note tree;
   final bool defaultCodeExpand;
-  final Editors editors;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
     required this.tree,
     required this.current,
-    required this.editors,
     this.defaultCodeExpand = false,
   });
 
@@ -60,7 +57,6 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
-          editors: widget.editors,
           contentFactory: widget.noteSystem.contentFactory,
         );
 
@@ -334,7 +330,6 @@ class _OutlineView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
-  final Editors editors;
   final NoteContentFactory contentFactory;
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
@@ -342,7 +337,6 @@ class _NoteCellView extends StatelessWidget {
     // ignore: unused_element
     super.key,
     required this.outline,
-    required this.editors,
     required this.contentFactory,
   });
 

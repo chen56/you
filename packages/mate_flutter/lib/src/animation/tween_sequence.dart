@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/animation/tween_sequence.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/animation/tween.dart' as _i3;
 
 /// class TweenSequence<T> extends Animatable<T>

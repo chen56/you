@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/gestures/gesture_settings.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 
 /// class DeviceGestureSettings
 class DeviceGestureSettings$Mate extends _i1.DeviceGestureSettings

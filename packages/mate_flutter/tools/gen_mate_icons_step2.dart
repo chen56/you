@@ -2,7 +2,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
-import 'package:note/mate_core.dart';
+import 'package:mate/mate_core.dart';
 import 'package:mate_flutter/mate_icons.g.dart';
 import "package:path/path.dart" as path;
 import 'package:note/env.dart';

@@ -2,7 +2,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/asset_bundle.dart' as _i1;
-import 'package:note/mate_core.dart' as _i2;
+import 'package:mate/mate_core.dart' as _i2;
 
 /// class NetworkAssetBundle extends AssetBundle
 class NetworkAssetBundle$Mate extends _i1.NetworkAssetBundle with _i2.Mate {

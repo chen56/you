@@ -1,8 +1,8 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
 import 'package:note/log.dart';
-import 'package:note/mate_core.dart';
-import 'package:note/mate_note.dart';
+import 'package:mate/mate_core.dart';
+import 'package:mate/mate_note.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/note_layout.dart';
@@ -158,7 +158,6 @@ class Layouts {
           noteSystem: noteSystem,
           current: note as Note<T>,
           tree: BaseNotes.rootroot,
-          editors: editors,
           defaultCodeExpand: defaultCodeExpand,
         );
   }

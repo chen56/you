@@ -3,7 +3,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i1;
 import 'package:flutter/src/widgets/shortcuts.dart' as _i2;
-import 'package:note/mate_core.dart' as _i3;
+import 'package:mate/mate_core.dart' as _i3;
 import 'package:flutter/src/widgets/actions.dart' as _i4;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i5;
 import 'package:flutter/foundation.dart' as _i6;

@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:note/mate_core.dart';
+import 'package:mate/mate_core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mate_flutter/material.dart';
 
