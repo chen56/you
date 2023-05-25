@@ -9,7 +9,33 @@ import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page
 
-class MateSample extends NoteContent {
+class MateContentExt extends NoteContentExtension {
+  final Editors editors;
+
+  MateContentExt({required this.editors});
+
+  @override
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    late MateSampleContent content;
+    if (data is MateSampleContent) {
+      content = data;
+    } else if (data is Mate) {
+      content = MateSampleContent(data);
+    } else {
+      return null;
+    }
+
+    return MateSampleWidget(
+      content: content,
+      rootParam: content.mate.toRootParam(editors: editors),
+      editors: editors,
+      title: "展开代码(手机上暂时无法编辑文本、数字参数)",
+      cell: arg.cell,
+    );
+  }
+}
+
+class MateSampleContent extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
@@ -18,7 +44,7 @@ class MateSample extends NoteContent {
   /// if true , we will return : cell code + mate gen code
   /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
   // final bool isUseCellCodeAsTemplate;
-  MateSample(
+  MateSampleContent(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -125,11 +151,11 @@ class SampleTemplate {
   }
 }
 
-class MateSampleWidget extends StatelessWidget {
+class MateSampleWidget extends StatelessWidget with NoteWidgetMinin {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final MateSample content;
+  final MateSampleContent content;
   final NoteCell cell;
   const MateSampleWidget({
     // ignore: unused_element
@@ -145,7 +171,7 @@ class MateSampleWidget extends StatelessWidget {
     required BuildContext context,
     required Widget paramView,
     required Widget codeView,
-    required MateSample content,
+    required MateSampleContent content,
   }) {
     WindowClass win = WindowClass.of(context);
 
@@ -271,4 +297,7 @@ class MateSampleWidget extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  get isMarkdown => true;
 }

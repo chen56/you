@@ -36,7 +36,7 @@ build(BuildContext context, Pen print) {
   };
   for (var entry in sampleIcons.entries) {
     var (name, iconData) = (entry.key, entry.value);
-    print(MateSample(Row$Mate(
+    print(MateSampleContent(Row$Mate(
       children: [
         Icon$Mate(iconData, size: 24, color: Colors.blue),
         Text$Mate("Icons.$name"),

@@ -27,7 +27,7 @@ ButtonStyleButton 相关子类
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Wrap$Mate(children: [
+  print(MateSampleContent(Wrap$Mate(children: [
     ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ])));
 

@@ -57,14 +57,15 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
-          contentFactory: widget.noteSystem.contentFactory,
+          contentExtensions: widget.noteSystem.contentExtensions,
         );
 
     Pen pen = Pen.build(
       context,
       widget.current,
-      contentFactory: widget.noteSystem.contentFactory,
+      contentFactory: widget.noteSystem.contentExtensions,
       defaultCodeExpand: widget.defaultCodeExpand,
+      outline: outline,
     );
     return (
       cells: pen.cells.map((cell) => newCellView(cell)).toList(),
@@ -330,14 +331,14 @@ class _OutlineView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
-  final NoteContentFactory contentFactory;
+  final NoteContentExtensions contentExtensions;
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
     this.cell, {
     // ignore: unused_element
     super.key,
     required this.outline,
-    required this.contentFactory,
+    required this.contentExtensions,
   });
 
   @override
@@ -363,9 +364,6 @@ class _NoteCellView extends StatelessWidget {
     var cellView = ListenableBuilder(
       listenable: cell,
       builder: (context, child) {
-        Iterable<Widget> contentWidgets = cell.contents.map((e) =>
-            contentFactory.build(
-                context, e, ContentArg(cell: cell, outline: outline)));
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {
@@ -414,7 +412,7 @@ class _NoteCellView extends StatelessWidget {
                   children: [
                     if (cell.source.isCodeNotEmpty && cell.codeExpand)
                       codeViewFillWidth,
-                    ...contentWidgets,
+                    ...cell.contents,
                     _cellSplitBlock,
                   ],
                 ),

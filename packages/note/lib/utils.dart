@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
 
+// todo 这么多utils是咋回事，要删一下
 /// result = Sub is Super
 bool isType<Sub, Super>() {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;

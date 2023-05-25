@@ -21,7 +21,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Wrap$Mate(children: [
+  print(MateSampleContent(Wrap$Mate(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ])));
 }

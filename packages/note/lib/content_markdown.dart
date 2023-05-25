@@ -4,10 +4,36 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:note/note_core.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
+import 'package:note/utils_core.dart';
 
-class MarkdownContentWidget extends StatelessWidget {
-  final Outline outline;
+class MarkdownContentExtension extends NoteContentExtension {
+  MarkdownContentExtension();
+
+  @override
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    if (data is MarkdownContent) {
+      return MarkdownContentWidget(outline: arg.outline, content: data);
+    } else if (data is WidgetContent) {
+      return WidgetContentWidget(content: data);
+    }
+    return null;
+  }
+}
+
+class MarkdownContent extends NoteContent {
   final String content;
+
+  MarkdownContent(this.content);
+
+  @override
+  String toString() {
+    return "MarkdownContent('${content.replaceAll("\n", "\\n").safeSubstring(0, 50)}')";
+  }
+}
+
+class MarkdownContentWidget extends StatelessWidget with NoteWidgetMinin {
+  final Outline outline;
+  final MarkdownContent content;
   final ScrollController controller = ScrollController();
 
   MarkdownContentWidget(
@@ -17,7 +43,7 @@ class MarkdownContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var headerBuilder = _HeaderBuilder(outline);
     return Markdown(
-      data: content,
+      data: content.content,
       selectable: true,
       // 得研究下controller层层嵌套要怎么用
       controller: controller,
@@ -35,6 +61,9 @@ class MarkdownContentWidget extends StatelessWidget {
       },
     );
   }
+
+  @override
+  get isMarkdown => true;
 }
 
 class _HeaderBuilder extends MarkdownElementBuilder {

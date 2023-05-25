@@ -104,10 +104,7 @@ notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter
 如果一个cell里全都是MarkdownContent，默认代码是折叠的，点下左边小箭头，可以展开代码
 """);
   print.$____________________________________________________________________();
-  // 形式1：
-  print(MarkdownContent("""hello 形式1"""));
-  // 形式2：简化形式
-  print.markdown("""hello 形式2""");
+  print.markdown("""hello markdown  """);
 
   print.$____________________________________________________________________();
   print.markdown("""
@@ -133,7 +130,7 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 
   print.$____________________________________________________________________();
   // 形式1：
-  print(MateSample(
+  print(MateSampleContent(
       Container$Mate(width: 100, height: 100, color: Colors.deepPurple)));
   // 形式2：简化形式，Mate类型的Widget通通认为是范例
   print(Container$Mate(width: 100, height: 100, color: Colors.deepPurple));

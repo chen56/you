@@ -2,6 +2,7 @@
 
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
+import 'package:note/content_markdown.dart';
 import 'package:note/utils.dart';
 import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;
@@ -23,7 +24,7 @@ typedef NoteSourceData = ({
         int statementCount
       })> cells,
   String encodedCode,
-  // NoteConfPart meta
+// NoteConfPart meta
 });
 
 NoteSourceData _emptyPageGenInfo = (
@@ -37,18 +38,20 @@ NoteSourceData _emptyPageGenInfo = (
     )
   ],
   encodedCode: "",
-  // meta: NoteConfPart.empty(),
+// meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
-  final NoteContentFactory contentFactory;
-  NoteSystem({required this.contentFactory});
+  final NoteContentExtensions contentExtensions;
+
+  NoteSystem({required this.contentExtensions});
 }
 
 /// 可序列化的config 数据
 class NoteConf {
   final String shortTitle;
+
   NoteConf({required this.shortTitle});
 }
 
@@ -66,6 +69,7 @@ class NoteConfPart<T> {
   final NotePageBuilder builder;
   late final Layout? layout;
   final bool empty;
+
   NoteConfPart({
     required this.shortTitle,
     required this.builder,
@@ -80,6 +84,7 @@ class NoteConfPart<T> {
           shortTitle: shortTitle,
           builder: (context, print) {},
         );
+
   NoteConfPart.notEmpty({String shortTitle = ""})
       : this(
           empty: false,
@@ -292,7 +297,7 @@ class Note<T> {
 ///
 
 class Pen {
-  final NoteContentFactory contentFactory;
+  final NoteContentExtensions contentFactory;
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -301,7 +306,7 @@ class Pen {
   // NoteCell _currentCell = NoteCell(index: 0);
   late final List<NoteCell> cells;
   late NoteCell currentCell;
-
+  final Outline outline;
   final Note path;
   final bool defaultCodeExpand;
 
@@ -311,6 +316,7 @@ class Pen {
     this.path, {
     required this.contentFactory,
     required this.defaultCodeExpand,
+    required this.outline,
   }) {
     assert(path.source._pageGenInfo.cells.isNotEmpty,
         "page cells should not be empty");
@@ -318,7 +324,7 @@ class Pen {
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
-        contentFactory: contentFactory,
+        contentExtensions: contentFactory,
         pen: this,
         index: i,
         pageSource: path.source,
@@ -366,19 +372,41 @@ class Pen {
     callback(currentCell);
   }
 
-  // 法宝cell find
-  // String catchStack() {
-  //   try {
-  //     throw Exception("eeeeee");
-  //   } catch (es, stack) {
-  //     return "$es : $stack";
-  //   }
-  // }
+// 法宝cell find
+// String catchStack() {
+//   try {
+//     throw Exception("eeeeee");
+//   } catch (es, stack) {
+//     return "$es : $stack";
+//   }
+// }
 }
 
-abstract class NoteContentFactory {
-  NoteContent create(Object? data);
-  Widget build(BuildContext context, NoteContent content, ContentArg arg);
+class NoteContentExtensions {
+  final List<NoteContentExtension> contentExtensions;
+
+  NoteContentExtensions.ext(List<NoteContentExtension> contentExtensions)
+      : contentExtensions = [
+          ...contentExtensions,
+          MarkdownContentExtension(),
+          WidgetContentExtension(),
+          ObjectContentExtension(),
+        ];
+
+  NoteWidgetMinin create(Object? data, ContentArg arg) {
+    for (var ext in contentExtensions) {
+      var w = ext.create(data, arg);
+      if (w != null) {
+        return w;
+      }
+    }
+    throw Exception(
+        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
+  }
+}
+
+abstract class NoteContentExtension {
+  NoteWidgetMinin? create(Object? data, ContentArg arg);
 }
 
 /// note content is not widget , it is data.
@@ -387,17 +415,16 @@ abstract class NoteContent {}
 class ContentArg {
   final NoteCell cell;
   final Outline outline;
+
   ContentArg({required this.cell, required this.outline});
 }
 
-class MarkdownContent extends NoteContent {
-  final String content;
-
-  MarkdownContent(this.content);
+class ObjectContentExtension extends NoteContentExtension {
+  ObjectContentExtension();
 
   @override
-  String toString() {
-    return "MarkdownContent('${content.replaceAll("\n", "\\n").safeSubstring(0, 50)}')";
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    return ObjectContentWidget(content: ObjectContent(data));
   }
 }
 
@@ -409,6 +436,48 @@ class ObjectContent extends NoteContent {
   @override
   String toString() {
     return "ObjectNote('${object?.toString()}')";
+  }
+}
+
+class ObjectContentWidget extends StatelessWidget with NoteWidgetMinin {
+  final ObjectContent content;
+
+  const ObjectContentWidget({super.key, required this.content});
+
+  @override
+  get isMarkdown => false;
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectableText("${content.object}");
+  }
+}
+
+class WidgetContentExtension extends NoteContentExtension {
+  WidgetContentExtension();
+
+  @override
+  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+    if (data is Widget) {
+      return WidgetContentWidget(content: WidgetContent(data));
+    } else if (data is WidgetContent) {
+      return WidgetContentWidget(content: data);
+    }
+    return null;
+  }
+}
+
+class WidgetContentWidget extends StatelessWidget with NoteWidgetMinin {
+  final WidgetContent content;
+
+  const WidgetContentWidget({super.key, required this.content});
+
+  @override
+  get isMarkdown => false;
+
+  @override
+  Widget build(BuildContext context) {
+    return content.widget;
   }
 }
 
@@ -529,6 +598,7 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 class NoteSource {
   late final String code;
   final NoteSourceData _pageGenInfo;
+
   NoteSource({required NoteSourceData pageGenInfo})
       : _pageGenInfo = pageGenInfo {
     var decoded = base64.decode(pageGenInfo.encodedCode);
@@ -547,6 +617,7 @@ class NoteSource {
 class CodeEntity {
   final int offset;
   final int end;
+
   CodeEntity({required this.offset, required this.end});
 
   int get length => end - offset;
@@ -598,6 +669,7 @@ class SpecialSource {
   final CodeEntity codeEntity;
   final NoteCell cell;
   final NoteSource pageSource;
+
   SpecialSource({
     required this.codeType,
     required this.codeEntity,
@@ -627,24 +699,28 @@ enum CellType {
   }
 }
 
-/// todo cell内函数太乱，待整理重构
+mixin NoteWidgetMinin on Widget {
+  get isMarkdown;
+}
+
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final NoteContentFactory contentFactory;
-  final List<NoteContent> _contents = List.empty(growable: true);
+  final NoteContentExtensions contentExtensions;
+  final List<NoteWidgetMinin> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
   final Pen pen;
   late final CellSource source;
+  final Outline outline;
 
   NoteCell({
-    required this.contentFactory,
+    required this.contentExtensions,
     required this.pen,
     required this.index,
     required NoteSource pageSource,
-  }) {
+  }) : outline = pen.outline {
     var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
       codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
@@ -661,7 +737,7 @@ class NoteCell extends ChangeNotifier {
     );
   }
 
-  List<NoteContent> get contents => List.unmodifiable(_contents);
+  List<NoteWidgetMinin> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -673,29 +749,27 @@ class NoteCell extends ChangeNotifier {
     call(object);
   }
 
-  void clear() {
-    _contents.clear();
-  }
-
   void markdown(String content) {
     call(MarkdownContent(content));
   }
 
   bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
-    return _contents.every((e) => e is MarkdownContent);
+    return _contents.every((e) => e.isMarkdown);
   }
 
   void call(Object? object) {
-    _add(contentFactory.create(object));
+    _add(contentExtensions.create(
+        object, ContentArg(cell: this, outline: outline)));
   }
 
-  void _add(NoteContent content) {
+  void _add(NoteWidgetMinin content) {
     _contents.add(content);
     notifyListeners();
   }
 
   bool? _codeExpand;
+
   // show == expand
   bool get codeExpand {
     if (source.isCodeEmpty) return false;
@@ -724,9 +798,12 @@ class NoteCell extends ChangeNotifier {
 
 extension NoteSampleExt on Object {
   static final _code = Expando<code.Expression>();
+
   //todo 收缩sampleCode和sampleCodeStr为一个属性
   code.Expression? get sampleCode => _code[this];
+
   set sampleCode(code.Expression? v) => _code[this] = v;
+
   set sampleCodeStr(String? v) =>
       _code[this] = v == null ? null : code.CodeExpression(code.Code(v));
 }

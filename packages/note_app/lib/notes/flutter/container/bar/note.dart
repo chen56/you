@@ -20,7 +20,7 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(AppBar$Mate(
+  print(MateSampleContent(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     // todo 这种缺省值是不是可以搞掉，范例中根本不用，但因为有默认值，所以自动会出现
@@ -59,7 +59,7 @@ build(BuildContext context, Pen print) {
   //
 
   print.$____________________________________________________________________();
-  print(MateSample(BottomAppBar$Mate(
+  print(MateSampleContent(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <Widget>[
@@ -103,7 +103,7 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Column$Mate(
+  print(MateSampleContent(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -156,7 +156,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     );
   }
 
-  print(MateSample(StatefulBuilder$Mate(
+  print(MateSampleContent(StatefulBuilder$Mate(
     builder: buildNavigationBar..sampleCode = refer("buildNavigationBar"),
   )));
 
@@ -174,7 +174,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 
   print.$____________________________________________________________________();
 
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       Container$Mate(
         height: 300,
@@ -233,7 +233,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(DefaultTabController$Mate(
+  print(MateSampleContent(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <Widget>[
@@ -259,7 +259,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(DefaultTabController$Mate(
+  print(MateSampleContent(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -333,7 +333,7 @@ DefaultTabController
     );
   }
 
-  print(MateSample(SizedBox$Mate(
+  print(MateSampleContent(SizedBox$Mate(
     height: 100,
     child: FilledButton(
       onPressed: onPressed..sampleCode = refer("onPressed"),
@@ -353,7 +353,7 @@ DefaultTabController
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     width: 600,
     color: Colors.lime.shade50,
     child: ButtonBar$Mate(
@@ -380,7 +380,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     width: 300,
     child: Column$Mate(
       children: [
@@ -434,7 +434,7 @@ MenuBar相关组件：
     );
   }
 
-  print(MateSample(MenuBar$Mate(
+  print(MateSampleContent(MenuBar$Mate(
     children: [
       MenuItemButton$Mate(
         onPressed: () {}..sampleCodeStr = "(){}",

@@ -7,7 +7,6 @@ import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/note_layout.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
-import 'package:note/pen_markdown.dart';
 import 'package:note_app/note_app.deferred.g.dart';
 import 'package:note/note_dev.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -104,43 +103,6 @@ class DeferredScreen extends StatelessWidget with Screen {
   String get location => note.path;
 }
 
-class AppContentFactory extends NoteContentFactory {
-  final Editors editors;
-
-  AppContentFactory({required this.editors});
-
-  @override
-  Widget build(BuildContext context, NoteContent e, ContentArg arg) {
-    if (e is MarkdownContent) {
-      return MarkdownContentWidget(outline: arg.outline, content: e.content);
-    }
-    if (e is WidgetContent) {
-      return e.widget;
-    }
-    if (e is MateSample) {
-      return MateSampleWidget(
-        content: e,
-        rootParam: e.mate.toRootParam(editors: editors),
-        editors: editors,
-        title: "展开代码(手机上暂时无法编辑文本、数字参数)",
-        cell: arg.cell,
-      );
-    }
-    if (e is ObjectContent) {
-      return SelectableText("${e.object}");
-    }
-    throw UnimplementedError("NoteContent not implemented : $e");
-  }
-
-  @override
-  NoteContent create(Object? data) {
-    if (data is NoteContent) return data;
-    if (data is Mate) return MateSample(data);
-    if (data is Widget) return WidgetContent(data);
-    return ObjectContent(data);
-  }
-}
-
 @immutable
 class Layouts {
   static Editors editors = Editors(
@@ -148,7 +110,8 @@ class Layouts {
     // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
   );
   static NoteSystem get noteSystem => NoteSystem(
-        contentFactory: AppContentFactory(editors: editors),
+        contentExtensions:
+            NoteContentExtensions.ext([MateContentExt(editors: editors)]),
       );
 
   static Layout defaultLayout<T>({

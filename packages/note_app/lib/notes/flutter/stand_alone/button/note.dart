@@ -24,7 +24,7 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Wrap$Mate(
+  print(MateSampleContent(Wrap$Mate(
     children: [
       ElevatedButton$Mate(
           onPressed: () {}..sampleCodeStr = "(){}",
@@ -52,7 +52,7 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       IconButton$Mate(
           onPressed: () {}..sampleCodeStr = "(){}",
@@ -79,7 +79,7 @@ the Material Design button types and how they should be used in designs.
   print.$____________________________________________________________________();
   int id = 0;
 
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       FloatingActionButton$Mate(
         onPressed: () {}..sampleCodeStr = "(){}",
@@ -123,7 +123,7 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       BackButton$Mate(),
       CloseButton$Mate(),
@@ -143,7 +143,7 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       ToggleButtons$Mate(
         onPressed: (_) {}..sampleCodeStr = "(_){}",
@@ -169,7 +169,7 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       SegmentedButton$Mate<String>(
         multiSelectionEnabled: true,
@@ -238,7 +238,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Column$Mate(
+  print(MateSampleContent(Column$Mate(
     children: [
       Text$Mate("1.普通Text"),
       InkWell$Mate(
@@ -260,7 +260,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     width: 600,
     color: Colors.lime.shade50,
     child: ButtonBar$Mate(

@@ -37,7 +37,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     height: 100,
     child: Text$Mate("请修改height,调节高度"),
   )));
@@ -48,7 +48,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Text$Mate("我是Text.data,修改我")));
+  print(MateSampleContent(Text$Mate("我是Text.data,修改我")));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -58,7 +58,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
@@ -79,7 +79,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Container$Mate(
+  print(MateSampleContent(Container$Mate(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
@@ -94,7 +94,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       Container$Mate(
@@ -132,7 +132,7 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   // 包含MateSample调用的语句会被范例代码擦除
   print(
-    MateSample(
+    MateSampleContent(
       ElevatedButton$Mate(
           onPressed: showAbout..sampleCode = refer("showAbout"),
           child: Text$Mate("Button1")),
@@ -147,7 +147,7 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   print.$____________________________________________________________________();
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    print(MateSample(Row$Mate(
+    print(MateSampleContent(Row$Mate(
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton$Mate(

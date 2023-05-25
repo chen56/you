@@ -39,7 +39,7 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSample(
+    MateSampleContent(
       Row$Mate(
         children: <Widget>[
           ...List.generate(3, (index) {
@@ -64,7 +64,7 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSample(
+    MateSampleContent(
       Row$Mate(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -91,7 +91,7 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSample(Column$Mate(
+  print(MateSampleContent(Column$Mate(
     children: [
       Text$Mate("1.普通Text,点我"),
       InkResponse$Mate(
