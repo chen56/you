@@ -720,6 +720,11 @@ Samples:
 EOF
   )"
 
+init() {
+  run git lfs install
+  note_app flutter create --platforms=macos .
+}
+
   # default run
 _root() {
   _run get
@@ -763,6 +768,25 @@ bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> run al
 function test() {
   ./test/bake2_test.bash test
   _run all flutter test
+}
+
+run() {
+  # only work on macos
+  # shellcheck disable=SC2155
+  local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+  note_app flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
+}
+build() {
+  note_app flutter build web -v  \
+    --release --tree-shake-icons \
+    --web-renderer html "$@"
+}
+preview() {
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+  #    /build "$@"
+  build "$@"
+  # 	npx http-server ./app_note/build/web --port 8000
+  run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000 -g --brotli
 }
 
 ####################################################

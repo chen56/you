@@ -165,18 +165,18 @@ option() {
 #echo 临时退出 && exit 1
 
 # 项目init
-/init?() {
-  /init?shortHelp() { cat <<<"初始化项目工具"; }
-  /init() {
-    run git lfs install
-    (
-      cd "note_app"
-      # 增加平台支持到现存项目
-      # https://docs.flutter.dev/development/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app
-      run flutter create --platforms=macos .
-    )
-  }
-}
+#/init?() {
+#  /init?shortHelp() { cat <<<"初始化项目工具"; }
+#  /init() {
+#    run git lfs install
+#    (
+#      cd "note_app"
+#      # 增加平台支持到现存项目
+#      # https://docs.flutter.dev/development/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app
+#      run flutter create --platforms=macos .
+#    )
+#  }
+#}
 
 # 项目init
 #/get?() {
@@ -201,20 +201,20 @@ option() {
 
 # after Flutter 3.10.0-1.1.pre , records、patterns is now enabled by default;
 #enable_experiment="--enable-experiment=records,patterns"
-/build?() {
-  /build?shortHelp() { cat <<<"生产build"; }
-  /build() {
-    # web-renderer=canvaskit 太大了十几MB,所以要用html版
-    # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
-    #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    (
-      cd packages/note_app
-      run flutter build web -v  \
-        --release --tree-shake-icons \
-        --web-renderer html "$@"
-    )
-  }
-}
+#/build?() {
+#  /build?shortHelp() { cat <<<"生产build"; }
+#  /build() {
+#    # web-renderer=canvaskit 太大了十几MB,所以要用html版
+#    # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
+#    #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
+#    (
+#      cd packages/note_app
+#      run flutter build web -v  \
+#        --release --tree-shake-icons \
+#        --web-renderer html "$@"
+#    )
+#  }
+#}
 
 #/test?() {
 #  /test?shortHelp() { cat <<<"test"; }
@@ -223,16 +223,16 @@ option() {
 #  }
 #}
 
-/preview?() {
-  /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
-  /preview() {
-    #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-    #    /build "$@"
-    /build "$@"
-    # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000 -g --brotli
-  }
-}
+#/preview?() {
+#  /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
+#  /preview() {
+#    #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    #    /build "$@"
+#    /build "$@"
+#    # 	npx http-server ./app_note/build/web --port 8000
+#    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000 -g --brotli
+#  }
+#}
 
 /preview_macos?() {
   /preview_macos?shortHelp() { cat <<<"预览preview_macos版"; }
