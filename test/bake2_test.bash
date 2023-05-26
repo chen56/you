@@ -21,7 +21,7 @@ TEST_PATH="$(_readlink "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 
-source "$TEST_DIR/../bake2"
+source "$TEST_DIR/../bake"
 
 
 bake.assert.fail() {

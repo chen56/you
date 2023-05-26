@@ -172,13 +172,13 @@ function _self()(
   echo '## _cmdTree'
   echo
   for key in "${!_cmdTree[@]}"; do
-    printf "cmd  - %-40s = %q\n"  "$key" "${_cmdTree[$key]:0:100}"
+    printf "cmd  - %-40s = %q\n"  "$key" "${_cmdTree["$key"]:0:100}"
   done | sort
   echo
   echo '## _data'
   echo
   for key in "${!_data[@]}"; do
-    printf "data - %-40s = %q\n"  "$key" "${_data[$key]:0:100}"
+    printf "data - %-40s = %q\n"  "$key" "${_data["$key"]:0:100}"
   done | sort
 )
 
@@ -369,7 +369,7 @@ function bake.opt.cmd_chain_opts(){
 
   local key
   for key in "${!_data[@]}"; do
-    if [[ "${_data[$key]}" != "type:opt" ]]; then continue ; fi
+    if [[ "${_data["$key"]}" != "type:opt" ]]; then continue ; fi
     local upCmd
     for upCmd in "${upCmds[@]}"; do
       if [[ "$key" == "$upCmd/opts/"* ]]; then
@@ -383,13 +383,13 @@ function bake.opt.cmd_chain_opts(){
 # because "bake.opt.set" is meta function, use this func to add self
 bake.opt._internal_add(){
   local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" help="$7"
-  _data[$cmd/opts/$opt]="type:opt"
-  _data[$cmd/opts/$opt/name]="$opt"
-  _data[$cmd/opts/$opt/type]="$type"
-  _data[$cmd/opts/$opt/required]="$required"
-  _data[$cmd/opts/$opt/abbr]="$abbr"
-  _data[$cmd/opts/$opt/default]="$default"
-  _data[$cmd/opts/$opt/optHelp]="$optHelp"
+  _data["$cmd/opts/$opt"]="type:opt"
+  _data["$cmd/opts/$opt/name"]="$opt"
+  _data["$cmd/opts/$opt/type"]="$type"
+  _data["$cmd/opts/$opt/required"]="$required"
+  _data["$cmd/opts/$opt/abbr"]="$abbr"
+  _data["$cmd/opts/$opt/default"]="$default"
+  _data["$cmd/opts/$opt/optHelp"]="$optHelp"
 }
 bake.opt._internal_add bake.opt.set "cmd"      "string"  "true"  ""      ""       "cmd name"
 bake.opt._internal_add bake.opt.set "name"     "string"  "true"  ""      ""       "option name"
@@ -443,15 +443,15 @@ function bake.opt.parse() {
     # while all args , until it is not opt
     while (( $# > 0 )); do
       # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
-      local optPath; optPath=${allOptOnCmdChain[$1]}
+      local optPath; optPath=${allOptOnCmdChain["$1"]}
       # if next arg not a opt , parsing complete;
       if [[ "${optPath}" == "" ]] ; then break;  fi
 
       # _opt_value_ prefix : avoid conflicts in the current context
       optVars["$optPath"]="_opt_value_$(bake.path.basename "$optPath")"
-      declare "${optVars[$optPath]}"
+      declare "${optVars["$optPath"]}"
       # reference to the current dynamic  opt variable
-      declare -n currentOptValue=${optVars[$optPath]};
+      declare -n currentOptValue=${optVars["$optPath"]};
 
       local optType; optType=${_data["$optPath/type"]}
       case $optType in
@@ -469,7 +469,7 @@ function bake.opt.parse() {
 
     local resultStr;
     for optPath in "${!optVars[@]}";do
-      local declareStr; declareStr=$(declare -p "${optVars[$optPath]}")
+      local declareStr; declareStr=$(declare -p "${optVars["$optPath"]}")
       resultStr+="${declareStr/#*_opt_value_/declare };\n"
     done
     resultStr+="declare optShift=$(( totalArgs - $# ));\n"
@@ -488,9 +488,9 @@ function bake.cmd.set(){
     echo "error: bake.cmd.set [--cmd] required " >&2 && return 1 ;
   fi
 #  bake.opt.parse "${FUNCNAME[0]}" "$@" >&2
-  _data[$cmd/usage]="$usage"
-  _data[$cmd/summary]="$summary"
-  _data[$cmd/description]="$description"
+  _data["$cmd/usage"]="$usage"
+  _data["$cmd/summary"]="$summary"
+  _data["$cmd/description"]="$description"
 }
 
 # Usage: bake.cmd.register
@@ -522,7 +522,7 @@ function bake.help()(
   local cmd="$1"; shift
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
 
-  local usage; usage="${_data[${cmd}/usage]}"
+  local usage; usage="${_data["${cmd}/usage"]}"
   if [[ "$usage" != "" ]]; then
     echo -e "\nUsage:  $usage "
   else
@@ -535,10 +535,10 @@ function bake.help()(
 
   echo
 
-  if [[ "${_data[${cmd}/description]}" != "" ]]; then
-     echo "Description: ${_data[${cmd}/description]}"
+  if [[ "${_data["${cmd}/description"]}" != "" ]]; then
+     echo "Description: ${_data["${cmd}/description"]}"
   elif [[ "${_data[${cmd}/summary]}" != "" ]]; then
-     echo "Description: ${_data[${cmd}/summary]}"
+     echo "Description: ${_data["${cmd}/summary"]}"
   else
      echo "no description"
   fi
@@ -548,12 +548,12 @@ function bake.help()(
   echo "Available Options:"
   for optPath in $(bake.opt.cmd_chain_opts "$cmd"); do
     local opt; opt=$(bake.path.basename "$optPath")
-    local name; name=${_data[$optPath/name]}
-    local type; type=${_data[$optPath/type]}
-    local required; required=${_data[$optPath/required]}
-    local abbr; abbr=${_data[$optPath/abbr]}
-    local default; default=${_data[$optPath/default]}
-    local optHelp; optHelp="${_data[$optPath/optHelp]}"
+    local name; name=${_data["$optPath/name"]}
+    local type; type=${_data["$optPath/type"]}
+    local required; required=${_data["$optPath/required"]}
+    local abbr; abbr=${_data["$optPath/abbr"]}
+    local default; default=${_data["$optPath/default"]}
+    local optHelp; optHelp="${_data["$optPath/optHelp"]}"
 
     local optArg=""
     if [[ "$type" == "string" ]] ;then
@@ -589,8 +589,8 @@ Available Commands:"
 
     # 第二行开始，都补空格
     local summary usage
-    summary="${_data[$subCmd/summary]}"
-    usage="${_data[$subCmd/usage]}"
+    summary="${_data["$subCmd/summary"]}"
+    usage="${_data["$subCmd/usage"]}"
     if [[ "$usage" != "" ]];then
       [[ "$summary" == "" ]] && summary="Usage: $usage" || summary+="\nUsage: $usage"
     fi
@@ -616,7 +616,7 @@ function bake.go() {
     local cmd nextCmd  arg;
     for arg in "$@"; do
       nextCmd="$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )"
-      if  [[ "${_cmdTree[$nextCmd]}" == "" ]] ; then  break; fi
+      if  [[ "${_cmdTree["$nextCmd"]}" == "" ]] ; then  break; fi
       cmd="$nextCmd" ;
       shift ;
     done
@@ -629,7 +629,7 @@ function bake.go() {
 
 #    # parse opts
     if ! declare -f "$cmd" >/dev/null 2>&1; then
-      if [[ "${_cmdTree[$cmd]}" == "PARENT_CMD_NOT_FUNC" ]] ; then bake.help "$cmd" "$@" ; return 0; fi
+      if [[ "${_cmdTree["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]] ; then bake.help "$cmd" "$@" ; return 0; fi
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
       return 1
     fi
