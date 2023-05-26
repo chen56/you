@@ -66,34 +66,12 @@ void main() {
       expect(t_ != t, true);
     });
     test('本质是范型类型T是严格的 Enum ', () {
-      {
-        List<int> i = [1];
-        List<Object> o = i;
-        List<Object>? o$ = i;
-        var oToI = o as List<int>;
-        var o$ToI = o$ as List<int>;
-        var o$ToI$ = o$ as List<int>?;
-      }
-      {
-        List<int>? i$ = [1];
-        expect(isType<List<int>?, List>(), true);
-        expect(isNullable<List<int>?>(), true);
-
-        T xxx<T>(List t) {
-          if (t is List) {
-            List t2 = t.sublist(0, t.length);
-            t2.clear();
-            t2.add(1);
-            return t2 as T;
-          }
-          return [] as T;
-        }
-
-        List<int> x = [1, 2, 3];
-        List xx = x;
-        xxx<List<int>>(xx);
-        print(xx);
-      }
+      List<int> i = [1];
+      List<Object> o = i;
+      List<Object>? o$ = i;
+      var oToI = o as List<int>;
+      var o$ToI = o$ as List<int>;
+      var o$ToI$ = o$ as List<int>?;
     });
   });
 }
