@@ -16,7 +16,7 @@ import 'package:file/local.dart';
 // import 'package:flutter_test/flutter_test.dart';
 import "package:path/path.dart" as path;
 import 'package:analyzer/src/dart/element/element.dart';
-import 'package:note/env.dart';
+import 'package:note_tools/env.dart';
 
 // ref: ElementDisplayStringBuilder 代码生成
 main() async {

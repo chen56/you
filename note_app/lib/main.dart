@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/env.dart';
+import 'package:note_tools/env.dart';
 import 'package:note_tools/note_dev.dart';
 import 'package:note_app/note_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';

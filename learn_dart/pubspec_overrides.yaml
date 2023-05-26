@@ -2,3 +2,5 @@
 dependency_overrides:
   note:
     path: ../note
+  note_tools:
+    path: ../note_tools

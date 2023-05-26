@@ -13,6 +13,7 @@ dependencies:
 #  flutter:
 #    sdk: flutter
   note:
+  note_tools:
   mate:
 
 dev_dependencies:

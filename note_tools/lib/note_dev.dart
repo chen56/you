@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:note/env.dart';
+import 'package:note_tools/env.dart';
 import 'package:note_tools/note_dev_gen.dart';
 
 /// note的写作模式工具 ,只工作于桌面版本

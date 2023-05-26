@@ -9,7 +9,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:glob/glob.dart';
-import 'package:note/env.dart';
+import 'package:note_tools/env.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:note/utils_core.dart';
