@@ -8,7 +8,7 @@ import 'package:note/note.dart';
 import 'package:note/note_layout.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
-import 'package:note/note_dev.dart';
+import 'package:note_tools/note_dev.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).

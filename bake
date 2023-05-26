@@ -741,6 +741,7 @@ function all() {
   (cd mate && _exec "$@")
   (cd note_app && _exec "$@")
   (cd note_test && _exec "$@")
+  (cd note_tools && _exec "$@")
 }
 
 bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
@@ -753,6 +754,7 @@ function note_app() (cd note_app && _exec "$@")
 function mate() (cd mate && _exec "$@")
 function mate_flutter() (cd mate_flutter && _exec "$@")
 function note_test() (cd note_test && _exec "$@")
+function note_tools() (cd note_tools && _exec "$@")
 
 bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
 function get() {

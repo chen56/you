@@ -1,5 +1,5 @@
 import 'package:dart_style/dart_style.dart';
-import 'package:note/note_dev_gen.dart';
+import 'package:note_tools/note_dev_gen.dart';
 
 import 'package:note/env.dart';
 

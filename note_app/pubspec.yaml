@@ -25,6 +25,7 @@ dependencies:
   analyzer: ^5.10.0
 
   note:
+  note_tools:
   mate:
   mate_flutter:
 

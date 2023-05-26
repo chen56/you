@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mate/mate_core.dart';
-import 'package:note/note_dev_gen.dart' as note_gen;
+import 'package:note_tools/note_dev_gen.dart' as note_gen;
 import 'package:mate_flutter/cupertino.dart';
 
 void main() {
