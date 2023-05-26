@@ -725,11 +725,6 @@ init() {
   note_app flutter create --platforms=macos .
 }
 
-  # default run
-_root() {
-  _run get
-}
-
 bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project" \
   --usage "Usage: ./$BAKE_FILE all [any command]"
 
@@ -739,12 +734,12 @@ function all() {
   #          # 用括号()开启子进程执行，可以不影响当前进程的环境
   #          ( cd "$project" ;  run "$@" ; )
   #        done
-  (cd packages/learn_dart && _run "$@")
-  (cd packages/note && _run "$@")
-  (cd packages/mate_flutter && _run "$@")
-  (cd packages/mate && _run "$@")
-  (cd packages/note_app && _run "$@")
-  (cd packages/note_test && _run "$@")
+  (cd learn_dart && _run "$@")
+  (cd note && _run "$@")
+  (cd mate_flutter && _run "$@")
+  (cd mate && _run "$@")
+  (cd note_app && _run "$@")
+  (cd note_test && _run "$@")
 }
 
 bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
@@ -752,11 +747,11 @@ bake.cmd.set --cmd note_app --usage "./$BAKE_FILE note_app [any command]"
 bake.cmd.set --cmd mate --usage "./$BAKE_FILE mate [any command]"
 bake.cmd.set --cmd mate_flutter --usage "./$BAKE_FILE mate_flutter [any command]"
 bake.cmd.set --cmd note_test --usage "./$BAKE_FILE note_test [any command]"
-function note() (cd packages/note && _run "$@")
-function note_app() (cd packages/note_app && _run "$@")
-function mate() (cd packages/mate && _run "$@")
-function mate_flutter() (cd packages/mate_flutter && _run "$@")
-function note_test() (cd packages/note_test && _run "$@")
+function note() (cd note && _run "$@")
+function note_app() (cd note_app && _run "$@")
+function mate() (cd mate && _run "$@")
+function mate_flutter() (cd mate_flutter && _run "$@")
+function note_test() (cd note_test && _run "$@")
 
 bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
 function get() {
@@ -786,7 +781,7 @@ preview() {
   #    /build "$@"
   build "$@"
   # 	npx http-server ./app_note/build/web --port 8000
-  run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000 -g --brotli
+  run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./note_app/build/web --port 8000 -g --brotli
 }
 
 ####################################################
