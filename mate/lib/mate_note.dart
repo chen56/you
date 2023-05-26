@@ -4,8 +4,8 @@ import 'package:mate/mate_core.dart';
 import 'package:note/note.dart';
 import 'package:note/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/sys.dart';
 import 'package:note/utils_core.dart';
+import 'package:note/utils_ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page

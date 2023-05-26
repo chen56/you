@@ -3,7 +3,7 @@
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
-import 'package:note/utils.dart';
+import 'package:note/utils_core.dart';
 import 'dart:convert';
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);

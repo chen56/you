@@ -1,3 +1,5 @@
+/// 基础包，不依赖其他业务代码
+
 /// result = Sub is Super
 bool isType<Sub, Super>() {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;

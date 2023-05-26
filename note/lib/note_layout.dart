@@ -5,8 +5,7 @@ import 'package:note/navigator_v2.dart';
 import 'package:note/note_core.dart';
 import 'package:note/src/content_builtin.dart';
 import 'package:note/src/flutter_highlight.dart';
-
-import 'sys.dart';
+import 'package:note/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);

@@ -3,7 +3,7 @@ import 'package:dart_style/dart_style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mate/buildin_editors.dart';
-import 'package:note/utils.dart' as utils;
+import 'package:note/utils_core.dart' as utils;
 
 final defaultEmitter =
     code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
