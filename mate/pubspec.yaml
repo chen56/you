@@ -45,6 +45,5 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   lints: ^2.0.1
 
-  # for tools/note_dev_gen.dart
   dart_style: ^2.0.0
   glob: ^2.1.1

@@ -6,7 +6,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
-import 'package:flutter_test/flutter_test.dart';
+// import 'package:flutter_test/flutter_test.dart';
 import "package:path/path.dart" as path;
 import 'package:note/env.dart';
 
@@ -32,7 +32,7 @@ main() async {
   );
 
   // make `flutter run xxx.dart` no error
-  test("stub", () {});
+  // test("stub", () {});
 }
 
 Future<void> genAll({

@@ -802,8 +802,8 @@ gen() {
   )
   (
     cd mate_flutter
-    _exec flutter test  tools/gen_mates.dart
-    _exec flutter test  tools/gen_mate_icons.dart
+    _exec dart run  tools/gen_mates.dart
+    _exec dart run  tools/gen_mate_icons.dart
   )
 }
 regen() {
