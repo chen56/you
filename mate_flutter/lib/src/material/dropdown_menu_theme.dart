@@ -10,8 +10,7 @@ import 'package:flutter/src/foundation/key.dart' as _i6;
 import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class DropdownMenuThemeData with Diagnosticable
-class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData
-    with _i2.Mate {
+class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData with _i2.Mate {
   /// DropdownMenuThemeData DropdownMenuThemeData({TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle})
   DropdownMenuThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none

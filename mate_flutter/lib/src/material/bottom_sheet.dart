@@ -174,8 +174,7 @@ class BottomSheet$Mate extends _i1.BottomSheet with _i2.Mate {
 }
 
 /// class ModalBottomSheetRoute<T> extends PopupRoute<T>
-class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T>
-    with _i2.Mate {
+class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i2.Mate {
   /// ModalBottomSheetRoute<T> ModalBottomSheetRoute({required Widget Function(BuildContext) builder, CapturedThemes? capturedThemes, String? barrierLabel, String? barrierOnTapHint, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, Color? modalBarrierColor, bool isDismissible = true, bool enableDrag = true, bool? showDragHandle, required bool isScrollControlled, RouteSettings? settings, AnimationController? transitionAnimationController, Offset? anchorPoint, bool useSafeArea = false})
   ModalBottomSheetRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
@@ -309,8 +308,7 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T>
             init: settings,
             isNamed: true,
           ),
-          'transitionAnimationController':
-              _i2.BuilderArg<_i4.AnimationController?>(
+          'transitionAnimationController': _i2.BuilderArg<_i4.AnimationController?>(
             name: 'transitionAnimationController',
             init: transitionAnimationController,
             isNamed: true,
@@ -346,8 +344,7 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T>
           showDragHandle: p.get('showDragHandle').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
           settings: p.get('settings').build(),
-          transitionAnimationController:
-              p.get('transitionAnimationController').build(),
+          transitionAnimationController: p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );

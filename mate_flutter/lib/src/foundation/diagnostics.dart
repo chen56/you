@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/foundation.dart' as _i3;
 
 /// class TextTreeConfiguration
-class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration
-    with _i2.Mate {
+class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration with _i2.Mate {
   /// TextTreeConfiguration TextTreeConfiguration({required String prefixLineOne, required String prefixOtherLines, required String prefixLastChildLineOne, required String prefixOtherLinesRootNode, required String linkCharacter, required String propertyPrefixIfChildren, required String propertyPrefixNoChildren, String lineBreak = '\n', bool lineBreakProperties = true, String afterName = ':', String afterDescriptionIfBody = '', String afterDescription = '', String beforeProperties = '', String afterProperties = '', String mandatoryAfterProperties = '', String propertySeparator = '', String bodyIndent = '', String footer = '', bool showChildren = true, bool addBlankLineIfNoChildren = true, bool isNameOnOwnLine = false, bool isBlankLineBetweenPropertiesAndChildren = true, String beforeName = '', String suffixLineOne = '', String mandatoryFooter = ''})
   TextTreeConfiguration$Mate({
     /// optionalParameters: {required String prefixLineOne} , default:none
@@ -254,8 +253,7 @@ class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration
           showChildren: p.get('showChildren').build(),
           addBlankLineIfNoChildren: p.get('addBlankLineIfNoChildren').build(),
           isNameOnOwnLine: p.get('isNameOnOwnLine').build(),
-          isBlankLineBetweenPropertiesAndChildren:
-              p.get('isBlankLineBetweenPropertiesAndChildren').build(),
+          isBlankLineBetweenPropertiesAndChildren: p.get('isBlankLineBetweenPropertiesAndChildren').build(),
           beforeName: p.get('beforeName').build(),
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
@@ -314,8 +312,7 @@ class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
           minLevel: p.get('minLevel').build(),
           wrapWidth: p.get('wrapWidth').build(),
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
-          maxDescendentsTruncatableNode:
-              p.get('maxDescendentsTruncatableNode').build(),
+          maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
   }
 
@@ -610,8 +607,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
             init: name,
             isNamed: false,
           ),
-          'computeValue':
-              _i2.BuilderArg<_i1.ComputePropertyValueCallback<double>>(
+          'computeValue': _i2.BuilderArg<_i1.ComputePropertyValueCallback<double>>(
             name: 'computeValue',
             init: computeValue,
             isNamed: false,
@@ -1072,8 +1068,7 @@ class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
 }
 
 /// class ObjectFlagProperty<T> extends DiagnosticsProperty<T>
-class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T>
-    with _i2.Mate {
+class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate {
   /// ObjectFlagProperty<T> ObjectFlagProperty(String name, T? value, {String? ifPresent, String? ifNull, bool showName = false, DiagnosticLevel level = DiagnosticLevel.info})
   ObjectFlagProperty$Mate(
     /// requiredParameters: String name
@@ -1253,8 +1248,7 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
 }
 
 /// class DiagnosticsProperty<T> extends DiagnosticsNode
-class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T>
-    with _i2.Mate {
+class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Mate {
   /// DiagnosticsProperty<T> DiagnosticsProperty(String? name, T? value, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, String? linePrefix, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DiagnosticsProperty$Mate(
     /// requiredParameters: String? name
@@ -1573,8 +1567,7 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T>
 }
 
 /// class DiagnosticableNode<T extends Diagnosticable> extends DiagnosticsNode
-class DiagnosticableNode$Mate<T extends _i1.Diagnosticable>
-    extends _i1.DiagnosticableNode<T> with _i2.Mate {
+class DiagnosticableNode$Mate<T extends _i1.Diagnosticable> extends _i1.DiagnosticableNode<T> with _i2.Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
     /// optionalParameters: {String? name} , default:none
@@ -1617,8 +1610,7 @@ class DiagnosticableNode$Mate<T extends _i1.Diagnosticable>
 }
 
 /// class DiagnosticableTreeNode extends DiagnosticableNode<DiagnosticableTree>
-class DiagnosticableTreeNode$Mate extends _i1.DiagnosticableTreeNode
-    with _i2.Mate {
+class DiagnosticableTreeNode$Mate extends _i1.DiagnosticableTreeNode with _i2.Mate {
   /// DiagnosticableTreeNode DiagnosticableTreeNode({String? name, required DiagnosticableTree value, required DiagnosticsTreeStyle? style})
   DiagnosticableTreeNode$Mate({
     /// optionalParameters: {String? name} , default:none
@@ -1661,8 +1653,7 @@ class DiagnosticableTreeNode$Mate extends _i1.DiagnosticableTreeNode
 }
 
 /// class DiagnosticPropertiesBuilder
-class DiagnosticPropertiesBuilder$Mate extends _i1.DiagnosticPropertiesBuilder
-    with _i2.Mate {
+class DiagnosticPropertiesBuilder$Mate extends _i1.DiagnosticPropertiesBuilder with _i2.Mate {
   /// DiagnosticPropertiesBuilder DiagnosticPropertiesBuilder.fromProperties(List<DiagnosticsNode> properties)
   DiagnosticPropertiesBuilder$Mate.fromProperties(
 
@@ -1678,8 +1669,7 @@ class DiagnosticPropertiesBuilder$Mate extends _i1.DiagnosticPropertiesBuilder
         super.fromProperties() {
     mateBuilderName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(
-        p.get('properties').value);
+    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
   }
 
   @override

@@ -11,8 +11,7 @@ import 'package:flutter/src/foundation/key.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class ToggleButtonsThemeData with Diagnosticable
-class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData
-    with _i2.Mate {
+class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData with _i2.Mate {
   /// ToggleButtonsThemeData ToggleButtonsThemeData({TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth})
   ToggleButtonsThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none

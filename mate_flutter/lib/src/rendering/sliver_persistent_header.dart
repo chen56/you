@@ -8,8 +8,7 @@ import 'package:flutter/src/animation/curves.dart' as _i4;
 import 'package:flutter/animation.dart' as _i5;
 
 /// class OverScrollHeaderStretchConfiguration
-class OverScrollHeaderStretchConfiguration$Mate
-    extends _i1.OverScrollHeaderStretchConfiguration with _i2.Mate {
+class OverScrollHeaderStretchConfiguration$Mate extends _i1.OverScrollHeaderStretchConfiguration with _i2.Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
@@ -44,8 +43,8 @@ class OverScrollHeaderStretchConfiguration$Mate
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
-class PersistentHeaderShowOnScreenConfiguration$Mate
-    extends _i1.PersistentHeaderShowOnScreenConfiguration with _i2.Mate {
+class PersistentHeaderShowOnScreenConfiguration$Mate extends _i1.PersistentHeaderShowOnScreenConfiguration
+    with _i2.Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
@@ -81,8 +80,7 @@ class PersistentHeaderShowOnScreenConfiguration$Mate
 }
 
 /// class FloatingHeaderSnapConfiguration
-class FloatingHeaderSnapConfiguration$Mate
-    extends _i1.FloatingHeaderSnapConfiguration with _i2.Mate {
+class FloatingHeaderSnapConfiguration$Mate extends _i1.FloatingHeaderSnapConfiguration with _i2.Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , default:processed=PrefixedIdentifierImpl

@@ -210,8 +210,7 @@ class NavigationRail$Mate extends _i1.NavigationRail with _i2.Mate {
 }
 
 /// class NavigationRailDestination
-class NavigationRailDestination$Mate extends _i1.NavigationRailDestination
-    with _i2.Mate {
+class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with _i2.Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , default:none

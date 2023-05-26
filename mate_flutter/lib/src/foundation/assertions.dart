@@ -50,8 +50,7 @@ class PartialStackFrame$Mate extends _i1.PartialStackFrame with _i2.Mate {
 }
 
 /// class RepetitiveStackFrameFilter extends StackFilter
-class RepetitiveStackFrameFilter$Mate extends _i1.RepetitiveStackFrameFilter
-    with _i2.Mate {
+class RepetitiveStackFrameFilter$Mate extends _i1.RepetitiveStackFrameFilter with _i2.Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
     /// optionalParameters: {required List<PartialStackFrame> frames} , default:none
@@ -254,8 +253,7 @@ class FlutterError$Mate extends _i1.FlutterError with _i2.Mate {
         super.fromParts() {
     mateBuilderName = 'FlutterError.fromParts';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder =
-        (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
+    mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
   }
 
   @override
@@ -263,8 +261,7 @@ class FlutterError$Mate extends _i1.FlutterError with _i2.Mate {
 }
 
 /// class DiagnosticsStackTrace extends DiagnosticsBlock
-class DiagnosticsStackTrace$Mate extends _i1.DiagnosticsStackTrace
-    with _i2.Mate {
+class DiagnosticsStackTrace$Mate extends _i1.DiagnosticsStackTrace with _i2.Mate {
   /// DiagnosticsStackTrace DiagnosticsStackTrace(String name, StackTrace? stack, {Iterable<String> Function(Iterable<String>)? stackFilter, bool showSeparator = true})
   DiagnosticsStackTrace$Mate(
     /// requiredParameters: String name

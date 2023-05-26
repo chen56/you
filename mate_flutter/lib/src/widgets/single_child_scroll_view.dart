@@ -16,8 +16,7 @@ import 'dart:ui' as _i12;
 import 'package:flutter/src/widgets/scroll_view.dart' as _i13;
 
 /// class SingleChildScrollView extends StatelessWidget
-class SingleChildScrollView$Mate extends _i1.SingleChildScrollView
-    with _i2.Mate {
+class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate {
   /// SingleChildScrollView SingleChildScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, EdgeInsetsGeometry? padding, bool? primary, ScrollPhysics? physics, ScrollController? controller, Widget? child, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual})
   SingleChildScrollView$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -115,8 +114,7 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView
             init: restorationId,
             isNamed: true,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,

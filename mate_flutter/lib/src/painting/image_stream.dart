@@ -128,8 +128,7 @@ class ImageChunkEvent$Mate extends _i1.ImageChunkEvent with _i2.Mate {
 }
 
 /// class OneFrameImageStreamCompleter extends ImageStreamCompleter
-class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter
-    with _i2.Mate {
+class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter with _i2.Mate {
   /// OneFrameImageStreamCompleter OneFrameImageStreamCompleter(Future<ImageInfo> image, {Iterable<DiagnosticsNode> Function()? informationCollector})
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
@@ -162,8 +161,7 @@ class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter
 }
 
 /// class MultiFrameImageStreamCompleter extends ImageStreamCompleter
-class MultiFrameImageStreamCompleter$Mate
-    extends _i1.MultiFrameImageStreamCompleter with _i2.Mate {
+class MultiFrameImageStreamCompleter$Mate extends _i1.MultiFrameImageStreamCompleter with _i2.Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
     /// optionalParameters: {required Future<Codec> codec} , default:none

@@ -42,8 +42,7 @@ class SelectableRegion$Mate extends _i1.SelectableRegion with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'contextMenuBuilder':
-              _i2.BuilderArg<_i1.SelectableRegionContextMenuBuilder?>(
+          'contextMenuBuilder': _i2.BuilderArg<_i1.SelectableRegionContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
@@ -63,15 +62,13 @@ class SelectableRegion$Mate extends _i1.SelectableRegion with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'magnifierConfiguration':
-              _i2.BuilderArg<_i7.TextMagnifierConfiguration>(
+          'magnifierConfiguration': _i2.BuilderArg<_i7.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
             defaultValue: _i8.TextMagnifierConfiguration.disabled,
           ),
-          'onSelectionChanged':
-              _i2.BuilderArg<_i9.ValueChanged<_i10.SelectedContent?>?>(
+          'onSelectionChanged': _i2.BuilderArg<_i9.ValueChanged<_i10.SelectedContent?>?>(
             name: 'onSelectionChanged',
             init: onSelectionChanged,
             isNamed: true,

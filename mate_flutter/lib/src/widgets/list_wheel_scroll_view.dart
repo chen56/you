@@ -15,8 +15,7 @@ import 'package:flutter/src/widgets/scroll_configuration.dart' as _i11;
 import 'package:flutter/src/rendering/viewport_offset.dart' as _i12;
 
 /// class ListWheelChildListDelegate extends ListWheelChildDelegate
-class ListWheelChildListDelegate$Mate extends _i1.ListWheelChildListDelegate
-    with _i2.Mate {
+class ListWheelChildListDelegate$Mate extends _i1.ListWheelChildListDelegate with _i2.Mate {
   /// ListWheelChildListDelegate ListWheelChildListDelegate({required List<Widget> children})
   ListWheelChildListDelegate$Mate(
       {
@@ -32,8 +31,7 @@ class ListWheelChildListDelegate$Mate extends _i1.ListWheelChildListDelegate
         super() {
     mateBuilderName = 'ListWheelChildListDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        ListWheelChildListDelegate$Mate(children: p.get('children').build());
+    mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
   }
 
   @override
@@ -41,8 +39,7 @@ class ListWheelChildListDelegate$Mate extends _i1.ListWheelChildListDelegate
 }
 
 /// class ListWheelChildLoopingListDelegate extends ListWheelChildDelegate
-class ListWheelChildLoopingListDelegate$Mate
-    extends _i1.ListWheelChildLoopingListDelegate with _i2.Mate {
+class ListWheelChildLoopingListDelegate$Mate extends _i1.ListWheelChildLoopingListDelegate with _i2.Mate {
   /// ListWheelChildLoopingListDelegate ListWheelChildLoopingListDelegate({required List<Widget> children})
   ListWheelChildLoopingListDelegate$Mate(
       {
@@ -58,8 +55,7 @@ class ListWheelChildLoopingListDelegate$Mate
         super() {
     mateBuilderName = 'ListWheelChildLoopingListDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(
-        children: p.get('children').build());
+    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
   }
 
   @override
@@ -67,8 +63,7 @@ class ListWheelChildLoopingListDelegate$Mate
 }
 
 /// class ListWheelChildBuilderDelegate extends ListWheelChildDelegate
-class ListWheelChildBuilderDelegate$Mate
-    extends _i1.ListWheelChildBuilderDelegate with _i2.Mate {
+class ListWheelChildBuilderDelegate$Mate extends _i1.ListWheelChildBuilderDelegate with _i2.Mate {
   /// ListWheelChildBuilderDelegate ListWheelChildBuilderDelegate({required Widget? Function(BuildContext, int) builder, int? childCount})
   ListWheelChildBuilderDelegate$Mate({
     /// optionalParameters: {required Widget? Function(BuildContext, int) builder} , default:none
@@ -102,8 +97,7 @@ class ListWheelChildBuilderDelegate$Mate
 }
 
 /// class FixedExtentScrollController extends ScrollController
-class FixedExtentScrollController$Mate extends _i1.FixedExtentScrollController
-    with _i2.Mate {
+class FixedExtentScrollController$Mate extends _i1.FixedExtentScrollController with _i2.Mate {
   /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0})
   FixedExtentScrollController$Mate(
       {
@@ -120,8 +114,7 @@ class FixedExtentScrollController$Mate extends _i1.FixedExtentScrollController
         super() {
     mateBuilderName = 'FixedExtentScrollController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => FixedExtentScrollController$Mate(
-        initialItem: p.get('initialItem').build());
+    mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
   }
 
   @override
@@ -208,8 +201,7 @@ class FixedExtentMetrics$Mate extends _i1.FixedExtentMetrics with _i2.Mate {
 }
 
 /// class FixedExtentScrollPhysics extends ScrollPhysics
-class FixedExtentScrollPhysics$Mate extends _i1.FixedExtentScrollPhysics
-    with _i2.Mate {
+class FixedExtentScrollPhysics$Mate extends _i1.FixedExtentScrollPhysics with _i2.Mate {
   /// FixedExtentScrollPhysics FixedExtentScrollPhysics({ScrollPhysics? parent})
   FixedExtentScrollPhysics$Mate(
       {
@@ -225,8 +217,7 @@ class FixedExtentScrollPhysics$Mate extends _i1.FixedExtentScrollPhysics
         super() {
     mateBuilderName = 'FixedExtentScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override
@@ -399,8 +390,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
@@ -572,8 +562,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
@@ -740,8 +729,7 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           offset: p.get('offset').build(),
           childDelegate: p.get('childDelegate').build(),
           clipBehavior: p.get('clipBehavior').build(),

@@ -158,8 +158,7 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
 }
 
 /// class EdgeDraggingAutoScroller
-class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller
-    with _i2.Mate {
+class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i2.Mate {
   /// EdgeDraggingAutoScroller EdgeDraggingAutoScroller(ScrollableState scrollable, {void Function()? onScrollViewScrolled, double velocityScalar = _kDefaultAutoScrollVelocityScalar})
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
@@ -201,8 +200,7 @@ class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller
 }
 
 /// class ScrollIncrementDetails
-class ScrollIncrementDetails$Mate extends _i1.ScrollIncrementDetails
-    with _i2.Mate {
+class ScrollIncrementDetails$Mate extends _i1.ScrollIncrementDetails with _i2.Mate {
   /// ScrollIncrementDetails ScrollIncrementDetails({required ScrollIncrementType type, required ScrollMetrics metrics})
   ScrollIncrementDetails$Mate({
     /// optionalParameters: {required ScrollIncrementType type} , default:none

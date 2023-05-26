@@ -97,8 +97,7 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
             init: unselectedLabelStyle,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i4.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i4.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -108,8 +107,7 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
             init: splashFactory,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i10.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i10.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

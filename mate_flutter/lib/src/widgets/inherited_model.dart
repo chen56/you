@@ -5,8 +5,7 @@ import 'package:flutter/src/widgets/inherited_model.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class InheritedModelElement<T> extends InheritedElement
-class InheritedModelElement$Mate<T> extends _i1.InheritedModelElement<T>
-    with _i2.Mate {
+class InheritedModelElement$Mate<T> extends _i1.InheritedModelElement<T> with _i2.Mate {
   /// InheritedModelElement<T> InheritedModelElement(InheritedModel<T> widget)
   InheritedModelElement$Mate(
 

@@ -184,8 +184,7 @@ class EdgeInsets$Mate extends _i1.EdgeInsets with _i2.Mate {
 }
 
 /// class EdgeInsetsDirectional extends EdgeInsetsGeometry
-class EdgeInsetsDirectional$Mate extends _i1.EdgeInsetsDirectional
-    with _i2.Mate {
+class EdgeInsetsDirectional$Mate extends _i1.EdgeInsetsDirectional with _i2.Mate {
   /// EdgeInsetsDirectional EdgeInsetsDirectional.fromSTEB(double start, double top, double end, double bottom)
   EdgeInsetsDirectional$Mate.fromSTEB(
     /// requiredParameters: double start

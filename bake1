@@ -234,74 +234,74 @@ option() {
 #  }
 #}
 
-/preview_macos?() {
-  /preview_macos?shortHelp() { cat <<<"预览preview_macos版"; }
-  /preview_macos() {
-    (
-      cd packages/note_app
-      run flutter build macos -v  \
-        --release --tree-shake-icons "$@"
-      run open build/macos/Build/Products/Release/note_app.app
-    )
-  }
-}
+#/preview_macos?() {
+#  /preview_macos?shortHelp() { cat <<<"预览preview_macos版"; }
+#  /preview_macos() {
+#    (
+#      cd packages/note_app
+#      run flutter build macos -v  \
+#        --release --tree-shake-icons "$@"
+#      run open build/macos/Build/Products/Release/note_app.app
+#    )
+#  }
+#}
 
-/ci?() {
-  /ci?shortHelp() { cat <<<"ci重建"; }
-  /ci() {
-    (
-      flutter --version
-      /clean
-      /get
-      /build
-      /test
-    )
-  }
-}
+#/ci?() {
+#  /ci?shortHelp() { cat <<<"ci重建"; }
+#  /ci() {
+#    (
+#      flutter --version
+#      /clean
+#      /get
+#      /build
+#      /test
+#    )
+#  }
+#}
 
-/docker?() {
-  /docker?shortHelp() { cat <<<"docker build"; }
-  /docker() {
-    (
-      run docker build --tag younpc/note:latest . ;
-      run mkdir -p build/note_app/web
-      run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
-    )
-  }
-}
-/dockerPush?() {
-  /dockerPush?shortHelp() { cat <<<"docker image push"; }
-  /dockerPush() {
-    docker image push younpc/note:latest
-  }
-}
-/dockerPreview?() {
-  /dockerPreview?shortHelp() { cat <<<"docker build and run"; }
-  /dockerPreview() {
-    (
-      run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ;
-      run echo "preview:  http://localhost:8888/note"
-      run docker run --rm --name note -p 8888:80 -u root:root younpc/note
-    )
-  }
-}
-/dockerRun?() {
-  /dockerRun?shortHelp() { cat <<<"docker run"; }
-  /dockerRun() {
-    (
-      run echo "preview: http://localhost:8888/note" ;
-      run docker run --rm --name note -p 8889:80 -u root:root younpc/note
-    )
-  }
-}
+#/docker?() {
+#  /docker?shortHelp() { cat <<<"docker build"; }
+#  /docker() {
+#    (
+#      run docker build --tag younpc/note:latest . ;
+#      run mkdir -p build/note_app/web
+#      run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
+#    )
+#  }
+#}
+#/dockerPush?() {
+#  /dockerPush?shortHelp() { cat <<<"docker image push"; }
+#  /dockerPush() {
+#    docker image push younpc/note:latest
+#  }
+#}
+#/dockerPreview?() {
+#  /dockerPreview?shortHelp() { cat <<<"docker build and run"; }
+#  /dockerPreview() {
+#    (
+#      run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ;
+#      run echo "preview:  http://localhost:8888/note"
+#      run docker run --rm --name note -p 8888:80 -u root:root younpc/note
+#    )
+#  }
+#}
+#/dockerRun?() {
+#  /dockerRun?shortHelp() { cat <<<"docker run"; }
+#  /dockerRun() {
+#    (
+#      run echo "preview: http://localhost:8888/note" ;
+#      run docker run --rm --name note -p 8889:80 -u root:root younpc/note
+#    )
+#  }
+#}
 
 # sometimes, we need enter container inside to develop
-/dockerDebug?() {
-  /dockerDebug?shortHelp() { cat <<<"docker build"; }
-  /dockerDebug() {
-    run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash
-  }
-}
+#/dockerDebug?() {
+#  /dockerDebug?shortHelp() { cat <<<"docker build"; }
+#  /dockerDebug() {
+#    run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash
+#  }
+#}
 
 
 /gen?() {
@@ -331,18 +331,18 @@ option() {
     }
 }
 
-/runWeb?() {
-  /runWeb?shortHelp() { cat <<< "flutter run: http://localhost:8888"; }
-  /runWeb() {
-    # only work on macos
-    # shellcheck disable=SC2155
-    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
-    (
-      cd packages/note_app
-      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
-    )
-  }
-}
+#/runWeb?() {
+#  /runWeb?shortHelp() { cat <<< "flutter run: http://localhost:8888"; }
+#  /runWeb() {
+#    # only work on macos
+#    # shellcheck disable=SC2155
+#    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+#    (
+#      cd packages/note_app
+#      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
+#    )
+#  }
+#}
 /runWebCanvaskit?() {
   /runWebCanvaskit?shortHelp() { cat <<<"flutter run: http://localhost:9999"; }
   /runWebCanvaskit() {
@@ -404,12 +404,12 @@ option() {
 }
 
 # 清理
-/clean?() {
-  /clean?shortHelp() { cat <<<"清理项目目录"; }
-  /clean() {
-    /exec flutter clean
-  }
-}
+#/clean?() {
+#  /clean?shortHelp() { cat <<<"清理项目目录"; }
+#  /clean() {
+#    /exec flutter clean
+#  }
+#}
 
 _help() {
   cat <<-'__EOF'

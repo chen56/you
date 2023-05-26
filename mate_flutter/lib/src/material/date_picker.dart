@@ -155,8 +155,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'onDatePickerModeChange':
-              _i2.BuilderArg<_i7.ValueChanged<_i4.DatePickerEntryMode>?>(
+          'onDatePickerModeChange': _i2.BuilderArg<_i7.ValueChanged<_i4.DatePickerEntryMode>?>(
             name: 'onDatePickerModeChange',
             init: onDatePickerModeChange,
             isNamed: true,
@@ -192,8 +191,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
 }
 
 /// class DateRangePickerDialog extends StatefulWidget
-class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog
-    with _i2.Mate {
+class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate {
   /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, TextInputType keyboardType = TextInputType.datetime, String? restorationId})
   DateRangePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none

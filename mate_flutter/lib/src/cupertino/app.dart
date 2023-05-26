@@ -123,8 +123,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: theme,
             isNamed: true,
           ),
-          'routes': _i2.BuilderArg<
-              Map<String, _i4.Widget Function(_i4.BuildContext)>>(
+          'routes': _i2.BuilderArg<Map<String, _i4.Widget Function(_i4.BuildContext)>>(
             name: 'routes',
             init: routes,
             isNamed: true,
@@ -139,8 +138,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: onGenerateRoute,
             isNamed: true,
           ),
-          'onGenerateInitialRoutes':
-              _i2.BuilderArg<_i7.InitialRouteListFactory?>(
+          'onGenerateInitialRoutes': _i2.BuilderArg<_i7.InitialRouteListFactory?>(
             name: 'onGenerateInitialRoutes',
             init: onGenerateInitialRoutes,
             isNamed: true,
@@ -181,20 +179,17 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates':
-              _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
           ),
-          'localeListResolutionCallback':
-              _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
+          'localeListResolutionCallback': _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
             name: 'localeListResolutionCallback',
             init: localeListResolutionCallback,
             isNamed: true,
           ),
-          'localeResolutionCallback':
-              _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
+          'localeResolutionCallback': _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
             name: 'localeResolutionCallback',
             init: localeResolutionCallback,
             isNamed: true,
@@ -234,8 +229,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts':
-              _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
@@ -276,18 +270,14 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback:
-              p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
-          debugShowCheckedModeBanner:
-              p.get('debugShowCheckedModeBanner').build(),
+          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
@@ -377,14 +367,12 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'routeInformationProvider':
-              _i2.BuilderArg<_i13.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i13.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser':
-              _i2.BuilderArg<_i13.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i13.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
@@ -435,20 +423,17 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates':
-              _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
           ),
-          'localeListResolutionCallback':
-              _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
+          'localeListResolutionCallback': _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
             name: 'localeListResolutionCallback',
             init: localeListResolutionCallback,
             isNamed: true,
           ),
-          'localeResolutionCallback':
-              _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
+          'localeResolutionCallback': _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
             name: 'localeResolutionCallback',
             init: localeResolutionCallback,
             isNamed: true,
@@ -488,8 +473,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts':
-              _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
@@ -527,18 +511,14 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback:
-              p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
-          debugShowCheckedModeBanner:
-              p.get('debugShowCheckedModeBanner').build(),
+          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),

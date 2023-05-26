@@ -90,8 +90,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder':
-              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,
@@ -306,8 +305,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder':
-              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,
@@ -563,8 +561,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderErrorBuilder':
-              _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
+          'placeholderErrorBuilder': _i2.BuilderArg<_i5.ImageErrorWidgetBuilder?>(
             name: 'placeholderErrorBuilder',
             init: placeholderErrorBuilder,
             isNamed: true,

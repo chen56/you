@@ -262,8 +262,7 @@ class SliverList$Mate extends _i1.SliverList with _i2.Mate {
 }
 
 /// class SliverFixedExtentList extends SliverMultiBoxAdaptorWidget
-class SliverFixedExtentList$Mate extends _i1.SliverFixedExtentList
-    with _i2.Mate {
+class SliverFixedExtentList$Mate extends _i1.SliverFixedExtentList with _i2.Mate {
   /// SliverFixedExtentList SliverFixedExtentList({Key? key, required SliverChildDelegate delegate, required double itemExtent})
   SliverFixedExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -720,8 +719,7 @@ class SliverGrid$Mate extends _i1.SliverGrid with _i2.Mate {
 }
 
 /// class SliverMultiBoxAdaptorElement extends RenderObjectElement implements RenderSliverBoxChildManager
-class SliverMultiBoxAdaptorElement$Mate extends _i1.SliverMultiBoxAdaptorElement
-    with _i2.Mate {
+class SliverMultiBoxAdaptorElement$Mate extends _i1.SliverMultiBoxAdaptorElement with _i2.Mate {
   /// SliverMultiBoxAdaptorElement SliverMultiBoxAdaptorElement(SliverMultiBoxAdaptorWidget widget, {bool replaceMovedChildren = false})
   SliverMultiBoxAdaptorElement$Mate(
     /// requiredParameters: SliverMultiBoxAdaptorWidget widget

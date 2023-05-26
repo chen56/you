@@ -54,8 +54,7 @@ class LongPressDownDetails$Mate extends _i1.LongPressDownDetails with _i2.Mate {
 }
 
 /// class LongPressStartDetails
-class LongPressStartDetails$Mate extends _i1.LongPressStartDetails
-    with _i2.Mate {
+class LongPressStartDetails$Mate extends _i1.LongPressStartDetails with _i2.Mate {
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
@@ -90,8 +89,7 @@ class LongPressStartDetails$Mate extends _i1.LongPressStartDetails
 }
 
 /// class LongPressMoveUpdateDetails
-class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails
-    with _i2.Mate {
+class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails with _i2.Mate {
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
@@ -190,8 +188,7 @@ class LongPressEndDetails$Mate extends _i1.LongPressEndDetails with _i2.Mate {
 }
 
 /// class LongPressGestureRecognizer extends PrimaryPointerGestureRecognizer
-class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer
-    with _i2.Mate {
+class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer with _i2.Mate {
   /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter})
   LongPressGestureRecognizer$Mate({
     /// optionalParameters: {Duration? duration} , default:none

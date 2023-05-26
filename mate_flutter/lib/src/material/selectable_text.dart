@@ -248,14 +248,12 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder':
-              _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration':
-              _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -284,8 +282,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -526,14 +523,12 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder':
-              _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration':
-              _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -562,8 +557,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),

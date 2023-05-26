@@ -836,8 +836,7 @@ class DismissMenuAction$Mate extends _i1.DismissMenuAction with _i2.Mate {
         super() {
     mateBuilderName = 'DismissMenuAction';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
+    mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
   }
 
   @override
@@ -845,8 +844,7 @@ class DismissMenuAction$Mate extends _i1.DismissMenuAction with _i2.Mate {
 }
 
 /// class MenuAcceleratorCallbackBinding extends InheritedWidget
-class MenuAcceleratorCallbackBinding$Mate
-    extends _i1.MenuAcceleratorCallbackBinding with _i2.Mate {
+class MenuAcceleratorCallbackBinding$Mate extends _i1.MenuAcceleratorCallbackBinding with _i2.Mate {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -114,8 +114,7 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -271,8 +270,7 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

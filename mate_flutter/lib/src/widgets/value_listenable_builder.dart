@@ -8,8 +8,7 @@ import 'package:flutter/src/foundation/change_notifier.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class ValueListenableBuilder<T> extends StatefulWidget
-class ValueListenableBuilder$Mate<T> extends _i1.ValueListenableBuilder<T>
-    with _i2.Mate {
+class ValueListenableBuilder$Mate<T> extends _i1.ValueListenableBuilder<T> with _i2.Mate {
   /// ValueListenableBuilder<T> ValueListenableBuilder({Key? key, required ValueListenable<T> valueListenable, required Widget Function(BuildContext, T, Widget?) builder, Widget? child})
   ValueListenableBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none

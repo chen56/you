@@ -8,8 +8,7 @@ import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class OutlinedButtonThemeData with Diagnosticable
-class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData
-    with _i2.Mate {
+class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData with _i2.Mate {
   /// OutlinedButtonThemeData OutlinedButtonThemeData({ButtonStyle? style})
   OutlinedButtonThemeData$Mate(
       {
@@ -25,8 +24,7 @@ class OutlinedButtonThemeData$Mate extends _i1.OutlinedButtonThemeData
         super() {
     mateBuilderName = 'OutlinedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

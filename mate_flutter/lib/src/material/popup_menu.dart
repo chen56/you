@@ -119,8 +119,7 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
             init: textStyle,
             isNamed: true,
           ),
-          'labelTextStyle':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
+          'labelTextStyle': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
@@ -158,8 +157,7 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
 }
 
 /// class CheckedPopupMenuItem<T> extends PopupMenuItem<T>
-class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T>
-    with _i2.Mate {
+class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.Mate {
   /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
   CheckedPopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none

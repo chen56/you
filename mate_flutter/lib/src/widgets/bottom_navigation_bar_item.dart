@@ -7,8 +7,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i3;
 import 'dart:ui' as _i4;
 
 /// class BottomNavigationBarItem
-class BottomNavigationBarItem$Mate extends _i1.BottomNavigationBarItem
-    with _i2.Mate {
+class BottomNavigationBarItem$Mate extends _i1.BottomNavigationBarItem with _i2.Mate {
   /// BottomNavigationBarItem BottomNavigationBarItem({required Widget icon, String? label, Widget? activeIcon, Color? backgroundColor, String? tooltip})
   BottomNavigationBarItem$Mate({
     /// optionalParameters: {required Widget icon} , default:none

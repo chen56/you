@@ -30,8 +30,7 @@ class ScrollPhysics$Mate extends _i1.ScrollPhysics with _i2.Mate {
 }
 
 /// class RangeMaintainingScrollPhysics extends ScrollPhysics
-class RangeMaintainingScrollPhysics$Mate
-    extends _i1.RangeMaintainingScrollPhysics with _i2.Mate {
+class RangeMaintainingScrollPhysics$Mate extends _i1.RangeMaintainingScrollPhysics with _i2.Mate {
   /// RangeMaintainingScrollPhysics RangeMaintainingScrollPhysics({ScrollPhysics? parent})
   RangeMaintainingScrollPhysics$Mate(
       {
@@ -47,8 +46,7 @@ class RangeMaintainingScrollPhysics$Mate
         super() {
     mateBuilderName = 'RangeMaintainingScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override
@@ -56,8 +54,7 @@ class RangeMaintainingScrollPhysics$Mate
 }
 
 /// class BouncingScrollPhysics extends ScrollPhysics
-class BouncingScrollPhysics$Mate extends _i1.BouncingScrollPhysics
-    with _i2.Mate {
+class BouncingScrollPhysics$Mate extends _i1.BouncingScrollPhysics with _i2.Mate {
   /// BouncingScrollPhysics BouncingScrollPhysics({ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal, ScrollPhysics? parent})
   BouncingScrollPhysics$Mate({
     /// optionalParameters: {ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal} , default:processed=PrefixedIdentifierImpl
@@ -92,8 +89,7 @@ class BouncingScrollPhysics$Mate extends _i1.BouncingScrollPhysics
 }
 
 /// class ClampingScrollPhysics extends ScrollPhysics
-class ClampingScrollPhysics$Mate extends _i1.ClampingScrollPhysics
-    with _i2.Mate {
+class ClampingScrollPhysics$Mate extends _i1.ClampingScrollPhysics with _i2.Mate {
   /// ClampingScrollPhysics ClampingScrollPhysics({ScrollPhysics? parent})
   ClampingScrollPhysics$Mate(
       {
@@ -109,8 +105,7 @@ class ClampingScrollPhysics$Mate extends _i1.ClampingScrollPhysics
         super() {
     mateBuilderName = 'ClampingScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override
@@ -118,8 +113,7 @@ class ClampingScrollPhysics$Mate extends _i1.ClampingScrollPhysics
 }
 
 /// class AlwaysScrollableScrollPhysics extends ScrollPhysics
-class AlwaysScrollableScrollPhysics$Mate
-    extends _i1.AlwaysScrollableScrollPhysics with _i2.Mate {
+class AlwaysScrollableScrollPhysics$Mate extends _i1.AlwaysScrollableScrollPhysics with _i2.Mate {
   /// AlwaysScrollableScrollPhysics AlwaysScrollableScrollPhysics({ScrollPhysics? parent})
   AlwaysScrollableScrollPhysics$Mate(
       {
@@ -135,8 +129,7 @@ class AlwaysScrollableScrollPhysics$Mate
         super() {
     mateBuilderName = 'AlwaysScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override
@@ -144,8 +137,7 @@ class AlwaysScrollableScrollPhysics$Mate
 }
 
 /// class NeverScrollableScrollPhysics extends ScrollPhysics
-class NeverScrollableScrollPhysics$Mate extends _i1.NeverScrollableScrollPhysics
-    with _i2.Mate {
+class NeverScrollableScrollPhysics$Mate extends _i1.NeverScrollableScrollPhysics with _i2.Mate {
   /// NeverScrollableScrollPhysics NeverScrollableScrollPhysics({ScrollPhysics? parent})
   NeverScrollableScrollPhysics$Mate(
       {
@@ -161,8 +153,7 @@ class NeverScrollableScrollPhysics$Mate extends _i1.NeverScrollableScrollPhysics
         super() {
     mateBuilderName = 'NeverScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override

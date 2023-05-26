@@ -10,8 +10,7 @@ import 'package:flutter/src/foundation/key.dart' as _i6;
 import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class MaterialBannerThemeData with Diagnosticable
-class MaterialBannerThemeData$Mate extends _i1.MaterialBannerThemeData
-    with _i2.Mate {
+class MaterialBannerThemeData$Mate extends _i1.MaterialBannerThemeData with _i2.Mate {
   /// MaterialBannerThemeData MaterialBannerThemeData({Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, TextStyle? contentTextStyle, double? elevation, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? leadingPadding})
   MaterialBannerThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none

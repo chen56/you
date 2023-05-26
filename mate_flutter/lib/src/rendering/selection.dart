@@ -22,8 +22,7 @@ class SelectedContent$Mate extends _i1.SelectedContent with _i2.Mate {
         super() {
     mateBuilderName = 'SelectedContent';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
+    mateBuilder = (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
   }
 
   @override
@@ -31,8 +30,7 @@ class SelectedContent$Mate extends _i1.SelectedContent with _i2.Mate {
 }
 
 /// class SelectWordSelectionEvent extends SelectionEvent
-class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent
-    with _i2.Mate {
+class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent with _i2.Mate {
   /// SelectWordSelectionEvent SelectWordSelectionEvent({required Offset globalPosition})
   SelectWordSelectionEvent$Mate(
       {
@@ -48,8 +46,7 @@ class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent
         super() {
     mateBuilderName = 'SelectWordSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectWordSelectionEvent$Mate(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build());
   }
 
   @override
@@ -57,8 +54,7 @@ class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent
 }
 
 /// class SelectionEdgeUpdateEvent extends SelectionEvent
-class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent
-    with _i2.Mate {
+class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent with _i2.Mate {
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forStart({required Offset globalPosition})
   SelectionEdgeUpdateEvent$Mate.forStart(
       {
@@ -74,8 +70,7 @@ class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent
         super.forStart() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forStart';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
   }
 
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
@@ -93,8 +88,7 @@ class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent
         super.forEnd() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forEnd';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
   }
 
   @override
@@ -102,8 +96,7 @@ class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent
 }
 
 /// class GranularlyExtendSelectionEvent extends SelectionEvent
-class GranularlyExtendSelectionEvent$Mate
-    extends _i1.GranularlyExtendSelectionEvent with _i2.Mate {
+class GranularlyExtendSelectionEvent$Mate extends _i1.GranularlyExtendSelectionEvent with _i2.Mate {
   /// GranularlyExtendSelectionEvent GranularlyExtendSelectionEvent({required bool forward, required bool isEnd, required TextGranularity granularity})
   GranularlyExtendSelectionEvent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -146,8 +139,7 @@ class GranularlyExtendSelectionEvent$Mate
 }
 
 /// class DirectionallyExtendSelectionEvent extends SelectionEvent
-class DirectionallyExtendSelectionEvent$Mate
-    extends _i1.DirectionallyExtendSelectionEvent with _i2.Mate {
+class DirectionallyExtendSelectionEvent$Mate extends _i1.DirectionallyExtendSelectionEvent with _i2.Mate {
   /// DirectionallyExtendSelectionEvent DirectionallyExtendSelectionEvent({required double dx, required bool isEnd, required SelectionExtendDirection direction})
   DirectionallyExtendSelectionEvent$Mate({
     /// optionalParameters: {required double dx} , default:none

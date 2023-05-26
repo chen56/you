@@ -123,8 +123,7 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
         super.fallback() {
     mateBuilderName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
+    mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
   }
 
   @override
@@ -132,8 +131,7 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior
-    with _i2.Mate {
+class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with _i2.Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , default:none

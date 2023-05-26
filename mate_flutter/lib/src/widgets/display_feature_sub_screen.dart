@@ -8,8 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class DisplayFeatureSubScreen extends StatelessWidget
-class DisplayFeatureSubScreen$Mate extends _i1.DisplayFeatureSubScreen
-    with _i2.Mate {
+class DisplayFeatureSubScreen$Mate extends _i1.DisplayFeatureSubScreen with _i2.Mate {
   /// DisplayFeatureSubScreen DisplayFeatureSubScreen({Key? key, Offset? anchorPoint, required Widget child})
   DisplayFeatureSubScreen$Mate({
     /// optionalParameters: {Key? key} , default:none

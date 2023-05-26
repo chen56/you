@@ -5,8 +5,7 @@ import 'package:flutter/src/services/raw_keyboard_android.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class RawKeyEventDataAndroid extends RawKeyEventData
-class RawKeyEventDataAndroid$Mate extends _i1.RawKeyEventDataAndroid
-    with _i2.Mate {
+class RawKeyEventDataAndroid$Mate extends _i1.RawKeyEventDataAndroid with _i2.Mate {
   /// RawKeyEventDataAndroid RawKeyEventDataAndroid({int flags = 0, int codePoint = 0, int plainCodePoint = 0, int keyCode = 0, int scanCode = 0, int metaState = 0, int eventSource = 0, int vendorId = 0, int productId = 0, int deviceId = 0, int repeatCount = 0})
   RawKeyEventDataAndroid$Mate({
     /// optionalParameters: {int flags = 0} , default:processed=IntegerLiteralImpl

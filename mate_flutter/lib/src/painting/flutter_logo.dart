@@ -8,8 +8,7 @@ import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 
 /// class FlutterLogoDecoration extends Decoration
-class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration
-    with _i2.Mate {
+class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate {
   /// FlutterLogoDecoration FlutterLogoDecoration({Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, EdgeInsets margin = EdgeInsets.zero})
   FlutterLogoDecoration$Mate({
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl

@@ -237,8 +237,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -524,8 +523,7 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

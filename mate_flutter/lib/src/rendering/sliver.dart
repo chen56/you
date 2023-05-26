@@ -240,8 +240,7 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
           paintOrigin: p.get('paintOrigin').build(),
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
-          maxScrollObstructionExtent:
-              p.get('maxScrollObstructionExtent').build(),
+          maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),
@@ -321,8 +320,7 @@ class SliverHitTestEntry$Mate extends _i1.SliverHitTestEntry with _i2.Mate {
 }
 
 /// class RenderSliverToBoxAdapter extends RenderSliverSingleBoxAdapter
-class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter
-    with _i2.Mate {
+class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter with _i2.Mate {
   /// RenderSliverToBoxAdapter RenderSliverToBoxAdapter({RenderBox? child})
   RenderSliverToBoxAdapter$Mate(
       {
@@ -338,8 +336,7 @@ class RenderSliverToBoxAdapter$Mate extends _i1.RenderSliverToBoxAdapter
         super() {
     mateBuilderName = 'RenderSliverToBoxAdapter';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
   }
 
   @override

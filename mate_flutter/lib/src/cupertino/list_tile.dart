@@ -252,8 +252,7 @@ class CupertinoListTile$Mate extends _i1.CupertinoListTile with _i2.Mate {
 }
 
 /// class CupertinoListTileChevron extends StatelessWidget
-class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron
-    with _i2.Mate {
+class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron with _i2.Mate {
   /// CupertinoListTileChevron CupertinoListTileChevron({Key? key})
   CupertinoListTileChevron$Mate(
       {
@@ -269,8 +268,7 @@ class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron
         super() {
     mateBuilderName = 'CupertinoListTileChevron';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
+    mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
   }
 
   @override

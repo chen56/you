@@ -128,8 +128,7 @@ class UndoHistoryValue$Mate extends _i1.UndoHistoryValue with _i2.Mate {
 }
 
 /// class UndoHistoryController extends ValueNotifier<UndoHistoryValue>
-class UndoHistoryController$Mate extends _i1.UndoHistoryController
-    with _i2.Mate {
+class UndoHistoryController$Mate extends _i1.UndoHistoryController with _i2.Mate {
   /// UndoHistoryController UndoHistoryController({UndoHistoryValue? value})
   UndoHistoryController$Mate(
       {
@@ -145,8 +144,7 @@ class UndoHistoryController$Mate extends _i1.UndoHistoryController
         super() {
     mateBuilderName = 'UndoHistoryController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => UndoHistoryController$Mate(value: p.get('value').build());
+    mateBuilder = (p) => UndoHistoryController$Mate(value: p.get('value').build());
   }
 
   @override

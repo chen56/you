@@ -95,8 +95,7 @@ class PipelineOwner$Mate extends _i1.PipelineOwner with _i2.Mate {
 }
 
 /// class DiagnosticsDebugCreator extends DiagnosticsProperty<Object>
-class DiagnosticsDebugCreator$Mate extends _i1.DiagnosticsDebugCreator
-    with _i2.Mate {
+class DiagnosticsDebugCreator$Mate extends _i1.DiagnosticsDebugCreator with _i2.Mate {
   /// DiagnosticsDebugCreator DiagnosticsDebugCreator(Object value)
   DiagnosticsDebugCreator$Mate(
 

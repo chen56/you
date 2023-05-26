@@ -117,8 +117,7 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination
-    with _i2.Mate {
+class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination with _i2.Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , default:none

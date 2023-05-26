@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/services/text_input.dart' as _i3;
 
 /// class RestorableNum<T extends num> extends _RestorablePrimitiveValue<T>
-class RestorableNum$Mate<T extends num> extends _i1.RestorableNum<T>
-    with _i2.Mate {
+class RestorableNum$Mate<T extends num> extends _i1.RestorableNum<T> with _i2.Mate {
   /// RestorableNum<T> RestorableNum(T defaultValue)
   RestorableNum$Mate(
 
@@ -151,8 +150,7 @@ class RestorableBoolN$Mate extends _i1.RestorableBoolN with _i2.Mate {
 }
 
 /// class RestorableNumN<T extends num?> extends _RestorablePrimitiveValueN<T>
-class RestorableNumN$Mate<T extends num?> extends _i1.RestorableNumN<T>
-    with _i2.Mate {
+class RestorableNumN$Mate<T extends num?> extends _i1.RestorableNumN<T> with _i2.Mate {
   /// RestorableNumN<T> RestorableNumN(T defaultValue)
   RestorableNumN$Mate(
 
@@ -296,8 +294,7 @@ class RestorableDateTimeN$Mate extends _i1.RestorableDateTimeN with _i2.Mate {
 }
 
 /// class RestorableTextEditingController extends RestorableChangeNotifier<TextEditingController>
-class RestorableTextEditingController$Mate
-    extends _i1.RestorableTextEditingController with _i2.Mate {
+class RestorableTextEditingController$Mate extends _i1.RestorableTextEditingController with _i2.Mate {
   /// RestorableTextEditingController RestorableTextEditingController.fromValue(TextEditingValue value)
   RestorableTextEditingController$Mate.fromValue(
 
@@ -313,8 +310,7 @@ class RestorableTextEditingController$Mate
         super.fromValue() {
     mateBuilderName = 'RestorableTextEditingController.fromValue';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        RestorableTextEditingController$Mate.fromValue(p.get('value').value);
+    mateBuilder = (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value);
   }
 
   @override
@@ -322,8 +318,7 @@ class RestorableTextEditingController$Mate
 }
 
 /// class RestorableEnumN<T extends Enum> extends RestorableValue<T?>
-class RestorableEnumN$Mate<T extends Enum> extends _i1.RestorableEnumN<T>
-    with _i2.Mate {
+class RestorableEnumN$Mate<T extends Enum> extends _i1.RestorableEnumN<T> with _i2.Mate {
   /// RestorableEnumN<T> RestorableEnumN(T? defaultValue, {required Iterable<T> values})
   RestorableEnumN$Mate(
     /// requiredParameters: T? defaultValue
@@ -356,8 +351,7 @@ class RestorableEnumN$Mate<T extends Enum> extends _i1.RestorableEnumN<T>
 }
 
 /// class RestorableEnum<T extends Enum> extends RestorableValue<T>
-class RestorableEnum$Mate<T extends Enum> extends _i1.RestorableEnum<T>
-    with _i2.Mate {
+class RestorableEnum$Mate<T extends Enum> extends _i1.RestorableEnum<T> with _i2.Mate {
   /// RestorableEnum<T> RestorableEnum(T defaultValue, {required Iterable<T> values})
   RestorableEnum$Mate(
     /// requiredParameters: T defaultValue

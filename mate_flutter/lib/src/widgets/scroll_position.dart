@@ -7,8 +7,7 @@ import 'package:flutter/src/widgets/scroll_metrics.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class ScrollMetricsNotification extends Notification with ViewportNotificationMixin
-class ScrollMetricsNotification$Mate extends _i1.ScrollMetricsNotification
-    with _i2.Mate {
+class ScrollMetricsNotification$Mate extends _i1.ScrollMetricsNotification with _i2.Mate {
   /// ScrollMetricsNotification ScrollMetricsNotification({required ScrollMetrics metrics, required BuildContext context})
   ScrollMetricsNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none

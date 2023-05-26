@@ -8,8 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class CupertinoPageScaffold extends StatefulWidget
-class CupertinoPageScaffold$Mate extends _i1.CupertinoPageScaffold
-    with _i2.Mate {
+class CupertinoPageScaffold$Mate extends _i1.CupertinoPageScaffold with _i2.Mate {
   /// CupertinoPageScaffold CupertinoPageScaffold({Key? key, ObstructingPreferredSizeWidget? navigationBar, Color? backgroundColor, bool resizeToAvoidBottomInset = true, required Widget child})
   CupertinoPageScaffold$Mate({
     /// optionalParameters: {Key? key} , default:none

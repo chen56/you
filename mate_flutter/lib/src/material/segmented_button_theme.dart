@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/key.dart' as _i5;
 
 /// class SegmentedButtonThemeData with Diagnosticable
-class SegmentedButtonThemeData$Mate extends _i1.SegmentedButtonThemeData
-    with _i2.Mate {
+class SegmentedButtonThemeData$Mate extends _i1.SegmentedButtonThemeData with _i2.Mate {
   /// SegmentedButtonThemeData SegmentedButtonThemeData({ButtonStyle? style, Widget? selectedIcon})
   SegmentedButtonThemeData$Mate({
     /// optionalParameters: {ButtonStyle? style} , default:none

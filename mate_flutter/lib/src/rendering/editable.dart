@@ -453,8 +453,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
           devicePixelRatio: p.get('devicePixelRatio').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').build(),
           promptRectRange: p.get('promptRectRange').build(),
           promptRectColor: p.get('promptRectColor').build(),

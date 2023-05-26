@@ -12,8 +12,7 @@ import 'package:flutter/src/foundation/key.dart' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class NavigationRailThemeData with Diagnosticable
-class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData
-    with _i2.Mate {
+class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData with _i2.Mate {
   /// NavigationRailThemeData NavigationRailThemeData({Color? backgroundColor, double? elevation, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? groupAlignment, NavigationRailLabelType? labelType, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape, double? minWidth, double? minExtendedWidth})
   NavigationRailThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none

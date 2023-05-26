@@ -69,8 +69,7 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
             isNamed: true,
             defaultValue: _i6.Curves.linear,
           ),
-          'transitionBuilder':
-              _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
+          'transitionBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
             name: 'transitionBuilder',
             init: transitionBuilder,
             isNamed: true,

@@ -39,8 +39,7 @@ class LicenseParagraph$Mate extends _i1.LicenseParagraph with _i2.Mate {
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
-class LicenseEntryWithLineBreaks$Mate extends _i1.LicenseEntryWithLineBreaks
-    with _i2.Mate {
+class LicenseEntryWithLineBreaks$Mate extends _i1.LicenseEntryWithLineBreaks with _i2.Mate {
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages

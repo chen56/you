@@ -58,8 +58,7 @@ class RawKeyEventDataMacOs$Mate extends _i1.RawKeyEventDataMacOs with _i2.Mate {
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataMacOs$Mate(
           characters: p.get('characters').build(),
-          charactersIgnoringModifiers:
-              p.get('charactersIgnoringModifiers').build(),
+          charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),

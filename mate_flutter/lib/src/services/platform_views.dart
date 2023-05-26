@@ -5,8 +5,7 @@ import 'package:flutter/src/services/platform_views.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class AndroidPointerProperties
-class AndroidPointerProperties$Mate extends _i1.AndroidPointerProperties
-    with _i2.Mate {
+class AndroidPointerProperties$Mate extends _i1.AndroidPointerProperties with _i2.Mate {
   /// AndroidPointerProperties AndroidPointerProperties({required int id, required int toolType})
   AndroidPointerProperties$Mate({
     /// optionalParameters: {required int id} , default:none
@@ -205,8 +204,7 @@ class AndroidMotionEvent$Mate extends _i1.AndroidMotionEvent with _i2.Mate {
             init: pointerCount,
             isNamed: true,
           ),
-          'pointerProperties':
-              _i2.BuilderArg<List<_i1.AndroidPointerProperties>>(
+          'pointerProperties': _i2.BuilderArg<List<_i1.AndroidPointerProperties>>(
             name: 'pointerProperties',
             init: pointerProperties,
             isNamed: true,

@@ -8,8 +8,7 @@ import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/painting/border_radius.dart' as _i5;
 
 /// class ContinuousRectangleBorder extends OutlinedBorder
-class ContinuousRectangleBorder$Mate extends _i1.ContinuousRectangleBorder
-    with _i2.Mate {
+class ContinuousRectangleBorder$Mate extends _i1.ContinuousRectangleBorder with _i2.Mate {
   /// ContinuousRectangleBorder ContinuousRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   ContinuousRectangleBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl

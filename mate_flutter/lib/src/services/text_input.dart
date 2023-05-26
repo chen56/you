@@ -46,8 +46,7 @@ class TextInputType$Mate extends _i1.TextInputType with _i2.Mate {
 }
 
 /// class TextInputConfiguration
-class TextInputConfiguration$Mate extends _i1.TextInputConfiguration
-    with _i2.Mate {
+class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Mate {
   /// TextInputConfiguration TextInputConfiguration({TextInputType inputType = TextInputType.text, bool readOnly = false, bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, bool enableInteractiveSelection = true, String? actionLabel, TextInputAction inputAction = TextInputAction.done, Brightness keyboardAppearance = Brightness.light, TextCapitalization textCapitalization = TextCapitalization.none, AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled, bool enableIMEPersonalizedLearning = true, List<String> allowedMimeTypes = const <String>[], bool enableDeltaModel = false})
   TextInputConfiguration$Mate({
     /// optionalParameters: {TextInputType inputType = TextInputType.text} , default:processed=PrefixedIdentifierImpl
@@ -202,15 +201,13 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration
           smartDashesType: p.get('smartDashesType').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           enableSuggestions: p.get('enableSuggestions').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           actionLabel: p.get('actionLabel').build(),
           inputAction: p.get('inputAction').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           textCapitalization: p.get('textCapitalization').build(),
           autofillConfiguration: p.get('autofillConfiguration').build(),
-          enableIMEPersonalizedLearning:
-              p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
@@ -221,8 +218,7 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration
 }
 
 /// class RawFloatingCursorPoint
-class RawFloatingCursorPoint$Mate extends _i1.RawFloatingCursorPoint
-    with _i2.Mate {
+class RawFloatingCursorPoint$Mate extends _i1.RawFloatingCursorPoint with _i2.Mate {
   /// RawFloatingCursorPoint RawFloatingCursorPoint({Offset? offset, required FloatingCursorDragState state})
   RawFloatingCursorPoint$Mate({
     /// optionalParameters: {Offset? offset} , default:none

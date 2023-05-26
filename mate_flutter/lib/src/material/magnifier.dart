@@ -106,8 +106,7 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Magnifier$Mate(
           key: p.get('key').build(),
-          additionalFocalPointOffset:
-              p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
           borderRadius: p.get('borderRadius').build(),
           filmColor: p.get('filmColor').build(),
           shadows: p.get('shadows').build(),

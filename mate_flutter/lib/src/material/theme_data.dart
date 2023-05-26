@@ -313,14 +313,12 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
             init: applyElevationOverlayColor,
             isNamed: true,
           ),
-          'cupertinoOverrideTheme':
-              _i2.BuilderArg<_i3.NoDefaultCupertinoThemeData?>(
+          'cupertinoOverrideTheme': _i2.BuilderArg<_i3.NoDefaultCupertinoThemeData?>(
             name: 'cupertinoOverrideTheme',
             init: cupertinoOverrideTheme,
             isNamed: true,
           ),
-          'extensions':
-              _i2.BuilderArg<Map<Object, _i1.ThemeExtension<dynamic>>>(
+          'extensions': _i2.BuilderArg<Map<Object, _i1.ThemeExtension<dynamic>>>(
             name: 'extensions',
             init: extensions,
             isNamed: true,
@@ -510,8 +508,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
             init: bottomAppBarTheme,
             isNamed: true,
           ),
-          'bottomNavigationBarTheme':
-              _i2.BuilderArg<_i19.BottomNavigationBarThemeData>(
+          'bottomNavigationBarTheme': _i2.BuilderArg<_i19.BottomNavigationBarThemeData>(
             name: 'bottomNavigationBarTheme',
             init: bottomNavigationBarTheme,
             isNamed: true,
@@ -591,8 +588,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
             init: filledButtonTheme,
             isNamed: true,
           ),
-          'floatingActionButtonTheme':
-              _i2.BuilderArg<_i35.FloatingActionButtonThemeData>(
+          'floatingActionButtonTheme': _i2.BuilderArg<_i35.FloatingActionButtonThemeData>(
             name: 'floatingActionButtonTheme',
             init: floatingActionButtonTheme,
             isNamed: true,
@@ -627,8 +623,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
             init: navigationBarTheme,
             isNamed: true,
           ),
-          'navigationDrawerTheme':
-              _i2.BuilderArg<_i42.NavigationDrawerThemeData>(
+          'navigationDrawerTheme': _i2.BuilderArg<_i42.NavigationDrawerThemeData>(
             name: 'navigationDrawerTheme',
             init: navigationDrawerTheme,
             isNamed: true,
@@ -648,8 +643,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
             init: popupMenuTheme,
             isNamed: true,
           ),
-          'progressIndicatorTheme':
-              _i2.BuilderArg<_i46.ProgressIndicatorThemeData>(
+          'progressIndicatorTheme': _i2.BuilderArg<_i46.ProgressIndicatorThemeData>(
             name: 'progressIndicatorTheme',
             init: progressIndicatorTheme,
             isNamed: true,
@@ -724,8 +718,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
     mateBuilderName = 'ThemeData.raw';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeData$Mate.raw(
-          applyElevationOverlayColor:
-              p.get('applyElevationOverlayColor').build(),
+          applyElevationOverlayColor: p.get('applyElevationOverlayColor').build(),
           cupertinoOverrideTheme: p.get('cupertinoOverrideTheme').build(),
           extensions: p.get('extensions').build(),
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
@@ -814,8 +807,7 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
 }
 
 /// class MaterialBasedCupertinoThemeData extends CupertinoThemeData
-class MaterialBasedCupertinoThemeData$Mate
-    extends _i1.MaterialBasedCupertinoThemeData with _i2.Mate {
+class MaterialBasedCupertinoThemeData$Mate extends _i1.MaterialBasedCupertinoThemeData with _i2.Mate {
   /// MaterialBasedCupertinoThemeData MaterialBasedCupertinoThemeData({required ThemeData materialTheme})
   MaterialBasedCupertinoThemeData$Mate(
       {
@@ -831,8 +823,7 @@ class MaterialBasedCupertinoThemeData$Mate
         super() {
     mateBuilderName = 'MaterialBasedCupertinoThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(
-        materialTheme: p.get('materialTheme').build());
+    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
   }
 
   @override

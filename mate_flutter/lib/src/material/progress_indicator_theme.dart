@@ -8,8 +8,7 @@ import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class ProgressIndicatorThemeData with Diagnosticable
-class ProgressIndicatorThemeData$Mate extends _i1.ProgressIndicatorThemeData
-    with _i2.Mate {
+class ProgressIndicatorThemeData$Mate extends _i1.ProgressIndicatorThemeData with _i2.Mate {
   /// ProgressIndicatorThemeData ProgressIndicatorThemeData({Color? color, Color? linearTrackColor, double? linearMinHeight, Color? circularTrackColor, Color? refreshBackgroundColor})
   ProgressIndicatorThemeData$Mate({
     /// optionalParameters: {Color? color} , default:none
@@ -70,8 +69,7 @@ class ProgressIndicatorThemeData$Mate extends _i1.ProgressIndicatorThemeData
 }
 
 /// class ProgressIndicatorTheme extends InheritedTheme
-class ProgressIndicatorTheme$Mate extends _i1.ProgressIndicatorTheme
-    with _i2.Mate {
+class ProgressIndicatorTheme$Mate extends _i1.ProgressIndicatorTheme with _i2.Mate {
   /// ProgressIndicatorTheme ProgressIndicatorTheme({Key? key, required ProgressIndicatorThemeData data, required Widget child})
   ProgressIndicatorTheme$Mate({
     /// optionalParameters: {Key? key} , default:none

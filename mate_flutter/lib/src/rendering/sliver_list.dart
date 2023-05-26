@@ -22,8 +22,7 @@ class RenderSliverList$Mate extends _i1.RenderSliverList with _i2.Mate {
         super() {
     mateBuilderName = 'RenderSliverList';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) =>
-        RenderSliverList$Mate(childManager: p.get('childManager').build());
+    mateBuilder = (p) => RenderSliverList$Mate(childManager: p.get('childManager').build());
   }
 
   @override

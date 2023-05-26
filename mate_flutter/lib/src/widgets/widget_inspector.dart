@@ -30,8 +30,7 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'selectButtonBuilder':
-              _i2.BuilderArg<_i1.InspectorSelectButtonBuilder?>(
+          'selectButtonBuilder': _i2.BuilderArg<_i1.InspectorSelectButtonBuilder?>(
             name: 'selectButtonBuilder',
             init: selectButtonBuilder,
             isNamed: true,
@@ -52,8 +51,7 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
 }
 
 /// class DevToolsDeepLinkProperty extends DiagnosticsProperty<String>
-class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty
-    with _i2.Mate {
+class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty with _i2.Mate {
   /// DevToolsDeepLinkProperty DevToolsDeepLinkProperty(String description, String url)
   DevToolsDeepLinkProperty$Mate(
     /// requiredParameters: String description
@@ -87,8 +85,7 @@ class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
-class InspectorSerializationDelegate$Mate
-    extends _i1.InspectorSerializationDelegate with _i2.Mate {
+class InspectorSerializationDelegate$Mate extends _i1.InspectorSerializationDelegate with _i2.Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , default:none
@@ -171,14 +168,12 @@ class InspectorSerializationDelegate$Mate
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
-          maxDescendantsTruncatableNode:
-              p.get('maxDescendantsTruncatableNode').build(),
+          maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
           expandPropertyValues: p.get('expandPropertyValues').build(),
           subtreeDepth: p.get('subtreeDepth').build(),
           includeProperties: p.get('includeProperties').build(),
           service: p.get('service').build(),
-          addAdditionalPropertiesCallback:
-              p.get('addAdditionalPropertiesCallback').build(),
+          addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
   }
 

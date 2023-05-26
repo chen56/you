@@ -53,8 +53,7 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated':
-              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -70,8 +69,7 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             init: layoutDirection,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -151,8 +149,7 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated':
-              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -178,8 +175,7 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             init: creationParamsCodec,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -227,8 +223,7 @@ class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
             init: viewType,
             isNamed: true,
           ),
-          'onPlatformViewCreated':
-              _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
             name: 'onPlatformViewCreated',
             init: onPlatformViewCreated,
             isNamed: true,
@@ -274,8 +269,7 @@ class PlatformViewLink$Mate extends _i1.PlatformViewLink with _i2.Mate {
             init: surfaceFactory,
             isNamed: true,
           ),
-          'onCreatePlatformView':
-              _i2.BuilderArg<_i1.CreatePlatformViewCallback>(
+          'onCreatePlatformView': _i2.BuilderArg<_i1.CreatePlatformViewCallback>(
             name: 'onCreatePlatformView',
             init: onCreatePlatformView,
             isNamed: true,
@@ -332,8 +326,7 @@ class PlatformViewSurface$Mate extends _i1.PlatformViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -385,8 +378,7 @@ class AndroidViewSurface$Mate extends _i1.AndroidViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,

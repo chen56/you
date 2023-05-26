@@ -5,7 +5,7 @@ set -o functrace # -T If set, any trap on DEBUG and RETURN are inherited by shel
 set -o pipefail  # default pipeline status==last command status, If set, status=any command fail
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
-function _readlink() (
+function _real_path() (
   cd -P "$(dirname -- "$1")"
   file="$PWD/$(basename -- "$1")"
   while [[ -L "$file" ]]; do
@@ -17,7 +17,7 @@ function _readlink() (
   echo "$file"
 )
 
-TEST_PATH="$(_readlink "${BASH_SOURCE[0]}")"
+TEST_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 

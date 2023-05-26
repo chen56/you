@@ -9,8 +9,7 @@ import 'package:flutter/src/gestures/drag_details.dart' as _i5;
 import 'package:flutter/src/rendering/viewport_offset.dart' as _i6;
 
 /// class ScrollStartNotification extends ScrollNotification
-class ScrollStartNotification$Mate extends _i1.ScrollStartNotification
-    with _i2.Mate {
+class ScrollStartNotification$Mate extends _i1.ScrollStartNotification with _i2.Mate {
   /// ScrollStartNotification ScrollStartNotification({required ScrollMetrics metrics, required BuildContext? context, DragStartDetails? dragDetails})
   ScrollStartNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
@@ -53,8 +52,7 @@ class ScrollStartNotification$Mate extends _i1.ScrollStartNotification
 }
 
 /// class ScrollUpdateNotification extends ScrollNotification
-class ScrollUpdateNotification$Mate extends _i1.ScrollUpdateNotification
-    with _i2.Mate {
+class ScrollUpdateNotification$Mate extends _i1.ScrollUpdateNotification with _i2.Mate {
   /// ScrollUpdateNotification ScrollUpdateNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, double? scrollDelta, int? depth})
   ScrollUpdateNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
@@ -115,8 +113,7 @@ class ScrollUpdateNotification$Mate extends _i1.ScrollUpdateNotification
 }
 
 /// class OverscrollNotification extends ScrollNotification
-class OverscrollNotification$Mate extends _i1.OverscrollNotification
-    with _i2.Mate {
+class OverscrollNotification$Mate extends _i1.OverscrollNotification with _i2.Mate {
   /// OverscrollNotification OverscrollNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, required double overscroll, double velocity = 0.0})
   OverscrollNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
@@ -178,8 +175,7 @@ class OverscrollNotification$Mate extends _i1.OverscrollNotification
 }
 
 /// class ScrollEndNotification extends ScrollNotification
-class ScrollEndNotification$Mate extends _i1.ScrollEndNotification
-    with _i2.Mate {
+class ScrollEndNotification$Mate extends _i1.ScrollEndNotification with _i2.Mate {
   /// ScrollEndNotification ScrollEndNotification({required ScrollMetrics metrics, required BuildContext context, DragEndDetails? dragDetails})
   ScrollEndNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
@@ -222,8 +218,7 @@ class ScrollEndNotification$Mate extends _i1.ScrollEndNotification
 }
 
 /// class UserScrollNotification extends ScrollNotification
-class UserScrollNotification$Mate extends _i1.UserScrollNotification
-    with _i2.Mate {
+class UserScrollNotification$Mate extends _i1.UserScrollNotification with _i2.Mate {
   /// UserScrollNotification UserScrollNotification({required ScrollMetrics metrics, required BuildContext context, required ScrollDirection direction})
   UserScrollNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none

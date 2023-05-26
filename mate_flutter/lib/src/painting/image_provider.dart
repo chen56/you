@@ -306,8 +306,7 @@ class ExactAssetImage$Mate extends _i1.ExactAssetImage with _i2.Mate {
 }
 
 /// class NetworkImageLoadException implements Exception
-class NetworkImageLoadException$Mate extends _i1.NetworkImageLoadException
-    with _i2.Mate {
+class NetworkImageLoadException$Mate extends _i1.NetworkImageLoadException with _i2.Mate {
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
     /// optionalParameters: {required int statusCode} , default:none

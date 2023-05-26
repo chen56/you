@@ -97,8 +97,7 @@ class Overlay$Mate extends _i1.Overlay with _i2.Mate {
 }
 
 /// class OverlayPortalController
-class OverlayPortalController$Mate extends _i1.OverlayPortalController
-    with _i2.Mate {
+class OverlayPortalController$Mate extends _i1.OverlayPortalController with _i2.Mate {
   /// OverlayPortalController OverlayPortalController({String? debugLabel})
   OverlayPortalController$Mate(
       {
@@ -114,8 +113,7 @@ class OverlayPortalController$Mate extends _i1.OverlayPortalController
         super() {
     mateBuilderName = 'OverlayPortalController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
+    mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
   }
 
   @override

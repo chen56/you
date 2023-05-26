@@ -142,8 +142,7 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
           closeIconColor: p.get('closeIconColor').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
           actionBackgroundColor: p.get('actionBackgroundColor').build(),
-          disabledActionBackgroundColor:
-              p.get('disabledActionBackgroundColor').build(),
+          disabledActionBackgroundColor: p.get('disabledActionBackgroundColor').build(),
         );
   }
 

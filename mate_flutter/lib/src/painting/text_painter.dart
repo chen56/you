@@ -9,8 +9,7 @@ import 'package:flutter/src/painting/strut_style.dart' as _i5;
 import 'package:flutter/cupertino.dart' as _i6;
 
 /// class PlaceholderDimensions
-class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions
-    with _i2.Mate {
+class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate {
   /// PlaceholderDimensions PlaceholderDimensions({required Size size, required PlaceholderAlignment alignment, TextBaseline? baseline, double? baselineOffset})
   PlaceholderDimensions$Mate({
     /// optionalParameters: {required Size size} , default:none

@@ -13,8 +13,7 @@ import 'package:flutter/src/foundation/key.dart' as _i9;
 import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class NavigationBarThemeData with Diagnosticable
-class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData
-    with _i2.Mate {
+class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Mate {
   /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBarThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
@@ -82,20 +81,17 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData
             init: indicatorShape,
             isNamed: true,
           ),
-          'labelTextStyle':
-              _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
+          'labelTextStyle': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
           ),
-          'iconTheme':
-              _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
+          'iconTheme': _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
           ),
-          'labelBehavior':
-              _i2.BuilderArg<_i8.NavigationDestinationLabelBehavior?>(
+          'labelBehavior': _i2.BuilderArg<_i8.NavigationDestinationLabelBehavior?>(
             name: 'labelBehavior',
             init: labelBehavior,
             isNamed: true,

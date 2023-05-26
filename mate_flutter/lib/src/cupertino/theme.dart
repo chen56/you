@@ -204,8 +204,7 @@ class CupertinoThemeData$Mate extends _i1.CupertinoThemeData with _i2.Mate {
 }
 
 /// class NoDefaultCupertinoThemeData
-class NoDefaultCupertinoThemeData$Mate extends _i1.NoDefaultCupertinoThemeData
-    with _i2.Mate {
+class NoDefaultCupertinoThemeData$Mate extends _i1.NoDefaultCupertinoThemeData with _i2.Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
     /// optionalParameters: {Brightness? brightness} , default:none

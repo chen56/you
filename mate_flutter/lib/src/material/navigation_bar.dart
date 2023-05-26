@@ -115,8 +115,7 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'labelBehavior':
-              _i2.BuilderArg<_i1.NavigationDestinationLabelBehavior?>(
+          'labelBehavior': _i2.BuilderArg<_i1.NavigationDestinationLabelBehavior?>(
             name: 'labelBehavior',
             init: labelBehavior,
             isNamed: true,
@@ -147,8 +146,7 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
 }
 
 /// class NavigationDestination extends StatelessWidget
-class NavigationDestination$Mate extends _i1.NavigationDestination
-    with _i2.Mate {
+class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate {
   /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip})
   NavigationDestination$Mate({
     /// optionalParameters: {Key? key} , default:none

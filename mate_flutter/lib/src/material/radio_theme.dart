@@ -32,8 +32,7 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
     super.visualDensity,
   })  : mateParams = {
-          'mouseCursor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -43,8 +42,7 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
             init: fillColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

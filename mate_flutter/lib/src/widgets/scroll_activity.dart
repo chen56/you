@@ -120,8 +120,7 @@ class ScrollDragController$Mate extends _i1.ScrollDragController with _i2.Mate {
           details: p.get('details').build(),
           onDragCanceled: p.get('onDragCanceled').build(),
           carriedVelocity: p.get('carriedVelocity').build(),
-          motionStartDistanceThreshold:
-              p.get('motionStartDistanceThreshold').build(),
+          motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
         );
   }
 
@@ -164,8 +163,7 @@ class DragScrollActivity$Mate extends _i1.DragScrollActivity with _i2.Mate {
 }
 
 /// class BallisticScrollActivity extends ScrollActivity
-class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity
-    with _i2.Mate {
+class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity with _i2.Mate {
   /// BallisticScrollActivity BallisticScrollActivity(ScrollActivityDelegate delegate, Simulation simulation, TickerProvider vsync, bool shouldIgnorePointer)
   BallisticScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate

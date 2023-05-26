@@ -157,8 +157,7 @@ class PageScrollPhysics$Mate extends _i1.PageScrollPhysics with _i2.Mate {
         super() {
     mateBuilderName = 'PageScrollPhysics';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
   }
 
   @override

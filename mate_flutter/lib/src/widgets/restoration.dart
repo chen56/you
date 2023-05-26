@@ -51,8 +51,7 @@ class RestorationScope$Mate extends _i1.RestorationScope with _i2.Mate {
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope
-    with _i2.Mate {
+class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope with _i2.Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -50,8 +50,7 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
 }
 
 /// class TrackingScrollController extends ScrollController
-class TrackingScrollController$Mate extends _i1.TrackingScrollController
-    with _i2.Mate {
+class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i2.Mate {
   /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   TrackingScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl

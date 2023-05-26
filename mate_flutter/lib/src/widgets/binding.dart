@@ -7,8 +7,8 @@ import 'package:mate/mate_core.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class RenderObjectToWidgetAdapter<T extends RenderObject> extends RenderObjectWidget
-class RenderObjectToWidgetAdapter$Mate<T extends _i1.RenderObject>
-    extends _i2.RenderObjectToWidgetAdapter<T> with _i3.Mate {
+class RenderObjectToWidgetAdapter$Mate<T extends _i1.RenderObject> extends _i2.RenderObjectToWidgetAdapter<T>
+    with _i3.Mate {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
     /// optionalParameters: {Widget? child} , default:none
@@ -51,8 +51,8 @@ class RenderObjectToWidgetAdapter$Mate<T extends _i1.RenderObject>
 }
 
 /// class RenderObjectToWidgetElement<T extends RenderObject> extends RenderObjectElement with RootElementMixin
-class RenderObjectToWidgetElement$Mate<T extends _i1.RenderObject>
-    extends _i2.RenderObjectToWidgetElement<T> with _i3.Mate {
+class RenderObjectToWidgetElement$Mate<T extends _i1.RenderObject> extends _i2.RenderObjectToWidgetElement<T>
+    with _i3.Mate {
   /// RenderObjectToWidgetElement<T> RenderObjectToWidgetElement(RenderObjectToWidgetAdapter<T> widget)
   RenderObjectToWidgetElement$Mate(
 
@@ -68,8 +68,7 @@ class RenderObjectToWidgetElement$Mate<T extends _i1.RenderObject>
         super() {
     mateBuilderName = 'RenderObjectToWidgetElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
+    mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
   }
 
   @override

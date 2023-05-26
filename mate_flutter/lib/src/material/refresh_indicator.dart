@@ -86,8 +86,7 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             init: backgroundColor,
             isNamed: true,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,
@@ -209,8 +208,7 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             init: backgroundColor,
             isNamed: true,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

@@ -8,8 +8,7 @@ import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class DualTransitionBuilder extends StatefulWidget
-class DualTransitionBuilder$Mate extends _i1.DualTransitionBuilder
-    with _i2.Mate {
+class DualTransitionBuilder$Mate extends _i1.DualTransitionBuilder with _i2.Mate {
   /// DualTransitionBuilder DualTransitionBuilder({Key? key, required Animation<double> animation, required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder, required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder, Widget? child})
   DualTransitionBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none

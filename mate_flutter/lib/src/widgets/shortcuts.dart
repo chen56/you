@@ -12,8 +12,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i8;
 import 'dart:ui' as _i9;
 
 /// class KeySet<T extends KeyboardKey>
-class KeySet$Mate<T extends _i1.KeyboardKey> extends _i2.KeySet<T>
-    with _i3.Mate {
+class KeySet$Mate<T extends _i1.KeyboardKey> extends _i2.KeySet<T> with _i3.Mate {
   /// KeySet<T> KeySet(T key1, [T? key2, T? key3, T? key4])
   KeySet$Mate(
     /// requiredParameters: T key1
@@ -512,8 +511,7 @@ class CallbackShortcuts$Mate extends _i2.CallbackShortcuts with _i3.Mate {
             init: key,
             isNamed: true,
           ),
-          'bindings':
-              _i3.BuilderArg<Map<_i2.ShortcutActivator, _i9.VoidCallback>>(
+          'bindings': _i3.BuilderArg<Map<_i2.ShortcutActivator, _i9.VoidCallback>>(
             name: 'bindings',
             init: bindings,
             isNamed: true,

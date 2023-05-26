@@ -155,8 +155,7 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -184,8 +183,7 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle:
-              p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           tileColor: p.get('tileColor').build(),
           selectedTileColor: p.get('selectedTileColor').build(),
@@ -318,8 +316,7 @@ class ListTileTheme$Mate extends _i1.ListTileTheme with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

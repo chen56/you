@@ -79,8 +79,7 @@ class Scrollbar$Mate extends _i1.Scrollbar with _i2.Mate {
             init: radius,
             isNamed: true,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
+          'notificationPredicate': _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

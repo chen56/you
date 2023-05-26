@@ -42,8 +42,7 @@ class AnnotationEntry$Mate<T> extends _i1.AnnotationEntry<T> with _i2.Mate {
 }
 
 /// class LayerHandle<T extends Layer>
-class LayerHandle$Mate<T extends _i1.Layer> extends _i1.LayerHandle<T>
-    with _i2.Mate {
+class LayerHandle$Mate<T extends _i1.Layer> extends _i1.LayerHandle<T> with _i2.Mate {
   /// LayerHandle<T> LayerHandle([T? _layer])
   LayerHandle$Mate(
 
@@ -178,8 +177,7 @@ class PlatformViewLayer$Mate extends _i1.PlatformViewLayer with _i2.Mate {
 }
 
 /// class PerformanceOverlayLayer extends Layer
-class PerformanceOverlayLayer$Mate extends _i1.PerformanceOverlayLayer
-    with _i2.Mate {
+class PerformanceOverlayLayer$Mate extends _i1.PerformanceOverlayLayer with _i2.Mate {
   /// PerformanceOverlayLayer PerformanceOverlayLayer({required Rect overlayRect, required int optionsMask, required int rasterizerThreshold, required bool checkerboardRasterCacheImages, required bool checkerboardOffscreenLayers})
   PerformanceOverlayLayer$Mate({
     /// optionalParameters: {required Rect overlayRect} , default:none
@@ -230,10 +228,8 @@ class PerformanceOverlayLayer$Mate extends _i1.PerformanceOverlayLayer
           overlayRect: p.get('overlayRect').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
   }
 
@@ -388,8 +384,7 @@ class ColorFilterLayer$Mate extends _i1.ColorFilterLayer with _i2.Mate {
         super() {
     mateBuilderName = 'ColorFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
+    mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
   }
 
   @override
@@ -732,8 +727,7 @@ class FollowerLayer$Mate extends _i1.FollowerLayer with _i2.Mate {
 }
 
 /// class AnnotatedRegionLayer<T extends Object> extends ContainerLayer
-class AnnotatedRegionLayer$Mate<T extends Object>
-    extends _i1.AnnotatedRegionLayer<T> with _i2.Mate {
+class AnnotatedRegionLayer$Mate<T extends Object> extends _i1.AnnotatedRegionLayer<T> with _i2.Mate {
   /// AnnotatedRegionLayer<T> AnnotatedRegionLayer(T value, {Size? size, Offset? offset, bool opaque = false})
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value

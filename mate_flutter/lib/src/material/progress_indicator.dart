@@ -8,8 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/animation/animation.dart' as _i5;
 
 /// class LinearProgressIndicator extends ProgressIndicator
-class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator
-    with _i2.Mate {
+class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.Mate {
   /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue})
   LinearProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -97,8 +96,7 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
-class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator
-    with _i2.Mate {
+class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with _i2.Mate {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -261,8 +259,7 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator
 }
 
 /// class RefreshProgressIndicator extends CircularProgressIndicator
-class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator
-    with _i2.Mate {
+class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i2.Mate {
   /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, String? semanticsLabel, String? semanticsValue})
   RefreshProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none

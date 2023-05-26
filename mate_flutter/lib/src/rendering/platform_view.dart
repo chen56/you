@@ -34,8 +34,7 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -85,8 +84,7 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -107,8 +105,7 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
 }
 
 /// class PlatformViewRenderBox extends RenderBox with _PlatformViewGestureMixin
-class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox
-    with _i2.Mate {
+class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox with _i2.Mate {
   /// PlatformViewRenderBox PlatformViewRenderBox({required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewRenderBox$Mate({
     /// optionalParameters: {required PlatformViewController controller} , default:none
@@ -130,8 +127,7 @@ class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<
-              Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,

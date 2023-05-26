@@ -278,8 +278,7 @@ class CupertinoPicker$Mate extends _i1.CupertinoPicker with _i2.Mate {
 }
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
-class CupertinoPickerDefaultSelectionOverlay$Mate
-    extends _i1.CupertinoPickerDefaultSelectionOverlay with _i2.Mate {
+class CupertinoPickerDefaultSelectionOverlay$Mate extends _i1.CupertinoPickerDefaultSelectionOverlay with _i2.Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , default:none

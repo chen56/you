@@ -75,8 +75,7 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
             init: textStyle,
             isNamed: true,
           ),
-          'labelTextStyle':
-              _i2.BuilderArg<_i6.MaterialStateProperty<_i5.TextStyle?>?>(
+          'labelTextStyle': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
@@ -86,8 +85,7 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i6.MaterialStateProperty<_i7.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i6.MaterialStateProperty<_i7.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

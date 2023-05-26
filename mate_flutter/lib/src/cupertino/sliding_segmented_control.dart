@@ -11,8 +11,7 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i7;
 import 'package:flutter/cupertino.dart' as _i8;
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
-class CupertinoSlidingSegmentedControl$Mate<T>
-    extends _i1.CupertinoSlidingSegmentedControl<T> with _i2.Mate {
+class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegmentedControl<T> with _i2.Mate {
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 
 /// class SliverPersistentHeader extends StatelessWidget
-class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader
-    with _i2.Mate {
+class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader with _i2.Mate {
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
     /// optionalParameters: {Key? key} , default:none

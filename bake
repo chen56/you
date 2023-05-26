@@ -124,12 +124,12 @@ fi
 
 # copy from flutter
 # ----------------------
-# On Mac OS, readlink -f doesn't work, so bake.readlink traverses the path one
+# On Mac OS, readlink -f doesn't work, so bake._real_path traverses the path one
 # link at a time, and then cds into the link destination and find out where it
 # ends up.
 # The function is enclosed in a subshell to avoid changing the working directory
 # of the caller.
-function _readlink() (
+function _real_path() (
   cd -P "$(dirname -- "$1")"
   file="$PWD/$(basename -- "$1")"
   while [[ -L "$file" ]]; do
@@ -140,8 +140,9 @@ function _readlink() (
   done
   echo "$file"
 )
+
 # bake context
-BAKE_PATH="$(_readlink "${BASH_SOURCE[0]}")"
+BAKE_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}" # set workdir
@@ -197,7 +198,7 @@ _stack_frame() {
 
     # clickable stack:
     # /Users/c/git/younpc/note/test/bake2_test.bash:38 bake.test.runTest()
-    printf "%s\n" "$(_readlink $file):$no $func()" >&2
+    printf "%s\n" "$(_real_path $file):$no $func()" >&2
 
     i=$((i + 1))
   done
@@ -769,38 +770,72 @@ run() {
   # only work on macos
   # shellcheck disable=SC2155
   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
-  note_app flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
+  note_app flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome "$@"
 }
 
 build() {
-  note_app flutter build web -v  \
+  note_app flutter build web -v \
     --release --tree-shake-icons \
     --web-renderer html "$@"
 }
 
+preview.web() {
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+  #  build "$@"
+  # 	npx http-server ./app_note/build/web --port 8000
+  _exec deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./note_app/build/web --port 8000 -g --brotli
+}
+preview.macos() (
+  cd note_app
+  _exec flutter build macos -v \
+    --release --tree-shake-icons "$@"
+  _exec open build/macos/Build/Products/Release/note_app.app
+)
+
+clean() {
+  all flutter clean
+}
+gen() {
+  (
+    cd note_app
+    _exec dart run tools/gen.dart
+  )
+  (
+    cd mate_flutter
+    _exec flutter test  tools/gen_mates.dart
+    _exec flutter test  tools/gen_mate_icons.dart
+  )
+}
+regen() {
+  echo "regen1"
+  _exec rm -f note_app/lib/pages.g.dart
+  _exec rm -rf mate_flutter/lib
+  gen
+}
+
 docker.build() (
-    _exec docker build --progress plain --tag younpc/note:latest . ;
-    _exec mkdir -p build/web
-    _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
+  _exec docker build --progress plain --tag younpc/note:latest .
+  _exec mkdir -p build/web
+  _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
 )
 docker.run() {
-    _exec echo  "note preview http://localhost:8888/note/"
-    _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note
+  _exec echo "note preview http://localhost:8888/note/"
+  _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note
 }
 docker.preview() {
-  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest . ;
+  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest .
   docker.run
 }
 
-preview() {
-  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-#  build "$@"
-  # 	npx http-server ./app_note/build/web --port 8000
-  _exec deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./note_app/build/web --port 8000 -g --brotli
+docker.debug() {
+  _exec docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash
+}
+
+docker.push() {
+  docker image push younpc/note:latest
 }
 
 ####################################################
 # app entry script & _root cmd
 ####################################################
-
 bake.go "$@"

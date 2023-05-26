@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class ScrollNotificationObserver extends StatefulWidget
-class ScrollNotificationObserver$Mate extends _i1.ScrollNotificationObserver
-    with _i2.Mate {
+class ScrollNotificationObserver$Mate extends _i1.ScrollNotificationObserver with _i2.Mate {
   /// ScrollNotificationObserver ScrollNotificationObserver({Key? key, required Widget child})
   ScrollNotificationObserver$Mate({
     /// optionalParameters: {Key? key} , default:none

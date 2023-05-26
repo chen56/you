@@ -99,8 +99,7 @@ class FlexibleSpaceBar$Mate extends _i1.FlexibleSpaceBar with _i2.Mate {
 }
 
 /// class FlexibleSpaceBarSettings extends InheritedWidget
-class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings
-    with _i2.Mate {
+class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i2.Mate {
   /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
   FlexibleSpaceBarSettings$Mate({
     /// optionalParameters: {Key? key} , default:none

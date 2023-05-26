@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/scroll_delegate.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList
-    with _i2.Mate {
+class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with _i2.Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none

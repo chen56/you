@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'dart:typed_data' as _i3;
 
 /// class KeyboardInsertedContent
-class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent
-    with _i2.Mate {
+class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent with _i2.Mate {
   /// KeyboardInsertedContent KeyboardInsertedContent({required String mimeType, required String uri, Uint8List? data})
   KeyboardInsertedContent$Mate({
     /// optionalParameters: {required String mimeType} , default:none
@@ -60,8 +59,7 @@ class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent
         super.fromJson() {
     mateBuilderName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
+    mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
   }
 
   @override

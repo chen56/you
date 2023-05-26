@@ -75,8 +75,7 @@ class ScrollbarThemeData$Mate extends _i1.ScrollbarThemeData with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackBorderColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'trackBorderColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'trackBorderColor',
             init: trackBorderColor,
             isNamed: true,

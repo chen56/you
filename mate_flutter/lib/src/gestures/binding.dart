@@ -9,8 +9,8 @@ import 'package:flutter/src/gestures/hit_test.dart' as _i5;
 import 'package:flutter/src/foundation/assertions.dart' as _i6;
 
 /// class FlutterErrorDetailsForPointerEventDispatcher extends FlutterErrorDetails
-class FlutterErrorDetailsForPointerEventDispatcher$Mate
-    extends _i1.FlutterErrorDetailsForPointerEventDispatcher with _i2.Mate {
+class FlutterErrorDetailsForPointerEventDispatcher$Mate extends _i1.FlutterErrorDetailsForPointerEventDispatcher
+    with _i2.Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
     /// optionalParameters: {required Object exception} , default:none

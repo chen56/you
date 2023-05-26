@@ -146,8 +146,7 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
 }
 
 /// class RenderShrinkWrappingViewport extends RenderViewportBase<SliverLogicalContainerParentData>
-class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
-    with _i2.Mate {
+class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport with _i2.Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl

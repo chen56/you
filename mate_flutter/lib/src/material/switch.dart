@@ -160,8 +160,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -197,8 +196,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -407,8 +405,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -439,8 +436,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: hoverColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

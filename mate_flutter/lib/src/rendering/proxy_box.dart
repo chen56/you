@@ -205,8 +205,7 @@ class RenderIntrinsicWidth$Mate extends _i1.RenderIntrinsicWidth with _i2.Mate {
 }
 
 /// class RenderIntrinsicHeight extends RenderProxyBox
-class RenderIntrinsicHeight$Mate extends _i1.RenderIntrinsicHeight
-    with _i2.Mate {
+class RenderIntrinsicHeight$Mate extends _i1.RenderIntrinsicHeight with _i2.Mate {
   /// RenderIntrinsicHeight RenderIntrinsicHeight({RenderBox? child})
   RenderIntrinsicHeight$Mate(
       {
@@ -222,8 +221,7 @@ class RenderIntrinsicHeight$Mate extends _i1.RenderIntrinsicHeight
         super() {
     mateBuilderName = 'RenderIntrinsicHeight';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
   }
 
   @override
@@ -276,8 +274,7 @@ class RenderOpacity$Mate extends _i1.RenderOpacity with _i2.Mate {
 }
 
 /// class RenderAnimatedOpacity extends RenderProxyBox with RenderAnimatedOpacityMixin<RenderBox>
-class RenderAnimatedOpacity$Mate extends _i1.RenderAnimatedOpacity
-    with _i2.Mate {
+class RenderAnimatedOpacity$Mate extends _i1.RenderAnimatedOpacity with _i2.Mate {
   /// RenderAnimatedOpacity RenderAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderBox? child})
   RenderAnimatedOpacity$Mate({
     /// optionalParameters: {required Animation<double> opacity} , default:none
@@ -990,8 +987,7 @@ class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
 }
 
 /// class RenderFractionalTranslation extends RenderProxyBox
-class RenderFractionalTranslation$Mate extends _i1.RenderFractionalTranslation
-    with _i2.Mate {
+class RenderFractionalTranslation$Mate extends _i1.RenderFractionalTranslation with _i2.Mate {
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
     /// optionalParameters: {required Offset translation} , default:none
@@ -1035,8 +1031,7 @@ class RenderFractionalTranslation$Mate extends _i1.RenderFractionalTranslation
 }
 
 /// class RenderPointerListener extends RenderProxyBoxWithHitTestBehavior
-class RenderPointerListener$Mate extends _i1.RenderPointerListener
-    with _i2.Mate {
+class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate {
   /// RenderPointerListener RenderPointerListener({void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, RenderBox? child})
   RenderPointerListener$Mate({
     /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
@@ -1097,20 +1092,17 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener
             init: onPointerCancel,
             isNamed: true,
           ),
-          'onPointerPanZoomStart':
-              _i2.BuilderArg<_i1.PointerPanZoomStartEventListener?>(
+          'onPointerPanZoomStart': _i2.BuilderArg<_i1.PointerPanZoomStartEventListener?>(
             name: 'onPointerPanZoomStart',
             init: onPointerPanZoomStart,
             isNamed: true,
           ),
-          'onPointerPanZoomUpdate':
-              _i2.BuilderArg<_i1.PointerPanZoomUpdateEventListener?>(
+          'onPointerPanZoomUpdate': _i2.BuilderArg<_i1.PointerPanZoomUpdateEventListener?>(
             name: 'onPointerPanZoomUpdate',
             init: onPointerPanZoomUpdate,
             isNamed: true,
           ),
-          'onPointerPanZoomEnd':
-              _i2.BuilderArg<_i1.PointerPanZoomEndEventListener?>(
+          'onPointerPanZoomEnd': _i2.BuilderArg<_i1.PointerPanZoomEndEventListener?>(
             name: 'onPointerPanZoomEnd',
             init: onPointerPanZoomEnd,
             isNamed: true,
@@ -1247,8 +1239,7 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
 }
 
 /// class RenderRepaintBoundary extends RenderProxyBox
-class RenderRepaintBoundary$Mate extends _i1.RenderRepaintBoundary
-    with _i2.Mate {
+class RenderRepaintBoundary$Mate extends _i1.RenderRepaintBoundary with _i2.Mate {
   /// RenderRepaintBoundary RenderRepaintBoundary({RenderBox? child})
   RenderRepaintBoundary$Mate(
       {
@@ -1264,8 +1255,7 @@ class RenderRepaintBoundary$Mate extends _i1.RenderRepaintBoundary
         super() {
     mateBuilderName = 'RenderRepaintBoundary';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
   }
 
   @override
@@ -1440,8 +1430,7 @@ class RenderMetaData$Mate extends _i1.RenderMetaData with _i2.Mate {
 }
 
 /// class RenderSemanticsGestureHandler extends RenderProxyBoxWithHitTestBehavior
-class RenderSemanticsGestureHandler$Mate
-    extends _i1.RenderSemanticsGestureHandler with _i2.Mate {
+class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandler with _i2.Mate {
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1480,14 +1469,12 @@ class RenderSemanticsGestureHandler$Mate
             init: onLongPress,
             isNamed: true,
           ),
-          'onHorizontalDragUpdate':
-              _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+          'onHorizontalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
             name: 'onHorizontalDragUpdate',
             init: onHorizontalDragUpdate,
             isNamed: true,
           ),
-          'onVerticalDragUpdate':
-              _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+          'onVerticalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
             name: 'onVerticalDragUpdate',
             init: onVerticalDragUpdate,
             isNamed: true,
@@ -1524,8 +1511,7 @@ class RenderSemanticsGestureHandler$Mate
 }
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
-class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations
-    with _i2.Mate {
+class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations with _i2.Mate {
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1649,8 +1635,7 @@ class RenderMergeSemantics$Mate extends _i1.RenderMergeSemantics with _i2.Mate {
         super() {
     mateBuilderName = 'RenderMergeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
   }
 
   @override
@@ -1658,8 +1643,7 @@ class RenderMergeSemantics$Mate extends _i1.RenderMergeSemantics with _i2.Mate {
 }
 
 /// class RenderExcludeSemantics extends RenderProxyBox
-class RenderExcludeSemantics$Mate extends _i1.RenderExcludeSemantics
-    with _i2.Mate {
+class RenderExcludeSemantics$Mate extends _i1.RenderExcludeSemantics with _i2.Mate {
   /// RenderExcludeSemantics RenderExcludeSemantics({RenderBox? child, bool excluding = true})
   RenderExcludeSemantics$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1694,8 +1678,7 @@ class RenderExcludeSemantics$Mate extends _i1.RenderExcludeSemantics
 }
 
 /// class RenderIndexedSemantics extends RenderProxyBox
-class RenderIndexedSemantics$Mate extends _i1.RenderIndexedSemantics
-    with _i2.Mate {
+class RenderIndexedSemantics$Mate extends _i1.RenderIndexedSemantics with _i2.Mate {
   /// RenderIndexedSemantics RenderIndexedSemantics({RenderBox? child, required int index})
   RenderIndexedSemantics$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1837,8 +1820,7 @@ class RenderFollowerLayer$Mate extends _i1.RenderFollowerLayer with _i2.Mate {
 }
 
 /// class RenderAnnotatedRegion<T extends Object> extends RenderProxyBox
-class RenderAnnotatedRegion$Mate<T extends Object>
-    extends _i1.RenderAnnotatedRegion<T> with _i2.Mate {
+class RenderAnnotatedRegion$Mate<T extends Object> extends _i1.RenderAnnotatedRegion<T> with _i2.Mate {
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
     /// optionalParameters: {required T value} , default:none

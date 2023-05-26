@@ -9,8 +9,7 @@ import 'package:flutter/cupertino.dart' as _i5;
 import 'package:flutter/src/services/text_input.dart' as _i6;
 
 /// class Autocomplete<T extends Object> extends StatelessWidget
-class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T>
-    with _i2.Mate {
+class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.Mate {
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -47,8 +46,7 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T>
             init: optionsBuilder,
             isNamed: true,
           ),
-          'displayStringForOption':
-              _i2.BuilderArg<_i4.AutocompleteOptionToString<T>>(
+          'displayStringForOption': _i2.BuilderArg<_i4.AutocompleteOptionToString<T>>(
             name: 'displayStringForOption',
             init: displayStringForOption,
             isNamed: true,
@@ -70,8 +68,7 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T>
             isNamed: true,
             defaultValue: 200.0,
           ),
-          'optionsViewBuilder':
-              _i2.BuilderArg<_i4.AutocompleteOptionsViewBuilder<T>?>(
+          'optionsViewBuilder': _i2.BuilderArg<_i4.AutocompleteOptionsViewBuilder<T>?>(
             name: 'optionsViewBuilder',
             init: optionsViewBuilder,
             isNamed: true,

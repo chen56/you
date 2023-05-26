@@ -42,8 +42,7 @@ class CheckboxThemeData$Mate extends _i1.CheckboxThemeData with _i2.Mate {
     /// optionalParameters: {BorderSide? side} , default:none
     super.side,
   })  : mateParams = {
-          'mouseCursor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -58,8 +57,7 @@ class CheckboxThemeData$Mate extends _i1.CheckboxThemeData with _i2.Mate {
             init: checkColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

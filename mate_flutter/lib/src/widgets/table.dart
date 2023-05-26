@@ -112,8 +112,7 @@ class Table$Mate extends _i1.Table with _i2.Mate {
             init: border,
             isNamed: true,
           ),
-          'defaultVerticalAlignment':
-              _i2.BuilderArg<_i6.TableCellVerticalAlignment>(
+          'defaultVerticalAlignment': _i2.BuilderArg<_i6.TableCellVerticalAlignment>(
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,

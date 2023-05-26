@@ -84,8 +84,7 @@ class CupertinoScrollbar$Mate extends _i1.CupertinoScrollbar with _i2.Mate {
             init: radiusWhileDragging,
             isNamed: true,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
+          'notificationPredicate': _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

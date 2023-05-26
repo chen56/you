@@ -5,8 +5,7 @@ import 'package:flutter/src/gestures/hit_test.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class HitTestEntry<T extends HitTestTarget>
-class HitTestEntry$Mate<T extends _i1.HitTestTarget> extends _i1.HitTestEntry<T>
-    with _i2.Mate {
+class HitTestEntry$Mate<T extends _i1.HitTestTarget> extends _i1.HitTestEntry<T> with _i2.Mate {
   /// HitTestEntry<T> HitTestEntry(T target)
   HitTestEntry$Mate(
 

@@ -64,8 +64,7 @@ class MagnifierInfo$Mate extends _i1.MagnifierInfo with _i2.Mate {
 }
 
 /// class TextMagnifierConfiguration
-class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration
-    with _i2.Mate {
+class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration with _i2.Mate {
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
     /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , default:none
@@ -91,8 +90,7 @@ class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
-          shouldDisplayHandlesInMagnifier:
-              p.get('shouldDisplayHandlesInMagnifier').build(),
+          shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
         );
   }
 
@@ -117,8 +115,7 @@ class MagnifierController$Mate extends _i1.MagnifierController with _i2.Mate {
         super() {
     mateBuilderName = 'MagnifierController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => MagnifierController$Mate(
-        animationController: p.get('animationController').build());
+    mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
   }
 
   @override

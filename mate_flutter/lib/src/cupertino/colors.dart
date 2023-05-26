@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class CupertinoDynamicColor extends Color with Diagnosticable
-class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor
-    with _i2.Mate {
+class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor with _i2.Mate {
   /// CupertinoDynamicColor CupertinoDynamicColor({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor, required Color elevatedColor, required Color darkElevatedColor, required Color highContrastElevatedColor, required Color darkHighContrastElevatedColor})
   CupertinoDynamicColor$Mate({
     /// optionalParameters: {String? debugLabel} , default:none
@@ -95,8 +94,7 @@ class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor
           elevatedColor: p.get('elevatedColor').build(),
           darkElevatedColor: p.get('darkElevatedColor').build(),
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
-          darkHighContrastElevatedColor:
-              p.get('darkHighContrastElevatedColor').build(),
+          darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
         );
   }
 

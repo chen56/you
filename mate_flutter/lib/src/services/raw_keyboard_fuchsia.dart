@@ -5,8 +5,7 @@ import 'package:flutter/src/services/raw_keyboard_fuchsia.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class RawKeyEventDataFuchsia extends RawKeyEventData
-class RawKeyEventDataFuchsia$Mate extends _i1.RawKeyEventDataFuchsia
-    with _i2.Mate {
+class RawKeyEventDataFuchsia$Mate extends _i1.RawKeyEventDataFuchsia with _i2.Mate {
   /// RawKeyEventDataFuchsia RawKeyEventDataFuchsia({int hidUsage = 0, int codePoint = 0, int modifiers = 0})
   RawKeyEventDataFuchsia$Mate({
     /// optionalParameters: {int hidUsage = 0} , default:processed=IntegerLiteralImpl

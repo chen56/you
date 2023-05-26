@@ -91,8 +91,7 @@ class PlatformException$Mate extends _i1.PlatformException with _i2.Mate {
 }
 
 /// class MissingPluginException implements Exception
-class MissingPluginException$Mate extends _i1.MissingPluginException
-    with _i2.Mate {
+class MissingPluginException$Mate extends _i1.MissingPluginException with _i2.Mate {
   /// MissingPluginException MissingPluginException([String? message])
   MissingPluginException$Mate(
 

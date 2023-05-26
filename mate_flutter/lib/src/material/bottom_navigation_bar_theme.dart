@@ -13,8 +13,7 @@ import 'package:flutter/src/foundation/key.dart' as _i9;
 import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class BottomNavigationBarThemeData with Diagnosticable
-class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
-    with _i2.Mate {
+class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData with _i2.Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
@@ -119,14 +118,12 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
             init: enableFeedback,
             isNamed: true,
           ),
-          'landscapeLayout':
-              _i2.BuilderArg<_i6.BottomNavigationBarLandscapeLayout?>(
+          'landscapeLayout': _i2.BuilderArg<_i6.BottomNavigationBarLandscapeLayout?>(
             name: 'landscapeLayout',
             init: landscapeLayout,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -158,8 +155,7 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
 }
 
 /// class BottomNavigationBarTheme extends InheritedWidget
-class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme
-    with _i2.Mate {
+class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme with _i2.Mate {
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none

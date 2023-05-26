@@ -11,8 +11,7 @@ import 'package:flutter/src/foundation/change_notifier.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class RawAutocomplete<T extends Object> extends StatefulWidget
-class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T>
-    with _i2.Mate {
+class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with _i2.Mate {
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -47,8 +46,7 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T>
             init: key,
             isNamed: true,
           ),
-          'optionsViewBuilder':
-              _i2.BuilderArg<_i1.AutocompleteOptionsViewBuilder<T>>(
+          'optionsViewBuilder': _i2.BuilderArg<_i1.AutocompleteOptionsViewBuilder<T>>(
             name: 'optionsViewBuilder',
             init: optionsViewBuilder,
             isNamed: true,
@@ -58,8 +56,7 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T>
             init: optionsBuilder,
             isNamed: true,
           ),
-          'displayStringForOption':
-              _i2.BuilderArg<_i1.AutocompleteOptionToString<T>>(
+          'displayStringForOption': _i2.BuilderArg<_i1.AutocompleteOptionToString<T>>(
             name: 'displayStringForOption',
             init: displayStringForOption,
             isNamed: true,
@@ -111,8 +108,7 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T>
 }
 
 /// class AutocompleteHighlightedOption extends InheritedNotifier<ValueNotifier<int>>
-class AutocompleteHighlightedOption$Mate
-    extends _i1.AutocompleteHighlightedOption with _i2.Mate {
+class AutocompleteHighlightedOption$Mate extends _i1.AutocompleteHighlightedOption with _i2.Mate {
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
     /// optionalParameters: {Key? key} , default:none

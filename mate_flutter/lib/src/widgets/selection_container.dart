@@ -88,8 +88,7 @@ class SelectionContainer$Mate extends _i1.SelectionContainer with _i2.Mate {
 }
 
 /// class SelectionRegistrarScope extends InheritedWidget
-class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope
-    with _i2.Mate {
+class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope with _i2.Mate {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
     /// optionalParameters: {Key? key} , default:none

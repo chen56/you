@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class MaterialPointArcTween extends Tween<Offset>
-class MaterialPointArcTween$Mate extends _i1.MaterialPointArcTween
-    with _i2.Mate {
+class MaterialPointArcTween$Mate extends _i1.MaterialPointArcTween with _i2.Mate {
   /// MaterialPointArcTween MaterialPointArcTween({Offset? begin, Offset? end})
   MaterialPointArcTween$Mate({
     /// optionalParameters: {Offset? begin} , default:none
@@ -75,8 +74,7 @@ class MaterialRectArcTween$Mate extends _i1.MaterialRectArcTween with _i2.Mate {
 }
 
 /// class MaterialRectCenterArcTween extends RectTween
-class MaterialRectCenterArcTween$Mate extends _i1.MaterialRectCenterArcTween
-    with _i2.Mate {
+class MaterialRectCenterArcTween$Mate extends _i1.MaterialRectCenterArcTween with _i2.Mate {
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
     /// optionalParameters: {Rect? begin} , default:none

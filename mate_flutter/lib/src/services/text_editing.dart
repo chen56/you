@@ -99,8 +99,7 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
         super.fromPosition() {
     mateBuilderName = 'TextSelection.fromPosition';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => TextSelection$Mate.fromPosition(p.get('position').value);
+    mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
   }
 
   @override

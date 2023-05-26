@@ -115,8 +115,7 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
 }
 
 /// class RenderConstrainedOverflowBox extends RenderAligningShiftedBox
-class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
-    with _i2.Mate {
+class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox with _i2.Mate {
   /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderConstrainedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -196,8 +195,7 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
 }
 
 /// class RenderConstraintsTransformBox extends RenderAligningShiftedBox with DebugOverflowIndicatorMixin
-class RenderConstraintsTransformBox$Mate
-    extends _i1.RenderConstraintsTransformBox with _i2.Mate {
+class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformBox with _i2.Mate {
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
     /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
@@ -260,8 +258,7 @@ class RenderConstraintsTransformBox$Mate
 }
 
 /// class RenderSizedOverflowBox extends RenderAligningShiftedBox
-class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox
-    with _i2.Mate {
+class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox with _i2.Mate {
   /// RenderSizedOverflowBox RenderSizedOverflowBox({RenderBox? child, required Size requestedSize, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderSizedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -314,8 +311,7 @@ class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox
 }
 
 /// class RenderFractionallySizedOverflowBox extends RenderAligningShiftedBox
-class RenderFractionallySizedOverflowBox$Mate
-    extends _i1.RenderFractionallySizedOverflowBox with _i2.Mate {
+class RenderFractionallySizedOverflowBox$Mate extends _i1.RenderFractionallySizedOverflowBox with _i2.Mate {
   /// RenderFractionallySizedOverflowBox RenderFractionallySizedOverflowBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderFractionallySizedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -377,8 +373,7 @@ class RenderFractionallySizedOverflowBox$Mate
 }
 
 /// class RenderCustomSingleChildLayoutBox extends RenderShiftedBox
-class RenderCustomSingleChildLayoutBox$Mate
-    extends _i1.RenderCustomSingleChildLayoutBox with _i2.Mate {
+class RenderCustomSingleChildLayoutBox$Mate extends _i1.RenderCustomSingleChildLayoutBox with _i2.Mate {
   /// RenderCustomSingleChildLayoutBox RenderCustomSingleChildLayoutBox({RenderBox? child, required SingleChildLayoutDelegate delegate})
   RenderCustomSingleChildLayoutBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none

@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 
 /// class TextSelectionToolbarAnchors
-class TextSelectionToolbarAnchors$Mate extends _i1.TextSelectionToolbarAnchors
-    with _i2.Mate {
+class TextSelectionToolbarAnchors$Mate extends _i1.TextSelectionToolbarAnchors with _i2.Mate {
   /// TextSelectionToolbarAnchors TextSelectionToolbarAnchors({required Offset primaryAnchor, Offset? secondaryAnchor})
   TextSelectionToolbarAnchors$Mate({
     /// optionalParameters: {required Offset primaryAnchor} , default:none

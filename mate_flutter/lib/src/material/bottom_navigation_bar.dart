@@ -193,8 +193,7 @@ class BottomNavigationBar$Mate extends _i1.BottomNavigationBar with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'landscapeLayout':
-              _i2.BuilderArg<_i1.BottomNavigationBarLandscapeLayout?>(
+          'landscapeLayout': _i2.BuilderArg<_i1.BottomNavigationBarLandscapeLayout?>(
             name: 'landscapeLayout',
             init: landscapeLayout,
             isNamed: true,

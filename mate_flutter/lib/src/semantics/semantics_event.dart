@@ -7,8 +7,7 @@ import 'dart:ui' as _i3;
 import 'package:flutter/semantics.dart' as _i4;
 
 /// class AnnounceSemanticsEvent extends SemanticsEvent
-class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent
-    with _i2.Mate {
+class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Mate {
   /// AnnounceSemanticsEvent AnnounceSemanticsEvent(String message, TextDirection textDirection, {Assertiveness assertiveness = Assertiveness.polite})
   AnnounceSemanticsEvent$Mate(
     /// requiredParameters: String message
@@ -51,8 +50,7 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent
 }
 
 /// class TooltipSemanticsEvent extends SemanticsEvent
-class TooltipSemanticsEvent$Mate extends _i1.TooltipSemanticsEvent
-    with _i2.Mate {
+class TooltipSemanticsEvent$Mate extends _i1.TooltipSemanticsEvent with _i2.Mate {
   /// TooltipSemanticsEvent TooltipSemanticsEvent(String message)
   TooltipSemanticsEvent$Mate(
 

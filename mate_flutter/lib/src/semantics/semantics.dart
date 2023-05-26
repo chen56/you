@@ -35,8 +35,7 @@ class SemanticsTag$Mate extends _i1.SemanticsTag with _i2.Mate {
 }
 
 /// class CustomSemanticsAction
-class CustomSemanticsAction$Mate extends _i1.CustomSemanticsAction
-    with _i2.Mate {
+class CustomSemanticsAction$Mate extends _i1.CustomSemanticsAction with _i2.Mate {
   /// CustomSemanticsAction CustomSemanticsAction({required String label})
   CustomSemanticsAction$Mate(
       {
@@ -52,8 +51,7 @@ class CustomSemanticsAction$Mate extends _i1.CustomSemanticsAction
         super() {
     mateBuilderName = 'CustomSemanticsAction';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder =
-        (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
+    mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
   }
 
   /// CustomSemanticsAction CustomSemanticsAction.overridingAction({required String hint, required SemanticsAction action})
@@ -122,8 +120,7 @@ class AttributedString$Mate extends _i1.AttributedString with _i2.Mate {
 }
 
 /// class AttributedStringProperty extends DiagnosticsProperty<AttributedString>
-class AttributedStringProperty$Mate extends _i1.AttributedStringProperty
-    with _i2.Mate {
+class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i2.Mate {
   /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info, String? description})
   AttributedStringProperty$Mate(
     /// requiredParameters: String name
@@ -436,8 +433,7 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
 }
 
 /// class SemanticsHintOverrides extends DiagnosticableTree
-class SemanticsHintOverrides$Mate extends _i1.SemanticsHintOverrides
-    with _i2.Mate {
+class SemanticsHintOverrides$Mate extends _i1.SemanticsHintOverrides with _i2.Mate {
   /// SemanticsHintOverrides SemanticsHintOverrides({String? onTapHint, String? onLongPressHint})
   SemanticsHintOverrides$Mate({
     /// optionalParameters: {String? onTapHint} , default:none
@@ -904,14 +900,12 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
             init: onPaste,
             isNamed: true,
           ),
-          'onMoveCursorForwardByCharacter':
-              _i2.BuilderArg<_i1.MoveCursorHandler?>(
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i1.MoveCursorHandler?>(
             name: 'onMoveCursorForwardByCharacter',
             init: onMoveCursorForwardByCharacter,
             isNamed: true,
           ),
-          'onMoveCursorBackwardByCharacter':
-              _i2.BuilderArg<_i1.MoveCursorHandler?>(
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i1.MoveCursorHandler?>(
             name: 'onMoveCursorBackwardByCharacter',
             init: onMoveCursorBackwardByCharacter,
             isNamed: true,
@@ -951,8 +945,7 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'customSemanticsActions':
-              _i2.BuilderArg<Map<_i1.CustomSemanticsAction, _i3.VoidCallback>?>(
+          'customSemanticsActions': _i2.BuilderArg<Map<_i1.CustomSemanticsAction, _i3.VoidCallback>?>(
             name: 'customSemanticsActions',
             init: customSemanticsActions,
             isNamed: true,
@@ -1012,19 +1005,14 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
           onCopy: p.get('onCopy').build(),
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
-          onMoveCursorForwardByCharacter:
-              p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter:
-              p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
           onMoveCursorForwardByWord: p.get('onMoveCursorForwardByWord').build(),
-          onMoveCursorBackwardByWord:
-              p.get('onMoveCursorBackwardByWord').build(),
+          onMoveCursorBackwardByWord: p.get('onMoveCursorBackwardByWord').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus:
-              p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus:
-              p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
@@ -1122,8 +1110,7 @@ class SemanticsOwner$Mate extends _i1.SemanticsOwner with _i2.Mate {
         super() {
     mateBuilderName = 'SemanticsOwner';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder = (p) => SemanticsOwner$Mate(
-        onSemanticsUpdate: p.get('onSemanticsUpdate').build());
+    mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
   }
 
   @override

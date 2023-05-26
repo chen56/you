@@ -24,8 +24,7 @@ class MenuButtonThemeData$Mate extends _i1.MenuButtonThemeData with _i2.Mate {
         super() {
     mateBuilderName = 'MenuButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

@@ -61,10 +61,8 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
   }
 
@@ -112,10 +110,8 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
   }
 

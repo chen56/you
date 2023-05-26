@@ -8,8 +8,7 @@ import 'package:flutter/src/foundation/key.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class ElevatedButtonThemeData with Diagnosticable
-class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData
-    with _i2.Mate {
+class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData with _i2.Mate {
   /// ElevatedButtonThemeData ElevatedButtonThemeData({ButtonStyle? style})
   ElevatedButtonThemeData$Mate(
       {
@@ -25,8 +24,7 @@ class ElevatedButtonThemeData$Mate extends _i1.ElevatedButtonThemeData
         super() {
     mateBuilderName = 'ElevatedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

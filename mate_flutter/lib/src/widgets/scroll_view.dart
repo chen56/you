@@ -147,8 +147,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -350,8 +349,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -566,8 +564,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -768,8 +765,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -941,8 +937,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -1142,8 +1137,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: _i12.Clip.hardEdge,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -1343,8 +1337,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -1509,8 +1502,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -1724,8 +1716,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -1945,8 +1936,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: _i11.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,

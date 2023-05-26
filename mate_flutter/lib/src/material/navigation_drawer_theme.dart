@@ -12,8 +12,7 @@ import 'package:flutter/src/foundation/key.dart' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class NavigationDrawerThemeData with Diagnosticable
-class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData
-    with _i2.Mate {
+class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData with _i2.Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
     /// optionalParameters: {double? tileHeight} , default:none
@@ -86,14 +85,12 @@ class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData
             init: indicatorSize,
             isNamed: true,
           ),
-          'labelTextStyle':
-              _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
+          'labelTextStyle': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
             name: 'labelTextStyle',
             init: labelTextStyle,
             isNamed: true,
           ),
-          'iconTheme':
-              _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
+          'iconTheme': _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
@@ -121,8 +118,7 @@ class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData
 }
 
 /// class NavigationDrawerTheme extends InheritedTheme
-class NavigationDrawerTheme$Mate extends _i1.NavigationDrawerTheme
-    with _i2.Mate {
+class NavigationDrawerTheme$Mate extends _i1.NavigationDrawerTheme with _i2.Mate {
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none

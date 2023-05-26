@@ -21,8 +21,7 @@ class CachingIterable$Mate<E> extends _i1.CachingIterable<E> with _i2.Mate {
         super() {
     mateBuilderName = 'CachingIterable';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder =
-        (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
+    mateBuilder = (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
   }
 
   @override

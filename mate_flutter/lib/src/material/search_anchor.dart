@@ -305,26 +305,22 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
             init: elevation,
             isNamed: true,
           ),
-          'backgroundColor':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+          'backgroundColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
           ),
-          'shadowColor':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+          'shadowColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
             name: 'shadowColor',
             init: shadowColor,
             isNamed: true,
           ),
-          'surfaceTintColor':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+          'surfaceTintColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
             name: 'surfaceTintColor',
             init: surfaceTintColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -334,26 +330,22 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
             init: side,
             isNamed: true,
           ),
-          'shape':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i6.OutlinedBorder?>?>(
+          'shape': _i2.BuilderArg<_i13.MaterialStateProperty<_i6.OutlinedBorder?>?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<
-              _i13.MaterialStateProperty<_i14.EdgeInsetsGeometry?>?>(
+          'padding': _i2.BuilderArg<_i13.MaterialStateProperty<_i14.EdgeInsetsGeometry?>?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'textStyle':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
+          'textStyle': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'hintStyle':
-              _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
+          'hintStyle': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
             name: 'hintStyle',
             init: hintStyle,
             isNamed: true,

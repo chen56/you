@@ -69,8 +69,7 @@ class ModalBarrier$Mate extends _i1.ModalBarrier with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'clipDetailsNotifier':
-              _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
+          'clipDetailsNotifier': _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
             name: 'clipDetailsNotifier',
             init: clipDetailsNotifier,
             isNamed: true,
@@ -90,8 +89,7 @@ class ModalBarrier$Mate extends _i1.ModalBarrier with _i2.Mate {
           dismissible: p.get('dismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible:
-              p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
@@ -160,8 +158,7 @@ class AnimatedModalBarrier$Mate extends _i1.AnimatedModalBarrier with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'clipDetailsNotifier':
-              _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
+          'clipDetailsNotifier': _i2.BuilderArg<_i5.ValueNotifier<_i6.EdgeInsets>?>(
             name: 'clipDetailsNotifier',
             init: clipDetailsNotifier,
             isNamed: true,
@@ -180,8 +177,7 @@ class AnimatedModalBarrier$Mate extends _i1.AnimatedModalBarrier with _i2.Mate {
           color: p.get('color').build(),
           dismissible: p.get('dismissible').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible:
-              p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),

@@ -154,8 +154,7 @@ class AppBar$Mate extends _i1.AppBar with _i2.Mate {
             init: scrolledUnderElevation,
             isNamed: true,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

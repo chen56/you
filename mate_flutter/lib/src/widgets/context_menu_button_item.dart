@@ -7,8 +7,7 @@ import 'dart:ui' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 
 /// class ContextMenuButtonItem
-class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem
-    with _i2.Mate {
+class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate {
   /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
     /// optionalParameters: {required void Function() onPressed} , default:none

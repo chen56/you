@@ -8,8 +8,7 @@ import 'package:flutter/src/physics/tolerance.dart' as _i4;
 import 'package:flutter/cupertino.dart' as _i5;
 
 /// class BouncingScrollSimulation extends Simulation
-class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation
-    with _i2.Mate {
+class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i2.Mate {
   /// BouncingScrollSimulation BouncingScrollSimulation({required double position, required double velocity, required double leadingExtent, required double trailingExtent, required SpringDescription spring, double constantDeceleration = 0, Tolerance tolerance = Tolerance.defaultTolerance})
   BouncingScrollSimulation$Mate({
     /// optionalParameters: {required double position} , default:none
@@ -90,8 +89,7 @@ class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation
 }
 
 /// class ClampingScrollSimulation extends Simulation
-class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation
-    with _i2.Mate {
+class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation with _i2.Mate {
   /// ClampingScrollSimulation ClampingScrollSimulation({required double position, required double velocity, double friction = 0.015, Tolerance tolerance = Tolerance.defaultTolerance})
   ClampingScrollSimulation$Mate({
     /// optionalParameters: {required double position} , default:none

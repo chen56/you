@@ -22,8 +22,7 @@ class Velocity$Mate extends _i1.Velocity with _i2.Mate {
         super() {
     mateBuilderName = 'Velocity';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
+    mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
   }
 
   @override
@@ -107,8 +106,7 @@ class VelocityTracker$Mate extends _i1.VelocityTracker with _i2.Mate {
 }
 
 /// class IOSScrollViewFlingVelocityTracker extends VelocityTracker
-class IOSScrollViewFlingVelocityTracker$Mate
-    extends _i1.IOSScrollViewFlingVelocityTracker with _i2.Mate {
+class IOSScrollViewFlingVelocityTracker$Mate extends _i1.IOSScrollViewFlingVelocityTracker with _i2.Mate {
   /// IOSScrollViewFlingVelocityTracker IOSScrollViewFlingVelocityTracker(PointerDeviceKind kind)
   IOSScrollViewFlingVelocityTracker$Mate(
 
@@ -124,8 +122,7 @@ class IOSScrollViewFlingVelocityTracker$Mate
         super() {
     mateBuilderName = 'IOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
-    mateBuilder =
-        (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
+    mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
   }
 
   @override
@@ -133,8 +130,7 @@ class IOSScrollViewFlingVelocityTracker$Mate
 }
 
 /// class MacOSScrollViewFlingVelocityTracker extends IOSScrollViewFlingVelocityTracker
-class MacOSScrollViewFlingVelocityTracker$Mate
-    extends _i1.MacOSScrollViewFlingVelocityTracker with _i2.Mate {
+class MacOSScrollViewFlingVelocityTracker$Mate extends _i1.MacOSScrollViewFlingVelocityTracker with _i2.Mate {
   /// MacOSScrollViewFlingVelocityTracker MacOSScrollViewFlingVelocityTracker(PointerDeviceKind kind)
   MacOSScrollViewFlingVelocityTracker$Mate(
 
@@ -150,8 +146,7 @@ class MacOSScrollViewFlingVelocityTracker$Mate
         super() {
     mateBuilderName = 'MacOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
-    mateBuilder =
-        (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
+    mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
   }
 
   @override

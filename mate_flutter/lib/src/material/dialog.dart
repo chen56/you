@@ -353,8 +353,7 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: actionsAlignment,
             isNamed: true,
           ),
-          'actionsOverflowAlignment':
-              _i2.BuilderArg<_i13.OverflowBarAlignment?>(
+          'actionsOverflowAlignment': _i2.BuilderArg<_i13.OverflowBarAlignment?>(
             name: 'actionsOverflowAlignment',
             init: actionsOverflowAlignment,
             isNamed: true,
@@ -446,8 +445,7 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
           actionsAlignment: p.get('actionsAlignment').build(),
           actionsOverflowAlignment: p.get('actionsOverflowAlignment').build(),
           actionsOverflowDirection: p.get('actionsOverflowDirection').build(),
-          actionsOverflowButtonSpacing:
-              p.get('actionsOverflowButtonSpacing').build(),
+          actionsOverflowButtonSpacing: p.get('actionsOverflowButtonSpacing').build(),
           buttonPadding: p.get('buttonPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),

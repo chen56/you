@@ -49,8 +49,7 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
             init: trackColor,
             isNamed: true,
           ),
-          'trackOutlineColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'trackOutlineColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
             isNamed: true,
@@ -60,14 +59,12 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
             init: materialTapTargetSize,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i6.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,

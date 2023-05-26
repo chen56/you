@@ -8,8 +8,7 @@ import 'package:flutter/src/services/binary_messenger.dart' as _i4;
 export '_background_isolate_binary_messenger_io.dart';
 
 /// class BasicMessageChannel<T>
-class BasicMessageChannel$Mate<T> extends _i1.BasicMessageChannel<T>
-    with _i2.Mate {
+class BasicMessageChannel$Mate<T> extends _i1.BasicMessageChannel<T> with _i2.Mate {
   /// BasicMessageChannel<T> BasicMessageChannel(String name, MessageCodec<T> codec, {BinaryMessenger? binaryMessenger})
   BasicMessageChannel$Mate(
     /// requiredParameters: String name
@@ -94,8 +93,7 @@ class MethodChannel$Mate extends _i1.MethodChannel with _i2.Mate {
 }
 
 /// class OptionalMethodChannel extends MethodChannel
-class OptionalMethodChannel$Mate extends _i1.OptionalMethodChannel
-    with _i2.Mate {
+class OptionalMethodChannel$Mate extends _i1.OptionalMethodChannel with _i2.Mate {
   /// OptionalMethodChannel OptionalMethodChannel(String name, [MethodCodec codec = const StandardMethodCodec(), BinaryMessenger? binaryMessenger])
   OptionalMethodChannel$Mate(
     /// requiredParameters: String name

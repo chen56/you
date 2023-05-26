@@ -41,8 +41,7 @@ class Tween$Mate<T extends Object?> extends _i1.Tween<T> with _i2.Mate {
 }
 
 /// class ReverseTween<T extends Object?> extends Tween<T>
-class ReverseTween$Mate<T extends Object?> extends _i1.ReverseTween<T>
-    with _i2.Mate {
+class ReverseTween$Mate<T extends Object?> extends _i1.ReverseTween<T> with _i2.Mate {
   /// ReverseTween<T> ReverseTween(Tween<T> parent)
   ReverseTween$Mate(
 

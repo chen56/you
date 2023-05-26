@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/rendering/sliver_multi_box_adaptor.dart' as _i3;
 
 /// class RenderSliverFixedExtentList extends RenderSliverFixedExtentBoxAdaptor
-class RenderSliverFixedExtentList$Mate extends _i1.RenderSliverFixedExtentList
-    with _i2.Mate {
+class RenderSliverFixedExtentList$Mate extends _i1.RenderSliverFixedExtentList with _i2.Mate {
   /// RenderSliverFixedExtentList RenderSliverFixedExtentList({required RenderSliverBoxChildManager childManager, required double itemExtent})
   RenderSliverFixedExtentList$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none

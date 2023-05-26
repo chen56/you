@@ -113,20 +113,17 @@ class RangeSlider$Mate extends _i1.RangeSlider with _i2.Mate {
             init: inactiveColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
           ),
-          'semanticFormatterCallback':
-              _i2.BuilderArg<_i4.SemanticFormatterCallback?>(
+          'semanticFormatterCallback': _i2.BuilderArg<_i4.SemanticFormatterCallback?>(
             name: 'semanticFormatterCallback',
             init: semanticFormatterCallback,
             isNamed: true,

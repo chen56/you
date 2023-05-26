@@ -9,8 +9,7 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'package:flutter/cupertino.dart' as _i6;
 
 /// class UnderlineTabIndicator extends Decoration
-class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator
-    with _i2.Mate {
+class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate {
   /// UnderlineTabIndicator UnderlineTabIndicator({BorderRadius? borderRadius, BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white), EdgeInsetsGeometry insets = EdgeInsets.zero})
   UnderlineTabIndicator$Mate({
     /// optionalParameters: {BorderRadius? borderRadius} , default:none

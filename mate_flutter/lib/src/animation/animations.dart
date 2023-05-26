@@ -8,8 +8,7 @@ import 'package:flutter/src/animation/curves.dart' as _i4;
 import 'dart:ui' as _i5;
 
 /// class AlwaysStoppedAnimation<T> extends Animation<T>
-class AlwaysStoppedAnimation$Mate<T> extends _i1.AlwaysStoppedAnimation<T>
-    with _i2.Mate {
+class AlwaysStoppedAnimation$Mate<T> extends _i1.AlwaysStoppedAnimation<T> with _i2.Mate {
   /// AlwaysStoppedAnimation<T> AlwaysStoppedAnimation(T value)
   AlwaysStoppedAnimation$Mate(
 
@@ -124,8 +123,7 @@ class CurvedAnimation$Mate extends _i1.CurvedAnimation with _i2.Mate {
 }
 
 /// class TrainHoppingAnimation extends Animation<double> with AnimationEagerListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
-class TrainHoppingAnimation$Mate extends _i1.TrainHoppingAnimation
-    with _i2.Mate {
+class TrainHoppingAnimation$Mate extends _i1.TrainHoppingAnimation with _i2.Mate {
   /// TrainHoppingAnimation TrainHoppingAnimation(Animation<double> _currentTrain, Animation<double>? _nextTrain, {void Function()? onSwitchedTrain})
   TrainHoppingAnimation$Mate(
     /// requiredParameters: Animation<double> _currentTrain
@@ -201,8 +199,7 @@ class AnimationMean$Mate extends _i1.AnimationMean with _i2.Mate {
 }
 
 /// class AnimationMax<T extends num> extends CompoundAnimation<T>
-class AnimationMax$Mate<T extends num> extends _i1.AnimationMax<T>
-    with _i2.Mate {
+class AnimationMax$Mate<T extends num> extends _i1.AnimationMax<T> with _i2.Mate {
   /// AnimationMax<T> AnimationMax(Animation<T> first, Animation<T> next)
   AnimationMax$Mate(
     /// requiredParameters: Animation<T> first
@@ -236,8 +233,7 @@ class AnimationMax$Mate<T extends num> extends _i1.AnimationMax<T>
 }
 
 /// class AnimationMin<T extends num> extends CompoundAnimation<T>
-class AnimationMin$Mate<T extends num> extends _i1.AnimationMin<T>
-    with _i2.Mate {
+class AnimationMin$Mate<T extends num> extends _i1.AnimationMin<T> with _i2.Mate {
   /// AnimationMin<T> AnimationMin(Animation<T> first, Animation<T> next)
   AnimationMin$Mate(
     /// requiredParameters: Animation<T> first

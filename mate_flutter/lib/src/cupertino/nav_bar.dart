@@ -10,8 +10,7 @@ import 'dart:ui' as _i6;
 import 'package:flutter/src/painting/edge_insets.dart' as _i7;
 
 /// class CupertinoNavigationBar extends StatefulWidget implements ObstructingPreferredSizeWidget
-class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar
-    with _i2.Mate {
+class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar with _i2.Mate {
   /// CupertinoNavigationBar CupertinoNavigationBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag})
   CupertinoNavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -147,8 +146,7 @@ class CupertinoNavigationBar$Mate extends _i1.CupertinoNavigationBar
 }
 
 /// class CupertinoSliverNavigationBar extends StatefulWidget
-class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar
-    with _i2.Mate {
+class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar with _i2.Mate {
   /// CupertinoSliverNavigationBar CupertinoSliverNavigationBar({Key? key, Widget? largeTitle, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyTitle = true, bool alwaysShowMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag, bool stretch = false})
   CupertinoSliverNavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -313,8 +311,7 @@ class CupertinoSliverNavigationBar$Mate extends _i1.CupertinoSliverNavigationBar
 }
 
 /// class CupertinoNavigationBarBackButton extends StatelessWidget
-class CupertinoNavigationBarBackButton$Mate
-    extends _i1.CupertinoNavigationBarBackButton with _i2.Mate {
+class CupertinoNavigationBarBackButton$Mate extends _i1.CupertinoNavigationBarBackButton with _i2.Mate {
   /// CupertinoNavigationBarBackButton CupertinoNavigationBarBackButton({Key? key, Color? color, String? previousPageTitle, void Function()? onPressed})
   CupertinoNavigationBarBackButton$Mate({
     /// optionalParameters: {Key? key} , default:none

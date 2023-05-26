@@ -25,8 +25,7 @@ class SnapshotController$Mate extends _i1.SnapshotController with _i2.Mate {
         super() {
     mateBuilderName = 'SnapshotController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => SnapshotController$Mate(
-        allowSnapshotting: p.get('allowSnapshotting').build());
+    mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
   }
 
   @override

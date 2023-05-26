@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/image_provider.dart' as _i5;
 
 /// class ScrollAwareImageProvider<T extends Object> extends ImageProvider<T>
-class ScrollAwareImageProvider$Mate<T extends Object>
-    extends _i1.ScrollAwareImageProvider<T> with _i2.Mate {
+class ScrollAwareImageProvider$Mate<T extends Object> extends _i1.ScrollAwareImageProvider<T> with _i2.Mate {
   /// ScrollAwareImageProvider<T> ScrollAwareImageProvider({required DisposableBuildContext<State<StatefulWidget>> context, required ImageProvider<T> imageProvider})
   ScrollAwareImageProvider$Mate({
     /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , default:none
@@ -18,8 +17,7 @@ class ScrollAwareImageProvider$Mate<T extends Object>
     /// optionalParameters: {required ImageProvider<T> imageProvider} , default:none
     required super.imageProvider,
   })  : mateParams = {
-          'context': _i2.BuilderArg<
-              _i3.DisposableBuildContext<_i4.State<_i4.StatefulWidget>>>(
+          'context': _i2.BuilderArg<_i3.DisposableBuildContext<_i4.State<_i4.StatefulWidget>>>(
             name: 'context',
             init: context,
             isNamed: true,

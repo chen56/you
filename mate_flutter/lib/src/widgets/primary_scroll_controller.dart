@@ -11,8 +11,7 @@ import 'package:flutter/cupertino.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class PrimaryScrollController extends InheritedWidget
-class PrimaryScrollController$Mate extends _i1.PrimaryScrollController
-    with _i2.Mate {
+class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.Mate {
   /// PrimaryScrollController PrimaryScrollController({Key? key, required ScrollController controller, Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms, Axis? scrollDirection = Axis.vertical, required Widget child})
   PrimaryScrollController$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -40,8 +39,7 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController
             init: controller,
             isNamed: true,
           ),
-          'automaticallyInheritForPlatforms':
-              _i2.BuilderArg<Set<_i5.TargetPlatform>>(
+          'automaticallyInheritForPlatforms': _i2.BuilderArg<Set<_i5.TargetPlatform>>(
             name: 'automaticallyInheritForPlatforms',
             init: automaticallyInheritForPlatforms,
             isNamed: true,
@@ -64,8 +62,7 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
-          automaticallyInheritForPlatforms:
-              p.get('automaticallyInheritForPlatforms').build(),
+          automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').build(),
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );

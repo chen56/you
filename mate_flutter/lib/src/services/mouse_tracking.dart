@@ -7,8 +7,7 @@ import 'package:flutter/src/services/mouse_cursor.dart' as _i3;
 import 'package:flutter/cupertino.dart' as _i4;
 
 /// class MouseTrackerAnnotation with Diagnosticable
-class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation
-    with _i2.Mate {
+class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Mate {
   /// MouseTrackerAnnotation MouseTrackerAnnotation({void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true})
   MouseTrackerAnnotation$Mate({
     /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none

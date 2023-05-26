@@ -103,8 +103,7 @@ class HeroController$Mate extends _i1.HeroController with _i2.Mate {
         super() {
     mateBuilderName = 'HeroController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) =>
-        HeroController$Mate(createRectTween: p.get('createRectTween').build());
+    mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
   }
 
   @override

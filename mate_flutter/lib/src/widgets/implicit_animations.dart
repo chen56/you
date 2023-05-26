@@ -122,8 +122,7 @@ class EdgeInsetsTween$Mate extends _i1.EdgeInsetsTween with _i2.Mate {
 }
 
 /// class EdgeInsetsGeometryTween extends Tween<EdgeInsetsGeometry>
-class EdgeInsetsGeometryTween$Mate extends _i1.EdgeInsetsGeometryTween
-    with _i2.Mate {
+class EdgeInsetsGeometryTween$Mate extends _i1.EdgeInsetsGeometryTween with _i2.Mate {
   /// EdgeInsetsGeometryTween EdgeInsetsGeometryTween({EdgeInsetsGeometry? begin, EdgeInsetsGeometry? end})
   EdgeInsetsGeometryTween$Mate({
     /// optionalParameters: {EdgeInsetsGeometry? begin} , default:none
@@ -805,8 +804,7 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
 }
 
 /// class AnimatedPositionedDirectional extends ImplicitlyAnimatedWidget
-class AnimatedPositionedDirectional$Mate
-    extends _i1.AnimatedPositionedDirectional with _i2.Mate {
+class AnimatedPositionedDirectional$Mate extends _i1.AnimatedPositionedDirectional with _i2.Mate {
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1254,8 +1252,7 @@ class AnimatedOpacity$Mate extends _i1.AnimatedOpacity with _i2.Mate {
 }
 
 /// class SliverAnimatedOpacity extends ImplicitlyAnimatedWidget
-class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity
-    with _i2.Mate {
+class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity with _i2.Mate {
   /// SliverAnimatedOpacity SliverAnimatedOpacity({Key? key, Widget? sliver, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   SliverAnimatedOpacity$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1336,8 +1333,7 @@ class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity
 }
 
 /// class AnimatedDefaultTextStyle extends ImplicitlyAnimatedWidget
-class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle
-    with _i2.Mate {
+class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i2.Mate {
   /// AnimatedDefaultTextStyle AnimatedDefaultTextStyle({Key? key, required Widget child, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedDefaultTextStyle$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1465,8 +1461,7 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle
 }
 
 /// class AnimatedPhysicalModel extends ImplicitlyAnimatedWidget
-class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel
-    with _i2.Mate {
+class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate {
   /// AnimatedPhysicalModel AnimatedPhysicalModel({Key? key, required Widget child, required BoxShape shape, Clip clipBehavior = Clip.none, BorderRadius borderRadius = BorderRadius.zero, required double elevation, required Color color, bool animateColor = true, required Color shadowColor, bool animateShadowColor = true, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPhysicalModel$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1604,8 +1599,7 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel
 }
 
 /// class AnimatedFractionallySizedBox extends ImplicitlyAnimatedWidget
-class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
-    with _i2.Mate {
+class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox with _i2.Mate {
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , default:none

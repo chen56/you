@@ -9,8 +9,7 @@ import 'package:flutter/src/painting/text_style.dart' as _i5;
 import 'package:flutter/src/widgets/editable_text.dart' as _i6;
 
 /// class SpellCheckConfiguration
-class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration
-    with _i2.Mate {
+class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.Mate {
   /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, Color? misspelledSelectionColor, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
     /// optionalParameters: {SpellCheckService? spellCheckService} , default:none
@@ -40,8 +39,7 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration
             init: misspelledTextStyle,
             isNamed: true,
           ),
-          'spellCheckSuggestionsToolbarBuilder':
-              _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
+          'spellCheckSuggestionsToolbarBuilder': _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
             name: 'spellCheckSuggestionsToolbarBuilder',
             init: spellCheckSuggestionsToolbarBuilder,
             isNamed: true,
@@ -54,8 +52,7 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration
           spellCheckService: p.get('spellCheckService').build(),
           misspelledSelectionColor: p.get('misspelledSelectionColor').build(),
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
-          spellCheckSuggestionsToolbarBuilder:
-              p.get('spellCheckSuggestionsToolbarBuilder').build(),
+          spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
   }
 

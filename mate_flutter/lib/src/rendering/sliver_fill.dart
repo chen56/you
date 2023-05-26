@@ -7,8 +7,7 @@ import 'package:flutter/src/rendering/sliver_multi_box_adaptor.dart' as _i3;
 import 'package:flutter/src/rendering/box.dart' as _i4;
 
 /// class RenderSliverFillViewport extends RenderSliverFixedExtentBoxAdaptor
-class RenderSliverFillViewport$Mate extends _i1.RenderSliverFillViewport
-    with _i2.Mate {
+class RenderSliverFillViewport$Mate extends _i1.RenderSliverFillViewport with _i2.Mate {
   /// RenderSliverFillViewport RenderSliverFillViewport({required RenderSliverBoxChildManager childManager, double viewportFraction = 1.0})
   RenderSliverFillViewport$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
@@ -43,8 +42,7 @@ class RenderSliverFillViewport$Mate extends _i1.RenderSliverFillViewport
 }
 
 /// class RenderSliverFillRemainingWithScrollable extends RenderSliverSingleBoxAdapter
-class RenderSliverFillRemainingWithScrollable$Mate
-    extends _i1.RenderSliverFillRemainingWithScrollable with _i2.Mate {
+class RenderSliverFillRemainingWithScrollable$Mate extends _i1.RenderSliverFillRemainingWithScrollable with _i2.Mate {
   /// RenderSliverFillRemainingWithScrollable RenderSliverFillRemainingWithScrollable({RenderBox? child})
   RenderSliverFillRemainingWithScrollable$Mate(
       {
@@ -60,8 +58,7 @@ class RenderSliverFillRemainingWithScrollable$Mate
         super() {
     mateBuilderName = 'RenderSliverFillRemainingWithScrollable';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => RenderSliverFillRemainingWithScrollable$Mate(
-        child: p.get('child').build());
+    mateBuilder = (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').build());
   }
 
   @override
@@ -69,8 +66,7 @@ class RenderSliverFillRemainingWithScrollable$Mate
 }
 
 /// class RenderSliverFillRemaining extends RenderSliverSingleBoxAdapter
-class RenderSliverFillRemaining$Mate extends _i1.RenderSliverFillRemaining
-    with _i2.Mate {
+class RenderSliverFillRemaining$Mate extends _i1.RenderSliverFillRemaining with _i2.Mate {
   /// RenderSliverFillRemaining RenderSliverFillRemaining({RenderBox? child})
   RenderSliverFillRemaining$Mate(
       {
@@ -86,8 +82,7 @@ class RenderSliverFillRemaining$Mate extends _i1.RenderSliverFillRemaining
         super() {
     mateBuilderName = 'RenderSliverFillRemaining';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderSliverFillRemaining$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderSliverFillRemaining$Mate(child: p.get('child').build());
   }
 
   @override
@@ -95,8 +90,7 @@ class RenderSliverFillRemaining$Mate extends _i1.RenderSliverFillRemaining
 }
 
 /// class RenderSliverFillRemainingAndOverscroll extends RenderSliverSingleBoxAdapter
-class RenderSliverFillRemainingAndOverscroll$Mate
-    extends _i1.RenderSliverFillRemainingAndOverscroll with _i2.Mate {
+class RenderSliverFillRemainingAndOverscroll$Mate extends _i1.RenderSliverFillRemainingAndOverscroll with _i2.Mate {
   /// RenderSliverFillRemainingAndOverscroll RenderSliverFillRemainingAndOverscroll({RenderBox? child})
   RenderSliverFillRemainingAndOverscroll$Mate(
       {
@@ -112,8 +106,7 @@ class RenderSliverFillRemainingAndOverscroll$Mate
         super() {
     mateBuilderName = 'RenderSliverFillRemainingAndOverscroll';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => RenderSliverFillRemainingAndOverscroll$Mate(
-        child: p.get('child').build());
+    mateBuilder = (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').build());
   }
 
   @override

@@ -24,8 +24,7 @@ class TextButtonThemeData$Mate extends _i1.TextButtonThemeData with _i2.Mate {
         super() {
     mateBuilderName = 'TextButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => TextButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
   }
 
   @override

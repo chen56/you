@@ -71,8 +71,7 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
             init: onDateChanged,
             isNamed: true,
           ),
-          'onDisplayedMonthChanged':
-              _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
+          'onDisplayedMonthChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
             name: 'onDisplayedMonthChanged',
             init: onDisplayedMonthChanged,
             isNamed: true,

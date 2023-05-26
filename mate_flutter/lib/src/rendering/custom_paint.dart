@@ -11,8 +11,7 @@ import 'package:flutter/animation.dart' as _i7;
 import 'package:flutter/src/rendering/box.dart' as _i8;
 
 /// class CustomPainterSemantics
-class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics
-    with _i2.Mate {
+class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics with _i2.Mate {
   /// CustomPainterSemantics CustomPainterSemantics({Key? key, required Rect rect, required SemanticsProperties properties, Matrix4? transform, Set<SemanticsTag>? tags})
   CustomPainterSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none

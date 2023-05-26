@@ -9,8 +9,7 @@ import 'dart:ui' as _i5;
 import 'package:flutter/src/widgets/icon_data.dart' as _i6;
 
 /// class CupertinoContextMenuAction extends StatefulWidget
-class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction
-    with _i2.Mate {
+class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction with _i2.Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
     /// optionalParameters: {Key? key} , default:none

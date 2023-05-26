@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
 
 /// class AutomaticNotchedShape extends NotchedShape
-class AutomaticNotchedShape$Mate extends _i1.AutomaticNotchedShape
-    with _i2.Mate {
+class AutomaticNotchedShape$Mate extends _i1.AutomaticNotchedShape with _i2.Mate {
   /// AutomaticNotchedShape AutomaticNotchedShape(ShapeBorder host, [ShapeBorder? guest])
   AutomaticNotchedShape$Mate(
     /// requiredParameters: ShapeBorder host

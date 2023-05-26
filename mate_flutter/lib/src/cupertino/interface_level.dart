@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class CupertinoUserInterfaceLevel extends InheritedWidget
-class CupertinoUserInterfaceLevel$Mate extends _i1.CupertinoUserInterfaceLevel
-    with _i2.Mate {
+class CupertinoUserInterfaceLevel$Mate extends _i1.CupertinoUserInterfaceLevel with _i2.Mate {
   /// CupertinoUserInterfaceLevel CupertinoUserInterfaceLevel({Key? key, required CupertinoUserInterfaceLevelData data, required Widget child})
   CupertinoUserInterfaceLevel$Mate({
     /// optionalParameters: {Key? key} , default:none

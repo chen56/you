@@ -83,26 +83,22 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     super.splashFactory,
   })  : mateParams = {
-          'textStyle':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i4.TextStyle?>?>(
+          'textStyle': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.TextStyle?>?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'backgroundColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'backgroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
           ),
-          'foregroundColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'foregroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'foregroundColor',
             init: foregroundColor,
             isNamed: true,
           ),
-          'overlayColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
@@ -112,8 +108,7 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
             init: shadowColor,
             isNamed: true,
           ),
-          'surfaceTintColor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+          'surfaceTintColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
             name: 'surfaceTintColor',
             init: surfaceTintColor,
             isNamed: true,
@@ -123,8 +118,7 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
             init: elevation,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<
-              _i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>?>(
+          'padding': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -159,14 +153,12 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
             init: side,
             isNamed: true,
           ),
-          'shape':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i7.OutlinedBorder?>?>(
+          'shape': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.OutlinedBorder?>?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i3.MaterialStateProperty<_i8.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i8.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

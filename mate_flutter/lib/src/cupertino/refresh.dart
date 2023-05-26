@@ -6,8 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 
 /// class CupertinoSliverRefreshControl extends StatefulWidget
-class CupertinoSliverRefreshControl$Mate
-    extends _i1.CupertinoSliverRefreshControl with _i2.Mate {
+class CupertinoSliverRefreshControl$Mate extends _i1.CupertinoSliverRefreshControl with _i2.Mate {
   /// CupertinoSliverRefreshControl CupertinoSliverRefreshControl({Key? key, double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance, double refreshIndicatorExtent = _defaultRefreshIndicatorExtent, Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator, Future<void> Function()? onRefresh})
   CupertinoSliverRefreshControl$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -56,8 +55,7 @@ class CupertinoSliverRefreshControl$Mate
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSliverRefreshControl$Mate(
           key: p.get('key').build(),
-          refreshTriggerPullDistance:
-              p.get('refreshTriggerPullDistance').build(),
+          refreshTriggerPullDistance: p.get('refreshTriggerPullDistance').build(),
           refreshIndicatorExtent: p.get('refreshIndicatorExtent').build(),
           builder: p.get('builder').build(),
           onRefresh: p.get('onRefresh').build(),

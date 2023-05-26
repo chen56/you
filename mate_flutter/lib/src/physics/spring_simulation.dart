@@ -149,8 +149,7 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
 }
 
 /// class ScrollSpringSimulation extends SpringSimulation
-class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation
-    with _i2.Mate {
+class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Mate {
   /// ScrollSpringSimulation ScrollSpringSimulation(SpringDescription spring, double start, double end, double velocity, {Tolerance tolerance = Tolerance.defaultTolerance})
   ScrollSpringSimulation$Mate(
     /// requiredParameters: SpringDescription spring

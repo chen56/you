@@ -197,8 +197,7 @@ class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
 }
 
 /// class ScaleGestureRecognizer extends OneSequenceGestureRecognizer
-class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer
-    with _i2.Mate {
+class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Mate {
   /// ScaleGestureRecognizer ScaleGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter, DragStartBehavior dragStartBehavior = DragStartBehavior.down, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor})
   ScaleGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -261,8 +260,7 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor:
-              p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
         );
   }
 

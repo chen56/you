@@ -230,8 +230,7 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'routeTraversalEdgeBehavior':
-              _i2.BuilderArg<_i8.TraversalEdgeBehavior>(
+          'routeTraversalEdgeBehavior': _i2.BuilderArg<_i8.TraversalEdgeBehavior>(
             name: 'routeTraversalEdgeBehavior',
             init: routeTraversalEdgeBehavior,
             isNamed: true,
@@ -249,14 +248,12 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
           transitionDelegate: p.get('transitionDelegate').build(),
-          reportsRouteUpdateToEngine:
-              p.get('reportsRouteUpdateToEngine').build(),
+          reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
           clipBehavior: p.get('clipBehavior').build(),
           observers: p.get('observers').build(),
           requestFocus: p.get('requestFocus').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
-          routeTraversalEdgeBehavior:
-              p.get('routeTraversalEdgeBehavior').build(),
+          routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
   }
 
@@ -265,8 +262,7 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
 }
 
 /// class RestorableRouteFuture<T> extends RestorableProperty<String?>
-class RestorableRouteFuture$Mate<T> extends _i1.RestorableRouteFuture<T>
-    with _i2.Mate {
+class RestorableRouteFuture$Mate<T> extends _i1.RestorableRouteFuture<T> with _i2.Mate {
   /// RestorableRouteFuture<T> RestorableRouteFuture({NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder, required String Function(NavigatorState, Object?) onPresent, void Function(T)? onComplete})
   RestorableRouteFuture$Mate({
     /// optionalParameters: {NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder} , default:unprocessed=SimpleIdentifierImpl

@@ -8,8 +8,7 @@ import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
 
 /// class CupertinoTextThemeData with Diagnosticable
-class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData
-    with _i2.Mate {
+class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData with _i2.Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
     /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:processed=PrefixedIdentifierImpl

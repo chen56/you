@@ -50,8 +50,7 @@ class ForcePressDetails$Mate extends _i1.ForcePressDetails with _i2.Mate {
 }
 
 /// class ForcePressGestureRecognizer extends OneSequenceGestureRecognizer
-class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer
-    with _i2.Mate {
+class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer with _i2.Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
     /// optionalParameters: {double startPressure = 0.4} , default:processed=DoubleLiteralImpl

@@ -33,8 +33,7 @@ class ObjectKey$Mate extends _i1.ObjectKey with _i2.Mate {
 }
 
 /// class LabeledGlobalKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class LabeledGlobalKey$Mate<T extends _i1.State<_i1.StatefulWidget>>
-    extends _i1.LabeledGlobalKey<T> with _i2.Mate {
+class LabeledGlobalKey$Mate<T extends _i1.State<_i1.StatefulWidget>> extends _i1.LabeledGlobalKey<T> with _i2.Mate {
   /// LabeledGlobalKey<T> LabeledGlobalKey(String? _debugLabel)
   LabeledGlobalKey$Mate(
 
@@ -58,8 +57,7 @@ class LabeledGlobalKey$Mate<T extends _i1.State<_i1.StatefulWidget>>
 }
 
 /// class GlobalObjectKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class GlobalObjectKey$Mate<T extends _i1.State<_i1.StatefulWidget>>
-    extends _i1.GlobalObjectKey<T> with _i2.Mate {
+class GlobalObjectKey$Mate<T extends _i1.State<_i1.StatefulWidget>> extends _i1.GlobalObjectKey<T> with _i2.Mate {
   /// GlobalObjectKey<T> GlobalObjectKey(Object value)
   GlobalObjectKey$Mate(
 
@@ -218,8 +216,7 @@ class StatefulElement$Mate extends _i1.StatefulElement with _i2.Mate {
 }
 
 /// class ParentDataElement<T extends ParentData> extends ProxyElement
-class ParentDataElement$Mate<T extends _i6.ParentData>
-    extends _i1.ParentDataElement<T> with _i2.Mate {
+class ParentDataElement$Mate<T extends _i6.ParentData> extends _i1.ParentDataElement<T> with _i2.Mate {
   /// ParentDataElement<T> ParentDataElement(ParentDataWidget<T> widget)
   ParentDataElement$Mate(
 
@@ -267,8 +264,7 @@ class InheritedElement$Mate extends _i1.InheritedElement with _i2.Mate {
 }
 
 /// class LeafRenderObjectElement extends RenderObjectElement
-class LeafRenderObjectElement$Mate extends _i1.LeafRenderObjectElement
-    with _i2.Mate {
+class LeafRenderObjectElement$Mate extends _i1.LeafRenderObjectElement with _i2.Mate {
   /// LeafRenderObjectElement LeafRenderObjectElement(LeafRenderObjectWidget widget)
   LeafRenderObjectElement$Mate(
 
@@ -292,8 +288,7 @@ class LeafRenderObjectElement$Mate extends _i1.LeafRenderObjectElement
 }
 
 /// class SingleChildRenderObjectElement extends RenderObjectElement
-class SingleChildRenderObjectElement$Mate
-    extends _i1.SingleChildRenderObjectElement with _i2.Mate {
+class SingleChildRenderObjectElement$Mate extends _i1.SingleChildRenderObjectElement with _i2.Mate {
   /// SingleChildRenderObjectElement SingleChildRenderObjectElement(SingleChildRenderObjectWidget widget)
   SingleChildRenderObjectElement$Mate(
 
@@ -309,8 +304,7 @@ class SingleChildRenderObjectElement$Mate
         super() {
     mateBuilderName = 'SingleChildRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder = (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
   }
 
   @override
@@ -318,8 +312,7 @@ class SingleChildRenderObjectElement$Mate
 }
 
 /// class MultiChildRenderObjectElement extends RenderObjectElement
-class MultiChildRenderObjectElement$Mate
-    extends _i1.MultiChildRenderObjectElement with _i2.Mate {
+class MultiChildRenderObjectElement$Mate extends _i1.MultiChildRenderObjectElement with _i2.Mate {
   /// MultiChildRenderObjectElement MultiChildRenderObjectElement(MultiChildRenderObjectWidget widget)
   MultiChildRenderObjectElement$Mate(
 
@@ -335,8 +328,7 @@ class MultiChildRenderObjectElement$Mate
         super() {
     mateBuilderName = 'MultiChildRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder = (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
   }
 
   @override
@@ -368,8 +360,7 @@ class DebugCreator$Mate extends _i1.DebugCreator with _i2.Mate {
 }
 
 /// class IndexedSlot<T extends Element?>
-class IndexedSlot$Mate<T extends _i1.Element?> extends _i1.IndexedSlot<T>
-    with _i2.Mate {
+class IndexedSlot$Mate<T extends _i1.Element?> extends _i1.IndexedSlot<T> with _i2.Mate {
   /// IndexedSlot<T> IndexedSlot(int index, T value)
   IndexedSlot$Mate(
     /// requiredParameters: int index

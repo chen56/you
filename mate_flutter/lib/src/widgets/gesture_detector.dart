@@ -27,14 +27,12 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends _i1.GestureRecognizer>
     /// requiredParameters: void Function(T) _initializer
     super._initializer,
   )   : mateParams = {
-          '_constructor':
-              _i3.BuilderArg<_i2.GestureRecognizerFactoryConstructor<T>>(
+          '_constructor': _i3.BuilderArg<_i2.GestureRecognizerFactoryConstructor<T>>(
             name: '_constructor',
             init: _constructor,
             isNamed: false,
           ),
-          '_initializer':
-              _i3.BuilderArg<_i2.GestureRecognizerFactoryInitializer<T>>(
+          '_initializer': _i3.BuilderArg<_i2.GestureRecognizerFactoryInitializer<T>>(
             name: '_initializer',
             init: _initializer,
             isNamed: false,
@@ -337,8 +335,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onLongPressDown,
             isNamed: true,
           ),
-          'onLongPressCancel':
-              _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+          'onLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
             name: 'onLongPressCancel',
             init: onLongPressCancel,
             isNamed: true,
@@ -348,14 +345,12 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onLongPress,
             isNamed: true,
           ),
-          'onLongPressStart':
-              _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+          'onLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
             name: 'onLongPressStart',
             init: onLongPressStart,
             isNamed: true,
           ),
-          'onLongPressMoveUpdate':
-              _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+          'onLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
             name: 'onLongPressMoveUpdate',
             init: onLongPressMoveUpdate,
             isNamed: true,
@@ -370,14 +365,12 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onLongPressEnd,
             isNamed: true,
           ),
-          'onSecondaryLongPressDown':
-              _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
+          'onSecondaryLongPressDown': _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
             name: 'onSecondaryLongPressDown',
             init: onSecondaryLongPressDown,
             isNamed: true,
           ),
-          'onSecondaryLongPressCancel':
-              _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+          'onSecondaryLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
             name: 'onSecondaryLongPressCancel',
             init: onSecondaryLongPressCancel,
             isNamed: true,
@@ -387,38 +380,32 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onSecondaryLongPress,
             isNamed: true,
           ),
-          'onSecondaryLongPressStart':
-              _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+          'onSecondaryLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
             name: 'onSecondaryLongPressStart',
             init: onSecondaryLongPressStart,
             isNamed: true,
           ),
-          'onSecondaryLongPressMoveUpdate':
-              _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+          'onSecondaryLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
             name: 'onSecondaryLongPressMoveUpdate',
             init: onSecondaryLongPressMoveUpdate,
             isNamed: true,
           ),
-          'onSecondaryLongPressUp':
-              _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
+          'onSecondaryLongPressUp': _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
             name: 'onSecondaryLongPressUp',
             init: onSecondaryLongPressUp,
             isNamed: true,
           ),
-          'onSecondaryLongPressEnd':
-              _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
+          'onSecondaryLongPressEnd': _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
             name: 'onSecondaryLongPressEnd',
             init: onSecondaryLongPressEnd,
             isNamed: true,
           ),
-          'onTertiaryLongPressDown':
-              _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
+          'onTertiaryLongPressDown': _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
             name: 'onTertiaryLongPressDown',
             init: onTertiaryLongPressDown,
             isNamed: true,
           ),
-          'onTertiaryLongPressCancel':
-              _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+          'onTertiaryLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
             name: 'onTertiaryLongPressCancel',
             init: onTertiaryLongPressCancel,
             isNamed: true,
@@ -428,26 +415,22 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onTertiaryLongPress,
             isNamed: true,
           ),
-          'onTertiaryLongPressStart':
-              _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+          'onTertiaryLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
             name: 'onTertiaryLongPressStart',
             init: onTertiaryLongPressStart,
             isNamed: true,
           ),
-          'onTertiaryLongPressMoveUpdate':
-              _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+          'onTertiaryLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
             name: 'onTertiaryLongPressMoveUpdate',
             init: onTertiaryLongPressMoveUpdate,
             isNamed: true,
           ),
-          'onTertiaryLongPressUp':
-              _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
+          'onTertiaryLongPressUp': _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
             name: 'onTertiaryLongPressUp',
             init: onTertiaryLongPressUp,
             isNamed: true,
           ),
-          'onTertiaryLongPressEnd':
-              _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
+          'onTertiaryLongPressEnd': _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
             name: 'onTertiaryLongPressEnd',
             init: onTertiaryLongPressEnd,
             isNamed: true,
@@ -462,8 +445,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onVerticalDragStart,
             isNamed: true,
           ),
-          'onVerticalDragUpdate':
-              _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
+          'onVerticalDragUpdate': _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
             name: 'onVerticalDragUpdate',
             init: onVerticalDragUpdate,
             isNamed: true,
@@ -473,8 +455,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onVerticalDragEnd,
             isNamed: true,
           ),
-          'onVerticalDragCancel':
-              _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
+          'onVerticalDragCancel': _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
             name: 'onVerticalDragCancel',
             init: onVerticalDragCancel,
             isNamed: true,
@@ -484,14 +465,12 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onHorizontalDragDown,
             isNamed: true,
           ),
-          'onHorizontalDragStart':
-              _i3.BuilderArg<_i8.GestureDragStartCallback?>(
+          'onHorizontalDragStart': _i3.BuilderArg<_i8.GestureDragStartCallback?>(
             name: 'onHorizontalDragStart',
             init: onHorizontalDragStart,
             isNamed: true,
           ),
-          'onHorizontalDragUpdate':
-              _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
+          'onHorizontalDragUpdate': _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
             name: 'onHorizontalDragUpdate',
             init: onHorizontalDragUpdate,
             isNamed: true,
@@ -501,26 +480,22 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             init: onHorizontalDragEnd,
             isNamed: true,
           ),
-          'onHorizontalDragCancel':
-              _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
+          'onHorizontalDragCancel': _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
             name: 'onHorizontalDragCancel',
             init: onHorizontalDragCancel,
             isNamed: true,
           ),
-          'onForcePressStart':
-              _i3.BuilderArg<_i10.GestureForcePressStartCallback?>(
+          'onForcePressStart': _i3.BuilderArg<_i10.GestureForcePressStartCallback?>(
             name: 'onForcePressStart',
             init: onForcePressStart,
             isNamed: true,
           ),
-          'onForcePressPeak':
-              _i3.BuilderArg<_i10.GestureForcePressPeakCallback?>(
+          'onForcePressPeak': _i3.BuilderArg<_i10.GestureForcePressPeakCallback?>(
             name: 'onForcePressPeak',
             init: onForcePressPeak,
             isNamed: true,
           ),
-          'onForcePressUpdate':
-              _i3.BuilderArg<_i10.GestureForcePressUpdateCallback?>(
+          'onForcePressUpdate': _i3.BuilderArg<_i10.GestureForcePressUpdateCallback?>(
             name: 'onForcePressUpdate',
             init: onForcePressUpdate,
             isNamed: true,
@@ -632,20 +607,17 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
           onLongPressUp: p.get('onLongPressUp').build(),
           onLongPressEnd: p.get('onLongPressEnd').build(),
           onSecondaryLongPressDown: p.get('onSecondaryLongPressDown').build(),
-          onSecondaryLongPressCancel:
-              p.get('onSecondaryLongPressCancel').build(),
+          onSecondaryLongPressCancel: p.get('onSecondaryLongPressCancel').build(),
           onSecondaryLongPress: p.get('onSecondaryLongPress').build(),
           onSecondaryLongPressStart: p.get('onSecondaryLongPressStart').build(),
-          onSecondaryLongPressMoveUpdate:
-              p.get('onSecondaryLongPressMoveUpdate').build(),
+          onSecondaryLongPressMoveUpdate: p.get('onSecondaryLongPressMoveUpdate').build(),
           onSecondaryLongPressUp: p.get('onSecondaryLongPressUp').build(),
           onSecondaryLongPressEnd: p.get('onSecondaryLongPressEnd').build(),
           onTertiaryLongPressDown: p.get('onTertiaryLongPressDown').build(),
           onTertiaryLongPressCancel: p.get('onTertiaryLongPressCancel').build(),
           onTertiaryLongPress: p.get('onTertiaryLongPress').build(),
           onTertiaryLongPressStart: p.get('onTertiaryLongPressStart').build(),
-          onTertiaryLongPressMoveUpdate:
-              p.get('onTertiaryLongPressMoveUpdate').build(),
+          onTertiaryLongPressMoveUpdate: p.get('onTertiaryLongPressMoveUpdate').build(),
           onTertiaryLongPressUp: p.get('onTertiaryLongPressUp').build(),
           onTertiaryLongPressEnd: p.get('onTertiaryLongPressEnd').build(),
           onVerticalDragDown: p.get('onVerticalDragDown').build(),
@@ -674,8 +646,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor:
-              p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
           supportedDevices: p.get('supportedDevices').build(),
         );
   }
@@ -716,8 +687,7 @@ class RawGestureDetector$Mate extends _i2.RawGestureDetector with _i3.Mate {
             init: child,
             isNamed: true,
           ),
-          'gestures': _i3.BuilderArg<
-              Map<Type, _i2.GestureRecognizerFactory<_i1.GestureRecognizer>>>(
+          'gestures': _i3.BuilderArg<Map<Type, _i2.GestureRecognizerFactory<_i1.GestureRecognizer>>>(
             name: 'gestures',
             init: gestures,
             isNamed: true,

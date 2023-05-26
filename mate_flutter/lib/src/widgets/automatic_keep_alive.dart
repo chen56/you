@@ -42,8 +42,7 @@ class AutomaticKeepAlive$Mate extends _i1.AutomaticKeepAlive with _i2.Mate {
 }
 
 /// class KeepAliveNotification extends Notification
-class KeepAliveNotification$Mate extends _i1.KeepAliveNotification
-    with _i2.Mate {
+class KeepAliveNotification$Mate extends _i1.KeepAliveNotification with _i2.Mate {
   /// KeepAliveNotification KeepAliveNotification(Listenable handle)
   KeepAliveNotification$Mate(
 

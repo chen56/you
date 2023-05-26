@@ -215,8 +215,7 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
 }
 
 /// class LongPressDraggable<T extends Object> extends Draggable<T>
-class LongPressDraggable$Mate<T extends Object>
-    extends _i1.LongPressDraggable<T> with _i2.Mate {
+class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T> with _i2.Mate {
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -485,8 +484,7 @@ class DragTargetDetails$Mate<T> extends _i1.DragTargetDetails<T> with _i2.Mate {
 }
 
 /// class DragTarget<T extends Object> extends StatefulWidget
-class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T>
-    with _i2.Mate {
+class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate {
   /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
   DragTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -533,8 +531,7 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T>
             init: onAccept,
             isNamed: true,
           ),
-          'onAcceptWithDetails':
-              _i2.BuilderArg<_i1.DragTargetAcceptWithDetails<T>?>(
+          'onAcceptWithDetails': _i2.BuilderArg<_i1.DragTargetAcceptWithDetails<T>?>(
             name: 'onAcceptWithDetails',
             init: onAcceptWithDetails,
             isNamed: true,

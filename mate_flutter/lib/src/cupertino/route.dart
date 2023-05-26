@@ -11,8 +11,7 @@ import 'dart:ui' as _i7;
 import 'package:flutter/src/widgets/routes.dart' as _i8;
 
 /// class CupertinoPageRoute<T> extends PageRoute<T> with CupertinoRouteTransitionMixin<T>
-class CupertinoPageRoute$Mate<T> extends _i1.CupertinoPageRoute<T>
-    with _i2.Mate {
+class CupertinoPageRoute$Mate<T> extends _i1.CupertinoPageRoute<T> with _i2.Mate {
   /// CupertinoPageRoute<T> CupertinoPageRoute({required Widget Function(BuildContext) builder, String? title, RouteSettings? settings, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
   CupertinoPageRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
@@ -185,8 +184,7 @@ class CupertinoPage$Mate<T> extends _i1.CupertinoPage<T> with _i2.Mate {
 }
 
 /// class CupertinoPageTransition extends StatelessWidget
-class CupertinoPageTransition$Mate extends _i1.CupertinoPageTransition
-    with _i2.Mate {
+class CupertinoPageTransition$Mate extends _i1.CupertinoPageTransition with _i2.Mate {
   /// CupertinoPageTransition CupertinoPageTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoPageTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -247,8 +245,7 @@ class CupertinoPageTransition$Mate extends _i1.CupertinoPageTransition
 }
 
 /// class CupertinoFullscreenDialogTransition extends StatelessWidget
-class CupertinoFullscreenDialogTransition$Mate
-    extends _i1.CupertinoFullscreenDialogTransition with _i2.Mate {
+class CupertinoFullscreenDialogTransition$Mate extends _i1.CupertinoFullscreenDialogTransition with _i2.Mate {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -309,8 +306,7 @@ class CupertinoFullscreenDialogTransition$Mate
 }
 
 /// class CupertinoModalPopupRoute<T> extends PopupRoute<T>
-class CupertinoModalPopupRoute$Mate<T> extends _i1.CupertinoModalPopupRoute<T>
-    with _i2.Mate {
+class CupertinoModalPopupRoute$Mate<T> extends _i1.CupertinoModalPopupRoute<T> with _i2.Mate {
   /// CupertinoModalPopupRoute<T> CupertinoModalPopupRoute({required Widget Function(BuildContext) builder, String barrierLabel = 'Dismiss', Color? barrierColor = kCupertinoModalBarrierColor, bool barrierDismissible = true, bool semanticsDismissible = false, ImageFilter? filter, RouteSettings? settings, Offset? anchorPoint})
   CupertinoModalPopupRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
@@ -401,8 +397,7 @@ class CupertinoModalPopupRoute$Mate<T> extends _i1.CupertinoModalPopupRoute<T>
 }
 
 /// class CupertinoDialogRoute<T> extends RawDialogRoute<T>
-class CupertinoDialogRoute$Mate<T> extends _i1.CupertinoDialogRoute<T>
-    with _i2.Mate {
+class CupertinoDialogRoute$Mate<T> extends _i1.CupertinoDialogRoute<T> with _i2.Mate {
   /// CupertinoDialogRoute<T> CupertinoDialogRoute({required Widget Function(BuildContext) builder, required BuildContext context, bool barrierDismissible = true, Color? barrierColor, String? barrierLabel, Duration transitionDuration = const Duration(milliseconds: 250), Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions, RouteSettings? settings, Offset? anchorPoint})
   CupertinoDialogRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none

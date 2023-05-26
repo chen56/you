@@ -203,8 +203,7 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i12.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
@@ -446,8 +445,7 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i12.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior':
-              _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,

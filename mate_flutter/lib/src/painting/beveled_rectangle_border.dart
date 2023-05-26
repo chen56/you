@@ -8,8 +8,7 @@ import 'package:flutter/cupertino.dart' as _i4;
 import 'package:flutter/src/painting/border_radius.dart' as _i5;
 
 /// class BeveledRectangleBorder extends OutlinedBorder
-class BeveledRectangleBorder$Mate extends _i1.BeveledRectangleBorder
-    with _i2.Mate {
+class BeveledRectangleBorder$Mate extends _i1.BeveledRectangleBorder with _i2.Mate {
   /// BeveledRectangleBorder BeveledRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   BeveledRectangleBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl

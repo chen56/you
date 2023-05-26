@@ -210,8 +210,7 @@ class Chip$Mate extends _i1.Chip with _i2.Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage:
-              p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
           side: p.get('side').build(),
           shape: p.get('shape').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -546,8 +545,7 @@ class RawChip$Mate extends _i1.RawChip with _i2.Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage:
-              p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
           onPressed: p.get('onPressed').build(),
           onSelected: p.get('onSelected').build(),
           pressElevation: p.get('pressElevation').build(),

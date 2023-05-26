@@ -111,8 +111,7 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
             init: resizeDuration,
             isNamed: true,
           ),
-          'dismissThresholds':
-              _i2.BuilderArg<Map<_i1.DismissDirection, double>>(
+          'dismissThresholds': _i2.BuilderArg<Map<_i1.DismissDirection, double>>(
             name: 'dismissThresholds',
             init: dismissThresholds,
             isNamed: true,

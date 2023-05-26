@@ -8,8 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/rendering/box.dart' as _i5;
 
 /// class RenderListWheelViewport extends RenderBox with ContainerRenderObjectMixin<RenderBox, ListWheelParentData> implements RenderAbstractViewport
-class RenderListWheelViewport$Mate extends _i1.RenderListWheelViewport
-    with _i2.Mate {
+class RenderListWheelViewport$Mate extends _i1.RenderListWheelViewport with _i2.Mate {
   /// RenderListWheelViewport RenderListWheelViewport({required ListWheelChildManager childManager, required ViewportOffset offset, double diameterRatio = defaultDiameterRatio, double perspective = defaultPerspective, double offAxisFraction = 0, bool useMagnifier = false, double magnification = 1, double overAndUnderCenterOpacity = 1, required double itemExtent, double squeeze = 1, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.none, List<RenderBox>? children})
   RenderListWheelViewport$Mate({
     /// optionalParameters: {required ListWheelChildManager childManager} , default:none
@@ -138,8 +137,7 @@ class RenderListWheelViewport$Mate extends _i1.RenderListWheelViewport
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );

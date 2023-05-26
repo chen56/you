@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class SizeChangedLayoutNotifier extends SingleChildRenderObjectWidget
-class SizeChangedLayoutNotifier$Mate extends _i1.SizeChangedLayoutNotifier
-    with _i2.Mate {
+class SizeChangedLayoutNotifier$Mate extends _i1.SizeChangedLayoutNotifier with _i2.Mate {
   /// SizeChangedLayoutNotifier SizeChangedLayoutNotifier({Key? key, Widget? child})
   SizeChangedLayoutNotifier$Mate({
     /// optionalParameters: {Key? key} , default:none

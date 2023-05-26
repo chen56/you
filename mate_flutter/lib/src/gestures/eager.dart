@@ -7,8 +7,7 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/recognizer.dart' as _i4;
 
 /// class EagerGestureRecognizer extends OneSequenceGestureRecognizer
-class EagerGestureRecognizer$Mate extends _i1.EagerGestureRecognizer
-    with _i2.Mate {
+class EagerGestureRecognizer$Mate extends _i1.EagerGestureRecognizer with _i2.Mate {
   /// EagerGestureRecognizer EagerGestureRecognizer({Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   EagerGestureRecognizer$Mate({
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none

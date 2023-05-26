@@ -12,8 +12,7 @@ import 'package:flutter/src/material/material_state.dart' as _i8;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i9;
 
 /// class FloatingActionButtonThemeData with Diagnosticable
-class FloatingActionButtonThemeData$Mate
-    extends _i1.FloatingActionButtonThemeData with _i2.Mate {
+class FloatingActionButtonThemeData$Mate extends _i1.FloatingActionButtonThemeData with _i2.Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
     /// optionalParameters: {Color? foregroundColor} , default:none
@@ -179,8 +178,7 @@ class FloatingActionButtonThemeData$Mate
             init: extendedTextStyle,
             isNamed: true,
           ),
-          'mouseCursor':
-              _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,

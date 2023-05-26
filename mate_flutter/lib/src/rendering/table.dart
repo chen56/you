@@ -253,8 +253,7 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
             isNamed: true,
             defaultValue: _i7.ImageConfiguration.empty,
           ),
-          'defaultVerticalAlignment':
-              _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
+          'defaultVerticalAlignment': _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,

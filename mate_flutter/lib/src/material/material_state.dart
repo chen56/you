@@ -5,8 +5,7 @@ import 'package:flutter/src/material/material_state.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 
 /// class MaterialStatePropertyAll<T> implements MaterialStateProperty<T>
-class MaterialStatePropertyAll$Mate<T> extends _i1.MaterialStatePropertyAll<T>
-    with _i2.Mate {
+class MaterialStatePropertyAll$Mate<T> extends _i1.MaterialStatePropertyAll<T> with _i2.Mate {
   /// MaterialStatePropertyAll<T> MaterialStatePropertyAll(T value)
   MaterialStatePropertyAll$Mate(
 
@@ -30,8 +29,7 @@ class MaterialStatePropertyAll$Mate<T> extends _i1.MaterialStatePropertyAll<T>
 }
 
 /// class MaterialStatesController extends ValueNotifier<Set<MaterialState>>
-class MaterialStatesController$Mate extends _i1.MaterialStatesController
-    with _i2.Mate {
+class MaterialStatesController$Mate extends _i1.MaterialStatesController with _i2.Mate {
   /// MaterialStatesController MaterialStatesController([Set<MaterialState>? value])
   MaterialStatesController$Mate(
 

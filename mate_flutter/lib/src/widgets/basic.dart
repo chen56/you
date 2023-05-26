@@ -1097,8 +1097,7 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
 }
 
 /// class CompositedTransformTarget extends SingleChildRenderObjectWidget
-class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget
-    with _i2.Mate {
+class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget with _i2.Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1141,8 +1140,7 @@ class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget
 }
 
 /// class CompositedTransformFollower extends SingleChildRenderObjectWidget
-class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower
-    with _i2.Mate {
+class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower with _i2.Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1289,8 +1287,7 @@ class FittedBox$Mate extends _i1.FittedBox with _i2.Mate {
 }
 
 /// class FractionalTranslation extends SingleChildRenderObjectWidget
-class FractionalTranslation$Mate extends _i1.FractionalTranslation
-    with _i2.Mate {
+class FractionalTranslation$Mate extends _i1.FractionalTranslation with _i2.Mate {
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1543,8 +1540,7 @@ class Center$Mate extends _i1.Center with _i2.Mate {
 }
 
 /// class CustomSingleChildLayout extends SingleChildRenderObjectWidget
-class CustomSingleChildLayout$Mate extends _i1.CustomSingleChildLayout
-    with _i2.Mate {
+class CustomSingleChildLayout$Mate extends _i1.CustomSingleChildLayout with _i2.Mate {
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1630,8 +1626,7 @@ class LayoutId$Mate extends _i1.LayoutId with _i2.Mate {
 }
 
 /// class CustomMultiChildLayout extends MultiChildRenderObjectWidget
-class CustomMultiChildLayout$Mate extends _i1.CustomMultiChildLayout
-    with _i2.Mate {
+class CustomMultiChildLayout$Mate extends _i1.CustomMultiChildLayout with _i2.Mate {
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1899,8 +1894,7 @@ class ConstrainedBox$Mate extends _i1.ConstrainedBox with _i2.Mate {
 }
 
 /// class ConstraintsTransformBox extends SingleChildRenderObjectWidget
-class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox
-    with _i2.Mate {
+class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.Mate {
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -3045,8 +3039,7 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
 }
 
 /// class PositionedDirectional extends StatelessWidget
-class PositionedDirectional$Mate extends _i1.PositionedDirectional
-    with _i2.Mate {
+class PositionedDirectional$Mate extends _i1.PositionedDirectional with _i2.Mate {
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -4116,8 +4109,7 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
 }
 
 /// class WidgetToRenderBoxAdapter extends LeafRenderObjectWidget
-class WidgetToRenderBoxAdapter$Mate extends _i1.WidgetToRenderBoxAdapter
-    with _i2.Mate {
+class WidgetToRenderBoxAdapter$Mate extends _i1.WidgetToRenderBoxAdapter with _i2.Mate {
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
     /// optionalParameters: {required RenderBox renderBox} , default:none
@@ -4229,20 +4221,17 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
             init: onPointerCancel,
             isNamed: true,
           ),
-          'onPointerPanZoomStart':
-              _i2.BuilderArg<_i6.PointerPanZoomStartEventListener?>(
+          'onPointerPanZoomStart': _i2.BuilderArg<_i6.PointerPanZoomStartEventListener?>(
             name: 'onPointerPanZoomStart',
             init: onPointerPanZoomStart,
             isNamed: true,
           ),
-          'onPointerPanZoomUpdate':
-              _i2.BuilderArg<_i6.PointerPanZoomUpdateEventListener?>(
+          'onPointerPanZoomUpdate': _i2.BuilderArg<_i6.PointerPanZoomUpdateEventListener?>(
             name: 'onPointerPanZoomUpdate',
             init: onPointerPanZoomUpdate,
             isNamed: true,
           ),
-          'onPointerPanZoomEnd':
-              _i2.BuilderArg<_i6.PointerPanZoomEndEventListener?>(
+          'onPointerPanZoomEnd': _i2.BuilderArg<_i6.PointerPanZoomEndEventListener?>(
             name: 'onPointerPanZoomEnd',
             init: onPointerPanZoomEnd,
             isNamed: true,
@@ -5054,14 +5043,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'onMoveCursorForwardByCharacter':
-              _i2.BuilderArg<_i34.MoveCursorHandler?>(
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
             name: 'onMoveCursorForwardByCharacter',
             init: onMoveCursorForwardByCharacter,
             isNamed: true,
           ),
-          'onMoveCursorBackwardByCharacter':
-              _i2.BuilderArg<_i34.MoveCursorHandler?>(
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
             name: 'onMoveCursorBackwardByCharacter',
             init: onMoveCursorBackwardByCharacter,
             isNamed: true,
@@ -5086,8 +5073,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDidLoseAccessibilityFocus,
             isNamed: true,
           ),
-          'customSemanticsActions': _i2.BuilderArg<
-              Map<_i34.CustomSemanticsAction, _i4.VoidCallback>?>(
+          'customSemanticsActions': _i2.BuilderArg<Map<_i34.CustomSemanticsAction, _i4.VoidCallback>?>(
             name: 'customSemanticsActions',
             init: customSemanticsActions,
             isNamed: true,
@@ -5154,16 +5140,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
           onDismiss: p.get('onDismiss').build(),
-          onMoveCursorForwardByCharacter:
-              p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter:
-              p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus:
-              p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus:
-              p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
   }

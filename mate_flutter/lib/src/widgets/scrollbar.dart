@@ -336,8 +336,7 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
             isNamed: true,
             defaultValue: Duration.zero,
           ),
-          'notificationPredicate':
-              _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
+          'notificationPredicate': _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

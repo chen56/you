@@ -123,8 +123,7 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
 }
 
 /// class ShrinkWrappingViewport extends MultiChildRenderObjectWidget
-class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport
-    with _i2.Mate {
+class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport with _i2.Mate {
   /// ShrinkWrappingViewport ShrinkWrappingViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   ShrinkWrappingViewport$Mate({
     /// optionalParameters: {Key? key} , default:none

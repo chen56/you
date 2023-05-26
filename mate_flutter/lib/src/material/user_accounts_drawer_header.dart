@@ -11,8 +11,7 @@ import 'dart:ui' as _i7;
 import 'package:flutter/material.dart' as _i8;
 
 /// class UserAccountsDrawerHeader extends StatefulWidget
-class UserAccountsDrawerHeader$Mate extends _i1.UserAccountsDrawerHeader
-    with _i2.Mate {
+class UserAccountsDrawerHeader$Mate extends _i1.UserAccountsDrawerHeader with _i2.Mate {
   /// UserAccountsDrawerHeader UserAccountsDrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), Widget? currentAccountPicture, List<Widget>? otherAccountsPictures, Size currentAccountPictureSize = const Size.square(72.0), Size otherAccountsPicturesSize = const Size.square(40.0), required Widget? accountName, required Widget? accountEmail, void Function()? onDetailsPressed, Color arrowColor = Colors.white})
   UserAccountsDrawerHeader$Mate({
     /// optionalParameters: {Key? key} , default:none
