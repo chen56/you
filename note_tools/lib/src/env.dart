@@ -73,17 +73,18 @@ class Env {
   }
 
   bool get isDesktop =>
-      !kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS);
+      !_kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS);
 
-  bool isSupportNoteDevtool() => !kIsWeb && Platform.isMacOS && kDebugMode;
+  bool isSupportNoteDevtool() => !_kIsWeb && Platform.isMacOS && _kDebugMode;
 }
 
-const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');
-const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
-const bool kProfileMode = bool.fromEnvironment('dart.vm.profile');
-const bool kDebugMode = !kReleaseMode && !kProfileMode;
+// kIsWeb 等原本定义在flutter包，但未避免依赖Env的包引用flutter包，故在此定义
+const bool _kIsWeb = bool.fromEnvironment('dart.library.js_util');
+const bool _kReleaseMode = bool.fromEnvironment('dart.vm.product');
+const bool _kProfileMode = bool.fromEnvironment('dart.vm.profile');
+const bool _kDebugMode = !_kReleaseMode && !_kProfileMode;
 
 main() {
   // ignore: avoid_print
-  print(kDebugMode);
+  print(_kDebugMode);
 }

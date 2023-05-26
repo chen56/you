@@ -9,7 +9,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:glob/glob.dart';
-import 'package:note_tools/env.dart';
+import 'package:note_tools/note_tools.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:note/utils_core.dart';
@@ -88,10 +88,10 @@ class NoteGenerator {
   }
 
   // ignore: non_constant_identifier_names
-  Future<({File file, List<NoteLib> notes})> gen_note_app_g_dart() async {
+  Future<({File file, List<_NoteLib> notes})> gen_note_app_g_dart() async {
     var notes = await Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
-        .map((e) => NoteLib(
+        .map((e) => _NoteLib(
               noteHome: noteHome,
               notePath: e.path,
               writeFS: _fs,
@@ -102,7 +102,7 @@ class NoteGenerator {
   }
 
   // ignore: non_constant_identifier_names
-  Future<List<NoteLib>> gen_note_g_dart() async {
+  Future<List<_NoteLib>> gen_note_g_dart() async {
     return Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
         .map((e) => _gen_note_g_dart(e.path))
@@ -111,15 +111,15 @@ class NoteGenerator {
   }
 
   // ignore: non_constant_identifier_names
-  Future<NoteLib> _gen_note_g_dart(String noteFile) async {
-    NoteLib noteLib = NoteLib(
+  Future<_NoteLib> _gen_note_g_dart(String noteFile) async {
+    _NoteLib noteLib = _NoteLib(
         noteHome: noteHome, notePath: noteFile, writeFS: _fs, fmt: _fmt);
     // async write file
     await noteLib._genFromInfo(noteLib._collectInfo());
     return noteLib;
   }
 
-  Future<File> _genNotesFromList(List<NoteLib> noteLibs) async {
+  Future<File> _genNotesFromList(List<_NoteLib> noteLibs) async {
     var fields = noteLibs.map((noteLib) {
       String flatPagePath = flatLibPath(noteLib.noteRelativePath);
 
@@ -194,7 +194,7 @@ class NoteGenerator {
 //           .then((value) => welcome_.page, onError: onError));
 // }
 
-class NoteLib {
+class _NoteLib {
   final String notePath;
   final String noteHome;
 
@@ -203,7 +203,7 @@ class NoteLib {
   final FileSystem writeFS;
   final DartFormatter fmt;
   late final CompilationUnit unit;
-  NoteLib({
+  _NoteLib({
     required this.noteHome,
     required this.notePath,
     required this.writeFS,

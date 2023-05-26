@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'dart:io';
-import 'package:note_tools/env.dart';
+import 'package:note_tools/note_tools.dart';
 import 'package:path/path.dart' as path;
 
 Env env = Env();

@@ -5,7 +5,7 @@ import 'package:file/local.dart';
 import 'package:mate/mate_core.dart';
 import 'package:mate_flutter/mate_icons.g.dart';
 import "package:path/path.dart" as path;
-import 'package:note_tools/env.dart';
+import 'package:note_tools/note_tools.dart';
 
 // run: flutter test thisfile.dart
 // 暂时放弃，生成的代码200多K，太大了，且codepoint有重复
