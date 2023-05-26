@@ -688,7 +688,7 @@ function _run() {
   local project
   project=$(basename "$PWD")
   #  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
-  _debug "${FUNCNAME[1]}() ▶︎【$*】"
+  _info "${FUNCNAME[1]}() ▶︎【$*】"
   "$@"
   return $?
 }
@@ -744,7 +744,7 @@ function all() {
   (cd packages/mate_flutter && _run "$@")
   (cd packages/mate && _run "$@")
   (cd packages/note_app && _run "$@")
-  (cd packages/note_test _run "$@")
+  (cd packages/note_test && _run "$@")
 }
 
 bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
