@@ -5,15 +5,18 @@ import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
+import 'package:note_tools/note_tools.dart';
 import 'package:path/path.dart' as path;
 
 main() async {
+  Env env = Env();
   ResourceProvider resourceProvider = PhysicalResourceProvider.INSTANCE;
   final collection = AnalysisContextCollection(
     includedPaths: [
-      path.normalize(path.absolute(path.join(path.current, "lib/note.dart")))
+      path.normalize(path.absolute(
+          path.join(path.current, "test/analyzer/analyzer_list_alltype.dart")))
     ],
-    sdkPath: "/Users/cccc/app/flutter/bin/cache/dart-sdk",
+    sdkPath: env.dartSdkDir,
     resourceProvider: resourceProvider,
   );
   for (final context in collection.contexts) {

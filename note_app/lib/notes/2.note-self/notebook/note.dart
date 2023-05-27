@@ -5,7 +5,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
-import 'package:note/note.dart';
+import 'package:note/note_page.dart';
 import 'package:note_app/note_app.dart';
 import 'package:mate_flutter/material.dart';
 

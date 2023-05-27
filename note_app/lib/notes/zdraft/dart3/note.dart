@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/note.dart';
+import 'package:note/note_page.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "dart 3 新特性",

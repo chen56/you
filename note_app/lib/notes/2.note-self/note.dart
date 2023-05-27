@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/note.dart';
+import 'package:note/note_page.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "note项目自身机制",
