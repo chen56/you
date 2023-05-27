@@ -1,9 +1,9 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
-import 'package:note/log.dart';
 import 'package:mate/mate_core.dart';
 import 'package:mate/mate_note.dart';
-import 'package:note/navigator_v2.dart';
+import 'package:note/ui.dart';
+import 'package:note/note_shell.dart';
 import 'package:note/note.dart';
 import 'package:note/note_layout.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
@@ -46,7 +46,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 //     ]),
 //   ]),
 // ]);
-Logger logger = Logger();
 
 @immutable
 class Notes extends BaseNotes with Navigable {
@@ -111,7 +110,7 @@ class Layouts {
   );
   static NoteSystem get noteSystem => NoteSystem(
         contentExtensions:
-            NoteContentExtensions.ext([MateContentExt(editors: editors)]),
+            NoteContentExts.ext([MateContentExt(editors: editors)]),
       );
 
   static Layout defaultLayout<T>({

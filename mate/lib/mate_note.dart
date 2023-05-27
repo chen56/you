@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:mate/mate_core.dart';
 import 'package:note/note.dart';
-import 'package:note/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/utils_core.dart';
-import 'package:note/utils_ui.dart';
+import 'package:note/core.dart';
+import 'package:note/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page
@@ -16,7 +15,7 @@ class MateContentExt extends NoteContentExt {
   MateContentExt({required this.editors});
 
   @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
     late MateSampleContent content;
     if (data is MateSampleContent) {
       content = data;
@@ -164,7 +163,7 @@ class SampleTemplate {
   }
 }
 
-class MateSampleWidget extends StatelessWidget with NoteWidgetMinin {
+class MateSampleWidget extends StatelessWidget with NoteWidgetMixin {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;

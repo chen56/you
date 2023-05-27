@@ -1,10 +1,16 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:note/navigator_v2.dart';
+import 'package:note/src/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
-import 'package:note/utils_core.dart';
 import 'dart:convert';
+
+import 'package:note/src/utils_core.dart';
+
+/// 本项目page开发模型，包括几部分：
+/// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
+/// - [Layout]的具体实现，比如
+/// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
 typedef DeferredNoteConf = Future<NoteConfPart> Function();
@@ -41,23 +47,12 @@ NoteSourceData _emptyPageGenInfo = (
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
-class NoteSystem {
-  final NoteContentExtensions contentExtensions;
-
-  NoteSystem({required this.contentExtensions});
-}
-
 /// 可序列化的config 数据
 class NoteConf {
   final String shortTitle;
 
   NoteConf({required this.shortTitle});
 }
-
-/// 本项目page开发模型，包括几部分：
-/// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
-/// - [Layout]的具体实现，比如
-/// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 /// <T>: [NavigatorV2.push] 的返回类型
 /// todo 因此类是页面定义元数据，应该是临时格式的record对象，不应是个类
@@ -232,8 +227,6 @@ class Note<T> {
     return result;
   }
 
-  Screen createScreen(String location) => layout(this);
-
   /// 扁平化name，去掉排序用的数字前缀
   String get nameFlat {
     return name.replaceAll(RegExp("\\d+[.]"), "") // 1.note-self -> note-self
@@ -296,7 +289,7 @@ class Note<T> {
 ///
 
 class Pen {
-  final NoteContentExtensions contentFactory;
+  final NoteContentExts contentFactory;
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -383,6 +376,40 @@ class Pen {
 
 /// note content is not widget , it is data.
 abstract class NoteContent {}
+
+class NoteContentExts {
+  final List<NoteContentExt> contentExtensions;
+
+  NoteContentExts.ext(List<NoteContentExt> contentExtensions)
+      : contentExtensions = [
+          ...contentExtensions,
+          MarkdownContentExtension(),
+          WidgetContentExtension(),
+          ObjectContentExt(),
+        ];
+
+  NoteWidgetMixin create(Object? data, NoteContentArg arg) {
+    for (var ext in contentExtensions) {
+      var w = ext.create(data, arg);
+      if (w != null) {
+        return w;
+      }
+    }
+    throw Exception(
+        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
+  }
+}
+
+abstract class NoteContentExt {
+  NoteWidgetMixin? create(Object? data, NoteContentArg arg);
+}
+
+class NoteContentArg {
+  final NoteCell cell;
+  final Outline outline;
+
+  NoteContentArg({required this.cell, required this.outline});
+}
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -591,15 +618,15 @@ enum CellType {
   }
 }
 
-mixin NoteWidgetMinin on Widget {
+mixin NoteWidgetMixin on Widget {
   get isMarkdown;
 }
 
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final NoteContentExtensions contentExtensions;
-  final List<NoteWidgetMinin> _contents = List.empty(growable: true);
+  final NoteContentExts contentExtensions;
+  final List<NoteWidgetMixin> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
@@ -629,7 +656,7 @@ class NoteCell extends ChangeNotifier {
     );
   }
 
-  List<NoteWidgetMinin> get contents => List.unmodifiable(_contents);
+  List<NoteWidgetMixin> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -648,10 +675,10 @@ class NoteCell extends ChangeNotifier {
 
   void call(Object? object) {
     _add(contentExtensions.create(
-        object, ContentArg(cell: this, outline: outline)));
+        object, NoteContentArg(cell: this, outline: outline)));
   }
 
-  void _add(NoteWidgetMinin content) {
+  void _add(NoteWidgetMixin content) {
     _contents.add(content);
     notifyListeners();
   }

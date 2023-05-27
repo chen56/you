@@ -1,20 +1,20 @@
 library note;
 
-export 'note_core.dart'
+export 'src/note_core.dart'
     show
         Note,
         NoteContent,
         NoteConfPart,
+        Outline,
+        OutlineNode,
+        NoteWidgetMixin,
         Pen,
         NoteCell,
-        NoteSystem,
         Layout,
         NoteSourceData,
-        DeferredNoteConf;
-export 'src/content_builtin.dart'
-    show
-        ContentArg,
-        MarkdownCellExtension,
-        MarkdownPenExtension,
+        DeferredNoteConf,
         NoteContentExt,
-        NoteContentExtensions;
+        NoteContentExts,
+        NoteContentArg;
+export 'src/content_builtin.dart'
+    show MarkdownCellExtension, MarkdownPenExtension;

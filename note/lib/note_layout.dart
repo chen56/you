@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:note/navigator_v2.dart';
-import 'package:note/note_core.dart';
-import 'package:note/src/content_builtin.dart';
+import 'package:note/src/navigator_v2.dart';
+import 'package:note/src/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/utils_ui.dart';
+import 'package:note/src/note_system.dart';
+import 'package:note/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
@@ -331,7 +331,7 @@ class _OutlineView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
-  final NoteContentExtensions contentExtensions;
+  final NoteContentExts contentExtensions;
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
     this.cell, {
@@ -425,7 +425,7 @@ class _NoteCellView extends StatelessWidget {
         // return resizeBuilder(context, Size(621, 300), null);
         // todo 发现StatefulWidget在最外层会随着屏幕大小变化自动build，
         // 这里如果用StatefulWidget 是否可以不用这个了：GetSizeBuilder？
-        return GetSizeBuilder(builder: resizeBuilder);
+        return _GetSizeBuilder(builder: resizeBuilder);
       },
     );
     return cell.contents.isEmpty && cell.source.isCodeEmpty
@@ -436,13 +436,15 @@ class _NoteCellView extends StatelessWidget {
 
 /// todo 貌似有更先进的测量size方案，可以不用刷2次
 /// /flutter/examples/api/lib/widgets/framework/build_owner.0.dart
-class GetSizeBuilder extends StatelessWidget {
+class _GetSizeBuilder extends StatelessWidget {
   final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
   final ValueWidgetBuilder<Size> builder;
   final Widget? child;
-  GetSizeBuilder({
+  _GetSizeBuilder({
+    // ignore: unused_element
     super.key,
     required this.builder,
+    // ignore: unused_element
     this.child,
   }) {}
 
@@ -462,17 +464,18 @@ class GetSizeBuilder extends StatelessWidget {
   }
 }
 
-class SizeProvider extends StatefulWidget {
+class _SizeProvider extends StatefulWidget {
   final Widget child;
   final Function(Size) onChildSize;
 
-  const SizeProvider({Key? key, required this.onChildSize, required this.child})
+  const _SizeProvider(
+      {Key? key, required this.onChildSize, required this.child})
       : super(key: key);
   @override
-  SizeProviderState createState() => SizeProviderState();
+  _SizeProviderState createState() => _SizeProviderState();
 }
 
-class SizeProviderState extends State<SizeProvider> {
+class _SizeProviderState extends State<_SizeProvider> {
   @override
   void initState() {
     super.initState();

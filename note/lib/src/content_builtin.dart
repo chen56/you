@@ -1,50 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note/note_core.dart';
+import 'package:note/note.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/utils_core.dart';
+import 'package:note/src/note_core.dart';
+import 'package:note/src/utils_core.dart';
 
-class NoteContentExtensions {
-  final List<NoteContentExt> contentExtensions;
-
-  NoteContentExtensions.ext(List<NoteContentExt> contentExtensions)
-      : contentExtensions = [
-          ...contentExtensions,
-          MarkdownContentExtension(),
-          WidgetContentExtension(),
-          _ObjectContentExt(),
-        ];
-
-  NoteWidgetMinin create(Object? data, ContentArg arg) {
-    for (var ext in contentExtensions) {
-      var w = ext.create(data, arg);
-      if (w != null) {
-        return w;
-      }
-    }
-    throw Exception(
-        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
-  }
-}
-
-abstract class NoteContentExt {
-  NoteWidgetMinin? create(Object? data, ContentArg arg);
-}
-
-class ContentArg {
-  final NoteCell cell;
-  final Outline outline;
-
-  ContentArg({required this.cell, required this.outline});
-}
-
-class _ObjectContentExt extends NoteContentExt {
-  _ObjectContentExt();
+class ObjectContentExt extends NoteContentExt {
+  ObjectContentExt();
 
   @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
     return ObjectContentWidget(content: ObjectContent(data));
   }
 }
@@ -60,7 +27,7 @@ class ObjectContent extends NoteContent {
   }
 }
 
-class ObjectContentWidget extends StatelessWidget with NoteWidgetMinin {
+class ObjectContentWidget extends StatelessWidget with NoteWidgetMixin {
   final ObjectContent content;
 
   const ObjectContentWidget({super.key, required this.content});
@@ -78,7 +45,7 @@ class WidgetContentExtension extends NoteContentExt {
   WidgetContentExtension();
 
   @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
     if (data is Widget) {
       return WidgetContentWidget(content: WidgetContent(data));
     } else if (data is WidgetContent) {
@@ -88,7 +55,7 @@ class WidgetContentExtension extends NoteContentExt {
   }
 }
 
-class WidgetContentWidget extends StatelessWidget with NoteWidgetMinin {
+class WidgetContentWidget extends StatelessWidget with NoteWidgetMixin {
   final WidgetContent content;
 
   const WidgetContentWidget({super.key, required this.content});
@@ -117,7 +84,7 @@ class MarkdownContentExtension extends NoteContentExt {
   MarkdownContentExtension();
 
   @override
-  NoteWidgetMinin? create(Object? data, ContentArg arg) {
+  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
     if (data is MarkdownContent) {
       return MarkdownContentWidget(outline: arg.outline, content: data);
     } else if (data is WidgetContent) {
@@ -150,7 +117,7 @@ class MarkdownContent extends NoteContent {
   }
 }
 
-class MarkdownContentWidget extends StatelessWidget with NoteWidgetMinin {
+class MarkdownContentWidget extends StatelessWidget with NoteWidgetMixin {
   final Outline outline;
   final MarkdownContent content;
   final ScrollController controller = ScrollController();
