@@ -1,4 +1,5 @@
-/// 基础包，不依赖其他业务代码
+/// note 基础工具包，不依赖其他业务代码
+/// 本包不依赖flutter/dart:ui，可以在dart console环境下使用
 library core;
 
 export 'package:note/src/utils_core.dart';
