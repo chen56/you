@@ -16,5 +16,4 @@ export 'src/note_core.dart'
         NoteContentExt,
         NoteContentExts,
         NoteContentArg;
-export 'src/content_builtin.dart'
-    show MarkdownCellExtension, MarkdownPenExtension;
+export 'src/content_builtin.dart' show MarkdownPenExtension;

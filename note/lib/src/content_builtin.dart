@@ -94,12 +94,6 @@ class MarkdownContentExtension extends NoteContentExt {
   }
 }
 
-extension MarkdownCellExtension on NoteCell {
-  void markdown(String content) {
-    call(MarkdownContent(content));
-  }
-}
-
 extension MarkdownPenExtension on Pen {
   void markdown(String content) {
     call(MarkdownContent(content));
