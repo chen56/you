@@ -4,12 +4,12 @@ ARG test=on
 
 COPY --chown=flutter:flutter ./ ./note
 
-ENV PUB_HOSTED_URL="https://pub.flutter-io.cn"
-ENV FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+#RUN echo 'Please use china net, Because we use flutter-io.cn mirror'
+#ENV PUB_HOSTED_URL="https://pub.flutter-io.cn"
+#ENV FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 WORKDIR ./note
 
-RUN echo 'Please use china net, Because we use flutter-io.cn mirror'
 RUN ./bake get
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
 RUN ./bake build --base-href "/note/"

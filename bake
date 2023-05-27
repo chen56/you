@@ -789,6 +789,7 @@ preview.macos() (
 
 clean() {
   all flutter clean
+  rm -rf build
 }
 gen() {
   (
@@ -810,7 +811,7 @@ regen() {
 
 docker.build() (
   _exec docker build --progress plain --tag younpc/note:latest .
-  _exec mkdir -p build/web
+  _exec mkdir -p build/note_app/web
   _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
 )
 docker.run() {
