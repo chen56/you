@@ -1,0 +1,30 @@
+name: mate_flutter
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.2
+#  flutter:
+#    sdk: flutter
+  note:
+  note_tools:
+  mate:
+
+dev_dependencies:
+  lints: ^2.0.0
+  flutter_lints: ^2.0.1
+  analyzer: ">=5.0.0 <6.0.0"
+  file: ^6.1.4
+  code_builder: ^4.4.0
+  dart_style: ^2.0.0
+  path: ^1.8.2
+  flutter_test:
+    sdk: flutter
+
+#dependency_overrides:
