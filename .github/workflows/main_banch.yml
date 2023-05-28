@@ -30,7 +30,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./build/note_app/web
+          path: ./build/flutter_note/web
 
   # Deployment job
   deploy:

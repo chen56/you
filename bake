@@ -716,7 +716,7 @@ EOF
 
 init() {
   run git lfs install
-  note_app flutter create --platforms=macos .
+  flutter_note flutter create --platforms=macos .
 }
 
 bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project" \
@@ -734,16 +734,16 @@ function all() {
   (cd mate && _exec "$@")
   (cd note_test && _exec "$@")
   (cd note_tools && _exec "$@")
-  (cd spaces/note_app && _exec "$@")
+  (cd spaces/flutter_note && _exec "$@")
 }
 
 bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
-bake.cmd.set --cmd note_app --usage "./$BAKE_FILE note_app [any command]"
+bake.cmd.set --cmd flutter_note --usage "./$BAKE_FILE flutter_note [any command]"
 bake.cmd.set --cmd mate --usage "./$BAKE_FILE mate [any command]"
 bake.cmd.set --cmd mate_flutter --usage "./$BAKE_FILE mate_flutter [any command]"
 bake.cmd.set --cmd note_test --usage "./$BAKE_FILE note_test [any command]"
 function note() (cd note && _exec "$@")
-function note_app() (cd spaces/note_app && _exec "$@")
+function flutter_note() (cd spaces/flutter_note && _exec "$@")
 function mate() (cd mate && _exec "$@")
 function mate_flutter() (cd mate_flutter && _exec "$@")
 function note_test() (cd note_test && _exec "$@")
@@ -765,14 +765,14 @@ run.web() {
   # only work on macos
   # shellcheck disable=SC2155
   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
-  note_app flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome "$@"
+  flutter_note flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome "$@"
 }
 run.macos() {
-  note_app flutter run --device-id macos "$@"
+  flutter_note flutter run --device-id macos "$@"
 }
 
 build() {
-  note_app flutter build web -v \
+  flutter_note flutter build web -v \
     --release --tree-shake-icons \
     --web-renderer html "$@"
 }
@@ -781,12 +781,12 @@ preview.web() {
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #  build "$@"
   # 	npx http-server ./app_note/build/web --port 8000
-  _exec note_app deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
+  _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
 }
 preview.macos() (
-  _exec note_app flutter build macos -v \
+  _exec flutter_note flutter build macos -v \
     --release --tree-shake-icons "$@"
-  _exec note_app open build/macos/Build/Products/Release/note_app.app
+  _exec flutter_note open build/macos/Build/Products/Release/flutter_note.app
 )
 
 clean() {
@@ -794,7 +794,7 @@ clean() {
   rm -rf build
 }
 gen.all() {
-  _exec note_app dart run tools/gen.dart
+  _exec flutter_note dart run tools/gen.dart
   (
     cd mate_flutter
     _exec mate_flutter dart run  tools/gen_mates.dart
@@ -802,7 +802,7 @@ gen.all() {
   )
 }
 gen.notes() {
-  _exec note_app dart run tools/gen.dart
+  _exec flutter_note dart run tools/gen.dart
 }
 gen.mate() (
     cd mate_flutter
@@ -811,15 +811,15 @@ gen.mate() (
 )
 regen() {
   echo "regen1"
-  _exec rm -f note_app/lib/pages.g.dart
+  _exec rm -f flutter_note/lib/pages.g.dart
   _exec rm -rf mate_flutter/lib
   gen
 }
 
 docker.build() (
   _exec docker build --progress plain --tag younpc/note:latest .
-  _exec mkdir -p build/note_app/web
-  _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
+  _exec mkdir -p build/flutter_note/web
+  _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)"
 )
 docker.run() {
   _exec echo "note preview http://localhost:8888/note/"
