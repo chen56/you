@@ -761,11 +761,14 @@ function test() {
   _exec all flutter test
 }
 
-run() {
+run.web() {
   # only work on macos
   # shellcheck disable=SC2155
   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
   note_app flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome "$@"
+}
+run.macos() {
+  note_app flutter run --device-id macos "$@"
 }
 
 build() {
@@ -790,7 +793,7 @@ clean() {
   all flutter clean
   rm -rf build
 }
-gen() {
+gen.all() {
   _exec note_app dart run tools/gen.dart
   (
     cd mate_flutter
@@ -798,6 +801,14 @@ gen() {
     _exec dart run  tools/gen_mate_icons.dart
   )
 }
+gen.notes() {
+  _exec note_app dart run tools/gen.dart
+}
+gen.mate() (
+    cd mate_flutter
+    _exec mate_flutter dart run  tools/gen_mates.dart
+    _exec dart run  tools/gen_mate_icons.dart
+)
 regen() {
   echo "regen1"
   _exec rm -f note_app/lib/pages.g.dart

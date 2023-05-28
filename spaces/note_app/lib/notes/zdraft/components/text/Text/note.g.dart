@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 191,
+          end: 196,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 范例1 普通文, print.markdown(r''' ## 范例1 富文本)
         (
           cellType: 'body',
-          offset: 191,
-          end: 403,
+          offset: 196,
+          end: 408,
           statementCount: 2,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 403,
-          end: 405,
+          offset: 408,
+          end: 410,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJUZXh0IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMjIOiMg+S+izEg5pmu6YCa5paH5pysIAoKVGV4dC5uZXcoKQoKICAnJycpOwoKICAvLyBwcmludC5zYW1wbGVGaWxlKGNvbnN0IE5vcm1hbFRleHRTYW1wbGUoKSk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDlr4zmlofmnKwgCgpUZXh0LnJpY2goKQoKICAnJycpOwoKICAvLyBwcmludC5zYW1wbGVGaWxlKGNvbnN0IFJpY2hUZXh0U2FtcGxlKCkpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogIlRleHQiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgpUZXh0Lm5ldygpCgogICcnJyk7CgogIC8vIHByaW50LnNhbXBsZUZpbGUoY29uc3QgTm9ybWFsVGV4dFNhbXBsZSgpKTsKCiAgcHJpbnQubWFya2Rvd24ocicnJwojIyDojIPkvosxIOWvjOaWh+acrCAKClRleHQucmljaCgpCgogICcnJyk7CgogIC8vIHByaW50LnNhbXBsZUZpbGUoY29uc3QgUmljaFRleHRTYW1wbGUoKSk7Cn0K"
     );

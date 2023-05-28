@@ -89,7 +89,7 @@ class NoteGenerator {
 
   // ignore: non_constant_identifier_names
   Future<({File file, List<_NoteLib> notes})> gen_note_app_g_dart() async {
-    var notes = await Glob("**/note_page.dart")
+    var notes = await Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
         .map((e) => _NoteLib(
               noteHome: noteHome,
@@ -103,7 +103,7 @@ class NoteGenerator {
 
   // ignore: non_constant_identifier_names
   Future<List<_NoteLib>> gen_note_g_dart() async {
-    return Glob("**/note_page.dart")
+    return Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
         .map((e) => _gen_note_g_dart(e.path))
         .asyncExpand((e) => e.asStream())
@@ -124,7 +124,7 @@ class NoteGenerator {
       String flatPagePath = flatLibPath(noteLib.noteRelativePath);
 
       var fieldName = flatPagePath;
-      String path = noteLib.noteRelativePath.replaceAll("/note_page.dart", "");
+      String path = noteLib.noteRelativePath.replaceAll("/note.dart", "");
       path = path == "" ? "/" : path;
       // ignore: non_constant_identifier_names
       return """
