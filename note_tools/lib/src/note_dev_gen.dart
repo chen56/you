@@ -88,8 +88,8 @@ class NoteGenerator {
   }
 
   // ignore: non_constant_identifier_names
-  Future<({File file, List<_NoteLib> notes})> gen_note_app_g_dart() async {
-    var notes = await Glob("**/note_page.dart")
+  Future<({File file, List<_NoteLib> notes})> gen_flutter_note_g_dart() async {
+    var notes = await Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
         .map((e) => _NoteLib(
               noteHome: noteHome,
@@ -103,7 +103,7 @@ class NoteGenerator {
 
   // ignore: non_constant_identifier_names
   Future<List<_NoteLib>> gen_note_g_dart() async {
-    return Glob("**/note_page.dart")
+    return Glob("**/note.dart")
         .listFileSystem(_fs, root: noteHome)
         .map((e) => _gen_note_g_dart(e.path))
         .asyncExpand((e) => e.asStream())
@@ -124,7 +124,7 @@ class NoteGenerator {
       String flatPagePath = flatLibPath(noteLib.noteRelativePath);
 
       var fieldName = flatPagePath;
-      String path = noteLib.noteRelativePath.replaceAll("/note_page.dart", "");
+      String path = noteLib.noteRelativePath.replaceAll("/note.dart", "");
       path = path == "" ? "/" : path;
       // ignore: non_constant_identifier_names
       return """
@@ -143,8 +143,9 @@ class NoteGenerator {
       ])
       ..directives.addAll(noteLibs.map((lib) {
         String flatPagePath = flatLibPath(lib.noteRelativePath);
+        // note_tools作为通用工具，应去除 flutter_note 依赖
         return code.Directive.importDeferredAs(
-            "package:note_app/${lib.noteRelativePath}", "${flatPagePath}_");
+            "package:flutter_note/${lib.noteRelativePath}", "${flatPagePath}_");
       }))
       ..directives.addAll(noteLibs.map((lib) {
         String flatPagePath = flatLibPath(lib.noteRelativePath);
@@ -168,10 +169,10 @@ class NoteGenerator {
 
     String toCode =
         '${libGen.accept(DartEmitter(allocator: Allocator.none, orderDirectives: true, useNullSafetySyntax: true))}';
-    await _fs.file("lib/note_app.deferred.g.dart").writeAsString(toCode);
+    await _fs.file("lib/flutter_note.deferred.g.dart").writeAsString(toCode);
     // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
     return _fs
-        .file("lib/note_app.deferred.g.dart")
+        .file("lib/flutter_note.deferred.g.dart")
         .writeAsString(_fmt.format(toCode));
   }
 }
@@ -180,9 +181,9 @@ class NoteGenerator {
 // // ignore_for_file: library_prefixes, non_constant_identifier_names
 //
 // import 'package:note/note_page.dart';
-// import 'package:note_app/1.welcome/page.dart' deferred as welcome_;
-// import 'package:note_app/1.welcome/page.g.dart' as welcome_g;
-// import 'package:note_app/note_app.dart';
+// import 'package:flutter_note/1.welcome/page.dart' deferred as welcome_;
+// import 'package:flutter_note/1.welcome/page.g.dart' as welcome_g;
+// import 'package:flutter_note/flutter_note.dart';
 //
 // mixin PathsMixin {
 //   final Note welcome = put2(
@@ -485,7 +486,7 @@ typedef _NoteInfo = ({
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
 String flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:note_app", "");
+  String result = packageName.replaceAll("package:flutter_note", "");
   result = path.dirname(result);
 
   if (result == "/") {

@@ -8,11 +8,11 @@ void main() {
     expect(path.dirname("package:path/path.dart"), "package:path");
 
     String getPath(String package) {
-      String s = package.replaceAll("package:note_app/", "");
+      String s = package.replaceAll("package:flutter_note/", "");
       return path.dirname(s);
     }
 
-    expect(getPath("package:note_app/page.dart"), ".");
-    expect(getPath("package:note_app/x/page.dart"), "x");
+    expect(getPath("package:flutter_note/page.dart"), ".");
+    expect(getPath("package:flutter_note/x/page.dart"), "x");
   });
 }
