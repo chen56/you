@@ -732,9 +732,9 @@ function all() {
   (cd note && _exec "$@")
   (cd mate_flutter && _exec "$@")
   (cd mate && _exec "$@")
-  (cd note_app && _exec "$@")
   (cd note_test && _exec "$@")
   (cd note_tools && _exec "$@")
+  (cd spaces/note_app && _exec "$@")
 }
 
 bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
@@ -743,7 +743,7 @@ bake.cmd.set --cmd mate --usage "./$BAKE_FILE mate [any command]"
 bake.cmd.set --cmd mate_flutter --usage "./$BAKE_FILE mate_flutter [any command]"
 bake.cmd.set --cmd note_test --usage "./$BAKE_FILE note_test [any command]"
 function note() (cd note && _exec "$@")
-function note_app() (cd note_app && _exec "$@")
+function note_app() (cd spaces/note_app && _exec "$@")
 function mate() (cd mate && _exec "$@")
 function mate_flutter() (cd mate_flutter && _exec "$@")
 function note_test() (cd note_test && _exec "$@")
@@ -778,13 +778,12 @@ preview.web() {
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #  build "$@"
   # 	npx http-server ./app_note/build/web --port 8000
-  _exec deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./note_app/build/web --port 8000 -g --brotli
+  _exec note_app deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
 }
 preview.macos() (
-  cd note_app
-  _exec flutter build macos -v \
+  _exec note_app flutter build macos -v \
     --release --tree-shake-icons "$@"
-  _exec open build/macos/Build/Products/Release/note_app.app
+  _exec note_app open build/macos/Build/Products/Release/note_app.app
 )
 
 clean() {
@@ -792,13 +791,10 @@ clean() {
   rm -rf build
 }
 gen() {
-  (
-    cd note_app
-    _exec dart run tools/gen.dart
-  )
+  _exec note_app dart run tools/gen.dart
   (
     cd mate_flutter
-    _exec dart run  tools/gen_mates.dart
+    _exec mate_flutter dart run  tools/gen_mates.dart
     _exec dart run  tools/gen_mate_icons.dart
   )
 }

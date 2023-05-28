@@ -143,6 +143,7 @@ class NoteGenerator {
       ])
       ..directives.addAll(noteLibs.map((lib) {
         String flatPagePath = flatLibPath(lib.noteRelativePath);
+        // note_tools作为通用工具，应去除 note_app 依赖
         return code.Directive.importDeferredAs(
             "package:note_app/${lib.noteRelativePath}", "${flatPagePath}_");
       }))
