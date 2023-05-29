@@ -31,5 +31,21 @@ Row(
         ],
       )
 
+
+## 布局问题
+
+### Flex & Flexible
+
+      // title 被Flexible包裹后，文本太长会自动换行
+      // 但是Flexible要上面套一个Flex的子类
+      var link_old = TextButton(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(iconExtend),
+            Flexible(child: Text("🗓 ${node.shortTitle}")),
+          ],
+        ),
+      );
   ''');
 }
