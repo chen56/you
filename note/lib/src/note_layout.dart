@@ -214,51 +214,41 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget newLink(Note node) {
+    Widget noteLink(Note node) {
       click() {
-        NavigatorV2.of(context).push(node.path);
+        if (node.isLeaf) {
+          NavigatorV2.of(context).push(node.path);
+        } else {
+          setState(() => node.expand = !node.expand);
+        }
       }
 
       String iconExtend = node.isLeaf
-          ? "     "
+          ? "   "
           : node.expand
-              ? "▽  "
-              : "▷︎  ";
-      String icon = "🗓";
-      // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
-      // title 被Flexible包裹后，文本太长会自动换行
-      // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
-      // children: [Flexible(child: Text("$icon ${node.title}"))],
-      // 但是Flexible要上面套一个Flex的子类
-      var link = TextButton(
-        onPressed: node.isNotEmpty ? click : null,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => setState(() => node.expand = !node.expand),
-              child: Text(iconExtend),
-            ),
-            Text(icon),
-            Flexible(child: Text(node.shortTitle)),
-          ],
-        ),
-      );
+              ? "▼"
+              : "︎︎︎▶";
+      // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►●◦○ ↑→↓↑↘︎ ⌃⌄>〉⌵〉⎥ \⑊↘︎ -▶︎►▸▼▾
 
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
       return Padding(
         // 缩进模仿树形
         padding: EdgeInsets.only(
-            left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
-        child: link,
+            left: 10 * (node.levelTo(widget.root) - 1).toDouble()),
+        child: TextButton(
+          onPressed: click,
+          child: Text("$iconExtend ${node.shortTitle}"),
+        ),
       );
     }
 
-    var pages = widget.root.toList(
+    var notes = widget.root.toList(
       includeThis: false,
       test: (e) => e.isRoot ? true : e.parent!.expand,
     );
-    var column = Column(children: [...pages.map(newLink)]);
+    var column = Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [...notes.map(noteLink)]);
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: column,
