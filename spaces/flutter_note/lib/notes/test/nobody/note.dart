@@ -1,6 +1,6 @@
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "test-无build",
   builder: (context, print) {},
 );

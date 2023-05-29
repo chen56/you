@@ -9,7 +9,7 @@ import 'package:note/note_page.dart';
 import 'package:flutter_note/flutter_note.dart';
 import 'package:path/path.dart' as path;
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "Platform和设备",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 import 'dart:developer';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "VM Service",
   builder: build,
 );

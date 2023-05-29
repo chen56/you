@@ -4,7 +4,7 @@ export 'src/note_core.dart'
     show
         Note,
         NoteContent,
-        NoteConfPart,
+        FlutterNoteConf,
         Outline,
         OutlineNode,
         NoteWidgetMixin,

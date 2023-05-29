@@ -5,7 +5,7 @@ import 'package:mate/mate_note.dart';
 import 'package:note/note_page.dart';
 import 'package:flutter_note/flutter_note.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "异步async",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,

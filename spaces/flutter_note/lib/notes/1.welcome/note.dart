@@ -3,7 +3,7 @@ import 'package:note/note_page.dart';
 import 'package:mate/mate_note.dart';
 import 'package:mate_flutter/material.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "welcome flutter note",
   builder: build,
 );

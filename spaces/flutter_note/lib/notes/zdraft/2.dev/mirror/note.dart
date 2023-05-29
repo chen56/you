@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "网络连不上",
   builder: build,
 );

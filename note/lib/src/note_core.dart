@@ -13,7 +13,7 @@ import 'package:note/src/utils_core.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef DeferredNoteConf = Future<NoteConfPart> Function();
+typedef DeferredNoteConf = Future<FlutterNoteConf> Function();
 typedef NoteSourceData = ({
   List<
       ({
@@ -47,39 +47,30 @@ NoteSourceData _emptyPageGenInfo = (
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
-/// 可序列化的config 数据
-class NoteConf {
-  final String shortTitle;
-
-  NoteConf({required this.shortTitle});
-}
-
 /// <T>: [NavigatorV2.push] 的返回类型
-/// todo 因此类是页面定义元数据，应该是临时格式的record对象，不应是个类
-class NoteConfPart<T> {
+class FlutterNoteConf<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
-  final NoteConf conf;
   final NotePageBuilder builder;
   late final Layout? layout;
   final bool empty;
 
-  NoteConfPart({
+  FlutterNoteConf({
     required this.shortTitle,
     required this.builder,
     this.layout,
     // todo remove empty field
     this.empty = false,
-  }) : conf = NoteConf(shortTitle: shortTitle);
+  });
 
-  NoteConfPart.empty({String shortTitle = ""})
+  FlutterNoteConf.empty({String shortTitle = ""})
       : this(
           empty: true,
           shortTitle: shortTitle,
           builder: (context, print) {},
         );
 
-  NoteConfPart.notEmpty({String shortTitle = ""})
+  FlutterNoteConf.notEmpty({String shortTitle = ""})
       : this(
           empty: false,
           shortTitle: shortTitle,
@@ -100,7 +91,7 @@ class Note<T> {
   bool expand = false;
   final Map<String, Object> attributes = {};
 
-  NoteConfPart<T> confPart = NoteConfPart.empty();
+  FlutterNoteConf<T> confPart = FlutterNoteConf.empty();
 
   NoteSource _source = _emptyPageSource;
 
@@ -109,7 +100,7 @@ class Note<T> {
   Note._child({
     required this.name,
     required Note this.parent,
-  }) : confPart = NoteConfPart.empty(shortTitle: name);
+  }) : confPart = FlutterNoteConf.empty(shortTitle: name);
 
   Note.root()
       : name = "",
@@ -125,7 +116,7 @@ class Note<T> {
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
-    path.confPart = NoteConfPart.notEmpty(shortTitle: path.name);
+    path.confPart = FlutterNoteConf.notEmpty(shortTitle: path.name);
     path.deferredConf = deferredConf;
     return path as Note<C>;
   }

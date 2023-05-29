@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 import 'package:flutter_note/flutter_note.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "home",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

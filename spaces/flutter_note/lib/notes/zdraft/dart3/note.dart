@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "dart 3 新特性",
   builder: build,
 );

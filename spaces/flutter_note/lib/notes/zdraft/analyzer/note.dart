@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "test-analyzer",
   builder: build,
 );

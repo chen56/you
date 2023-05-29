@@ -3,7 +3,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "web optimization",
   builder: build,
 );

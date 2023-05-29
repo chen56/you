@@ -5,7 +5,7 @@ import 'package:mate_flutter/material.dart';
 import 'package:mate_flutter/painting.dart' as painting;
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "Bars",
   builder: build,
 );

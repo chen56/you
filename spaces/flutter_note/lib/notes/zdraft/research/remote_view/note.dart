@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 import 'package:flutter_note/flutter_note.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "Remote flutter view",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
