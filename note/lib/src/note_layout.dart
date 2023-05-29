@@ -247,8 +247,12 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       test: (e) => e.isRoot ? true : e.parent!.expand,
     );
     var column = Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [...notes.map(noteLink)]);
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ...notes.map(noteLink),
+        const SizedBox(height: 200), // give space to bottom
+      ],
+    );
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: column,
