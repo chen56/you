@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 137,
+          end: 143,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -16,5 +16,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogInRlc3Qt5pegYnVpbGQiLAogIGJ1aWxkZXI6IChjb250ZXh0LCBwcmludCkge30sCik7Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKRmx1dHRlck5vdGVDb25mIHBhZ2UgPSBGbHV0dGVyTm90ZUNvbmYoCiAgc2hvcnRUaXRsZTogInRlc3Qt5pegYnVpbGQiLAogIGJ1aWxkZXI6IChjb250ZXh0LCBwcmludCkge30sCik7Cg=="
     );

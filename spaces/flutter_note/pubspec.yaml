@@ -62,9 +62,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-
   assets:
+    - ./note_space.json
     - ./lib/notes/
+    - ./lib/notes/test/
+    - ./lib/notes/test/temp/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -19,6 +19,7 @@ import 'package:flutter_note/notes/test/temp/note.dart' deferred as notes_test_t
 import 'package:flutter_note/notes/zdraft/2.dev/debug/note.dart' deferred as notes_zdraft_dev_debug_;
 import 'package:flutter_note/notes/zdraft/2.dev/mirror/note.dart' deferred as notes_zdraft_dev_mirror_;
 import 'package:flutter_note/notes/zdraft/analyzer/note.dart' deferred as notes_zdraft_analyzer_;
+import 'package:flutter_note/notes/zdraft/assets/note.dart' deferred as notes_zdraft_assets_;
 import 'package:flutter_note/notes/zdraft/async/note.dart' deferred as notes_zdraft_async_;
 import 'package:flutter_note/notes/zdraft/components/bar/note.dart' deferred as notes_zdraft_components_bar_;
 import 'package:flutter_note/notes/zdraft/components/button/ButtonStyleButton/note.dart'
@@ -72,6 +73,7 @@ import 'notes/test/temp/note.g.dart' as notes_test_temp_g;
 import 'notes/zdraft/2.dev/debug/note.g.dart' as notes_zdraft_dev_debug_g;
 import 'notes/zdraft/2.dev/mirror/note.g.dart' as notes_zdraft_dev_mirror_g;
 import 'notes/zdraft/analyzer/note.g.dart' as notes_zdraft_analyzer_g;
+import 'notes/zdraft/assets/note.g.dart' as notes_zdraft_assets_g;
 import 'notes/zdraft/async/note.g.dart' as notes_zdraft_async_g;
 import 'notes/zdraft/components/bar/note.g.dart' as notes_zdraft_components_bar_g;
 import 'notes/zdraft/components/button/ButtonStyleButton/note.g.dart'
@@ -226,6 +228,9 @@ abstract class BaseNotes {
 
   final Note notes_zdraft = put2(
       "notes/zdraft", notes_zdraft_g.noteInfo(), () => notes_zdraft_.loadLibrary().then((value) => notes_zdraft_.page));
+
+  final Note notes_zdraft_assets = put2("notes/zdraft/assets", notes_zdraft_assets_g.noteInfo(),
+      () => notes_zdraft_assets_.loadLibrary().then((value) => notes_zdraft_assets_.page));
 
   final Note notes_zdraft_analyzer = put2("notes/zdraft/analyzer", notes_zdraft_analyzer_g.noteInfo(),
       () => notes_zdraft_analyzer_.loadLibrary().then((value) => notes_zdraft_analyzer_.page));

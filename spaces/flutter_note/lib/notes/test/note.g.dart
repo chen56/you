@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 335,
+          end: 341,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # test自测目录)
         (
           cellType: 'body',
-          offset: 335,
-          end: 398,
+          offset: 341,
+          end: 404,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 398,
-          end: 400,
+          offset: 404,
+          end: 406,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9ub3RlX3BhZ2UuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyX25vdGUvZmx1dHRlcl9ub3RlLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogIuiHqua1i+ebruW9lSIsCiAgYnVpbGRlcjogYnVpbGQsCiAgbGF5b3V0OiBMYXlvdXRzLmRlZmF1bHRMYXlvdXQoZGVmYXVsdENvZGVFeHBhbmQ6IHRydWUpLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyB0ZXN06Ieq5rWL55uu5b2VCgrmnKznm67lvZXmlL7nva7oh6rmtYvpobXpnaLvvIzku6Xpqozor4Hln7rnoYDlip/og73jgIIKCiAgJycnKTsKfQo="
+          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9ub3RlX3BhZ2UuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyX25vdGUvZmx1dHRlcl9ub3RlLmRhcnQnOwoKRmx1dHRlck5vdGVDb25mIHBhZ2UgPSBGbHV0dGVyTm90ZUNvbmYoCiAgc2hvcnRUaXRsZTogIuiHqua1i+ebruW9lSIsCiAgYnVpbGRlcjogYnVpbGQsCiAgbGF5b3V0OiBMYXlvdXRzLmRlZmF1bHRMYXlvdXQoZGVmYXVsdENvZGVFeHBhbmQ6IHRydWUpLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyB0ZXN06Ieq5rWL55uu5b2VCgrmnKznm67lvZXmlL7nva7oh6rmtYvpobXpnaLvvIzku6Xpqozor4Hln7rnoYDlip/og73jgIIKCiAgJycnKTsKfQo="
     );
