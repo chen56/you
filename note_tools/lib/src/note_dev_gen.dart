@@ -14,6 +14,7 @@ import 'package:path/path.dart' as path;
 import 'package:note/core.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 import 'package:watcher/watcher.dart';
+import 'package:yaml_edit/yaml_edit.dart';
 
 String _LIB_ROOT = "lib";
 String _NOTES_ROOT = "lib/notes/";
@@ -570,5 +571,51 @@ class _FindMateSampleStatement extends GeneralizingAstVisitor {
       collect.add((nodeType: nodeType, node: _findFirstParentStatement(node)));
     }
     return super.visitInstanceCreationExpression(node);
+  }
+}
+
+class Pubspec {
+  static const _YAML_PATH_ASSETS = ["flutter", "assets"];
+  late final YamlEditor _yamlEditor;
+  Pubspec.loadSync(String content) {
+    _yamlEditor = YamlEditor(content);
+  }
+
+  List<String> get assets {
+    return (_yamlEditor.parseAt(_YAML_PATH_ASSETS) as List)
+        .map((e) => "$e")
+        .toList();
+  }
+
+  void putNoteAssets(List<String> notesNow) {
+    var toAdd = List.from(notesNow, growable: true);
+    // previously Generated remove
+    // assets.where((element) => false)
+    var oldAssets = assets;
+    var removed = 0;
+    for (int i = 0; i < oldAssets.length; i++) {
+      var oldAsset = oldAssets[i];
+      // manual config, leave it
+      // lib/notes is our Generated
+      if (!oldAsset.startsWith("lib/notes")) {
+        continue;
+      }
+      // our Generated, no change , no need to repeat add
+      if (toAdd.contains(oldAsset)) {
+        toAdd.remove(oldAsset);
+        continue;
+      }
+
+      // prefix lib/notes is previously Generated ,and now not exists
+      _yamlEditor.remove([..._YAML_PATH_ASSETS, i - removed]);
+      removed++;
+    }
+    for (var add in toAdd) {
+      _yamlEditor.appendToList(_YAML_PATH_ASSETS, add);
+    }
+  }
+
+  String toString() {
+    return _yamlEditor.toString();
   }
 }

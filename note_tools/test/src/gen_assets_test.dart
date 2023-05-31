@@ -1,25 +1,30 @@
-import 'package:file/local.dart';
+import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:path/path.dart' as path;
-import 'package:yaml_edit/yaml_edit.dart';
+import 'package:note_tools/src/note_dev_gen.dart';
+
+MemoryFileSystem fs = MemoryFileSystem();
 
 void main() {
-  group("gen pages", () {
-    test('flatLibPath', () {
-      LocalFileSystem fs = LocalFileSystem();
-      var pubspec =
-          fs.file(fs.file(path.absolute("./pubspec.yaml"))).readAsStringSync();
-      final yamlEditor = YamlEditor(pubspec);
-      List assets = yamlEditor.parseAt(["flutter", "assets"]) as List;
-      expect(assets.length, 1);
-      expect(assets[0], "assets/");
-      assets.add("assets/2/");
+  group("Pubspec.putNoteAssets", () {
+    test('normal', () {
+      var pubspec = Pubspec.loadSync("""
+flutter:
+  assets:
+    - assets/manual1                   # manual config, keep it
+    - lib/notes/                       # previously Generated ,keep it
+    - lib/notes/rm/              # previously Generated ,remove it
+    - assets/manual2                   # manual config, keep it
+""");
+      var old = pubspec.assets;
+      expect(old,
+          ["assets/manual1", "lib/notes/", "lib/notes/rm/", "assets/manual2"]);
 
-      print(yamlEditor.toString());
+      // when
+      pubspec.putNoteAssets(["lib/notes/", "lib/notes/new/"]);
+
+      // then
+      expect(pubspec.assets,
+          ['assets/manual1', 'lib/notes/', 'assets/manual2', 'lib/notes/new/']);
     });
   });
-}
-
-class Pubspec {
-  void putNoteAssets(List<String> noteDir) {}
 }
