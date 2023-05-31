@@ -6,8 +6,7 @@ import 'package:note/ui.dart';
 import 'package:note/note_shell.dart';
 import 'package:note/note_page.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
-import 'package:flutter_note/flutter_note.deferred.g.dart';
-import 'package:note_tools/note_tools.dart';
+import 'package:flutter_note/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
@@ -56,12 +55,12 @@ class Notes extends BaseNotes with Navigable {
   Screen get initial {
     String? last = sharedPreferences.getString("flutter_note.notes.location");
     if (last == null) {
-      return switchTo(notes_welcome.path);
+      return switchTo(welcome.path);
     }
     if (BaseNotes.rootroot.contains(last)) {
       return switchTo(last);
     }
-    return switchTo(notes_welcome.path);
+    return switchTo(welcome.path);
   }
 
   @override
@@ -133,11 +132,9 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-  final NoteDevTool? noteDevTool;
 
   // ignore: prefer_const_constructors_in_immutables
-  NoteApp(
-      {super.key, required this.noteDevTool, required this.sharedPreferences});
+  NoteApp({super.key, required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +142,7 @@ class NoteApp extends StatelessWidget {
     BaseNotes.rootroot.extendTree(true);
     Notes notes = Notes(sharedPreferences: sharedPreferences);
 
-    notes.notes_zdraft.extendTree(false);
+    notes.zdraft.extendTree(false);
 
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',

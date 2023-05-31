@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 398,
+          end: 370,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 398,
-          end: 401,
+          offset: 370,
+          end: 373,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -28,11 +28,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # asset   , var xjson = await rootBundle.l, print(xjson);)
+        /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
-          offset: 479,
-          end: 606,
+          offset: 451,
+          end: 591,
           statementCount: 3,
           specialNodes: <({
             String nodeType,
@@ -44,8 +44,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 606,
-          end: 608,
+          offset: 591,
+          end: 593,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -55,5 +55,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdkYXJ0Omlzb2xhdGUnOwoKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXJfbm90ZS9mbHV0dGVyX25vdGUuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3NlcnZpY2VzLmRhcnQnIHNob3cgcm9vdEJ1bmRsZTsKCkZsdXR0ZXJOb3RlQ29uZiBwYWdlID0gRmx1dHRlck5vdGVDb25mKAogIHNob3J0VGl0bGU6ICJhc3NldCIsCiAgbGF5b3V0OiBMYXlvdXRzLmRlZmF1bHRMYXlvdXQoZGVmYXVsdENvZGVFeHBhbmQ6IGZhbHNlKSwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIGFzeW5jIHsKICBwcmludC4kX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18oKTsKICBwcmludC5tYXJrZG93bihyJycnCiMgYXNzZXQKCiAgJycnKTsKICB2YXIgeGpzb24gPSBhd2FpdCByb290QnVuZGxlLmxvYWRTdHJpbmcoJ2xpYi9ub3Rlcy9ub3RlLmNvbmYuanNvbicpOwogIHByaW50KHhqc29uKTsKfQo="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXJfbm90ZS9ub3RlX2FwcC5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvc2VydmljZXMuZGFydCcgc2hvdyByb290QnVuZGxlOwoKRmx1dHRlck5vdGVDb25mIHBhZ2UgPSBGbHV0dGVyTm90ZUNvbmYoCiAgc2hvcnRUaXRsZTogImFzc2V0IiwKICBsYXlvdXQ6IExheW91dHMuZGVmYXVsdExheW91dChkZWZhdWx0Q29kZUV4cGFuZDogZmFsc2UpLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgYXN5bmMgewogIHByaW50LiRfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXygpOwogIHByaW50Lm1hcmtkb3duKHInJycKIyBhc3NldAoKICAnJycpOwogIHZhciBqc29uQXNzZXQgPSBhd2FpdCByb290QnVuZGxlLmxvYWRTdHJpbmcoJ2xpYi9ub3Rlcy90ZXN0L3RlbXAvbm90ZS5kYXJ0Jyk7CiAgcHJpbnQoanNvbkFzc2V0KTsKfQo="
     );

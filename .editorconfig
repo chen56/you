@@ -8,4 +8,4 @@ indent_style = space
 insert_final_newline = false
 max_line_length = 80
 tab_width = 4
-
+trim_trailing_whitespace=true

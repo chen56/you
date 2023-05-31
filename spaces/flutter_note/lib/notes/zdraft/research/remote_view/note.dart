@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "Remote flutter view",
@@ -55,13 +55,13 @@ WidgetInspectorService.instance.screenshot() //最外层了
 ```dart
 -> RendererBinding.initInstances() //最外层了
   -> addPersistentFrameCallback(_handlePersistentFrameCallback);
-    -> /*RendererBinding*/this._handlePersistentFrameCallback()  
+    -> /*RendererBinding*/this._handlePersistentFrameCallback()
       -> this.drawFrame(); //in RendererBinding
-        -> pipelineOwner.flushPaint();  
+        -> pipelineOwner.flushPaint();
           -> PaintingContext.repaintCompositedChild(node as RenderObject,/*注意这个函数没有PaintingContext参数*/) // 关键
-            -> PaintingContext._repaintCompositedChild(childContext: null) 
+            -> PaintingContext._repaintCompositedChild(childContext: null)
               -> childContext ??= PaintingContext(childLayer, child.paintBounds) //我们想自定义这个实例
-```              
+```
 由于在PaintingContext.repaintCompositedChild没有PaintingContext参数，打断了我们想传递自定义PaintingContext的企图。
 但如果把pipelineOwner.flushPaint()替换掉，让它改调用PaintingContext.debugInstrumentRepaintCompositedChild(PaintingContext)
 可能是可行的。

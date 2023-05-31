@@ -6,7 +6,7 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 import 'package:path/path.dart' as path;
 
 FlutterNoteConf page = FlutterNoteConf(
@@ -19,7 +19,7 @@ build(BuildContext context, Pen print) {
   print.markdown('''
 # Platform和设备信息
 
-## 平台参数 
+## 平台参数
   ''');
 
   print.$____________________________________________________________________();

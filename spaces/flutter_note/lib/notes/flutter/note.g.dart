@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 326,
+          end: 322,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # Cheat sh)
         (
           cellType: 'body',
-          offset: 326,
-          end: 516,
+          offset: 322,
+          end: 512,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 516,
-          end: 518,
+          offset: 512,
+          end: 514,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXJfbm90ZS9mbHV0dGVyX25vdGUuZGFydCc7CgpGbHV0dGVyTm90ZUNvbmYgcGFnZSA9IEZsdXR0ZXJOb3RlQ29uZigKICBzaG9ydFRpdGxlOiAiRmx1dHRlciBDaGVhdCBzaGVldCIsCiAgbGF5b3V0OiBMYXlvdXRzLmRlZmF1bHRMYXlvdXQoZGVmYXVsdENvZGVFeHBhbmQ6IGZhbHNlKSwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgQ2hlYXQgc2hlZXQKCndpa2lwZWRpYSDlrprkuYnvvJoKCj4gICoq8J+aq1RpcDoqKgo+IENoZWF0IHNoZWV0OiBBIGNoZWF0IHNoZWV0IChhbHNvIGNoZWF0c2hlZXQpIG9yIGNyaWIgc2hlZXQgaXMgYSBjb25jaXNlIHNldCBvZiBub3RlcyB1c2VkIGZvciBxdWljayByZWZlcmVuY2UuLgoKICAnJycpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXJfbm90ZS9ub3RlX2FwcC5kYXJ0JzsKCkZsdXR0ZXJOb3RlQ29uZiBwYWdlID0gRmx1dHRlck5vdGVDb25mKAogIHNob3J0VGl0bGU6ICJGbHV0dGVyIENoZWF0IHNoZWV0IiwKICBsYXlvdXQ6IExheW91dHMuZGVmYXVsdExheW91dChkZWZhdWx0Q29kZUV4cGFuZDogZmFsc2UpLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBDaGVhdCBzaGVldAoKd2lraXBlZGlhIOWumuS5ie+8mgoKPiAgKirwn5qrVGlwOioqCj4gQ2hlYXQgc2hlZXQ6IEEgY2hlYXQgc2hlZXQgKGFsc28gY2hlYXRzaGVldCkgb3IgY3JpYiBzaGVldCBpcyBhIGNvbmNpc2Ugc2V0IG9mIG5vdGVzIHVzZWQgZm9yIHF1aWNrIHJlZmVyZW5jZS4uCgogICcnJyk7Cn0K"
     );
