@@ -84,6 +84,7 @@ class DeferredScreen extends StatelessWidget with Screen {
   Widget build(BuildContext context) {
     var needLoad =
         note.meAndAncestors.where((e) => e.deferredConf != null).toList();
+    print("needLoad: $needLoad");
     return FutureBuilder(
       future: Future.wait(needLoad.map((e) => e.deferredConf!())),
       builder: (context, snapshot) {
@@ -92,10 +93,13 @@ class DeferredScreen extends StatelessWidget with Screen {
             return Text(
                 'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
+          print("snapshot: ${snapshot.data}");
 
           for (int i = 0; i < needLoad.length; i++) {
             needLoad[i].confPart = snapshot.data![i];
           }
+          print("snapshot confPart: ${note.confPart}  layout: ${note.layout}");
+
           return note.layout(note);
         }
         return const CircularProgressIndicator();

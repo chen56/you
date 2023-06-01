@@ -1,35 +1,49 @@
+import 'package:file/local.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note_tools/src/note_dev_gen.dart';
 
 void main() {
-  group("flatLibPath", () {
-    test('normal', () {
-      expect(pathToName("zdraft/2.dev/note.dart"), "zdraft_dev");
-      expect(pathToName("2.dev/note.dart"), "dev");
+  group("NotesGenerator", () {
+    NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "./");
 
-      // abstract is ok
-      expect(pathToName("/x/note.dart"), "x");
+    test('NotesGenerator dir', () {
+      expect(gen.projectDir, ".");
     });
-    test('root', () {
-      expect(pathToName("note.dart"), "root");
+  });
 
-      // abstract is ok
-      expect(pathToName("/note.dart"), "root");
-    });
-    test('数字前缀', () {
-      expect(pathToName("1.x/page.dart"), "x");
-      expect(pathToName("/notes/1.x/page.dart"), "notes_x");
-    });
-    test('dartPackageNameParse', () {
-      {
-        var package = Uri.parse("package:flutter_note/page.dart");
-        expect(package.scheme, "package");
-        expect("flutter_note", package.pathSegments[0]);
+  group("NoteLib", () {
+    test('relative path', () {
+      NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "./");
+
+      var testcases = [
+        (note: "lib/notes/note.dart", key: "/", name: "root", asset: "lib/notes/"),
+        (note: "lib/notes/a/note.dart", key: "/a", name: "a", asset: "lib/notes/a/"),
+        (note: "lib/notes/a/b/note.dart", key: "/a/b", name: "a_b", asset: "lib/notes/a/b/"),
+        // number prefix may be use to sort
+        (note: "lib/notes/1.a/note.dart", key: "/1.a", name: "a", asset: "lib/notes/1.a/"),
+      ];
+      for (var testcase in testcases) {
+        NoteLib note = gen.noteOf(testcase.note);
+        expect(note.noteKey, testcase.key);
+        expect(note.name, testcase.name);
+        expect(note.asset, testcase.asset);
       }
-      {
-        var package = Uri.parse("dart:ui");
-        expect(package.scheme, "dart");
-        expect("ui", package.pathSegments[0]);
+    });
+    test('aba path', () {
+      NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "/n");
+
+      var testcases = [
+        (note: "/n/lib/notes/note.dart", key: "/", name: "root", asset: "lib/notes/"),
+        (note: "/n/lib/notes/a/note.dart", key: "/a", name: "a", asset: "lib/notes/a/"),
+        (note: "/n/lib/notes/a/b/note.dart", key: "/a/b", name: "a_b", asset: "lib/notes/a/b/"),
+        // number prefix may be use to sort
+        (note: "/n/lib/notes/1.a/note.dart", key: "/1.a", name: "a", asset: "lib/notes/1.a/"),
+      ];
+      for (var testcase in testcases) {
+        NoteLib note = gen.noteOf(testcase.note);
+        expect(note.noteKey, testcase.key);
+        expect(note.name, testcase.name);
+        expect(note.asset, testcase.asset);
       }
     });
   });
