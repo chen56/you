@@ -76,6 +76,12 @@ class NotesGenerator {
     return (file: await _genNotesFromList(notes), notes: notes);
   }
 
+  Future<void> genSpaceJson(List<_NoteAnalyzer> notes) async {
+    // var spaceJsonFile = fs.file(path.join(projectDir, "note_space.json"));
+    // NoteSpaceConf spaceConf =
+    // NoteSpaceConf.fromJSon(jsonDecode(await spaceJsonFile.readAsString()));
+  }
+
   // ignore: non_constant_identifier_names
   Future<List<_NoteAnalyzer>> gen_all_note_g_dart() async {
     var result = await _noteFiles
@@ -84,7 +90,7 @@ class NotesGenerator {
         .toList();
 
     var noteLibs =
-        await result.map((e) => NoteLib(file: e.file, noteGenerator: this));
+        result.map((e) => NoteLib(file: e.file, noteGenerator: this));
     var pubspec = await _pubspec();
     pubspec.noteAssetsUpdate(noteLibs.map((e) => e.asset).toList());
     await pubspec.save();

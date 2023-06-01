@@ -1,3 +1,13 @@
 {
-  "path": "lib/notes/"
+  "nextNoteId": 2,
+  "notes": {
+    "/": {
+      "id": 0,
+      "title": "Welcome to the Notes App"
+    },
+    "/a": {
+      "id": 1,
+      "title": "Welcome to the Notes App"
+    }
+  }
 }
