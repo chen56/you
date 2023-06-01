@@ -11,13 +11,14 @@ void main() async {
   if (env.isSupportNoteDevtool()) {
     NoteSpace noteTool = NoteSpace(
         packageBaseName: "flutter_note",
-        projectDir: env.getFlutterProjectDir(),
+        projectDir: "./",
+        // projectDir: env.getFlutterProjectDir(),
         env: env,
         spaceDir: path.absolute("./"));
-    await noteTool.gen.gen_note_g_dart();
+    await noteTool.gen.gen_all_note_g_dart();
     await noteTool.gen.gen_notes_g_dart();
     noteTool.gen.watch().listen((event) {
-      debugPrint("watch: $event");
+      debugPrint("flutter_note.main watch: $event");
     });
   }
 

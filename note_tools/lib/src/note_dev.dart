@@ -6,7 +6,7 @@ import 'package:note_tools/src/note_dev_gen.dart';
 /// note的写作模式工具 ,只工作于桌面版本
 class NoteSpace {
   final Env env;
-  final NoteGenerator gen;
+  final NotesGenerator gen;
   final String spaceDir;
   final String projectDir;
   final String packageBaseName;
@@ -15,7 +15,7 @@ class NoteSpace {
     required this.packageBaseName,
     required this.env,
     required this.spaceDir,
-  }) : gen = NoteGenerator(
+  }) : gen = NotesGenerator(
           projectDir: projectDir,
           packageBaseName: packageBaseName,
           fs: env.fs,

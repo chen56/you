@@ -8,7 +8,7 @@ FlutterNoteConf page = FlutterNoteConf(
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-  
+
 ## flutter pub镜像慢
 
 解决方案：linux 配置.bashrc:
@@ -73,7 +73,7 @@ flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_W
 
 ### 字体下载
 
-flutter run时，web模式下载慢: 
+flutter run时，web模式下载慢:
 - 英文默认字体 <https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf>
 - 中文默认字体 <https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf>
 

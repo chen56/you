@@ -20,7 +20,7 @@ String _LIB_ROOT = "lib";
 String _NOTES_ROOT = "lib/notes/";
 Glob _NOTE_GLOB = Glob("{**/note.dart,note.dart}");
 
-class NoteGenerator {
+class NotesGenerator {
   final DartFormatter _fmt;
   final FileSystem fs;
   final String packageBaseName;
@@ -28,82 +28,66 @@ class NoteGenerator {
   final String libDir;
   final String noteRootDir;
 
-  NoteGenerator({
+  NotesGenerator({
     required this.packageBaseName,
     required this.fs,
-    required this.projectDir,
+    required String projectDir,
     DartFormatter? fmt,
-  })  : _fmt = fmt ?? DartFormatter(pageWidth: 120),
+  })  : projectDir = projectDir,
         libDir = path.join(projectDir, _LIB_ROOT),
-        noteRootDir = path.join(projectDir, _NOTES_ROOT) {
-    // var watcher = DirectoryWatcher(projectDir);
-    // watcher.events
-    //     .where((WatchEvent e) => _noteGlob.matches(e.path))
-    //     .listen((WatchEvent e) async {
-    //   _log("NoteGenerator.watch - event ${e.type} ${e.path}");
-    //   await _genNoteInfo(e.path);
-    // });
-    //
-    // _noteGlob
-    //     .listFileSystem(_fs, root: projectDir)
-    //     .map((FileSystemEntity e) async {
-    //       _log("NoteGenerator.start - gen  ${e.path}");
-    //       return await _genNoteInfo(e.path);
-    //     })
-    //     .asyncExpand((e) => e.asStream())
-    //     .toList()
-    //     // after all noteLibs gen ok , then watch change
-    //     .then((value) {
-    //       _log("NoteGenerator.start - gen ok notes:${value.length}");
-    //       return DirectoryWatcher(projectDir);
-    //     })
-    //     .asStream()
-    //     .asyncExpand((DirectoryWatcher watcher) => watcher.events)
-    //     .where((WatchEvent e) => _noteGlob.matches(e.path))
-    //     .listen((WatchEvent e) async {
-    //       _log("NoteGenerator.start - event ${e.type} ${e.path}");
-    //       await _genNoteInfo(e.path);
-    //       List<NoteLib> noteLibs = await _noteGlob
-    //           .listFileSystem(_fs, root: projectDir)
-    //           .map((e) {
-    //             _log("NoteGenerator.start 2- genDeferredPages  ${e.path}");
-    //             return e;
-    //           })
-    //           .map((e) => NoteLib(
-    //               noteHome: noteHome,
-    //               notePath: e.path,
-    //               writeFS: _fs,
-    //               fmt: _fmt))
-    //           .toList();
-    //       _log(
-    //           "NoteGenerator.start - genDeferredPages start:${noteLibs.length}");
-    //       await genNotesFromList(noteLibs, fmt: _fmt, writeFS: _fs);
-    //       _log("NoteGenerator.start - genDeferredPages end");
-    //     });
-  }
+        noteRootDir = path.join(projectDir, _NOTES_ROOT),
+        _fmt = fmt ?? DartFormatter(pageWidth: 120);
 
   Stream<WatchEvent> watch() async* {
     var watcher = DirectoryWatcher(noteRootDir);
     await for (WatchEvent e in watcher.events) {
-      if (_NOTE_GLOB.matches(e.path)) {
-        await _gen_note_g_dart(fs.file(e.path));
+      if (!_NOTE_GLOB.matches(e.path)) {
+        yield e;
+        continue;
       }
+      var file = fs.file(e.path);
+      var pubspec = await _pubspec();
+      _NoteLib noteLib = _NoteLib(file: file, noteGenerator: this);
+
+      switch (e.type) {
+        case ChangeType.ADD || ChangeType.MODIFY:
+          await _gen_note_g_dart(fs.file(e.path));
+          pubspec.noteAssetsAdd(noteLib.asset);
+        case ChangeType.REMOVE:
+          var noteAsset = path.relative(file.parent.path, from: projectDir);
+          pubspec.noteAssetsRemove(noteAsset);
+        default:
+          throw Exception("unknown ChangeType ${e.type}");
+      }
+
+      await gen_notes_g_dart();
+      await pubspecFile.writeAsString(pubspec.toString());
+
       yield e;
     }
   }
 
   // ignore: non_constant_identifier_names
   Future<({File file, List<_NoteLib> notes})> gen_notes_g_dart() async {
-    var notes = await _noteFiles.map(noteLibOf).toList();
+    var notes = await _noteFiles
+        .map((e) => _NoteLib(file: e, noteGenerator: this))
+        .toList();
     return (file: await _genNotesFromList(notes), notes: notes);
   }
 
   // ignore: non_constant_identifier_names
-  Future<List<_NoteLib>> gen_note_g_dart() async {
-    return _noteFiles
+  Future<List<_NoteAnalyzer>> gen_all_note_g_dart() async {
+    var result = await _noteFiles
         .map((e) => _gen_note_g_dart(e))
         .asyncExpand((e) => e.asStream())
         .toList();
+
+    var noteLibs =
+        await result.map((e) => _NoteLib(file: e.file, noteGenerator: this));
+    var pubspec = await _pubspec();
+    pubspec.noteAssetsUpdate(noteLibs.map((e) => e.asset).toList());
+    await pubspecFile.writeAsString(pubspec.toString());
+    return result;
   }
 
   Stream<File> get _noteFiles {
@@ -116,25 +100,22 @@ class NoteGenerator {
         .map((e) => e as File);
   }
 
-  _NoteLib noteLibOf(File file) {
-    return _NoteLib(
-      file: file,
-      packageBaseName: packageBaseName,
-      noteRootDir: noteRootDir,
-      libDir: libDir,
-      fmt: _fmt,
-    );
-  }
-
   // ignore: non_constant_identifier_names
-  Future<_NoteLib> _gen_note_g_dart(File file) async {
-    _NoteLib noteLib = noteLibOf(file);
+  Future<_NoteAnalyzer> _gen_note_g_dart(File file) async {
+    var result = _NoteAnalyzer.parse(file: file, fmt: _fmt);
     // async write file
-    await noteLib._genFile(noteLib._collectInfo());
-    return noteLib;
+    File generated = await result._genFile(result._collectInfo());
+    _log("gen note: ${generated}");
+    return result;
   }
 
-  Future<File> _genNotesFromList(List<_NoteLib> noteLibs) async {
+  File get pubspecFile => fs.file(path.join(projectDir, "pubspec.yaml"));
+
+  Future<Pubspec> _pubspec() async {
+    return Pubspec.parse(await pubspecFile.readAsString());
+  }
+
+  Future<File> _genNotesFromList(Iterable<_NoteLib> noteLibs) async {
     var fields = noteLibs.map((noteLib) {
       // zdraft/2.dev/mirror/note.dart -> zdraft_dev_mirror
       String asName = pathToName(noteLib.notePath);
@@ -209,32 +190,71 @@ class _NoteLib {
   final String noteRootDir;
   final String libDir;
   final String packageBaseName;
-  late final String content;
   final File file;
-  final DartFormatter fmt;
   late final CompilationUnit unit;
+  final String projectDir;
   _NoteLib({
-    required this.noteRootDir,
-    required this.libDir,
     required this.file,
-    required this.fmt,
-    required this.packageBaseName,
-  }) {
-    var parseResult = analyzer_util.parseFile(
-        path: file.path, featureSet: FeatureSet.latestLanguageVersion());
-    unit = parseResult.unit;
-    content = parseResult.content;
-  }
+    required NotesGenerator noteGenerator,
+  })  : libDir = noteGenerator.libDir,
+        packageBaseName = noteGenerator.packageBaseName,
+        noteRootDir = noteGenerator.noteRootDir,
+        projectDir = noteGenerator.projectDir;
 
   String get notePath => path.relative(file.path, from: noteRootDir);
+
+  String get noteDirRelativeProject =>
+      path.relative(file.path, from: noteRootDir);
+
   String get noteDir => path.dirname(notePath);
 
   String get package =>
       "package:${packageBaseName}/${path.relative(file.path, from: libDir)}";
 
+  String get asset => path.relative(file.parent.path, from: projectDir);
+
   String packageOf(String dartFileName) {
     String noteLibDir = path.dirname(path.relative(file.path, from: libDir));
     return "package:${packageBaseName}/${noteLibDir}/$dartFileName";
+  }
+}
+
+enum _CellType { header, body, tail }
+
+typedef _CellInfo = ({
+  String cellType,
+  int offset,
+  int end,
+  List<Statement> cellStatements,
+  List<
+      ({
+        String nodeType,
+        AstNode node,
+      })> specialNodes,
+});
+
+typedef _NoteInfo = ({
+  String code,
+  List<_CellInfo> cells,
+});
+
+class _NoteAnalyzer {
+  final File file;
+  final DartFormatter fmt;
+
+  late final CompilationUnit unit;
+  late final String content;
+
+  _NoteAnalyzer.parse({
+    required this.file,
+    required this.fmt,
+  }) {
+    var parseResult = analyzer_util.parseFile(
+        //analyzer need must absolute and normalize
+        path: path.absolute(path.normalize(file.path)),
+        featureSet: FeatureSet.latestLanguageVersion());
+    unit = parseResult.unit;
+    content = parseResult.content;
   }
 
   FunctionDeclaration? get _buildFunction {
@@ -245,8 +265,6 @@ class _NoteLib {
   }
 
   _NoteInfo _collectInfo() {
-    _log('collectInfo ${file}');
-
     var findBuild = _buildFunction;
     if (findBuild == null) {
       _log(" ${file.path} [build] func not found, so it is not a note");
@@ -472,24 +490,6 @@ class _NoteLib {
   }
 }
 
-enum _CellType { header, body, tail }
-
-typedef _CellInfo = ({
-  String cellType,
-  int offset,
-  int end,
-  List<Statement> cellStatements,
-  List<
-      ({
-        String nodeType,
-        AstNode node,
-      })> specialNodes,
-});
-typedef _NoteInfo = ({
-  String code,
-  List<_CellInfo> cells,
-});
-
 /// 包名平整化：
 /// package:note/pages/note/1.welcome/1.note-self/page.dart
 /// --->
@@ -577,7 +577,8 @@ class _FindMateSampleStatement extends GeneralizingAstVisitor {
 class Pubspec {
   static const _YAML_PATH_ASSETS = ["flutter", "assets"];
   late final YamlEditor _yamlEditor;
-  Pubspec.loadSync(String content) {
+
+  Pubspec.parse(String content) {
     _yamlEditor = YamlEditor(content);
   }
 
@@ -587,10 +588,19 @@ class Pubspec {
         .toList();
   }
 
-  void putNoteAssets(List<String> notesNow) {
-    var toAdd = List.from(notesNow, growable: true);
-    // previously Generated remove
-    // assets.where((element) => false)
+  void noteAssetsRemove(String noteAsset) {
+    _yamlEditor.remove([..._YAML_PATH_ASSETS, assets.indexOf(noteAsset)]);
+  }
+
+  void noteAssetsAdd(String noteAsset) {
+    _yamlEditor.appendToList([..._YAML_PATH_ASSETS], noteAsset);
+  }
+
+  /// 1. remove previously Generated
+  /// 2. add new
+  void noteAssetsUpdate(List<String> toUpdate) {
+    var toAdd = List.from(toUpdate, growable: true);
+
     var oldAssets = assets;
     var removed = 0;
     for (int i = 0; i < oldAssets.length; i++) {

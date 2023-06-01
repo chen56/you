@@ -9,16 +9,13 @@ FlutterNoteConf page = FlutterNoteConf(
 );
 
 build(BuildContext context, Pen print) {
-  print.cells.forEach((e) {
-    // print("${e.p}\n");
-  });
   print.markdown(r'''
 # flutter note项目
 
 >  **🚫Tip:**
 > 本笔记项目当前主要目标：
 > 1. 动态的、可视化的flutter技术速查表，主要是为像我一样学了点dart/flutter基础，
-> 2. 转变flutter多层嵌套（套娃地狱模式）的开发方式为notebook的线性思维模式，便于书写文档、笔记等 
+> 2. 转变flutter多层嵌套（套娃地狱模式）的开发方式为notebook的线性思维模式，便于书写文档、笔记等
 >    避免被flutter几百个Widget搞晕劝退服务的，后面会陆续增加一些其他主题。
 
 自2022年12月开始接触flutter几个月下来，发现flutter非常适合后端程序员搞UI，完全没有css、各种js脚手架等的麻烦问题，
@@ -83,7 +80,7 @@ build(BuildContext context, Pen print) {
   print.$____________________________________________________________________();
   print.markdown(r'''
 暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_note的范例可能会加一个Dartpad的链接。
-  
+
 ### flutter一切皆widget妙啊
 
 学习flutter的过程中，发现flutter万物皆widget的概念非常棒，通过组合就能完成很多框架需要各类定制的功能，
@@ -144,8 +141,8 @@ Widget无数，内容太多，先分个大类：
 material.io对Compoent的定义如下：
 
 >  **📣Tip:**
-> Components are interactive building blocks for creating a user interface. 
-> They can be organized into five categories based on their purpose: Action, containment, 
+> Components are interactive building blocks for creating a user interface.
+> They can be organized into five categories based on their purpose: Action, containment,
 > navigation, selection, and text input.
 > <https://m3.material.io/components>
 > <https://api.flutter.dev/flutter/material/ThemeData/useMaterial3.html>
@@ -185,17 +182,17 @@ material.io对Compoent的定义如下：
   - SnackBar
 - [ ] 各类Menu
   - MenuBar
-  - DropdownMenu  
+  - DropdownMenu
 - [ ] Drawer 抽屉
   - Drawer 不导航
   - NavigationDrawer 可导航
-- [ ] BottomSheet  
+- [ ] BottomSheet
 - [ ] 可展开容器
   - ExpansionPanelList
   - ExpansionTile
 - [ ] 增加Material特效的
   - Material
-  - InkResponse：InkWell 
+  - InkResponse：InkWell
 - [ ] 通用容器：通用容器、万金油，无特定位置限制，放哪都不嫌，放啥都可以，和其他组件是拼凑组合关系，用以包含内容、数据、输入、动作、导航等其他组件
   - Card
   - ListTile
@@ -211,9 +208,9 @@ material.io对Compoent的定义如下：
   - SizedBox
   - Placeholder
   - SingleChildScrollView, whose documentation discusses some ways to use a Column inside a scrolling container.
-  - Stepper    
+  - Stepper
   - Sliver系列
-  
+
 ### 比较独立的组件
 
 较为独立的、主要目的不是用来做容器（虽然可能赛其他Widget到child），而是特定功用的，比如为呈现某些信息，录入信息等，
@@ -221,7 +218,7 @@ material.io对Compoent的定义如下：
 
 - [x] Buttons
 - [ ] 文本内容
-  - Text 
+  - Text
   - RichText
   - Markdown
 - [ ] 图片、图标多媒体组件
@@ -234,8 +231,8 @@ material.io对Compoent的定义如下：
   - TextField
   - Checkbox、CheckboxListTile
   - Switch、SwitchListTile
-  - Chips：Chip、ActionChip、FilterChip、ChoiceChip、InputChip  
-  - Radio button: Radio、RadioListTile  
+  - Chips：Chip、ActionChip、FilterChip、ChoiceChip、InputChip
+  - Radio button: Radio、RadioListTile
   - Slider：Used to select from a range of values.
   - CalendarDatePicker
 - [ ] Badges [api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
