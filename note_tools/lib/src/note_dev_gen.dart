@@ -5,135 +5,87 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:code_builder/code_builder.dart';
+import 'package:collection/collection.dart';
 
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:glob/glob.dart';
-import 'package:note_tools/note_tools.dart';
+import 'package:note/note_conf.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:note/core.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 import 'package:watcher/watcher.dart';
+import 'package:yaml_edit/yaml_edit.dart';
 
-class NoteGenerator {
+const String _LIB_ROOT = "lib";
+const String _NOTES_ROOT = "lib/notes/";
+final Glob _noteGlob = Glob("{**/note.dart,note.dart}");
+
+class NotesGenerator {
   final DartFormatter _fmt;
-  final FileSystem _fs;
-  late final String projectHome;
-  late final String noteHome;
-
-  NoteGenerator({
-    required Env env,
+  final FileSystem fs;
+  final String packageBaseName;
+  final String projectDir;
+  late final String libDir;
+  late final String noteRootDir;
+  NotesGenerator({
+    required this.packageBaseName,
+    required this.fs,
+    required String projectDir,
     DartFormatter? fmt,
-  })  : _fs = env.fs,
+  })  : projectDir = path.normalize(projectDir),
         _fmt = fmt ?? DartFormatter(pageWidth: 120) {
-    projectHome = env.getFlutterProjectDir();
-    noteHome = path.join(projectHome, 'lib');
+    libDir = path.join(this.projectDir, _LIB_ROOT);
+    noteRootDir = path.join(this.projectDir, _NOTES_ROOT);
+  }
 
-    // var watcher = DirectoryWatcher(projectDir);
-    // watcher.events
-    //     .where((WatchEvent e) => _noteGlob.matches(e.path))
-    //     .listen((WatchEvent e) async {
-    //   _log("NoteGenerator.watch - event ${e.type} ${e.path}");
-    //   await _genNoteInfo(e.path);
-    // });
-    //
-    // _noteGlob
-    //     .listFileSystem(_fs, root: projectDir)
-    //     .map((FileSystemEntity e) async {
-    //       _log("NoteGenerator.start - gen  ${e.path}");
-    //       return await _genNoteInfo(e.path);
-    //     })
-    //     .asyncExpand((e) => e.asStream())
-    //     .toList()
-    //     // after all noteLibs gen ok , then watch change
-    //     .then((value) {
-    //       _log("NoteGenerator.start - gen ok notes:${value.length}");
-    //       return DirectoryWatcher(projectDir);
-    //     })
-    //     .asStream()
-    //     .asyncExpand((DirectoryWatcher watcher) => watcher.events)
-    //     .where((WatchEvent e) => _noteGlob.matches(e.path))
-    //     .listen((WatchEvent e) async {
-    //       _log("NoteGenerator.start - event ${e.type} ${e.path}");
-    //       await _genNoteInfo(e.path);
-    //       List<NoteLib> noteLibs = await _noteGlob
-    //           .listFileSystem(_fs, root: projectDir)
-    //           .map((e) {
-    //             _log("NoteGenerator.start 2- genDeferredPages  ${e.path}");
-    //             return e;
-    //           })
-    //           .map((e) => NoteLib(
-    //               noteHome: noteHome,
-    //               notePath: e.path,
-    //               writeFS: _fs,
-    //               fmt: _fmt))
-    //           .toList();
-    //       _log(
-    //           "NoteGenerator.start - genDeferredPages start:${noteLibs.length}");
-    //       await genNotesFromList(noteLibs, fmt: _fmt, writeFS: _fs);
-    //       _log("NoteGenerator.start - genDeferredPages end");
-    //     });
+  Future<void> gen() async {
+    var notes = await _genAll_note_g_dart();
+    await _genSpaceJson(notes);
+    await _gen_notes_g_dart(notes.map((e) => e.noteLib).toList());
   }
 
   Stream<WatchEvent> watch() async* {
-    var watcher = DirectoryWatcher(projectHome);
-    Glob noteGlob = Glob("lib/**/note_page.dart");
+    var watcher = DirectoryWatcher(noteRootDir);
     await for (WatchEvent e in watcher.events) {
-      if (noteGlob.matches(e.path)) {
-        await _gen_note_g_dart(e.path);
+      if (!_noteGlob.matches(e.path)) {
+        yield e;
+        continue;
       }
+      var file = fs.file(e.path);
+      var pubspec = await _pubspec();
+      NoteLib noteLib = NoteLib(file: file, noteGenerator: this);
+
+      switch (e.type) {
+        case ChangeType.ADD || ChangeType.MODIFY:
+          await noteLib.gen();
+          pubspec.noteAssetsAdd(noteLib.asset);
+        case ChangeType.REMOVE:
+          var noteAsset = path.relative(file.parent.path, from: projectDir);
+          pubspec.noteAssetsRemove(noteAsset);
+        default:
+          throw Exception("unknown ChangeType ${e.type}");
+      }
+
+      // await _genSpaceJson(_noteLibs);
+      await _gen_notes_g_dart(await _noteLibs.toList());
+      await pubspec.save();
       yield e;
     }
   }
 
   // ignore: non_constant_identifier_names
-  Future<({File file, List<_NoteLib> notes})> gen_flutter_note_g_dart() async {
-    var notes = await Glob("**/note.dart")
-        .listFileSystem(_fs, root: noteHome)
-        .map((e) => _NoteLib(
-              noteHome: noteHome,
-              notePath: e.path,
-              writeFS: _fs,
-              fmt: _fmt,
-            ))
-        .toList();
-    return (file: await _genNotesFromList(notes), notes: notes);
-  }
-
-  // ignore: non_constant_identifier_names
-  Future<List<_NoteLib>> gen_note_g_dart() async {
-    return Glob("**/note.dart")
-        .listFileSystem(_fs, root: noteHome)
-        .map((e) => _gen_note_g_dart(e.path))
-        .asyncExpand((e) => e.asStream())
-        .toList();
-  }
-
-  // ignore: non_constant_identifier_names
-  Future<_NoteLib> _gen_note_g_dart(String noteFile) async {
-    _NoteLib noteLib = _NoteLib(
-        noteHome: noteHome, notePath: noteFile, writeFS: _fs, fmt: _fmt);
-    // async write file
-    await noteLib._genFromInfo(noteLib._collectInfo());
-    return noteLib;
-  }
-
-  Future<File> _genNotesFromList(List<_NoteLib> noteLibs) async {
+  Future<({File file, List<NoteLib> notes})> _gen_notes_g_dart(
+      List<NoteLib> noteLibs) async {
     var fields = noteLibs.map((noteLib) {
-      String flatPagePath = flatLibPath(noteLib.noteRelativePath);
-
-      var fieldName = flatPagePath;
-      String path = noteLib.noteRelativePath.replaceAll("/note.dart", "");
-      path = path == "" ? "/" : path;
-      // ignore: non_constant_identifier_names
       return """
-           final Note $fieldName = put2(
-            "$path",
-            ${flatPagePath}_g.noteInfo(),
-            () => ${flatPagePath}_
+           final Note ${noteLib.asVariableName} = put2(
+            "${noteLib.noteKey}",
+            ${noteLib.asVariableName}_g.noteInfo(),
+            () => ${noteLib.asVariableName}_
                 .loadLibrary()
-                .then((value) => ${flatPagePath}_.page));
+                .then((value) => ${noteLib.asVariableName}_.page));
              """;
     }).join("\n");
     Library libGen = Library((b) => b
@@ -142,21 +94,17 @@ class NoteGenerator {
         "ignore_for_file: library_prefixes, non_constant_identifier_names"
       ])
       ..directives.addAll(noteLibs.map((lib) {
-        String flatPagePath = flatLibPath(lib.noteRelativePath);
-        // note_tools作为通用工具，应去除 flutter_note 依赖
         return code.Directive.importDeferredAs(
-            "package:flutter_note/${lib.noteRelativePath}", "${flatPagePath}_");
+            lib.package, "${lib.asVariableName}_");
       }))
       ..directives.addAll(noteLibs.map((lib) {
-        String flatPagePath = flatLibPath(lib.noteRelativePath);
-        return code.Directive.import(
-            path.join(path.dirname(lib.noteRelativePath), "note.g.dart"),
-            as: "${flatPagePath}_g");
+        return code.Directive.import(lib.packageOf("note.g.dart"),
+            as: "${lib.asVariableName}_g");
       }))
       ..body.add(
         code.Code("""
       import 'package:note/note_page.dart';
-      
+
       abstract class BaseNotes {
         static final Note<void> rootroot = Note.root();
         static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNoteConf deferredConf) {
@@ -169,11 +117,50 @@ class NoteGenerator {
 
     String toCode =
         '${libGen.accept(DartEmitter(allocator: Allocator.none, orderDirectives: true, useNullSafetySyntax: true))}';
-    await _fs.file("lib/flutter_note.deferred.g.dart").writeAsString(toCode);
+    File file = await fs.file("lib/notes.g.dart").writeAsString(toCode);
     // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
-    return _fs
-        .file("lib/flutter_note.deferred.g.dart")
-        .writeAsString(_fmt.format(toCode));
+    file.writeAsString(_fmt.format(toCode));
+
+    return (file: file, notes: noteLibs);
+  }
+
+  File get _noteSpaceJsonFile =>
+      fs.file(path.join(projectDir, "note_space.json"));
+
+  Future<SpaceConf> _genSpaceJson(List<_NoteAnalyzer> notes) async {
+    SpaceConf spaceConf = await SpaceConf.load(_noteSpaceJsonFile);
+    spaceConf.notes.clear();
+    for (var note in notes) {
+      spaceConf.notes[note.noteLib.noteKey] =
+          SpaceNoteConf(id: 1, displayName: note.noteJson.displayName);
+    }
+    return spaceConf.save(_noteSpaceJsonFile);
+  }
+
+  Stream<NoteLib> get _noteLibs => _noteGlob
+      .listFileSystem(fs, root: noteRootDir)
+      .where((e) => e is File)
+      .map((e) => NoteLib(file: e as File, noteGenerator: this));
+
+  // ignore: non_constant_identifier_names
+  Future<List<_NoteAnalyzer>> _genAll_note_g_dart() async {
+    var result = await _noteLibs
+        .map((e) => e.gen())
+        .asyncExpand((e) => e.asStream())
+        .toList();
+
+    var pubspec = await _pubspec();
+    pubspec.noteAssetsUpdate(result.map((e) => e.noteLib.asset).toList());
+    await pubspec.save();
+    return result;
+  }
+
+  Future<Pubspec> _pubspec() async {
+    return Pubspec.parseFile(fs.file(path.join(projectDir, "pubspec.yaml")));
+  }
+
+  NoteLib noteOf(String notePath) {
+    return NoteLib(file: fs.file(notePath), noteGenerator: this);
   }
 }
 
@@ -183,7 +170,7 @@ class NoteGenerator {
 // import 'package:note/note_page.dart';
 // import 'package:flutter_note/1.welcome/page.dart' deferred as welcome_;
 // import 'package:flutter_note/1.welcome/page.g.dart' as welcome_g;
-// import 'package:flutter_note/flutter_note.dart';
+// import 'package:flutter_note/note_app.dart';
 //
 // mixin PathsMixin {
 //   final Note welcome = put2(
@@ -195,28 +182,114 @@ class NoteGenerator {
 //           .then((value) => welcome_.page, onError: onError));
 // }
 
-class _NoteLib {
-  final String notePath;
-  final String noteHome;
+class NoteLib {
+  final FileSystem fs;
+  final NotesGenerator noteGenerator;
+  final String noteRootDir;
+  final String libDir;
+  final String packageBaseName;
+  final File file;
+  late final CompilationUnit unit;
+  final String projectDir;
+  NoteLib({
+    required this.file,
+    required this.noteGenerator,
+  })  : fs = noteGenerator.fs,
+        libDir = noteGenerator.libDir,
+        packageBaseName = noteGenerator.packageBaseName,
+        noteRootDir = noteGenerator.noteRootDir,
+        projectDir = noteGenerator.projectDir;
 
+  String get noteKey {
+    String result = path.dirname(path.relative(file.path, from: noteRootDir));
+    return result == "." ? "/" : path.join("/", result);
+  }
+
+  String get basename => path.basename(noteKey);
+
+  // String get noteName => path.basenameWithoutExtension(file.path);
+  String get package =>
+      "package:$packageBaseName/${path.relative(file.path, from: libDir)}";
+
+  String get asset => "${path.relative(file.parent.path, from: projectDir)}/";
+
+  /// note name平整化,可作为变量名：
+  /// lib/notes/1.a/b/page.dart  ---> a_b
+  String get asVariableName {
+    String dir = noteKey;
+    if (dir == "/") {
+      return "root";
+    }
+    var names = dir.split(path.separator).where((e) => e.isNotEmpty);
+    return names
+        .map((e) => e
+            .replaceAll(RegExp("^\\d+\."), "") // 1.note-self -> note_note-self
+            .replaceAll(".", "_")
+            .replaceAll("-", "_")
+            .replaceAll("&", "_")
+            .replaceAll("*", "_")
+            .replaceAll("*", "_")
+            .replaceAll("@", "_"))
+        .join("_");
+  }
+
+  File get noteJsonFile => fs.file(file.parent.childFile("note.json"));
+
+  String packageOf(String dartFileName) {
+    String noteLibDir = path.dirname(path.relative(file.path, from: libDir));
+    return "package:$packageBaseName/$noteLibDir/$dartFileName";
+  }
+
+  Future<_NoteAnalyzer> gen() async {
+    var result = _NoteAnalyzer.parse(
+      noteLib: this,
+      noteJson: await NoteConf.load(noteJsonFile, noteBasename: basename),
+      fmt: noteGenerator._fmt,
+    );
+    return result._genFile(result._collectInfo());
+  }
+}
+
+enum _CellType { header, body, tail }
+
+typedef _CellInfo = ({
+  String cellType,
+  int offset,
+  int end,
+  List<Statement> cellStatements,
+  List<
+      ({
+        String nodeType,
+        AstNode node,
+      })> specialNodes,
+});
+
+typedef _NoteInfo = ({
+  String code,
+  List<_CellInfo> cells,
+});
+
+class _NoteAnalyzer {
+  final NoteLib noteLib;
+  final DartFormatter fmt;
+  final NoteConf noteJson;
+  late final CompilationUnit unit;
   late final String content;
 
-  final FileSystem writeFS;
-  final DartFormatter fmt;
-  late final CompilationUnit unit;
-  _NoteLib({
-    required this.noteHome,
-    required this.notePath,
-    required this.writeFS,
+  _NoteAnalyzer.parse({
+    required this.noteLib,
     required this.fmt,
+    required this.noteJson,
   }) {
     var parseResult = analyzer_util.parseFile(
-        path: notePath, featureSet: FeatureSet.latestLanguageVersion());
+        //analyzer need must absolute and normalize
+        path: path.absolute(path.normalize(noteLib.file.path)),
+        featureSet: FeatureSet.latestLanguageVersion());
     unit = parseResult.unit;
     content = parseResult.content;
   }
 
-  String get noteRelativePath => path.relative(notePath, from: noteHome);
+  get file => noteLib.file;
 
   FunctionDeclaration? get _buildFunction {
     var whereBuild = unit.declarations
@@ -226,11 +299,9 @@ class _NoteLib {
   }
 
   _NoteInfo _collectInfo() {
-    _log('collectInfo $notePath');
-
     var findBuild = _buildFunction;
     if (findBuild == null) {
-      _log(" $notePath [build] func not found, so it is not a note");
+      _log(" ${noteLib.file.path} [build] func not found, so it is not a note");
       return (
         code: content,
         cells: [
@@ -273,7 +344,7 @@ class _NoteLib {
           offset: offset,
           end: st.offset,
           cellStatements: cellStatements,
-          specialNodes: collectRunInCellStatements(cellStatements),
+          specialNodes: _collectRunInCellStatements(cellStatements),
         ));
         //reset collect
         cellStatements = [];
@@ -292,7 +363,7 @@ class _NoteLib {
       offset: offset,
       end: buildBodyBlock.rightBracket.offset,
       cellStatements: cellStatements,
-      specialNodes: collectRunInCellStatements(cellStatements),
+      specialNodes: _collectRunInCellStatements(cellStatements),
     ));
 
     //  build(BuildContext context, Pen pen, MainCell print){
@@ -372,23 +443,20 @@ class _NoteLib {
           ""
     );
   */
-  Future<File> _genFromInfo(_NoteInfo source) async {
-    var toFile = path.join(path.dirname(notePath), "note.g.dart");
+  Future<_NoteAnalyzer> _genFile(_NoteInfo source) async {
     // _log("genPageInfo toFile $toFile");
-    String noFormatCode = _genInfoSource(source);
+    String noFormatCode = _genString(source);
 
-    // ensure dir
-    writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
-
+    File writeTo = noteLib.file.parent.childFile("note.g.dart");
     // write file
     // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
-    await writeFS.file(toFile).writeAsString(noFormatCode);
-
-    return writeFS.file(toFile).writeAsString(fmt.format(noFormatCode));
+    await writeTo.writeAsString(noFormatCode);
+    await writeTo.writeAsString(fmt.format(noFormatCode));
+    return this;
   }
 
   /// gen source code , no format
-  String _genInfoSource(_NoteInfo source) {
+  String _genString(_NoteInfo source) {
     final encodedCode = base64.encode(utf8.encode(source.code));
 
     var cells = source.cells.map((e) {
@@ -405,16 +473,16 @@ class _NoteLib {
       return """
              /// $comment
              (
-               cellType:'${e.cellType}', 
-               offset:${e.offset}, 
-               end:${e.end}, 
+               cellType:'${e.cellType}',
+               offset:${e.offset},
+               end:${e.end},
                statementCount: ${e.cellStatements.length},
                specialNodes: <({
                                   String nodeType,
                                   int end,
                                   int offset,
                                })>[ $specialNodes ] ,
-             ) 
+             )
              """;
     }).join(",");
     Library lib = Library((b) => b
@@ -423,11 +491,11 @@ class _NoteLib {
       ..body.add(
         code.Block((b) => b
           ..statements.addAll([
-            Code('''            
+            Code('''
                 noteInfo() => (
                   cells: [ $cells ],
                   encodedCode: "$encodedCode"
-                ); 
+                );
                 '''),
           ])),
       ));
@@ -440,7 +508,7 @@ class _NoteLib {
     return lib.accept(emitter).toString();
   }
 
-  List<({String nodeType, AstNode node})> collectRunInCellStatements(
+  List<({String nodeType, AstNode node})> _collectRunInCellStatements(
       List<Statement> topLevelCellStatements) {
     List<({String nodeType, AstNode node})> collected =
         List.empty(growable: true);
@@ -455,58 +523,6 @@ class _NoteLib {
     }
     return collected;
   }
-}
-
-enum _CellType { header, body, tail }
-
-typedef _CellInfo = ({
-  String cellType,
-  int offset,
-  int end,
-  List<Statement> cellStatements,
-  List<
-      ({
-        String nodeType,
-        AstNode node,
-      })> specialNodes,
-});
-typedef _NoteInfo = ({
-  String code,
-  List<_CellInfo> cells,
-});
-
-/// 包名平整化：
-/// package:note/pages/note/1.welcome/1.note-self/page.dart
-/// --->
-/// note$welcome$note_self
-///
-/// 规则：
-/// - 去掉package:note前缀
-/// - 去掉用来排序的数字前缀"1."
-/// - '/'换成'$'
-/// - 其他特殊字符换成'_'
-String flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:flutter_note", "");
-  result = path.dirname(result);
-
-  if (result == "/") {
-    return "root";
-  }
-  return result
-      // .replaceAll(RegExp("/page.dart\$"), "") // 后缀
-      // .replaceAll(RegExp("/page.g.dart\$"), "") // 后缀
-// ignore: unnecessary_string_escapes
-      .replaceAll(
-          RegExp("/\\d+\."), "/") // /note/1.note-self -> /note_note-self
-      // .replaceAll(RegExp("^\\d+\."), "") // /1.note-self -> note-self
-      .replaceAll(RegExp("^/"), "") // 去第一个杠
-      .replaceAll("/", "_")
-      .replaceAll(".", "_")
-      .replaceAll("-", "_")
-      .replaceAll("&", "_")
-      .replaceAll("*", "_")
-      .replaceAll("*", "_")
-      .replaceAll("@", "_");
 }
 
 _log(Object? o) {
@@ -562,5 +578,80 @@ class _FindMateSampleStatement extends GeneralizingAstVisitor {
       collect.add((nodeType: nodeType, node: _findFirstParentStatement(node)));
     }
     return super.visitInstanceCreationExpression(node);
+  }
+}
+
+class Pubspec {
+  static const _YAML_PATH_ASSETS = ["flutter", "assets"];
+  late final YamlEditor _yamlEditor;
+  late List<String> _assetsCache;
+
+  File file;
+
+  static Future<Pubspec> parseFile(File file) async {
+    String content = await file.readAsString();
+    return Pubspec._(file, content);
+  }
+
+  Pubspec._(this.file, String content) {
+    _yamlEditor = YamlEditor(content);
+    _assetsCache = assets;
+  }
+
+  List<String> get assets {
+    return (_yamlEditor.parseAt(_YAML_PATH_ASSETS) as List)
+        .map((e) => "$e")
+        .toList();
+  }
+
+  void noteAssetsRemove(String noteAsset) {
+    _yamlEditor.remove([..._YAML_PATH_ASSETS, assets.indexOf(noteAsset)]);
+  }
+
+  void noteAssetsAdd(String noteAsset) {
+    _yamlEditor.appendToList([..._YAML_PATH_ASSETS], noteAsset);
+  }
+
+  /// 1. remove previously Generated
+  /// 2. add new
+  void noteAssetsUpdate(List<String> toUpdate) {
+    var toAdd = List.from(toUpdate, growable: true);
+
+    var oldAssets = assets;
+    var removed = 0;
+    for (int i = 0; i < oldAssets.length; i++) {
+      var oldAsset = oldAssets[i];
+      // manual config, leave it
+      // lib/notes is our Generated
+      if (!oldAsset.startsWith("lib/notes")) {
+        continue;
+      }
+      // our Generated, no change , no need to repeat add
+      if (toAdd.contains(oldAsset)) {
+        toAdd.remove(oldAsset);
+        continue;
+      }
+
+      // prefix lib/notes is previously Generated ,and now not exists
+      _yamlEditor.remove([..._YAML_PATH_ASSETS, i - removed]);
+      removed++;
+    }
+    for (var add in toAdd) {
+      _yamlEditor.appendToList(_YAML_PATH_ASSETS, add);
+    }
+  }
+
+  Future<File> save() async {
+    const ListEquality<String> _listEquality = ListEquality();
+    // no change , no need to save
+    if (_listEquality.equals(_assetsCache, assets)) {
+      print("_assetsCache no change , no need to save");
+      return Future.value(file);
+    }
+    return file.writeAsString(_yamlEditor.toString());
+  }
+
+  String toString() {
+    return _yamlEditor.toString();
   }
 }

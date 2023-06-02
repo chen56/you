@@ -8,4 +8,7 @@ indent_style = space
 insert_final_newline = false
 max_line_length = 80
 tab_width = 4
+trim_trailing_whitespace=true
 
+[*_test.dart]
+max_line_length = 120

@@ -1,0 +1,180 @@
+{
+  "notes": {
+    "/zdraft/research/remote_view": {
+      "id": 1,
+      "displayName": "remote_view"
+    },
+    "/zdraft/2.dev/debug": {
+      "id": 1,
+      "displayName": "debug"
+    },
+    "/zdraft/2.dev/mirror": {
+      "id": 1,
+      "displayName": "mirror"
+    },
+    "/zdraft/macos": {
+      "id": 1,
+      "displayName": "macos"
+    },
+    "/zdraft/file": {
+      "id": 1,
+      "displayName": "file"
+    },
+    "/zdraft/dart3": {
+      "id": 1,
+      "displayName": "dart3"
+    },
+    "/zdraft/layout": {
+      "id": 1,
+      "displayName": "layout"
+    },
+    "/zdraft/serialization/json": {
+      "id": 1,
+      "displayName": "json"
+    },
+    "/zdraft/async": {
+      "id": 1,
+      "displayName": "async"
+    },
+    "/zdraft/state/1.vanilla_state": {
+      "id": 1,
+      "displayName": "1.vanilla_state"
+    },
+    "/zdraft/state": {
+      "id": 1,
+      "displayName": "state"
+    },
+    "/zdraft/state/StatefulBuilder": {
+      "id": 1,
+      "displayName": "StatefulBuilder"
+    },
+    "/zdraft/material3": {
+      "id": 1,
+      "displayName": "material3"
+    },
+    "/zdraft/components/input": {
+      "id": 1,
+      "displayName": "input"
+    },
+    "/zdraft/components/slider": {
+      "id": 1,
+      "displayName": "slider"
+    },
+    "/zdraft/components/button/ButtonStyleButton": {
+      "id": 1,
+      "displayName": "ButtonStyleButton"
+    },
+    "/zdraft/components/button/FloatingActionButton": {
+      "id": 1,
+      "displayName": "FloatingActionButton"
+    },
+    "/zdraft/components/button/IconButton": {
+      "id": 1,
+      "displayName": "IconButton"
+    },
+    "/zdraft/components/menu": {
+      "id": 1,
+      "displayName": "menu"
+    },
+    "/zdraft/components/text/RichText": {
+      "id": 1,
+      "displayName": "RichText"
+    },
+    "/zdraft/components/text/Text": {
+      "id": 1,
+      "displayName": "Text"
+    },
+    "/zdraft/components/bar": {
+      "id": 1,
+      "displayName": "bar"
+    },
+    "/zdraft/selectable": {
+      "id": 1,
+      "displayName": "selectable"
+    },
+    "/zdraft/execption": {
+      "id": 1,
+      "displayName": "execption"
+    },
+    "/zdraft/web_optimization": {
+      "id": 1,
+      "displayName": "web_optimization"
+    },
+    "/zdraft/scrollable/Dismissible": {
+      "id": 1,
+      "displayName": "Dismissible"
+    },
+    "/zdraft": {
+      "id": 1,
+      "displayName": "zdraft"
+    },
+    "/zdraft/assets": {
+      "id": 1,
+      "displayName": "assets"
+    },
+    "/zdraft/analyzer": {
+      "id": 1,
+      "displayName": "analyzer"
+    },
+    "/test/temp": {
+      "id": 1,
+      "displayName": "temp"
+    },
+    "/test/nobody": {
+      "id": 1,
+      "displayName": "nobody"
+    },
+    "/test": {
+      "id": 1,
+      "displayName": "test"
+    },
+    "/2.note-self/sample": {
+      "id": 1,
+      "displayName": "参数化范例机制"
+    },
+    "/2.note-self": {
+      "id": 1,
+      "displayName": "note项目自身机制"
+    },
+    "/2.note-self/notebook": {
+      "id": 1,
+      "displayName": "Notebook机制"
+    },
+    "/flutter/platform&device": {
+      "id": 1,
+      "displayName": "platform&device"
+    },
+    "/flutter/stand_alone/button": {
+      "id": 1,
+      "displayName": "button"
+    },
+    "/flutter/container/bar": {
+      "id": 1,
+      "displayName": "bar"
+    },
+    "/flutter": {
+      "id": 1,
+      "displayName": "flutter"
+    },
+    "/flutter/media&assets/icon": {
+      "id": 1,
+      "displayName": "icon"
+    },
+    "/flutter/devtool/vmservice": {
+      "id": 1,
+      "displayName": "vmservice"
+    },
+    "/flutter/devtool": {
+      "id": 1,
+      "displayName": "devtool"
+    },
+    "/1.welcome": {
+      "id": 1,
+      "displayName": "welcome"
+    },
+    "/": {
+      "id": 1,
+      "displayName": "flutter-note笔记"
+    }
+  }
+}

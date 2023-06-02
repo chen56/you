@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "Flutter Cheat sheet",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,

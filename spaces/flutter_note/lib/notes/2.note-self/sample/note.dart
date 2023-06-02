@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 import 'package:mate_flutter/material.dart';
 import 'package:code_builder/code_builder.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "参数化范例机制",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
@@ -88,7 +88,7 @@ TODO 暂时只能显示，还不能编辑
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-### 枚举参数 
+### 枚举参数
 
 修改下mainAxisAlignment：
   ''');

@@ -1,25 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:note/note_conf.dart';
 import 'package:note_tools/note_tools.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:path/path.dart' as path;
+import 'package:flutter/services.dart' show rootBundle;
 
 void main() async {
-  // ignore: prefer_const_constructors
-  Env env = Env();
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-  NoteDevTool? noteDevTool;
+
+  Env env = Env();
   if (env.isSupportNoteDevtool()) {
-    noteDevTool = NoteDevTool(env: env);
-    await noteDevTool.gen.gen_note_g_dart();
-    await noteDevTool.gen.gen_flutter_note_g_dart();
-    noteDevTool.gen.watch().listen((event) {
-      debugPrint("watch: $event");
+    NoteSpace noteTool = NoteSpace(
+        packageBaseName: "flutter_note",
+        projectDir: "./",
+        // projectDir: env.getFlutterProjectDir(),
+        env: env,
+        spaceDir: path.absolute("./"));
+    await noteTool.gen.gen();
+    noteTool.gen.watch().listen((event) {
+      debugPrint("flutter_note.main watch: $event");
     });
   }
+  // SpaceConf.load
+  SpaceConf spaceConf =
+      SpaceConf.decode(await rootBundle.loadString('note_space.json'));
 
   runApp(NoteApp(
-    sharedPreferences: sharedPreferences,
-    noteDevTool: noteDevTool,
+    spaceConf: spaceConf,
+    sharedPreferences: await SharedPreferences.getInstance(),
   ));
 }

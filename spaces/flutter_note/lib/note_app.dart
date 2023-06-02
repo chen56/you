@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_core.dart';
 import 'package:mate/mate_note.dart';
+import 'package:note/note_conf.dart';
 import 'package:note/ui.dart';
 import 'package:note/note_shell.dart';
 import 'package:note/note_page.dart';
 import 'package:mate_flutter/mate_enums.g.dart' as flutter_enums;
-import 'package:flutter_note/flutter_note.deferred.g.dart';
-import 'package:note_tools/note_tools.dart';
+import 'package:flutter_note/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
@@ -49,19 +49,31 @@ import 'package:shared_preferences/shared_preferences.dart';
 @immutable
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
+  final SpaceConf spaceConf;
 
-  Notes({required this.sharedPreferences});
+  Notes({
+    required this.sharedPreferences,
+    required this.spaceConf,
+  }) {
+    BaseNotes.rootroot.visit((e) {
+      var spaceNoteConf = spaceConf.notes[e.path];
+      if (spaceNoteConf != null) {
+        e.spaceNoteConf = spaceNoteConf;
+      }
+      return true;
+    });
+  }
 
   @override
   Screen get initial {
     String? last = sharedPreferences.getString("flutter_note.notes.location");
     if (last == null) {
-      return switchTo(notes_welcome.path);
+      return switchTo(welcome.path);
     }
     if (BaseNotes.rootroot.contains(last)) {
       return switchTo(last);
     }
-    return switchTo(notes_welcome.path);
+    return switchTo(welcome.path);
   }
 
   @override
@@ -93,10 +105,12 @@ class DeferredScreen extends StatelessWidget with Screen {
             return Text(
                 'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
+          print("snapshot: ${snapshot.data}");
 
           for (int i = 0; i < needLoad.length; i++) {
             needLoad[i].confPart = snapshot.data![i];
           }
+
           return note.layout(note);
         }
         return const CircularProgressIndicator();
@@ -133,19 +147,20 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-  final NoteDevTool? noteDevTool;
-
+  final SpaceConf spaceConf;
   // ignore: prefer_const_constructors_in_immutables
   NoteApp(
-      {super.key, required this.noteDevTool, required this.sharedPreferences});
+      {super.key, required this.sharedPreferences, required this.spaceConf});
 
   @override
   Widget build(BuildContext context) {
     // BaseNotes.rootroot这个设计临时的，可以改善
-    BaseNotes.rootroot.extendTree(true);
-    Notes notes = Notes(sharedPreferences: sharedPreferences);
 
-    notes.notes_zdraft.extendTree(false);
+    Notes notes =
+        Notes(spaceConf: spaceConf, sharedPreferences: sharedPreferences);
+
+    notes.root.extendTree(true);
+    notes.zdraft.extendTree(false);
 
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',

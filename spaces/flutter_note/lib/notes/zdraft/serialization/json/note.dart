@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "json",
   builder: build,
 );

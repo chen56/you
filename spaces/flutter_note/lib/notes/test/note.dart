@@ -2,9 +2,9 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: "自测目录",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

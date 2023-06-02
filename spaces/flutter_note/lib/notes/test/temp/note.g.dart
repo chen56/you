@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 202,
+          end: 208,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (var i = 1;, print.runInCurrentCell((print), {void x() {print.runInCurrentC)
         (
           cellType: 'body',
-          offset: 202,
-          end: 392,
+          offset: 208,
+          end: 398,
           statementCount: 3,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 392,
-          end: 394,
+          offset: 398,
+          end: 400,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCk5vdGVDb25mUGFydCBwYWdlID0gTm90ZUNvbmZQYXJ0KAogIHNob3J0VGl0bGU6ICJ0ZW1wIHBhZ2UiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHZhciBpID0gMTsKICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgcHJpbnQoaSk7CiAgfSk7CgogIHsKICAgIHZvaWQgeCgpIHsKICAgICAgLy8g54m55q6K6K+t5Y+lCiAgICAgIHByaW50LnJ1bkluQ3VycmVudENlbGwoKHByaW50KSB7CiAgICAgICAgcHJpbnQoaSk7CiAgICAgIH0pOwogICAgfQoKICAgIHgoKTsKICB9Cn0K"
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCkZsdXR0ZXJOb3RlQ29uZiBwYWdlID0gRmx1dHRlck5vdGVDb25mKAogIHNob3J0VGl0bGU6ICJ0ZW1wIHBhZ2UiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHZhciBpID0gMTsKICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgcHJpbnQoaSk7CiAgfSk7CgogIHsKICAgIHZvaWQgeCgpIHsKICAgICAgLy8g54m55q6K6K+t5Y+lCiAgICAgIHByaW50LnJ1bkluQ3VycmVudENlbGwoKHByaW50KSB7CiAgICAgICAgcHJpbnQoaSk7CiAgICAgIH0pOwogICAgfQoKICAgIHgoKTsKICB9Cn0K"
     );

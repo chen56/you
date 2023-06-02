@@ -6,10 +6,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/flutter_note.dart';
+import 'package:flutter_note/note_app.dart';
 import 'package:mate_flutter/material.dart';
 
-NoteConfPart page = NoteConfPart(
+FlutterNoteConf page = FlutterNoteConf(
   shortTitle: " Notebook机制",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
@@ -160,7 +160,7 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 ```
 
 内部的currentCell等build执行完后的已经指到是最后一个cell。
-  
+
 ### 处理方案1
 
 回调中避免使用print，用flutter原始的statefull方案来做动态效果：

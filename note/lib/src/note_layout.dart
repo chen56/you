@@ -123,7 +123,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       ),
     );
     var appBar = AppBar(
-      title: Text(widget.current.shortTitle),
+      title: Text(widget.current.displayName),
       toolbarHeight: 36,
     );
 
@@ -237,7 +237,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
             left: 10 * (node.levelTo(widget.root) - 1).toDouble()),
         child: TextButton(
           onPressed: click,
-          child: Text("$iconExtend ${node.shortTitle}"),
+          child: Text("$iconExtend ${node.displayName}"),
         ),
       );
     }
@@ -246,9 +246,15 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       includeThis: false,
       test: (e) => e.isRoot ? true : e.parent!.expand,
     );
+    // Sort by path
+    notes.sort((a, b) => a.path.compareTo(b.path));
     var column = Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [...notes.map(noteLink)]);
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ...notes.map(noteLink),
+        const SizedBox(height: 200), // give space to bottom
+      ],
+    );
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: column,

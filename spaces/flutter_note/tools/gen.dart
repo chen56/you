@@ -3,18 +3,13 @@ import 'package:note_tools/note_tools.dart';
 
 main() async {
   Env env = Env();
-  NoteGenerator gen =
-      NoteGenerator(fmt: DartFormatter(pageWidth: 120), env: env);
-  {
-    log('gen_note_g_dart start noteHome:${gen.noteHome}  projectDir:${gen.projectHome}');
-    var result = await gen.gen_note_g_dart();
-    log('gen_note_g_dart: end  notes: ${result.length}');
-  }
-  {
-    log('gen_flutter_note_g_dart start');
-    var result = await gen.gen_flutter_note_g_dart();
-    log('ok file:${result.file} notes: ${result.notes.length}');
-  }
+  NotesGenerator gen = NotesGenerator(
+      packageBaseName: "flutter_note",
+      fmt: DartFormatter(pageWidth: 120),
+      fs: env.fs,
+      projectDir: env.getFlutterProjectDir());
+
+  await gen.gen();
 }
 
 log(Object? o) {
