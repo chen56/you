@@ -6,12 +6,12 @@ import 'package:note/note_conf.dart';
 void main() {
   group("Space.json", () {
     test("to json", () {
-      SpaceConf space = SpaceConf({});
-      space.notes["/welcome"] = SpaceNoteConf(displayName: "hello");
-      expect(jsonEncode(space.toJson()), '{"notes":{"/welcome":{"id":1,"title":"hello"}}}');
+      SpaceConf space = SpaceConf.decode({});
+      space.notes["/welcome"] = SpaceNoteConf.decode({}, displayName: "hello");
+      expect(jsonEncode(space.encode()), '{"notes":{"/welcome":{"displayName":"hello","order":100}}}');
 
-      var loaded = SpaceConf(space.toJson());
-      expect(jsonEncode(loaded.toJson()), jsonEncode(space.toJson()));
+      var loaded = SpaceConf.decode(space.encode());
+      expect(jsonEncode(loaded.encode()), jsonEncode(space.encode()));
     });
   });
 }

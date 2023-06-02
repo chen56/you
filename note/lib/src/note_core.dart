@@ -104,12 +104,12 @@ class Note<T> {
     required this.basename,
     required Note this.parent,
   })  : confPart = FlutterNoteConf.empty(shortTitle: basename),
-        spaceNoteConf = SpaceNoteConf.empty(displayName: basename);
+        spaceNoteConf = SpaceNoteConf(displayName: basename);
 
   Note.root()
       : basename = "",
         parent = null,
-        spaceNoteConf = SpaceNoteConf.empty(displayName: "");
+        spaceNoteConf = SpaceNoteConf(displayName: "");
 
   Note<C> put<C>(
       String fullPath, NoteSourceData data, DeferredNoteConf deferredConf) {
@@ -196,12 +196,22 @@ class Note<T> {
     return parentPath == "/" ? "/$basename" : "$parentPath/$basename";
   }
 
-  List<Note> toList({bool includeThis = true, bool Function(Note path)? test}) {
+  List<Note> toList({
+    bool includeThis = true,
+    bool Function(Note path)? test,
+    bool sort = false,
+  }) {
     test = test ?? (e) => true;
     if (!test(this)) {
       return [];
     }
-    var flatChildren = _children.values.expand((child) {
+    List<Note> children = List.from(_children.values);
+    if (sort) {
+      children.sort(
+          (a, b) => a.spaceNoteConf.order.compareTo(b.spaceNoteConf.order));
+    }
+
+    var flatChildren = children.expand((child) {
       return child.toList(includeThis: true, test: test);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;

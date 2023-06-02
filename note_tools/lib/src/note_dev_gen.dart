@@ -131,8 +131,10 @@ class NotesGenerator {
     SpaceConf spaceConf = await SpaceConf.load(_noteSpaceJsonFile);
     spaceConf.notes.clear();
     for (var note in notes) {
-      spaceConf.notes[note.noteLib.noteKey] =
-          SpaceNoteConf(displayName: note.noteJson.displayName);
+      spaceConf.notes[note.noteLib.noteKey] = SpaceNoteConf(
+        displayName: note.noteJson.displayName,
+        order: note.noteJson.order,
+      );
     }
     return spaceConf.save(_noteSpaceJsonFile);
   }

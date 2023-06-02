@@ -24,7 +24,7 @@ void main() async {
   }
   // SpaceConf.load
   SpaceConf spaceConf =
-      SpaceConf.decode(await rootBundle.loadString('note_space.json'));
+      SpaceConf.decodeJson(await rootBundle.loadString('note_space.json'));
 
   runApp(NoteApp(
     spaceConf: spaceConf,

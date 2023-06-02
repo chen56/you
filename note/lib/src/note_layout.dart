@@ -245,9 +245,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
     var notes = widget.root.toList(
       includeThis: false,
       test: (e) => e.isRoot ? true : e.parent!.expand,
+      sort: true,
     );
-    // Sort by path
-    notes.sort((a, b) => a.path.compareTo(b.path));
     var column = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
