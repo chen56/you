@@ -30,7 +30,7 @@ class SpaceConf {
       assert(name != null,
           "$key: displayName is null, please remove json path [notes]  regenerate it ");
 
-      notes[key] = SpaceNoteConf(id: id!, displayName: name!);
+      notes[key] = SpaceNoteConf(displayName: name!);
     });
   }
 
@@ -51,7 +51,6 @@ class SpaceConf {
         (key, value) => MapEntry(
           key,
           {
-            "id": value.id,
             "displayName": value.displayName,
           },
         ),
@@ -66,16 +65,18 @@ class SpaceConf {
 }
 
 class SpaceNoteConf {
-  int id;
   String displayName;
-  SpaceNoteConf({required this.id, required this.displayName});
-  SpaceNoteConf.empty({required this.displayName}) : id = -1;
+  SpaceNoteConf({required this.displayName});
+  SpaceNoteConf.empty({required this.displayName});
 }
 
 class NoteConf {
   String displayName = "";
+  // Sorting, small numbers first
+  int order = 100;
   NoteConf(Map<String, dynamic> json, {required String noteBasename}) {
     displayName = json["displayName"] ?? noteBasename;
+    order = json["order"] ?? 100;
   }
 
   static Future<NoteConf> load(File jsonFile,

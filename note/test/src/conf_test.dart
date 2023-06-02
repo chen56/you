@@ -7,7 +7,7 @@ void main() {
   group("Space.json", () {
     test("to json", () {
       SpaceConf space = SpaceConf({});
-      space.notes["/welcome"] = SpaceNoteConf(id: 1, displayName: "hello");
+      space.notes["/welcome"] = SpaceNoteConf(displayName: "hello");
       expect(jsonEncode(space.toJson()), '{"notes":{"/welcome":{"id":1,"title":"hello"}}}');
 
       var loaded = SpaceConf(space.toJson());
