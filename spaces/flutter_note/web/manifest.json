@@ -1,5 +1,5 @@
 {
-    "name": "flutter_note",
+    "displayName": "flutter_note",
     "short_name": "flutter_note",
     "start_url": ".",
     "display": "standalone",

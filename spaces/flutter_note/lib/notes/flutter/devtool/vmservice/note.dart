@@ -9,7 +9,7 @@ FlutterNoteConf page = FlutterNoteConf(
 
 build(BuildContext context, Pen print) async {
   print.markdown(r'''
-# VM Service 
+# VM Service
 
 ## vmservice URL
 

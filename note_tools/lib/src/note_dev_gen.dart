@@ -132,7 +132,7 @@ class NotesGenerator {
     spaceConf.notes.clear();
     for (var note in notes) {
       spaceConf.notes[note.noteLib.noteKey] =
-          SpaceNoteConf(id: 1, title: note.noteJson.title);
+          SpaceNoteConf(id: 1, displayName: note.noteJson.displayName);
     }
     return spaceConf.save(_noteSpaceJsonFile);
   }

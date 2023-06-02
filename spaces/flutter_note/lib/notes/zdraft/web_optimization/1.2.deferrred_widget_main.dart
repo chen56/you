@@ -6,11 +6,9 @@ import 'package:flutter_note/notes/zdraft/web_optimization/1,deferrred_widget.da
 main() {
   registerNote("DeferredBox", () {
     // var f = Future.delayed(const Duration(seconds: 3));
-    var f = Future.delayed(const Duration(seconds: 3))
-        .then((value) => throw Exception("ssss"),
-            onError: (e, StackTrace? stackTrace) {
-      print("ppp2 $e");
-    });
+    var f = Future.delayed(const Duration(seconds: 3)).then(
+        (value) => throw Exception("exception :$value"),
+        onError: (e, StackTrace? stackTrace) {});
     return f.then((value) => box
             .loadLibrary()
             .then((_) => Future(() => box.DeferredBox()),

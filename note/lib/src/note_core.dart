@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:note/note_conf.dart';
 import 'package:note/src/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
@@ -84,12 +85,12 @@ class FlutterNoteConf<T> {
 }
 
 class Note<T> {
-  final String name;
-  final List<Note> _children = List.empty(growable: true);
-  final Map<String, Note> _childrenMap = {};
+  /// A file system term,  that refers to the last part of a path
+  /// example: a/b/c , c is basename
+  final String basename;
+  final Map<String, Note> _children = {};
   final Note? parent;
   bool expand = false;
-  final Map<String, Object> attributes = {};
 
   FlutterNoteConf<T> confPart = FlutterNoteConf.empty();
 
@@ -97,14 +98,18 @@ class Note<T> {
 
   DeferredNoteConf? deferredConf;
 
+  SpaceNoteConf spaceNoteConf;
+
   Note._child({
-    required this.name,
+    required this.basename,
     required Note this.parent,
-  }) : confPart = FlutterNoteConf.empty(shortTitle: name);
+  })  : confPart = FlutterNoteConf.empty(shortTitle: basename),
+        spaceNoteConf = SpaceNoteConf.empty(displayName: basename);
 
   Note.root()
-      : name = "",
-        parent = null;
+      : basename = "",
+        parent = null,
+        spaceNoteConf = SpaceNoteConf.empty(displayName: "");
 
   Note<C> put<C>(
       String fullPath, NoteSourceData data, DeferredNoteConf deferredConf) {
@@ -116,7 +121,7 @@ class Note<T> {
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
-    path.confPart = FlutterNoteConf.notEmpty(shortTitle: path.name);
+    path.confPart = FlutterNoteConf.notEmpty(shortTitle: path.basename);
     path.deferredConf = deferredConf;
     return path as Note<C>;
   }
@@ -132,7 +137,7 @@ class Note<T> {
 
   bool get isNotEmpty => !confPart.empty;
 
-  List<Note> get children => List.unmodifiable(_children);
+  List<Note> get children => List.from(_children.values);
 
   NoteSource get source => _source;
 
@@ -143,10 +148,9 @@ class Note<T> {
     String name = nameList[0];
     assert(name != "" && name != "/",
         "path:$nameList, path[0]:'$name' must not be '' and '/' ");
-    var next = _childrenMap.putIfAbsent(name, () {
-      var child = Note._child(name: name, parent: this);
-      _children.add(child);
-      _childrenMap[name] = child;
+    var next = _children.putIfAbsent(name, () {
+      var child = Note._child(basename: name, parent: this);
+      _children[name] = child;
       return child;
     });
     return next._ensurePath(nameList.sublist(1));
@@ -182,12 +186,14 @@ class Note<T> {
 
   Note get root => isRoot ? this : parent!.root;
 
-  String get shortTitle => confPart.shortTitle;
+  /// Note names, which can be set to human-readable names in note.json,
+  /// are displayed on the navigation tree
+  String get displayName => spaceNoteConf.displayName;
 
   String get path {
     if (isRoot) return "/";
     var parentPath = parent!.path;
-    return parentPath == "/" ? "/$name" : "$parentPath/$name";
+    return parentPath == "/" ? "/$basename" : "$parentPath/$basename";
   }
 
   List<Note> toList({bool includeThis = true, bool Function(Note path)? test}) {
@@ -195,7 +201,7 @@ class Note<T> {
     if (!test(this)) {
       return [];
     }
-    var flatChildren = _children.expand((child) {
+    var flatChildren = _children.values.expand((child) {
       return child.toList(includeThis: true, test: test);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
@@ -212,7 +218,7 @@ class Note<T> {
     Note? result = this;
     for (var split
         in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
-      result = result?._childrenMap[split];
+      result = result?._children[split];
       if (result == null) break;
     }
     return result;
@@ -220,7 +226,8 @@ class Note<T> {
 
   /// 扁平化name，去掉排序用的数字前缀
   String get nameFlat {
-    return name.replaceAll(RegExp("\\d+[.]"), "") // 1.note-self -> note-self
+    return basename.replaceAll(
+            RegExp("\\d+[.]"), "") // 1.note-self -> note-self
         ;
   }
 
@@ -231,7 +238,7 @@ class Note<T> {
   @override
   String toString({bool? deep}) {
     if (deep == null || !deep) {
-      return "Page($path ,kids:${_children.map((e) => e.toStringShort()).toList()})";
+      return "Page($path ,kids:${_children.values.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
       for (Note n in toList()) {
@@ -244,6 +251,15 @@ class Note<T> {
   bool contains(String location) {
     var c = child(location);
     return c != null;
+  }
+
+  void visit(bool Function(Note note) visitor) {
+    if (!visitor(this)) {
+      return;
+    }
+    for (var child in _children.values) {
+      child.visit(visitor);
+    }
   }
 }
 

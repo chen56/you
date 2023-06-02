@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_core.dart';
 import 'package:mate/mate_note.dart';
+import 'package:note/note_conf.dart';
 import 'package:note/ui.dart';
 import 'package:note/note_shell.dart';
 import 'package:note/note_page.dart';
@@ -48,8 +49,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 @immutable
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
+  final SpaceConf spaceConf;
 
-  Notes({required this.sharedPreferences});
+  Notes({
+    required this.sharedPreferences,
+    required this.spaceConf,
+  }) {
+    BaseNotes.rootroot.visit((e) {
+      var spaceNoteConf = spaceConf.notes[e.path];
+      if (spaceNoteConf != null) {
+        e.spaceNoteConf = spaceNoteConf;
+      }
+      return true;
+    });
+  }
 
   @override
   Screen get initial {
@@ -84,7 +97,6 @@ class DeferredScreen extends StatelessWidget with Screen {
   Widget build(BuildContext context) {
     var needLoad =
         note.meAndAncestors.where((e) => e.deferredConf != null).toList();
-    print("needLoad: $needLoad");
     return FutureBuilder(
       future: Future.wait(needLoad.map((e) => e.deferredConf!())),
       builder: (context, snapshot) {
@@ -98,7 +110,6 @@ class DeferredScreen extends StatelessWidget with Screen {
           for (int i = 0; i < needLoad.length; i++) {
             needLoad[i].confPart = snapshot.data![i];
           }
-          print("snapshot confPart: ${note.confPart}  layout: ${note.layout}");
 
           return note.layout(note);
         }
@@ -136,16 +147,19 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-
+  final SpaceConf spaceConf;
   // ignore: prefer_const_constructors_in_immutables
-  NoteApp({super.key, required this.sharedPreferences});
+  NoteApp(
+      {super.key, required this.sharedPreferences, required this.spaceConf});
 
   @override
   Widget build(BuildContext context) {
     // BaseNotes.rootroot这个设计临时的，可以改善
-    BaseNotes.rootroot.extendTree(true);
-    Notes notes = Notes(sharedPreferences: sharedPreferences);
 
+    Notes notes =
+        Notes(spaceConf: spaceConf, sharedPreferences: sharedPreferences);
+
+    notes.root.extendTree(true);
     notes.zdraft.extendTree(false);
 
     var routerApp = MaterialApp.router(

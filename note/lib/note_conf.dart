@@ -10,7 +10,7 @@
 
 import 'dart:convert';
 
-import 'package:file/src/interface/file.dart' show File;
+import 'package:file/file.dart';
 
 // format json
 JsonEncoder _encoder = const JsonEncoder.withIndent('  ');
@@ -26,11 +26,11 @@ class SpaceConf {
       assert(id != null,
           "$key: id is null, please remove json path [notes]  regenerate it ");
 
-      String? title = value["title"];
-      assert(title != null,
-          "$key: title is null, please remove json path [notes]  regenerate it ");
+      String? name = value["displayName"];
+      assert(name != null,
+          "$key: displayName is null, please remove json path [notes]  regenerate it ");
 
-      notes[key] = SpaceNoteConf(id: id!, title: title!);
+      notes[key] = SpaceNoteConf(id: id!, displayName: name!);
     });
   }
 
@@ -43,6 +43,8 @@ class SpaceConf {
     return SpaceConf(json);
   }
 
+  SpaceConf.decode(String jsonStr) : this(jsonDecode(jsonStr));
+
   Map<String, dynamic> toJson() {
     return {
       "notes": notes.map(
@@ -50,7 +52,7 @@ class SpaceConf {
           key,
           {
             "id": value.id,
-            "title": value.title,
+            "displayName": value.displayName,
           },
         ),
       ),
@@ -65,14 +67,15 @@ class SpaceConf {
 
 class SpaceNoteConf {
   int id;
-  String title;
-  SpaceNoteConf({required this.id, required this.title});
+  String displayName;
+  SpaceNoteConf({required this.id, required this.displayName});
+  SpaceNoteConf.empty({required this.displayName}) : id = -1;
 }
 
 class NoteConf {
-  String title = "";
+  String displayName = "";
   NoteConf(Map<String, dynamic> json, {required String noteBasename}) {
-    title = json["title"] ?? noteBasename;
+    displayName = json["displayName"] ?? noteBasename;
   }
 
   static Future<NoteConf> load(File jsonFile,
@@ -87,7 +90,7 @@ class NoteConf {
 
   Map<String, dynamic> toJson() {
     return {
-      "title": title,
+      "displayName": displayName,
     };
   }
 
