@@ -15,8 +15,7 @@ void main() async {
         // projectDir: env.getFlutterProjectDir(),
         env: env,
         spaceDir: path.absolute("./"));
-    await noteTool.gen.gen_all_note_g_dart();
-    await noteTool.gen.gen_notes_g_dart();
+    await noteTool.gen.gen();
     noteTool.gen.watch().listen((event) {
       debugPrint("flutter_note.main watch: $event");
     });
