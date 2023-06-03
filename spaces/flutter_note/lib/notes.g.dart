@@ -3,38 +3,14 @@
 
 import 'package:flutter_note/notes/1.welcome/note.dart' deferred as welcome_;
 import 'package:flutter_note/notes/1.welcome/note.g.dart' as welcome_g;
-import 'package:flutter_note/notes/2.note-self/note.dart' deferred as note_self_;
-import 'package:flutter_note/notes/2.note-self/note.g.dart' as note_self_g;
-import 'package:flutter_note/notes/2.note-self/notebook/note.dart' deferred as note_self_notebook_;
-import 'package:flutter_note/notes/2.note-self/notebook/note.g.dart' as note_self_notebook_g;
-import 'package:flutter_note/notes/2.note-self/sample/note.dart' deferred as note_self_sample_;
-import 'package:flutter_note/notes/2.note-self/sample/note.g.dart' as note_self_sample_g;
-import 'package:flutter_note/notes/flutter/container/bar/note.dart' deferred as flutter_container_bar_;
-import 'package:flutter_note/notes/flutter/container/bar/note.g.dart' as flutter_container_bar_g;
-import 'package:flutter_note/notes/flutter/devtool/note.dart' deferred as flutter_devtool_;
-import 'package:flutter_note/notes/flutter/devtool/note.g.dart' as flutter_devtool_g;
-import 'package:flutter_note/notes/flutter/devtool/vmservice/note.dart' deferred as flutter_devtool_vmservice_;
-import 'package:flutter_note/notes/flutter/devtool/vmservice/note.g.dart' as flutter_devtool_vmservice_g;
-import 'package:flutter_note/notes/flutter/media&assets/icon/note.dart' deferred as flutter_media_assets_icon_;
-import 'package:flutter_note/notes/flutter/media&assets/icon/note.g.dart' as flutter_media_assets_icon_g;
-import 'package:flutter_note/notes/flutter/note.dart' deferred as flutter_;
-import 'package:flutter_note/notes/flutter/note.g.dart' as flutter_g;
-import 'package:flutter_note/notes/flutter/platform&device/note.dart' deferred as flutter_platform_device_;
-import 'package:flutter_note/notes/flutter/platform&device/note.g.dart' as flutter_platform_device_g;
-import 'package:flutter_note/notes/flutter/stand_alone/button/note.dart' deferred as flutter_stand_alone_button_;
-import 'package:flutter_note/notes/flutter/stand_alone/button/note.g.dart' as flutter_stand_alone_button_g;
 import 'package:flutter_note/notes/note.dart' deferred as root_;
 import 'package:flutter_note/notes/note.g.dart' as root_g;
-import 'package:flutter_note/notes/test/nobody/note.dart' deferred as test_nobody_;
-import 'package:flutter_note/notes/test/nobody/note.g.dart' as test_nobody_g;
-import 'package:flutter_note/notes/test/note.dart' deferred as test_;
-import 'package:flutter_note/notes/test/note.g.dart' as test_g;
-import 'package:flutter_note/notes/test/temp/note.dart' deferred as test_temp_;
-import 'package:flutter_note/notes/test/temp/note.g.dart' as test_temp_g;
-import 'package:flutter_note/notes/zdraft/2.dev/debug/note.dart' deferred as zdraft_dev_debug_;
-import 'package:flutter_note/notes/zdraft/2.dev/debug/note.g.dart' as zdraft_dev_debug_g;
-import 'package:flutter_note/notes/zdraft/2.dev/mirror/note.dart' deferred as zdraft_dev_mirror_;
-import 'package:flutter_note/notes/zdraft/2.dev/mirror/note.g.dart' as zdraft_dev_mirror_g;
+import 'package:flutter_note/notes/platform&device/note.dart' deferred as platform_device_;
+import 'package:flutter_note/notes/platform&device/note.g.dart' as platform_device_g;
+import 'package:flutter_note/notes/samples/container/bar/note.dart' deferred as samples_container_bar_;
+import 'package:flutter_note/notes/samples/container/bar/note.g.dart' as samples_container_bar_g;
+import 'package:flutter_note/notes/samples/stand_alone/button/note.dart' deferred as samples_stand_alone_button_;
+import 'package:flutter_note/notes/samples/stand_alone/button/note.g.dart' as samples_stand_alone_button_g;
 import 'package:flutter_note/notes/zdraft/analyzer/note.dart' deferred as zdraft_analyzer_;
 import 'package:flutter_note/notes/zdraft/analyzer/note.g.dart' as zdraft_analyzer_g;
 import 'package:flutter_note/notes/zdraft/assets/note.dart' deferred as zdraft_assets_;
@@ -68,6 +44,14 @@ import 'package:flutter_note/notes/zdraft/components/text/Text/note.dart' deferr
 import 'package:flutter_note/notes/zdraft/components/text/Text/note.g.dart' as zdraft_components_text_Text_g;
 import 'package:flutter_note/notes/zdraft/dart3/note.dart' deferred as zdraft_dart3_;
 import 'package:flutter_note/notes/zdraft/dart3/note.g.dart' as zdraft_dart3_g;
+import 'package:flutter_note/notes/zdraft/dev/debug/note.dart' deferred as zdraft_dev_debug_;
+import 'package:flutter_note/notes/zdraft/dev/debug/note.g.dart' as zdraft_dev_debug_g;
+import 'package:flutter_note/notes/zdraft/dev/mirror/note.dart' deferred as zdraft_dev_mirror_;
+import 'package:flutter_note/notes/zdraft/dev/mirror/note.g.dart' as zdraft_dev_mirror_g;
+import 'package:flutter_note/notes/zdraft/devtool/note.dart' deferred as zdraft_devtool_;
+import 'package:flutter_note/notes/zdraft/devtool/note.g.dart' as zdraft_devtool_g;
+import 'package:flutter_note/notes/zdraft/devtool/vmservice/note.dart' deferred as zdraft_devtool_vmservice_;
+import 'package:flutter_note/notes/zdraft/devtool/vmservice/note.g.dart' as zdraft_devtool_vmservice_g;
 import 'package:flutter_note/notes/zdraft/execption/note.dart' deferred as zdraft_execption_;
 import 'package:flutter_note/notes/zdraft/execption/note.g.dart' as zdraft_execption_g;
 import 'package:flutter_note/notes/zdraft/file/note.dart' deferred as zdraft_file_;
@@ -78,6 +62,20 @@ import 'package:flutter_note/notes/zdraft/macos/note.dart' deferred as zdraft_ma
 import 'package:flutter_note/notes/zdraft/macos/note.g.dart' as zdraft_macos_g;
 import 'package:flutter_note/notes/zdraft/material3/note.dart' deferred as zdraft_material3_;
 import 'package:flutter_note/notes/zdraft/material3/note.g.dart' as zdraft_material3_g;
+import 'package:flutter_note/notes/zdraft/media&assets/icon/note.dart' deferred as zdraft_media_assets_icon_;
+import 'package:flutter_note/notes/zdraft/media&assets/icon/note.g.dart' as zdraft_media_assets_icon_g;
+import 'package:flutter_note/notes/zdraft/note-self/note.dart' deferred as zdraft_note_self_;
+import 'package:flutter_note/notes/zdraft/note-self/note.g.dart' as zdraft_note_self_g;
+import 'package:flutter_note/notes/zdraft/note-self/notebook/note.dart' deferred as zdraft_note_self_notebook_;
+import 'package:flutter_note/notes/zdraft/note-self/notebook/note.g.dart' as zdraft_note_self_notebook_g;
+import 'package:flutter_note/notes/zdraft/note-self/sample/note.dart' deferred as zdraft_note_self_sample_;
+import 'package:flutter_note/notes/zdraft/note-self/sample/note.g.dart' as zdraft_note_self_sample_g;
+import 'package:flutter_note/notes/zdraft/note-self/test/nobody/note.dart' deferred as zdraft_note_self_test_nobody_;
+import 'package:flutter_note/notes/zdraft/note-self/test/nobody/note.g.dart' as zdraft_note_self_test_nobody_g;
+import 'package:flutter_note/notes/zdraft/note-self/test/note.dart' deferred as zdraft_note_self_test_;
+import 'package:flutter_note/notes/zdraft/note-self/test/note.g.dart' as zdraft_note_self_test_g;
+import 'package:flutter_note/notes/zdraft/note-self/test/temp/note.dart' deferred as zdraft_note_self_test_temp_;
+import 'package:flutter_note/notes/zdraft/note-self/test/temp/note.g.dart' as zdraft_note_self_test_temp_g;
 import 'package:flutter_note/notes/zdraft/note.dart' deferred as zdraft_;
 import 'package:flutter_note/notes/zdraft/note.g.dart' as zdraft_g;
 import 'package:flutter_note/notes/zdraft/research/remote_view/note.dart' deferred as zdraft_research_remote_view_;
@@ -109,12 +107,6 @@ abstract class BaseNotes {
       zdraft_research_remote_view_g.noteInfo(),
       () => zdraft_research_remote_view_.loadLibrary().then((value) => zdraft_research_remote_view_.page));
 
-  final Note zdraft_dev_debug = put2("/zdraft/2.dev/debug", zdraft_dev_debug_g.noteInfo(),
-      () => zdraft_dev_debug_.loadLibrary().then((value) => zdraft_dev_debug_.page));
-
-  final Note zdraft_dev_mirror = put2("/zdraft/2.dev/mirror", zdraft_dev_mirror_g.noteInfo(),
-      () => zdraft_dev_mirror_.loadLibrary().then((value) => zdraft_dev_mirror_.page));
-
   final Note zdraft_macos = put2("/zdraft/macos", zdraft_macos_g.noteInfo(),
       () => zdraft_macos_.loadLibrary().then((value) => zdraft_macos_.page));
 
@@ -132,6 +124,26 @@ abstract class BaseNotes {
 
   final Note zdraft_async = put2("/zdraft/async", zdraft_async_g.noteInfo(),
       () => zdraft_async_.loadLibrary().then((value) => zdraft_async_.page));
+
+  final Note zdraft_note_self_test_temp = put2("/zdraft/note-self/test/temp", zdraft_note_self_test_temp_g.noteInfo(),
+      () => zdraft_note_self_test_temp_.loadLibrary().then((value) => zdraft_note_self_test_temp_.page));
+
+  final Note zdraft_note_self_test_nobody = put2(
+      "/zdraft/note-self/test/nobody",
+      zdraft_note_self_test_nobody_g.noteInfo(),
+      () => zdraft_note_self_test_nobody_.loadLibrary().then((value) => zdraft_note_self_test_nobody_.page));
+
+  final Note zdraft_note_self_test = put2("/zdraft/note-self/test", zdraft_note_self_test_g.noteInfo(),
+      () => zdraft_note_self_test_.loadLibrary().then((value) => zdraft_note_self_test_.page));
+
+  final Note zdraft_note_self_sample = put2("/zdraft/note-self/sample", zdraft_note_self_sample_g.noteInfo(),
+      () => zdraft_note_self_sample_.loadLibrary().then((value) => zdraft_note_self_sample_.page));
+
+  final Note zdraft_note_self = put2("/zdraft/note-self", zdraft_note_self_g.noteInfo(),
+      () => zdraft_note_self_.loadLibrary().then((value) => zdraft_note_self_.page));
+
+  final Note zdraft_note_self_notebook = put2("/zdraft/note-self/notebook", zdraft_note_self_notebook_g.noteInfo(),
+      () => zdraft_note_self_notebook_.loadLibrary().then((value) => zdraft_note_self_notebook_.page));
 
   final Note zdraft_state_vanilla_state = put2("/zdraft/state/1.vanilla_state", zdraft_state_vanilla_state_g.noteInfo(),
       () => zdraft_state_vanilla_state_.loadLibrary().then((value) => zdraft_state_vanilla_state_.page));
@@ -204,7 +216,22 @@ abstract class BaseNotes {
       zdraft_scrollable_Dismissible_g.noteInfo(),
       () => zdraft_scrollable_Dismissible_.loadLibrary().then((value) => zdraft_scrollable_Dismissible_.page));
 
+  final Note zdraft_dev_debug = put2("/zdraft/dev/debug", zdraft_dev_debug_g.noteInfo(),
+      () => zdraft_dev_debug_.loadLibrary().then((value) => zdraft_dev_debug_.page));
+
+  final Note zdraft_dev_mirror = put2("/zdraft/dev/mirror", zdraft_dev_mirror_g.noteInfo(),
+      () => zdraft_dev_mirror_.loadLibrary().then((value) => zdraft_dev_mirror_.page));
+
   final Note zdraft = put2("/zdraft", zdraft_g.noteInfo(), () => zdraft_.loadLibrary().then((value) => zdraft_.page));
+
+  final Note zdraft_media_assets_icon = put2("/zdraft/media&assets/icon", zdraft_media_assets_icon_g.noteInfo(),
+      () => zdraft_media_assets_icon_.loadLibrary().then((value) => zdraft_media_assets_icon_.page));
+
+  final Note zdraft_devtool_vmservice = put2("/zdraft/devtool/vmservice", zdraft_devtool_vmservice_g.noteInfo(),
+      () => zdraft_devtool_vmservice_.loadLibrary().then((value) => zdraft_devtool_vmservice_.page));
+
+  final Note zdraft_devtool = put2("/zdraft/devtool", zdraft_devtool_g.noteInfo(),
+      () => zdraft_devtool_.loadLibrary().then((value) => zdraft_devtool_.page));
 
   final Note zdraft_assets = put2("/zdraft/assets", zdraft_assets_g.noteInfo(),
       () => zdraft_assets_.loadLibrary().then((value) => zdraft_assets_.page));
@@ -212,43 +239,14 @@ abstract class BaseNotes {
   final Note zdraft_analyzer = put2("/zdraft/analyzer", zdraft_analyzer_g.noteInfo(),
       () => zdraft_analyzer_.loadLibrary().then((value) => zdraft_analyzer_.page));
 
-  final Note test_temp =
-      put2("/test/temp", test_temp_g.noteInfo(), () => test_temp_.loadLibrary().then((value) => test_temp_.page));
+  final Note platform_device = put2("/platform&device", platform_device_g.noteInfo(),
+      () => platform_device_.loadLibrary().then((value) => platform_device_.page));
 
-  final Note test_nobody = put2(
-      "/test/nobody", test_nobody_g.noteInfo(), () => test_nobody_.loadLibrary().then((value) => test_nobody_.page));
+  final Note samples_stand_alone_button = put2("/samples/stand_alone/button", samples_stand_alone_button_g.noteInfo(),
+      () => samples_stand_alone_button_.loadLibrary().then((value) => samples_stand_alone_button_.page));
 
-  final Note test = put2("/test", test_g.noteInfo(), () => test_.loadLibrary().then((value) => test_.page));
-
-  final Note note_self_sample = put2("/2.note-self/sample", note_self_sample_g.noteInfo(),
-      () => note_self_sample_.loadLibrary().then((value) => note_self_sample_.page));
-
-  final Note note_self =
-      put2("/2.note-self", note_self_g.noteInfo(), () => note_self_.loadLibrary().then((value) => note_self_.page));
-
-  final Note note_self_notebook = put2("/2.note-self/notebook", note_self_notebook_g.noteInfo(),
-      () => note_self_notebook_.loadLibrary().then((value) => note_self_notebook_.page));
-
-  final Note flutter_platform_device = put2("/flutter/platform&device", flutter_platform_device_g.noteInfo(),
-      () => flutter_platform_device_.loadLibrary().then((value) => flutter_platform_device_.page));
-
-  final Note flutter_stand_alone_button = put2("/flutter/stand_alone/button", flutter_stand_alone_button_g.noteInfo(),
-      () => flutter_stand_alone_button_.loadLibrary().then((value) => flutter_stand_alone_button_.page));
-
-  final Note flutter_container_bar = put2("/flutter/container/bar", flutter_container_bar_g.noteInfo(),
-      () => flutter_container_bar_.loadLibrary().then((value) => flutter_container_bar_.page));
-
-  final Note flutter =
-      put2("/flutter", flutter_g.noteInfo(), () => flutter_.loadLibrary().then((value) => flutter_.page));
-
-  final Note flutter_media_assets_icon = put2("/flutter/media&assets/icon", flutter_media_assets_icon_g.noteInfo(),
-      () => flutter_media_assets_icon_.loadLibrary().then((value) => flutter_media_assets_icon_.page));
-
-  final Note flutter_devtool_vmservice = put2("/flutter/devtool/vmservice", flutter_devtool_vmservice_g.noteInfo(),
-      () => flutter_devtool_vmservice_.loadLibrary().then((value) => flutter_devtool_vmservice_.page));
-
-  final Note flutter_devtool = put2("/flutter/devtool", flutter_devtool_g.noteInfo(),
-      () => flutter_devtool_.loadLibrary().then((value) => flutter_devtool_.page));
+  final Note samples_container_bar = put2("/samples/container/bar", samples_container_bar_g.noteInfo(),
+      () => samples_container_bar_.loadLibrary().then((value) => samples_container_bar_.page));
 
   final Note welcome =
       put2("/1.welcome", welcome_g.noteInfo(), () => welcome_.loadLibrary().then((value) => welcome_.page));

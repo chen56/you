@@ -803,6 +803,8 @@ gen.all() {
 }
 gen.notes() {
   _exec flutter_note dart run tools/gen.dart
+  _exec flutter_note flutter pub get
+
 }
 gen.mate() (
     cd mate_flutter

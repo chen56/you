@@ -14,14 +14,12 @@ class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final NoteSystem noteSystem;
   final Note<T> current;
   final Note tree;
-  final bool defaultCodeExpand;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
     required this.tree,
     required this.current,
-    this.defaultCodeExpand = false,
   });
 
   @override
@@ -64,7 +62,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       context,
       widget.current,
       contentFactory: widget.noteSystem.contentExtensions,
-      defaultCodeExpand: widget.defaultCodeExpand,
+      defaultCodeExpand: true,
       outline: outline,
     );
     return (

@@ -4,14 +4,6 @@
       "displayName": "remote_view",
       "order": 100
     },
-    "/zdraft/2.dev/debug": {
-      "displayName": "debug",
-      "order": 100
-    },
-    "/zdraft/2.dev/mirror": {
-      "displayName": "mirror",
-      "order": 100
-    },
     "/zdraft/macos": {
       "displayName": "macos",
       "order": 100
@@ -34,6 +26,30 @@
     },
     "/zdraft/async": {
       "displayName": "async",
+      "order": 100
+    },
+    "/zdraft/note-self/test/temp": {
+      "displayName": "temp",
+      "order": 100
+    },
+    "/zdraft/note-self/test/nobody": {
+      "displayName": "nobody",
+      "order": 100
+    },
+    "/zdraft/note-self/test": {
+      "displayName": "test",
+      "order": 10
+    },
+    "/zdraft/note-self/sample": {
+      "displayName": "参数化范例机制",
+      "order": 100
+    },
+    "/zdraft/note-self": {
+      "displayName": "note项目自身机制",
+      "order": 1
+    },
+    "/zdraft/note-self/notebook": {
+      "displayName": "Notebook机制",
       "order": 100
     },
     "/zdraft/state/1.vanilla_state": {
@@ -104,8 +120,28 @@
       "displayName": "Dismissible",
       "order": 100
     },
+    "/zdraft/dev/debug": {
+      "displayName": "debug",
+      "order": 100
+    },
+    "/zdraft/dev/mirror": {
+      "displayName": "mirror",
+      "order": 100
+    },
     "/zdraft": {
       "displayName": "zdraft",
+      "order": 100
+    },
+    "/zdraft/media&assets/icon": {
+      "displayName": "icon",
+      "order": 100
+    },
+    "/zdraft/devtool/vmservice": {
+      "displayName": "vmservice",
+      "order": 100
+    },
+    "/zdraft/devtool": {
+      "displayName": "devtool",
       "order": 100
     },
     "/zdraft/assets": {
@@ -116,56 +152,16 @@
       "displayName": "analyzer",
       "order": 100
     },
-    "/test/temp": {
-      "displayName": "temp",
-      "order": 100
-    },
-    "/test/nobody": {
-      "displayName": "nobody",
-      "order": 100
-    },
-    "/test": {
-      "displayName": "test",
-      "order": 10
-    },
-    "/2.note-self/sample": {
-      "displayName": "参数化范例机制",
-      "order": 100
-    },
-    "/2.note-self": {
-      "displayName": "note项目自身机制",
-      "order": 1
-    },
-    "/2.note-self/notebook": {
-      "displayName": "Notebook机制",
-      "order": 100
-    },
-    "/flutter/platform&device": {
+    "/platform&device": {
       "displayName": "platform&device",
       "order": 100
     },
-    "/flutter/stand_alone/button": {
+    "/samples/stand_alone/button": {
       "displayName": "button",
       "order": 100
     },
-    "/flutter/container/bar": {
+    "/samples/container/bar": {
       "displayName": "bar",
-      "order": 100
-    },
-    "/flutter": {
-      "displayName": "flutter cheat sheet",
-      "order": 3
-    },
-    "/flutter/media&assets/icon": {
-      "displayName": "icon",
-      "order": 100
-    },
-    "/flutter/devtool/vmservice": {
-      "displayName": "vmservice",
-      "order": 100
-    },
-    "/flutter/devtool": {
-      "displayName": "devtool",
       "order": 100
     },
     "/1.welcome": {
