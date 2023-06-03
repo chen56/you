@@ -6,7 +6,7 @@ import 'package:flutter_note/note_app.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
   builder: build,
-  layout: Layouts.defaultLayout(defaultCodeExpand: true),
+  layout: Layouts.defaultLayout(),
 );
 
 build(BuildContext context, Pen print) {

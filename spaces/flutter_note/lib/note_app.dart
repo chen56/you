@@ -133,14 +133,11 @@ class Layouts {
             NoteContentExts.ext([MateContentExt(editors: editors)]),
       );
 
-  static Layout defaultLayout<T>({
-    bool defaultCodeExpand = true,
-  }) {
+  static Layout defaultLayout<T>() {
     return (note) => LayoutScreen<T>(
           noteSystem: noteSystem,
           current: note as Note<T>,
           tree: BaseNotes.rootroot,
-          defaultCodeExpand: defaultCodeExpand,
         );
   }
 }
