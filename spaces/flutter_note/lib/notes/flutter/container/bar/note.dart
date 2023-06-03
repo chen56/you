@@ -6,7 +6,6 @@ import 'package:mate_flutter/painting.dart' as painting;
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "Bars",
   builder: build,
 );
 
@@ -85,11 +84,11 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-  
+
 ## ~~BottomNavigationBar~~
 
 ~~BottomNavigationBar~~ 不建议使用，被[NavigationBar]替换
- 
+
 ## NavigationBar
 
 > 📣Material 3 Navigation Bar component. replacing BottomNavigationBar.
@@ -167,8 +166,8 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 主要用在Pad或桌面应用上。
 
 > <https://api.dev/flutter/material/NavigationRail-class.html>
-> The navigation rail is meant for layouts with wide viewports, such as a desktop web 
-> or tablet landscape layout. For smaller layouts, like mobile portrait, 
+> The navigation rail is meant for layouts with wide viewports, such as a desktop web
+> or tablet landscape layout. For smaller layouts, like mobile portrait,
 > a BottomNavigationBar should be used instead.
 ''');
 
@@ -343,7 +342,7 @@ DefaultTabController
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-## ButtonBar 
+## ButtonBar
 
 > <https://api.flutter-io.cn/flutter/material/ButtonBar-class.html>
 > An end-aligned row of buttons, laying out into a column if there is not enough horizontal space.

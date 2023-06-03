@@ -10,7 +10,6 @@ import 'package:flutter_note/note_app.dart';
 import 'package:mate_flutter/material.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: " Notebook机制",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );

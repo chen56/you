@@ -3,7 +3,6 @@ import 'package:note/note_page.dart';
 import 'dart:developer';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "VM Service",
   builder: build,
 );
 

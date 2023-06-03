@@ -4,7 +4,6 @@ import 'package:note/note_page.dart';
 import 'package:mate_flutter/material.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "菜单Menu",
   builder: build,
 );
 

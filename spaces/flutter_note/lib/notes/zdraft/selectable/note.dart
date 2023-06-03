@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "可选择性",
   builder: build,
 );
 

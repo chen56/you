@@ -4,7 +4,6 @@ import 'package:note/note_page.dart';
 import 'package:mate_flutter/material.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "ButtonStyleButton",
   builder: build,
 );
 
@@ -33,7 +32,7 @@ ButtonStyleButton 相关子类
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-## 范例2 Meta 
+## 范例2 Meta
 
   ''');
 }

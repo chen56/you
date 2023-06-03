@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "FloatingActionButton",
   builder: build,
 );
 
@@ -14,7 +13,7 @@ build(BuildContext context, Pen print) {
 
 继承关系：
 - [StatelessWidget]
-  - [FloatingActionButton] 
+  - [FloatingActionButton]
     - 构造器[FloatingActionButton] 固定大小
     - 构造器[FloatingActionButton.small] 小一点
     - 构造器[FloatingActionButton.large] 大一点

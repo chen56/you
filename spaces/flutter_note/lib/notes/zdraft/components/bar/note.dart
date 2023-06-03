@@ -4,7 +4,6 @@ import 'package:note/note_page.dart';
 import 'package:mate_flutter/material.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "工具栏",
   builder: build,
 );
 
@@ -12,7 +11,7 @@ build(BuildContext context, Pen print) {
   print.markdown(r'''
 # bar
 
-## ButtonBar 
+## ButtonBar
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，您把下面范例中父容器Container.width调小些看看：
 

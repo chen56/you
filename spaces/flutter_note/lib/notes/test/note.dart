@@ -5,7 +5,6 @@ import 'package:note/note_page.dart';
 import 'package:flutter_note/note_app.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "自测目录",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );

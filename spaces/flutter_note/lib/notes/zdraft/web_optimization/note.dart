@@ -4,13 +4,12 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "web optimization",
   builder: build,
 );
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# web 优化 
+# web 优化
 
 ## web加载优化
 

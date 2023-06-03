@@ -2,13 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "最原始的状态管理",
   builder: build,
 );
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-## 范例1 普通文本 
+## 范例1 普通文本
 
 什么是状态管理？在Flutter UI中，
 > UI=f(tate)
@@ -29,7 +28,7 @@ build(BuildContext context, Pen print) {
 - 单组件状态：按钮被点击次数、按下去
 - 跨组件状态：Theme、禁用组件树，SharedAppData
   - 父状态被子使用，全部更新
-  - 
+  -
 - 全局状态：环境变量、联网状态、用户登陆状态等
 
 
@@ -44,7 +43,7 @@ State
   ''');
 
   print.markdown(r'''
-## InheritedWidget有点麻烦 
+## InheritedWidget有点麻烦
 
 多个状态管理，需要aspect，或每个状态一个nheritedWidget
 

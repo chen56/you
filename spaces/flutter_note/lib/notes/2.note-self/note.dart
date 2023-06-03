@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "note项目自身机制",
   builder: build,
 );
 

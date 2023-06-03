@@ -51,13 +51,11 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 /// <T>: [NavigatorV2.push] 的返回类型
 class FlutterNoteConf<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
-  final String shortTitle;
   final NotePageBuilder builder;
   late final Layout? layout;
   final bool empty;
 
   FlutterNoteConf({
-    required this.shortTitle,
     required this.builder,
     this.layout,
     // todo remove empty field
@@ -67,20 +65,18 @@ class FlutterNoteConf<T> {
   FlutterNoteConf.empty({String shortTitle = ""})
       : this(
           empty: true,
-          shortTitle: shortTitle,
           builder: (context, print) {},
         );
 
   FlutterNoteConf.notEmpty({String shortTitle = ""})
       : this(
           empty: false,
-          shortTitle: shortTitle,
           builder: (context, print) {},
         );
 
   @override
   String toString() {
-    return "PageMeta($shortTitle)";
+    return "PageMeta()";
   }
 }
 

@@ -10,7 +10,6 @@ import 'package:flutter_note/note_app.dart';
 import 'package:path/path.dart' as path;
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "Platform和设备",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );

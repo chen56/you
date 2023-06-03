@@ -6,7 +6,6 @@ import 'package:mate_flutter/material.dart';
 import 'package:code_builder/code_builder.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "参数化范例机制",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
 );

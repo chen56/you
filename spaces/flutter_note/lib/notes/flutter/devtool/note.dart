@@ -4,7 +4,6 @@ import 'package:note/note_page.dart';
 import 'package:flutter_note/note_app.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "devtool",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );

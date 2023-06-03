@@ -4,13 +4,12 @@ import 'package:note/note_page.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "test-analyzer",
   builder: build,
 );
 
 build(BuildContext context, Pen print) {
   print.markdown('''
-# analyzer 
+# analyzer
 
 ## 分析器可以在web模式运转
 

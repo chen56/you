@@ -74,12 +74,15 @@ class SpaceNoteConf {
 /// note.json
 class NoteConf {
   String displayName = "";
+  bool codeExpand = true;
+
   // Sorting, small numbers first
   int order = 100;
 
   NoteConf.decode(Map<String, dynamic> json, {String noteBasename = ""}) {
     displayName = json["displayName"] ?? noteBasename;
     order = json["order"] ?? 100;
+    codeExpand = json["codeExpand"] ?? true;
   }
 
   static Future<NoteConf> load(File jsonFile,
@@ -95,6 +98,8 @@ class NoteConf {
   Map<String, dynamic> encode() {
     return {
       "displayName": displayName,
+      "order": order,
+      "codeExpand": codeExpand,
     };
   }
 

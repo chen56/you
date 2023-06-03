@@ -4,7 +4,6 @@ import 'package:note/note_page.dart';
 import 'package:mate_flutter/material.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "Buttons",
   builder: build,
 );
 
@@ -13,7 +12,7 @@ build(BuildContext context, Pen print) {
   print.markdown(r'''
 # button
 
-<https://m3.material.io/components/buttons/overview>, an overview of each of 
+<https://m3.material.io/components/buttons/overview>, an overview of each of
 the Material Design button types and how they should be used in designs.
 
 ## 按钮概览
@@ -115,7 +114,7 @@ the Material Design button types and how they should be used in designs.
 
 继承关系：
 - [StatelessWidget]
-  - [_ActionButton] 
+  - [_ActionButton]
     - [BackButton] A Material Design back icon button
     - [CloseButton] A Material Design close icon button
     - [DrawerButton] A Material Design drawer icon button
@@ -233,7 +232,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 - StatelessWidget
   - InkResponse
     - InkWell
-    
+
 您在下面三种不同的文本上点点看区别：
   ''');
 
@@ -254,7 +253,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-### ButtonBar 
+### ButtonBar
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，您把下面范例中父容器Container.width调小些看看：
   ''');

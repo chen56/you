@@ -8,7 +8,6 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "file文件访问",
   builder: build,
 );
 
@@ -19,7 +18,7 @@ build(BuildContext context, Pen print) {
   }
 
   print.markdown(r'''
-# file 
+# file
   ''');
 
   LocalFileSystem fs = const LocalFileSystem();

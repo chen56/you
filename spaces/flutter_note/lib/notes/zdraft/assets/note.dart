@@ -4,7 +4,6 @@ import 'package:flutter_note/note_app.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 FlutterNoteConf page = FlutterNoteConf(
-  shortTitle: "asset",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
 );
