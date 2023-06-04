@@ -52,12 +52,10 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 class FlutterNoteConf<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final NotePageBuilder builder;
-  late final Layout? layout;
   final bool empty;
 
   FlutterNoteConf({
     required this.builder,
-    this.layout,
     // todo remove empty field
     this.empty = false,
   });
@@ -152,21 +150,6 @@ class Note<T> {
     return next._ensurePath(nameList.sublist(1));
   }
 
-  /// 页面骨架
-  /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  Layout get layout {
-    if (confPart.layout != null) {
-      return confPart.layout!;
-    }
-
-    if (isRoot) {
-      return <T>(Note<T> note) => _DefaultScreen<T>(
-            current: note,
-          );
-    }
-    return parent!.layout;
-  }
-
   bool get isLeaf => _children.isEmpty;
 
   int get level => isRoot ? 0 : parent!.level + 1;
@@ -195,20 +178,19 @@ class Note<T> {
   List<Note> toList({
     bool includeThis = true,
     bool Function(Note path)? test,
-    bool sort = false,
+    Comparator<Note>? sortBy,
   }) {
     test = test ?? (e) => true;
     if (!test(this)) {
       return [];
     }
     List<Note> children = List.from(_children.values);
-    if (sort) {
-      children.sort(
-          (a, b) => a.spaceNoteConf.order.compareTo(b.spaceNoteConf.order));
+    if (sortBy != null) {
+      children.sort(sortBy);
     }
 
     var flatChildren = children.expand((child) {
-      return child.toList(includeThis: true, test: test);
+      return child.toList(includeThis: true, test: test, sortBy: sortBy);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
@@ -499,33 +481,6 @@ class OutlineNode {
 }
 
 typedef Layout = Screen Function(Note page);
-
-/// 在页面树上找不到任何Layout时套用这个缺省的
-class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
-  final Note<T> current;
-
-  _DefaultScreen({super.key, required this.current});
-
-  @override
-  Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-    return Scaffold(
-      appBar: AppBar(title: const Text("_DefaultScreen")),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Text(
-            "WARN：当前Path上未配置任何Layout: ${current.path}",
-            style: theme.textTheme.titleLarge
-                ?.copyWith(color: theme.colorScheme.error),
-          ),
-        ),
-      ),
-    );
-  }
-
-  @override
-  String get location => current.path;
-}
 
 class NoteSource {
   late final String code;

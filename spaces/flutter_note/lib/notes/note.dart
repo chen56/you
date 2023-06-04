@@ -2,11 +2,9 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
-import 'package:flutter_note/note_app.dart';
 
 FlutterNoteConf page = FlutterNoteConf(
   builder: build,
-  layout: Layouts.defaultLayout(),
 );
 
 build(BuildContext context, Pen print) {

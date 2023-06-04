@@ -25,6 +25,9 @@ dependencies:
   glob: ^2.1.1
 
   file: ^6.1.0
+
+  shared_preferences: ^2.1.1
+
 #  async: ^2.11.0
 dev_dependencies:
   flutter_test:
