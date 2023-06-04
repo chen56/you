@@ -613,6 +613,7 @@ class Pubspec {
   }
 
   void noteAssetsAdd(String noteAsset) {
+    if (assets.contains(noteAsset)) return;
     _yamlEditor.appendToList([..._YAML_PATH_ASSETS], noteAsset);
   }
 
