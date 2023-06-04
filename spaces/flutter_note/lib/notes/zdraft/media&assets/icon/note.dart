@@ -9,10 +9,6 @@ import 'package:note/note_page.dart';
 
 import 'package:mate_flutter/material.dart';
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 Set<String> iconTypes = {"sharp", "rounded", "outlined"};
 
 build(BuildContext context, Pen print) {

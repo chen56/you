@@ -85,7 +85,7 @@ class NotesGenerator {
             ${noteLib.asVariableName}_g.noteInfo(),
             () => ${noteLib.asVariableName}_
                 .loadLibrary()
-                .then((value) => ${noteLib.asVariableName}_.page));
+                .then((value) => ${noteLib.asVariableName}_.build));
              """;
     }).join("\n");
     Library libGen = Library((b) => b
@@ -107,8 +107,8 @@ class NotesGenerator {
 
       abstract class BaseNotes {
         static final Note<void> rootroot = Note.root();
-        static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNoteConf deferredConf) {
-          return rootroot.put(path,noteInfo,deferredConf);
+        static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNotePageBuilder deferredPageBuilder) {
+          return rootroot.put(path,noteInfo,deferredPageBuilder);
         }
         $fields
       }
@@ -152,7 +152,9 @@ class NotesGenerator {
         .toList();
 
     var pubspec = await _pubspec();
-    pubspec.noteAssetsUpdate(result.map((e) => e.noteLib.asset).toList());
+    var toUpdate =
+        result.map((e) => e.noteLib.asset).sorted((a, b) => a.compareTo(b));
+    pubspec.noteAssetsUpdate(toUpdate);
     await pubspec.save();
     return result;
   }

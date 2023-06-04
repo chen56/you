@@ -1,8 +1,11 @@
 import 'package:note/note_conf.dart';
 import 'package:note/note_shell.dart';
+import 'package:note/src/navigator_v2.dart';
 import 'package:note/src/note_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
+
+typedef Layout = Screen Function(Note page);
 
 class NoteSystem {
   final NoteContentExts contentExtensions;

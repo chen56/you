@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 build(BuildContext context, Pen print) {
   print.markdown('''
 # analyzer

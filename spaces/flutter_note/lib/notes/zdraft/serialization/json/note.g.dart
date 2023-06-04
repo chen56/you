@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 236,
+          end: 174,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # json  js)
         (
           cellType: 'body',
-          offset: 236,
-          end: 289,
+          offset: 174,
+          end: 227,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// (var userJson = '''   {     "na, Map<String, dynamic> user = js, print('user: ${user['name']}!', print('email: ${user['email']})
         (
           cellType: 'body',
-          offset: 367,
-          end: 589,
+          offset: 305,
+          end: 527,
           statementCount: 4,
           specialNodes: <({
             String nodeType,
@@ -44,8 +44,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 589,
-          end: 591,
+          offset: 527,
+          end: 529,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -55,5 +55,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6Y29udmVydCc7CgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9ub3RlX3BhZ2UuZGFydCc7CgpGbHV0dGVyTm90ZUNvbmYgcGFnZSA9IEZsdXR0ZXJOb3RlQ29uZigKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMganNvbgoKanNvbiDluo/liJfljJbjgIIKCiAgJycnKTsKCiAgcHJpbnQuJF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fKCk7CiAgdmFyIHVzZXJKc29uID0gJycnCiAgewogICAgIm5hbWUiOiAiQ2hlbiBQZW5nIiwKICAgICJlbWFpbCI6ICJjaGVucGVuZ0B5b3VucGMuY29tIgogIH0KICAnJyc7CiAgTWFwPFN0cmluZywgZHluYW1pYz4gdXNlciA9IGpzb25EZWNvZGUodXNlckpzb24pOwoKICBwcmludCgndXNlcjogJHt1c2VyWyduYW1lJ119IScpOwogIHByaW50KCdlbWFpbDogJHt1c2VyWydlbWFpbCddfS4nKTsKfQo="
+          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6Y29udmVydCc7CgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9ub3RlX3BhZ2UuZGFydCc7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIGpzb24KCmpzb24g5bqP5YiX5YyW44CCCgogICcnJyk7CgogIHByaW50LiRfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXygpOwogIHZhciB1c2VySnNvbiA9ICcnJwogIHsKICAgICJuYW1lIjogIkNoZW4gUGVuZyIsCiAgICAiZW1haWwiOiAiY2hlbnBlbmdAeW91bnBjLmNvbSIKICB9CiAgJycnOwogIE1hcDxTdHJpbmcsIGR5bmFtaWM+IHVzZXIgPSBqc29uRGVjb2RlKHVzZXJKc29uKTsKCiAgcHJpbnQoJ3VzZXI6ICR7dXNlclsnbmFtZSddfSEnKTsKICBwcmludCgnZW1haWw6ICR7dXNlclsnZW1haWwnXX0uJyk7Cn0K"
     );

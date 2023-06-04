@@ -2,10 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 import 'dart:developer';
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 build(BuildContext context, Pen print) async {
   print.markdown(r'''
 # VM Service

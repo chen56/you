@@ -87,61 +87,6 @@ class Notes extends BaseNotes with Navigable {
   }
 }
 
-class DeferredScreen extends StatelessWidget with Screen {
-  final Note note;
-  final NoteSystem noteSystem;
-  DeferredScreen({super.key, required this.note, required this.noteSystem});
-
-  @override
-  Widget build(BuildContext context) {
-    var needLoad =
-        note.meAndAncestors.where((e) => e.deferredConf != null).toList();
-    return FutureBuilder(
-      future: Future.wait(needLoad.map((e) => e.deferredConf!())),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Text(
-                'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
-          }
-
-          for (int i = 0; i < needLoad.length; i++) {
-            needLoad[i].confPart = snapshot.data![i];
-          }
-
-          return noteSystem.layout(note);
-        }
-        return const CircularProgressIndicator();
-      },
-    );
-  }
-
-  @override
-  String get location => note.path;
-}
-
-// @immutable
-// class Layouts {
-//   static Editors editors = Editors(
-//     enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
-//     // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
-//   );
-//   static NoteSystem get noteSystem => NoteSystem(
-//         root: BaseNotes.rootroot,
-//         contentExtensions:
-//             NoteContentExts.ext([MateContentExt(editors: editors)]),
-//         spaceConf: null,
-//       );
-//
-//   static Layout defaultLayout<T>() {
-//     return (note) => LayoutScreen<T>(
-//           noteSystem: noteSystem,
-//           current: note as Note<T>,
-//           tree: BaseNotes.rootroot,
-//         );
-//   }
-// }
-
 class NoteApp extends StatelessWidget {
   final NoteSystem noteSystem;
   // ignore: prefer_const_constructors_in_immutables

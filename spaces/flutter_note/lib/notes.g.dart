@@ -98,158 +98,158 @@ import 'package:note/note_page.dart';
 
 abstract class BaseNotes {
   static final Note<void> rootroot = Note.root();
-  static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNoteConf deferredConf) {
-    return rootroot.put(path, noteInfo, deferredConf);
+  static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNotePageBuilder deferredPageBuilder) {
+    return rootroot.put(path, noteInfo, deferredPageBuilder);
   }
 
   final Note zdraft_research_remote_view = put2(
       "/zdraft/research/remote_view",
       zdraft_research_remote_view_g.noteInfo(),
-      () => zdraft_research_remote_view_.loadLibrary().then((value) => zdraft_research_remote_view_.page));
+      () => zdraft_research_remote_view_.loadLibrary().then((value) => zdraft_research_remote_view_.build));
 
   final Note zdraft_macos = put2("/zdraft/macos", zdraft_macos_g.noteInfo(),
-      () => zdraft_macos_.loadLibrary().then((value) => zdraft_macos_.page));
+      () => zdraft_macos_.loadLibrary().then((value) => zdraft_macos_.build));
 
   final Note zdraft_file = put2(
-      "/zdraft/file", zdraft_file_g.noteInfo(), () => zdraft_file_.loadLibrary().then((value) => zdraft_file_.page));
+      "/zdraft/file", zdraft_file_g.noteInfo(), () => zdraft_file_.loadLibrary().then((value) => zdraft_file_.build));
 
   final Note zdraft_dart3 = put2("/zdraft/dart3", zdraft_dart3_g.noteInfo(),
-      () => zdraft_dart3_.loadLibrary().then((value) => zdraft_dart3_.page));
+      () => zdraft_dart3_.loadLibrary().then((value) => zdraft_dart3_.build));
 
   final Note zdraft_layout = put2("/zdraft/layout", zdraft_layout_g.noteInfo(),
-      () => zdraft_layout_.loadLibrary().then((value) => zdraft_layout_.page));
+      () => zdraft_layout_.loadLibrary().then((value) => zdraft_layout_.build));
 
   final Note zdraft_serialization_json = put2("/zdraft/serialization/json", zdraft_serialization_json_g.noteInfo(),
-      () => zdraft_serialization_json_.loadLibrary().then((value) => zdraft_serialization_json_.page));
+      () => zdraft_serialization_json_.loadLibrary().then((value) => zdraft_serialization_json_.build));
 
   final Note zdraft_async = put2("/zdraft/async", zdraft_async_g.noteInfo(),
-      () => zdraft_async_.loadLibrary().then((value) => zdraft_async_.page));
+      () => zdraft_async_.loadLibrary().then((value) => zdraft_async_.build));
 
   final Note zdraft_note_self_test_temp = put2("/zdraft/note-self/test/temp", zdraft_note_self_test_temp_g.noteInfo(),
-      () => zdraft_note_self_test_temp_.loadLibrary().then((value) => zdraft_note_self_test_temp_.page));
+      () => zdraft_note_self_test_temp_.loadLibrary().then((value) => zdraft_note_self_test_temp_.build));
 
   final Note zdraft_note_self_test_nobody = put2(
       "/zdraft/note-self/test/nobody",
       zdraft_note_self_test_nobody_g.noteInfo(),
-      () => zdraft_note_self_test_nobody_.loadLibrary().then((value) => zdraft_note_self_test_nobody_.page));
+      () => zdraft_note_self_test_nobody_.loadLibrary().then((value) => zdraft_note_self_test_nobody_.build));
 
   final Note zdraft_note_self_test = put2("/zdraft/note-self/test", zdraft_note_self_test_g.noteInfo(),
-      () => zdraft_note_self_test_.loadLibrary().then((value) => zdraft_note_self_test_.page));
+      () => zdraft_note_self_test_.loadLibrary().then((value) => zdraft_note_self_test_.build));
 
   final Note zdraft_note_self_sample = put2("/zdraft/note-self/sample", zdraft_note_self_sample_g.noteInfo(),
-      () => zdraft_note_self_sample_.loadLibrary().then((value) => zdraft_note_self_sample_.page));
+      () => zdraft_note_self_sample_.loadLibrary().then((value) => zdraft_note_self_sample_.build));
 
   final Note zdraft_note_self = put2("/zdraft/note-self", zdraft_note_self_g.noteInfo(),
-      () => zdraft_note_self_.loadLibrary().then((value) => zdraft_note_self_.page));
+      () => zdraft_note_self_.loadLibrary().then((value) => zdraft_note_self_.build));
 
   final Note zdraft_note_self_notebook = put2("/zdraft/note-self/notebook", zdraft_note_self_notebook_g.noteInfo(),
-      () => zdraft_note_self_notebook_.loadLibrary().then((value) => zdraft_note_self_notebook_.page));
+      () => zdraft_note_self_notebook_.loadLibrary().then((value) => zdraft_note_self_notebook_.build));
 
   final Note zdraft_state_vanilla_state = put2("/zdraft/state/1.vanilla_state", zdraft_state_vanilla_state_g.noteInfo(),
-      () => zdraft_state_vanilla_state_.loadLibrary().then((value) => zdraft_state_vanilla_state_.page));
+      () => zdraft_state_vanilla_state_.loadLibrary().then((value) => zdraft_state_vanilla_state_.build));
 
   final Note zdraft_state = put2("/zdraft/state", zdraft_state_g.noteInfo(),
-      () => zdraft_state_.loadLibrary().then((value) => zdraft_state_.page));
+      () => zdraft_state_.loadLibrary().then((value) => zdraft_state_.build));
 
   final Note zdraft_state_StatefulBuilder = put2(
       "/zdraft/state/StatefulBuilder",
       zdraft_state_StatefulBuilder_g.noteInfo(),
-      () => zdraft_state_StatefulBuilder_.loadLibrary().then((value) => zdraft_state_StatefulBuilder_.page));
+      () => zdraft_state_StatefulBuilder_.loadLibrary().then((value) => zdraft_state_StatefulBuilder_.build));
 
   final Note zdraft_material3 = put2("/zdraft/material3", zdraft_material3_g.noteInfo(),
-      () => zdraft_material3_.loadLibrary().then((value) => zdraft_material3_.page));
+      () => zdraft_material3_.loadLibrary().then((value) => zdraft_material3_.build));
 
   final Note zdraft_components_input = put2("/zdraft/components/input", zdraft_components_input_g.noteInfo(),
-      () => zdraft_components_input_.loadLibrary().then((value) => zdraft_components_input_.page));
+      () => zdraft_components_input_.loadLibrary().then((value) => zdraft_components_input_.build));
 
   final Note zdraft_components_slider = put2("/zdraft/components/slider", zdraft_components_slider_g.noteInfo(),
-      () => zdraft_components_slider_.loadLibrary().then((value) => zdraft_components_slider_.page));
+      () => zdraft_components_slider_.loadLibrary().then((value) => zdraft_components_slider_.build));
 
   final Note zdraft_components_button_ButtonStyleButton = put2(
       "/zdraft/components/button/ButtonStyleButton",
       zdraft_components_button_ButtonStyleButton_g.noteInfo(),
       () => zdraft_components_button_ButtonStyleButton_
           .loadLibrary()
-          .then((value) => zdraft_components_button_ButtonStyleButton_.page));
+          .then((value) => zdraft_components_button_ButtonStyleButton_.build));
 
   final Note zdraft_components_button_FloatingActionButton = put2(
       "/zdraft/components/button/FloatingActionButton",
       zdraft_components_button_FloatingActionButton_g.noteInfo(),
       () => zdraft_components_button_FloatingActionButton_
           .loadLibrary()
-          .then((value) => zdraft_components_button_FloatingActionButton_.page));
+          .then((value) => zdraft_components_button_FloatingActionButton_.build));
 
   final Note zdraft_components_button_IconButton = put2(
       "/zdraft/components/button/IconButton",
       zdraft_components_button_IconButton_g.noteInfo(),
       () => zdraft_components_button_IconButton_
           .loadLibrary()
-          .then((value) => zdraft_components_button_IconButton_.page));
+          .then((value) => zdraft_components_button_IconButton_.build));
 
   final Note zdraft_components_menu = put2("/zdraft/components/menu", zdraft_components_menu_g.noteInfo(),
-      () => zdraft_components_menu_.loadLibrary().then((value) => zdraft_components_menu_.page));
+      () => zdraft_components_menu_.loadLibrary().then((value) => zdraft_components_menu_.build));
 
   final Note zdraft_components_text_RichText = put2(
       "/zdraft/components/text/RichText",
       zdraft_components_text_RichText_g.noteInfo(),
-      () => zdraft_components_text_RichText_.loadLibrary().then((value) => zdraft_components_text_RichText_.page));
+      () => zdraft_components_text_RichText_.loadLibrary().then((value) => zdraft_components_text_RichText_.build));
 
   final Note zdraft_components_text_Text = put2(
       "/zdraft/components/text/Text",
       zdraft_components_text_Text_g.noteInfo(),
-      () => zdraft_components_text_Text_.loadLibrary().then((value) => zdraft_components_text_Text_.page));
+      () => zdraft_components_text_Text_.loadLibrary().then((value) => zdraft_components_text_Text_.build));
 
   final Note zdraft_components_bar = put2("/zdraft/components/bar", zdraft_components_bar_g.noteInfo(),
-      () => zdraft_components_bar_.loadLibrary().then((value) => zdraft_components_bar_.page));
+      () => zdraft_components_bar_.loadLibrary().then((value) => zdraft_components_bar_.build));
 
   final Note zdraft_selectable = put2("/zdraft/selectable", zdraft_selectable_g.noteInfo(),
-      () => zdraft_selectable_.loadLibrary().then((value) => zdraft_selectable_.page));
+      () => zdraft_selectable_.loadLibrary().then((value) => zdraft_selectable_.build));
 
   final Note zdraft_execption = put2("/zdraft/execption", zdraft_execption_g.noteInfo(),
-      () => zdraft_execption_.loadLibrary().then((value) => zdraft_execption_.page));
+      () => zdraft_execption_.loadLibrary().then((value) => zdraft_execption_.build));
 
   final Note zdraft_web_optimization = put2("/zdraft/web_optimization", zdraft_web_optimization_g.noteInfo(),
-      () => zdraft_web_optimization_.loadLibrary().then((value) => zdraft_web_optimization_.page));
+      () => zdraft_web_optimization_.loadLibrary().then((value) => zdraft_web_optimization_.build));
 
   final Note zdraft_scrollable_Dismissible = put2(
       "/zdraft/scrollable/Dismissible",
       zdraft_scrollable_Dismissible_g.noteInfo(),
-      () => zdraft_scrollable_Dismissible_.loadLibrary().then((value) => zdraft_scrollable_Dismissible_.page));
+      () => zdraft_scrollable_Dismissible_.loadLibrary().then((value) => zdraft_scrollable_Dismissible_.build));
 
   final Note zdraft_dev_debug = put2("/zdraft/dev/debug", zdraft_dev_debug_g.noteInfo(),
-      () => zdraft_dev_debug_.loadLibrary().then((value) => zdraft_dev_debug_.page));
+      () => zdraft_dev_debug_.loadLibrary().then((value) => zdraft_dev_debug_.build));
 
   final Note zdraft_dev_mirror = put2("/zdraft/dev/mirror", zdraft_dev_mirror_g.noteInfo(),
-      () => zdraft_dev_mirror_.loadLibrary().then((value) => zdraft_dev_mirror_.page));
+      () => zdraft_dev_mirror_.loadLibrary().then((value) => zdraft_dev_mirror_.build));
 
-  final Note zdraft = put2("/zdraft", zdraft_g.noteInfo(), () => zdraft_.loadLibrary().then((value) => zdraft_.page));
+  final Note zdraft = put2("/zdraft", zdraft_g.noteInfo(), () => zdraft_.loadLibrary().then((value) => zdraft_.build));
 
   final Note zdraft_media_assets_icon = put2("/zdraft/media&assets/icon", zdraft_media_assets_icon_g.noteInfo(),
-      () => zdraft_media_assets_icon_.loadLibrary().then((value) => zdraft_media_assets_icon_.page));
+      () => zdraft_media_assets_icon_.loadLibrary().then((value) => zdraft_media_assets_icon_.build));
 
   final Note zdraft_devtool_vmservice = put2("/zdraft/devtool/vmservice", zdraft_devtool_vmservice_g.noteInfo(),
-      () => zdraft_devtool_vmservice_.loadLibrary().then((value) => zdraft_devtool_vmservice_.page));
+      () => zdraft_devtool_vmservice_.loadLibrary().then((value) => zdraft_devtool_vmservice_.build));
 
   final Note zdraft_devtool = put2("/zdraft/devtool", zdraft_devtool_g.noteInfo(),
-      () => zdraft_devtool_.loadLibrary().then((value) => zdraft_devtool_.page));
+      () => zdraft_devtool_.loadLibrary().then((value) => zdraft_devtool_.build));
 
   final Note zdraft_assets = put2("/zdraft/assets", zdraft_assets_g.noteInfo(),
-      () => zdraft_assets_.loadLibrary().then((value) => zdraft_assets_.page));
+      () => zdraft_assets_.loadLibrary().then((value) => zdraft_assets_.build));
 
   final Note zdraft_analyzer = put2("/zdraft/analyzer", zdraft_analyzer_g.noteInfo(),
-      () => zdraft_analyzer_.loadLibrary().then((value) => zdraft_analyzer_.page));
+      () => zdraft_analyzer_.loadLibrary().then((value) => zdraft_analyzer_.build));
 
   final Note platform_device = put2("/platform&device", platform_device_g.noteInfo(),
-      () => platform_device_.loadLibrary().then((value) => platform_device_.page));
+      () => platform_device_.loadLibrary().then((value) => platform_device_.build));
 
   final Note samples_stand_alone_button = put2("/samples/stand_alone/button", samples_stand_alone_button_g.noteInfo(),
-      () => samples_stand_alone_button_.loadLibrary().then((value) => samples_stand_alone_button_.page));
+      () => samples_stand_alone_button_.loadLibrary().then((value) => samples_stand_alone_button_.build));
 
   final Note samples_container_bar = put2("/samples/container/bar", samples_container_bar_g.noteInfo(),
-      () => samples_container_bar_.loadLibrary().then((value) => samples_container_bar_.page));
+      () => samples_container_bar_.loadLibrary().then((value) => samples_container_bar_.build));
 
   final Note welcome =
-      put2("/1.welcome", welcome_g.noteInfo(), () => welcome_.loadLibrary().then((value) => welcome_.page));
+      put2("/1.welcome", welcome_g.noteInfo(), () => welcome_.loadLibrary().then((value) => welcome_.build));
 
-  final Note root = put2("/", root_g.noteInfo(), () => root_.loadLibrary().then((value) => root_.page));
+  final Note root = put2("/", root_g.noteInfo(), () => root_.loadLibrary().then((value) => root_.build));
 }

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 180,
+          end: 118,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## dart 3 )
         (
           cellType: 'body',
-          offset: 180,
-          end: 328,
+          offset: 118,
+          end: 266,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 328,
-          end: 330,
+          offset: 266,
+          end: 268,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKRmx1dHRlck5vdGVDb25mIHBhZ2UgPSBGbHV0dGVyTm90ZUNvbmYoCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIyBkYXJ0IDMgIOaaguaXtuaUvuW8g++8jOetieeos+WumuWQjuWGjeaQngoKIyB0eXBlCgppbnRlcmZhY2UgY2xhc3MKYmFzZSBjbGFzcwpmaW5hbCBjbGFzcwpzZWFsZWQgY2xhc3MKbWl4aW4gY2xhc3MKCiMgcmVjb3JkcwoKIyBtYXRjaAoKICAnJycpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyMgZGFydCAzICDmmoLml7bmlL7lvIPvvIznrYnnqLPlrprlkI7lho3mkJ4KCiMgdHlwZQoKaW50ZXJmYWNlIGNsYXNzCmJhc2UgY2xhc3MKZmluYWwgY2xhc3MKc2VhbGVkIGNsYXNzCm1peGluIGNsYXNzCgojIHJlY29yZHMKCiMgbWF0Y2gKCiAgJycnKTsKfQo="
     );

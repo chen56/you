@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 307,
+          end: 245,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (if (kIsWeb) {print("本页面只适合桌面版本, print.markdown(r''' # file   ', LocalFileSystem fs = const Loc, print(fs.directory("").absolut, print("Directory.current:${Dir)
         (
           cellType: 'body',
-          offset: 307,
-          end: 616,
+          offset: 245,
+          end: 554,
           statementCount: 5,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 616,
-          end: 618,
+          offset: 554,
+          end: 556,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6aW8nOwoKaW1wb3J0ICdwYWNrYWdlOmZpbGUvbG9jYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL2ZvdW5kYXRpb24uZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3dpZGdldHMuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCkZsdXR0ZXJOb3RlQ29uZiBwYWdlID0gRmx1dHRlck5vdGVDb25mKAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIGlmIChrSXNXZWIpIHsKICAgIHByaW50KCLmnKzpobXpnaLlj6rpgILlkIjmoYzpnaLniYjmnKzvvIwgd2Vi54mI5peg5rOV5L2/55SoRmlsZeWKn+iDvSzkvJrmiqXplJkiKTsKICAgIHJldHVybjsKICB9CgogIHByaW50Lm1hcmtkb3duKHInJycKIyBmaWxlCiAgJycnKTsKCiAgTG9jYWxGaWxlU3lzdGVtIGZzID0gY29uc3QgTG9jYWxGaWxlU3lzdGVtKCk7CiAgLy8gcHJpbnQoZnMuaXNXYXRjaFN1cHBvcnRlZCk7CiAgcHJpbnQoZnMuZGlyZWN0b3J5KCIiKS5hYnNvbHV0ZSk7CgogIHByaW50KCJEaXJlY3RvcnkuY3VycmVudDoke0RpcmVjdG9yeS5jdXJyZW50fSIpOwogIC8vIERpcmVjdG9yeS5jdXJyZW50Cn0K"
+          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6aW8nOwoKaW1wb3J0ICdwYWNrYWdlOmZpbGUvbG9jYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL2ZvdW5kYXRpb24uZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3dpZGdldHMuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBpZiAoa0lzV2ViKSB7CiAgICBwcmludCgi5pys6aG16Z2i5Y+q6YCC5ZCI5qGM6Z2i54mI5pys77yMIHdlYueJiOaXoOazleS9v+eUqEZpbGXlip/og70s5Lya5oql6ZSZIik7CiAgICByZXR1cm47CiAgfQoKICBwcmludC5tYXJrZG93bihyJycnCiMgZmlsZQogICcnJyk7CgogIExvY2FsRmlsZVN5c3RlbSBmcyA9IGNvbnN0IExvY2FsRmlsZVN5c3RlbSgpOwogIC8vIHByaW50KGZzLmlzV2F0Y2hTdXBwb3J0ZWQpOwogIHByaW50KGZzLmRpcmVjdG9yeSgiIikuYWJzb2x1dGUpOwoKICBwcmludCgiRGlyZWN0b3J5LmN1cnJlbnQ6JHtEaXJlY3RvcnkuY3VycmVudH0iKTsKICAvLyBEaXJlY3RvcnkuY3VycmVudAp9Cg=="
     );

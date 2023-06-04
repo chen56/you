@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/note_page.dart';
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 build(BuildContext context, Pen print) async {
   print.$____________________________________________________________________();
   print.markdown(r'''

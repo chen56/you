@@ -10,6 +10,33 @@ import 'package:note/src/utils_ui.dart';
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
+class DeferredScreen extends StatelessWidget with Screen {
+  final Note note;
+  final NoteSystem noteSystem;
+  DeferredScreen({super.key, required this.note, required this.noteSystem});
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: note.deferredPageBuilder!(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            return Text(
+                'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+          }
+          note.pageBuilder = snapshot.data;
+          return noteSystem.layout(note);
+        }
+        return const CircularProgressIndicator();
+      },
+    );
+  }
+
+  @override
+  String get location => note.path;
+}
+
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final NoteSystem noteSystem;
   final Note<T> current;

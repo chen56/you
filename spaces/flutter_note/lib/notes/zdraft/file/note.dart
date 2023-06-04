@@ -7,10 +7,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:note/note_page.dart';
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 build(BuildContext context, Pen print) {
   if (kIsWeb) {
     print("本页面只适合桌面版本， web版无法使用File功能,会报错");

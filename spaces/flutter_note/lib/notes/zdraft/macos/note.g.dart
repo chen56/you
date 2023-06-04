@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 181,
+          end: 119,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # macos  #)
         (
           cellType: 'body',
-          offset: 181,
-          end: 629,
+          offset: 119,
+          end: 567,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 629,
-          end: 631,
+          offset: 567,
+          end: 569,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -42,5 +42,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCkZsdXR0ZXJOb3RlQ29uZiBwYWdlID0gRmx1dHRlck5vdGVDb25mKAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBtYWNvcwoKIyMgbWFjT1Mg5rKZ566xCgpyZWY6IFtQcm90ZWN0aW5nIHVzZXIgZGF0YSB3aXRoIEFwcCBTYW5kYm94XShodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZG9jdW1lbnRhdGlvbi9zZWN1cml0eS9hcHBfc2FuZGJveC9wcm90ZWN0aW5nX3VzZXJfZGF0YV93aXRoX2FwcF9zYW5kYm94KQoK5rKZ566x5py65Yi25pivbWFjb3PnmoTlronlhajmnLrliLbvvIznlKjku6Xlh4/lsJHmgbbmhI/lupTnlKjlr7nnlKjmiLfns7vnu5/nmoTnoLTlnY/jgIIK5aaC5p6c5LiN5omT566X5Y+RYXBwbGUgYXBwc3RvcmXvvIzlj6/ku6XmiorlhbPmjonnmoTmnYPpmZDvvIzlkKbliJnorr/pl67mspnnrrHlpJbnmoTmlofku7bnrYnotYTmupDpg73kvJrooqvmi5Lnu53jgIIKCuWPr+WcqGZsdXR0ZXLpobnnm67kuK3lsIblhbblhbPmjonvvJoKCi0gbWFjb3MvUnVubmVyL0RlYnVnUHJvZmlsZS5lbnRpdGxlbWVudHMKLSBtYWNvcy9SdW5uZXIvUmVsZWFzZS5lbnRpdGxlbWVudHMKCmBgYHhtbAoJPGtleT5jb20uYXBwbGUuc2VjdXJpdHkuYXBwLXNhbmRib3g8L2tleT4KCTxmYWxzZS8+CmBgYAoKICAnJycpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgbWFjb3MKCiMjIG1hY09TIOaymeeusQoKcmVmOiBbUHJvdGVjdGluZyB1c2VyIGRhdGEgd2l0aCBBcHAgU2FuZGJveF0oaHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2RvY3VtZW50YXRpb24vc2VjdXJpdHkvYXBwX3NhbmRib3gvcHJvdGVjdGluZ191c2VyX2RhdGFfd2l0aF9hcHBfc2FuZGJveCkKCuaymeeuseacuuWItuaYr21hY29z55qE5a6J5YWo5py65Yi277yM55So5Lul5YeP5bCR5oG25oSP5bqU55So5a+555So5oi357O757uf55qE56C05Z2P44CCCuWmguaenOS4jeaJk+eul+WPkWFwcGxlIGFwcHN0b3Jl77yM5Y+v5Lul5oqK5YWz5o6J55qE5p2D6ZmQ77yM5ZCm5YiZ6K6/6Zeu5rKZ566x5aSW55qE5paH5Lu2562J6LWE5rqQ6YO95Lya6KKr5ouS57ud44CCCgrlj6/lnKhmbHV0dGVy6aG555uu5Lit5bCG5YW25YWz5o6J77yaCgotIG1hY29zL1J1bm5lci9EZWJ1Z1Byb2ZpbGUuZW50aXRsZW1lbnRzCi0gbWFjb3MvUnVubmVyL1JlbGVhc2UuZW50aXRsZW1lbnRzCgpgYGB4bWwKCTxrZXk+Y29tLmFwcGxlLnNlY3VyaXR5LmFwcC1zYW5kYm94PC9rZXk+Cgk8ZmFsc2UvPgpgYGAKCiAgJycnKTsKfQo="
     );

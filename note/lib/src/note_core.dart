@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:note/note_conf.dart';
-import 'package:note/src/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
 import 'dart:convert';
@@ -14,7 +13,7 @@ import 'package:note/src/utils_core.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef DeferredNoteConf = Future<FlutterNoteConf> Function();
+typedef DeferredNotePageBuilder = Future<NotePageBuilder> Function();
 typedef NoteSourceData = ({
   List<
       ({
@@ -48,36 +47,6 @@ NoteSourceData _emptyPageGenInfo = (
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
-/// <T>: [NavigatorV2.push] 的返回类型
-class FlutterNoteConf<T> {
-  /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
-  final NotePageBuilder builder;
-  final bool empty;
-
-  FlutterNoteConf({
-    required this.builder,
-    // todo remove empty field
-    this.empty = false,
-  });
-
-  FlutterNoteConf.empty({String shortTitle = ""})
-      : this(
-          empty: true,
-          builder: (context, print) {},
-        );
-
-  FlutterNoteConf.notEmpty({String shortTitle = ""})
-      : this(
-          empty: false,
-          builder: (context, print) {},
-        );
-
-  @override
-  String toString() {
-    return "PageMeta()";
-  }
-}
-
 class Note<T> {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
@@ -86,27 +55,26 @@ class Note<T> {
   final Note? parent;
   bool expand = false;
 
-  FlutterNoteConf<T> confPart = FlutterNoteConf.empty();
+  NotePageBuilder? pageBuilder;
 
   NoteSource _source = _emptyPageSource;
 
-  DeferredNoteConf? deferredConf;
+  Future<NotePageBuilder> Function()? deferredPageBuilder;
 
   SpaceNoteConf spaceNoteConf;
 
   Note._child({
     required this.basename,
     required Note this.parent,
-  })  : confPart = FlutterNoteConf.empty(shortTitle: basename),
-        spaceNoteConf = SpaceNoteConf(displayName: basename);
+  }) : spaceNoteConf = SpaceNoteConf(displayName: basename);
 
   Note.root()
       : basename = "",
         parent = null,
         spaceNoteConf = SpaceNoteConf(displayName: "");
 
-  Note<C> put<C>(
-      String fullPath, NoteSourceData data, DeferredNoteConf deferredConf) {
+  Note<C> put<C>(String fullPath, NoteSourceData data,
+      DeferredNotePageBuilder deferredPageBuilder) {
     var p = fullPath
         .split("/")
         .map((e) => e.trim())
@@ -115,8 +83,7 @@ class Note<T> {
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
-    path.confPart = FlutterNoteConf.notEmpty(shortTitle: path.basename);
-    path.deferredConf = deferredConf;
+    path.deferredPageBuilder = deferredPageBuilder;
     return path as Note<C>;
   }
 
@@ -126,10 +93,6 @@ class Note<T> {
       e.extendTree(value);
     }
   }
-
-  bool get isEmpty => confPart.empty;
-
-  bool get isNotEmpty => !confPart.empty;
 
   List<Note> get children => List.from(_children.values);
 
@@ -324,7 +287,7 @@ class Pen {
     // Skip the header code block
     $____________________________________________________________________();
 
-    path.confPart.builder(context, this);
+    path.pageBuilder!(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -479,8 +442,6 @@ class OutlineNode {
     kids.clear();
   }
 }
-
-typedef Layout = Screen Function(Note page);
 
 class NoteSource {
   late final String code;

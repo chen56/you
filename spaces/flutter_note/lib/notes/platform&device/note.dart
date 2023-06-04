@@ -8,10 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:note/note_page.dart';
 import 'package:path/path.dart' as path;
 
-FlutterNoteConf page = FlutterNoteConf(
-  builder: build,
-);
-
 build(BuildContext context, Pen print) {
   print.markdown('''
 # Platform和设备信息
