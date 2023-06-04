@@ -4,16 +4,26 @@ import 'package:note_tools/src/note_dev_gen.dart';
 
 void main() {
   group("NotesGenerator", () {
-    NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "./");
+    NotesGenerator gen = NotesGenerator(
+      packageBaseName: "flutter_note",
+      fs: LocalFileSystem(),
+      projectDir: "./",
+    );
 
-    test('NotesGenerator dir', () {
+    test('basic info', () {
       expect(gen.projectDir, ".");
+      expect(gen.libDir, "./lib");
+      expect(gen.noteRootDir, "./lib/notes");
     });
   });
 
   group("NoteLib", () {
     test('relative path', () {
-      NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "./");
+      NotesGenerator gen = NotesGenerator(
+        packageBaseName: "flutter_note",
+        fs: LocalFileSystem(),
+        projectDir: "./",
+      );
 
       var testcases = [
         (note: "lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
@@ -29,8 +39,12 @@ void main() {
         expect(note.asset, testcase.asset);
       }
     });
-    test('aba path', () {
-      NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_note", fs: LocalFileSystem(), projectDir: "/n");
+    test('absolute path', () {
+      NotesGenerator gen = NotesGenerator(
+        packageBaseName: "flutter_note",
+        fs: LocalFileSystem(),
+        projectDir: "/n",
+      );
 
       var testcases = [
         (note: "/n/lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),

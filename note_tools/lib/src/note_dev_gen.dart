@@ -19,7 +19,7 @@ import 'package:watcher/watcher.dart';
 import 'package:yaml_edit/yaml_edit.dart';
 
 const String _LIB_ROOT = "lib";
-const String _NOTES_ROOT = "lib/notes/";
+const String _NOTES_ROOT = "lib/notes";
 final Glob _noteGlob = Glob("{**/note.dart,note.dart}");
 
 class NotesGenerator {
