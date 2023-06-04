@@ -7,7 +7,6 @@ noteInfo() => (
           cellType: 'header',
           offset: 0,
           end: 174,
-          statementCount: 0,
           specialNodes: <({
             String nodeType,
             int end,
@@ -20,7 +19,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 174,
           end: 227,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -33,7 +31,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 305,
           end: 527,
-          statementCount: 4,
           specialNodes: <({
             String nodeType,
             int end,
@@ -46,7 +43,6 @@ noteInfo() => (
           cellType: 'tail',
           offset: 527,
           end: 529,
-          statementCount: 0,
           specialNodes: <({
             String nodeType,
             int end,

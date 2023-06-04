@@ -480,7 +480,6 @@ class CellSource {
   final int index;
   final CellType cellType;
   final CodeEntity codeEntity;
-  final int statementCount;
   final NoteSource _pageSource;
   List<SpecialSource> specialSources;
 
@@ -488,7 +487,6 @@ class CellSource {
     required this.cellType,
     required this.codeEntity,
     required this.specialSources,
-    required this.statementCount,
     required NoteCell cell,
   })  : index = cell.index,
         _pageSource = cell.pen.path._source {}
@@ -507,7 +505,7 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellSource(index:$index, block:$codeEntity, statementCount:$statementCount )";
+    return "CellSource(index:$index, block:$codeEntity )";
   }
 }
 
@@ -572,7 +570,6 @@ class NoteCell extends ChangeNotifier {
     var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
       codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
-      statementCount: codeCell.statementCount,
       cellType: CellType.parse(codeCell.cellType),
       cell: this,
       specialSources: codeCell.specialNodes

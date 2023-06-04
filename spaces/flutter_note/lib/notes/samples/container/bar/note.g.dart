@@ -7,7 +7,6 @@ noteInfo() => (
           cellType: 'header',
           offset: 0,
           end: 308,
-          statementCount: 0,
           specialNodes: <({
             String nodeType,
             int end,
@@ -20,7 +19,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 308,
           end: 435,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -33,7 +31,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 513,
           end: 1370,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -46,7 +43,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 1448,
           end: 1605,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -59,7 +55,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 1683,
           end: 2357,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -72,7 +67,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 2435,
           end: 2789,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -85,7 +79,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 2867,
           end: 3443,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -98,7 +91,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 3521,
           end: 3638,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -111,7 +103,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 3716,
           end: 4662,
-          statementCount: 3,
           specialNodes: <({
             String nodeType,
             int end,
@@ -124,7 +115,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 4740,
           end: 5077,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -137,7 +127,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 5155,
           end: 6465,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -150,7 +139,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 6543,
           end: 7041,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -163,7 +151,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 7119,
           end: 7670,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -176,7 +163,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 7748,
           end: 7813,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -189,7 +175,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 7891,
           end: 8922,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -202,7 +187,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 9000,
           end: 9271,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -215,7 +199,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 9349,
           end: 10136,
-          statementCount: 2,
           specialNodes: <({
             String nodeType,
             int end,
@@ -228,7 +211,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 10214,
           end: 10544,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -241,7 +223,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 10622,
           end: 11061,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -254,7 +235,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 11139,
           end: 11346,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -267,7 +247,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 11424,
           end: 12234,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -280,7 +259,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 12312,
           end: 12847,
-          statementCount: 1,
           specialNodes: <({
             String nodeType,
             int end,
@@ -293,7 +271,6 @@ noteInfo() => (
           cellType: 'body',
           offset: 12925,
           end: 14048,
-          statementCount: 2,
           specialNodes: <({
             String nodeType,
             int end,
@@ -306,7 +283,6 @@ noteInfo() => (
           cellType: 'tail',
           offset: 14048,
           end: 14050,
-          statementCount: 0,
           specialNodes: <({
             String nodeType,
             int end,

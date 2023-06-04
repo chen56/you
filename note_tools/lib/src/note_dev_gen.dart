@@ -441,7 +441,7 @@ class _NoteAnalyzer {
       meta: page,
       cells: [
         ///
-        (cellType: 'header', offset: 0, end: 255, statementCount: 0),
+        (cellType: 'header', offset: 0, end: 255),
       ],
       code:
           ""
@@ -480,7 +480,6 @@ class _NoteAnalyzer {
                cellType:'${e.cellType}',
                offset:${e.offset},
                end:${e.end},
-               statementCount: ${e.cellStatements.length},
                specialNodes: <({
                                   String nodeType,
                                   int end,
