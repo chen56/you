@@ -2,7 +2,7 @@ import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) async {
   print.$____________________________________________________________________();

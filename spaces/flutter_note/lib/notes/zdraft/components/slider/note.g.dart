@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 118,
+          end: 113,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # 进度条  ## , print.markdown(r''' ## 范例1 富文本)
         (
           cellType: 'body',
-          offset: 118,
-          end: 237,
+          offset: 113,
+          end: 232,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 237,
-          end: 239,
+          offset: 232,
+          end: 234,
           specialNodes: <({
             String nodeType,
             int end,
@@ -39,5 +39,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyDov5vluqbmnaEKCiMjIOiMg+S+izEg5pmu6YCa5paH5pysCgpUZXh0Lm5ldygpCgogICcnJyk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDlr4zmlofmnKwKClRleHQucmljaCgpCgogICcnJyk7Cn0K"
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMg6L+b5bqm5p2hCgojIyDojIPkvosxIOaZrumAmuaWh+acrAoKVGV4dC5uZXcoKQoKICAnJycpOwoKICBwcmludC5tYXJrZG93bihyJycnCiMjIOiMg+S+izEg5a+M5paH5pysCgpUZXh0LnJpY2goKQoKICAnJycpOwp9Cg=="
     );

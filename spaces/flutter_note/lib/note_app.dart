@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note/note_conf.dart';
 import 'package:note/ui.dart';
 import 'package:note/note_shell.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 import 'package:flutter_note/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

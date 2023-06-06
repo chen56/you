@@ -68,7 +68,7 @@ void main() {
   group("gen note info", () {
     test('1', () async {
       fs.file("/n/lib/notes/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''## cell 2''');

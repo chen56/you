@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 118,
+          end: 113,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## flutter)
         (
           cellType: 'body',
-          offset: 118,
-          end: 201,
+          offset: 113,
+          end: 196,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 201,
-          end: 203,
+          offset: 196,
+          end: 198,
           specialNodes: <({
             String nodeType,
             int end,
@@ -39,5 +39,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyMgZmx1dHRlciBOb3RlCgpmbHV0dGVyIOm7mOiupOaYr+aXoOazleS4rVVJ5paH5pys55qE77yM55u45bqU55qE5Lmf5peg5rOV6L+b6KGM6aG16Z2i5pCc57Si44CCCgogICcnJyk7Cn0K"
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMjIGZsdXR0ZXIgTm90ZQoKZmx1dHRlciDpu5jorqTmmK/ml6Dms5XkuK1VSeaWh+acrOeahO+8jOebuOW6lOeahOS5n+aXoOazlei/m+ihjOmhtemdouaQnOe0ouOAggoKICAnJycpOwp9Cg=="
     );

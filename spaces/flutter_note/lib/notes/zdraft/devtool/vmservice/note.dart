@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 import 'dart:developer';
 
 build(BuildContext context, Pen print) async {

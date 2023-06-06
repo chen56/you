@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 119,
+          end: 114,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # Floating)
         (
           cellType: 'body',
-          offset: 119,
-          end: 431,
+          offset: 114,
+          end: 426,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 431,
-          end: 433,
+          offset: 426,
+          end: 428,
           specialNodes: <({
             String nodeType,
             int end,
@@ -39,5 +39,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgRmxvYXRpbmdBY3Rpb25CdXR0b24KCua1ruWKqOaMiemSru+8jOW4uOingeS6jltTY2FmZm9sZF3lj7PkuIvop5LnmoTmta7liqjmjInpkq7jgIIKCue7p+aJv+WFs+ezu++8mgotIFtTdGF0ZWxlc3NXaWRnZXRdCiAgLSBbRmxvYXRpbmdBY3Rpb25CdXR0b25dCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbl0g5Zu65a6a5aSn5bCPCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5zbWFsbF0g5bCP5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5sYXJnZV0g5aSn5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5leHRlbmRlZF0gaWNvbiArIGxhYmVsCiAgJycnKTsKfQo="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGUuZGFydCc7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIEZsb2F0aW5nQWN0aW9uQnV0dG9uCgrmta7liqjmjInpkq7vvIzluLjop4Hkuo5bU2NhZmZvbGRd5Y+z5LiL6KeS55qE5rWu5Yqo5oyJ6ZKu44CCCgrnu6fmib/lhbPns7vvvJoKLSBbU3RhdGVsZXNzV2lkZ2V0XQogIC0gW0Zsb2F0aW5nQWN0aW9uQnV0dG9uXQogICAgLSDmnoTpgKDlmahbRmxvYXRpbmdBY3Rpb25CdXR0b25dIOWbuuWumuWkp+WwjwogICAgLSDmnoTpgKDlmahbRmxvYXRpbmdBY3Rpb25CdXR0b24uc21hbGxdIOWwj+S4gOeCuQogICAgLSDmnoTpgKDlmahbRmxvYXRpbmdBY3Rpb25CdXR0b24ubGFyZ2VdIOWkp+S4gOeCuQogICAgLSDmnoTpgKDlmahbRmxvYXRpbmdBY3Rpb25CdXR0b24uZXh0ZW5kZWRdIGljb24gKyBsYWJlbAogICcnJyk7Cn0K"
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   var i = 1;

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 124,
+          end: 119,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 打印组件树  )
         (
           cellType: 'body',
-          offset: 124,
-          end: 343,
+          offset: 119,
+          end: 338,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 343,
-          end: 345,
+          offset: 338,
+          end: 340,
           specialNodes: <({
             String nodeType,
             int end,
@@ -39,5 +39,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9wYWdlLmRhcnQnOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgYXN5bmMgewogIHByaW50Lm1hcmtkb3duKHInJycKIyMg5omT5Y2w57uE5Lu25qCRCgpgYGBkYXJ0CnByaW50KFdpZGdldEluc3BlY3RvclNlcnZpY2UuaW5zdGFuY2UuZ2V0Um9vdFdpZGdldFN1bW1hcnlUcmVlKCJncm91cE5hbWUiKSk7CgpwcmludChXaWRnZXRzQmluZGluZy5pbnN0YW5jZS5yZW5kZXJWaWV3RWxlbWVudD8udG9EaWFnbm9zdGljc05vZGUoKS50b1N0cmluZ0RlZXAoKSk7CmBgYAoKICAnJycpOwp9Cg=="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZS5kYXJ0JzsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIGFzeW5jIHsKICBwcmludC5tYXJrZG93bihyJycnCiMjIOaJk+WNsOe7hOS7tuagkQoKYGBgZGFydApwcmludChXaWRnZXRJbnNwZWN0b3JTZXJ2aWNlLmluc3RhbmNlLmdldFJvb3RXaWRnZXRTdW1tYXJ5VHJlZSgiZ3JvdXBOYW1lIikpOwoKcHJpbnQoV2lkZ2V0c0JpbmRpbmcuaW5zdGFuY2UucmVuZGVyVmlld0VsZW1lbnQ/LnRvRGlhZ25vc3RpY3NOb2RlKCkudG9TdHJpbmdEZWVwKCkpOwpgYGAKCiAgJycnKTsKfQo="
     );

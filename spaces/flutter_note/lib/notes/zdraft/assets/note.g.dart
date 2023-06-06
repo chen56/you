@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 181,
+          end: 176,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 181,
-          end: 184,
+          offset: 176,
+          end: 179,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
-          offset: 262,
-          end: 402,
+          offset: 257,
+          end: 397,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 402,
-          end: 404,
+          offset: 397,
+          end: 399,
           specialNodes: <({
             String nodeType,
             int end,
@@ -51,5 +51,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfcGFnZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvc2VydmljZXMuZGFydCcgc2hvdyByb290QnVuZGxlOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgYXN5bmMgewogIHByaW50LiRfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXygpOwogIHByaW50Lm1hcmtkb3duKHInJycKIyBhc3NldAoKICAnJycpOwogIHZhciBqc29uQXNzZXQgPSBhd2FpdCByb290QnVuZGxlLmxvYWRTdHJpbmcoJ2xpYi9ub3Rlcy90ZXN0L3RlbXAvbm90ZS5kYXJ0Jyk7CiAgcHJpbnQoanNvbkFzc2V0KTsKfQo="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGUuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3NlcnZpY2VzLmRhcnQnIHNob3cgcm9vdEJ1bmRsZTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIGFzeW5jIHsKICBwcmludC4kX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18oKTsKICBwcmludC5tYXJrZG93bihyJycnCiMgYXNzZXQKCiAgJycnKTsKICB2YXIganNvbkFzc2V0ID0gYXdhaXQgcm9vdEJ1bmRsZS5sb2FkU3RyaW5nKCdsaWIvbm90ZXMvdGVzdC90ZW1wL25vdGUuZGFydCcpOwogIHByaW50KGpzb25Bc3NldCk7Cn0K"
     );

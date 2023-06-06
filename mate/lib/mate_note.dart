@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:mate/mate_core.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/core.dart';
 import 'package:note/ui.dart';
@@ -93,11 +93,11 @@ class SampleTemplate {
         var toCode = code.Block.of([
           const code.Code("""
     import 'package:flutter/material.dart';
-    
+
     void main() {
       var sample="""),
           mateExpression.statement,
-          const code.Code("""      
+          const code.Code("""
       runApp(MaterialApp(home: Scaffold(body: sample)));
     }
     """),
@@ -118,14 +118,14 @@ class SampleTemplate {
         var toCode = code.Block.of([
           code.Code("""
     import 'package:flutter/material.dart';
-    
+
     void main() {
-      
+
       ${_cleanCellCode(cell, param)}
-      
+
       var sample="""),
           mateExpression.statement,
-          const code.Code("""      
+          const code.Code("""
       runApp(MaterialApp(home: Scaffold(body: sample)));
     }
     """),
