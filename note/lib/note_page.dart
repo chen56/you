@@ -2,6 +2,7 @@ library note;
 
 export 'src/note_core.dart'
     show
+        NoteSystem,
         Note,
         NoteContent,
         Outline,

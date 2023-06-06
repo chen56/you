@@ -3,9 +3,11 @@
 import 'package:note/note_conf.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
+import 'package:note/src/conventions.dart';
 import 'dart:convert';
-
 import 'package:note/src/utils_core.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -45,6 +47,32 @@ NoteSourceData _emptyPageGenInfo = (
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
+class NoteSystem {
+  final Note root;
+  final NoteContentExts contentExtensions;
+  final SpaceConf spaceConf;
+  final SharedPreferences sharedPreferences;
+  NoteSystem({
+    required this.root,
+    required this.contentExtensions,
+    required this.spaceConf,
+    required this.sharedPreferences,
+  });
+
+  static Future<NoteSystem> load({
+    required Note<void> root,
+    required NoteContentExts contentExtensions,
+  }) async {
+    return NoteSystem(
+      root: root,
+      spaceConf:
+          SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
+      contentExtensions: contentExtensions,
+      sharedPreferences: await SharedPreferences.getInstance(),
+    );
+  }
+}
+
 class Note<T> {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
@@ -69,7 +97,7 @@ class Note<T> {
   Note.root()
       : basename = "",
         parent = null,
-        spaceNoteConf = SpaceNoteConf(displayName: "");
+        spaceNoteConf = SpaceNoteConf(displayName: "root");
 
   Note<C> put<C>(String fullPath, NoteSourceData data,
       DeferredNotePageBuilder deferredPageBuilder) {
@@ -211,6 +239,30 @@ class Note<T> {
       child.visit(visitor);
     }
   }
+
+  String get dartAssetPath => conventions.noteDartAssetPath(path);
+  String get confAssetPath => conventions.noteConfAssetPath(path);
+
+  Future<NotePage> loadPage() async {
+    return NotePage(
+        note: this,
+        pageBuilder: await deferredPageBuilder!(),
+        conf: NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+        content: await rootBundle.loadString(dartAssetPath));
+  }
+}
+
+class NotePage {
+  final Note note;
+  final NotePageBuilder? pageBuilder;
+  final NoteConf conf;
+  final String content; // source code content
+  NotePage({
+    required this.note,
+    required this.pageBuilder,
+    required this.conf,
+    required this.content,
+  });
 }
 
 ///

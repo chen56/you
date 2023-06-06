@@ -4,7 +4,6 @@ import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:note/src/navigator_v2.dart';
 import 'package:note/src/note_core.dart';
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/src/note_system.dart';
 import 'package:note/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
@@ -17,7 +16,7 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
+    return FutureBuilder<NotePageBuilder>(
       future: note.deferredPageBuilder!(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
@@ -26,7 +25,11 @@ class DeferredScreen extends StatelessWidget with Screen {
                 'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
           note.pageBuilder = snapshot.data;
-          return noteSystem.layout(note);
+
+          return LayoutScreen(
+            noteSystem: noteSystem,
+            current: note,
+          );
         }
         return const CircularProgressIndicator();
       },
@@ -40,14 +43,13 @@ class DeferredScreen extends StatelessWidget with Screen {
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final NoteSystem noteSystem;
   final Note<T> current;
-  final Note tree;
+  final Note root;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
-    required this.tree,
     required this.current,
-  });
+  }) : root = noteSystem.root;
 
   @override
   String get location => current.path;
@@ -112,7 +114,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
 
-    var navigatorTree = _NoteTreeView(widget.tree);
+    var navigatorTree = _NoteTreeView(widget.root);
 
     var outlineView = _OutlineView(
       mainContentViewController: controllerV,
