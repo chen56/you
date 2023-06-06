@@ -1,15 +1,24 @@
-import 'package:file/local.dart';
+import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note_tools/src/note_dev_gen.dart';
 
 void main() {
-  group("NotesGenerator", () {
-    NotesGenerator gen = NotesGenerator(
+  late NotesGenerator gen;
+  late MemoryFileSystem fs;
+
+  setUp(() {
+    fs = MemoryFileSystem();
+    fs.directory("/n/lib/notes").createSync(recursive: true);
+    fs.currentDirectory = "/n";
+
+    gen = NotesGenerator(
       packageBaseName: "flutter_note",
-      fs: LocalFileSystem(),
+      fs: fs,
       projectDir: "./",
     );
+  });
 
+  group("NotesGenerator", () {
     test('basic info', () {
       expect(gen.projectDir, ".");
       expect(gen.libDir, "./lib");
@@ -19,12 +28,6 @@ void main() {
 
   group("NoteLib", () {
     test('relative path', () {
-      NotesGenerator gen = NotesGenerator(
-        packageBaseName: "flutter_note",
-        fs: LocalFileSystem(),
-        projectDir: "./",
-      );
-
       var testcases = [
         (note: "lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
         (note: "lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
@@ -40,9 +43,9 @@ void main() {
       }
     });
     test('absolute path', () {
-      NotesGenerator gen = NotesGenerator(
+      gen = NotesGenerator(
         packageBaseName: "flutter_note",
-        fs: LocalFileSystem(),
+        fs: MemoryFileSystem(),
         projectDir: "/n",
       );
 
@@ -59,6 +62,26 @@ void main() {
         expect(note.asVariableName, testcase.asVariableName);
         expect(note.asset, testcase.asset);
       }
+    });
+  });
+
+  group("gen note info", () {
+    test('1', () async {
+      fs.file("/n/lib/notes/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
+import 'package:note/note_page.dart';
+
+build(BuildContext context, Pen print) {
+  print.markdown(r'''## cell 2''');
+  print("in cell 2");
+
+  /// print.markdown is cell separator
+  print.markdown(r'''## cell 3''');
+  print("in cell 3");
+}
+      """);
+      var noteLib = gen.noteOf("lib/notes/note.dart");
+      NoteParseResult noteGen = await noteLib.gen();
+      expect(noteGen.noteConf, "/");
     });
   });
 }

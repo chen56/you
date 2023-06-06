@@ -127,13 +127,13 @@ class NotesGenerator {
   File get _noteSpaceJsonFile =>
       fs.file(path.join(projectDir, "note_space.json"));
 
-  Future<SpaceConf> _genSpaceJson(List<_NoteAnalyzer> notes) async {
+  Future<SpaceConf> _genSpaceJson(List<NoteParseResult> notes) async {
     SpaceConf spaceConf = await SpaceConf.load(_noteSpaceJsonFile);
     spaceConf.notes.clear();
     for (var note in notes) {
       spaceConf.notes[note.noteLib.noteKey] = SpaceNoteConf(
-        displayName: note.noteJson.displayName,
-        order: note.noteJson.order,
+        displayName: note.noteConf.displayName,
+        order: note.noteConf.order,
       );
     }
     return spaceConf.save(_noteSpaceJsonFile);
@@ -145,7 +145,7 @@ class NotesGenerator {
       .map((e) => NoteLib(file: e as File, noteGenerator: this));
 
   // ignore: non_constant_identifier_names
-  Future<List<_NoteAnalyzer>> _genAll_note_g_dart() async {
+  Future<List<NoteParseResult>> _genAll_note_g_dart() async {
     var result = await _noteLibs
         .map((e) => e.gen())
         .asyncExpand((e) => e.asStream())
@@ -193,7 +193,6 @@ class NoteLib {
   final String libDir;
   final String packageBaseName;
   final File file;
-  late final CompilationUnit unit;
   final String projectDir;
   NoteLib({
     required this.file,
@@ -244,14 +243,22 @@ class NoteLib {
     return "package:$packageBaseName/$noteLibDir/$dartFileName";
   }
 
-  Future<_NoteAnalyzer> gen() async {
-    var result = _NoteAnalyzer.parse(
+  Future<NoteParseResult> gen() async {
+    String jsonStr =
+        await noteJsonFile.exists() ? await noteJsonFile.readAsString() : '{}';
+
+    var result = NoteParseResult.parse(
       noteLib: this,
-      noteJson: await NoteConf.load(noteJsonFile, noteBasename: basename),
+      content: await file.readAsString(),
+      noteConf: NoteConf.decode(jsonStr),
       fmt: noteGenerator._fmt,
     );
     return result._genFile(result._collectInfo());
   }
+
+  // _NoteAnalyzer genSync() async {
+  //
+  // }
 }
 
 enum _CellType { header, body, tail }
@@ -273,39 +280,35 @@ typedef _NoteInfo = ({
   List<_CellInfo> cells,
 });
 
-class _NoteAnalyzer {
+class NoteParseResult {
   final NoteLib noteLib;
   final DartFormatter fmt;
-  final NoteConf noteJson;
+  final NoteConf noteConf;
   late final CompilationUnit unit;
   late final String content;
 
-  _NoteAnalyzer.parse({
+  NoteParseResult.parse({
     required this.noteLib,
     required this.fmt,
-    required this.noteJson,
+    required this.noteConf,
+    required this.content,
   }) {
-    var parseResult = analyzer_util.parseFile(
-        //analyzer need must absolute and normalize
-        path: path.absolute(path.normalize(noteLib.file.path)),
-        featureSet: FeatureSet.latestLanguageVersion());
+    var parseResult = analyzer_util.parseString(
+        content: content, featureSet: FeatureSet.latestLanguageVersion());
     unit = parseResult.unit;
     content = parseResult.content;
   }
 
   get file => noteLib.file;
 
-  FunctionDeclaration? get _buildFunction {
-    var whereBuild = unit.declarations
+  _NoteInfo _collectInfo() {
+    var buildFunc = unit.declarations
         .whereType<FunctionDeclaration>()
         .where((e) => "${e.name}" == "build");
-    return whereBuild.isEmpty ? null : whereBuild.first;
-  }
 
-  _NoteInfo _collectInfo() {
-    var findBuild = _buildFunction;
-    if (findBuild == null) {
-      _log(" ${noteLib.file.path} [build] func not found, so it is not a note");
+    if (buildFunc.isEmpty) {
+      _log(
+          " ${noteLib.file.path} [build] function not found, so it is a empty note");
       return (
         code: content,
         cells: [
@@ -320,7 +323,7 @@ class _NoteAnalyzer {
       );
     }
 
-    var buildBody = findBuild.functionExpression.body;
+    var buildBody = buildFunc.first.functionExpression.body;
     assert(buildBody is BlockFunctionBody,
         "build() func only support Block Function, but(${buildBody.runtimeType})");
     var buildBodyBlock = (buildBody as BlockFunctionBody).block;
@@ -408,7 +411,7 @@ class _NoteAnalyzer {
   /// ```dart
   ///    print.$____________________________________________________________________();
   /// ```
-  _CellStatementType _cellStatementType(Statement statement) {
+  static _CellStatementType _cellStatementType(Statement statement) {
     if (statement is! ExpressionStatement) {
       return _CellStatementType.normal;
     }
@@ -447,7 +450,7 @@ class _NoteAnalyzer {
           ""
     );
   */
-  Future<_NoteAnalyzer> _genFile(_NoteInfo source) async {
+  Future<NoteParseResult> _genFile(_NoteInfo source) async {
     // _log("genPageInfo toFile $toFile");
     String noFormatCode = _genString(source);
 
@@ -511,7 +514,7 @@ class _NoteAnalyzer {
     return lib.accept(emitter).toString();
   }
 
-  List<({String nodeType, AstNode node})> _collectRunInCellStatements(
+  static List<({String nodeType, AstNode node})> _collectRunInCellStatements(
       List<Statement> topLevelCellStatements) {
     List<({String nodeType, AstNode node})> collected =
         List.empty(growable: true);

@@ -130,7 +130,8 @@ class Note<T> {
 
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
-  String get displayName => spaceNoteConf.displayName;
+  String get displayName =>
+      spaceNoteConf.displayName.isEmpty ? basename : spaceNoteConf.displayName;
 
   String get path {
     if (isRoot) return "/";

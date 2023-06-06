@@ -6,6 +6,7 @@ import 'package:note/note_shell.dart';
 import 'package:note/note_page.dart';
 import 'package:flutter_note/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
