@@ -26,7 +26,6 @@ typedef NoteSourceData = ({
               int end,
               int offset,
             })> specialNodes,
-        int statementCount
       })> cells,
   String encodedCode,
 // NoteConfPart meta
@@ -38,7 +37,6 @@ NoteSourceData _emptyPageGenInfo = (
       cellType: CellType.header.name,
       offset: 0,
       end: 0,
-      statementCount: 0,
       specialNodes: [],
     )
   ],

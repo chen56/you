@@ -291,12 +291,12 @@ class NoteParseResult {
     required this.noteLib,
     required this.fmt,
     required this.noteConf,
-    required this.content,
+    required String content,
   }) {
     var parseResult = analyzer_util.parseString(
         content: content, featureSet: FeatureSet.latestLanguageVersion());
     unit = parseResult.unit;
-    content = parseResult.content;
+    this.content = parseResult.content;
   }
 
   get file => noteLib.file;

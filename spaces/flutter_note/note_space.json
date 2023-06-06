@@ -1,39 +1,39 @@
 {
   "notes": {
     "/zdraft/research/remote_view": {
-      "displayName": "remote_view",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/macos": {
-      "displayName": "macos",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/file": {
-      "displayName": "file",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/dart3": {
-      "displayName": "dart3",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/layout": {
-      "displayName": "layout",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/serialization/json": {
-      "displayName": "json",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/async": {
-      "displayName": "async",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/note-self/test/temp": {
-      "displayName": "temp",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/note-self/test/nobody": {
-      "displayName": "nobody",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/note-self/test": {
@@ -53,115 +53,115 @@
       "order": 100
     },
     "/zdraft/state/1.vanilla_state": {
-      "displayName": "1.vanilla_state",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/state": {
-      "displayName": "state",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/state/StatefulBuilder": {
-      "displayName": "StatefulBuilder",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/material3": {
-      "displayName": "material3",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/input": {
-      "displayName": "input",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/slider": {
-      "displayName": "slider",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/button/ButtonStyleButton": {
-      "displayName": "ButtonStyleButton",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/button/FloatingActionButton": {
-      "displayName": "FloatingActionButton",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/button/IconButton": {
-      "displayName": "IconButton",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/menu": {
-      "displayName": "menu",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/text/RichText": {
-      "displayName": "RichText",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/text/Text": {
-      "displayName": "Text",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/components/bar": {
-      "displayName": "bar",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/selectable": {
-      "displayName": "selectable",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/execption": {
-      "displayName": "execption",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/web_optimization": {
-      "displayName": "web_optimization",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/scrollable/Dismissible": {
-      "displayName": "Dismissible",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/dev/debug": {
-      "displayName": "debug",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/dev/mirror": {
-      "displayName": "mirror",
+      "displayName": "",
       "order": 100
     },
     "/zdraft": {
-      "displayName": "zdraft",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/media&assets/icon": {
-      "displayName": "icon",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/devtool/vmservice": {
-      "displayName": "vmservice",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/devtool": {
-      "displayName": "devtool",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/assets": {
-      "displayName": "assets",
+      "displayName": "",
       "order": 100
     },
     "/zdraft/analyzer": {
-      "displayName": "analyzer",
+      "displayName": "",
       "order": 100
     },
     "/platform&device": {
-      "displayName": "platform&device",
+      "displayName": "",
       "order": 100
     },
     "/samples/stand_alone/button": {
-      "displayName": "button",
+      "displayName": "",
       "order": 100
     },
     "/samples/container/bar": {
-      "displayName": "bar",
+      "displayName": "",
       "order": 100
     },
     "/1.welcome": {
