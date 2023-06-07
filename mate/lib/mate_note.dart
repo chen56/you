@@ -155,7 +155,7 @@ class SampleTemplate {
     List<String> codes = List.empty(growable: true);
     for (var s in sources) {
       codes.add(
-          cell.pen.path.source.code.safeSubstring(offset, s.codeEntity.offset));
+          cell.pen.note.source.code.safeSubstring(offset, s.codeEntity.offset));
 
       offset = s.codeEntity.end;
     }

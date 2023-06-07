@@ -80,12 +80,12 @@ class NotesGenerator {
       List<NoteLib> noteLibs) async {
     var fields = noteLibs.map((noteLib) {
       return """
-           final Note ${noteLib.asVariableName} = put2(
+           final Note ${noteLib.asVariableName} = put(
             "${noteLib.noteKey}",
             ${noteLib.asVariableName}_g.noteInfo(),
-            () => ${noteLib.asVariableName}_
-                .loadLibrary()
-                .then((value) => ${noteLib.asVariableName}_.build));
+            (note) async => note.loadPage(
+              builder:await ${noteLib.asVariableName}_.loadLibrary().then((value) => ${noteLib.asVariableName}_.build))
+            );
              """;
     }).join("\n");
     Library libGen = Library((b) => b
@@ -106,8 +106,8 @@ class NotesGenerator {
       import 'package:note/note.dart';
 
       abstract class BaseNotes {
-        static final Note<void> rootroot = Note.root();
-        static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNotePageBuilder deferredPageBuilder) {
+        static final Note rootroot = Note.root();
+        static Note put(String path, NoteSourceData noteInfo, DeferredNotePageBuilder deferredPageBuilder) {
           return rootroot.put(path,noteInfo,deferredPageBuilder);
         }
         $fields
@@ -131,9 +131,12 @@ class NotesGenerator {
     SpaceConf spaceConf = await SpaceConf.load(_noteSpaceJsonFile);
     spaceConf.notes.clear();
     for (var note in notes) {
+      if (note.noteConf == null) {
+        continue;
+      }
       spaceConf.notes[note.noteLib.noteKey] = SpaceNoteConf(
-        displayName: note.noteConf.displayName,
-        order: note.noteConf.order,
+        displayName: note.noteConf!.displayName,
+        order: note.noteConf!.order,
       );
     }
     return spaceConf.save(_noteSpaceJsonFile);
@@ -244,13 +247,12 @@ class NoteLib {
   }
 
   Future<NoteParseResult> gen() async {
-    String jsonStr =
-        await noteJsonFile.exists() ? await noteJsonFile.readAsString() : '{}';
-
     var result = NoteParseResult.parse(
       noteLib: this,
       content: await file.readAsString(),
-      noteConf: NoteConf.decode(jsonStr),
+      noteConf: !await noteJsonFile.exists()
+          ? null
+          : NoteConf.decode(await noteJsonFile.readAsString()),
       fmt: noteGenerator._fmt,
     );
     return result._genFile(result._collectInfo());
@@ -283,14 +285,14 @@ typedef _NoteInfo = ({
 class NoteParseResult {
   final NoteLib noteLib;
   final DartFormatter fmt;
-  final NoteConf noteConf;
+  final NoteConf? noteConf;
   late final CompilationUnit unit;
   late final String content;
 
   NoteParseResult.parse({
     required this.noteLib,
     required this.fmt,
-    required this.noteConf,
+    this.noteConf,
     required String content,
   }) {
     var parseResult = analyzer_util.parseString(

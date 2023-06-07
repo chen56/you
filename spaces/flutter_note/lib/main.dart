@@ -16,7 +16,6 @@ void main() async {
     NoteSpace noteTool = NoteSpace(
         packageBaseName: "flutter_note",
         projectDir: "./",
-        // projectDir: env.getFlutterProjectDir(),
         env: env,
         spaceDir: path.absolute("./"));
     await noteTool.gen.gen();
@@ -30,8 +29,8 @@ void main() async {
     contentExtensions: NoteContentExts.ext([
       MateContentExt(
           editors: Editors(
+        //todo 这样会和iconRegister一样加载很多用不上的lib,如何处理？
         enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
-        // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
       ))
     ]),
   );

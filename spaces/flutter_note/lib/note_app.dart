@@ -55,10 +55,7 @@ class Notes extends BaseNotes with Navigable {
     required this.noteSystem,
   }) {
     BaseNotes.rootroot.visit((e) {
-      var spaceNoteConf = spaceConf.notes[e.path];
-      if (spaceNoteConf != null) {
-        e.spaceNoteConf = spaceNoteConf;
-      }
+      e.spaceNoteConf = spaceConf.notes[e.path];
       return true;
     });
   }

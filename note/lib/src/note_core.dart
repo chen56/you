@@ -15,7 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef DeferredNotePageBuilder = Future<NotePageBuilder> Function();
+typedef DeferredNotePageBuilder = Future<NotePage> Function(Note note);
 typedef NoteSourceData = ({
   List<
       ({
@@ -60,7 +60,7 @@ class NoteSystem {
   });
 
   static Future<NoteSystem> load({
-    required Note<void> root,
+    required Note root,
     required NoteContentExts contentExtensions,
   }) async {
     return NoteSystem(
@@ -73,7 +73,7 @@ class NoteSystem {
   }
 }
 
-class Note<T> {
+class Note {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
   final String basename;
@@ -81,25 +81,19 @@ class Note<T> {
   final Note? parent;
   bool expand = false;
 
-  NotePageBuilder? pageBuilder;
-
   NoteSource _source = _emptyPageSource;
 
-  Future<NotePageBuilder> Function()? deferredPageBuilder;
+  DeferredNotePageBuilder? deferredPageBuilder;
 
-  SpaceNoteConf spaceNoteConf;
+  SpaceNoteConf? spaceNoteConf;
 
-  Note._child({
-    required this.basename,
-    required Note this.parent,
-  }) : spaceNoteConf = SpaceNoteConf(displayName: basename);
+  Note._child({required this.basename, required Note this.parent});
 
   Note.root()
       : basename = "",
-        parent = null,
-        spaceNoteConf = SpaceNoteConf(displayName: "root");
+        parent = null;
 
-  Note<C> put<C>(String fullPath, NoteSourceData data,
+  Note put(String fullPath, NoteSourceData data,
       DeferredNotePageBuilder deferredPageBuilder) {
     var p = fullPath
         .split("/")
@@ -110,7 +104,7 @@ class Note<T> {
 
     path._source = NoteSource(pageGenInfo: data);
     path.deferredPageBuilder = deferredPageBuilder;
-    return path as Note<C>;
+    return path;
   }
 
   void extendTree(bool value) {
@@ -124,7 +118,7 @@ class Note<T> {
 
   NoteSource get source => _source;
 
-  Note _ensurePath<C>(List<String> nameList) {
+  Note _ensurePath(List<String> nameList) {
     if (nameList.isEmpty) {
       return this;
     }
@@ -157,12 +151,12 @@ class Note<T> {
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
   String get displayName =>
-      spaceNoteConf.displayName.isEmpty ? basename : spaceNoteConf.displayName;
+      spaceNoteConf != null ? spaceNoteConf!.displayName : basename;
 
   String get path {
-    if (isRoot) return "/";
+    if (isRoot) return "";
     var parentPath = parent!.path;
-    return parentPath == "/" ? "/$basename" : "$parentPath/$basename";
+    return parentPath == "" ? basename : "$parentPath/$basename";
   }
 
   List<Note> toList({
@@ -243,11 +237,14 @@ class Note<T> {
   String get dartAssetPath => conventions.noteDartAssetPath(path);
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
-  Future<NotePage> loadPage() async {
+  Future<NotePage> loadPage({NotePageBuilder? builder}) async {
     return NotePage(
         note: this,
-        pageBuilder: await deferredPageBuilder!(),
-        conf: NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+        // pageBuilder: await deferredPageBuilder!(this),
+        pageBuilder: builder,
+        conf: spaceNoteConf == null
+            ? null
+            : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
         content: await rootBundle.loadString(dartAssetPath));
   }
 }
@@ -255,7 +252,7 @@ class Note<T> {
 class NotePage {
   final Note note;
   final NotePageBuilder? pageBuilder;
-  final NoteConf conf;
+  final NoteConf? conf;
   final String content; // source code content
   NotePage({
     required this.note,
@@ -308,27 +305,28 @@ class Pen {
   late final List<NoteCell> cells;
   late NoteCell currentCell;
   final Outline outline;
-  final Note path;
+  final Note note;
+  final NotePage notePage;
   final bool defaultCodeExpand;
 
   // Pen({required this.editors});
   Pen.build(
-    BuildContext context,
-    this.path, {
+    BuildContext context, {
+    required this.notePage,
     required this.contentFactory,
     required this.defaultCodeExpand,
     required this.outline,
-  }) {
-    assert(path.source._pageGenInfo.cells.isNotEmpty,
+  }) : note = notePage.note {
+    assert(note.source._pageGenInfo.cells.isNotEmpty,
         "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);
-    for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
+    for (int i = 0; i < note.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
         contentExtensions: contentFactory,
         pen: this,
         index: i,
-        pageSource: path.source,
+        pageSource: note.source,
       ));
     }
     this.cells = List.unmodifiable(cells);
@@ -338,7 +336,7 @@ class Pen {
     // Skip the header code block
     $____________________________________________________________________();
 
-    path.pageBuilder!(context, this);
+    notePage.pageBuilder!(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -540,7 +538,7 @@ class CellSource {
     required this.specialSources,
     required NoteCell cell,
   })  : index = cell.index,
-        _pageSource = cell.pen.path._source {}
+        _pageSource = cell.pen.note._source {}
 
   String get code {
     return _pageSource._getCellCode(codeEntity);
@@ -571,7 +569,7 @@ class SpecialSource {
     required this.codeType,
     required this.codeEntity,
     required this.cell,
-  }) : pageSource = cell.pen.path.source;
+  }) : pageSource = cell.pen.note.source;
 
   String get code {
     return pageSource._getCellCode(codeEntity);

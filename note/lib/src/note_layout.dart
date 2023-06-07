@@ -16,19 +16,17 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<NotePageBuilder>(
-      future: note.deferredPageBuilder!(),
+    return FutureBuilder<NotePage>(
+      future: note.deferredPageBuilder!(note),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
             return Text(
                 'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
-          note.pageBuilder = snapshot.data;
-
           return LayoutScreen(
             noteSystem: noteSystem,
-            current: note,
+            notePage: snapshot.data!,
           );
         }
         return const CircularProgressIndicator();
@@ -40,27 +38,29 @@ class DeferredScreen extends StatelessWidget with Screen {
   String get location => note.path;
 }
 
-class LayoutScreen<T> extends StatefulWidget with Screen<T> {
+class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
-  final Note<T> current;
+  final Note note;
+  final NotePage notePage;
   final Note root;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
-    required this.current,
-  }) : root = noteSystem.root;
+    required this.notePage,
+  })  : root = noteSystem.root,
+        note = notePage.note;
 
   @override
-  String get location => current.path;
+  String get location => note.path;
 
   @override
   State<StatefulWidget> createState() {
-    return _LayoutScreenState<T>();
+    return _LayoutScreenState();
   }
 }
 
-class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
+class _LayoutScreenState extends State<LayoutScreen> {
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
   final Outline outline = Outline();
   _LayoutScreenState();
@@ -89,7 +89,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
 
     Pen pen = Pen.build(
       context,
-      widget.current,
+      notePage: widget.notePage,
       contentFactory: widget.noteSystem.contentExtensions,
       defaultCodeExpand: true,
       outline: outline,
@@ -101,7 +101,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   }
 
   @override
-  void didUpdateWidget(covariant LayoutScreen<T> oldWidget) {
+  void didUpdateWidget(covariant LayoutScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
@@ -150,7 +150,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       ),
     );
     var appBar = AppBar(
-      title: Text(widget.current.displayName),
+      title: Text(widget.note.displayName),
       toolbarHeight: 36,
     );
 
