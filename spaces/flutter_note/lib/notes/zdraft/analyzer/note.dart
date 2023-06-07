@@ -14,7 +14,7 @@ build(BuildContext context, Pen print) {
   print.$____________________________________________________________________();
 
   var x = analyzer_util.parseString(
-      content: print.note.source.code,
+      content: print.notePage.content,
       featureSet: FeatureSet.latestLanguageVersion());
   for (var e in x.unit.directives) {
     print(e);
@@ -33,7 +33,7 @@ build(BuildContext context, Pen print) {
   int times = 1000;
   for (int i = 0; i < times; i++) {
     analyzer_util.parseString(
-        content: print.note.source.code,
+        content: print.notePage.content,
         featureSet: FeatureSet.latestLanguageVersion());
   }
   print(

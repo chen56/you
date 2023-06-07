@@ -50,6 +50,4 @@ noteInfo() => (
           })>[],
         )
       ],
-      encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGUuZGFydCc7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24oIiIiCiMgbm90Zemhueebrui/kOi9rAoKIiIiKTsKICBwcmludC4kX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18oKTsKICAvLyBwcmludChEZXZ0b29sc0xhdW5jaGVyKTsKfQo="
     );

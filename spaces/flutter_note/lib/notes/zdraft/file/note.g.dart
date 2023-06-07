@@ -38,6 +38,4 @@ noteInfo() => (
           })>[],
         )
       ],
-      encodedCode:
-          "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6aW8nOwoKaW1wb3J0ICdwYWNrYWdlOmZpbGUvbG9jYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL2ZvdW5kYXRpb24uZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3dpZGdldHMuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGUuZGFydCc7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgaWYgKGtJc1dlYikgewogICAgcHJpbnQoIuacrOmhtemdouWPqumAguWQiOahjOmdoueJiOacrO+8jCB3ZWLniYjml6Dms5Xkvb/nlKhGaWxl5Yqf6IO9LOS8muaKpemUmSIpOwogICAgcmV0dXJuOwogIH0KCiAgcHJpbnQubWFya2Rvd24ocicnJwojIGZpbGUKICAnJycpOwoKICBMb2NhbEZpbGVTeXN0ZW0gZnMgPSBjb25zdCBMb2NhbEZpbGVTeXN0ZW0oKTsKICAvLyBwcmludChmcy5pc1dhdGNoU3VwcG9ydGVkKTsKICBwcmludChmcy5kaXJlY3RvcnkoIiIpLmFic29sdXRlKTsKCiAgcHJpbnQoIkRpcmVjdG9yeS5jdXJyZW50OiR7RGlyZWN0b3J5LmN1cnJlbnR9Iik7CiAgLy8gRGlyZWN0b3J5LmN1cnJlbnQKfQo="
     );

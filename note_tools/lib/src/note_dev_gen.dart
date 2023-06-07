@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
@@ -466,8 +464,6 @@ class NoteParseResult {
 
   /// gen source code , no format
   String _genString(_NoteInfo source) {
-    final encodedCode = base64.encode(utf8.encode(source.code));
-
     var cells = source.cells.map((e) {
       var comment = e.cellStatements
           .map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30));
@@ -502,7 +498,6 @@ class NoteParseResult {
             Code('''
                 noteInfo() => (
                   cells: [ $cells ],
-                  encodedCode: "$encodedCode"
                 );
                 '''),
           ])),

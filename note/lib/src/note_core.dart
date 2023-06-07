@@ -4,7 +4,6 @@ import 'package:note/note_conf.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
 import 'package:note/src/conventions.dart';
-import 'dart:convert';
 import 'package:note/src/utils_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,7 +28,6 @@ typedef NoteSourceData = ({
               int offset,
             })> specialNodes,
       })> cells,
-  String encodedCode,
 // NoteConfPart meta
 });
 
@@ -42,8 +40,6 @@ NoteSourceData _emptyPageGenInfo = (
       specialNodes: [],
     )
   ],
-  encodedCode: "",
-// meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
@@ -260,6 +256,13 @@ class NotePage {
     required this.conf,
     required this.content,
   });
+
+  String _getCellCode(CodeEntity codeEntity) {
+    if (codeEntity.end > content.length) {
+      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${content.length})  ";
+    }
+    return content.safeSubstring(codeEntity.offset, codeEntity.end);
+  }
 }
 
 ///
@@ -493,21 +496,10 @@ class OutlineNode {
 }
 
 class NoteSource {
-  late final String code;
   final NoteSourceData _pageGenInfo;
 
   NoteSource({required NoteSourceData pageGenInfo})
-      : _pageGenInfo = pageGenInfo {
-    var decoded = base64.decode(pageGenInfo.encodedCode);
-    code = utf8.decode(decoded);
-  }
-
-  String _getCellCode(CodeEntity codeEntity) {
-    if (codeEntity.end > code.length) {
-      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${code.length})  ";
-    }
-    return code.safeSubstring(codeEntity.offset, codeEntity.end);
-  }
+      : _pageGenInfo = pageGenInfo;
 }
 
 /// CodeEntity is same as analyzer [SyntacticEntity]
@@ -526,22 +518,19 @@ class CodeEntity {
 }
 
 class CellSource {
-  final int index;
   final CellType cellType;
   final CodeEntity codeEntity;
-  final NoteSource _pageSource;
-  List<SpecialSource> specialSources;
-
+  final List<SpecialSource> specialSources;
+  final NoteCell cell;
   CellSource({
     required this.cellType,
     required this.codeEntity,
     required this.specialSources,
-    required NoteCell cell,
-  })  : index = cell.index,
-        _pageSource = cell.pen.note._source {}
+    required this.cell,
+  });
 
   String get code {
-    return _pageSource._getCellCode(codeEntity);
+    return cell.pen.notePage._getCellCode(codeEntity);
   }
 
   bool get isCodeEmpty {
@@ -554,7 +543,7 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellSource(index:$index, block:$codeEntity )";
+    return "CellSource(index:${cell.index}, block:$codeEntity )";
   }
 }
 
@@ -572,7 +561,7 @@ class SpecialSource {
   }) : pageSource = cell.pen.note.source;
 
   String get code {
-    return pageSource._getCellCode(codeEntity);
+    return cell.pen.notePage._getCellCode(codeEntity);
   }
 
   @override
