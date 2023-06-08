@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 176,
+          end: 145,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,23 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// ()
+        /// (print.markdown(r''' # webview )
         (
           cellType: 'body',
-          offset: 176,
-          end: 179,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
-        (
-          cellType: 'body',
-          offset: 257,
-          end: 387,
+          offset: 145,
+          end: 321,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 387,
-          end: 389,
+          offset: 321,
+          end: 323,
           specialNodes: <({
             String nodeType,
             int end,

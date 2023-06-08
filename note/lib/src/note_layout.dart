@@ -113,7 +113,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
-
     var navigatorTree = _NoteTreeView(widget.root);
 
     var outlineView = _OutlineView(

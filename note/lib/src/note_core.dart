@@ -365,7 +365,9 @@ class Pen {
 
   void call(Object? object) {
     currentCell.print(object);
-    // currentCell.print(catchStack().safeSubstring(0, 500));
+    // currentCell.print("${object} ======${catchStack()}");
+    // print(
+    //     "${object.toString().safeSubstring(0, 30)} ========  ${catchStack()}");
   }
 
   /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中
@@ -375,13 +377,13 @@ class Pen {
   }
 
 // 法宝cell find
-// String catchStack() {
-//   try {
-//     throw Exception("eeeeee");
-//   } catch (es, stack) {
-//     return "$es : $stack";
-//   }
-// }
+  String catchStack() {
+    try {
+      throw Exception("fetch print to which cell");
+    } catch (es, stack) {
+      return "$es : $stack";
+    }
+  }
 }
 
 /// note content is not widget , it is data.

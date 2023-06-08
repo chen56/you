@@ -94,6 +94,8 @@ import 'package:flutter_note/notes/zdraft/state/StatefulBuilder/note.dart' defer
 import 'package:flutter_note/notes/zdraft/state/StatefulBuilder/note.g.dart' as zdraft_state_StatefulBuilder_g;
 import 'package:flutter_note/notes/zdraft/web_optimization/note.dart' deferred as zdraft_web_optimization_;
 import 'package:flutter_note/notes/zdraft/web_optimization/note.g.dart' as zdraft_web_optimization_g;
+import 'package:flutter_note/notes/zdraft/webview/note.dart' deferred as zdraft_webview_;
+import 'package:flutter_note/notes/zdraft/webview/note.g.dart' as zdraft_webview_g;
 import 'package:note/note.dart';
 
 abstract class BaseNotes {
@@ -129,6 +131,12 @@ abstract class BaseNotes {
 
   final Note zdraft_async = put("/zdraft/async", zdraft_async_g.noteInfo(),
       (note) async => note.loadPage(builder: await zdraft_async_.loadLibrary().then((value) => zdraft_async_.build)));
+
+  final Note zdraft_webview = put(
+      "/zdraft/webview",
+      zdraft_webview_g.noteInfo(),
+      (note) async =>
+          note.loadPage(builder: await zdraft_webview_.loadLibrary().then((value) => zdraft_webview_.build)));
 
   final Note zdraft_note_self_test_temp = put(
       "/zdraft/note-self/test/temp",
