@@ -64,11 +64,13 @@ class SpaceNoteConf {
   String displayName;
   // Sorting, small numbers first
   int order;
-  SpaceNoteConf.decode(Map<String, dynamic> json, {String displayName = ""})
-      : displayName = json["displayName"] ?? displayName,
-        order = json["order"] ?? 100;
+  SpaceNoteConf.decode(Map<String, dynamic> json)
+      : this(
+          displayName: json["displayName"] ?? "",
+          order: json["order"] ?? 100,
+        );
 
-  SpaceNoteConf({this.displayName = "", this.order = 100});
+  SpaceNoteConf({required this.displayName, required this.order});
 }
 
 /// note.json

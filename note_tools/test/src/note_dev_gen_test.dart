@@ -65,7 +65,7 @@ void main() {
     });
   });
 
-  group("gen note info", () {
+  group("gen cell info", () {
     test('1', () async {
       fs.file("/n/lib/notes/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
 import 'package:note/note.dart';

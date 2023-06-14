@@ -253,7 +253,7 @@ class NoteLib {
           : NoteConf.decode(await noteJsonFile.readAsString()),
       fmt: noteGenerator._fmt,
     );
-    return result._genFile(result._collectInfo());
+    return result._gen(result._collectInfo());
   }
 
   // _NoteAnalyzer genSync() async {
@@ -450,20 +450,7 @@ class NoteParseResult {
           ""
     );
   */
-  Future<NoteParseResult> _genFile(_NoteInfo source) async {
-    // _log("genPageInfo toFile $toFile");
-    String noFormatCode = _genString(source);
-
-    File writeTo = noteLib.file.parent.childFile("note.g.dart");
-    // write file
-    // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
-    await writeTo.writeAsString(noFormatCode);
-    await writeTo.writeAsString(fmt.format(noFormatCode));
-    return this;
-  }
-
-  /// gen source code , no format
-  String _genString(_NoteInfo source) {
+  Future<NoteParseResult> _gen(_NoteInfo source) async {
     var cells = source.cells.map((e) {
       var comment = e.cellStatements
           .map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30));
@@ -508,7 +495,13 @@ class NoteParseResult {
       orderDirectives: true,
       useNullSafetySyntax: true,
     );
-    return lib.accept(emitter).toString();
+    String content = lib.accept(emitter).toString();
+    File writeTo = noteLib.file.parent.childFile("note.g.dart");
+    // write file
+    // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
+    await writeTo.writeAsString(content);
+    await writeTo.writeAsString(fmt.format(content));
+    return this;
   }
 
   static List<({String nodeType, AstNode node})> _collectRunInCellStatements(
