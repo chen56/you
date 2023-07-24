@@ -4,10 +4,11 @@ export 'src/note_core.dart'
     show
         NoteSystem,
         Note,
+        NotePage,
         NoteContent,
         Outline,
         OutlineNode,
-        NoteWidgetMixin,
+        NoteContentWidgetMixin,
         Pen,
         NoteCell,
         NoteSourceData,

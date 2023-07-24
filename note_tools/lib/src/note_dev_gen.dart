@@ -27,6 +27,7 @@ class NotesGenerator {
   final String projectDir;
   late final String libDir;
   late final String noteRootDir;
+
   NotesGenerator({
     required this.packageBaseName,
     required this.fs,
@@ -195,6 +196,7 @@ class NoteLib {
   final String packageBaseName;
   final File file;
   final String projectDir;
+
   NoteLib({
     required this.file,
     required this.noteGenerator,
@@ -256,9 +258,9 @@ class NoteLib {
     return result._gen(result._collectInfo());
   }
 
-  // _NoteAnalyzer genSync() async {
-  //
-  // }
+// _NoteAnalyzer genSync() async {
+//
+// }
 }
 
 enum _CellType { header, body, tail }

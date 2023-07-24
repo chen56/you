@@ -15,7 +15,7 @@ class MateContentExt extends NoteContentExt {
   MateContentExt({required this.editors});
 
   @override
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
     late MateSampleContent content;
     if (data is MateSampleContent) {
       content = data;
@@ -163,7 +163,7 @@ class SampleTemplate {
   }
 }
 
-class MateSampleWidget extends StatelessWidget with NoteWidgetMixin {
+class MateSampleWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;

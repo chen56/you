@@ -389,6 +389,10 @@ class Pen {
 /// note content is not widget , it is data.
 abstract class NoteContent {}
 
+mixin NoteContentWidgetMixin on Widget {
+  get isMarkdown;
+}
+
 class NoteContentExts {
   final List<NoteContentExt> contentExtensions;
 
@@ -400,7 +404,7 @@ class NoteContentExts {
           ObjectContentExt(),
         ];
 
-  NoteWidgetMixin create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin create(Object? data, NoteContentArg arg) {
     for (var ext in contentExtensions) {
       var w = ext.create(data, arg);
       if (w != null) {
@@ -413,7 +417,7 @@ class NoteContentExts {
 }
 
 abstract class NoteContentExt {
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg);
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg);
 }
 
 class NoteContentArg {
@@ -585,15 +589,11 @@ enum CellType {
   }
 }
 
-mixin NoteWidgetMixin on Widget {
-  get isMarkdown;
-}
-
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
   final NoteContentExts contentExtensions;
-  final List<NoteWidgetMixin> _contents = List.empty(growable: true);
+  final List<NoteContentWidgetMixin> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
@@ -622,7 +622,7 @@ class NoteCell extends ChangeNotifier {
     );
   }
 
-  List<NoteWidgetMixin> get contents => List.unmodifiable(_contents);
+  List<NoteContentWidgetMixin> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -644,7 +644,7 @@ class NoteCell extends ChangeNotifier {
         object, NoteContentArg(cell: this, outline: outline)));
   }
 
-  void _add(NoteWidgetMixin content) {
+  void _add(NoteContentWidgetMixin content) {
     _contents.add(content);
     notifyListeners();
   }
