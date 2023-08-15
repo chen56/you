@@ -13,5 +13,15 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  return <Slot />;
+  return <>
+    <header>
+      <ul>
+        <li>  <a href="/webaudio" class="my-link"> webaudio </a>  </li>
+        <li> <a href="/web_audio_api" class="my-link"> web audio api  </a>  </li>
+      </ul>
+    </header>
+    <hr/>
+    <Slot />
+    <hr/>
+  </>;
 });

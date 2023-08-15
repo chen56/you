@@ -36,5 +36,8 @@
     "undici": "5.22.1",
     "vite": "4.4.0",
     "vite-tsconfig-paths": "4.2.0"
+  },
+  "dependencies": {
+    "tone": "^14.7.77"
   }
 }
