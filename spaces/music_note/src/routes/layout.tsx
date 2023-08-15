@@ -16,7 +16,7 @@ export default component$(() => {
   return <>
     <header>
       <ul>
-        <li>  <a href="/webaudio" class="my-link"> webaudio </a>  </li>
+        <li>  <a href="/music" class="my-link"> music </a>  </li>
         <li> <a href="/web_audio_api" class="my-link"> web audio api  </a>  </li>
       </ul>
     </header>

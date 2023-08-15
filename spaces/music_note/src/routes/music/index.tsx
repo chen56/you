@@ -6,8 +6,8 @@ export default component$(() => {
   const playState = useSignal(false);
 
   return <div>
-    <h1>tonejs</h1>
-    <h2>example 1</h2>
+    <h1>music</h1>
+    <h2>example: 播放音符</h2>
     play:
     <button
       onClick$={() => {
