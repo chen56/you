@@ -16,7 +16,8 @@ export default component$(() => {
   return <>
     <header>
       <ul>
-        <li>  <a href="/music" class="my-link"> music </a>  </li>
+        <li> <a href="/music" class="my-link"> music </a>  </li>
+        <li> <a href="/music/cool_music" class="my-link"> 超酷曲目  </a>  </li>
         <li> <a href="/web_audio_api" class="my-link"> web audio api  </a>  </li>
       </ul>
     </header>
