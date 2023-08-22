@@ -1,5 +1,6 @@
 import { component$, Slot } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import { QNav } from "~/components/router-nav2"
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -13,17 +14,9 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  return <>
-    <header>
-      <ul>
-        <li> <a href="/music" class="my-link"> music </a>  </li>
-        <li> <a href="/music/cool_music" class="my-link"> 超酷曲目  </a>  </li>
-        <li> <a href="/web_audio_api" class="my-link"> web audio api  </a>  </li>
-        <li> <a href="/react" class="my-link"> react test  </a>  </li>
-      </ul>
-    </header>
-    <hr/>
-    <Slot />
-    <hr/>
-  </>;
+  return <div style="display: flex; height:100%">
+  <QNav></QNav>
+   <div style="border-left:1px solid #000; height:500px"></div>
+  <div><Slot /></div>
+</div>;
 });

@@ -1,7 +1,7 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { MUIButton, MUISlider, TableApp } from "~/integrations/react/mui";
-import {QGreetings} from "~/components/router-head/router-nav"
+import {QGreetings,QResponsiveDrawer} from "~/components/router-nav"
 
 export default component$(() => {
   const show = useSignal(false);
@@ -39,6 +39,7 @@ export default component$(() => {
       )}
 
       <QGreetings></QGreetings>
+      <QResponsiveDrawer></QResponsiveDrawer>
     </>
   );
 });
