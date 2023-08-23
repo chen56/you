@@ -37,11 +37,15 @@
     "@types/react-dom": "18.2.6",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^3.6.1",
     "eslint": "8.44.0",
     "eslint-plugin-qwik": "^1.2.6",
+    "postcss": "^8.4.23",
     "prettier": "2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "tailwindcss": "^3.3.1",
     "tone": "^14.7.77",
     "typescript": "5.1.6",
     "undici": "5.22.1",
@@ -49,6 +53,8 @@
     "vite-tsconfig-paths": "4.2.0"
   },
   "dependencies": {
-    "@mui/joy": "^5.0.0-beta.2"
+    "@mui/joy": "^5.0.0-beta.2",
+    "daisyui": "^3.6.1"
+
   }
 }
