@@ -6,6 +6,10 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
 # v0.2.20230525 - It can run normally on macos
+# todo 
+#   1. sub cmd help not work
+#   2. cmd help use @cmd define?
+#   3. split to common bash script ,  can use git tree use it
 #
 # chinese-----------------------------------------------------------------------
 # bake == (bash)ake == 去Make的bash tool
@@ -123,7 +127,7 @@ if ((BASH_VERSINFO[0] < 4 || (\
 fi
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
 function _real_path() (
-  cd  "$(dirname "$1")"
+  cd "$(dirname "$1")"
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
     file="$(readlink "$file")"
