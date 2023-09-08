@@ -9,7 +9,6 @@ import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/box_fit.dart' as _i6;
 import 'package:flutter/src/painting/alignment.dart' as _i7;
 import 'package:flutter/cupertino.dart' as _i8;
-import 'package:vector_math/vector_math_64.dart' as _i9;
 
 /// class DecorationImage
 class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
@@ -145,49 +144,6 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           invertColors: p.get('invertColors').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
-        );
-  }
-
-  @override
-  final Map<String, _i2.BuilderArg> mateParams;
-}
-
-/// class ImageTilingInfo
-class ImageTilingInfo$Mate extends _i1.ImageTilingInfo with _i2.Mate {
-  /// ImageTilingInfo ImageTilingInfo({required TileMode tmx, required TileMode tmy, required Matrix4 transform})
-  ImageTilingInfo$Mate({
-    /// optionalParameters: {required TileMode tmx} , default:none
-    required super.tmx,
-
-    /// optionalParameters: {required TileMode tmy} , default:none
-    required super.tmy,
-
-    /// optionalParameters: {required Matrix4 transform} , default:none
-    required super.transform,
-  })  : mateParams = {
-          'tmx': _i2.BuilderArg<_i5.TileMode>(
-            name: 'tmx',
-            init: tmx,
-            isNamed: true,
-          ),
-          'tmy': _i2.BuilderArg<_i5.TileMode>(
-            name: 'tmy',
-            init: tmy,
-            isNamed: true,
-          ),
-          'transform': _i2.BuilderArg<_i9.Matrix4>(
-            name: 'transform',
-            init: transform,
-            isNamed: true,
-          ),
-        },
-        super() {
-    mateBuilderName = 'ImageTilingInfo';
-    matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => ImageTilingInfo$Mate(
-          tmx: p.get('tmx').build(),
-          tmy: p.get('tmy').build(),
-          transform: p.get('transform').build(),
         );
   }
 

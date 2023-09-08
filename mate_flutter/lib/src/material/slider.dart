@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i9;
 
 /// class Slider extends StatefulWidget
 class Slider$Mate extends _i1.Slider with _i2.Mate {
-  /// Slider Slider({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
+  /// Slider Slider({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false, SliderInteraction? allowedInteraction})
   Slider$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -71,6 +71,9 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {SliderInteraction? allowedInteraction} , default:none
+    super.allowedInteraction,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -170,6 +173,11 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'allowedInteraction': _i2.BuilderArg<_i1.SliderInteraction?>(
+            name: 'allowedInteraction',
+            init: allowedInteraction,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'Slider';
@@ -194,10 +202,11 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          allowedInteraction: p.get('allowedInteraction').build(),
         );
   }
 
-  /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
+  /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false, SliderInteraction? allowedInteraction})
   Slider$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -255,6 +264,9 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {SliderInteraction? allowedInteraction} , default:none
+    super.allowedInteraction,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -354,6 +366,11 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'allowedInteraction': _i2.BuilderArg<_i1.SliderInteraction?>(
+            name: 'allowedInteraction',
+            init: allowedInteraction,
+            isNamed: true,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'Slider.adaptive';
@@ -378,6 +395,7 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          allowedInteraction: p.get('allowedInteraction').build(),
         );
   }
 

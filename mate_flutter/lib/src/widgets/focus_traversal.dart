@@ -7,6 +7,54 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
 
+/// class WidgetOrderTraversalPolicy extends FocusTraversalPolicy with DirectionalFocusTraversalPolicyMixin
+class WidgetOrderTraversalPolicy$Mate extends _i1.WidgetOrderTraversalPolicy with _i2.Mate {
+  /// WidgetOrderTraversalPolicy WidgetOrderTraversalPolicy({void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback})
+  WidgetOrderTraversalPolicy$Mate(
+      {
+      /// optionalParameters: {void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback} , default:none
+      super.requestFocusCallback})
+      : mateParams = {
+          'requestFocusCallback': _i2.BuilderArg<_i1.TraversalRequestFocusCallback?>(
+            name: 'requestFocusCallback',
+            init: requestFocusCallback,
+            isNamed: true,
+          )
+        },
+        super() {
+    mateBuilderName = 'WidgetOrderTraversalPolicy';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => WidgetOrderTraversalPolicy$Mate(requestFocusCallback: p.get('requestFocusCallback').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class ReadingOrderTraversalPolicy extends FocusTraversalPolicy with DirectionalFocusTraversalPolicyMixin
+class ReadingOrderTraversalPolicy$Mate extends _i1.ReadingOrderTraversalPolicy with _i2.Mate {
+  /// ReadingOrderTraversalPolicy ReadingOrderTraversalPolicy({void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback})
+  ReadingOrderTraversalPolicy$Mate(
+      {
+      /// optionalParameters: {void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback} , default:none
+      super.requestFocusCallback})
+      : mateParams = {
+          'requestFocusCallback': _i2.BuilderArg<_i1.TraversalRequestFocusCallback?>(
+            name: 'requestFocusCallback',
+            init: requestFocusCallback,
+            isNamed: true,
+          )
+        },
+        super() {
+    mateBuilderName = 'ReadingOrderTraversalPolicy';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => ReadingOrderTraversalPolicy$Mate(requestFocusCallback: p.get('requestFocusCallback').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class NumericFocusOrder extends FocusOrder
 class NumericFocusOrder$Mate extends _i1.NumericFocusOrder with _i2.Mate {
   /// NumericFocusOrder NumericFocusOrder(double order)
@@ -57,22 +105,32 @@ class LexicalFocusOrder$Mate extends _i1.LexicalFocusOrder with _i2.Mate {
 
 /// class OrderedTraversalPolicy extends FocusTraversalPolicy with DirectionalFocusTraversalPolicyMixin
 class OrderedTraversalPolicy$Mate extends _i1.OrderedTraversalPolicy with _i2.Mate {
-  /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary})
-  OrderedTraversalPolicy$Mate(
-      {
-      /// optionalParameters: {FocusTraversalPolicy? secondary} , default:none
-      super.secondary})
-      : mateParams = {
+  /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary, void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback})
+  OrderedTraversalPolicy$Mate({
+    /// optionalParameters: {FocusTraversalPolicy? secondary} , default:none
+    super.secondary,
+
+    /// optionalParameters: {void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback} , default:none
+    super.requestFocusCallback,
+  })  : mateParams = {
           'secondary': _i2.BuilderArg<_i1.FocusTraversalPolicy?>(
             name: 'secondary',
             init: secondary,
             isNamed: true,
-          )
+          ),
+          'requestFocusCallback': _i2.BuilderArg<_i1.TraversalRequestFocusCallback?>(
+            name: 'requestFocusCallback',
+            init: requestFocusCallback,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'OrderedTraversalPolicy';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
+    mateBuilder = (p) => OrderedTraversalPolicy$Mate(
+          secondary: p.get('secondary').build(),
+          requestFocusCallback: p.get('requestFocusCallback').build(),
+        );
   }
 
   @override
@@ -187,22 +245,31 @@ class FocusTraversalGroup$Mate extends _i1.FocusTraversalGroup with _i2.Mate {
 
 /// class RequestFocusIntent extends Intent
 class RequestFocusIntent$Mate extends _i1.RequestFocusIntent with _i2.Mate {
-  /// RequestFocusIntent RequestFocusIntent(FocusNode focusNode)
+  /// RequestFocusIntent RequestFocusIntent(FocusNode focusNode, {void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback})
   RequestFocusIntent$Mate(
-
-      /// requiredParameters: FocusNode focusNode
-      super.focusNode)
-      : mateParams = {
+    /// requiredParameters: FocusNode focusNode
+    super.focusNode, {
+    /// optionalParameters: {void Function(FocusNode, {double? alignment, ScrollPositionAlignmentPolicy? alignmentPolicy, Curve? curve, Duration? duration})? requestFocusCallback} , default:none
+    super.requestFocusCallback,
+  })  : mateParams = {
           'focusNode': _i2.BuilderArg<_i5.FocusNode>(
             name: 'focusNode',
             init: focusNode,
             isNamed: false,
-          )
+          ),
+          'requestFocusCallback': _i2.BuilderArg<_i1.TraversalRequestFocusCallback?>(
+            name: 'requestFocusCallback',
+            init: requestFocusCallback,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'RequestFocusIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
+    mateBuilder = (p) => RequestFocusIntent$Mate(
+          p.get('focusNode').value,
+          requestFocusCallback: p.get('requestFocusCallback').build(),
+        );
   }
 
   @override

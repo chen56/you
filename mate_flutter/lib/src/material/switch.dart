@@ -18,7 +18,7 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
 
 /// class Switch extends StatelessWidget
 class Switch$Mate extends _i1.Switch with _i2.Mate {
-  /// Switch Switch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false})
+  /// Switch Switch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<double?>? trackOutlineWidth, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false})
   Switch$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -61,6 +61,9 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , default:none
     super.trackOutlineColor,
+
+    /// optionalParameters: {MaterialStateProperty<double?>? trackOutlineWidth} , default:none
+    super.trackOutlineWidth,
 
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , default:none
     super.thumbIcon,
@@ -165,6 +168,11 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: trackOutlineColor,
             isNamed: true,
           ),
+          'trackOutlineWidth': _i2.BuilderArg<_i8.MaterialStateProperty<double?>?>(
+            name: 'trackOutlineWidth',
+            init: trackOutlineWidth,
+            isNamed: true,
+          ),
           'thumbIcon': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.Icon?>?>(
             name: 'thumbIcon',
             init: thumbIcon,
@@ -241,6 +249,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
           thumbColor: p.get('thumbColor').build(),
           trackColor: p.get('trackColor').build(),
           trackOutlineColor: p.get('trackOutlineColor').build(),
+          trackOutlineWidth: p.get('trackOutlineWidth').build(),
           thumbIcon: p.get('thumbIcon').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
@@ -255,7 +264,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
         );
   }
 
-  /// Switch Switch.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme})
+  /// Switch Switch.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<double?>? trackOutlineWidth, MaterialStateProperty<Icon?>? thumbIcon, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme})
   Switch$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -301,6 +310,9 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , default:none
     super.trackOutlineColor,
+
+    /// optionalParameters: {MaterialStateProperty<double?>? trackOutlineWidth} , default:none
+    super.trackOutlineWidth,
 
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , default:none
     super.thumbIcon,
@@ -410,6 +422,11 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: trackOutlineColor,
             isNamed: true,
           ),
+          'trackOutlineWidth': _i2.BuilderArg<_i8.MaterialStateProperty<double?>?>(
+            name: 'trackOutlineWidth',
+            init: trackOutlineWidth,
+            isNamed: true,
+          ),
           'thumbIcon': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.Icon?>?>(
             name: 'thumbIcon',
             init: thumbIcon,
@@ -487,6 +504,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
           thumbColor: p.get('thumbColor').build(),
           trackColor: p.get('trackColor').build(),
           trackOutlineColor: p.get('trackOutlineColor').build(),
+          trackOutlineWidth: p.get('trackOutlineWidth').build(),
           thumbIcon: p.get('thumbIcon').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           mouseCursor: p.get('mouseCursor').build(),

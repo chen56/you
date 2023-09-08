@@ -11,12 +11,13 @@ import 'package:flutter/src/foundation/basic_types.dart' as _i7;
 import 'dart:ui' as _i8;
 import 'package:flutter/src/painting/borders.dart' as _i9;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i10;
-import 'package:flutter/src/material/theme_data.dart' as _i11;
-import 'package:flutter/src/widgets/icon_theme_data.dart' as _i12;
+import 'package:flutter/src/material/material_state.dart' as _i11;
+import 'package:flutter/src/material/theme_data.dart' as _i12;
+import 'package:flutter/src/widgets/icon_theme_data.dart' as _i13;
 
 /// class InputChip extends StatelessWidget implements ChipAttributes, DeletableChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes, TappableChipAttributes
 class InputChip$Mate extends _i1.InputChip with _i2.Mate {
-  /// InputChip InputChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, bool isEnabled = true, void Function(bool)? onSelected, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, void Function()? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder(), bool useDeleteButtonTooltip = true})
+  /// InputChip InputChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, bool isEnabled = true, void Function(bool)? onSelected, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, void Function()? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder(), bool useDeleteButtonTooltip = true})
   InputChip$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -83,6 +84,9 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
@@ -234,6 +238,11 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'color': _i2.BuilderArg<_i11.MaterialStateProperty<_i8.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
           'backgroundColor': _i2.BuilderArg<_i8.Color?>(
             name: 'backgroundColor',
             init: backgroundColor,
@@ -244,12 +253,12 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
             init: padding,
             isNamed: true,
           ),
-          'visualDensity': _i2.BuilderArg<_i11.VisualDensity?>(
+          'visualDensity': _i2.BuilderArg<_i12.VisualDensity?>(
             name: 'visualDensity',
             init: visualDensity,
             isNamed: true,
           ),
-          'materialTapTargetSize': _i2.BuilderArg<_i11.MaterialTapTargetSize?>(
+          'materialTapTargetSize': _i2.BuilderArg<_i12.MaterialTapTargetSize?>(
             name: 'materialTapTargetSize',
             init: materialTapTargetSize,
             isNamed: true,
@@ -269,7 +278,7 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
             init: surfaceTintColor,
             isNamed: true,
           ),
-          'iconTheme': _i2.BuilderArg<_i12.IconThemeData?>(
+          'iconTheme': _i2.BuilderArg<_i13.IconThemeData?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
@@ -321,6 +330,7 @@ class InputChip$Mate extends _i1.InputChip with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          color: p.get('color').build(),
           backgroundColor: p.get('backgroundColor').build(),
           padding: p.get('padding').build(),
           visualDensity: p.get('visualDensity').build(),

@@ -9,7 +9,7 @@ import 'package:flutter/src/material/button_style.dart' as _i5;
 
 /// class ButtonSegment<T>
 class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
-  /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, bool enabled = true})
+  /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, String? tooltip, bool enabled = true})
   ButtonSegment$Mate({
     /// optionalParameters: {required T value} , default:none
     required super.value,
@@ -19,6 +19,9 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
 
     /// optionalParameters: {Widget? label} , default:none
     super.label,
+
+    /// optionalParameters: {String? tooltip} , default:none
+    super.tooltip,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     super.enabled,
@@ -38,6 +41,11 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
             init: label,
             isNamed: true,
           ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
           'enabled': _i2.BuilderArg<bool>(
             name: 'enabled',
             init: enabled,
@@ -52,6 +60,7 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
           value: p.get('value').build(),
           icon: p.get('icon').build(),
           label: p.get('label').build(),
+          tooltip: p.get('tooltip').build(),
           enabled: p.get('enabled').build(),
         );
   }

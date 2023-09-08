@@ -18,7 +18,7 @@ import 'dart:ui' as _i14;
 
 /// class ReorderableListView extends StatefulWidget
 class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
-  /// ReorderableListView ReorderableListView({Key? key, required List<Widget> children, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ReorderableListView ReorderableListView({Key? key, required List<Widget> children, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge, double? autoScrollerVelocityScalar})
   ReorderableListView$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -91,6 +91,9 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {double? autoScrollerVelocityScalar} , default:none
+    super.autoScrollerVelocityScalar,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -220,6 +223,11 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i14.Clip.hardEdge,
           ),
+          'autoScrollerVelocityScalar': _i2.BuilderArg<double?>(
+            name: 'autoScrollerVelocityScalar',
+            init: autoScrollerVelocityScalar,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ReorderableListView';
@@ -249,10 +257,11 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          autoScrollerVelocityScalar: p.get('autoScrollerVelocityScalar').build(),
         );
   }
 
-  /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge, double? autoScrollerVelocityScalar})
   ReorderableListView$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -328,6 +337,9 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {double? autoScrollerVelocityScalar} , default:none
+    super.autoScrollerVelocityScalar,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -462,6 +474,11 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
             isNamed: true,
             defaultValue: _i14.Clip.hardEdge,
           ),
+          'autoScrollerVelocityScalar': _i2.BuilderArg<double?>(
+            name: 'autoScrollerVelocityScalar',
+            init: autoScrollerVelocityScalar,
+            isNamed: true,
+          ),
         },
         super.builder() {
     mateBuilderName = 'ReorderableListView.builder';
@@ -492,6 +509,7 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          autoScrollerVelocityScalar: p.get('autoScrollerVelocityScalar').build(),
         );
   }
 

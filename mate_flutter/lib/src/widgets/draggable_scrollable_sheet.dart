@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 
 /// class DraggableScrollableSheet extends StatefulWidget
 class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i2.Mate {
-  /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, required Widget Function(BuildContext, ScrollController) builder})
+  /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, bool shouldCloseOnMinExtent = true, required Widget Function(BuildContext, ScrollController) builder})
   DraggableScrollableSheet$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -36,6 +36,9 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
 
     /// optionalParameters: {DraggableScrollableController? controller} , default:none
     super.controller,
+
+    /// optionalParameters: {bool shouldCloseOnMinExtent = true} , default:processed=BooleanLiteralImpl
+    super.shouldCloseOnMinExtent,
 
     /// optionalParameters: {required Widget Function(BuildContext, ScrollController) builder} , default:none
     required super.builder,
@@ -90,6 +93,12 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
             init: controller,
             isNamed: true,
           ),
+          'shouldCloseOnMinExtent': _i2.BuilderArg<bool>(
+            name: 'shouldCloseOnMinExtent',
+            init: shouldCloseOnMinExtent,
+            isNamed: true,
+            defaultValue: true,
+          ),
           'builder': _i2.BuilderArg<_i1.ScrollableWidgetBuilder>(
             name: 'builder',
             init: builder,
@@ -109,6 +118,7 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
           snapSizes: p.get('snapSizes').build(),
           snapAnimationDuration: p.get('snapAnimationDuration').build(),
           controller: p.get('controller').build(),
+          shouldCloseOnMinExtent: p.get('shouldCloseOnMinExtent').build(),
           builder: p.get('builder').build(),
         );
   }
@@ -119,7 +129,7 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
 class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotification with _i2.Mate {
-  /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
+  /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context, bool shouldCloseOnMinExtent = true})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , default:none
     required super.extent,
@@ -135,6 +145,9 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
 
     /// optionalParameters: {required BuildContext context} , default:none
     required super.context,
+
+    /// optionalParameters: {bool shouldCloseOnMinExtent = true} , default:processed=BooleanLiteralImpl
+    super.shouldCloseOnMinExtent,
   })  : mateParams = {
           'extent': _i2.BuilderArg<double>(
             name: 'extent',
@@ -161,6 +174,12 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
             init: context,
             isNamed: true,
           ),
+          'shouldCloseOnMinExtent': _i2.BuilderArg<bool>(
+            name: 'shouldCloseOnMinExtent',
+            init: shouldCloseOnMinExtent,
+            isNamed: true,
+            defaultValue: true,
+          ),
         },
         super() {
     mateBuilderName = 'DraggableScrollableNotification';
@@ -171,6 +190,7 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
           maxExtent: p.get('maxExtent').build(),
           initialExtent: p.get('initialExtent').build(),
           context: p.get('context').build(),
+          shouldCloseOnMinExtent: p.get('shouldCloseOnMinExtent').build(),
         );
   }
 

@@ -169,7 +169,7 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
         );
   }
 
-  /// Radio<T> Radio.adaptive({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false})
+  /// Radio<T> Radio.adaptive({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, bool useCupertinoCheckmarkStyle = false})
   Radio$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -218,6 +218,9 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {bool useCupertinoCheckmarkStyle = false} , default:processed=BooleanLiteralImpl
+    super.useCupertinoCheckmarkStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -301,6 +304,12 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'useCupertinoCheckmarkStyle': _i2.BuilderArg<bool>(
+            name: 'useCupertinoCheckmarkStyle',
+            init: useCupertinoCheckmarkStyle,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'Radio.adaptive';
@@ -322,6 +331,7 @@ class Radio$Mate<T> extends _i1.Radio<T> with _i2.Mate {
           visualDensity: p.get('visualDensity').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          useCupertinoCheckmarkStyle: p.get('useCupertinoCheckmarkStyle').build(),
         );
   }
 

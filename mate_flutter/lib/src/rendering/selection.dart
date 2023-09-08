@@ -183,13 +183,16 @@ class DirectionallyExtendSelectionEvent$Mate extends _i1.DirectionallyExtendSele
 
 /// class SelectionGeometry
 class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
-  /// SelectionGeometry SelectionGeometry({SelectionPoint? startSelectionPoint, SelectionPoint? endSelectionPoint, required SelectionStatus status, required bool hasContent})
+  /// SelectionGeometry SelectionGeometry({SelectionPoint? startSelectionPoint, SelectionPoint? endSelectionPoint, List<Rect> selectionRects = const <Rect>[], required SelectionStatus status, required bool hasContent})
   SelectionGeometry$Mate({
     /// optionalParameters: {SelectionPoint? startSelectionPoint} , default:none
     super.startSelectionPoint,
 
     /// optionalParameters: {SelectionPoint? endSelectionPoint} , default:none
     super.endSelectionPoint,
+
+    /// optionalParameters: {List<Rect> selectionRects = const <Rect>[]} , default:unprocessed=ListLiteralImpl
+    super.selectionRects,
 
     /// optionalParameters: {required SelectionStatus status} , default:none
     required super.status,
@@ -205,6 +208,11 @@ class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
           'endSelectionPoint': _i2.BuilderArg<_i1.SelectionPoint?>(
             name: 'endSelectionPoint',
             init: endSelectionPoint,
+            isNamed: true,
+          ),
+          'selectionRects': _i2.BuilderArg<List<_i3.Rect>>(
+            name: 'selectionRects',
+            init: selectionRects,
             isNamed: true,
           ),
           'status': _i2.BuilderArg<_i1.SelectionStatus>(
@@ -224,6 +232,7 @@ class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
     mateBuilder = (p) => SelectionGeometry$Mate(
           startSelectionPoint: p.get('startSelectionPoint').build(),
           endSelectionPoint: p.get('endSelectionPoint').build(),
+          selectionRects: p.get('selectionRects').build(),
           status: p.get('status').build(),
           hasContent: p.get('hasContent').build(),
         );

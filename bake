@@ -6,7 +6,7 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
 # v0.2.20230525 - It can run normally on macos
-# todo 
+# todo
 #   1. sub cmd help not work
 #   2. cmd help use @cmd define?
 #   3. split to common bash script ,  can use git tree use it
@@ -775,15 +775,33 @@ run.macos() {
   flutter_note flutter run --device-id macos "$@"
 }
 
-build() {
+build.web_canvaskit() {
+  flutter_note flutter build web -v \
+    --release --tree-shake-icons \
+    --web-renderer canvaskit "$@"
+}
+build.web_html() {
   flutter_note flutter build web -v \
     --release --tree-shake-icons \
     --web-renderer html "$@"
 }
 
+# skwasm无法运行
+build.web_skwasm() {
+  flutter_note flutter build web -v \
+    --release --tree-shake-icons \
+    --web-renderer skwasm "$@"
+}
+
 preview.web() {
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
     build "$@"
+#   	npx http-server ./flutter_note/build/web --port 8000
+    _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
+}
+web.serve() {
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    build "$@"
 #   	npx http-server ./flutter_note/build/web --port 8000
     _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
 }

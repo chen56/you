@@ -652,6 +652,694 @@ class SliverAppBar$Mate extends _i1.SliverAppBar with _i2.Mate {
         );
   }
 
+  /// SliverAppBar SliverAppBar.medium({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, bool forceElevated = false, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double? collapsedHeight, double? expandedHeight, bool floating = false, bool pinned = true, bool snap = false, bool stretch = false, double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger, ShapeBorder? shape, double toolbarHeight = _MediumScrollUnderFlexibleConfig.collapsedHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false, Clip? clipBehavior})
+  SliverAppBar$Mate.medium({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Widget? leading} , default:none
+    super.leading,
+
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
+    super.automaticallyImplyLeading,
+
+    /// optionalParameters: {Widget? title} , default:none
+    super.title,
+
+    /// optionalParameters: {List<Widget>? actions} , default:none
+    super.actions,
+
+    /// optionalParameters: {Widget? flexibleSpace} , default:none
+    super.flexibleSpace,
+
+    /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
+    super.bottom,
+
+    /// optionalParameters: {double? elevation} , default:none
+    super.elevation,
+
+    /// optionalParameters: {double? scrolledUnderElevation} , default:none
+    super.scrolledUnderElevation,
+
+    /// optionalParameters: {Color? shadowColor} , default:none
+    super.shadowColor,
+
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
+    super.surfaceTintColor,
+
+    /// optionalParameters: {bool forceElevated = false} , default:processed=BooleanLiteralImpl
+    super.forceElevated,
+
+    /// optionalParameters: {Color? backgroundColor} , default:none
+    super.backgroundColor,
+
+    /// optionalParameters: {Color? foregroundColor} , default:none
+    super.foregroundColor,
+
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
+    super.iconTheme,
+
+    /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
+    super.actionsIconTheme,
+
+    /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
+    super.primary,
+
+    /// optionalParameters: {bool? centerTitle} , default:none
+    super.centerTitle,
+
+    /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
+    super.excludeHeaderSemantics,
+
+    /// optionalParameters: {double? titleSpacing} , default:none
+    super.titleSpacing,
+
+    /// optionalParameters: {double? collapsedHeight} , default:none
+    super.collapsedHeight,
+
+    /// optionalParameters: {double? expandedHeight} , default:none
+    super.expandedHeight,
+
+    /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
+    super.floating,
+
+    /// optionalParameters: {bool pinned = true} , default:processed=BooleanLiteralImpl
+    super.pinned,
+
+    /// optionalParameters: {bool snap = false} , default:processed=BooleanLiteralImpl
+    super.snap,
+
+    /// optionalParameters: {bool stretch = false} , default:processed=BooleanLiteralImpl
+    super.stretch,
+
+    /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
+    super.stretchTriggerOffset,
+
+    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , default:none
+    super.onStretchTrigger,
+
+    /// optionalParameters: {ShapeBorder? shape} , default:none
+    super.shape,
+
+    /// optionalParameters: {double toolbarHeight = _MediumScrollUnderFlexibleConfig.collapsedHeight} , default:unprocessed=PrefixedIdentifierImpl
+    super.toolbarHeight,
+
+    /// optionalParameters: {double? leadingWidth} , default:none
+    super.leadingWidth,
+
+    /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
+    super.toolbarTextStyle,
+
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
+    super.titleTextStyle,
+
+    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
+    super.systemOverlayStyle,
+
+    /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
+    super.forceMaterialTransparency,
+
+    /// optionalParameters: {Clip? clipBehavior} , default:none
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'automaticallyImplyLeading': _i2.BuilderArg<bool>(
+            name: 'automaticallyImplyLeading',
+            init: automaticallyImplyLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'flexibleSpace': _i2.BuilderArg<_i4.Widget?>(
+            name: 'flexibleSpace',
+            init: flexibleSpace,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<_i5.PreferredSizeWidget?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'scrolledUnderElevation': _i2.BuilderArg<double?>(
+            name: 'scrolledUnderElevation',
+            init: scrolledUnderElevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'forceElevated': _i2.BuilderArg<bool>(
+            name: 'forceElevated',
+            init: forceElevated,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'actionsIconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'actionsIconTheme',
+            init: actionsIconTheme,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'excludeHeaderSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeHeaderSemantics',
+            init: excludeHeaderSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'titleSpacing': _i2.BuilderArg<double?>(
+            name: 'titleSpacing',
+            init: titleSpacing,
+            isNamed: true,
+          ),
+          'collapsedHeight': _i2.BuilderArg<double?>(
+            name: 'collapsedHeight',
+            init: collapsedHeight,
+            isNamed: true,
+          ),
+          'expandedHeight': _i2.BuilderArg<double?>(
+            name: 'expandedHeight',
+            init: expandedHeight,
+            isNamed: true,
+          ),
+          'floating': _i2.BuilderArg<bool>(
+            name: 'floating',
+            init: floating,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'pinned': _i2.BuilderArg<bool>(
+            name: 'pinned',
+            init: pinned,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'snap': _i2.BuilderArg<bool>(
+            name: 'snap',
+            init: snap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretch': _i2.BuilderArg<bool>(
+            name: 'stretch',
+            init: stretch,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretchTriggerOffset': _i2.BuilderArg<double>(
+            name: 'stretchTriggerOffset',
+            init: stretchTriggerOffset,
+            isNamed: true,
+            defaultValue: 100.0,
+          ),
+          'onStretchTrigger': _i2.BuilderArg<_i12.AsyncCallback?>(
+            name: 'onStretchTrigger',
+            init: onStretchTrigger,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'toolbarHeight': _i2.BuilderArg<double>(
+            name: 'toolbarHeight',
+            init: toolbarHeight,
+            isNamed: true,
+          ),
+          'leadingWidth': _i2.BuilderArg<double?>(
+            name: 'leadingWidth',
+            init: leadingWidth,
+            isNamed: true,
+          ),
+          'toolbarTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'toolbarTextStyle',
+            init: toolbarTextStyle,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'systemOverlayStyle': _i2.BuilderArg<_i11.SystemUiOverlayStyle?>(
+            name: 'systemOverlayStyle',
+            init: systemOverlayStyle,
+            isNamed: true,
+          ),
+          'forceMaterialTransparency': _i2.BuilderArg<bool>(
+            name: 'forceMaterialTransparency',
+            init: forceMaterialTransparency,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super.medium() {
+    mateBuilderName = 'SliverAppBar.medium';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => SliverAppBar$Mate.medium(
+          key: p.get('key').build(),
+          leading: p.get('leading').build(),
+          automaticallyImplyLeading: p.get('automaticallyImplyLeading').build(),
+          title: p.get('title').build(),
+          actions: p.get('actions').build(),
+          flexibleSpace: p.get('flexibleSpace').build(),
+          bottom: p.get('bottom').build(),
+          elevation: p.get('elevation').build(),
+          scrolledUnderElevation: p.get('scrolledUnderElevation').build(),
+          shadowColor: p.get('shadowColor').build(),
+          surfaceTintColor: p.get('surfaceTintColor').build(),
+          forceElevated: p.get('forceElevated').build(),
+          backgroundColor: p.get('backgroundColor').build(),
+          foregroundColor: p.get('foregroundColor').build(),
+          iconTheme: p.get('iconTheme').build(),
+          actionsIconTheme: p.get('actionsIconTheme').build(),
+          primary: p.get('primary').build(),
+          centerTitle: p.get('centerTitle').build(),
+          excludeHeaderSemantics: p.get('excludeHeaderSemantics').build(),
+          titleSpacing: p.get('titleSpacing').build(),
+          collapsedHeight: p.get('collapsedHeight').build(),
+          expandedHeight: p.get('expandedHeight').build(),
+          floating: p.get('floating').build(),
+          pinned: p.get('pinned').build(),
+          snap: p.get('snap').build(),
+          stretch: p.get('stretch').build(),
+          stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
+          onStretchTrigger: p.get('onStretchTrigger').build(),
+          shape: p.get('shape').build(),
+          toolbarHeight: p.get('toolbarHeight').build(),
+          leadingWidth: p.get('leadingWidth').build(),
+          toolbarTextStyle: p.get('toolbarTextStyle').build(),
+          titleTextStyle: p.get('titleTextStyle').build(),
+          systemOverlayStyle: p.get('systemOverlayStyle').build(),
+          forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
+          clipBehavior: p.get('clipBehavior').build(),
+        );
+  }
+
+  /// SliverAppBar SliverAppBar.large({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, bool forceElevated = false, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double? collapsedHeight, double? expandedHeight, bool floating = false, bool pinned = true, bool snap = false, bool stretch = false, double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger, ShapeBorder? shape, double toolbarHeight = _LargeScrollUnderFlexibleConfig.collapsedHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false, Clip? clipBehavior})
+  SliverAppBar$Mate.large({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Widget? leading} , default:none
+    super.leading,
+
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
+    super.automaticallyImplyLeading,
+
+    /// optionalParameters: {Widget? title} , default:none
+    super.title,
+
+    /// optionalParameters: {List<Widget>? actions} , default:none
+    super.actions,
+
+    /// optionalParameters: {Widget? flexibleSpace} , default:none
+    super.flexibleSpace,
+
+    /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
+    super.bottom,
+
+    /// optionalParameters: {double? elevation} , default:none
+    super.elevation,
+
+    /// optionalParameters: {double? scrolledUnderElevation} , default:none
+    super.scrolledUnderElevation,
+
+    /// optionalParameters: {Color? shadowColor} , default:none
+    super.shadowColor,
+
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
+    super.surfaceTintColor,
+
+    /// optionalParameters: {bool forceElevated = false} , default:processed=BooleanLiteralImpl
+    super.forceElevated,
+
+    /// optionalParameters: {Color? backgroundColor} , default:none
+    super.backgroundColor,
+
+    /// optionalParameters: {Color? foregroundColor} , default:none
+    super.foregroundColor,
+
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
+    super.iconTheme,
+
+    /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
+    super.actionsIconTheme,
+
+    /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
+    super.primary,
+
+    /// optionalParameters: {bool? centerTitle} , default:none
+    super.centerTitle,
+
+    /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
+    super.excludeHeaderSemantics,
+
+    /// optionalParameters: {double? titleSpacing} , default:none
+    super.titleSpacing,
+
+    /// optionalParameters: {double? collapsedHeight} , default:none
+    super.collapsedHeight,
+
+    /// optionalParameters: {double? expandedHeight} , default:none
+    super.expandedHeight,
+
+    /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
+    super.floating,
+
+    /// optionalParameters: {bool pinned = true} , default:processed=BooleanLiteralImpl
+    super.pinned,
+
+    /// optionalParameters: {bool snap = false} , default:processed=BooleanLiteralImpl
+    super.snap,
+
+    /// optionalParameters: {bool stretch = false} , default:processed=BooleanLiteralImpl
+    super.stretch,
+
+    /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
+    super.stretchTriggerOffset,
+
+    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , default:none
+    super.onStretchTrigger,
+
+    /// optionalParameters: {ShapeBorder? shape} , default:none
+    super.shape,
+
+    /// optionalParameters: {double toolbarHeight = _LargeScrollUnderFlexibleConfig.collapsedHeight} , default:unprocessed=PrefixedIdentifierImpl
+    super.toolbarHeight,
+
+    /// optionalParameters: {double? leadingWidth} , default:none
+    super.leadingWidth,
+
+    /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
+    super.toolbarTextStyle,
+
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
+    super.titleTextStyle,
+
+    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
+    super.systemOverlayStyle,
+
+    /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
+    super.forceMaterialTransparency,
+
+    /// optionalParameters: {Clip? clipBehavior} , default:none
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'automaticallyImplyLeading': _i2.BuilderArg<bool>(
+            name: 'automaticallyImplyLeading',
+            init: automaticallyImplyLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'flexibleSpace': _i2.BuilderArg<_i4.Widget?>(
+            name: 'flexibleSpace',
+            init: flexibleSpace,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<_i5.PreferredSizeWidget?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'scrolledUnderElevation': _i2.BuilderArg<double?>(
+            name: 'scrolledUnderElevation',
+            init: scrolledUnderElevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'forceElevated': _i2.BuilderArg<bool>(
+            name: 'forceElevated',
+            init: forceElevated,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'actionsIconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'actionsIconTheme',
+            init: actionsIconTheme,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'excludeHeaderSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeHeaderSemantics',
+            init: excludeHeaderSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'titleSpacing': _i2.BuilderArg<double?>(
+            name: 'titleSpacing',
+            init: titleSpacing,
+            isNamed: true,
+          ),
+          'collapsedHeight': _i2.BuilderArg<double?>(
+            name: 'collapsedHeight',
+            init: collapsedHeight,
+            isNamed: true,
+          ),
+          'expandedHeight': _i2.BuilderArg<double?>(
+            name: 'expandedHeight',
+            init: expandedHeight,
+            isNamed: true,
+          ),
+          'floating': _i2.BuilderArg<bool>(
+            name: 'floating',
+            init: floating,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'pinned': _i2.BuilderArg<bool>(
+            name: 'pinned',
+            init: pinned,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'snap': _i2.BuilderArg<bool>(
+            name: 'snap',
+            init: snap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretch': _i2.BuilderArg<bool>(
+            name: 'stretch',
+            init: stretch,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretchTriggerOffset': _i2.BuilderArg<double>(
+            name: 'stretchTriggerOffset',
+            init: stretchTriggerOffset,
+            isNamed: true,
+            defaultValue: 100.0,
+          ),
+          'onStretchTrigger': _i2.BuilderArg<_i12.AsyncCallback?>(
+            name: 'onStretchTrigger',
+            init: onStretchTrigger,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'toolbarHeight': _i2.BuilderArg<double>(
+            name: 'toolbarHeight',
+            init: toolbarHeight,
+            isNamed: true,
+          ),
+          'leadingWidth': _i2.BuilderArg<double?>(
+            name: 'leadingWidth',
+            init: leadingWidth,
+            isNamed: true,
+          ),
+          'toolbarTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'toolbarTextStyle',
+            init: toolbarTextStyle,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'systemOverlayStyle': _i2.BuilderArg<_i11.SystemUiOverlayStyle?>(
+            name: 'systemOverlayStyle',
+            init: systemOverlayStyle,
+            isNamed: true,
+          ),
+          'forceMaterialTransparency': _i2.BuilderArg<bool>(
+            name: 'forceMaterialTransparency',
+            init: forceMaterialTransparency,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super.large() {
+    mateBuilderName = 'SliverAppBar.large';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => SliverAppBar$Mate.large(
+          key: p.get('key').build(),
+          leading: p.get('leading').build(),
+          automaticallyImplyLeading: p.get('automaticallyImplyLeading').build(),
+          title: p.get('title').build(),
+          actions: p.get('actions').build(),
+          flexibleSpace: p.get('flexibleSpace').build(),
+          bottom: p.get('bottom').build(),
+          elevation: p.get('elevation').build(),
+          scrolledUnderElevation: p.get('scrolledUnderElevation').build(),
+          shadowColor: p.get('shadowColor').build(),
+          surfaceTintColor: p.get('surfaceTintColor').build(),
+          forceElevated: p.get('forceElevated').build(),
+          backgroundColor: p.get('backgroundColor').build(),
+          foregroundColor: p.get('foregroundColor').build(),
+          iconTheme: p.get('iconTheme').build(),
+          actionsIconTheme: p.get('actionsIconTheme').build(),
+          primary: p.get('primary').build(),
+          centerTitle: p.get('centerTitle').build(),
+          excludeHeaderSemantics: p.get('excludeHeaderSemantics').build(),
+          titleSpacing: p.get('titleSpacing').build(),
+          collapsedHeight: p.get('collapsedHeight').build(),
+          expandedHeight: p.get('expandedHeight').build(),
+          floating: p.get('floating').build(),
+          pinned: p.get('pinned').build(),
+          snap: p.get('snap').build(),
+          stretch: p.get('stretch').build(),
+          stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
+          onStretchTrigger: p.get('onStretchTrigger').build(),
+          shape: p.get('shape').build(),
+          toolbarHeight: p.get('toolbarHeight').build(),
+          leadingWidth: p.get('leadingWidth').build(),
+          toolbarTextStyle: p.get('toolbarTextStyle').build(),
+          titleTextStyle: p.get('titleTextStyle').build(),
+          systemOverlayStyle: p.get('systemOverlayStyle').build(),
+          forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
+          clipBehavior: p.get('clipBehavior').build(),
+        );
+  }
+
   @override
   final Map<String, _i2.BuilderArg> mateParams;
 }

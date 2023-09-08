@@ -645,3 +645,28 @@ class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.
   @override
   final Map<String, _i2.BuilderArg> mateParams;
 }
+
+/// class LiveTextInputStatusNotifier extends ValueNotifier<LiveTextInputStatus> with WidgetsBindingObserver
+class LiveTextInputStatusNotifier$Mate extends _i1.LiveTextInputStatusNotifier with _i2.Mate {
+  /// LiveTextInputStatusNotifier LiveTextInputStatusNotifier({LiveTextInputStatus value = LiveTextInputStatus.unknown})
+  LiveTextInputStatusNotifier$Mate(
+      {
+      /// optionalParameters: {LiveTextInputStatus value = LiveTextInputStatus.unknown} , default:processed=PrefixedIdentifierImpl
+      super.value})
+      : mateParams = {
+          'value': _i2.BuilderArg<_i1.LiveTextInputStatus>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+            defaultValue: _i15.LiveTextInputStatus.unknown,
+          )
+        },
+        super() {
+    mateBuilderName = 'LiveTextInputStatusNotifier';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => LiveTextInputStatusNotifier$Mate(value: p.get('value').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}

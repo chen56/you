@@ -8,10 +8,11 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/borders.dart' as _i6;
 import 'package:flutter/src/foundation/basic_types.dart' as _i7;
+import 'package:flutter/src/painting/edge_insets.dart' as _i8;
 
 /// class NavigationDrawer extends StatelessWidget
 class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
-  /// NavigationDrawer NavigationDrawer({Key? key, required List<Widget> children, Color? backgroundColor, Color? shadowColor, Color? surfaceTintColor, double? elevation, Color? indicatorColor, ShapeBorder? indicatorShape, void Function(int)? onDestinationSelected, int? selectedIndex = 0})
+  /// NavigationDrawer NavigationDrawer({Key? key, required List<Widget> children, Color? backgroundColor, Color? shadowColor, Color? surfaceTintColor, double? elevation, Color? indicatorColor, ShapeBorder? indicatorShape, void Function(int)? onDestinationSelected, int? selectedIndex = 0, EdgeInsetsGeometry tilePadding = const EdgeInsets.symmetric(horizontal: 12.0)})
   NavigationDrawer$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -42,6 +43,9 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
 
     /// optionalParameters: {int? selectedIndex = 0} , default:processed=IntegerLiteralImpl
     super.selectedIndex,
+
+    /// optionalParameters: {EdgeInsetsGeometry tilePadding = const EdgeInsets.symmetric(horizontal: 12.0)} , default:unprocessed=InstanceCreationExpressionImpl
+    super.tilePadding,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -94,6 +98,11 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
             isNamed: true,
             defaultValue: 0,
           ),
+          'tilePadding': _i2.BuilderArg<_i8.EdgeInsetsGeometry>(
+            name: 'tilePadding',
+            init: tilePadding,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationDrawer';
@@ -109,6 +118,7 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
           indicatorShape: p.get('indicatorShape').build(),
           onDestinationSelected: p.get('onDestinationSelected').build(),
           selectedIndex: p.get('selectedIndex').build(),
+          tilePadding: p.get('tilePadding').build(),
         );
   }
 

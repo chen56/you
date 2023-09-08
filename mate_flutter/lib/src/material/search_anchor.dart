@@ -18,7 +18,7 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i14;
 
 /// class SearchAnchor extends StatefulWidget
 class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
-  /// SearchAnchor SearchAnchor({Key? key, bool? isFullScreen, SearchController? searchController, Widget Function(Iterable<Widget>)? viewBuilder, Widget? viewLeading, Iterable<Widget>? viewTrailing, String? viewHintText, Color? viewBackgroundColor, double? viewElevation, Color? viewSurfaceTintColor, BorderSide? viewSide, OutlinedBorder? viewShape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor, BoxConstraints? viewConstraints, required Widget Function(BuildContext, SearchController) builder, required Iterable<Widget> Function(BuildContext, SearchController) suggestionsBuilder})
+  /// SearchAnchor SearchAnchor({Key? key, bool? isFullScreen, SearchController? searchController, Widget Function(Iterable<Widget>)? viewBuilder, Widget? viewLeading, Iterable<Widget>? viewTrailing, String? viewHintText, Color? viewBackgroundColor, double? viewElevation, Color? viewSurfaceTintColor, BorderSide? viewSide, OutlinedBorder? viewShape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor, BoxConstraints? viewConstraints, required Widget Function(BuildContext, SearchController) builder, required FutureOr<Iterable<Widget>> Function(BuildContext, SearchController) suggestionsBuilder})
   SearchAnchor$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -71,7 +71,7 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
     /// optionalParameters: {required Widget Function(BuildContext, SearchController) builder} , default:none
     required super.builder,
 
-    /// optionalParameters: {required Iterable<Widget> Function(BuildContext, SearchController) suggestionsBuilder} , default:none
+    /// optionalParameters: {required FutureOr<Iterable<Widget>> Function(BuildContext, SearchController) suggestionsBuilder} , default:none
     required super.suggestionsBuilder,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -196,7 +196,7 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
 
 /// class SearchBar extends StatefulWidget
 class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
-  /// SearchBar SearchBar({Key? key, TextEditingController? controller, FocusNode? focusNode, String? hintText, Widget? leading, Iterable<Widget>? trailing, void Function()? onTap, void Function(String)? onChanged, BoxConstraints? constraints, MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle})
+  /// SearchBar SearchBar({Key? key, TextEditingController? controller, FocusNode? focusNode, String? hintText, Widget? leading, Iterable<Widget>? trailing, void Function()? onTap, void Function(String)? onChanged, void Function(String)? onSubmitted, BoxConstraints? constraints, MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle})
   SearchBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -221,6 +221,9 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
 
     /// optionalParameters: {void Function(String)? onChanged} , default:none
     super.onChanged,
+
+    /// optionalParameters: {void Function(String)? onSubmitted} , default:none
+    super.onSubmitted,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
     super.constraints,
@@ -295,6 +298,11 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
             init: onChanged,
             isNamed: true,
           ),
+          'onSubmitted': _i2.BuilderArg<_i12.ValueChanged<String>?>(
+            name: 'onSubmitted',
+            init: onSubmitted,
+            isNamed: true,
+          ),
           'constraints': _i2.BuilderArg<_i8.BoxConstraints?>(
             name: 'constraints',
             init: constraints,
@@ -363,6 +371,7 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
           trailing: p.get('trailing').build(),
           onTap: p.get('onTap').build(),
           onChanged: p.get('onChanged').build(),
+          onSubmitted: p.get('onSubmitted').build(),
           constraints: p.get('constraints').build(),
           elevation: p.get('elevation').build(),
           backgroundColor: p.get('backgroundColor').build(),

@@ -1022,7 +1022,7 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class SemanticsNode extends AbstractNode with DiagnosticableTreeMixin
+/// class SemanticsNode with DiagnosticableTreeMixin
 class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
   /// SemanticsNode SemanticsNode({Key? key, void Function()? showOnScreen})
   SemanticsNode$Mate({

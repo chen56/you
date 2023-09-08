@@ -574,68 +574,6 @@ class BackdropFilterLayer$Mate extends _i1.BackdropFilterLayer with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class PhysicalModelLayer extends ContainerLayer
-class PhysicalModelLayer$Mate extends _i1.PhysicalModelLayer with _i2.Mate {
-  /// PhysicalModelLayer PhysicalModelLayer({Path? clipPath, Clip clipBehavior = Clip.none, double? elevation, Color? color, Color? shadowColor})
-  PhysicalModelLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , default:none
-    super.clipPath,
-
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    super.clipBehavior,
-
-    /// optionalParameters: {double? elevation} , default:none
-    super.elevation,
-
-    /// optionalParameters: {Color? color} , default:none
-    super.color,
-
-    /// optionalParameters: {Color? shadowColor} , default:none
-    super.shadowColor,
-  })  : mateParams = {
-          'clipPath': _i2.BuilderArg<_i3.Path?>(
-            name: 'clipPath',
-            init: clipPath,
-            isNamed: true,
-          ),
-          'clipBehavior': _i2.BuilderArg<_i3.Clip>(
-            name: 'clipBehavior',
-            init: clipBehavior,
-            isNamed: true,
-            defaultValue: _i3.Clip.none,
-          ),
-          'elevation': _i2.BuilderArg<double?>(
-            name: 'elevation',
-            init: elevation,
-            isNamed: true,
-          ),
-          'color': _i2.BuilderArg<_i3.Color?>(
-            name: 'color',
-            init: color,
-            isNamed: true,
-          ),
-          'shadowColor': _i2.BuilderArg<_i3.Color?>(
-            name: 'shadowColor',
-            init: shadowColor,
-            isNamed: true,
-          ),
-        },
-        super() {
-    mateBuilderName = 'PhysicalModelLayer';
-    matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => PhysicalModelLayer$Mate(
-          clipPath: p.get('clipPath').build(),
-          clipBehavior: p.get('clipBehavior').build(),
-          elevation: p.get('elevation').build(),
-          color: p.get('color').build(),
-          shadowColor: p.get('shadowColor').build(),
-        );
-  }
-
-  @override
-  final Map<String, _i2.BuilderArg> mateParams;
-}
-
 /// class LeaderLayer extends ContainerLayer
 class LeaderLayer$Mate extends _i1.LeaderLayer with _i2.Mate {
   /// LeaderLayer LeaderLayer({required LayerLink link, Offset offset = Offset.zero})

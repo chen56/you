@@ -126,7 +126,7 @@ class InputDecorator$Mate extends _i1.InputDecorator with _i2.Mate {
 
 /// class InputDecoration
 class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
-  /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool isCollapsed = false, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
+  /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, Widget? error, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool isCollapsed = false, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
   InputDecoration$Mate({
     /// optionalParameters: {Widget? icon} , default:none
     super.icon,
@@ -166,6 +166,9 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
 
     /// optionalParameters: {int? hintMaxLines} , default:none
     super.hintMaxLines,
+
+    /// optionalParameters: {Widget? error} , default:none
+    super.error,
 
     /// optionalParameters: {String? errorText} , default:none
     super.errorText,
@@ -341,6 +344,11 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
           'hintMaxLines': _i2.BuilderArg<int?>(
             name: 'hintMaxLines',
             init: hintMaxLines,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i7.Widget?>(
+            name: 'error',
+            init: error,
             isNamed: true,
           ),
           'errorText': _i2.BuilderArg<String?>(
@@ -548,6 +556,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
           hintStyle: p.get('hintStyle').build(),
           hintTextDirection: p.get('hintTextDirection').build(),
           hintMaxLines: p.get('hintMaxLines').build(),
+          error: p.get('error').build(),
           errorText: p.get('errorText').build(),
           errorStyle: p.get('errorStyle').build(),
           errorMaxLines: p.get('errorMaxLines').build(),

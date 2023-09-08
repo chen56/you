@@ -285,7 +285,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
         );
   }
 
-  /// RadioListTile<T> RadioListTile.adaptive({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, bool autofocus = false, EdgeInsetsGeometry? contentPadding, ShapeBorder? shape, Color? tileColor, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback})
+  /// RadioListTile<T> RadioListTile.adaptive({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, bool autofocus = false, EdgeInsetsGeometry? contentPadding, ShapeBorder? shape, Color? tileColor, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback, bool useCupertinoCheckmarkStyle = false})
   RadioListTile$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -370,6 +370,9 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
 
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
+
+    /// optionalParameters: {bool useCupertinoCheckmarkStyle = false} , default:processed=BooleanLiteralImpl
+    super.useCupertinoCheckmarkStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -516,6 +519,12 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
+          'useCupertinoCheckmarkStyle': _i2.BuilderArg<bool>(
+            name: 'useCupertinoCheckmarkStyle',
+            init: useCupertinoCheckmarkStyle,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'RadioListTile.adaptive';
@@ -549,6 +558,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
           focusNode: p.get('focusNode').build(),
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
+          useCupertinoCheckmarkStyle: p.get('useCupertinoCheckmarkStyle').build(),
         );
   }
 

@@ -18,7 +18,7 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i14;
 
 /// class CheckboxListTile extends StatelessWidget
 class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
-  /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
+  /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback, String? checkboxSemanticLabel})
   CheckboxListTile$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -115,6 +115,9 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
 
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
+
+    /// optionalParameters: {String? checkboxSemanticLabel} , default:none
+    super.checkboxSemanticLabel,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -282,6 +285,11 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
+          'checkboxSemanticLabel': _i2.BuilderArg<String?>(
+            name: 'checkboxSemanticLabel',
+            init: checkboxSemanticLabel,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'CheckboxListTile';
@@ -319,10 +327,11 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
           selectedTileColor: p.get('selectedTileColor').build(),
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
+          checkboxSemanticLabel: p.get('checkboxSemanticLabel').build(),
         );
   }
 
-  /// CheckboxListTile CheckboxListTile.adaptive({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
+  /// CheckboxListTile CheckboxListTile.adaptive({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback, String? checkboxSemanticLabel})
   CheckboxListTile$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -419,6 +428,9 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
 
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
+
+    /// optionalParameters: {String? checkboxSemanticLabel} , default:none
+    super.checkboxSemanticLabel,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -586,6 +598,11 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
+          'checkboxSemanticLabel': _i2.BuilderArg<String?>(
+            name: 'checkboxSemanticLabel',
+            init: checkboxSemanticLabel,
+            isNamed: true,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'CheckboxListTile.adaptive';
@@ -623,6 +640,7 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
           selectedTileColor: p.get('selectedTileColor').build(),
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
+          checkboxSemanticLabel: p.get('checkboxSemanticLabel').build(),
         );
   }
 

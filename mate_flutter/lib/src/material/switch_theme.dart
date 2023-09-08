@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class SwitchThemeData with Diagnosticable
 class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
-  /// SwitchThemeData SwitchThemeData({MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialStateProperty<Icon?>? thumbIcon})
+  /// SwitchThemeData SwitchThemeData({MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<double?>? trackOutlineWidth, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialStateProperty<Icon?>? thumbIcon})
   SwitchThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , default:none
     super.thumbColor,
@@ -23,6 +23,9 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , default:none
     super.trackOutlineColor,
+
+    /// optionalParameters: {MaterialStateProperty<double?>? trackOutlineWidth} , default:none
+    super.trackOutlineWidth,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     super.materialTapTargetSize,
@@ -52,6 +55,11 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
           'trackOutlineColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
             name: 'trackOutlineColor',
             init: trackOutlineColor,
+            isNamed: true,
+          ),
+          'trackOutlineWidth': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'trackOutlineWidth',
+            init: trackOutlineWidth,
             isNamed: true,
           ),
           'materialTapTargetSize': _i2.BuilderArg<_i5.MaterialTapTargetSize?>(
@@ -87,6 +95,7 @@ class SwitchThemeData$Mate extends _i1.SwitchThemeData with _i2.Mate {
           thumbColor: p.get('thumbColor').build(),
           trackColor: p.get('trackColor').build(),
           trackOutlineColor: p.get('trackOutlineColor').build(),
+          trackOutlineWidth: p.get('trackOutlineWidth').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           mouseCursor: p.get('mouseCursor').build(),
           overlayColor: p.get('overlayColor').build(),

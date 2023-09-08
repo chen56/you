@@ -141,3 +141,103 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
   @override
   final Map<String, _i2.BuilderArg> mateParams;
 }
+
+/// class TwoDimensionalScrollable extends StatefulWidget
+class TwoDimensionalScrollable$Mate extends _i1.TwoDimensionalScrollable with _i2.Mate {
+  /// TwoDimensionalScrollable TwoDimensionalScrollable({Key? key, required ScrollableDetails horizontalDetails, required ScrollableDetails verticalDetails, required Widget Function(BuildContext, ViewportOffset, ViewportOffset) viewportBuilder, double Function(ScrollIncrementDetails)? incrementCalculator, String? restorationId, bool excludeFromSemantics = false, DiagonalDragBehavior diagonalDragBehavior = DiagonalDragBehavior.none, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
+  TwoDimensionalScrollable$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required ScrollableDetails horizontalDetails} , default:none
+    required super.horizontalDetails,
+
+    /// optionalParameters: {required ScrollableDetails verticalDetails} , default:none
+    required super.verticalDetails,
+
+    /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset, ViewportOffset) viewportBuilder} , default:none
+    required super.viewportBuilder,
+
+    /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , default:none
+    super.incrementCalculator,
+
+    /// optionalParameters: {String? restorationId} , default:none
+    super.restorationId,
+
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    super.excludeFromSemantics,
+
+    /// optionalParameters: {DiagonalDragBehavior diagonalDragBehavior = DiagonalDragBehavior.none} , default:processed=PrefixedIdentifierImpl
+    super.diagonalDragBehavior,
+
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    super.dragStartBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'horizontalDetails': _i2.BuilderArg<_i8.ScrollableDetails>(
+            name: 'horizontalDetails',
+            init: horizontalDetails,
+            isNamed: true,
+          ),
+          'verticalDetails': _i2.BuilderArg<_i8.ScrollableDetails>(
+            name: 'verticalDetails',
+            init: verticalDetails,
+            isNamed: true,
+          ),
+          'viewportBuilder': _i2.BuilderArg<_i1.TwoDimensionalViewportBuilder>(
+            name: 'viewportBuilder',
+            init: viewportBuilder,
+            isNamed: true,
+          ),
+          'incrementCalculator': _i2.BuilderArg<_i8.ScrollIncrementCalculator?>(
+            name: 'incrementCalculator',
+            init: incrementCalculator,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'excludeFromSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'diagonalDragBehavior': _i2.BuilderArg<_i1.DiagonalDragBehavior>(
+            name: 'diagonalDragBehavior',
+            init: diagonalDragBehavior,
+            isNamed: true,
+            defaultValue: _i5.DiagonalDragBehavior.none,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i10.DragStartBehavior.start,
+          ),
+        },
+        super() {
+    mateBuilderName = 'TwoDimensionalScrollable';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => TwoDimensionalScrollable$Mate(
+          key: p.get('key').build(),
+          horizontalDetails: p.get('horizontalDetails').build(),
+          verticalDetails: p.get('verticalDetails').build(),
+          viewportBuilder: p.get('viewportBuilder').build(),
+          incrementCalculator: p.get('incrementCalculator').build(),
+          restorationId: p.get('restorationId').build(),
+          excludeFromSemantics: p.get('excludeFromSemantics').build(),
+          diagonalDragBehavior: p.get('diagonalDragBehavior').build(),
+          dragStartBehavior: p.get('dragStartBehavior').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}

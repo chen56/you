@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i6;
 
 /// class CupertinoRadio<T> extends StatefulWidget
 class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
-  /// CupertinoRadio<T> CupertinoRadio({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, bool toggleable = false, Color? activeColor, Color? inactiveColor, Color? fillColor, Color? focusColor, FocusNode? focusNode, bool autofocus = false})
+  /// CupertinoRadio<T> CupertinoRadio({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, bool toggleable = false, Color? activeColor, Color? inactiveColor, Color? fillColor, Color? focusColor, FocusNode? focusNode, bool autofocus = false, bool useCheckmarkStyle = false})
   CupertinoRadio$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -44,6 +44,9 @@ class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {bool useCheckmarkStyle = false} , default:processed=BooleanLiteralImpl
+    super.useCheckmarkStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -102,6 +105,12 @@ class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'useCheckmarkStyle': _i2.BuilderArg<bool>(
+            name: 'useCheckmarkStyle',
+            init: useCheckmarkStyle,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super() {
     mateBuilderName = 'CupertinoRadio';
@@ -118,6 +127,7 @@ class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
           focusColor: p.get('focusColor').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          useCheckmarkStyle: p.get('useCheckmarkStyle').build(),
         );
   }
 

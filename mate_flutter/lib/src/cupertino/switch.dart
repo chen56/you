@@ -6,12 +6,13 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
-import 'package:flutter/src/gestures/recognizer.dart' as _i6;
-import 'package:flutter/gestures.dart' as _i7;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i6;
+import 'package:flutter/src/gestures/recognizer.dart' as _i7;
+import 'package:flutter/gestures.dart' as _i8;
 
 /// class CupertinoSwitch extends StatefulWidget
 class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
-  /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
+  /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -36,6 +37,15 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
 
     /// optionalParameters: {Color? focusColor} , default:none
     super.focusColor,
+
+    /// optionalParameters: {FocusNode? focusNode} , default:none
+    super.focusNode,
+
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
+    super.onFocusChange,
+
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    super.autofocus,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
@@ -80,11 +90,27 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
             init: focusColor,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i6.DragStartBehavior>(
+          'focusNode': _i2.BuilderArg<_i6.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i7.DragStartBehavior.start,
+            defaultValue: _i8.DragStartBehavior.start,
           ),
         },
         super() {
@@ -99,6 +125,9 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
           thumbColor: p.get('thumbColor').build(),
           applyTheme: p.get('applyTheme').build(),
           focusColor: p.get('focusColor').build(),
+          focusNode: p.get('focusNode').build(),
+          onFocusChange: p.get('onFocusChange').build(),
+          autofocus: p.get('autofocus').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
   }

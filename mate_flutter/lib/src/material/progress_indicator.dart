@@ -6,10 +6,12 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/animation/animation.dart' as _i5;
+import 'package:flutter/src/painting/border_radius.dart' as _i6;
+import 'package:flutter/cupertino.dart' as _i7;
 
 /// class LinearProgressIndicator extends ProgressIndicator
 class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.Mate {
-  /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue})
+  /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   LinearProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -34,6 +36,9 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
 
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
+
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    super.borderRadius,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -75,6 +80,12 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
             init: semanticsValue,
             isNamed: true,
           ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadiusGeometry>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+            defaultValue: _i7.BorderRadius.zero,
+          ),
         },
         super() {
     mateBuilderName = 'LinearProgressIndicator';
@@ -88,6 +99,7 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
           minHeight: p.get('minHeight').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
+          borderRadius: p.get('borderRadius').build(),
         );
   }
 
@@ -97,7 +109,7 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
 
 /// class CircularProgressIndicator extends ProgressIndicator
 class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with _i2.Mate {
-  /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
+  /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, double strokeAlign = strokeAlignCenter, String? semanticsLabel, String? semanticsValue, StrokeCap? strokeCap})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -117,11 +129,17 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
     /// optionalParameters: {double strokeWidth = 4.0} , default:processed=DoubleLiteralImpl
     super.strokeWidth,
 
+    /// optionalParameters: {double strokeAlign = strokeAlignCenter} , default:unprocessed=SimpleIdentifierImpl
+    super.strokeAlign,
+
     /// optionalParameters: {String? semanticsLabel} , default:none
     super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
+
+    /// optionalParameters: {StrokeCap? strokeCap} , default:none
+    super.strokeCap,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -154,6 +172,11 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
             isNamed: true,
             defaultValue: 4.0,
           ),
+          'strokeAlign': _i2.BuilderArg<double>(
+            name: 'strokeAlign',
+            init: strokeAlign,
+            isNamed: true,
+          ),
           'semanticsLabel': _i2.BuilderArg<String?>(
             name: 'semanticsLabel',
             init: semanticsLabel,
@@ -162,6 +185,11 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
           'semanticsValue': _i2.BuilderArg<String?>(
             name: 'semanticsValue',
             init: semanticsValue,
+            isNamed: true,
+          ),
+          'strokeCap': _i2.BuilderArg<_i4.StrokeCap?>(
+            name: 'strokeCap',
+            init: strokeCap,
             isNamed: true,
           ),
         },
@@ -175,12 +203,14 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
           color: p.get('color').build(),
           valueColor: p.get('valueColor').build(),
           strokeWidth: p.get('strokeWidth').build(),
+          strokeAlign: p.get('strokeAlign').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
+          strokeCap: p.get('strokeCap').build(),
         );
   }
 
-  /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
+  /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue, StrokeCap? strokeCap, double strokeAlign = strokeAlignCenter})
   CircularProgressIndicator$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -202,6 +232,12 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
 
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
+
+    /// optionalParameters: {StrokeCap? strokeCap} , default:none
+    super.strokeCap,
+
+    /// optionalParameters: {double strokeAlign = strokeAlignCenter} , default:unprocessed=SimpleIdentifierImpl
+    super.strokeAlign,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -239,6 +275,16 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
             init: semanticsValue,
             isNamed: true,
           ),
+          'strokeCap': _i2.BuilderArg<_i4.StrokeCap?>(
+            name: 'strokeCap',
+            init: strokeCap,
+            isNamed: true,
+          ),
+          'strokeAlign': _i2.BuilderArg<double>(
+            name: 'strokeAlign',
+            init: strokeAlign,
+            isNamed: true,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'CircularProgressIndicator.adaptive';
@@ -251,6 +297,8 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
           strokeWidth: p.get('strokeWidth').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
+          strokeCap: p.get('strokeCap').build(),
+          strokeAlign: p.get('strokeAlign').build(),
         );
   }
 
@@ -260,7 +308,7 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
 
 /// class RefreshProgressIndicator extends CircularProgressIndicator
 class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i2.Mate {
-  /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, String? semanticsLabel, String? semanticsValue})
+  /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, double strokeAlign = strokeAlignCenter, String? semanticsLabel, String? semanticsValue, StrokeCap? strokeCap})
   RefreshProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -280,11 +328,17 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
     /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , default:unprocessed=SimpleIdentifierImpl
     super.strokeWidth,
 
+    /// optionalParameters: {double strokeAlign = strokeAlignCenter} , default:unprocessed=SimpleIdentifierImpl
+    super.strokeAlign,
+
     /// optionalParameters: {String? semanticsLabel} , default:none
     super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
+
+    /// optionalParameters: {StrokeCap? strokeCap} , default:none
+    super.strokeCap,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -316,6 +370,11 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
             init: strokeWidth,
             isNamed: true,
           ),
+          'strokeAlign': _i2.BuilderArg<double>(
+            name: 'strokeAlign',
+            init: strokeAlign,
+            isNamed: true,
+          ),
           'semanticsLabel': _i2.BuilderArg<String?>(
             name: 'semanticsLabel',
             init: semanticsLabel,
@@ -324,6 +383,11 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
           'semanticsValue': _i2.BuilderArg<String?>(
             name: 'semanticsValue',
             init: semanticsValue,
+            isNamed: true,
+          ),
+          'strokeCap': _i2.BuilderArg<_i4.StrokeCap?>(
+            name: 'strokeCap',
+            init: strokeCap,
             isNamed: true,
           ),
         },
@@ -337,8 +401,10 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
           color: p.get('color').build(),
           valueColor: p.get('valueColor').build(),
           strokeWidth: p.get('strokeWidth').build(),
+          strokeAlign: p.get('strokeAlign').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
+          strokeCap: p.get('strokeCap').build(),
         );
   }
 

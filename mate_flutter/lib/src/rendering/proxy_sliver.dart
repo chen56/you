@@ -60,9 +60,6 @@ class RenderSliverIgnorePointer$Mate extends _i1.RenderSliverIgnorePointer with 
 
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     super.ignoring,
-
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
   })  : mateParams = {
           'sliver': _i2.BuilderArg<_i3.RenderSliver?>(
             name: 'sliver',
@@ -75,11 +72,6 @@ class RenderSliverIgnorePointer$Mate extends _i1.RenderSliverIgnorePointer with 
             isNamed: true,
             defaultValue: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
         },
         super() {
     mateBuilderName = 'RenderSliverIgnorePointer';
@@ -87,7 +79,6 @@ class RenderSliverIgnorePointer$Mate extends _i1.RenderSliverIgnorePointer with 
     mateBuilder = (p) => RenderSliverIgnorePointer$Mate(
           sliver: p.get('sliver').build(),
           ignoring: p.get('ignoring').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
         );
   }
 
@@ -168,6 +159,30 @@ class RenderSliverAnimatedOpacity$Mate extends _i1.RenderSliverAnimatedOpacity w
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class RenderSliverConstrainedCrossAxis extends RenderProxySliver
+class RenderSliverConstrainedCrossAxis$Mate extends _i1.RenderSliverConstrainedCrossAxis with _i2.Mate {
+  /// RenderSliverConstrainedCrossAxis RenderSliverConstrainedCrossAxis({required double maxExtent})
+  RenderSliverConstrainedCrossAxis$Mate(
+      {
+      /// optionalParameters: {required double maxExtent} , default:none
+      required super.maxExtent})
+      : mateParams = {
+          'maxExtent': _i2.BuilderArg<double>(
+            name: 'maxExtent',
+            init: maxExtent,
+            isNamed: true,
+          )
+        },
+        super() {
+    mateBuilderName = 'RenderSliverConstrainedCrossAxis';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderSliverConstrainedCrossAxis$Mate(maxExtent: p.get('maxExtent').build());
   }
 
   @override

@@ -134,7 +134,7 @@ class SliverConstraints$Mate extends _i1.SliverConstraints with _i2.Mate {
 
 /// class SliverGeometry with Diagnosticable
 class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
-  /// SliverGeometry SliverGeometry({double scrollExtent = 0.0, double paintExtent = 0.0, double paintOrigin = 0.0, double? layoutExtent, double maxPaintExtent = 0.0, double maxScrollObstructionExtent = 0.0, double? hitTestExtent, bool? visible, bool hasVisualOverflow = false, double? scrollOffsetCorrection, double? cacheExtent})
+  /// SliverGeometry SliverGeometry({double scrollExtent = 0.0, double paintExtent = 0.0, double paintOrigin = 0.0, double? layoutExtent, double maxPaintExtent = 0.0, double maxScrollObstructionExtent = 0.0, double? crossAxisExtent, double? hitTestExtent, bool? visible, bool hasVisualOverflow = false, double? scrollOffsetCorrection, double? cacheExtent})
   SliverGeometry$Mate({
     /// optionalParameters: {double scrollExtent = 0.0} , default:processed=DoubleLiteralImpl
     super.scrollExtent,
@@ -153,6 +153,9 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
 
     /// optionalParameters: {double maxScrollObstructionExtent = 0.0} , default:processed=DoubleLiteralImpl
     super.maxScrollObstructionExtent,
+
+    /// optionalParameters: {double? crossAxisExtent} , default:none
+    super.crossAxisExtent,
 
     /// optionalParameters: {double? hitTestExtent} , default:none
     super.hitTestExtent,
@@ -204,6 +207,11 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
+          'crossAxisExtent': _i2.BuilderArg<double?>(
+            name: 'crossAxisExtent',
+            init: crossAxisExtent,
+            isNamed: true,
+          ),
           'hitTestExtent': _i2.BuilderArg<double?>(
             name: 'hitTestExtent',
             init: hitTestExtent,
@@ -241,6 +249,7 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
           maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
+          crossAxisExtent: p.get('crossAxisExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),

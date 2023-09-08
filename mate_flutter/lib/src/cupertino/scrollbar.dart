@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/scrollbar.dart' as _i8;
 
 /// class CupertinoScrollbar extends RawScrollbar
 class CupertinoScrollbar$Mate extends _i1.CupertinoScrollbar with _i2.Mate {
-  /// CupertinoScrollbar CupertinoScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, double thickness = defaultThickness, double thicknessWhileDragging = defaultThicknessWhileDragging, Radius radius = defaultRadius, Radius radiusWhileDragging = defaultRadiusWhileDragging, bool Function(ScrollNotification)? notificationPredicate, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown})
+  /// CupertinoScrollbar CupertinoScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, double thickness = defaultThickness, double thicknessWhileDragging = defaultThicknessWhileDragging, Radius radius = defaultRadius, Radius radiusWhileDragging = defaultRadiusWhileDragging, bool Function(ScrollNotification)? notificationPredicate, ScrollbarOrientation? scrollbarOrientation})
   CupertinoScrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,

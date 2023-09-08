@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class TextButton extends ButtonStyleButton
 class TextButton$Mate extends _i1.TextButton with _i2.Mate {
-  /// TextButton TextButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget child})
+  /// TextButton TextButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, bool? isSemanticButton = true, required Widget child})
   TextButton$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -44,6 +44,9 @@ class TextButton$Mate extends _i1.TextButton with _i2.Mate {
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
+
+    /// optionalParameters: {bool? isSemanticButton = true} , default:processed=BooleanLiteralImpl
+    super.isSemanticButton,
 
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
@@ -100,6 +103,12 @@ class TextButton$Mate extends _i1.TextButton with _i2.Mate {
             init: statesController,
             isNamed: true,
           ),
+          'isSemanticButton': _i2.BuilderArg<bool?>(
+            name: 'isSemanticButton',
+            init: isSemanticButton,
+            isNamed: true,
+            defaultValue: true,
+          ),
           'child': _i2.BuilderArg<_i9.Widget>(
             name: 'child',
             init: child,
@@ -120,6 +129,7 @@ class TextButton$Mate extends _i1.TextButton with _i2.Mate {
           autofocus: p.get('autofocus').build(),
           clipBehavior: p.get('clipBehavior').build(),
           statesController: p.get('statesController').build(),
+          isSemanticButton: p.get('isSemanticButton').build(),
           child: p.get('child').build(),
         );
   }

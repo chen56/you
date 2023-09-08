@@ -14,7 +14,7 @@ import 'package:flutter/src/painting/borders.dart' as _i10;
 
 /// class Checkbox extends StatefulWidget
 class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
-  /// Checkbox Checkbox({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false})
+  /// Checkbox Checkbox({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false, String? semanticLabel})
   Checkbox$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -72,6 +72,9 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
 
     /// optionalParameters: {bool isError = false} , default:processed=BooleanLiteralImpl
     super.isError,
+
+    /// optionalParameters: {String? semanticLabel} , default:none
+    super.semanticLabel,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -171,6 +174,11 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'semanticLabel': _i2.BuilderArg<String?>(
+            name: 'semanticLabel',
+            init: semanticLabel,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'Checkbox';
@@ -195,10 +203,11 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
           shape: p.get('shape').build(),
           side: p.get('side').build(),
           isError: p.get('isError').build(),
+          semanticLabel: p.get('semanticLabel').build(),
         );
   }
 
-  /// Checkbox Checkbox.adaptive({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false})
+  /// Checkbox Checkbox.adaptive({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false, String? semanticLabel})
   Checkbox$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -256,6 +265,9 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
 
     /// optionalParameters: {bool isError = false} , default:processed=BooleanLiteralImpl
     super.isError,
+
+    /// optionalParameters: {String? semanticLabel} , default:none
+    super.semanticLabel,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -355,6 +367,11 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'semanticLabel': _i2.BuilderArg<String?>(
+            name: 'semanticLabel',
+            init: semanticLabel,
+            isNamed: true,
+          ),
         },
         super.adaptive() {
     mateBuilderName = 'Checkbox.adaptive';
@@ -379,6 +396,7 @@ class Checkbox$Mate extends _i1.Checkbox with _i2.Mate {
           shape: p.get('shape').build(),
           side: p.get('side').build(),
           isError: p.get('isError').build(),
+          semanticLabel: p.get('semanticLabel').build(),
         );
   }
 

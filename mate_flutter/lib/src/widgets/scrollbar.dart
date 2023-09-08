@@ -179,7 +179,7 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
 
 /// class RawScrollbar extends StatefulWidget
 class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
-  /// RawScrollbar RawScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, OutlinedBorder? shape, Radius? radius, double? thickness, Color? thumbColor, double minThumbLength = _kMinThumbExtent, double? minOverscrollLength, bool? trackVisibility, Radius? trackRadius, Color? trackColor, Color? trackBorderColor, Duration fadeDuration = _kScrollbarFadeDuration, Duration timeToFade = _kScrollbarTimeToFade, Duration pressDuration = Duration.zero, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, EdgeInsets? padding, bool? isAlwaysShown})
+  /// RawScrollbar RawScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, OutlinedBorder? shape, Radius? radius, double? thickness, Color? thumbColor, double minThumbLength = _kMinThumbExtent, double? minOverscrollLength, bool? trackVisibility, Radius? trackRadius, Color? trackColor, Color? trackBorderColor, Duration fadeDuration = _kScrollbarFadeDuration, Duration timeToFade = _kScrollbarTimeToFade, Duration pressDuration = Duration.zero, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, EdgeInsets? padding})
   RawScrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,

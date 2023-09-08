@@ -377,12 +377,12 @@ class ClipRect$Mate extends _i1.ClipRect with _i2.Mate {
 
 /// class ClipRRect extends SingleChildRenderObjectWidget
 class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
-  /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
+  /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     super.borderRadius,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
@@ -399,7 +399,7 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i9.BorderRadiusGeometry?>(
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadiusGeometry>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
@@ -4410,9 +4410,6 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     super.ignoring,
 
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
-
     /// optionalParameters: {Widget? child} , default:none
     super.child,
   })  : mateParams = {
@@ -4427,11 +4424,6 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
             init: child,
@@ -4444,7 +4436,6 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
     mateBuilder = (p) => IgnorePointer$Mate(
           key: p.get('key').build(),
           ignoring: p.get('ignoring').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
   }
@@ -4455,7 +4446,7 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
 
 /// class AbsorbPointer extends SingleChildRenderObjectWidget
 class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
-  /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
+  /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, bool? ignoringSemantics, Widget? child})
   AbsorbPointer$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -4465,9 +4456,6 @@ class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
 
     /// optionalParameters: {Widget? child} , default:none
     super.child,
-
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -4485,11 +4473,6 @@ class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
         },
         super() {
     mateBuilderName = 'AbsorbPointer';
@@ -4498,7 +4481,6 @@ class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
           key: p.get('key').build(),
           absorbing: p.get('absorbing').build(),
           child: p.get('child').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
         );
   }
 
@@ -4561,7 +4543,7 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
 
 /// class Semantics extends SingleChildRenderObjectWidget
 class Semantics$Mate extends _i1.Semantics with _i2.Mate {
-  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
+  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -4577,6 +4559,9 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     super.excludeSemantics,
+
+    /// optionalParameters: {bool blockUserActions = false} , default:processed=BooleanLiteralImpl
+    super.blockUserActions,
 
     /// optionalParameters: {bool? enabled} , default:none
     super.enabled,
@@ -4780,6 +4765,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           'excludeSemantics': _i2.BuilderArg<bool>(
             name: 'excludeSemantics',
             init: excludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'blockUserActions': _i2.BuilderArg<bool>(
+            name: 'blockUserActions',
+            init: blockUserActions,
             isNamed: true,
             defaultValue: false,
           ),
@@ -5088,6 +5079,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           container: p.get('container').build(),
           explicitChildNodes: p.get('explicitChildNodes').build(),
           excludeSemantics: p.get('excludeSemantics').build(),
+          blockUserActions: p.get('blockUserActions').build(),
           enabled: p.get('enabled').build(),
           checked: p.get('checked').build(),
           mixed: p.get('mixed').build(),
@@ -5150,7 +5142,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
         );
   }
 
-  /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
+  /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, required SemanticsProperties properties})
   Semantics$Mate.fromProperties({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -5166,6 +5158,9 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     super.excludeSemantics,
+
+    /// optionalParameters: {bool blockUserActions = false} , default:processed=BooleanLiteralImpl
+    super.blockUserActions,
 
     /// optionalParameters: {required SemanticsProperties properties} , default:none
     required super.properties,
@@ -5198,6 +5193,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'blockUserActions': _i2.BuilderArg<bool>(
+            name: 'blockUserActions',
+            init: blockUserActions,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'properties': _i2.BuilderArg<_i34.SemanticsProperties>(
             name: 'properties',
             init: properties,
@@ -5213,6 +5214,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           container: p.get('container').build(),
           explicitChildNodes: p.get('explicitChildNodes').build(),
           excludeSemantics: p.get('excludeSemantics').build(),
+          blockUserActions: p.get('blockUserActions').build(),
           properties: p.get('properties').build(),
         );
   }

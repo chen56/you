@@ -8,9 +8,9 @@ import 'package:flutter/cupertino.dart' as _i4;
 
 /// class ContextMenuButtonItem
 class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate {
-  /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
+  /// ContextMenuButtonItem ContextMenuButtonItem({required void Function()? onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
-    /// optionalParameters: {required void Function() onPressed} , default:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required super.onPressed,
 
     /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , default:processed=PrefixedIdentifierImpl
@@ -19,7 +19,7 @@ class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate
     /// optionalParameters: {String? label} , default:none
     super.label,
   })  : mateParams = {
-          'onPressed': _i2.BuilderArg<_i3.VoidCallback>(
+          'onPressed': _i2.BuilderArg<_i3.VoidCallback?>(
             name: 'onPressed',
             init: onPressed,
             isNamed: true,

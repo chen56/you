@@ -1271,9 +1271,6 @@ class RenderIgnorePointer$Mate extends _i1.RenderIgnorePointer with _i2.Mate {
 
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     super.ignoring,
-
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',
@@ -1286,11 +1283,6 @@ class RenderIgnorePointer$Mate extends _i1.RenderIgnorePointer with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
         },
         super() {
     mateBuilderName = 'RenderIgnorePointer';
@@ -1298,7 +1290,6 @@ class RenderIgnorePointer$Mate extends _i1.RenderIgnorePointer with _i2.Mate {
     mateBuilder = (p) => RenderIgnorePointer$Mate(
           child: p.get('child').build(),
           ignoring: p.get('ignoring').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
         );
   }
 
@@ -1350,9 +1341,6 @@ class RenderAbsorbPointer$Mate extends _i1.RenderAbsorbPointer with _i2.Mate {
 
     /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
     super.absorbing,
-
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',
@@ -1365,11 +1353,6 @@ class RenderAbsorbPointer$Mate extends _i1.RenderAbsorbPointer with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
         },
         super() {
     mateBuilderName = 'RenderAbsorbPointer';
@@ -1377,7 +1360,6 @@ class RenderAbsorbPointer$Mate extends _i1.RenderAbsorbPointer with _i2.Mate {
     mateBuilder = (p) => RenderAbsorbPointer$Mate(
           child: p.get('child').build(),
           absorbing: p.get('absorbing').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
         );
   }
 
@@ -1512,7 +1494,7 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
 class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations with _i2.Mate {
-  /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
+  /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
@@ -1528,6 +1510,9 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     super.excludeSemantics,
+
+    /// optionalParameters: {bool blockUserActions = false} , default:processed=BooleanLiteralImpl
+    super.blockUserActions,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
@@ -1560,6 +1545,12 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
             isNamed: true,
             defaultValue: false,
           ),
+          'blockUserActions': _i2.BuilderArg<bool>(
+            name: 'blockUserActions',
+            init: blockUserActions,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
@@ -1575,6 +1566,7 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
           container: p.get('container').build(),
           explicitChildNodes: p.get('explicitChildNodes').build(),
           excludeSemantics: p.get('excludeSemantics').build(),
+          blockUserActions: p.get('blockUserActions').build(),
           textDirection: p.get('textDirection').build(),
         );
   }

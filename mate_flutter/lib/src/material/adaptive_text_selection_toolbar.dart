@@ -89,7 +89,7 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
         );
   }
 
-  /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
+  /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required void Function()? onLiveTextInput, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.editable({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -108,6 +108,9 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
 
     /// optionalParameters: {required void Function()? onSelectAll} , default:none
     required super.onSelectAll,
+
+    /// optionalParameters: {required void Function()? onLiveTextInput} , default:none
+    required super.onLiveTextInput,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required super.anchors,
@@ -142,6 +145,11 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
             init: onSelectAll,
             isNamed: true,
           ),
+          'onLiveTextInput': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onLiveTextInput',
+            init: onLiveTextInput,
+            isNamed: true,
+          ),
           'anchors': _i2.BuilderArg<_i5.TextSelectionToolbarAnchors>(
             name: 'anchors',
             init: anchors,
@@ -158,6 +166,7 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
           onSelectAll: p.get('onSelectAll').build(),
+          onLiveTextInput: p.get('onLiveTextInput').build(),
           anchors: p.get('anchors').build(),
         );
   }

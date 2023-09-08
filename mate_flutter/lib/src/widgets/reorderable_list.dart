@@ -18,7 +18,7 @@ import 'package:flutter/src/widgets/scroll_delegate.dart' as _i14;
 
 /// class ReorderableList extends StatefulWidget
 class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
-  /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge, double? autoScrollerVelocityScalar})
   ReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -85,6 +85,9 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {double? autoScrollerVelocityScalar} , default:none
+    super.autoScrollerVelocityScalar,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -203,6 +206,11 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             isNamed: true,
             defaultValue: _i13.Clip.hardEdge,
           ),
+          'autoScrollerVelocityScalar': _i2.BuilderArg<double?>(
+            name: 'autoScrollerVelocityScalar',
+            init: autoScrollerVelocityScalar,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ReorderableList';
@@ -230,6 +238,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          autoScrollerVelocityScalar: p.get('autoScrollerVelocityScalar').build(),
         );
   }
 
@@ -239,7 +248,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
 
 /// class SliverReorderableList extends StatefulWidget
 class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate {
-  /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator})
+  /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, double? autoScrollerVelocityScalar})
   SliverReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -270,6 +279,9 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
 
     /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
     super.proxyDecorator,
+
+    /// optionalParameters: {double? autoScrollerVelocityScalar} , default:none
+    super.autoScrollerVelocityScalar,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -321,6 +333,11 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
             init: proxyDecorator,
             isNamed: true,
           ),
+          'autoScrollerVelocityScalar': _i2.BuilderArg<double?>(
+            name: 'autoScrollerVelocityScalar',
+            init: autoScrollerVelocityScalar,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'SliverReorderableList';
@@ -336,6 +353,7 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
           itemExtent: p.get('itemExtent').build(),
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
+          autoScrollerVelocityScalar: p.get('autoScrollerVelocityScalar').build(),
         );
   }
 

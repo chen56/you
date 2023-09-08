@@ -50,7 +50,6 @@ EnumRegister registerEnum() {
   result.register(_i3.PointerChange.values);
   result.register(_i3.PointerDeviceKind.values);
   result.register(_i3.PointerSignalKind.values);
-  result.register(_i3.PointerPreferredStylusAuxiliaryAction.values);
   result.register(_i3.FontStyle.values);
   result.register(_i3.TextAlign.values);
   result.register(_i3.TextBaseline.values);
@@ -119,10 +118,12 @@ EnumRegister registerEnum() {
   result.register(_i6.ScrollDecelerationRate.values);
   result.register(_i6.ScrollPositionAlignmentPolicy.values);
   result.register(_i6.ScrollViewKeyboardDismissBehavior.values);
+  result.register(_i6.DiagonalDragBehavior.values);
   result.register(_i6.ScrollIncrementType.values);
   result.register(_i6.ScrollbarOrientation.values);
   result.register(_i6.SnapshotMode.values);
   result.register(_i6.ClipboardStatus.values);
+  result.register(_i6.LiveTextInputStatus.values);
   result.register(_i6.TextSelectionHandleType.values);
   result.register(_i6.FlexFit.values);
   result.register(_i6.MainAxisSize.values);
@@ -186,6 +187,7 @@ EnumRegister registerEnum() {
   result.register(_i13.NavigationRailLabelType.values);
   result.register(_i13.PopupMenuPosition.values);
   result.register(_i13.RefreshIndicatorTriggerMode.values);
+  result.register(_i13.SliderInteraction.values);
   result.register(_i13.ShowValueIndicator.values);
   result.register(_i13.Thumb.values);
   result.register(_i13.SnackBarClosedReason.values);
@@ -193,6 +195,7 @@ EnumRegister registerEnum() {
   result.register(_i13.StepState.values);
   result.register(_i13.StepperType.values);
   result.register(_i13.TabBarIndicatorSize.values);
+  result.register(_i13.TabAlignment.values);
   result.register(_i13.MaterialTapTargetSize.values);
   result.register(_i13.DayPeriod.values);
   result.register(_i13.TimeOfDayFormat.values);
@@ -201,5 +204,6 @@ EnumRegister registerEnum() {
   result.register(_i13.TooltipTriggerMode.values);
   result.register(_i13.ScriptCategory.values);
   result.register(_i14.Direction.values);
+  result.register(_i14.Variant.values);
   return result;
 }

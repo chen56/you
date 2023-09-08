@@ -6,7 +6,7 @@ import 'package:mate/mate_core.dart' as _i2;
 
 /// class ScrollController extends ChangeNotifier
 class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
-  /// ScrollController ScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
+  /// ScrollController ScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel, void Function(ScrollPosition)? onAttach, void Function(ScrollPosition)? onDetach})
   ScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
     super.initialScrollOffset,
@@ -16,6 +16,12 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
 
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onAttach} , default:none
+    super.onAttach,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onDetach} , default:none
+    super.onDetach,
   })  : mateParams = {
           'initialScrollOffset': _i2.BuilderArg<double>(
             name: 'initialScrollOffset',
@@ -34,6 +40,16 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
             init: debugLabel,
             isNamed: true,
           ),
+          'onAttach': _i2.BuilderArg<_i1.ScrollControllerCallback?>(
+            name: 'onAttach',
+            init: onAttach,
+            isNamed: true,
+          ),
+          'onDetach': _i2.BuilderArg<_i1.ScrollControllerCallback?>(
+            name: 'onDetach',
+            init: onDetach,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ScrollController';
@@ -42,6 +58,8 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
           initialScrollOffset: p.get('initialScrollOffset').build(),
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
+          onAttach: p.get('onAttach').build(),
+          onDetach: p.get('onDetach').build(),
         );
   }
 

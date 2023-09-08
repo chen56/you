@@ -8,7 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'package:flutter/src/widgets/context_menu_button_item.dart' as _i6;
 
-/// class CupertinoTextSelectionToolbarButton extends StatelessWidget
+/// class CupertinoTextSelectionToolbarButton extends StatefulWidget
 class CupertinoTextSelectionToolbarButton$Mate extends _i1.CupertinoTextSelectionToolbarButton with _i2.Mate {
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton({Key? key, void Function()? onPressed, required Widget child})
   CupertinoTextSelectionToolbarButton$Mate({

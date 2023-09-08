@@ -202,7 +202,7 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
 
 /// class HtmlElementView extends StatelessWidget
 class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
-  /// HtmlElementView HtmlElementView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated})
+  /// HtmlElementView HtmlElementView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, Object? creationParams})
   HtmlElementView$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -212,6 +212,9 @@ class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
 
     /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     super.onPlatformViewCreated,
+
+    /// optionalParameters: {Object? creationParams} , default:none
+    super.creationParams,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -228,6 +231,11 @@ class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
             init: onPlatformViewCreated,
             isNamed: true,
           ),
+          'creationParams': _i2.BuilderArg<Object?>(
+            name: 'creationParams',
+            init: creationParams,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'HtmlElementView';
@@ -236,6 +244,7 @@ class HtmlElementView$Mate extends _i1.HtmlElementView with _i2.Mate {
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
           onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
+          creationParams: p.get('creationParams').build(),
         );
   }
 

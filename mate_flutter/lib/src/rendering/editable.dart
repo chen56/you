@@ -51,9 +51,9 @@ class TextSelectionPoint$Mate extends _i1.TextSelectionPoint with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RenderEditable extends RenderBox with RelayoutWhenSystemFontsChangeMixin, ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderBoxContainerDefaultsMixin<RenderBox, TextParentData> implements TextLayoutMetrics
+/// class RenderEditable extends RenderBox with RelayoutWhenSystemFontsChangeMixin, ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderInlineChildrenContainerDefaults implements TextLayoutMetrics
 class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
-  /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextSelection? selection, required ViewportOffset offset, void Function(Rect)? onCaretChanged, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
+  /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextSelection? selection, required ViewportOffset offset, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
   RenderEditable$Mate({
     /// optionalParameters: {InlineSpan? text} , default:none
     super.text,
@@ -105,9 +105,6 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
     required super.offset,
-
-    /// optionalParameters: {void Function(Rect)? onCaretChanged} , default:none
-    super.onCaretChanged,
 
     /// optionalParameters: {bool ignorePointer = false} , default:processed=BooleanLiteralImpl
     super.ignorePointer,
@@ -273,11 +270,6 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             init: offset,
             isNamed: true,
           ),
-          'onCaretChanged': _i2.BuilderArg<_i1.CaretChangedHandler?>(
-            name: 'onCaretChanged',
-            init: onCaretChanged,
-            isNamed: true,
-          ),
           'ignorePointer': _i2.BuilderArg<bool>(
             name: 'ignorePointer',
             init: ignorePointer,
@@ -436,7 +428,6 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
           textScaleFactor: p.get('textScaleFactor').build(),
           selection: p.get('selection').build(),
           offset: p.get('offset').build(),
-          onCaretChanged: p.get('onCaretChanged').build(),
           ignorePointer: p.get('ignorePointer').build(),
           readOnly: p.get('readOnly').build(),
           forceLine: p.get('forceLine').build(),

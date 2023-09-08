@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/scrollbar.dart' as _i8;
 
 /// class Scrollbar extends StatelessWidget
 class Scrollbar$Mate extends _i1.Scrollbar with _i2.Mate {
-  /// Scrollbar Scrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, bool? trackVisibility, double? thickness, Radius? radius, bool Function(ScrollNotification)? notificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown, bool? showTrackOnHover, double? hoverThickness})
+  /// Scrollbar Scrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, bool? trackVisibility, double? thickness, Radius? radius, bool Function(ScrollNotification)? notificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, bool? showTrackOnHover})
   Scrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,

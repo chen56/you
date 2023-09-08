@@ -35,7 +35,7 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSema
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RenderParagraph extends RenderBox with ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderBoxContainerDefaultsMixin<RenderBox, TextParentData>, RelayoutWhenSystemFontsChangeMixin
+/// class RenderParagraph extends RenderBox with ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderInlineChildrenContainerDefaults, RelayoutWhenSystemFontsChangeMixin
 class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
   /// RenderParagraph RenderParagraph(InlineSpan text, {TextAlign textAlign = TextAlign.start, required TextDirection textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, List<RenderBox>? children, Color? selectionColor, SelectionRegistrar? registrar})
   RenderParagraph$Mate(
