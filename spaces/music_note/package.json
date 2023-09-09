@@ -6,12 +6,12 @@
   },
   "private": true,
   "scripts": {
-    "clean": "rm -rf server dist ",
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
+    "clean": "rm -rf server dist ",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
@@ -20,6 +20,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
+    "test.unit": "vitest components",
+    "test.unit.ui": "vitest --ui components",
     "qwik": "qwik"
   },
   "devDependencies": {
@@ -29,12 +31,14 @@
     "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "6.2.0",
     "@typescript-eslint/parser": "6.2.0",
+    "@vitest/ui": "^0.33.0",
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "^1.2.10",
     "prettier": "3.0.0",
     "typescript": "5.1.6",
     "undici": "5.22.1",
     "vite": "4.4.7",
-    "vite-tsconfig-paths": "4.2.0"
+    "vite-tsconfig-paths": "4.2.0",
+    "vitest": "^0.33.0"
   }
 }
