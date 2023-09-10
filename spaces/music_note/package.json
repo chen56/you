@@ -33,6 +33,7 @@
     "@typescript-eslint/parser": "6.2.0",
     "@vitest/ui": "^0.33.0",
     "autoprefixer": "^10.4.14",
+    "daisyui": "^3.7.3",
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "^1.2.10",
     "postcss": "8.4.27",
