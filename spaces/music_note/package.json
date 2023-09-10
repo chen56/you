@@ -22,7 +22,9 @@
     "start": "vite --open --mode ssr",
     "test.unit": "vitest components",
     "test.unit.ui": "vitest --ui components",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "preview.deno":"qwik build && deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./dist/ --port 8000 -g --brotli"
+
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.2.10",
