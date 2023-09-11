@@ -19,11 +19,11 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
+    "preview.deno": "qwik build && deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./dist/ --port 8000 -g --brotli",
     "start": "vite --open --mode ssr",
-    "test.unit": "vitest components",
+    "test.unit": "vitest ",
     "test.unit.ui": "vitest --ui components",
-    "qwik": "qwik",
-    "preview.deno": "qwik build && deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./dist/ --port 8000 -g --brotli"
+    "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.2.10",
