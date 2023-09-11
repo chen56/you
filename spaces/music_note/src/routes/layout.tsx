@@ -43,8 +43,9 @@ export default component$(() => {
           <div class="drawer-side">
             <label for="my-drawer-left" class="drawer-overlay"></label>
             <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-              <li><Link href="/">muisc_note (root)</Link></li>
-              <li><Link href="/music_basic">muisc_basic (prefered)</Link></li>
+              <li><Link href="/">muisc_note home</Link></li>
+              <li><Link href="/music_basic">muisc_basic</Link></li>
+              <li><Link href="/temp">temp</Link></li>
             </ul>
           </div>
         </div>

@@ -23,8 +23,7 @@
     "test.unit": "vitest components",
     "test.unit.ui": "vitest --ui components",
     "qwik": "qwik",
-    "preview.deno":"qwik build && deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./dist/ --port 8000 -g --brotli"
-
+    "preview.deno": "qwik build && deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./dist/ --port 8000 -g --brotli"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.2.10",
@@ -46,5 +45,8 @@
     "vite": "4.4.7",
     "vite-tsconfig-paths": "4.2.0",
     "vitest": "^0.33.0"
+  },
+  "dependencies": {
+    "tone": "^14.7.77"
   }
 }
