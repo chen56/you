@@ -12,6 +12,7 @@ const Widget _cellSplitBlock = SizedBox(height: 18);
 class DeferredScreen extends StatelessWidget with Screen {
   final Note note;
   final NoteSystem noteSystem;
+
   DeferredScreen({super.key, required this.note, required this.noteSystem});
 
   @override
@@ -63,6 +64,7 @@ class LayoutScreen extends StatefulWidget with Screen<void> {
 class _LayoutScreenState extends State<LayoutScreen> {
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
   final Outline outline = Outline();
+
   _LayoutScreenState();
 
   @override
@@ -163,10 +165,9 @@ class _LayoutScreenState extends State<LayoutScreen> {
               const Text("Devtools"),
               const Spacer(),
               IconButton(
-                onPressed: () {},
-                tooltip: 'Search',
-                icon: const Icon(Icons.search),
-              ),
+                  onPressed: () {},
+                  tooltip: 'Search',
+                  icon: const Icon(Icons.search),),
               IconButton(
                 onPressed: () {},
                 tooltip: 'Favorite',
@@ -353,6 +354,7 @@ class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
   final NoteContentExts contentExtensions;
+
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
     this.cell, {
@@ -461,6 +463,7 @@ class _GetSizeBuilder extends StatelessWidget {
   final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
   final ValueWidgetBuilder<Size> builder;
   final Widget? child;
+
   _GetSizeBuilder({
     // ignore: unused_element
     super.key,
@@ -492,6 +495,7 @@ class _SizeProvider extends StatefulWidget {
   const _SizeProvider(
       {Key? key, required this.onChildSize, required this.child})
       : super(key: key);
+
   @override
   _SizeProviderState createState() => _SizeProviderState();
 }
