@@ -79,6 +79,7 @@ class Note {
 
   NoteSource _source = _emptyPageSource;
 
+  // TODO QRoute的 deferred处理可以看下 ：https://medium.com/@SchabanBo/reduce-your-flutter-web-app-loading-time-8018d8f442
   DeferredNotePageBuilder? deferredPageBuilder;
 
   SpaceNoteConf? spaceNoteConf;
