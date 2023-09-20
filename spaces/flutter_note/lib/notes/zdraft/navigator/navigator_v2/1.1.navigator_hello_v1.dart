@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+Rules rules = Rules._();
+/*
+ 为什么要用route?
+ 1.
+
+ */
 void main() {
   runApp(const App());
 }
@@ -23,7 +29,21 @@ class Rules {
       _rules.firstWhere((element) => element.path == path, orElse: () => notFound);
 }
 
-Rules rules = Rules._();
+class RouteRule {
+  const RouteRule({
+    required this.path,
+    required this.widget,
+  });
+
+  final Widget widget;
+  final String path;
+
+  MaterialPageRoute buildRoute() => MaterialPageRoute(builder: (context) => widget);
+
+  @override
+  String toString() => path;
+}
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,12 +51,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(rules.home.path)),
+      appBar: AppBar(title: const Text("/home")),
       body: ElevatedButton(
         child: const Text("Navigator.push(context, Rules.help)"),
-        onPressed: () {
-          Navigator.pushNamed(context, rules.help.path);
-        },
+        onPressed: () => Navigator.pushNamed(context, "/help"),
       ),
     );
   }
@@ -48,7 +66,7 @@ class HelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(rules.help.path)),
+      appBar: AppBar(title: const Text("/help")),
       body: ElevatedButton(
         child: const Text("Navigator.pop(context)"),
         onPressed: () {
@@ -72,24 +90,5 @@ class App extends StatelessWidget {
         body: rules.home.widget,
       ),
     );
-  }
-}
-
-class RouteRule {
-  const RouteRule({
-    required this.path,
-    required this.widget,
-  });
-
-  final Widget widget;
-  final String path;
-
-  MaterialPageRoute buildRoute() {
-    return MaterialPageRoute(builder: (context) => widget);
-  }
-
-  @override
-  String toString() {
-    return path;
   }
 }

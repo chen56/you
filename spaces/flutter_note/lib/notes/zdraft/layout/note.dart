@@ -42,5 +42,43 @@ Row(
           ],
         ),
       );
+
+
+### 填满空间
+
+
+Column(
+              children: [
+                Expanded(child: Container(color: Colors.red,height: 100,)),
+                Expanded(child: Container(color: Colors.green,height: 100,)),
+                Flexible(
+                    child: Container(
+                  child: TextButton(onPressed: () {}, child: Text("ss s")),
+                )),
+                ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity,25), // NEW
+                    ),
+                    child: Text("ElevatedButton.style.minimumSize.width")),
+                SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        onPressed: () {}, child: const Text('SizedBox.width'))),
+                MaterialButton(
+                    minWidth: double.infinity,
+                    onPressed: () {},
+                    child: const Text('MaterialButton.minWidth')),
+                ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        minWidth: double.infinity, minHeight: 70),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('ConstrainedBox.constraints.minWidth'),
+                    )),
+                const Spacer(),
+              ],
+            )
+
   ''');
 }

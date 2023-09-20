@@ -112,6 +112,8 @@ flutter:
     - lib/notes/samples/stand_alone/button/
     - lib/notes/samples/container/bar/
     - lib/notes/zdraft/webview/
+    - lib/notes/zdraft/readable_question/
+    - lib/notes/zdraft/adaptive_navigation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

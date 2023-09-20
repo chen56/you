@@ -119,7 +119,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     var noteResult = buildNote(context);
     var navigatorTree = _NoteTreeView(widget.root);
 
-    var outlineView = _OutlineView(
+    var outlineView = _OutlineTreeView(
       mainContentViewController: controllerV,
       outline: noteResult.outline,
     );
@@ -290,13 +290,13 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   }
 }
 
-class _OutlineView extends StatelessWidget {
+class _OutlineTreeView extends StatelessWidget {
   final Outline outline;
 
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
   final ScrollController mainContentViewController;
 
-  const _OutlineView(
+  const _OutlineTreeView(
       {required this.outline, required this.mainContentViewController});
 
   @override

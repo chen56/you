@@ -11,6 +11,8 @@ import 'package:flutter_note/notes/samples/container/bar/note.dart' deferred as 
 import 'package:flutter_note/notes/samples/container/bar/note.g.dart' as samples_container_bar_g;
 import 'package:flutter_note/notes/samples/stand_alone/button/note.dart' deferred as samples_stand_alone_button_;
 import 'package:flutter_note/notes/samples/stand_alone/button/note.g.dart' as samples_stand_alone_button_g;
+import 'package:flutter_note/notes/zdraft/adaptive_navigation/note.dart' deferred as zdraft_adaptive_navigation_;
+import 'package:flutter_note/notes/zdraft/adaptive_navigation/note.g.dart' as zdraft_adaptive_navigation_g;
 import 'package:flutter_note/notes/zdraft/analyzer/note.dart' deferred as zdraft_analyzer_;
 import 'package:flutter_note/notes/zdraft/analyzer/note.g.dart' as zdraft_analyzer_g;
 import 'package:flutter_note/notes/zdraft/assets/note.dart' deferred as zdraft_assets_;
@@ -78,6 +80,8 @@ import 'package:flutter_note/notes/zdraft/note-self/test/temp/note.dart' deferre
 import 'package:flutter_note/notes/zdraft/note-self/test/temp/note.g.dart' as zdraft_note_self_test_temp_g;
 import 'package:flutter_note/notes/zdraft/note.dart' deferred as zdraft_;
 import 'package:flutter_note/notes/zdraft/note.g.dart' as zdraft_g;
+import 'package:flutter_note/notes/zdraft/readable_question/note.dart' deferred as zdraft_readable_question_;
+import 'package:flutter_note/notes/zdraft/readable_question/note.g.dart' as zdraft_readable_question_g;
 import 'package:flutter_note/notes/zdraft/research/remote_view/note.dart' deferred as zdraft_research_remote_view_;
 import 'package:flutter_note/notes/zdraft/research/remote_view/note.g.dart' as zdraft_research_remote_view_g;
 import 'package:flutter_note/notes/zdraft/scrollable/Dismissible/note.dart' deferred as zdraft_scrollable_Dismissible_;
@@ -260,6 +264,12 @@ abstract class BaseNotes {
       (note) async => note.loadPage(
           builder: await zdraft_components_bar_.loadLibrary().then((value) => zdraft_components_bar_.build)));
 
+  final Note zdraft_readable_question = put(
+      "/zdraft/readable_question",
+      zdraft_readable_question_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await zdraft_readable_question_.loadLibrary().then((value) => zdraft_readable_question_.build)));
+
   final Note zdraft_selectable = put(
       "/zdraft/selectable",
       zdraft_selectable_g.noteInfo(),
@@ -285,6 +295,12 @@ abstract class BaseNotes {
           builder: await zdraft_scrollable_Dismissible_
               .loadLibrary()
               .then((value) => zdraft_scrollable_Dismissible_.build)));
+
+  final Note zdraft_adaptive_navigation = put(
+      "/zdraft/adaptive_navigation",
+      zdraft_adaptive_navigation_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await zdraft_adaptive_navigation_.loadLibrary().then((value) => zdraft_adaptive_navigation_.build)));
 
   final Note zdraft_dev_debug = put(
       "/zdraft/dev/debug",
