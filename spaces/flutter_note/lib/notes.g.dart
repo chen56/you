@@ -265,7 +265,7 @@ abstract class BaseNotes {
           builder: await zdraft_components_bar_.loadLibrary().then((value) => zdraft_components_bar_.build)));
 
   final Note zdraft_readable_question = put(
-      "/zdraft/readable_question",
+      "/zdraft/readable_html_vs_dart",
       zdraft_readable_question_g.noteInfo(),
       (note) async => note.loadPage(
           builder: await zdraft_readable_question_.loadLibrary().then((value) => zdraft_readable_question_.build)));

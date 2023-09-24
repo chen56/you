@@ -183,6 +183,7 @@ class Note {
     return [...parent!.topList(), this];
   }
 
+  // todo bug
   Note? child(String path) {
     Note? result = this;
     for (var split
