@@ -240,7 +240,7 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 
   @override
   Future<void> setNewRoutePath(RouteInformation configuration) {
-    _push(configuration.location ?? "/");
+    _push(configuration.location);
     return SynchronousFuture(null);
   }
 
