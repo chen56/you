@@ -248,8 +248,7 @@ class PlatformRouteInformationProvider$Mate extends _i1.PlatformRouteInformation
         super() {
     mateBuilderName = 'PlatformRouteInformationProvider';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
+    mateBuilder = (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
   }
 
   @override
