@@ -123,7 +123,7 @@ build(BuildContext context, Pen print) {
 
 ## Flutter cheatsheet计划
 
-Widget无数，内容太多，先分个大类：
+Widget分类：
 
 - 组件Component
   - 容器： 放东西用的

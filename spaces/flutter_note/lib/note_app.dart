@@ -100,7 +100,7 @@ class NoteApp extends StatelessWidget {
         sharedPreferences: noteSystem.sharedPreferences);
 
     notes.root.extendTree(true);
-    notes.zdraft.extendTree(false);
+    notes.z_draft.extendTree(false);
 
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',
