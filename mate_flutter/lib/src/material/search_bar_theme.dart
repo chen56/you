@@ -9,12 +9,13 @@ import 'package:flutter/src/painting/borders.dart' as _i5;
 import 'package:flutter/src/painting/edge_insets.dart' as _i6;
 import 'package:flutter/src/painting/text_style.dart' as _i7;
 import 'package:flutter/src/rendering/box.dart' as _i8;
-import 'package:flutter/src/foundation/key.dart' as _i9;
-import 'package:flutter/src/widgets/framework.dart' as _i10;
+import 'package:flutter/src/services/text_input.dart' as _i9;
+import 'package:flutter/src/foundation/key.dart' as _i10;
+import 'package:flutter/src/widgets/framework.dart' as _i11;
 
 /// class SearchBarThemeData with Diagnosticable
 class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
-  /// SearchBarThemeData SearchBarThemeData({MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle, BoxConstraints? constraints})
+  /// SearchBarThemeData SearchBarThemeData({MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle, BoxConstraints? constraints, TextCapitalization? textCapitalization})
   SearchBarThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
     super.elevation,
@@ -48,6 +49,9 @@ class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
     super.constraints,
+
+    /// optionalParameters: {TextCapitalization? textCapitalization} , default:none
+    super.textCapitalization,
   })  : mateParams = {
           'elevation': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
             name: 'elevation',
@@ -104,6 +108,11 @@ class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
             init: constraints,
             isNamed: true,
           ),
+          'textCapitalization': _i2.BuilderArg<_i9.TextCapitalization?>(
+            name: 'textCapitalization',
+            init: textCapitalization,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'SearchBarThemeData';
@@ -120,6 +129,7 @@ class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
           textStyle: p.get('textStyle').build(),
           hintStyle: p.get('hintStyle').build(),
           constraints: p.get('constraints').build(),
+          textCapitalization: p.get('textCapitalization').build(),
         );
   }
 
@@ -140,7 +150,7 @@ class SearchBarTheme$Mate extends _i1.SearchBarTheme with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i9.Key?>(
+          'key': _i2.BuilderArg<_i10.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -150,7 +160,7 @@ class SearchBarTheme$Mate extends _i1.SearchBarTheme with _i2.Mate {
             init: data,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i10.Widget>(
+          'child': _i2.BuilderArg<_i11.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

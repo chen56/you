@@ -82,6 +82,7 @@ EnumRegister registerEnum() {
   result.register(_i6.WidgetInspectorServiceExtensions.values);
   result.register(_i6.CrossFadeState.values);
   result.register(_i6.ConnectionState.values);
+  result.register(_i6.OptionsViewOpenDirection.values);
   result.register(_i6.AutofillContextAction.values);
   result.register(_i6.BannerLocation.values);
   result.register(_i6.RenderComparison.values);

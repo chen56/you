@@ -303,3 +303,27 @@ class RestorableRouteFuture$Mate<T> extends _i1.RestorableRouteFuture<T> with _i
   @override
   final Map<String, _i2.BuilderArg> mateParams;
 }
+
+/// class NavigationNotification extends Notification
+class NavigationNotification$Mate extends _i1.NavigationNotification with _i2.Mate {
+  /// NavigationNotification NavigationNotification({required bool canHandlePop})
+  NavigationNotification$Mate(
+      {
+      /// optionalParameters: {required bool canHandlePop} , default:none
+      required super.canHandlePop})
+      : mateParams = {
+          'canHandlePop': _i2.BuilderArg<bool>(
+            name: 'canHandlePop',
+            init: canHandlePop,
+            isNamed: true,
+          )
+        },
+        super() {
+    mateBuilderName = 'NavigationNotification';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => NavigationNotification$Mate(canHandlePop: p.get('canHandlePop').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}

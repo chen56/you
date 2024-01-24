@@ -9,7 +9,7 @@ import 'package:flutter/src/foundation/key.dart' as _i5;
 
 /// class MaterialPageRoute<T> extends PageRoute<T> with MaterialRouteTransitionMixin<T>
 class MaterialPageRoute$Mate<T> extends _i1.MaterialPageRoute<T> with _i2.Mate {
-  /// MaterialPageRoute<T> MaterialPageRoute({required Widget Function(BuildContext) builder, RouteSettings? settings, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
+  /// MaterialPageRoute<T> MaterialPageRoute({required Widget Function(BuildContext) builder, RouteSettings? settings, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true, bool barrierDismissible = false})
   MaterialPageRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required super.builder,
@@ -25,6 +25,9 @@ class MaterialPageRoute$Mate<T> extends _i1.MaterialPageRoute<T> with _i2.Mate {
 
     /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
     super.allowSnapshotting,
+
+    /// optionalParameters: {bool barrierDismissible = false} , default:processed=BooleanLiteralImpl
+    super.barrierDismissible,
   })  : mateParams = {
           'builder': _i2.BuilderArg<_i3.WidgetBuilder>(
             name: 'builder',
@@ -54,6 +57,12 @@ class MaterialPageRoute$Mate<T> extends _i1.MaterialPageRoute<T> with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
+          'barrierDismissible': _i2.BuilderArg<bool>(
+            name: 'barrierDismissible',
+            init: barrierDismissible,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super() {
     mateBuilderName = 'MaterialPageRoute';
@@ -64,6 +73,7 @@ class MaterialPageRoute$Mate<T> extends _i1.MaterialPageRoute<T> with _i2.Mate {
           maintainState: p.get('maintainState').build(),
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
+          barrierDismissible: p.get('barrierDismissible').build(),
         );
   }
 

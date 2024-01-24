@@ -198,7 +198,7 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class DraggableScrollableActuator extends StatelessWidget
+/// class DraggableScrollableActuator extends StatefulWidget
 class DraggableScrollableActuator$Mate extends _i1.DraggableScrollableActuator with _i2.Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({

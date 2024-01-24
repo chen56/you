@@ -175,7 +175,7 @@ class BottomSheet$Mate extends _i1.BottomSheet with _i2.Mate {
 
 /// class ModalBottomSheetRoute<T> extends PopupRoute<T>
 class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i2.Mate {
-  /// ModalBottomSheetRoute<T> ModalBottomSheetRoute({required Widget Function(BuildContext) builder, CapturedThemes? capturedThemes, String? barrierLabel, String? barrierOnTapHint, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, Color? modalBarrierColor, bool isDismissible = true, bool enableDrag = true, bool? showDragHandle, required bool isScrollControlled, RouteSettings? settings, AnimationController? transitionAnimationController, Offset? anchorPoint, bool useSafeArea = false})
+  /// ModalBottomSheetRoute<T> ModalBottomSheetRoute({required Widget Function(BuildContext) builder, CapturedThemes? capturedThemes, String? barrierLabel, String? barrierOnTapHint, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, Color? modalBarrierColor, bool isDismissible = true, bool enableDrag = true, bool? showDragHandle, required bool isScrollControlled, double scrollControlDisabledMaxHeightRatio = _defaultScrollControlDisabledMaxHeightRatio, RouteSettings? settings, AnimationController? transitionAnimationController, Offset? anchorPoint, bool useSafeArea = false})
   ModalBottomSheetRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required super.builder,
@@ -218,6 +218,9 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i
 
     /// optionalParameters: {required bool isScrollControlled} , default:none
     required super.isScrollControlled,
+
+    /// optionalParameters: {double scrollControlDisabledMaxHeightRatio = _defaultScrollControlDisabledMaxHeightRatio} , default:unprocessed=SimpleIdentifierImpl
+    super.scrollControlDisabledMaxHeightRatio,
 
     /// optionalParameters: {RouteSettings? settings} , default:none
     super.settings,
@@ -303,6 +306,11 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i
             init: isScrollControlled,
             isNamed: true,
           ),
+          'scrollControlDisabledMaxHeightRatio': _i2.BuilderArg<double>(
+            name: 'scrollControlDisabledMaxHeightRatio',
+            init: scrollControlDisabledMaxHeightRatio,
+            isNamed: true,
+          ),
           'settings': _i2.BuilderArg<_i10.RouteSettings?>(
             name: 'settings',
             init: settings,
@@ -343,6 +351,7 @@ class ModalBottomSheetRoute$Mate<T> extends _i1.ModalBottomSheetRoute<T> with _i
           enableDrag: p.get('enableDrag').build(),
           showDragHandle: p.get('showDragHandle').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
+          scrollControlDisabledMaxHeightRatio: p.get('scrollControlDisabledMaxHeightRatio').build(),
           settings: p.get('settings').build(),
           transitionAnimationController: p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),

@@ -89,7 +89,7 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
         );
   }
 
-  /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required void Function()? onLiveTextInput, required TextSelectionToolbarAnchors anchors})
+  /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required void Function()? onLookUp, required void Function()? onSearchWeb, required void Function()? onShare, required void Function()? onLiveTextInput, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.editable({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -108,6 +108,15 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
 
     /// optionalParameters: {required void Function()? onSelectAll} , default:none
     required super.onSelectAll,
+
+    /// optionalParameters: {required void Function()? onLookUp} , default:none
+    required super.onLookUp,
+
+    /// optionalParameters: {required void Function()? onSearchWeb} , default:none
+    required super.onSearchWeb,
+
+    /// optionalParameters: {required void Function()? onShare} , default:none
+    required super.onShare,
 
     /// optionalParameters: {required void Function()? onLiveTextInput} , default:none
     required super.onLiveTextInput,
@@ -145,6 +154,21 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
             init: onSelectAll,
             isNamed: true,
           ),
+          'onLookUp': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onLookUp',
+            init: onLookUp,
+            isNamed: true,
+          ),
+          'onSearchWeb': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onSearchWeb',
+            init: onSearchWeb,
+            isNamed: true,
+          ),
+          'onShare': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onShare',
+            init: onShare,
+            isNamed: true,
+          ),
           'onLiveTextInput': _i2.BuilderArg<_i8.VoidCallback?>(
             name: 'onLiveTextInput',
             init: onLiveTextInput,
@@ -166,6 +190,9 @@ class AdaptiveTextSelectionToolbar$Mate extends _i1.AdaptiveTextSelectionToolbar
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
           onSelectAll: p.get('onSelectAll').build(),
+          onLookUp: p.get('onLookUp').build(),
+          onSearchWeb: p.get('onSearchWeb').build(),
+          onShare: p.get('onShare').build(),
           onLiveTextInput: p.get('onLiveTextInput').build(),
           anchors: p.get('anchors').build(),
         );

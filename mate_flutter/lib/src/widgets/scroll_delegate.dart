@@ -239,11 +239,8 @@ class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.
 
 /// class TwoDimensionalChildBuilderDelegate extends TwoDimensionalChildDelegate
 class TwoDimensionalChildBuilderDelegate$Mate extends _i1.TwoDimensionalChildBuilderDelegate with _i2.Mate {
-  /// TwoDimensionalChildBuilderDelegate TwoDimensionalChildBuilderDelegate({bool addRepaintBoundaries = true, required Widget? Function(BuildContext, ChildVicinity) builder, int? maxXIndex, int? maxYIndex})
+  /// TwoDimensionalChildBuilderDelegate TwoDimensionalChildBuilderDelegate({required Widget? Function(BuildContext, ChildVicinity) builder, int? maxXIndex, int? maxYIndex, bool addRepaintBoundaries = true, bool addAutomaticKeepAlives = true})
   TwoDimensionalChildBuilderDelegate$Mate({
-    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    super.addRepaintBoundaries,
-
     /// optionalParameters: {required Widget? Function(BuildContext, ChildVicinity) builder} , default:none
     required super.builder,
 
@@ -252,13 +249,13 @@ class TwoDimensionalChildBuilderDelegate$Mate extends _i1.TwoDimensionalChildBui
 
     /// optionalParameters: {int? maxYIndex} , default:none
     super.maxYIndex,
+
+    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
+    super.addRepaintBoundaries,
+
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
+    super.addAutomaticKeepAlives,
   })  : mateParams = {
-          'addRepaintBoundaries': _i2.BuilderArg<bool>(
-            name: 'addRepaintBoundaries',
-            init: addRepaintBoundaries,
-            isNamed: true,
-            defaultValue: true,
-          ),
           'builder': _i2.BuilderArg<_i4.TwoDimensionalIndexedWidgetBuilder>(
             name: 'builder',
             init: builder,
@@ -274,15 +271,28 @@ class TwoDimensionalChildBuilderDelegate$Mate extends _i1.TwoDimensionalChildBui
             init: maxYIndex,
             isNamed: true,
           ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
         },
         super() {
     mateBuilderName = 'TwoDimensionalChildBuilderDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TwoDimensionalChildBuilderDelegate$Mate(
-          addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           builder: p.get('builder').build(),
           maxXIndex: p.get('maxXIndex').build(),
           maxYIndex: p.get('maxYIndex').build(),
+          addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+          addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
         );
   }
 
@@ -292,10 +302,13 @@ class TwoDimensionalChildBuilderDelegate$Mate extends _i1.TwoDimensionalChildBui
 
 /// class TwoDimensionalChildListDelegate extends TwoDimensionalChildDelegate
 class TwoDimensionalChildListDelegate$Mate extends _i1.TwoDimensionalChildListDelegate with _i2.Mate {
-  /// TwoDimensionalChildListDelegate TwoDimensionalChildListDelegate({bool addRepaintBoundaries = true, required List<List<Widget>> children})
+  /// TwoDimensionalChildListDelegate TwoDimensionalChildListDelegate({bool addRepaintBoundaries = true, bool addAutomaticKeepAlives = true, required List<List<Widget>> children})
   TwoDimensionalChildListDelegate$Mate({
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
     super.addRepaintBoundaries,
+
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {required List<List<Widget>> children} , default:none
     required super.children,
@@ -303,6 +316,12 @@ class TwoDimensionalChildListDelegate$Mate extends _i1.TwoDimensionalChildListDe
           'addRepaintBoundaries': _i2.BuilderArg<bool>(
             name: 'addRepaintBoundaries',
             init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
             isNamed: true,
             defaultValue: true,
           ),
@@ -317,6 +336,7 @@ class TwoDimensionalChildListDelegate$Mate extends _i1.TwoDimensionalChildListDe
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TwoDimensionalChildListDelegate$Mate(
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+          addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
           children: p.get('children').build(),
         );
   }

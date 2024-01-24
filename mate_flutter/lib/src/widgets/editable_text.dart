@@ -11,22 +11,23 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i7;
 import 'package:flutter/src/painting/text_style.dart' as _i8;
 import 'package:flutter/src/painting/strut_style.dart' as _i9;
 import 'dart:ui' as _i10;
-import 'package:flutter/src/painting/text_painter.dart' as _i11;
-import 'package:flutter/cupertino.dart' as _i12;
-import 'package:flutter/src/widgets/text_selection.dart' as _i13;
-import 'package:flutter/src/widgets/tap_region.dart' as _i14;
-import 'package:flutter/src/services/text_formatter.dart' as _i15;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i16;
-import 'package:flutter/src/painting/edge_insets.dart' as _i17;
-import 'package:flutter/src/gestures/recognizer.dart' as _i18;
-import 'package:flutter/gestures.dart' as _i19;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i20;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i21;
-import 'package:flutter/src/services/autofill.dart' as _i22;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i23;
-import 'package:flutter/src/widgets/spell_check.dart' as _i24;
-import 'package:flutter/src/widgets/magnifier.dart' as _i25;
-import 'package:flutter/src/widgets/undo_history.dart' as _i26;
+import 'package:flutter/src/painting/text_scaler.dart' as _i11;
+import 'package:flutter/src/painting/text_painter.dart' as _i12;
+import 'package:flutter/cupertino.dart' as _i13;
+import 'package:flutter/src/widgets/text_selection.dart' as _i14;
+import 'package:flutter/src/widgets/tap_region.dart' as _i15;
+import 'package:flutter/src/services/text_formatter.dart' as _i16;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i17;
+import 'package:flutter/src/painting/edge_insets.dart' as _i18;
+import 'package:flutter/src/gestures/recognizer.dart' as _i19;
+import 'package:flutter/gestures.dart' as _i20;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i21;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i22;
+import 'package:flutter/src/services/autofill.dart' as _i23;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i24;
+import 'package:flutter/src/widgets/spell_check.dart' as _i25;
+import 'package:flutter/src/widgets/magnifier.dart' as _i26;
+import 'package:flutter/src/widgets/undo_history.dart' as _i27;
 
 /// class TextEditingController extends ValueNotifier<TextEditingValue>
 class TextEditingController$Mate extends _i1.TextEditingController with _i2.Mate {
@@ -162,7 +163,7 @@ class ContentInsertionConfiguration$Mate extends _i1.ContentInsertionConfigurati
 
 /// class EditableText extends StatefulWidget
 class EditableText$Mate extends _i1.EditableText with _i2.Mate {
-  /// EditableText EditableText({Key? key, required TextEditingController controller, required FocusNode focusNode, bool readOnly = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, required TextStyle style, StrutStyle? strutStyle, required Color cursorColor, required Color backgroundCursorColor, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, Locale? locale, double? textScaleFactor, int? maxLines = 1, int? minLines, bool expands = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, bool autofocus = false, bool? showCursor, bool showSelectionHandles = false, Color? selectionColor, TextSelectionControls? selectionControls, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, void Function()? onSelectionHandleTapped, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, MouseCursor? mouseCursor, bool rendererIgnoresPointer = false, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, bool cursorOpacityAnimates = false, Offset? cursorOffset, bool paintCursorAboveText = false, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), Brightness keyboardAppearance = Brightness.light, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Color? autocorrectionTextRectColor, ToolbarOptions? toolbarOptions, Iterable<String>? autofillHints = const <String>[], AutofillClient? autofillClient, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, ContentInsertionConfiguration? contentInsertionConfiguration, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled, UndoHistoryController? undoController})
+  /// EditableText EditableText({Key? key, required TextEditingController controller, required FocusNode focusNode, bool readOnly = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, required TextStyle style, StrutStyle? strutStyle, required Color cursorColor, required Color backgroundCursorColor, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, Locale? locale, double? textScaleFactor, TextScaler? textScaler, int? maxLines = 1, int? minLines, bool expands = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, bool autofocus = false, bool? showCursor, bool showSelectionHandles = false, Color? selectionColor, TextSelectionControls? selectionControls, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, void Function()? onSelectionHandleTapped, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, MouseCursor? mouseCursor, bool rendererIgnoresPointer = false, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, bool cursorOpacityAnimates = false, Offset? cursorOffset, bool paintCursorAboveText = false, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), Brightness keyboardAppearance = Brightness.light, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Color? autocorrectionTextRectColor, ToolbarOptions? toolbarOptions, Iterable<String>? autofillHints = const <String>[], AutofillClient? autofillClient, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, ContentInsertionConfiguration? contentInsertionConfiguration, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled, UndoHistoryController? undoController})
   EditableText$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -215,8 +216,8 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
     /// optionalParameters: {Locale? locale} , default:none
     super.locale,
 
-    /// optionalParameters: {double? textScaleFactor} , default:none
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler? textScaler} , default:none
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines = 1} , default:processed=IntegerLiteralImpl
     super.maxLines,
@@ -462,9 +463,9 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double?>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i11.TextScaler?>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
           ),
           'maxLines': _i2.BuilderArg<int?>(
@@ -495,11 +496,11 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i11.TextWidthBasis>(
+          'textWidthBasis': _i2.BuilderArg<_i12.TextWidthBasis>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
-            defaultValue: _i12.TextWidthBasis.parent,
+            defaultValue: _i13.TextWidthBasis.parent,
           ),
           'autofocus': _i2.BuilderArg<bool>(
             name: 'autofocus',
@@ -523,7 +524,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: selectionColor,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i13.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i14.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
@@ -542,7 +543,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i12.TextCapitalization.none,
+            defaultValue: _i13.TextCapitalization.none,
           ),
           'onChanged': _i2.BuilderArg<_i4.ValueChanged<String>?>(
             name: 'onChanged',
@@ -574,17 +575,17 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: onSelectionHandleTapped,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i14.TapRegionCallback?>(
+          'onTapOutside': _i2.BuilderArg<_i15.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i15.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i16.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i16.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i17.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -638,7 +639,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'scrollPadding': _i2.BuilderArg<_i17.EdgeInsets>(
+          'scrollPadding': _i2.BuilderArg<_i18.EdgeInsets>(
             name: 'scrollPadding',
             init: scrollPadding,
             isNamed: true,
@@ -649,23 +650,23 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             isNamed: true,
             defaultValue: _i10.Brightness.light,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i18.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i19.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i19.DragStartBehavior.start,
+            defaultValue: _i20.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool?>(
             name: 'enableInteractiveSelection',
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i20.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i21.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i21.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i22.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -680,7 +681,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: autofillHints,
             isNamed: true,
           ),
-          'autofillClient': _i2.BuilderArg<_i22.AutofillClient?>(
+          'autofillClient': _i2.BuilderArg<_i23.AutofillClient?>(
             name: 'autofillClient',
             init: autofillClient,
             isNamed: true,
@@ -696,7 +697,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i23.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i24.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -723,18 +724,18 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i25.TextMagnifierConfiguration>(
+          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
-            defaultValue: _i12.TextMagnifierConfiguration.disabled,
+            defaultValue: _i13.TextMagnifierConfiguration.disabled,
           ),
-          'undoController': _i2.BuilderArg<_i26.UndoHistoryController?>(
+          'undoController': _i2.BuilderArg<_i27.UndoHistoryController?>(
             name: 'undoController',
             init: undoController,
             isNamed: true,
@@ -761,7 +762,7 @@ class EditableText$Mate extends _i1.EditableText with _i2.Mate {
           textAlign: p.get('textAlign').build(),
           textDirection: p.get('textDirection').build(),
           locale: p.get('locale').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           minLines: p.get('minLines').build(),
           expands: p.get('expands').build(),

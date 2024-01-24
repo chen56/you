@@ -8,14 +8,15 @@ import 'package:flutter/src/painting/inline_span.dart' as _i4;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i5;
 import 'package:flutter/src/rendering/layer.dart' as _i6;
 import 'package:flutter/src/painting/strut_style.dart' as _i7;
-import 'package:flutter/src/services/text_editing.dart' as _i8;
-import 'package:flutter/src/rendering/viewport_offset.dart' as _i9;
-import 'package:flutter/src/painting/text_painter.dart' as _i10;
-import 'package:flutter/cupertino.dart' as _i11;
-import 'package:flutter/animation.dart' as _i12;
-import 'package:flutter/src/painting/edge_insets.dart' as _i13;
-import 'package:flutter/src/services/text_input.dart' as _i14;
-import 'package:flutter/src/rendering/box.dart' as _i15;
+import 'package:flutter/src/painting/text_scaler.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i9;
+import 'package:flutter/src/services/text_editing.dart' as _i10;
+import 'package:flutter/src/rendering/viewport_offset.dart' as _i11;
+import 'package:flutter/src/painting/text_painter.dart' as _i12;
+import 'package:flutter/animation.dart' as _i13;
+import 'package:flutter/src/painting/edge_insets.dart' as _i14;
+import 'package:flutter/src/services/text_input.dart' as _i15;
+import 'package:flutter/src/rendering/box.dart' as _i16;
 
 /// class TextSelectionPoint
 class TextSelectionPoint$Mate extends _i1.TextSelectionPoint with _i2.Mate {
@@ -53,7 +54,7 @@ class TextSelectionPoint$Mate extends _i1.TextSelectionPoint with _i2.Mate {
 
 /// class RenderEditable extends RenderBox with RelayoutWhenSystemFontsChangeMixin, ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderInlineChildrenContainerDefaults implements TextLayoutMetrics
 class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
-  /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextSelection? selection, required ViewportOffset offset, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
+  /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextScaler textScaler = TextScaler.noScaling, TextSelection? selection, required ViewportOffset offset, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
   RenderEditable$Mate({
     /// optionalParameters: {InlineSpan? text} , default:none
     super.text,
@@ -97,8 +98,8 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
     /// optionalParameters: {Color? selectionColor} , default:none
     super.selectionColor,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler textScaler = TextScaler.noScaling} , default:processed=PrefixedIdentifierImpl
+    super.textScaler,
 
     /// optionalParameters: {TextSelection? selection} , default:none
     super.selection,
@@ -254,18 +255,18 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             init: selectionColor,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i8.TextScaler>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
-            defaultValue: 1.0,
+            defaultValue: _i9.TextScaler.noScaling,
           ),
-          'selection': _i2.BuilderArg<_i8.TextSelection?>(
+          'selection': _i2.BuilderArg<_i10.TextSelection?>(
             name: 'selection',
             init: selection,
             isNamed: true,
           ),
-          'offset': _i2.BuilderArg<_i9.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i11.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -293,11 +294,11 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i10.TextWidthBasis>(
+          'textWidthBasis': _i2.BuilderArg<_i12.TextWidthBasis>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
-            defaultValue: _i11.TextWidthBasis.parent,
+            defaultValue: _i9.TextWidthBasis.parent,
           ),
           'obscuringCharacter': _i2.BuilderArg<String>(
             name: 'obscuringCharacter',
@@ -342,7 +343,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             name: 'cursorOffset',
             init: cursorOffset,
             isNamed: true,
-            defaultValue: _i12.Offset.zero,
+            defaultValue: _i13.Offset.zero,
           ),
           'devicePixelRatio': _i2.BuilderArg<double>(
             name: 'devicePixelRatio',
@@ -365,7 +366,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'floatingCursorAddedMargin': _i2.BuilderArg<_i13.EdgeInsets>(
+          'floatingCursorAddedMargin': _i2.BuilderArg<_i14.EdgeInsets>(
             name: 'floatingCursorAddedMargin',
             init: floatingCursorAddedMargin,
             isNamed: true,
@@ -386,7 +387,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             isNamed: true,
             defaultValue: _i3.Clip.hardEdge,
           ),
-          'textSelectionDelegate': _i2.BuilderArg<_i14.TextSelectionDelegate>(
+          'textSelectionDelegate': _i2.BuilderArg<_i15.TextSelectionDelegate>(
             name: 'textSelectionDelegate',
             init: textSelectionDelegate,
             isNamed: true,
@@ -401,7 +402,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
             init: foregroundPainter,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i15.RenderBox>?>(
+          'children': _i2.BuilderArg<List<_i16.RenderBox>?>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -425,7 +426,7 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
           expands: p.get('expands').build(),
           strutStyle: p.get('strutStyle').build(),
           selectionColor: p.get('selectionColor').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           selection: p.get('selection').build(),
           offset: p.get('offset').build(),
           ignorePointer: p.get('ignorePointer').build(),

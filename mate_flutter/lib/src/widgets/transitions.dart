@@ -79,7 +79,78 @@ class SlideTransition$Mate extends _i1.SlideTransition with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class ScaleTransition extends AnimatedWidget
+/// class MatrixTransition extends AnimatedWidget
+class MatrixTransition$Mate extends _i1.MatrixTransition with _i2.Mate {
+  /// MatrixTransition MatrixTransition({Key? key, required Animation<double> animation, required Matrix4 Function(double) onTransform, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
+  MatrixTransition$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required Animation<double> animation} , default:none
+    required super.animation,
+
+    /// optionalParameters: {required Matrix4 Function(double) onTransform} , default:none
+    required super.onTransform,
+
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    super.alignment,
+
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
+    super.filterQuality,
+
+    /// optionalParameters: {Widget? child} , default:none
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'animation': _i2.BuilderArg<_i4.Animation<double>>(
+            name: 'animation',
+            init: animation,
+            isNamed: true,
+          ),
+          'onTransform': _i2.BuilderArg<_i1.TransformCallback>(
+            name: 'onTransform',
+            init: onTransform,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i7.Alignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i8.Alignment.center,
+          ),
+          'filterQuality': _i2.BuilderArg<_i5.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'MatrixTransition';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => MatrixTransition$Mate(
+          key: p.get('key').build(),
+          animation: p.get('animation').build(),
+          onTransform: p.get('onTransform').build(),
+          alignment: p.get('alignment').build(),
+          filterQuality: p.get('filterQuality').build(),
+          child: p.get('child').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class ScaleTransition extends MatrixTransition
 class ScaleTransition$Mate extends _i1.ScaleTransition with _i2.Mate {
   /// ScaleTransition ScaleTransition({Key? key, required Animation<double> scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   ScaleTransition$Mate({
@@ -141,7 +212,7 @@ class ScaleTransition$Mate extends _i1.ScaleTransition with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RotationTransition extends AnimatedWidget
+/// class RotationTransition extends MatrixTransition
 class RotationTransition$Mate extends _i1.RotationTransition with _i2.Mate {
   /// RotationTransition RotationTransition({Key? key, required Animation<double> turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   RotationTransition$Mate({

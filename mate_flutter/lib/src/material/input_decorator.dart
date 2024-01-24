@@ -126,7 +126,7 @@ class InputDecorator$Mate extends _i1.InputDecorator with _i2.Mate {
 
 /// class InputDecoration
 class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
-  /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, Widget? error, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool isCollapsed = false, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
+  /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, Duration? hintFadeDuration, Widget? error, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool? isCollapsed, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
   InputDecoration$Mate({
     /// optionalParameters: {Widget? icon} , default:none
     super.icon,
@@ -167,6 +167,9 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
     /// optionalParameters: {int? hintMaxLines} , default:none
     super.hintMaxLines,
 
+    /// optionalParameters: {Duration? hintFadeDuration} , default:none
+    super.hintFadeDuration,
+
     /// optionalParameters: {Widget? error} , default:none
     super.error,
 
@@ -185,7 +188,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
     /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , default:none
     super.floatingLabelAlignment,
 
-    /// optionalParameters: {bool isCollapsed = false} , default:processed=BooleanLiteralImpl
+    /// optionalParameters: {bool? isCollapsed} , default:none
     super.isCollapsed,
 
     /// optionalParameters: {bool? isDense} , default:none
@@ -346,6 +349,11 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
             init: hintMaxLines,
             isNamed: true,
           ),
+          'hintFadeDuration': _i2.BuilderArg<Duration?>(
+            name: 'hintFadeDuration',
+            init: hintFadeDuration,
+            isNamed: true,
+          ),
           'error': _i2.BuilderArg<_i7.Widget?>(
             name: 'error',
             init: error,
@@ -376,11 +384,10 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
             init: floatingLabelAlignment,
             isNamed: true,
           ),
-          'isCollapsed': _i2.BuilderArg<bool>(
+          'isCollapsed': _i2.BuilderArg<bool?>(
             name: 'isCollapsed',
             init: isCollapsed,
             isNamed: true,
-            defaultValue: false,
           ),
           'isDense': _i2.BuilderArg<bool?>(
             name: 'isDense',
@@ -556,6 +563,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
           hintStyle: p.get('hintStyle').build(),
           hintTextDirection: p.get('hintTextDirection').build(),
           hintMaxLines: p.get('hintMaxLines').build(),
+          hintFadeDuration: p.get('hintFadeDuration').build(),
           error: p.get('error').build(),
           errorText: p.get('errorText').build(),
           errorStyle: p.get('errorStyle').build(),
@@ -715,7 +723,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
 
 /// class InputDecorationTheme with Diagnosticable
 class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
-  /// InputDecorationTheme InputDecorationTheme({TextStyle? labelStyle, TextStyle? floatingLabelStyle, TextStyle? helperStyle, int? helperMaxLines, TextStyle? hintStyle, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto, FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start, bool isDense = false, EdgeInsetsGeometry? contentPadding, bool isCollapsed = false, Color? iconColor, TextStyle? prefixStyle, Color? prefixIconColor, TextStyle? suffixStyle, Color? suffixIconColor, TextStyle? counterStyle, bool filled = false, Color? fillColor, BorderSide? activeIndicatorBorder, BorderSide? outlineBorder, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool alignLabelWithHint = false, BoxConstraints? constraints})
+  /// InputDecorationTheme InputDecorationTheme({TextStyle? labelStyle, TextStyle? floatingLabelStyle, TextStyle? helperStyle, int? helperMaxLines, TextStyle? hintStyle, Duration? hintFadeDuration, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto, FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start, bool isDense = false, EdgeInsetsGeometry? contentPadding, bool isCollapsed = false, Color? iconColor, TextStyle? prefixStyle, Color? prefixIconColor, TextStyle? suffixStyle, Color? suffixIconColor, TextStyle? counterStyle, bool filled = false, Color? fillColor, BorderSide? activeIndicatorBorder, BorderSide? outlineBorder, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool alignLabelWithHint = false, BoxConstraints? constraints})
   InputDecorationTheme$Mate({
     /// optionalParameters: {TextStyle? labelStyle} , default:none
     super.labelStyle,
@@ -731,6 +739,9 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
 
     /// optionalParameters: {TextStyle? hintStyle} , default:none
     super.hintStyle,
+
+    /// optionalParameters: {Duration? hintFadeDuration} , default:none
+    super.hintFadeDuration,
 
     /// optionalParameters: {TextStyle? errorStyle} , default:none
     super.errorStyle,
@@ -836,6 +847,11 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
           'hintStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'hintStyle',
             init: hintStyle,
+            isNamed: true,
+          ),
+          'hintFadeDuration': _i2.BuilderArg<Duration?>(
+            name: 'hintFadeDuration',
+            init: hintFadeDuration,
             isNamed: true,
           ),
           'errorStyle': _i2.BuilderArg<_i4.TextStyle?>(
@@ -989,6 +1005,7 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
           helperStyle: p.get('helperStyle').build(),
           helperMaxLines: p.get('helperMaxLines').build(),
           hintStyle: p.get('hintStyle').build(),
+          hintFadeDuration: p.get('hintFadeDuration').build(),
           errorStyle: p.get('errorStyle').build(),
           errorMaxLines: p.get('errorMaxLines').build(),
           floatingLabelBehavior: p.get('floatingLabelBehavior').build(),

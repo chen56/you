@@ -8,19 +8,20 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
 import 'package:flutter/src/painting/strut_style.dart' as _i6;
 import 'dart:ui' as _i7;
-import 'package:flutter/src/gestures/recognizer.dart' as _i8;
-import 'package:flutter/gestures.dart' as _i9;
-import 'package:flutter/src/widgets/text_selection.dart' as _i10;
-import 'package:flutter/src/gestures/tap.dart' as _i11;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i12;
-import 'package:flutter/src/painting/text_painter.dart' as _i13;
-import 'package:flutter/src/widgets/editable_text.dart' as _i14;
-import 'package:flutter/src/widgets/magnifier.dart' as _i15;
-import 'package:flutter/src/painting/text_span.dart' as _i16;
+import 'package:flutter/src/painting/text_scaler.dart' as _i8;
+import 'package:flutter/src/gestures/recognizer.dart' as _i9;
+import 'package:flutter/gestures.dart' as _i10;
+import 'package:flutter/src/widgets/text_selection.dart' as _i11;
+import 'package:flutter/src/gestures/tap.dart' as _i12;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i13;
+import 'package:flutter/src/painting/text_painter.dart' as _i14;
+import 'package:flutter/src/widgets/editable_text.dart' as _i15;
+import 'package:flutter/src/widgets/magnifier.dart' as _i16;
+import 'package:flutter/src/painting/text_span.dart' as _i17;
 
 /// class SelectableText extends StatefulWidget
 class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
-  /// SelectableText SelectableText(String data, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
+  /// SelectableText SelectableText(String data, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, TextScaler? textScaler, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
   SelectableText$Mate(
     /// requiredParameters: String data
     super.data, {
@@ -42,8 +43,8 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {double? textScaleFactor} , default:none
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler? textScaler} , default:none
+    super.textScaler,
 
     /// optionalParameters: {bool showCursor = false} , default:processed=BooleanLiteralImpl
     super.showCursor,
@@ -143,9 +144,9 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double?>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i8.TextScaler?>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
           ),
           'showCursor': _i2.BuilderArg<bool>(
@@ -201,11 +202,11 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i9.DragStartBehavior.start,
+            defaultValue: _i10.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool>(
             name: 'enableInteractiveSelection',
@@ -213,17 +214,17 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i10.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i11.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i11.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i12.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i12.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i13.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -238,22 +239,22 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i13.TextWidthBasis?>(
+          'textWidthBasis': _i2.BuilderArg<_i14.TextWidthBasis?>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
           ),
-          'onSelectionChanged': _i2.BuilderArg<_i14.SelectionChangedCallback?>(
+          'onSelectionChanged': _i2.BuilderArg<_i15.SelectionChangedCallback?>(
             name: 'onSelectionChanged',
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder': _i2.BuilderArg<_i15.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i16.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -270,7 +271,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           strutStyle: p.get('strutStyle').build(),
           textAlign: p.get('textAlign').build(),
           textDirection: p.get('textDirection').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           showCursor: p.get('showCursor').build(),
           autofocus: p.get('autofocus').build(),
           minLines: p.get('minLines').build(),
@@ -295,7 +296,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
         );
   }
 
-  /// SelectableText SelectableText.rich(TextSpan textSpan, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
+  /// SelectableText SelectableText.rich(TextSpan textSpan, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, TextScaler? textScaler, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
   SelectableText$Mate.rich(
     /// requiredParameters: TextSpan textSpan
     super.textSpan, {
@@ -317,8 +318,8 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {double? textScaleFactor} , default:none
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler? textScaler} , default:none
+    super.textScaler,
 
     /// optionalParameters: {bool showCursor = false} , default:processed=BooleanLiteralImpl
     super.showCursor,
@@ -383,7 +384,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
     /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
     super.magnifierConfiguration,
   })  : mateParams = {
-          'textSpan': _i2.BuilderArg<_i16.TextSpan>(
+          'textSpan': _i2.BuilderArg<_i17.TextSpan>(
             name: 'textSpan',
             init: textSpan,
             isNamed: false,
@@ -418,9 +419,9 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double?>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i8.TextScaler?>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
           ),
           'showCursor': _i2.BuilderArg<bool>(
@@ -476,11 +477,11 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i9.DragStartBehavior.start,
+            defaultValue: _i10.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool>(
             name: 'enableInteractiveSelection',
@@ -488,17 +489,17 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i10.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i11.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i11.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i12.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i12.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i13.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -513,22 +514,22 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i13.TextWidthBasis?>(
+          'textWidthBasis': _i2.BuilderArg<_i14.TextWidthBasis?>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
           ),
-          'onSelectionChanged': _i2.BuilderArg<_i14.SelectionChangedCallback?>(
+          'onSelectionChanged': _i2.BuilderArg<_i15.SelectionChangedCallback?>(
             name: 'onSelectionChanged',
             init: onSelectionChanged,
             isNamed: true,
           ),
-          'contextMenuBuilder': _i2.BuilderArg<_i14.EditableTextContextMenuBuilder?>(
+          'contextMenuBuilder': _i2.BuilderArg<_i15.EditableTextContextMenuBuilder?>(
             name: 'contextMenuBuilder',
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i15.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i16.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -545,7 +546,7 @@ class SelectableText$Mate extends _i1.SelectableText with _i2.Mate {
           strutStyle: p.get('strutStyle').build(),
           textAlign: p.get('textAlign').build(),
           textDirection: p.get('textDirection').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           showCursor: p.get('showCursor').build(),
           autofocus: p.get('autofocus').build(),
           minLines: p.get('minLines').build(),

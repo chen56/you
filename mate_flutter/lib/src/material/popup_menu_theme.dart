@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class PopupMenuThemeData with Diagnosticable
 class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
-  /// PopupMenuThemeData PopupMenuThemeData({Color? color, ShapeBorder? shape, double? elevation, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, PopupMenuPosition? position})
+  /// PopupMenuThemeData PopupMenuThemeData({Color? color, ShapeBorder? shape, double? elevation, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, PopupMenuPosition? position, Color? iconColor, double? iconSize})
   PopupMenuThemeData$Mate({
     /// optionalParameters: {Color? color} , default:none
     super.color,
@@ -44,6 +44,12 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
 
     /// optionalParameters: {PopupMenuPosition? position} , default:none
     super.position,
+
+    /// optionalParameters: {Color? iconColor} , default:none
+    super.iconColor,
+
+    /// optionalParameters: {double? iconSize} , default:none
+    super.iconSize,
   })  : mateParams = {
           'color': _i2.BuilderArg<_i3.Color?>(
             name: 'color',
@@ -95,6 +101,16 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
             init: position,
             isNamed: true,
           ),
+          'iconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'PopupMenuThemeData';
@@ -110,6 +126,8 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
           enableFeedback: p.get('enableFeedback').build(),
           mouseCursor: p.get('mouseCursor').build(),
           position: p.get('position').build(),
+          iconColor: p.get('iconColor').build(),
+          iconSize: p.get('iconSize').build(),
         );
   }
 

@@ -5,8 +5,9 @@ import 'package:flutter/src/painting/text_painter.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/inline_span.dart' as _i4;
-import 'package:flutter/src/painting/strut_style.dart' as _i5;
+import 'package:flutter/src/painting/text_scaler.dart' as _i5;
 import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/painting/strut_style.dart' as _i7;
 
 /// class PlaceholderDimensions
 class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate {
@@ -62,7 +63,7 @@ class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate
 
 /// class TextPainter
 class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
-  /// TextPainter TextPainter({InlineSpan? text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, double textScaleFactor = 1.0, int? maxLines, String? ellipsis, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior})
+  /// TextPainter TextPainter({InlineSpan? text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, double textScaleFactor = 1.0, TextScaler textScaler = TextScaler.noScaling, int? maxLines, String? ellipsis, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior})
   TextPainter$Mate({
     /// optionalParameters: {InlineSpan? text} , default:none
     super.text,
@@ -73,8 +74,8 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler textScaler = TextScaler.noScaling} , default:processed=PrefixedIdentifierImpl
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
@@ -110,11 +111,11 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i5.TextScaler>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
-            defaultValue: 1.0,
+            defaultValue: _i6.TextScaler.noScaling,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
@@ -131,7 +132,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i5.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i7.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
@@ -155,7 +156,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
           text: p.get('text').build(),
           textAlign: p.get('textAlign').build(),
           textDirection: p.get('textDirection').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           ellipsis: p.get('ellipsis').build(),
           locale: p.get('locale').build(),

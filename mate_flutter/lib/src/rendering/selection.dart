@@ -55,40 +55,60 @@ class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent with _i
 
 /// class SelectionEdgeUpdateEvent extends SelectionEvent
 class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent with _i2.Mate {
-  /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forStart({required Offset globalPosition})
-  SelectionEdgeUpdateEvent$Mate.forStart(
-      {
-      /// optionalParameters: {required Offset globalPosition} , default:none
-      required super.globalPosition})
-      : mateParams = {
+  /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forStart({required Offset globalPosition, TextGranularity? granularity})
+  SelectionEdgeUpdateEvent$Mate.forStart({
+    /// optionalParameters: {required Offset globalPosition} , default:none
+    required super.globalPosition,
+
+    /// optionalParameters: {TextGranularity? granularity} , default:none
+    super.granularity,
+  })  : mateParams = {
           'globalPosition': _i2.BuilderArg<_i3.Offset>(
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-          )
+          ),
+          'granularity': _i2.BuilderArg<_i1.TextGranularity?>(
+            name: 'granularity',
+            init: granularity,
+            isNamed: true,
+          ),
         },
         super.forStart() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forStart';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(
+          globalPosition: p.get('globalPosition').build(),
+          granularity: p.get('granularity').build(),
+        );
   }
 
-  /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
-  SelectionEdgeUpdateEvent$Mate.forEnd(
-      {
-      /// optionalParameters: {required Offset globalPosition} , default:none
-      required super.globalPosition})
-      : mateParams = {
+  /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition, TextGranularity? granularity})
+  SelectionEdgeUpdateEvent$Mate.forEnd({
+    /// optionalParameters: {required Offset globalPosition} , default:none
+    required super.globalPosition,
+
+    /// optionalParameters: {TextGranularity? granularity} , default:none
+    super.granularity,
+  })  : mateParams = {
           'globalPosition': _i2.BuilderArg<_i3.Offset>(
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-          )
+          ),
+          'granularity': _i2.BuilderArg<_i1.TextGranularity?>(
+            name: 'granularity',
+            init: granularity,
+            isNamed: true,
+          ),
         },
         super.forEnd() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forEnd';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(
+          globalPosition: p.get('globalPosition').build(),
+          granularity: p.get('granularity').build(),
+        );
   }
 
   @override
@@ -242,7 +262,7 @@ class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class SelectionPoint
+/// class SelectionPoint with Diagnosticable
 class SelectionPoint$Mate extends _i1.SelectionPoint with _i2.Mate {
   /// SelectionPoint SelectionPoint({required Offset localPosition, required double lineHeight, required TextSelectionHandleType handleType})
   SelectionPoint$Mate({

@@ -27,14 +27,15 @@ import 'package:flutter/src/rendering/wrap.dart' as _i23;
 import 'package:flutter/src/rendering/flow.dart' as _i24;
 import 'package:flutter/src/painting/inline_span.dart' as _i25;
 import 'package:flutter/src/painting/text_painter.dart' as _i26;
-import 'package:flutter/src/painting/strut_style.dart' as _i27;
-import 'package:flutter/src/rendering/selection.dart' as _i28;
-import 'package:flutter/src/animation/animation.dart' as _i29;
-import 'package:flutter/src/painting/decoration_image.dart' as _i30;
-import 'package:flutter/src/services/asset_bundle.dart' as _i31;
-import 'package:flutter/src/services/mouse_tracking.dart' as _i32;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i33;
-import 'package:flutter/src/semantics/semantics.dart' as _i34;
+import 'package:flutter/src/painting/text_scaler.dart' as _i27;
+import 'package:flutter/src/painting/strut_style.dart' as _i28;
+import 'package:flutter/src/rendering/selection.dart' as _i29;
+import 'package:flutter/src/animation/animation.dart' as _i30;
+import 'package:flutter/src/painting/decoration_image.dart' as _i31;
+import 'package:flutter/src/services/asset_bundle.dart' as _i32;
+import 'package:flutter/src/services/mouse_tracking.dart' as _i33;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i34;
+import 'package:flutter/src/semantics/semantics.dart' as _i35;
 export 'package:flutter/animation.dart';
 export 'package:flutter/painting.dart';
 
@@ -2521,6 +2522,40 @@ class Baseline$Mate extends _i1.Baseline with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
+/// class IgnoreBaseline extends SingleChildRenderObjectWidget
+class IgnoreBaseline$Mate extends _i1.IgnoreBaseline with _i2.Mate {
+  /// IgnoreBaseline IgnoreBaseline({Key? key, Widget? child})
+  IgnoreBaseline$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Widget? child} , default:none
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'IgnoreBaseline';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => IgnoreBaseline$Mate(
+          key: p.get('key').build(),
+          child: p.get('child').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class SliverToBoxAdapter extends SingleChildRenderObjectWidget
 class SliverToBoxAdapter$Mate extends _i1.SliverToBoxAdapter with _i2.Mate {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
@@ -3744,7 +3779,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
 
 /// class RichText extends MultiChildRenderObjectWidget
 class RichText$Mate extends _i1.RichText with _i2.Mate {
-  /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
+  /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, TextScaler textScaler = TextScaler.noScaling, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -3764,8 +3799,8 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     super.overflow,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler textScaler = TextScaler.noScaling} , default:processed=PrefixedIdentifierImpl
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
@@ -3821,11 +3856,11 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             isNamed: true,
             defaultValue: _i10.TextOverflow.clip,
           ),
-          'textScaleFactor': _i2.BuilderArg<double>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i27.TextScaler>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
-            defaultValue: 1.0,
+            defaultValue: _i10.TextScaler.noScaling,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
@@ -3837,7 +3872,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i27.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i28.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
@@ -3853,7 +3888,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'selectionRegistrar': _i2.BuilderArg<_i28.SelectionRegistrar?>(
+          'selectionRegistrar': _i2.BuilderArg<_i29.SelectionRegistrar?>(
             name: 'selectionRegistrar',
             init: selectionRegistrar,
             isNamed: true,
@@ -3874,7 +3909,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           softWrap: p.get('softWrap').build(),
           overflow: p.get('overflow').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           locale: p.get('locale').build(),
           strutStyle: p.get('strutStyle').build(),
@@ -3980,7 +4015,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             init: color,
             isNamed: true,
           ),
-          'opacity': _i2.BuilderArg<_i29.Animation<double>?>(
+          'opacity': _i2.BuilderArg<_i30.Animation<double>?>(
             name: 'opacity',
             init: opacity,
             isNamed: true,
@@ -4001,7 +4036,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             isNamed: true,
             defaultValue: _i10.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i30.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i31.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
@@ -4083,7 +4118,7 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'bundle': _i2.BuilderArg<_i31.AssetBundle>(
+          'bundle': _i2.BuilderArg<_i32.AssetBundle>(
             name: 'bundle',
             init: bundle,
             isNamed: true,
@@ -4211,7 +4246,7 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
             init: onPointerUp,
             isNamed: true,
           ),
-          'onPointerHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
+          'onPointerHover': _i2.BuilderArg<_i33.PointerHoverEventListener?>(
             name: 'onPointerHover',
             init: onPointerHover,
             isNamed: true,
@@ -4309,22 +4344,22 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'onEnter': _i2.BuilderArg<_i32.PointerEnterEventListener?>(
+          'onEnter': _i2.BuilderArg<_i33.PointerEnterEventListener?>(
             name: 'onEnter',
             init: onEnter,
             isNamed: true,
           ),
-          'onExit': _i2.BuilderArg<_i32.PointerExitEventListener?>(
+          'onExit': _i2.BuilderArg<_i33.PointerExitEventListener?>(
             name: 'onExit',
             init: onExit,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
+          'onHover': _i2.BuilderArg<_i33.PointerHoverEventListener?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'cursor': _i2.BuilderArg<_i33.MouseCursor>(
+          'cursor': _i2.BuilderArg<_i34.MouseCursor>(
             name: 'cursor',
             init: cursor,
             isNamed: true,
@@ -4543,7 +4578,7 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
 
 /// class Semantics extends SingleChildRenderObjectWidget
 class Semantics$Mate extends _i1.Semantics with _i2.Mate {
-  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
+  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, bool? expanded, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -4628,6 +4663,9 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
 
     /// optionalParameters: {bool? liveRegion} , default:none
     super.liveRegion,
+
+    /// optionalParameters: {bool? expanded} , default:none
+    super.expanded,
 
     /// optionalParameters: {int? maxValueLength} , default:none
     super.maxValueLength,
@@ -4884,6 +4922,11 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: liveRegion,
             isNamed: true,
           ),
+          'expanded': _i2.BuilderArg<bool?>(
+            name: 'expanded',
+            init: expanded,
+            isNamed: true,
+          ),
           'maxValueLength': _i2.BuilderArg<int?>(
             name: 'maxValueLength',
             init: maxValueLength,
@@ -4899,7 +4942,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: label,
             isNamed: true,
           ),
-          'attributedLabel': _i2.BuilderArg<_i34.AttributedString?>(
+          'attributedLabel': _i2.BuilderArg<_i35.AttributedString?>(
             name: 'attributedLabel',
             init: attributedLabel,
             isNamed: true,
@@ -4909,7 +4952,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: value,
             isNamed: true,
           ),
-          'attributedValue': _i2.BuilderArg<_i34.AttributedString?>(
+          'attributedValue': _i2.BuilderArg<_i35.AttributedString?>(
             name: 'attributedValue',
             init: attributedValue,
             isNamed: true,
@@ -4919,7 +4962,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: increasedValue,
             isNamed: true,
           ),
-          'attributedIncreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
+          'attributedIncreasedValue': _i2.BuilderArg<_i35.AttributedString?>(
             name: 'attributedIncreasedValue',
             init: attributedIncreasedValue,
             isNamed: true,
@@ -4929,7 +4972,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: decreasedValue,
             isNamed: true,
           ),
-          'attributedDecreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
+          'attributedDecreasedValue': _i2.BuilderArg<_i35.AttributedString?>(
             name: 'attributedDecreasedValue',
             init: attributedDecreasedValue,
             isNamed: true,
@@ -4939,7 +4982,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: hint,
             isNamed: true,
           ),
-          'attributedHint': _i2.BuilderArg<_i34.AttributedString?>(
+          'attributedHint': _i2.BuilderArg<_i35.AttributedString?>(
             name: 'attributedHint',
             init: attributedHint,
             isNamed: true,
@@ -4964,12 +5007,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'sortKey': _i2.BuilderArg<_i34.SemanticsSortKey?>(
+          'sortKey': _i2.BuilderArg<_i35.SemanticsSortKey?>(
             name: 'sortKey',
             init: sortKey,
             isNamed: true,
           ),
-          'tagForChildren': _i2.BuilderArg<_i34.SemanticsTag?>(
+          'tagForChildren': _i2.BuilderArg<_i35.SemanticsTag?>(
             name: 'tagForChildren',
             init: tagForChildren,
             isNamed: true,
@@ -5034,22 +5077,22 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i35.MoveCursorHandler?>(
             name: 'onMoveCursorForwardByCharacter',
             init: onMoveCursorForwardByCharacter,
             isNamed: true,
           ),
-          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i35.MoveCursorHandler?>(
             name: 'onMoveCursorBackwardByCharacter',
             init: onMoveCursorBackwardByCharacter,
             isNamed: true,
           ),
-          'onSetSelection': _i2.BuilderArg<_i34.SetSelectionHandler?>(
+          'onSetSelection': _i2.BuilderArg<_i35.SetSelectionHandler?>(
             name: 'onSetSelection',
             init: onSetSelection,
             isNamed: true,
           ),
-          'onSetText': _i2.BuilderArg<_i34.SetTextHandler?>(
+          'onSetText': _i2.BuilderArg<_i35.SetTextHandler?>(
             name: 'onSetText',
             init: onSetText,
             isNamed: true,
@@ -5064,7 +5107,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDidLoseAccessibilityFocus,
             isNamed: true,
           ),
-          'customSemanticsActions': _i2.BuilderArg<Map<_i34.CustomSemanticsAction, _i4.VoidCallback>?>(
+          'customSemanticsActions': _i2.BuilderArg<Map<_i35.CustomSemanticsAction, _i4.VoidCallback>?>(
             name: 'customSemanticsActions',
             init: customSemanticsActions,
             isNamed: true,
@@ -5102,6 +5145,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           hidden: p.get('hidden').build(),
           image: p.get('image').build(),
           liveRegion: p.get('liveRegion').build(),
+          expanded: p.get('expanded').build(),
           maxValueLength: p.get('maxValueLength').build(),
           currentValueLength: p.get('currentValueLength').build(),
           label: p.get('label').build(),
@@ -5199,7 +5243,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'properties': _i2.BuilderArg<_i34.SemanticsProperties>(
+          'properties': _i2.BuilderArg<_i35.SemanticsProperties>(
             name: 'properties',
             init: properties,
             isNamed: true,

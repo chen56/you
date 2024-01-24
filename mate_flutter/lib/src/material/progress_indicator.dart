@@ -8,6 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/animation/animation.dart' as _i5;
 import 'package:flutter/src/painting/border_radius.dart' as _i6;
 import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/src/painting/edge_insets.dart' as _i8;
 
 /// class LinearProgressIndicator extends ProgressIndicator
 class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.Mate {
@@ -308,7 +309,7 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
 
 /// class RefreshProgressIndicator extends CircularProgressIndicator
 class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i2.Mate {
-  /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, double strokeAlign = strokeAlignCenter, String? semanticsLabel, String? semanticsValue, StrokeCap? strokeCap})
+  /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, double strokeAlign = strokeAlignCenter, String? semanticsLabel, String? semanticsValue, StrokeCap? strokeCap, double elevation = 2.0, EdgeInsetsGeometry indicatorMargin = const EdgeInsets.all(4.0), EdgeInsetsGeometry indicatorPadding = const EdgeInsets.all(12.0)})
   RefreshProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -339,6 +340,15 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
 
     /// optionalParameters: {StrokeCap? strokeCap} , default:none
     super.strokeCap,
+
+    /// optionalParameters: {double elevation = 2.0} , default:processed=DoubleLiteralImpl
+    super.elevation,
+
+    /// optionalParameters: {EdgeInsetsGeometry indicatorMargin = const EdgeInsets.all(4.0)} , default:unprocessed=InstanceCreationExpressionImpl
+    super.indicatorMargin,
+
+    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = const EdgeInsets.all(12.0)} , default:unprocessed=InstanceCreationExpressionImpl
+    super.indicatorPadding,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -390,6 +400,22 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
             init: strokeCap,
             isNamed: true,
           ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 2.0,
+          ),
+          'indicatorMargin': _i2.BuilderArg<_i8.EdgeInsetsGeometry>(
+            name: 'indicatorMargin',
+            init: indicatorMargin,
+            isNamed: true,
+          ),
+          'indicatorPadding': _i2.BuilderArg<_i8.EdgeInsetsGeometry>(
+            name: 'indicatorPadding',
+            init: indicatorPadding,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'RefreshProgressIndicator';
@@ -405,6 +431,9 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
           strokeCap: p.get('strokeCap').build(),
+          elevation: p.get('elevation').build(),
+          indicatorMargin: p.get('indicatorMargin').build(),
+          indicatorPadding: p.get('indicatorPadding').build(),
         );
   }
 

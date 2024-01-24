@@ -8,6 +8,58 @@ import 'package:flutter/src/rendering/viewport_offset.dart' as _i4;
 import 'package:flutter/src/gestures/hit_test.dart' as _i5;
 import 'package:flutter/src/rendering/box.dart' as _i6;
 
+/// class SliverLayoutDimensions
+class SliverLayoutDimensions$Mate extends _i1.SliverLayoutDimensions with _i2.Mate {
+  /// SliverLayoutDimensions SliverLayoutDimensions({required double scrollOffset, required double precedingScrollExtent, required double viewportMainAxisExtent, required double crossAxisExtent})
+  SliverLayoutDimensions$Mate({
+    /// optionalParameters: {required double scrollOffset} , default:none
+    required super.scrollOffset,
+
+    /// optionalParameters: {required double precedingScrollExtent} , default:none
+    required super.precedingScrollExtent,
+
+    /// optionalParameters: {required double viewportMainAxisExtent} , default:none
+    required super.viewportMainAxisExtent,
+
+    /// optionalParameters: {required double crossAxisExtent} , default:none
+    required super.crossAxisExtent,
+  })  : mateParams = {
+          'scrollOffset': _i2.BuilderArg<double>(
+            name: 'scrollOffset',
+            init: scrollOffset,
+            isNamed: true,
+          ),
+          'precedingScrollExtent': _i2.BuilderArg<double>(
+            name: 'precedingScrollExtent',
+            init: precedingScrollExtent,
+            isNamed: true,
+          ),
+          'viewportMainAxisExtent': _i2.BuilderArg<double>(
+            name: 'viewportMainAxisExtent',
+            init: viewportMainAxisExtent,
+            isNamed: true,
+          ),
+          'crossAxisExtent': _i2.BuilderArg<double>(
+            name: 'crossAxisExtent',
+            init: crossAxisExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverLayoutDimensions';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SliverLayoutDimensions$Mate(
+          scrollOffset: p.get('scrollOffset').build(),
+          precedingScrollExtent: p.get('precedingScrollExtent').build(),
+          viewportMainAxisExtent: p.get('viewportMainAxisExtent').build(),
+          crossAxisExtent: p.get('crossAxisExtent').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class SliverConstraints extends Constraints
 class SliverConstraints$Mate extends _i1.SliverConstraints with _i2.Mate {
   /// SliverConstraints SliverConstraints({required AxisDirection axisDirection, required GrowthDirection growthDirection, required ScrollDirection userScrollDirection, required double scrollOffset, required double precedingScrollExtent, required double overlap, required double remainingPaintExtent, required double crossAxisExtent, required AxisDirection crossAxisDirection, required double viewportMainAxisExtent, required double remainingCacheExtent, required double cacheOrigin})

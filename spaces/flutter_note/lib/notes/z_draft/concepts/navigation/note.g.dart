@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # flutter )
+        /// (print.markdown(r''' # Navigato)
         (
           cellType: 'body',
           offset: 113,
-          end: 266,
+          end: 356,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 266,
-          end: 268,
+          offset: 356,
+          end: 358,
           specialNodes: <({
             String nodeType,
             int end,

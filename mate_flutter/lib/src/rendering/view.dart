@@ -45,13 +45,13 @@ class ViewConfiguration$Mate extends _i1.ViewConfiguration with _i2.Mate {
 
 /// class RenderView extends RenderObject with RenderObjectWithChildMixin<RenderBox>
 class RenderView$Mate extends _i1.RenderView with _i2.Mate {
-  /// RenderView RenderView({RenderBox? child, required ViewConfiguration configuration, required FlutterView view})
+  /// RenderView RenderView({RenderBox? child, ViewConfiguration? configuration, required FlutterView view})
   RenderView$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {required ViewConfiguration configuration} , default:none
-    required super.configuration,
+    /// optionalParameters: {ViewConfiguration? configuration} , default:none
+    super.configuration,
 
     /// optionalParameters: {required FlutterView view} , default:none
     required super.view,
@@ -61,7 +61,7 @@ class RenderView$Mate extends _i1.RenderView with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'configuration': _i2.BuilderArg<_i1.ViewConfiguration>(
+          'configuration': _i2.BuilderArg<_i1.ViewConfiguration?>(
             name: 'configuration',
             init: configuration,
             isNamed: true,

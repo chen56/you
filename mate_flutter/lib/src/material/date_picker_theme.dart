@@ -8,12 +8,13 @@ import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/painting/text_style.dart' as _i5;
 import 'package:flutter/src/material/material_state.dart' as _i6;
 import 'package:flutter/src/material/input_decorator.dart' as _i7;
-import 'package:flutter/src/foundation/key.dart' as _i8;
-import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/material/button_style.dart' as _i8;
+import 'package:flutter/src/foundation/key.dart' as _i9;
+import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class DatePickerThemeData with Diagnosticable
 class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
-  /// DatePickerThemeData DatePickerThemeData({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? headerBackgroundColor, Color? headerForegroundColor, TextStyle? headerHeadlineStyle, TextStyle? headerHelpStyle, TextStyle? weekdayStyle, TextStyle? dayStyle, MaterialStateProperty<Color?>? dayForegroundColor, MaterialStateProperty<Color?>? dayBackgroundColor, MaterialStateProperty<Color?>? dayOverlayColor, MaterialStateProperty<Color?>? todayForegroundColor, MaterialStateProperty<Color?>? todayBackgroundColor, BorderSide? todayBorder, TextStyle? yearStyle, MaterialStateProperty<Color?>? yearForegroundColor, MaterialStateProperty<Color?>? yearBackgroundColor, MaterialStateProperty<Color?>? yearOverlayColor, Color? rangePickerBackgroundColor, double? rangePickerElevation, Color? rangePickerShadowColor, Color? rangePickerSurfaceTintColor, ShapeBorder? rangePickerShape, Color? rangePickerHeaderBackgroundColor, Color? rangePickerHeaderForegroundColor, TextStyle? rangePickerHeaderHeadlineStyle, TextStyle? rangePickerHeaderHelpStyle, Color? rangeSelectionBackgroundColor, MaterialStateProperty<Color?>? rangeSelectionOverlayColor, Color? dividerColor, InputDecorationTheme? inputDecorationTheme})
+  /// DatePickerThemeData DatePickerThemeData({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? headerBackgroundColor, Color? headerForegroundColor, TextStyle? headerHeadlineStyle, TextStyle? headerHelpStyle, TextStyle? weekdayStyle, TextStyle? dayStyle, MaterialStateProperty<Color?>? dayForegroundColor, MaterialStateProperty<Color?>? dayBackgroundColor, MaterialStateProperty<Color?>? dayOverlayColor, MaterialStateProperty<Color?>? todayForegroundColor, MaterialStateProperty<Color?>? todayBackgroundColor, BorderSide? todayBorder, TextStyle? yearStyle, MaterialStateProperty<Color?>? yearForegroundColor, MaterialStateProperty<Color?>? yearBackgroundColor, MaterialStateProperty<Color?>? yearOverlayColor, Color? rangePickerBackgroundColor, double? rangePickerElevation, Color? rangePickerShadowColor, Color? rangePickerSurfaceTintColor, ShapeBorder? rangePickerShape, Color? rangePickerHeaderBackgroundColor, Color? rangePickerHeaderForegroundColor, TextStyle? rangePickerHeaderHeadlineStyle, TextStyle? rangePickerHeaderHelpStyle, Color? rangeSelectionBackgroundColor, MaterialStateProperty<Color?>? rangeSelectionOverlayColor, Color? dividerColor, InputDecorationTheme? inputDecorationTheme, ButtonStyle? cancelButtonStyle, ButtonStyle? confirmButtonStyle})
   DatePickerThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
@@ -116,6 +117,12 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
 
     /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
     super.inputDecorationTheme,
+
+    /// optionalParameters: {ButtonStyle? cancelButtonStyle} , default:none
+    super.cancelButtonStyle,
+
+    /// optionalParameters: {ButtonStyle? confirmButtonStyle} , default:none
+    super.confirmButtonStyle,
   })  : mateParams = {
           'backgroundColor': _i2.BuilderArg<_i3.Color?>(
             name: 'backgroundColor',
@@ -287,6 +294,16 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
             init: inputDecorationTheme,
             isNamed: true,
           ),
+          'cancelButtonStyle': _i2.BuilderArg<_i8.ButtonStyle?>(
+            name: 'cancelButtonStyle',
+            init: cancelButtonStyle,
+            isNamed: true,
+          ),
+          'confirmButtonStyle': _i2.BuilderArg<_i8.ButtonStyle?>(
+            name: 'confirmButtonStyle',
+            init: confirmButtonStyle,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'DatePickerThemeData';
@@ -326,6 +343,8 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
           rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
           dividerColor: p.get('dividerColor').build(),
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
+          cancelButtonStyle: p.get('cancelButtonStyle').build(),
+          confirmButtonStyle: p.get('confirmButtonStyle').build(),
         );
   }
 
@@ -346,7 +365,7 @@ class DatePickerTheme$Mate extends _i1.DatePickerTheme with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i8.Key?>(
+          'key': _i2.BuilderArg<_i9.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -356,7 +375,7 @@ class DatePickerTheme$Mate extends _i1.DatePickerTheme with _i2.Mate {
             init: data,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i9.Widget>(
+          'child': _i2.BuilderArg<_i10.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

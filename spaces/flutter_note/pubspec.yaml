@@ -27,7 +27,6 @@ dependencies:
   note:
   note_tools:
   mate:
-  mate_flutter:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -114,6 +113,7 @@ flutter:
     - lib/notes/z_draft/other/research/remote_view/
     - lib/notes/z_draft/other/serialization/json/
     - lib/notes/z_draft/other/thinking_in_ui/readable_html_vs_dart/
+    - lib/notes/z_draft/concepts/navigation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

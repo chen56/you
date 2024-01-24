@@ -228,6 +228,30 @@ class RenderIntrinsicHeight$Mate extends _i1.RenderIntrinsicHeight with _i2.Mate
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
+/// class RenderIgnoreBaseline extends RenderProxyBox
+class RenderIgnoreBaseline$Mate extends _i1.RenderIgnoreBaseline with _i2.Mate {
+  /// RenderIgnoreBaseline RenderIgnoreBaseline({RenderBox? child})
+  RenderIgnoreBaseline$Mate(
+      {
+      /// optionalParameters: {RenderBox? child} , default:none
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
+    mateBuilderName = 'RenderIgnoreBaseline';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderIgnoreBaseline$Mate(child: p.get('child').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class RenderOpacity extends RenderProxyBox
 class RenderOpacity$Mate extends _i1.RenderOpacity with _i2.Mate {
   /// RenderOpacity RenderOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderBox? child})

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
-import 'package:mate_flutter/material.dart';
 import 'package:code_builder/code_builder.dart';
 
 build(BuildContext context, Pen print) {
@@ -30,9 +29,9 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
+  print(WidgetContent(Container(
     height: 100,
-    child: Text$Mate("请修改height,调节高度"),
+    child: Text("请修改height,调节高度"),
   )));
 
   print.$____________________________________________________________________();
@@ -41,7 +40,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Text$Mate("我是Text.data,修改我")));
+  print(WidgetContent(Text("我是Text.data,修改我")));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -51,13 +50,13 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
+  print(WidgetContent(Container(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
     clipBehavior: Clip.none,
-    child: Center$Mate(
-      child: Container$Mate(
+    child: Center(
+      child: Container(
         width: 100,
         height: 50,
         color: Colors.red.shade400,
@@ -72,11 +71,11 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
+  print(WidgetContent(Container(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
-    child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
+    child: Text("修改Text.softWrap: 自动换行", softWrap: true),
   )));
 
   print.$____________________________________________________________________();
@@ -87,15 +86,15 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
-      Container$Mate(
+      Container(
         width: 100,
         height: 100,
         color: Colors.blue,
       ),
-      Container$Mate(
+      Container(
         width: 100,
         height: 100,
         color: Colors.green,
@@ -125,11 +124,10 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   // 包含MateSample调用的语句会被范例代码擦除
   print(
-    MateSampleContent(
-      ElevatedButton$Mate(
+    WidgetContent(
+      ElevatedButton(
           onPressed: showAbout..sampleCode = refer("showAbout"),
-          child: Text$Mate("Button1")),
-      sampleTemplate: SampleTemplate.includeCleanCellCode,
+          child: const Text("Button1")),
     ),
   );
 
@@ -140,15 +138,15 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   print.$____________________________________________________________________();
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    print(MateSampleContent(Row$Mate(
+    print(WidgetContent(Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-        ElevatedButton$Mate(
+        ElevatedButton(
             onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text$Mate("${mainAxisAlignment.name}:Button1")),
-        ElevatedButton$Mate(
+            child: Text("${mainAxisAlignment.name}:Button1")),
+        ElevatedButton(
             onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text$Mate("${mainAxisAlignment.name}:Button2")),
+            child: Text("${mainAxisAlignment.name}:Button2")),
       ],
     )));
   }

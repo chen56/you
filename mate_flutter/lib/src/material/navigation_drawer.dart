@@ -128,7 +128,7 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
 
 /// class NavigationDrawerDestination extends StatelessWidget
 class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination with _i2.Mate {
-  /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
+  /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label, bool enabled = true})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -144,6 +144,9 @@ class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination w
 
     /// optionalParameters: {required Widget label} , default:none
     required super.label,
+
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    super.enabled,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -170,6 +173,12 @@ class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination w
             init: label,
             isNamed: true,
           ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationDrawerDestination';
@@ -180,6 +189,7 @@ class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination w
           icon: p.get('icon').build(),
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
+          enabled: p.get('enabled').build(),
         );
   }
 

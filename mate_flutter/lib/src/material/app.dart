@@ -8,20 +8,21 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/navigator.dart' as _i5;
 import 'package:flutter/src/material/scaffold.dart' as _i6;
 import 'package:flutter/src/widgets/app.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/material/theme_data.dart' as _i9;
-import 'package:flutter/material.dart' as _i10;
-import 'package:flutter/src/animation/curves.dart' as _i11;
-import 'package:flutter/animation.dart' as _i12;
-import 'package:flutter/src/widgets/localizations.dart' as _i13;
-import 'package:flutter/src/widgets/shortcuts.dart' as _i14;
-import 'package:flutter/src/widgets/actions.dart' as _i15;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i16;
-import 'package:flutter/src/widgets/router.dart' as _i17;
+import 'package:flutter/src/widgets/notification_listener.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/material/theme_data.dart' as _i10;
+import 'package:flutter/material.dart' as _i11;
+import 'package:flutter/src/animation/curves.dart' as _i12;
+import 'package:flutter/animation.dart' as _i13;
+import 'package:flutter/src/widgets/localizations.dart' as _i14;
+import 'package:flutter/src/widgets/shortcuts.dart' as _i15;
+import 'package:flutter/src/widgets/actions.dart' as _i16;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i17;
+import 'package:flutter/src/widgets/router.dart' as _i18;
 
 /// class MaterialApp extends StatefulWidget
 class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
-  /// MaterialApp MaterialApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// MaterialApp MaterialApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, bool Function(NavigationNotification)? onNavigationNotification, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   MaterialApp$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -49,6 +50,9 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     super.onUnknownRoute,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     super.navigatorObservers,
@@ -176,6 +180,11 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: onUnknownRoute,
             isNamed: true,
           ),
+          'onNavigationNotification': _i2.BuilderArg<_i8.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
           'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
             name: 'navigatorObservers',
             init: navigatorObservers,
@@ -197,27 +206,27 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i8.Color?>(
+          'color': _i2.BuilderArg<_i9.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'theme': _i2.BuilderArg<_i9.ThemeData?>(
+          'theme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'theme',
             init: theme,
             isNamed: true,
           ),
-          'darkTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'darkTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'darkTheme',
             init: darkTheme,
             isNamed: true,
           ),
-          'highContrastTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'highContrastTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'highContrastTheme',
             init: highContrastTheme,
             isNamed: true,
           ),
-          'highContrastDarkTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'highContrastDarkTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'highContrastDarkTheme',
             init: highContrastDarkTheme,
             isNamed: true,
@@ -226,25 +235,25 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             name: 'themeMode',
             init: themeMode,
             isNamed: true,
-            defaultValue: _i10.ThemeMode.system,
+            defaultValue: _i11.ThemeMode.system,
           ),
           'themeAnimationDuration': _i2.BuilderArg<Duration>(
             name: 'themeAnimationDuration',
             init: themeAnimationDuration,
             isNamed: true,
           ),
-          'themeAnimationCurve': _i2.BuilderArg<_i11.Curve>(
+          'themeAnimationCurve': _i2.BuilderArg<_i12.Curve>(
             name: 'themeAnimationCurve',
             init: themeAnimationCurve,
             isNamed: true,
-            defaultValue: _i12.Curves.linear,
+            defaultValue: _i13.Curves.linear,
           ),
-          'locale': _i2.BuilderArg<_i8.Locale?>(
+          'locale': _i2.BuilderArg<_i9.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i13.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i14.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -259,7 +268,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i9.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -300,12 +309,12 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i14.ShortcutActivator, _i15.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i15.ShortcutActivator, _i16.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i15.Action<_i15.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i16.Action<_i16.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -315,7 +324,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i16.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i17.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -334,6 +343,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           navigatorObservers: p.get('navigatorObservers').build(),
           builder: p.get('builder').build(),
           title: p.get('title').build(),
@@ -364,7 +374,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
         );
   }
 
-  /// MaterialApp MaterialApp.router({Key? key, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// MaterialApp MaterialApp.router({Key? key, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, bool Function(NavigationNotification)? onNavigationNotification, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   MaterialApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -395,6 +405,9 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
     super.onGenerateTitle,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {Color? color} , default:none
     super.color,
@@ -475,27 +488,27 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: scaffoldMessengerKey,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i17.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i18.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i17.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i18.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
           ),
-          'routerDelegate': _i2.BuilderArg<_i17.RouterDelegate<Object>?>(
+          'routerDelegate': _i2.BuilderArg<_i18.RouterDelegate<Object>?>(
             name: 'routerDelegate',
             init: routerDelegate,
             isNamed: true,
           ),
-          'routerConfig': _i2.BuilderArg<_i17.RouterConfig<Object>?>(
+          'routerConfig': _i2.BuilderArg<_i18.RouterConfig<Object>?>(
             name: 'routerConfig',
             init: routerConfig,
             isNamed: true,
           ),
-          'backButtonDispatcher': _i2.BuilderArg<_i17.BackButtonDispatcher?>(
+          'backButtonDispatcher': _i2.BuilderArg<_i18.BackButtonDispatcher?>(
             name: 'backButtonDispatcher',
             init: backButtonDispatcher,
             isNamed: true,
@@ -516,27 +529,32 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i8.Color?>(
+          'onNavigationNotification': _i2.BuilderArg<_i8.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i9.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'theme': _i2.BuilderArg<_i9.ThemeData?>(
+          'theme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'theme',
             init: theme,
             isNamed: true,
           ),
-          'darkTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'darkTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'darkTheme',
             init: darkTheme,
             isNamed: true,
           ),
-          'highContrastTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'highContrastTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'highContrastTheme',
             init: highContrastTheme,
             isNamed: true,
           ),
-          'highContrastDarkTheme': _i2.BuilderArg<_i9.ThemeData?>(
+          'highContrastDarkTheme': _i2.BuilderArg<_i10.ThemeData?>(
             name: 'highContrastDarkTheme',
             init: highContrastDarkTheme,
             isNamed: true,
@@ -545,25 +563,25 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             name: 'themeMode',
             init: themeMode,
             isNamed: true,
-            defaultValue: _i10.ThemeMode.system,
+            defaultValue: _i11.ThemeMode.system,
           ),
           'themeAnimationDuration': _i2.BuilderArg<Duration>(
             name: 'themeAnimationDuration',
             init: themeAnimationDuration,
             isNamed: true,
           ),
-          'themeAnimationCurve': _i2.BuilderArg<_i11.Curve>(
+          'themeAnimationCurve': _i2.BuilderArg<_i12.Curve>(
             name: 'themeAnimationCurve',
             init: themeAnimationCurve,
             isNamed: true,
-            defaultValue: _i12.Curves.linear,
+            defaultValue: _i13.Curves.linear,
           ),
-          'locale': _i2.BuilderArg<_i8.Locale?>(
+          'locale': _i2.BuilderArg<_i9.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i13.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i14.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -578,7 +596,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i9.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -619,12 +637,12 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i14.ShortcutActivator, _i15.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i15.ShortcutActivator, _i16.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i15.Action<_i15.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i16.Action<_i16.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -634,7 +652,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i16.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i17.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -654,6 +672,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
           builder: p.get('builder').build(),
           title: p.get('title').build(),
           onGenerateTitle: p.get('onGenerateTitle').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           color: p.get('color').build(),
           theme: p.get('theme').build(),
           darkTheme: p.get('darkTheme').build(),

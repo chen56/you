@@ -13,13 +13,13 @@ import 'package:flutter/cupertino.dart' as _i9;
 
 /// class DatePickerDialog extends StatefulWidget
 class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
-  /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange, Icon? switchToInputEntryModeIcon, Icon? switchToCalendarEntryModeIcon})
+  /// DatePickerDialog DatePickerDialog({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange, Icon? switchToInputEntryModeIcon, Icon? switchToCalendarEntryModeIcon})
   DatePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {required DateTime initialDate} , default:none
-    required super.initialDate,
+    /// optionalParameters: {DateTime? initialDate} , default:none
+    super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
     required super.firstDate,
@@ -80,7 +80,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'initialDate': _i2.BuilderArg<DateTime>(
+          'initialDate': _i2.BuilderArg<DateTime?>(
             name: 'initialDate',
             init: initialDate,
             isNamed: true,

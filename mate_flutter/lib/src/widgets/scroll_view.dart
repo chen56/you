@@ -14,8 +14,9 @@ import 'package:flutter/src/gestures/recognizer.dart' as _i10;
 import 'package:flutter/gestures.dart' as _i11;
 import 'dart:ui' as _i12;
 import 'package:flutter/src/painting/edge_insets.dart' as _i13;
-import 'package:flutter/src/widgets/scroll_delegate.dart' as _i14;
-import 'package:flutter/src/rendering/sliver_grid.dart' as _i15;
+import 'package:flutter/src/rendering/sliver.dart' as _i14;
+import 'package:flutter/src/widgets/scroll_delegate.dart' as _i15;
+import 'package:flutter/src/rendering/sliver_grid.dart' as _i16;
 
 /// class CustomScrollView extends ScrollView
 class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
@@ -195,7 +196,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
 
 /// class ListView extends BoxScrollView
 class ListView$Mate extends _i1.ListView with _i2.Mate {
-  /// ListView ListView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ListView ListView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, double Function(int, SliverLayoutDimensions)? itemExtentBuilder, Widget? prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -223,6 +224,9 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
 
     /// optionalParameters: {double? itemExtent} , default:none
     super.itemExtent,
+
+    /// optionalParameters: {double Function(int, SliverLayoutDimensions)? itemExtentBuilder} , default:none
+    super.itemExtentBuilder,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
     super.prototypeItem,
@@ -305,6 +309,11 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
+          'itemExtentBuilder': _i2.BuilderArg<_i14.ItemExtentBuilder?>(
+            name: 'itemExtentBuilder',
+            init: itemExtentBuilder,
+            isNamed: true,
+          ),
           'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
@@ -380,6 +389,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           shrinkWrap: p.get('shrinkWrap').build(),
           padding: p.get('padding').build(),
           itemExtent: p.get('itemExtent').build(),
+          itemExtentBuilder: p.get('itemExtentBuilder').build(),
           prototypeItem: p.get('prototypeItem').build(),
           addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
@@ -394,7 +404,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
         );
   }
 
-  /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, double Function(int, SliverLayoutDimensions)? itemExtentBuilder, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -422,6 +432,9 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
 
     /// optionalParameters: {double? itemExtent} , default:none
     super.itemExtent,
+
+    /// optionalParameters: {double Function(int, SliverLayoutDimensions)? itemExtentBuilder} , default:none
+    super.itemExtentBuilder,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
     super.prototypeItem,
@@ -510,6 +523,11 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
+          'itemExtentBuilder': _i2.BuilderArg<_i14.ItemExtentBuilder?>(
+            name: 'itemExtentBuilder',
+            init: itemExtentBuilder,
+            isNamed: true,
+          ),
           'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
@@ -520,7 +538,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i15.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -595,6 +613,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           shrinkWrap: p.get('shrinkWrap').build(),
           padding: p.get('padding').build(),
           itemExtent: p.get('itemExtent').build(),
+          itemExtentBuilder: p.get('itemExtentBuilder').build(),
           prototypeItem: p.get('prototypeItem').build(),
           itemBuilder: p.get('itemBuilder').build(),
           findChildIndexCallback: p.get('findChildIndexCallback').build(),
@@ -721,7 +740,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i15.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -810,7 +829,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
         );
   }
 
-  /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
+  /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, double Function(int, SliverLayoutDimensions)? itemExtentBuilder, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.custom({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -841,6 +860,9 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
     super.prototypeItem,
+
+    /// optionalParameters: {double Function(int, SliverLayoutDimensions)? itemExtentBuilder} , default:none
+    super.itemExtentBuilder,
 
     /// optionalParameters: {required SliverChildDelegate childrenDelegate} , default:none
     required super.childrenDelegate,
@@ -916,7 +938,12 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: prototypeItem,
             isNamed: true,
           ),
-          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
+          'itemExtentBuilder': _i2.BuilderArg<_i14.ItemExtentBuilder?>(
+            name: 'itemExtentBuilder',
+            init: itemExtentBuilder,
+            isNamed: true,
+          ),
+          'childrenDelegate': _i2.BuilderArg<_i15.SliverChildDelegate>(
             name: 'childrenDelegate',
             init: childrenDelegate,
             isNamed: true,
@@ -969,6 +996,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           padding: p.get('padding').build(),
           itemExtent: p.get('itemExtent').build(),
           prototypeItem: p.get('prototypeItem').build(),
+          itemExtentBuilder: p.get('itemExtentBuilder').build(),
           childrenDelegate: p.get('childrenDelegate').build(),
           cacheExtent: p.get('cacheExtent').build(),
           semanticChildCount: p.get('semanticChildCount').build(),
@@ -1087,7 +1115,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i16.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
@@ -1283,7 +1311,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i16.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
@@ -1293,7 +1321,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i15.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -1476,12 +1504,12 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i16.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
           ),
-          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
+          'childrenDelegate': _i2.BuilderArg<_i15.SliverChildDelegate>(
             name: 'childrenDelegate',
             init: childrenDelegate,
             isNamed: true,

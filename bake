@@ -818,9 +818,8 @@ clean() {
 gen.all() {
   _exec flutter_note dart run tools/gen.dart
   (
-    cd mate_flutter
     _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec dart run  tools/gen_mate_icons.dart
+    _exec mate_flutter dart run  tools/gen_mate_icons.dart
   )
 }
 gen.notes() {
@@ -829,9 +828,8 @@ gen.notes() {
 
 }
 gen.mate() (
-    cd mate_flutter
     _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec dart run  tools/gen_mate_icons.dart
+    _exec mate_flutter dart run  tools/gen_mate_icons.dart
 )
 regen() {
   echo "regen1"

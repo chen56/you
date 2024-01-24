@@ -6,17 +6,18 @@ import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/navigator.dart' as _i5;
-import 'package:flutter/src/painting/text_style.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/widgets/localizations.dart' as _i8;
-import 'package:flutter/src/widgets/widget_inspector.dart' as _i9;
-import 'package:flutter/src/widgets/shortcuts.dart' as _i10;
-import 'package:flutter/src/widgets/actions.dart' as _i11;
-import 'package:flutter/src/widgets/router.dart' as _i12;
+import 'package:flutter/src/widgets/notification_listener.dart' as _i6;
+import 'package:flutter/src/painting/text_style.dart' as _i7;
+import 'dart:ui' as _i8;
+import 'package:flutter/src/widgets/localizations.dart' as _i9;
+import 'package:flutter/src/widgets/widget_inspector.dart' as _i10;
+import 'package:flutter/src/widgets/shortcuts.dart' as _i11;
+import 'package:flutter/src/widgets/actions.dart' as _i12;
+import 'package:flutter/src/widgets/router.dart' as _i13;
 
 /// class WidgetsApp extends StatefulWidget
 class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
-  /// WidgetsApp WidgetsApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? initialRoute, PageRoute<T> Function<T>(RouteSettings, Widget Function(BuildContext))? pageRouteBuilder, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
+  /// WidgetsApp WidgetsApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, bool Function(NavigationNotification)? onNavigationNotification, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? initialRoute, PageRoute<T> Function<T>(RouteSettings, Widget Function(BuildContext))? pageRouteBuilder, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
   WidgetsApp$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -32,6 +33,9 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     super.onUnknownRoute,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     super.navigatorObservers,
@@ -133,6 +137,11 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: onUnknownRoute,
             isNamed: true,
           ),
+          'onNavigationNotification': _i2.BuilderArg<_i6.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
           'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
             name: 'navigatorObservers',
             init: navigatorObservers,
@@ -174,22 +183,22 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+          'textStyle': _i2.BuilderArg<_i7.TextStyle?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i7.Color>(
+          'color': _i2.BuilderArg<_i8.Color>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'locale': _i2.BuilderArg<_i7.Locale?>(
+          'locale': _i2.BuilderArg<_i8.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -204,7 +213,7 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i7.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -245,17 +254,17 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i10.InspectorSelectButtonBuilder?>(
             name: 'inspectorSelectButtonBuilder',
             init: inspectorSelectButtonBuilder,
             isNamed: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i11.ShortcutActivator, _i12.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i12.Action<_i12.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -275,6 +284,7 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           navigatorObservers: p.get('navigatorObservers').build(),
           initialRoute: p.get('initialRoute').build(),
           pageRouteBuilder: p.get('pageRouteBuilder').build(),
@@ -303,7 +313,7 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
         );
   }
 
-  /// WidgetsApp WidgetsApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
+  /// WidgetsApp WidgetsApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, bool Function(NavigationNotification)? onNavigationNotification, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
   WidgetsApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -331,6 +341,9 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
     super.onGenerateTitle,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
     super.textStyle,
@@ -388,27 +401,27 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i12.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i13.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i12.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i13.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
           ),
-          'routerDelegate': _i2.BuilderArg<_i12.RouterDelegate<Object>?>(
+          'routerDelegate': _i2.BuilderArg<_i13.RouterDelegate<Object>?>(
             name: 'routerDelegate',
             init: routerDelegate,
             isNamed: true,
           ),
-          'routerConfig': _i2.BuilderArg<_i12.RouterConfig<Object>?>(
+          'routerConfig': _i2.BuilderArg<_i13.RouterConfig<Object>?>(
             name: 'routerConfig',
             init: routerConfig,
             isNamed: true,
           ),
-          'backButtonDispatcher': _i2.BuilderArg<_i12.BackButtonDispatcher?>(
+          'backButtonDispatcher': _i2.BuilderArg<_i13.BackButtonDispatcher?>(
             name: 'backButtonDispatcher',
             init: backButtonDispatcher,
             isNamed: true,
@@ -429,22 +442,27 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+          'onNavigationNotification': _i2.BuilderArg<_i6.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i7.TextStyle?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i7.Color>(
+          'color': _i2.BuilderArg<_i8.Color>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'locale': _i2.BuilderArg<_i7.Locale?>(
+          'locale': _i2.BuilderArg<_i8.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -459,7 +477,7 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i7.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -500,17 +518,17 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i10.InspectorSelectButtonBuilder?>(
             name: 'inspectorSelectButtonBuilder',
             init: inspectorSelectButtonBuilder,
             isNamed: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i11.ShortcutActivator, _i12.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i12.Action<_i12.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -534,6 +552,7 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           builder: p.get('builder').build(),
           title: p.get('title').build(),
           onGenerateTitle: p.get('onGenerateTitle').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           textStyle: p.get('textStyle').build(),
           color: p.get('color').build(),
           locale: p.get('locale').build(),

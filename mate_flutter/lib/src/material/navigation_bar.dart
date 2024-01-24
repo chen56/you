@@ -8,12 +8,13 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
 import 'dart:ui' as _i6;
 import 'package:flutter/src/painting/borders.dart' as _i7;
-import 'package:flutter/src/animation/animation.dart' as _i8;
-import 'package:flutter/src/painting/border_radius.dart' as _i9;
+import 'package:flutter/src/material/material_state.dart' as _i8;
+import 'package:flutter/src/animation/animation.dart' as _i9;
+import 'package:flutter/src/painting/border_radius.dart' as _i10;
 
 /// class NavigationBar extends StatelessWidget
 class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
-  /// NavigationBar NavigationBar({Key? key, Duration? animationDuration, int selectedIndex = 0, required List<Widget> destinations, void Function(int)? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior})
+  /// NavigationBar NavigationBar({Key? key, Duration? animationDuration, int selectedIndex = 0, required List<Widget> destinations, void Function(int)? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior, MaterialStateProperty<Color?>? overlayColor})
   NavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -53,6 +54,9 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
 
     /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , default:none
     super.labelBehavior,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
+    super.overlayColor,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -120,6 +124,11 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
             init: labelBehavior,
             isNamed: true,
           ),
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i6.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationBar';
@@ -138,6 +147,7 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
           indicatorShape: p.get('indicatorShape').build(),
           height: p.get('height').build(),
           labelBehavior: p.get('labelBehavior').build(),
+          overlayColor: p.get('overlayColor').build(),
         );
   }
 
@@ -147,7 +157,7 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
 
 /// class NavigationDestination extends StatelessWidget
 class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate {
-  /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip})
+  /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip, bool enabled = true})
   NavigationDestination$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -163,6 +173,9 @@ class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate
 
     /// optionalParameters: {String? tooltip} , default:none
     super.tooltip,
+
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    super.enabled,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -189,6 +202,12 @@ class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate
             init: tooltip,
             isNamed: true,
           ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationDestination';
@@ -199,6 +218,7 @@ class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
+          enabled: p.get('enabled').build(),
         );
   }
 
@@ -236,7 +256,7 @@ class NavigationIndicator$Mate extends _i1.NavigationIndicator with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'animation': _i2.BuilderArg<_i8.Animation<double>>(
+          'animation': _i2.BuilderArg<_i9.Animation<double>>(
             name: 'animation',
             init: animation,
             isNamed: true,
@@ -256,7 +276,7 @@ class NavigationIndicator$Mate extends _i1.NavigationIndicator with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i9.BorderRadius>(
+          'borderRadius': _i2.BuilderArg<_i10.BorderRadius>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,

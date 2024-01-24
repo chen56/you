@@ -4,9 +4,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
-import 'package:mate_flutter/material.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
@@ -61,8 +59,7 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
               (index) => Container(
                     width: 30,
                     height: 30,
-                    color: Colors
-                        .primaries[random.nextInt(Colors.primaries.length)],
+                    color: Colors.primaries[random.nextInt(Colors.primaries.length)],
                   ))
         ],
       );
@@ -119,10 +116,9 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 
   print.$____________________________________________________________________();
   // 形式1：
-  print(MateSampleContent(
-      Container$Mate(width: 100, height: 100, color: Colors.deepPurple)));
+  print(WidgetContent(Container(width: 100, height: 100, color: Colors.deepPurple)));
   // 形式2：简化形式，Mate类型的Widget通通认为是范例
-  print(Container$Mate(width: 100, height: 100, color: Colors.deepPurple));
+  print(Container(width: 100, height: 100, color: Colors.deepPurple));
 
   print.$____________________________________________________________________();
   print.markdown("""

@@ -12,7 +12,7 @@ import 'package:flutter/gestures.dart' as _i8;
 
 /// class CupertinoSwitch extends StatefulWidget
 class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
-  /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
+  /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, Color? onLabelColor, Color? offLabelColor, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -37,6 +37,12 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
 
     /// optionalParameters: {Color? focusColor} , default:none
     super.focusColor,
+
+    /// optionalParameters: {Color? onLabelColor} , default:none
+    super.onLabelColor,
+
+    /// optionalParameters: {Color? offLabelColor} , default:none
+    super.offLabelColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
     super.focusNode,
@@ -90,6 +96,16 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
             init: focusColor,
             isNamed: true,
           ),
+          'onLabelColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'onLabelColor',
+            init: onLabelColor,
+            isNamed: true,
+          ),
+          'offLabelColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'offLabelColor',
+            init: offLabelColor,
+            isNamed: true,
+          ),
           'focusNode': _i2.BuilderArg<_i6.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
@@ -125,6 +141,8 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
           thumbColor: p.get('thumbColor').build(),
           applyTheme: p.get('applyTheme').build(),
           focusColor: p.get('focusColor').build(),
+          onLabelColor: p.get('onLabelColor').build(),
+          offLabelColor: p.get('offLabelColor').build(),
           focusNode: p.get('focusNode').build(),
           onFocusChange: p.get('onFocusChange').build(),
           autofocus: p.get('autofocus').build(),

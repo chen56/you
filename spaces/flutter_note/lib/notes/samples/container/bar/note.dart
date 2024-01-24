@@ -1,8 +1,7 @@
 import 'package:code_builder/code_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
-import 'package:mate_flutter/material.dart';
-import 'package:mate_flutter/painting.dart' as painting;
+import 'package:flutter/painting.dart' as painting;
 import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
@@ -15,32 +14,31 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(AppBar$Mate(
-    title: Text$Mate('AppBar Title'),
-    leading: DrawerButton$Mate(),
-    // todo 这种缺省值是不是可以搞掉，范例中根本不用，但因为有默认值，所以自动会出现
-    notificationPredicate: defaultScrollNotificationPredicate
-      ..sampleCodeStr = "defaultScrollNotificationPredicate",
-    actions: <Widget>[
-      IconButton$Mate(
-        icon: Icon$Mate(Icons.add),
-        onPressed: () {}..sampleCodeStr = "(){}",
-      ),
-      IconButton$Mate(
-        icon: Icon$Mate(Icons.access_alarm),
-        onPressed: () {}..sampleCodeStr = "(){}",
-      ),
-      CheckboxMenuButton$Mate(
-        value: true,
-        onChanged: (b) {}..sampleCodeStr = "(b){}",
-        child: Text$Mate('CheckboxMenuButton'),
-      ),
-      FilledButton$Mate(
-        onPressed: () {}..sampleCodeStr = "(){}",
-        child: Text$Mate('FilledButton'),
-      ),
-    ],
-  )));
+  print(
+    AppBar(
+      title: const Text('AppBar Title'),
+      leading: const DrawerButton(),
+      actions: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.add),
+          onPressed: () {}..sampleCodeStr = "(){}",
+        ),
+        IconButton(
+          icon: const Icon(Icons.access_alarm),
+          onPressed: () {}..sampleCodeStr = "(){}",
+        ),
+        CheckboxMenuButton(
+          value: true,
+          onChanged: (b) {}..sampleCodeStr = "(b){}",
+          child: const Text('CheckboxMenuButton'),
+        ),
+        FilledButton(
+          onPressed: () {}..sampleCodeStr = "(){}",
+          child: const Text('FilledButton'),
+        ),
+      ],
+    ),
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -54,29 +52,31 @@ build(BuildContext context, Pen print) {
   //
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(BottomAppBar$Mate(
-    // shape: CircularNotchedRectangle(),
-    child: Row$Mate(
-      children: <Widget>[
-        IconButton$Mate(
-          tooltip: 'Open navigation menu',
-          icon: Icon$Mate(Icons.menu),
-          onPressed: () {}..sampleCodeStr = "(){}",
-        ),
-        Spacer$Mate(),
-        IconButton$Mate(
-          tooltip: 'Search',
-          icon: Icon$Mate(Icons.search),
-          onPressed: () {}..sampleCodeStr = "(){}",
-        ),
-        IconButton$Mate(
-          tooltip: 'Favorite',
-          icon: Icon$Mate(Icons.favorite),
-          onPressed: () {}..sampleCodeStr = "(){}",
-        ),
-      ],
+  print(
+    BottomAppBar(
+      // shape: CircularNotchedRectangle(),
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            tooltip: 'Open navigation menu',
+            icon: Icon(Icons.menu),
+            onPressed: () {}..sampleCodeStr = "(){}",
+          ),
+          Spacer(),
+          IconButton(
+            tooltip: 'Search',
+            icon: Icon(Icons.search),
+            onPressed: () {}..sampleCodeStr = "(){}",
+          ),
+          IconButton(
+            tooltip: 'Favorite',
+            icon: Icon(Icons.favorite),
+            onPressed: () {}..sampleCodeStr = "(){}",
+          ),
+        ],
+      ),
     ),
-  )));
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -98,25 +98,25 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Column$Mate(
-    children: [
-      Container$Mate(
-        height: 100,
-        // color: Colors.lime,
-        child: Text$Mate("main content body"),
-      ),
-      NavigationBar$Mate(
-        onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
-        selectedIndex: 1,
-        destinations: <Widget>[
-          NavigationDestination$Mate(
-              icon: Icon$Mate(Icons.explore), label: 'Explore'),
-          NavigationDestination$Mate(
-              icon: Icon$Mate(Icons.commute), label: 'Commute'),
-        ],
-      )
-    ],
-  )));
+  print(
+    Column(
+      children: [
+        Container(
+          height: 100,
+          // color: Colors.lime,
+          child: Text("main content body"),
+        ),
+        NavigationBar(
+          onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
+          selectedIndex: 1,
+          destinations: <Widget>[
+            NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
+            NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
+          ],
+        )
+      ],
+    ),
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -139,21 +139,17 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
           },
           selectedIndex: currentPageIndex,
           destinations: const <Widget>[
-            NavigationDestination(
-                icon: Icon(Icons.explore, color: Colors.lime),
-                label: 'lime page'),
-            NavigationDestination(
-                icon: Icon(Icons.explore, color: Colors.purple),
-                label: 'purple page'),
+            NavigationDestination(icon: Icon(Icons.explore, color: Colors.lime), label: 'lime page'),
+            NavigationDestination(icon: Icon(Icons.explore, color: Colors.purple), label: 'purple page'),
           ],
         )
       ],
     );
   }
 
-  print(MateSampleContent(StatefulBuilder$Mate(
+  print(StatefulBuilder(
     builder: buildNavigationBar..sampleCode = refer("buildNavigationBar"),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -169,44 +165,44 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 
   print.$____________________________________________________________________();
 
-  print(MateSampleContent(Row$Mate(
-    children: [
-      Container$Mate(
-        height: 300,
-        child: NavigationRail$Mate(
-          // minWidth: 10,
-          minExtendedWidth: 50,
-          // extended: true,
-          selectedIndex: 0,
-          groupAlignment: 1,
-          onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
-          labelType: NavigationRailLabelType.all,
-          leading: IconButton$Mate(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            icon: Icon$Mate(Icons.access_time),
-            tooltip: "NavigationRail.leading",
+  print(
+    Row(
+      children: [
+        SizedBox(
+          height: 300,
+          child: NavigationRail(
+            // minWidth: 10,
+            minExtendedWidth: 50,
+            // extended: true,
+            selectedIndex: 0,
+            groupAlignment: 1,
+            onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
+            labelType: NavigationRailLabelType.all,
+            leading: IconButton(
+              onPressed: () {}..sampleCodeStr = "(){}",
+              icon: Icon(Icons.access_time),
+              tooltip: "NavigationRail.leading",
+            ),
+            trailing: IconButton(
+              onPressed: () {}..sampleCodeStr = "(){}",
+              icon: Icon(Icons.exit_to_app),
+              tooltip: "NavigationRail.trailing",
+            ),
+            destinations: <NavigationRailDestination>[
+              NavigationRailDestination(icon: Icon(Icons.sanitizer), label: Text('First')),
+              NavigationRailDestination(icon: Icon(Icons.accessible), label: Text('Second')),
+            ],
           ),
-          trailing: IconButton$Mate(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            icon: Icon$Mate(Icons.exit_to_app),
-            tooltip: "NavigationRail.trailing",
-          ),
-          destinations: <NavigationRailDestination>[
-            NavigationRailDestination$Mate(
-                icon: Icon$Mate(Icons.sanitizer), label: Text$Mate('First')),
-            NavigationRailDestination$Mate(
-                icon: Icon$Mate(Icons.accessible), label: Text$Mate('Second')),
-          ],
         ),
-      ),
-      Expanded$Mate(
-          child: Container$Mate(
-        height: 300,
-        color: Colors.amber.shade50,
-        child: Text$Mate("main content area"),
-      )),
-    ],
-  )));
+        Expanded(
+            child: Container(
+          height: 300,
+          color: Colors.amber.shade50,
+          child: const Text("main content area"),
+        )),
+      ],
+    ),
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -228,25 +224,25 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(DefaultTabController$Mate(
+  print(DefaultTabController(
     length: 3,
-    child: TabBar$Mate(
+    child: TabBar(
       tabs: <Widget>[
-        Tab$Mate(
-          icon: Icon$Mate(Icons.cloud_outlined),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
+        Tab(
+          icon: Icon(Icons.cloud_outlined),
+          iconMargin: painting.EdgeInsets.all(10),
         ),
-        Tab$Mate(
-          icon: Icon$Mate(Icons.beach_access_sharp),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
+        Tab(
+          icon: Icon(Icons.beach_access_sharp),
+          iconMargin: painting.EdgeInsets.all(10),
         ),
-        Tab$Mate(
-          icon: Icon$Mate(Icons.brightness_5_sharp),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
+        Tab(
+          icon: Icon(Icons.brightness_5_sharp),
+          iconMargin: painting.EdgeInsets.all(10),
         ),
       ],
     ),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -254,40 +250,40 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(DefaultTabController$Mate(
+  print(DefaultTabController(
     initialIndex: 1,
     length: 3,
-    child: Column$Mate(
+    child: Column(
       children: [
-        TabBar$Mate(
+        TabBar(
           tabs: <Widget>[
-            Tab$Mate(
-              icon: Icon$Mate(Icons.cloud_outlined),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
+            Tab(
+              icon: Icon(Icons.cloud_outlined),
+              iconMargin: painting.EdgeInsets.all(10),
             ),
-            Tab$Mate(
-              icon: Icon$Mate(Icons.beach_access_sharp),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
+            Tab(
+              icon: Icon(Icons.beach_access_sharp),
+              iconMargin: painting.EdgeInsets.all(10),
             ),
-            Tab$Mate(
-              icon: Icon$Mate(Icons.brightness_5_sharp),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
+            Tab(
+              icon: Icon(Icons.brightness_5_sharp),
+              iconMargin: painting.EdgeInsets.all(10),
             ),
           ],
         ),
-        Container$Mate(
+        Container(
           height: 200,
-          child: TabBarView$Mate(
+          child: TabBarView(
             children: <Widget>[
-              Center$Mate(child: Text$Mate("It's cloudy here")),
-              Center$Mate(child: Text$Mate("It's rainy here")),
-              Center$Mate(child: Text$Mate("It's sunny here")),
+              Center(child: Text("It's cloudy here")),
+              Center(child: Text("It's rainy here")),
+              Center(child: Text("It's sunny here")),
             ],
           ),
         )
       ],
     ),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown("""
@@ -328,13 +324,13 @@ DefaultTabController
     );
   }
 
-  print(MateSampleContent(SizedBox$Mate(
+  print(SizedBox(
     height: 100,
     child: FilledButton(
       onPressed: onPressed..sampleCode = refer("onPressed"),
       child: const Text('Show Snack bar'),
     ),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -348,22 +344,24 @@ DefaultTabController
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
-    width: 600,
-    color: Colors.lime.shade50,
-    child: ButtonBar$Mate(
-      children: [
-        ElevatedButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate("ElevatedButton2"),
-        ),
-        OutlinedButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate('OutlinedButton'),
-        ),
-      ],
+  print(
+    Container(
+      width: 600,
+      color: Colors.lime.shade50,
+      child: ButtonBar(
+        children: [
+          ElevatedButton(
+            onPressed: () {}..sampleCodeStr = "(){}",
+            child: Text("ElevatedButton2"),
+          ),
+          OutlinedButton(
+            onPressed: () {}..sampleCodeStr = "(){}",
+            child: Text('OutlinedButton'),
+          ),
+        ],
+      ),
     ),
-  )));
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -375,31 +373,33 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
-    width: 300,
-    child: Column$Mate(
-      children: [
-        Placeholder$Mate(fallbackHeight: 100, color: Colors.deepPurple),
-        OverflowBar$Mate(
-          alignment: MainAxisAlignment.end,
-          textDirection: TextDirection.ltr,
-          overflowSpacing: 5.0,
-          overflowAlignment: OverflowBarAlignment.end,
-          overflowDirection: VerticalDirection.down,
-          children: [
-            ElevatedButton$Mate(
-              onPressed: () {}..sampleCodeStr = "(){}",
-              child: Text$Mate("Cancel横排还是竖排取决于width"),
-            ),
-            ElevatedButton$Mate(
-              onPressed: () {}..sampleCodeStr = "(){}",
-              child: Text$Mate("Ok对齐方式取决于排列"),
-            ),
-          ],
-        )
-      ],
+  print(
+    Container(
+      width: 300,
+      child: Column(
+        children: [
+          Placeholder(fallbackHeight: 100, color: Colors.deepPurple),
+          OverflowBar(
+            alignment: MainAxisAlignment.end,
+            textDirection: TextDirection.ltr,
+            overflowSpacing: 5.0,
+            overflowAlignment: OverflowBarAlignment.end,
+            overflowDirection: VerticalDirection.down,
+            children: [
+              ElevatedButton(
+                onPressed: () {}..sampleCodeStr = "(){}",
+                child: Text("Cancel横排还是竖排取决于width"),
+              ),
+              ElevatedButton(
+                onPressed: () {}..sampleCodeStr = "(){}",
+                child: Text("Ok对齐方式取决于排列"),
+              ),
+            ],
+          )
+        ],
+      ),
     ),
-  )));
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -429,33 +429,32 @@ MenuBar相关组件：
     );
   }
 
-  print(MateSampleContent(MenuBar$Mate(
-    children: [
-      MenuItemButton$Mate(
-        onPressed: () {}..sampleCodeStr = "(){}",
-        child: MenuAcceleratorLabel$Mate(
-          '&Exit',
-          builder: MenuAcceleratorLabel.defaultLabelBuilder
-            ..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+  print(
+    MenuBar(
+      children: [
+        MenuItemButton(
+          onPressed: () {}..sampleCodeStr = "(){}",
+          child: MenuAcceleratorLabel(
+            '&Exit',
+            builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+          ),
         ),
-      ),
-      SubmenuButton$Mate(
-        menuChildren: [
-          MenuItemButton$Mate(
-            onPressed: click..sampleCodeStr = "click",
-            child: MenuAcceleratorLabel$Mate(
-              '&flutter_note github',
-              builder: MenuAcceleratorLabel.defaultLabelBuilder
-                ..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
-            ),
-          )
-        ],
-        child: MenuAcceleratorLabel$Mate(
-          '&Help',
-          builder: MenuAcceleratorLabel.defaultLabelBuilder
-            ..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+        SubmenuButton(
+          menuChildren: [
+            MenuItemButton(
+              onPressed: click..sampleCodeStr = "click",
+              child: MenuAcceleratorLabel(
+                '&flutter_note github',
+                builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+              ),
+            )
+          ],
+          child: MenuAcceleratorLabel(
+            '&Help',
+            builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+          ),
         ),
-      ),
-    ],
-  )));
+      ],
+    ),
+  );
 }

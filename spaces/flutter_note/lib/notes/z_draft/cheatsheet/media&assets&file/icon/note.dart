@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
 
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
 // import 'package:mate_flutter/mate_icons.g.dart' deferred as deferred_icons;
-
-import 'package:mate_flutter/material.dart';
 
 Set<String> iconTypes = {"sharp", "rounded", "outlined"};
 
@@ -31,10 +28,10 @@ build(BuildContext context, Pen print) {
   };
   for (var entry in sampleIcons.entries) {
     var (name, iconData) = (entry.key, entry.value);
-    print(MateSampleContent(Row$Mate(
+    print(WidgetContent(Row(
       children: [
-        Icon$Mate(iconData, size: 24, color: Colors.blue),
-        Text$Mate("Icons.$name"),
+        Icon(iconData, size: 24, color: Colors.blue),
+        Text("Icons.$name"),
       ],
     )));
   }

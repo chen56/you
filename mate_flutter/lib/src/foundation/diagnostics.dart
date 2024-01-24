@@ -1015,8 +1015,8 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class EnumProperty<T> extends DiagnosticsProperty<T>
-class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
+/// class EnumProperty<T extends Enum?> extends DiagnosticsProperty<T>
+class EnumProperty$Mate<T extends Enum?> extends _i1.EnumProperty<T> with _i2.Mate {
   /// EnumProperty<T> EnumProperty(String name, T? value, {Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   EnumProperty$Mate(
     /// requiredParameters: String name

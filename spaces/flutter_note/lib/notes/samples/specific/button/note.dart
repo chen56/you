@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
-import 'package:mate_flutter/material.dart';
 
 build(BuildContext context, Pen print) {
   print.$____________________________________________________________________();
@@ -19,23 +18,13 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Wrap$Mate(
+  print(WidgetContent(Wrap(
     children: [
-      ElevatedButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate("ElevatedButton")),
-      FilledButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate('FilledButton')),
-      FilledButton$Mate.tonal(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate('FilledButton.tonal')),
-      OutlinedButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate('OutlinedButton')),
-      TextButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: Text$Mate('TextButton')),
+      ElevatedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text("ElevatedButton")),
+      FilledButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('FilledButton')),
+      FilledButton.tonal(onPressed: () {}..sampleCodeStr = "(){}", child: Text('FilledButton.tonal')),
+      OutlinedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('OutlinedButton')),
+      TextButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('TextButton')),
     ],
   )));
 
@@ -47,20 +36,11 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     children: [
-      IconButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          tooltip: "IconButton",
-          icon: Icon$Mate(Icons.wifi)),
-      IconButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          tooltip: "IconButton",
-          icon: Icon$Mate(Icons.add)),
-      IconButton$Mate(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          tooltip: "IconButton",
-          icon: Icon$Mate(Icons.ac_unit)),
+      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.wifi)),
+      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.add)),
+      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.ac_unit)),
     ],
   )));
 
@@ -74,31 +54,31 @@ the Material Design button types and how they should be used in designs.
   print.$____________________________________________________________________();
   int id = 0;
 
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     children: [
-      FloatingActionButton$Mate(
+      FloatingActionButton(
         onPressed: () {}..sampleCodeStr = "(){}",
         heroTag: "button.FloatingActionButton${id++}",
         tooltip: "FloatingActionButton",
-        child: Text$Mate("缺省构造器"),
+        child: Text("缺省构造器"),
       ),
-      FloatingActionButton$Mate.small(
+      FloatingActionButton.small(
         // isExtended: false,
         onPressed: () {}..sampleCodeStr = "(){}",
         heroTag: "button.FloatingActionButton${id++}",
-        child: Text$Mate("small"),
+        child: Text("small"),
       ),
-      FloatingActionButton$Mate.large(
+      FloatingActionButton.large(
         // isExtended: false,
         onPressed: () {}..sampleCodeStr = "(){}",
         heroTag: "button.FloatingActionButton${id++}",
-        child: Text$Mate("large"),
+        child: Text("large"),
       ),
-      FloatingActionButton$Mate.extended(
+      FloatingActionButton.extended(
         // isExtended: false,
         onPressed: () {}..sampleCodeStr = "(){}",
-        label: Text$Mate('extended'),
-        icon: Icon$Mate(Icons.thumb_up),
+        label: Text('extended'),
+        icon: Icon(Icons.thumb_up),
         heroTag: "button.FloatingActionButton${id++}",
       ),
     ],
@@ -118,12 +98,12 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     children: [
-      BackButton$Mate(),
-      CloseButton$Mate(),
-      DrawerButton$Mate(),
-      EndDrawerButton$Mate(),
+      BackButton(),
+      CloseButton(),
+      DrawerButton(),
+      EndDrawerButton(),
     ],
   )));
 
@@ -138,15 +118,15 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     children: [
-      ToggleButtons$Mate(
+      ToggleButtons(
         onPressed: (_) {}..sampleCodeStr = "(_){}",
         isSelected: const [true, false, true],
         children: <Widget>[
-          Icon$Mate(Icons.ac_unit),
-          Icon$Mate(Icons.call),
-          Icon$Mate(Icons.cake),
+          Icon(Icons.ac_unit),
+          Icon(Icons.call),
+          Icon(Icons.cake),
         ],
       ),
     ],
@@ -164,27 +144,15 @@ the Material Design button types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(WidgetContent(Row(
     children: [
-      SegmentedButton$Mate<String>(
+      SegmentedButton<String>(
         multiSelectionEnabled: true,
         segments: <ButtonSegment<String>>[
-          ButtonSegment$Mate<String>(
-              value: "Day",
-              label: Text$Mate('Day'),
-              icon: Icon$Mate(Icons.calendar_view_day)),
-          ButtonSegment$Mate<String>(
-              value: "Week",
-              label: Text$Mate('Week'),
-              icon: Icon$Mate(Icons.calendar_view_week)),
-          ButtonSegment$Mate<String>(
-              value: "Month",
-              label: Text$Mate('Month'),
-              icon: Icon$Mate(Icons.calendar_view_month)),
-          ButtonSegment$Mate<String>(
-              value: "Year",
-              label: Text$Mate('Year'),
-              icon: Icon$Mate(Icons.calendar_today)),
+          ButtonSegment<String>(value: "Day", label: Text('Day'), icon: Icon(Icons.calendar_view_day)),
+          ButtonSegment<String>(value: "Week", label: Text('Week'), icon: Icon(Icons.calendar_view_week)),
+          ButtonSegment<String>(value: "Month", label: Text('Month'), icon: Icon(Icons.calendar_view_month)),
+          ButtonSegment<String>(value: "Year", label: Text('Year'), icon: Icon(Icons.calendar_today)),
         ],
         selected: <String>{"Month"},
         onSelectionChanged: (_) {}..sampleCodeStr = "(_){}",
@@ -209,7 +177,7 @@ GestureDetector(
   ''');
 
   // todo 增加GestureDetector范例
-  // print.sampleMate(GestureDetector$Mate(
+  // print.sampleMate(GestureDetector(
   //   // todo default value：这种变量型的是不是可以弄一下  kDefaultTrackpadScrollToScaleFactor
   //   trackpadScrollToScaleFactor: kDefaultTrackpadScrollToScaleFactor,
   //   child: const Text("文本变按钮"),
@@ -233,19 +201,23 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Column$Mate(
-    children: [
-      Text$Mate("1.普通Text"),
-      InkWell$Mate(
-        onTap: () {}..sampleCodeStr = "(){}",
-        child: Text$Mate("2.裹了层InkWell的Text"),
+  print(
+    WidgetContent(
+      Column(
+        children: [
+          Text("1.普通Text"),
+          InkWell(
+            onTap: () {}..sampleCodeStr = "(){}",
+            child: Text("2.裹了层InkWell的Text"),
+          ),
+          InkResponse(
+            onTap: () {}..sampleCodeStr = "(){}",
+            child: Text("3.裹了层InkResponse的Text"),
+          )
+        ],
       ),
-      InkResponse$Mate(
-        onTap: () {}..sampleCodeStr = "(){}",
-        child: Text$Mate("3.裹了层InkResponse的Text"),
-      )
-    ],
-  )));
+    ),
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -255,22 +227,19 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
-    width: 600,
-    color: Colors.lime.shade50,
-    child: ButtonBar$Mate(
-      children: [
-        ElevatedButton$Mate(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text$Mate("ElevatedButton2")),
-        OutlinedButton$Mate(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text$Mate('OutlinedButton')),
-        CheckboxMenuButton$Mate(
-            value: true,
-            onChanged: (_) {}..sampleCodeStr = "(_){}",
-            child: Text$Mate('CheckboxMenuButton')),
-      ],
+  print(
+    WidgetContent(
+      Container(
+        width: 600,
+        color: Colors.lime.shade50,
+        child: ButtonBar(
+          children: [
+            ElevatedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text("ElevatedButton2")),
+            OutlinedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('OutlinedButton')),
+            CheckboxMenuButton(value: true, onChanged: (_) {}..sampleCodeStr = "(_){}", child: Text('CheckboxMenuButton')),
+          ],
+        ),
+      ),
     ),
-  )));
+  );
 }

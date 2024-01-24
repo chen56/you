@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
-import 'package:mate_flutter/material.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
@@ -15,19 +13,19 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSampleContent(Container$Mate(
+    WidgetContent(Container(
       width: 800,
       color: Colors.blueAccent.shade100,
-      child: ButtonBar$Mate(
+      child: ButtonBar(
         children: [
-          ElevatedButton$Mate(
-              onPressed: () {}, child: Text$Mate("ElevatedButton")),
-          OutlinedButton$Mate(
-              onPressed: () {}, child: Text$Mate('OutlinedButton')),
-          CheckboxMenuButton$Mate(
+          ElevatedButton(
+              onPressed: () {}, child: Text("ElevatedButton")),
+          OutlinedButton(
+              onPressed: () {}, child: Text('OutlinedButton')),
+          CheckboxMenuButton(
               value: true,
               onChanged: (bool? value) {},
-              child: Text$Mate('CheckboxMenuButton')),
+              child: Text('CheckboxMenuButton')),
         ],
       ),
     )),

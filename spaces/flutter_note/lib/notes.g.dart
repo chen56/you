@@ -85,6 +85,8 @@ import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/no
     deferred as z_draft_cheatsheet_style_theming_material3_;
 import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/note.g.dart'
     as z_draft_cheatsheet_style_theming_material3_g;
+import 'package:flutter_note/notes/z_draft/concepts/navigation/note.dart' deferred as z_draft_concepts_navigation_;
+import 'package:flutter_note/notes/z_draft/concepts/navigation/note.g.dart' as z_draft_concepts_navigation_g;
 import 'package:flutter_note/notes/z_draft/concepts/state/1.vanilla_state/note.dart'
     deferred as z_draft_concepts_state_vanilla_state_;
 import 'package:flutter_note/notes/z_draft/concepts/state/1.vanilla_state/note.g.dart'
@@ -312,6 +314,13 @@ abstract class BaseNotes {
           builder: await z_draft_other_thinking_in_ui_readable_html_vs_dart_
               .loadLibrary()
               .then((value) => z_draft_other_thinking_in_ui_readable_html_vs_dart_.build)));
+
+  final Note z_draft_concepts_navigation = put(
+      "/z_draft/concepts/navigation",
+      z_draft_concepts_navigation_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder:
+              await z_draft_concepts_navigation_.loadLibrary().then((value) => z_draft_concepts_navigation_.build)));
 
   final Note z_draft_concepts_state_vanilla_state = put(
       "/z_draft/concepts/state/1.vanilla_state",

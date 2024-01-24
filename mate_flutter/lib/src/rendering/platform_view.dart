@@ -61,7 +61,7 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RenderUiKitView extends RenderBox
+/// class RenderUiKitView extends RenderDarwinPlatformView<UiKitViewController>
 class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
   /// RenderUiKitView RenderUiKitView({required UiKitViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   RenderUiKitView$Mate({
@@ -94,6 +94,49 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
     mateBuilderName = 'RenderUiKitView';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderUiKitView$Mate(
+          viewController: p.get('viewController').build(),
+          hitTestBehavior: p.get('hitTestBehavior').build(),
+          gestureRecognizers: p.get('gestureRecognizers').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class RenderAppKitView extends RenderDarwinPlatformView<AppKitViewController>
+class RenderAppKitView$Mate extends _i1.RenderAppKitView with _i2.Mate {
+  /// RenderAppKitView RenderAppKitView({required AppKitViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
+  RenderAppKitView$Mate({
+    /// optionalParameters: {required AppKitViewController viewController} , default:none
+    required super.viewController,
+
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
+    required super.hitTestBehavior,
+
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
+    required super.gestureRecognizers,
+  })  : mateParams = {
+          'viewController': _i2.BuilderArg<_i3.AppKitViewController>(
+            name: 'viewController',
+            init: viewController,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i1.PlatformViewHitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+            name: 'gestureRecognizers',
+            init: gestureRecognizers,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'RenderAppKitView';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderAppKitView$Mate(
           viewController: p.get('viewController').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),

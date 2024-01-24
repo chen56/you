@@ -8,16 +8,17 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/navigator.dart' as _i5;
 import 'package:flutter/src/cupertino/theme.dart' as _i6;
 import 'package:flutter/src/widgets/app.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/widgets/localizations.dart' as _i9;
-import 'package:flutter/src/widgets/shortcuts.dart' as _i10;
-import 'package:flutter/src/widgets/actions.dart' as _i11;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i12;
-import 'package:flutter/src/widgets/router.dart' as _i13;
+import 'package:flutter/src/widgets/notification_listener.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/localizations.dart' as _i10;
+import 'package:flutter/src/widgets/shortcuts.dart' as _i11;
+import 'package:flutter/src/widgets/actions.dart' as _i12;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i13;
+import 'package:flutter/src/widgets/router.dart' as _i14;
 
 /// class CupertinoApp extends StatefulWidget
 class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
-  /// CupertinoApp CupertinoApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Widget? home, CupertinoThemeData? theme, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// CupertinoApp CupertinoApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Widget? home, CupertinoThemeData? theme, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, bool Function(NavigationNotification)? onNavigationNotification, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   CupertinoApp$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -45,6 +46,9 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     super.onUnknownRoute,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     super.navigatorObservers,
@@ -148,6 +152,11 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: onUnknownRoute,
             isNamed: true,
           ),
+          'onNavigationNotification': _i2.BuilderArg<_i8.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
           'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
             name: 'navigatorObservers',
             init: navigatorObservers,
@@ -169,17 +178,17 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i8.Color?>(
+          'color': _i2.BuilderArg<_i9.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'locale': _i2.BuilderArg<_i8.Locale?>(
+          'locale': _i2.BuilderArg<_i9.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i10.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -194,7 +203,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i9.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -229,12 +238,12 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i11.ShortcutActivator, _i12.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i12.Action<_i12.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -244,7 +253,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i13.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -263,6 +272,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           navigatorObservers: p.get('navigatorObservers').build(),
           builder: p.get('builder').build(),
           title: p.get('title').build(),
@@ -285,7 +295,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
         );
   }
 
-  /// CupertinoApp CupertinoApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, BackButtonDispatcher? backButtonDispatcher, RouterConfig<Object>? routerConfig, CupertinoThemeData? theme, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// CupertinoApp CupertinoApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, BackButtonDispatcher? backButtonDispatcher, RouterConfig<Object>? routerConfig, CupertinoThemeData? theme, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, bool Function(NavigationNotification)? onNavigationNotification, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   CupertinoApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -316,6 +326,9 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
     super.onGenerateTitle,
+
+    /// optionalParameters: {bool Function(NavigationNotification)? onNavigationNotification} , default:none
+    super.onNavigationNotification,
 
     /// optionalParameters: {Color? color} , default:none
     super.color,
@@ -367,27 +380,27 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i13.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i14.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i13.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i14.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
           ),
-          'routerDelegate': _i2.BuilderArg<_i13.RouterDelegate<Object>?>(
+          'routerDelegate': _i2.BuilderArg<_i14.RouterDelegate<Object>?>(
             name: 'routerDelegate',
             init: routerDelegate,
             isNamed: true,
           ),
-          'backButtonDispatcher': _i2.BuilderArg<_i13.BackButtonDispatcher?>(
+          'backButtonDispatcher': _i2.BuilderArg<_i14.BackButtonDispatcher?>(
             name: 'backButtonDispatcher',
             init: backButtonDispatcher,
             isNamed: true,
           ),
-          'routerConfig': _i2.BuilderArg<_i13.RouterConfig<Object>?>(
+          'routerConfig': _i2.BuilderArg<_i14.RouterConfig<Object>?>(
             name: 'routerConfig',
             init: routerConfig,
             isNamed: true,
@@ -413,17 +426,22 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: onGenerateTitle,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i8.Color?>(
+          'onNavigationNotification': _i2.BuilderArg<_i8.NotificationListenerCallback<_i5.NavigationNotification>?>(
+            name: 'onNavigationNotification',
+            init: onNavigationNotification,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i9.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'locale': _i2.BuilderArg<_i8.Locale?>(
+          'locale': _i2.BuilderArg<_i9.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i10.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -438,7 +456,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: localeResolutionCallback,
             isNamed: true,
           ),
-          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+          'supportedLocales': _i2.BuilderArg<Iterable<_i9.Locale>>(
             name: 'supportedLocales',
             init: supportedLocales,
             isNamed: true,
@@ -473,12 +491,12 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i11.ShortcutActivator, _i12.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i12.Action<_i12.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -488,7 +506,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i13.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -508,6 +526,7 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           builder: p.get('builder').build(),
           title: p.get('title').build(),
           onGenerateTitle: p.get('onGenerateTitle').build(),
+          onNavigationNotification: p.get('onNavigationNotification').build(),
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),

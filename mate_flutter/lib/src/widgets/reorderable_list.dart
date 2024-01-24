@@ -5,20 +5,21 @@ import 'package:flutter/src/widgets/reorderable_list.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
-import 'package:flutter/src/painting/edge_insets.dart' as _i5;
-import 'package:flutter/src/painting/basic_types.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i8;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i9;
-import 'package:flutter/src/gestures/recognizer.dart' as _i10;
-import 'package:flutter/gestures.dart' as _i11;
-import 'package:flutter/src/widgets/scroll_view.dart' as _i12;
-import 'dart:ui' as _i13;
-import 'package:flutter/src/widgets/scroll_delegate.dart' as _i14;
+import 'package:flutter/src/rendering/sliver.dart' as _i5;
+import 'package:flutter/src/painting/edge_insets.dart' as _i6;
+import 'package:flutter/src/painting/basic_types.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i8;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i9;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i10;
+import 'package:flutter/src/gestures/recognizer.dart' as _i11;
+import 'package:flutter/gestures.dart' as _i12;
+import 'package:flutter/src/widgets/scroll_view.dart' as _i13;
+import 'dart:ui' as _i14;
+import 'package:flutter/src/widgets/scroll_delegate.dart' as _i15;
 
 /// class ReorderableList extends StatefulWidget
 class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
-  /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge, double? autoScrollerVelocityScalar})
+  /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, double Function(int, SliverLayoutDimensions)? itemExtentBuilder, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge, double? autoScrollerVelocityScalar})
   ReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -40,6 +41,9 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
 
     /// optionalParameters: {double? itemExtent} , default:none
     super.itemExtent,
+
+    /// optionalParameters: {double Function(int, SliverLayoutDimensions)? itemExtentBuilder} , default:none
+    super.itemExtentBuilder,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
     super.prototypeItem,
@@ -124,6 +128,11 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
+          'itemExtentBuilder': _i2.BuilderArg<_i5.ItemExtentBuilder?>(
+            name: 'itemExtentBuilder',
+            init: itemExtentBuilder,
+            isNamed: true,
+          ),
           'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
@@ -134,16 +143,16 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             init: proxyDecorator,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'scrollDirection': _i2.BuilderArg<_i6.Axis>(
+          'scrollDirection': _i2.BuilderArg<_i7.Axis>(
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i7.Axis.vertical,
+            defaultValue: _i8.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -151,7 +160,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i8.ScrollController?>(
+          'controller': _i2.BuilderArg<_i9.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -161,7 +170,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i9.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i10.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -183,28 +192,28 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i11.DragStartBehavior.start,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'keyboardDismissBehavior': _i2.BuilderArg<_i12.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
-            defaultValue: _i7.ScrollViewKeyboardDismissBehavior.manual,
+            defaultValue: _i8.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i13.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i14.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i13.Clip.hardEdge,
+            defaultValue: _i14.Clip.hardEdge,
           ),
           'autoScrollerVelocityScalar': _i2.BuilderArg<double?>(
             name: 'autoScrollerVelocityScalar',
@@ -223,6 +232,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
           onReorderStart: p.get('onReorderStart').build(),
           onReorderEnd: p.get('onReorderEnd').build(),
           itemExtent: p.get('itemExtent').build(),
+          itemExtentBuilder: p.get('itemExtentBuilder').build(),
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
           padding: p.get('padding').build(),
@@ -248,7 +258,7 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
 
 /// class SliverReorderableList extends StatefulWidget
 class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate {
-  /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, double? autoScrollerVelocityScalar})
+  /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, double Function(int, SliverLayoutDimensions)? itemExtentBuilder, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, double? autoScrollerVelocityScalar})
   SliverReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -274,6 +284,9 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
     /// optionalParameters: {double? itemExtent} , default:none
     super.itemExtent,
 
+    /// optionalParameters: {double Function(int, SliverLayoutDimensions)? itemExtentBuilder} , default:none
+    super.itemExtentBuilder,
+
     /// optionalParameters: {Widget? prototypeItem} , default:none
     super.prototypeItem,
 
@@ -293,7 +306,7 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i15.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -321,6 +334,11 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
           'itemExtent': _i2.BuilderArg<double?>(
             name: 'itemExtent',
             init: itemExtent,
+            isNamed: true,
+          ),
+          'itemExtentBuilder': _i2.BuilderArg<_i5.ItemExtentBuilder?>(
+            name: 'itemExtentBuilder',
+            init: itemExtentBuilder,
             isNamed: true,
           ),
           'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
@@ -351,6 +369,7 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
           onReorderStart: p.get('onReorderStart').build(),
           onReorderEnd: p.get('onReorderEnd').build(),
           itemExtent: p.get('itemExtent').build(),
+          itemExtentBuilder: p.get('itemExtentBuilder').build(),
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
           autoScrollerVelocityScalar: p.get('autoScrollerVelocityScalar').build(),

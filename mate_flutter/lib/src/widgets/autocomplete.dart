@@ -4,15 +4,16 @@
 import 'package:flutter/src/widgets/autocomplete.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
-import 'package:flutter/src/widgets/editable_text.dart' as _i5;
-import 'package:flutter/src/services/text_input.dart' as _i6;
-import 'package:flutter/src/foundation/change_notifier.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i4;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
+import 'package:flutter/src/widgets/editable_text.dart' as _i6;
+import 'package:flutter/src/services/text_input.dart' as _i7;
+import 'package:flutter/src/foundation/change_notifier.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class RawAutocomplete<T extends Object> extends StatefulWidget
 class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with _i2.Mate {
-  /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
+  /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, OptionsViewOpenDirection optionsViewOpenDirection = OptionsViewOpenDirection.down, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -22,6 +23,9 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
 
     /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
     required super.optionsBuilder,
+
+    /// optionalParameters: {OptionsViewOpenDirection optionsViewOpenDirection = OptionsViewOpenDirection.down} , default:processed=PrefixedIdentifierImpl
+    super.optionsViewOpenDirection,
 
     /// optionalParameters: {String Function(T) displayStringForOption = defaultStringForOption} , default:unprocessed=SimpleIdentifierImpl
     super.displayStringForOption,
@@ -56,6 +60,12 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
             init: optionsBuilder,
             isNamed: true,
           ),
+          'optionsViewOpenDirection': _i2.BuilderArg<_i1.OptionsViewOpenDirection>(
+            name: 'optionsViewOpenDirection',
+            init: optionsViewOpenDirection,
+            isNamed: true,
+            defaultValue: _i4.OptionsViewOpenDirection.down,
+          ),
           'displayStringForOption': _i2.BuilderArg<_i1.AutocompleteOptionToString<T>>(
             name: 'displayStringForOption',
             init: displayStringForOption,
@@ -66,7 +76,7 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
             init: fieldViewBuilder,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i4.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i5.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -76,12 +86,12 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
             init: onSelected,
             isNamed: true,
           ),
-          'textEditingController': _i2.BuilderArg<_i5.TextEditingController?>(
+          'textEditingController': _i2.BuilderArg<_i6.TextEditingController?>(
             name: 'textEditingController',
             init: textEditingController,
             isNamed: true,
           ),
-          'initialValue': _i2.BuilderArg<_i6.TextEditingValue?>(
+          'initialValue': _i2.BuilderArg<_i7.TextEditingValue?>(
             name: 'initialValue',
             init: initialValue,
             isNamed: true,
@@ -94,6 +104,7 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
           key: p.get('key').build(),
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           optionsBuilder: p.get('optionsBuilder').build(),
+          optionsViewOpenDirection: p.get('optionsViewOpenDirection').build(),
           displayStringForOption: p.get('displayStringForOption').build(),
           fieldViewBuilder: p.get('fieldViewBuilder').build(),
           focusNode: p.get('focusNode').build(),
@@ -125,12 +136,12 @@ class AutocompleteHighlightedOption$Mate extends _i1.AutocompleteHighlightedOpti
             init: key,
             isNamed: true,
           ),
-          'highlightIndexNotifier': _i2.BuilderArg<_i7.ValueNotifier<int>>(
+          'highlightIndexNotifier': _i2.BuilderArg<_i8.ValueNotifier<int>>(
             name: 'highlightIndexNotifier',
             init: highlightIndexNotifier,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i9.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

@@ -69,7 +69,7 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class SegmentedButton<T> extends StatelessWidget
+/// class SegmentedButton<T> extends StatefulWidget
 class SegmentedButton$Mate<T> extends _i1.SegmentedButton<T> with _i2.Mate {
   /// SegmentedButton<T> SegmentedButton({Key? key, required List<ButtonSegment<T>> segments, required Set<T> selected, void Function(Set<T>)? onSelectionChanged, bool multiSelectionEnabled = false, bool emptySelectionAllowed = false, ButtonStyle? style, bool showSelectedIcon = true, Widget? selectedIcon})
   SegmentedButton$Mate({

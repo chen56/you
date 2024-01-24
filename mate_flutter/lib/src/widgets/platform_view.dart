@@ -111,7 +111,7 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class UiKitView extends StatefulWidget
+/// class UiKitView extends _DarwinView
 class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
   /// UiKitView UiKitView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers})
   UiKitView$Mate({
@@ -185,6 +185,95 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
     mateBuilderName = 'UiKitView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UiKitView$Mate(
+          key: p.get('key').build(),
+          viewType: p.get('viewType').build(),
+          onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
+          hitTestBehavior: p.get('hitTestBehavior').build(),
+          layoutDirection: p.get('layoutDirection').build(),
+          creationParams: p.get('creationParams').build(),
+          creationParamsCodec: p.get('creationParamsCodec').build(),
+          gestureRecognizers: p.get('gestureRecognizers').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class AppKitView extends _DarwinView
+class AppKitView$Mate extends _i1.AppKitView with _i2.Mate {
+  /// AppKitView AppKitView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers})
+  AppKitView$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required String viewType} , default:none
+    required super.viewType,
+
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
+    super.onPlatformViewCreated,
+
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
+    super.hitTestBehavior,
+
+    /// optionalParameters: {TextDirection? layoutDirection} , default:none
+    super.layoutDirection,
+
+    /// optionalParameters: {dynamic creationParams} , default:none
+    super.creationParams,
+
+    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , default:none
+    super.creationParamsCodec,
+
+    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , default:none
+    super.gestureRecognizers,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'viewType': _i2.BuilderArg<String>(
+            name: 'viewType',
+            init: viewType,
+            isNamed: true,
+          ),
+          'onPlatformViewCreated': _i2.BuilderArg<_i4.PlatformViewCreatedCallback?>(
+            name: 'onPlatformViewCreated',
+            init: onPlatformViewCreated,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i5.PlatformViewHitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+            defaultValue: _i6.PlatformViewHitTestBehavior.opaque,
+          ),
+          'layoutDirection': _i2.BuilderArg<_i7.TextDirection?>(
+            name: 'layoutDirection',
+            init: layoutDirection,
+            isNamed: true,
+          ),
+          'creationParams': _i2.BuilderArg<dynamic>(
+            name: 'creationParams',
+            init: creationParams,
+            isNamed: true,
+          ),
+          'creationParamsCodec': _i2.BuilderArg<_i10.MessageCodec<dynamic>?>(
+            name: 'creationParamsCodec',
+            init: creationParamsCodec,
+            isNamed: true,
+          ),
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
+            name: 'gestureRecognizers',
+            init: gestureRecognizers,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'AppKitView';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => AppKitView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
           onPlatformViewCreated: p.get('onPlatformViewCreated').build(),

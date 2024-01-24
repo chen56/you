@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note/note.dart';
 import 'package:mate/mate_note.dart';
-import 'package:mate_flutter/material.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
@@ -31,19 +30,16 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSampleContent(
-      Row$Mate(
-        children: <Widget>[
-          ...List.generate(3, (index) {
-            return Expanded$Mate(
-                child: Container$Mate(
-              height: 200,
-              color: Colors.primaries[index % Colors.primaries.length],
-            ));
-          })
-        ],
-      ),
-      isShowParamEditor: false,
+    Row(
+      children: <Widget>[
+        ...List.generate(3, (index) {
+          return Expanded(
+              child: Container(
+            height: 200,
+            color: Colors.primaries[index % Colors.primaries.length],
+          ));
+        })
+      ],
     ),
   );
 
@@ -56,19 +52,17 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSampleContent(
-      Row$Mate(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          ...List.generate(3, (index) {
-            return Container$Mate(
-              width: 50,
-              height: 50,
-              color: Colors.primaries[index + 5 % Colors.primaries.length],
-            );
-          })
-        ],
-      ),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        ...List.generate(3, (index) {
+          return Container(
+            width: 50,
+            height: 50,
+            color: Colors.primaries[index + 5 % Colors.primaries.length],
+          );
+        })
+      ],
     ),
   );
 
@@ -83,15 +77,17 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Column$Mate(
-    children: [
-      Text$Mate("1.普通Text,点我"),
-      InkResponse$Mate(
-        onTap: () {}..sampleCodeStr = "(){}",
-        child: Text$Mate("2.包Ink的Text,点我"),
-      ),
-    ],
-  )));
+  print(
+    Column(
+      children: [
+        const Text("1.普通Text,点我"),
+        InkResponse(
+          onTap: () {}..sampleCodeStr = "(){}",
+          child: const Text("2.包Ink的Text,点我"),
+        ),
+      ],
+    ),
+  );
 
   print.$____________________________________________________________________();
   print.markdown(r'''
