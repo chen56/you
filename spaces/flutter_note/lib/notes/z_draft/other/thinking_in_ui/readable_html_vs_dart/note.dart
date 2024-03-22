@@ -101,5 +101,37 @@ Scaffold(
 
 当然如果，你实在和html没共鸣，这也是仁者见仁的事情嘛。
 
+
+## swiftui 尾部闭包
+
+https://www.reddit.com/r/dartlang/comments/mzfyob/will_dart_ever_gain_support_for_trailing_lambdas/
+
+```swfit
+Column(
+    modifier = Modifier.padding(16.dp),
+    content = {
+        Text("Some text")
+        Text("Some more text")
+        Text("Last text")
+    }
+)
+
+// can be written as
+
+Column(modifier = Modifier.padding(16.dp)) {
+    Text("Some text")
+    Text("Some more text")
+    Text("Last text")
+}
+
+## kotlin 也可以
+
+
+```
+
+
+
+
+
   ''');
 }
