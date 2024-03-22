@@ -14,12 +14,15 @@ main() {
       Row(),
     ),
   ]);
-  StyledWidget(padding: const EdgeInsets.all(10), decoration: const BoxDecoration(color: Colors.amber, shape: BoxShape.circle))(
+  const StyledWidget(
+    padding: EdgeInsets.all(10),
+    decoration: BoxDecoration(color: Colors.amber, shape: BoxShape.circle),
+  )(
     Row(crossAxisAlignment: CrossAxisAlignment.baseline, children: [
       FilledButton(onPressed: () => {}, child: const Text("ss")),
       Container(color: Colors.amber)(
         Row(children: [
-          StyledWidget(alignment: Alignment.center)(
+          const StyledWidget(alignment: Alignment.center)(
             Row(crossAxisAlignment: CrossAxisAlignment.baseline, children: [
               FilledButton(onPressed: () => {}, child: const Text("ss")),
             ]),
@@ -57,7 +60,7 @@ class StyledWidget extends StatelessWidget {
     this.decoration,
     this.alignment,
     this.child,
-  }) ;
+  });
 
   @override
   Widget build(BuildContext context) {
