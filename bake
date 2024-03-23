@@ -798,6 +798,8 @@ preview.web() {
     build "$@"
 #   	npx http-server ./flutter_note/build/web --port 8000
     _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
+    # flutter pub global activate dhttpd
+    # _exec flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 }
 web.serve() {
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名

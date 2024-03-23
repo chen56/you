@@ -5,7 +5,6 @@ import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
-import 'package:flutter_note/notes/z_draft/other/dart/analyzer/to_source_visitor.dart';
 
 
 main() {
@@ -24,8 +23,6 @@ read(File file) {
       path: file.path, featureSet: FeatureSet.latestLanguageVersion());
   CompilationUnit unit = result.unit;
   unit.visitChildren(X());
-  StringBuffer sb = StringBuffer();
-  unit.visitChildren(Find(sb));
 }
 
 class X extends GeneralizingAstVisitor {
@@ -64,19 +61,4 @@ class X extends GeneralizingAstVisitor {
   int level(AstNode node) {
     return node.parent == null ? 0 : level(node.parent!) + 1;
   }
-}
-
-class Find extends ToSourceVisitor {
-  Find(super.sink);
-
-  @override
-  void visitClassDeclaration(ClassDeclaration node) {
-    ParamVisitor v = ParamVisitor(sink);
-    node.accept(v);
-  }
-}
-
-/// 参考[ToSourceVisitor]
-class ParamVisitor extends ToSourceVisitor {
-  ParamVisitor(super.sink);
 }

@@ -22,7 +22,7 @@ dependencies:
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
 
-  analyzer: ^5.10.0
+  analyzer: ^6.4.1
 
   note:
   note_tools:
@@ -35,8 +35,8 @@ dependencies:
 
   path: ^1.8.2
   code_builder: ^4.4.0
-  file: ^6.1.4
-  shared_preferences: ^2.1.1
+  file: ^7.0.0
+  shared_preferences: ^2.2.2
 
   # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos 13.x
 #  flutter_inappwebview: ^5.7.2+3
@@ -47,8 +47,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
    # 这俩不要貌似也没啥影响
-  flutter_lints: ^2.0.1
-  lints: ^2.0.1
+  flutter_lints: ^3.0.1
+  lints: ^3.0.0
 
   # for tools/note_dev_gen.dart
   dart_style: ^2.0.0
