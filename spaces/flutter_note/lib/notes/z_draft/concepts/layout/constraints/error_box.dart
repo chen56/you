@@ -5,15 +5,90 @@ main() {
     // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
     Directionality(
       textDirection: TextDirection.ltr,
-      child: test1QueryBasicConstraints(),
+      child: test1Unlimit(),
     ),
   );
 }
+
 // 查询UI最外层本约束信息
 // 最外层是固定这种：BoxConstraints(w=1103.0, h=566.0)
-Widget test1QueryBasicConstraints(){
+Widget test1QueryBasicConstraints() {
   return LayoutBuilder(builder: (context, constraints) {
-    debugPrint("${constraints}");
+    debugPrint("constraints: ${constraints}");
     return Text("LayoutBuilder: ${constraints}");
   });
+}
+
+// 查询UI最外层本约束信息
+// 最外层是固定这种：BoxConstraints(w=1103.0, h=566.0)
+Widget test1Unlimit() {
+  Widget constraintsInfo(String title) {
+    return LayoutBuilder(builder: (context, constraints) {
+      debugPrint("${title}: ${constraints}");
+      return Text("${title}: ${constraints}");
+    });
+  }
+
+  return Column(
+    children: [
+      // Column的可以无限高
+      // BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity)
+      constraintsInfo("Column"),
+      Divider(),
+
+      // 1. 报错
+      // error: Vertical viewport was given unbounded height.
+      // 父Column说：儿子你可以无限高(BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity))
+      // 儿ListView说：那我就要无限高吧，我自带滚动条
+      // 父Column说：error，我挂了！
+      // ListView(children: [Text("")]),
+
+
+
+      SizedBox(
+        height: 200,
+        // BoxConstraints(0.0<=w<=826.0, h=200.0)
+        child: constraintsInfo("Column>SizedBox(height:200)"),
+      ),
+      Divider(),
+
+      SizedBox(
+        width: 200,
+        height: 200,
+        // BoxConstraints(w=200.0, h=200.0)
+        child: constraintsInfo("Column>SizedBox(width: 200, height:200)"),
+      ),
+      Divider(),
+
+      // 2.必须限制高度
+      // 父Column说：大春，我还是限制下你吧，你比较特殊(BoxConstraints(0.0<=w<=826.0, h=200.0))
+      // 儿ListView说：好吧，我高200
+      // 父Column说：谢谢
+      SizedBox(
+        height: 200,
+        child: ListView(children: [
+          // BoxConstraints(w=826.0, 0.0<=h<=Infinity)
+          constraintsInfo("Column>SizedBox(width:200,height:200)>ListView"),
+          ...List.generate(100, (index) => Text("list item:${index}")),
+        ]),
+      ),
+
+      // 3. Expanded也会限制，而且更好，因为他算好剩余的高度给到儿子ListView
+      // Expanded 要求：BoxConstraints(0.0<=w<=623.0, h=91.0)
+      // 即：填满空间所需的高度作为约束，
+      Expanded(
+        child: constraintsInfo("Column>Expanded"),
+      ),
+      Divider(),
+
+      // 3.1. 就这样
+      Expanded(
+        child: ListView(children: [
+          constraintsInfo("Column>Expanded>ListView")
+        ]),
+      ),
+      Divider(),
+
+    ],
+  );
 }
