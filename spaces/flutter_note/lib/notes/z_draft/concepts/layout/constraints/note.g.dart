@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print(ConstrainedBox(constrain, print(ConstrainedBox(constrain)
+        /// (print.markdown(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print.markdown(r''' ```dart va, BoxConstraints.tightFor(width:)
         (
           cellType: 'body',
           offset: 161,
-          end: 5411,
+          end: 2430,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 5411,
-          end: 5413,
+          offset: 2430,
+          end: 3847,
           specialNodes: <({
             String nodeType,
             int end,

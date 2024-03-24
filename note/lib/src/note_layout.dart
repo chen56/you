@@ -95,7 +95,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
       context,
       notePage: widget.notePage,
       contentFactory: widget.noteSystem.contentExtensions,
-      defaultCodeExpand: true,
+      defaultCodeExpand: false,
       outline: outline,
     );
     return (
@@ -412,7 +412,6 @@ class _NoteCellView extends StatelessWidget {
                   message: '${cell.name}',
                   child: Text(
                     barText,
-                    textScaleFactor: 1.2,
                   ),
                 ),
               ),
