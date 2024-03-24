@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:mate/mate_core.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/core.dart';
 import 'package:note/ui.dart';
@@ -15,7 +15,7 @@ class MateContentExt extends NoteContentExt {
   MateContentExt({required this.editors});
 
   @override
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
     late MateSampleContent content;
     if (data is MateSampleContent) {
       content = data;
@@ -93,11 +93,11 @@ class SampleTemplate {
         var toCode = code.Block.of([
           const code.Code("""
     import 'package:flutter/material.dart';
-    
+
     void main() {
       var sample="""),
           mateExpression.statement,
-          const code.Code("""      
+          const code.Code("""
       runApp(MaterialApp(home: Scaffold(body: sample)));
     }
     """),
@@ -118,14 +118,14 @@ class SampleTemplate {
         var toCode = code.Block.of([
           code.Code("""
     import 'package:flutter/material.dart';
-    
+
     void main() {
-      
+
       ${_cleanCellCode(cell, param)}
-      
+
       var sample="""),
           mateExpression.statement,
-          const code.Code("""      
+          const code.Code("""
       runApp(MaterialApp(home: Scaffold(body: sample)));
     }
     """),
@@ -155,7 +155,7 @@ class SampleTemplate {
     List<String> codes = List.empty(growable: true);
     for (var s in sources) {
       codes.add(
-          cell.pen.path.source.code.safeSubstring(offset, s.codeEntity.offset));
+          cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
 
       offset = s.codeEntity.end;
     }
@@ -163,7 +163,7 @@ class SampleTemplate {
   }
 }
 
-class MateSampleWidget extends StatelessWidget with NoteWidgetMixin {
+class MateSampleWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;

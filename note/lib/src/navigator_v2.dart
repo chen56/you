@@ -52,7 +52,7 @@ class NavigatorV2 extends StatelessWidget {
   }
 
   Future<R?> push<R>(String location) {
-    return _routerDelegate._push<R>(location);
+    return _routerDelegate._push<R>(Uri.parse(location));
   }
 
   static RouterConfig<RouteInformation> config({required Navigable navigable}) {
@@ -113,12 +113,12 @@ class _MyRouterDelegate extends RouterDelegate<RouteInformation>
 
   @override
   Future<void> setNewRoutePath(RouteInformation configuration) {
-    _push(configuration.location ?? "/");
+    _push(configuration.uri );
     return SynchronousFuture(null);
   }
 
-  Future<R?> _push<R>(String location) {
-    Screen screen = _navigable.switchTo(location);
+  Future<R?> _push<R>(Uri uri) {
+    Screen screen = _navigable.switchTo(uri.toString());
     _Page page = screen._page;
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后

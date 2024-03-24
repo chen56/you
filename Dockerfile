@@ -1,4 +1,4 @@
-FROM fischerscode/flutter:3.10.2 as ci
+FROM fischerscode/flutter:3.19.0 as ci
 
 ARG test=on
 
@@ -12,7 +12,7 @@ WORKDIR ./note
 
 RUN ./bake get
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
-RUN ./bake build --base-href "/note/"
+RUN ./bake build web_html --base-href "/note/"
 
 #
 ######################################################################

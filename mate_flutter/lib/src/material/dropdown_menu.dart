@@ -11,16 +11,20 @@ import 'package:flutter/src/material/input_decorator.dart' as _i7;
 import 'package:flutter/src/material/menu_style.dart' as _i8;
 import 'package:flutter/src/widgets/editable_text.dart' as _i9;
 import 'package:flutter/src/foundation/basic_types.dart' as _i10;
+import 'package:flutter/src/painting/edge_insets.dart' as _i11;
 
 /// class DropdownMenuEntry<T>
 class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
-  /// DropdownMenuEntry<T> DropdownMenuEntry({required T value, required String label, Widget? leadingIcon, Widget? trailingIcon, bool enabled = true, ButtonStyle? style})
+  /// DropdownMenuEntry<T> DropdownMenuEntry({required T value, required String label, Widget? labelWidget, Widget? leadingIcon, Widget? trailingIcon, bool enabled = true, ButtonStyle? style})
   DropdownMenuEntry$Mate({
     /// optionalParameters: {required T value} , default:none
     required super.value,
 
     /// optionalParameters: {required String label} , default:none
     required super.label,
+
+    /// optionalParameters: {Widget? labelWidget} , default:none
+    super.labelWidget,
 
     /// optionalParameters: {Widget? leadingIcon} , default:none
     super.leadingIcon,
@@ -42,6 +46,11 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
           'label': _i2.BuilderArg<String>(
             name: 'label',
             init: label,
+            isNamed: true,
+          ),
+          'labelWidget': _i2.BuilderArg<_i3.Widget?>(
+            name: 'labelWidget',
+            init: labelWidget,
             isNamed: true,
           ),
           'leadingIcon': _i2.BuilderArg<_i3.Widget?>(
@@ -72,6 +81,7 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
     mateBuilder = (p) => DropdownMenuEntry$Mate<T>(
           value: p.get('value').build(),
           label: p.get('label').build(),
+          labelWidget: p.get('labelWidget').build(),
           leadingIcon: p.get('leadingIcon').build(),
           trailingIcon: p.get('trailingIcon').build(),
           enabled: p.get('enabled').build(),
@@ -85,7 +95,7 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
 
 /// class DropdownMenu<T> extends StatefulWidget
 class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
-  /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, String? helperText, String? errorText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
+  /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, String? helperText, String? errorText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, EdgeInsets? expandedInsets, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
   DropdownMenu$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -146,6 +156,9 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
 
     /// optionalParameters: {bool? requestFocusOnTap} , default:none
     super.requestFocusOnTap,
+
+    /// optionalParameters: {EdgeInsets? expandedInsets} , default:none
+    super.expandedInsets,
 
     /// optionalParameters: {required List<DropdownMenuEntry<T>> dropdownMenuEntries} , default:none
     required super.dropdownMenuEntries,
@@ -253,6 +266,11 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
             init: requestFocusOnTap,
             isNamed: true,
           ),
+          'expandedInsets': _i2.BuilderArg<_i11.EdgeInsets?>(
+            name: 'expandedInsets',
+            init: expandedInsets,
+            isNamed: true,
+          ),
           'dropdownMenuEntries': _i2.BuilderArg<List<_i1.DropdownMenuEntry<T>>>(
             name: 'dropdownMenuEntries',
             init: dropdownMenuEntries,
@@ -283,6 +301,7 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
           initialSelection: p.get('initialSelection').build(),
           onSelected: p.get('onSelected').build(),
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
+          expandedInsets: p.get('expandedInsets').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
   }

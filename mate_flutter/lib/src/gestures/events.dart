@@ -8,8 +8,11 @@ import 'package:flutter/animation.dart' as _i4;
 
 /// class PointerAddedEvent extends PointerEvent with _PointerEventDescription, _CopyPointerAddedEvent
 class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
-  /// PointerAddedEvent PointerAddedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
+  /// PointerAddedEvent PointerAddedEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerAddedEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -55,6 +58,12 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -150,6 +159,7 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
     mateBuilderName = 'PointerAddedEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerAddedEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -174,8 +184,11 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
 
 /// class PointerRemovedEvent extends PointerEvent with _PointerEventDescription, _CopyPointerRemovedEvent
 class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
-  /// PointerRemovedEvent PointerRemovedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, PointerRemovedEvent? original, int embedderId = 0})
+  /// PointerRemovedEvent PointerRemovedEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, PointerRemovedEvent? original, int embedderId = 0})
   PointerRemovedEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -215,6 +228,12 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -297,6 +316,7 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
     mateBuilderName = 'PointerRemovedEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerRemovedEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -319,8 +339,11 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
 
 /// class PointerHoverEvent extends PointerEvent with _PointerEventDescription, _CopyPointerHoverEvent
 class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
-  /// PointerHoverEvent PointerHoverEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool synthesized = false, int embedderId = 0})
+  /// PointerHoverEvent PointerHoverEvent({int viewId = 0, Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool synthesized = false, int embedderId = 0})
   PointerHoverEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -384,6 +407,12 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -515,6 +544,7 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
     mateBuilderName = 'PointerHoverEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerHoverEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           kind: p.get('kind').build(),
           pointer: p.get('pointer').build(),
@@ -545,8 +575,11 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
 
 /// class PointerEnterEvent extends PointerEvent with _PointerEventDescription, _CopyPointerEnterEvent
 class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
-  /// PointerEnterEvent PointerEnterEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
+  /// PointerEnterEvent PointerEnterEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerEnterEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -613,6 +646,12 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -750,6 +789,7 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
     mateBuilderName = 'PointerEnterEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerEnterEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -781,8 +821,11 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
 
 /// class PointerExitEvent extends PointerEvent with _PointerEventDescription, _CopyPointerExitEvent
 class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
-  /// PointerExitEvent PointerExitEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
+  /// PointerExitEvent PointerExitEvent({int viewId = 0, Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerExitEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -849,6 +892,12 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -986,6 +1035,7 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
     mateBuilderName = 'PointerExitEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerExitEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           kind: p.get('kind').build(),
           pointer: p.get('pointer').build(),
@@ -1017,8 +1067,11 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
 
 /// class PointerDownEvent extends PointerEvent with _PointerEventDescription, _CopyPointerDownEvent
 class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
-  /// PointerDownEvent PointerDownEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
+  /// PointerDownEvent PointerDownEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerDownEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1076,6 +1129,12 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1194,6 +1253,7 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
     mateBuilderName = 'PointerDownEvent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PointerDownEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -1222,8 +1282,11 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
 
 /// class PointerMoveEvent extends PointerEvent with _PointerEventDescription, _CopyPointerMoveEvent
 class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
-  /// PointerMoveEvent PointerMoveEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int platformData = 0, bool synthesized = false, int embedderId = 0})
+  /// PointerMoveEvent PointerMoveEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int platformData = 0, bool synthesized = false, int embedderId = 0})
   PointerMoveEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1290,6 +1353,12 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1426,6 +1495,7 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
     mateBuilderName = 'PointerMoveEvent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PointerMoveEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -1457,8 +1527,11 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
 
 /// class PointerUpEvent extends PointerEvent with _PointerEventDescription, _CopyPointerUpEvent
 class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
-  /// PointerUpEvent PointerUpEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressure = 0.0, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
+  /// PointerUpEvent PointerUpEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressure = 0.0, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerUpEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1519,6 +1592,12 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1644,6 +1723,7 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
     mateBuilderName = 'PointerUpEvent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PointerUpEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),
@@ -1673,8 +1753,11 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
 
 /// class PointerScrollEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollEvent
 class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
-  /// PointerScrollEvent PointerScrollEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, Offset scrollDelta = Offset.zero, int embedderId = 0})
+  /// PointerScrollEvent PointerScrollEvent({int viewId = 0, Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, Offset scrollDelta = Offset.zero, int embedderId = 0})
   PointerScrollEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1693,6 +1776,12 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1734,6 +1823,7 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
     mateBuilderName = 'PointerScrollEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScrollEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           kind: p.get('kind').build(),
           device: p.get('device').build(),
@@ -1749,8 +1839,11 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
 
 /// class PointerScrollInertiaCancelEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollInertiaCancelEvent
 class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCancelEvent with _i2.Mate {
-  /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
+  /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({int viewId = 0, Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1766,6 +1859,12 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1801,6 +1900,7 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
     mateBuilderName = 'PointerScrollInertiaCancelEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScrollInertiaCancelEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           kind: p.get('kind').build(),
           device: p.get('device').build(),
@@ -1815,8 +1915,11 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
 
 /// class PointerScaleEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScaleEvent
 class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
-  /// PointerScaleEvent PointerScaleEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0, double scale = 1.0})
+  /// PointerScaleEvent PointerScaleEvent({int viewId = 0, Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0, double scale = 1.0})
   PointerScaleEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1835,6 +1938,12 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     super.scale,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1876,6 +1985,7 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
     mateBuilderName = 'PointerScaleEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScaleEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           kind: p.get('kind').build(),
           device: p.get('device').build(),
@@ -1891,8 +2001,11 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
 
 /// class PointerPanZoomStartEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomStartEvent
 class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i2.Mate {
-  /// PointerPanZoomStartEvent PointerPanZoomStartEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
+  /// PointerPanZoomStartEvent PointerPanZoomStartEvent({int viewId = 0, Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomStartEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1911,6 +2024,12 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
     /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     super.synthesized,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -1952,6 +2071,7 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
     mateBuilderName = 'PointerPanZoomStartEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomStartEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           device: p.get('device').build(),
           pointer: p.get('pointer').build(),
@@ -1967,8 +2087,11 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
 
 /// class PointerPanZoomUpdateEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomUpdateEvent
 class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with _i2.Mate {
-  /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
+  /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({int viewId = 0, Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -1999,6 +2122,12 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
     /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     super.synthesized,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -2064,6 +2193,7 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
     mateBuilderName = 'PointerPanZoomUpdateEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomUpdateEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           device: p.get('device').build(),
           pointer: p.get('pointer').build(),
@@ -2083,8 +2213,11 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
 
 /// class PointerPanZoomEndEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomEndEvent
 class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Mate {
-  /// PointerPanZoomEndEvent PointerPanZoomEndEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
+  /// PointerPanZoomEndEvent PointerPanZoomEndEvent({int viewId = 0, Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomEndEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -2103,6 +2236,12 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
     /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     super.synthesized,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -2144,6 +2283,7 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
     mateBuilderName = 'PointerPanZoomEndEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomEndEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           device: p.get('device').build(),
           pointer: p.get('pointer').build(),
@@ -2159,8 +2299,11 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
 
 /// class PointerCancelEvent extends PointerEvent with _PointerEventDescription, _CopyPointerCancelEvent
 class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
-  /// PointerCancelEvent PointerCancelEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
+  /// PointerCancelEvent PointerCancelEvent({int viewId = 0, Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerCancelEvent$Mate({
+    /// optionalParameters: {int viewId = 0} , default:processed=IntegerLiteralImpl
+    super.viewId,
+
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
@@ -2218,6 +2361,12 @@ class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
   })  : mateParams = {
+          'viewId': _i2.BuilderArg<int>(
+            name: 'viewId',
+            init: viewId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
           'timeStamp': _i2.BuilderArg<Duration>(
             name: 'timeStamp',
             init: timeStamp,
@@ -2337,6 +2486,7 @@ class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
     mateBuilderName = 'PointerCancelEvent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PointerCancelEvent$Mate(
+          viewId: p.get('viewId').build(),
           timeStamp: p.get('timeStamp').build(),
           pointer: p.get('pointer').build(),
           kind: p.get('kind').build(),

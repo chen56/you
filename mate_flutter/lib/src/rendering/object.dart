@@ -42,7 +42,7 @@ class PaintingContext$Mate extends _i1.PaintingContext with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class PipelineOwner
+/// class PipelineOwner with DiagnosticableTreeMixin
 class PipelineOwner$Mate extends _i1.PipelineOwner with _i2.Mate {
   /// PipelineOwner PipelineOwner({void Function()? onNeedVisualUpdate, void Function()? onSemanticsOwnerCreated, void Function(SemanticsUpdate)? onSemanticsUpdate, void Function()? onSemanticsOwnerDisposed})
   PipelineOwner$Mate({

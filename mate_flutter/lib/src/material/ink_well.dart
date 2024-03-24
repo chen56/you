@@ -19,7 +19,7 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i15;
 
 /// class InkResponse extends StatelessWidget
 class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
-  /// InkResponse InkResponse({Key? key, Widget? child, void Function()? onTap, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onDoubleTap, void Function()? onLongPress, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, bool containedInkWell = false, BoxShape highlightShape = BoxShape.circle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, bool enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
+  /// InkResponse InkResponse({Key? key, Widget? child, void Function()? onTap, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onDoubleTap, void Function()? onLongPress, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, bool containedInkWell = false, BoxShape highlightShape = BoxShape.circle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, bool enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController, Duration? hoverDuration})
   InkResponse$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -119,6 +119,9 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
+
+    /// optionalParameters: {Duration? hoverDuration} , default:none
+    super.hoverDuration,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -291,6 +294,11 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             init: statesController,
             isNamed: true,
           ),
+          'hoverDuration': _i2.BuilderArg<Duration?>(
+            name: 'hoverDuration',
+            init: hoverDuration,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'InkResponse';
@@ -329,6 +337,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
+          hoverDuration: p.get('hoverDuration').build(),
         );
   }
 
@@ -338,7 +347,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
 
 /// class InkWell extends InkResponse
 class InkWell$Mate extends _i1.InkWell with _i2.Mate {
-  /// InkWell InkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, bool? enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
+  /// InkWell InkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, bool? enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController, Duration? hoverDuration})
   InkWell$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -432,6 +441,9 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
+
+    /// optionalParameters: {Duration? hoverDuration} , default:none
+    super.hoverDuration,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -592,6 +604,11 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             init: statesController,
             isNamed: true,
           ),
+          'hoverDuration': _i2.BuilderArg<Duration?>(
+            name: 'hoverDuration',
+            init: hoverDuration,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'InkWell';
@@ -628,6 +645,7 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
+          hoverDuration: p.get('hoverDuration').build(),
         );
   }
 

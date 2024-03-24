@@ -9,6 +9,7 @@ import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/text_style.dart' as _i6;
 import 'package:flutter/src/material/material_state.dart' as _i7;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i8;
+import 'package:flutter/src/material/slider.dart' as _i9;
 
 /// class SliderTheme extends InheritedTheme
 class SliderTheme$Mate extends _i1.SliderTheme with _i2.Mate {
@@ -55,7 +56,7 @@ class SliderTheme$Mate extends _i1.SliderTheme with _i2.Mate {
 
 /// class SliderThemeData with Diagnosticable
 class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
-  /// SliderThemeData SliderThemeData({double? trackHeight, Color? activeTrackColor, Color? inactiveTrackColor, Color? secondaryActiveTrackColor, Color? disabledActiveTrackColor, Color? disabledInactiveTrackColor, Color? disabledSecondaryActiveTrackColor, Color? activeTickMarkColor, Color? inactiveTickMarkColor, Color? disabledActiveTickMarkColor, Color? disabledInactiveTickMarkColor, Color? thumbColor, Color? overlappingShapeStrokeColor, Color? disabledThumbColor, Color? overlayColor, Color? valueIndicatorColor, SliderComponentShape? overlayShape, SliderTickMarkShape? tickMarkShape, SliderComponentShape? thumbShape, SliderTrackShape? trackShape, SliderComponentShape? valueIndicatorShape, RangeSliderTickMarkShape? rangeTickMarkShape, RangeSliderThumbShape? rangeThumbShape, RangeSliderTrackShape? rangeTrackShape, RangeSliderValueIndicatorShape? rangeValueIndicatorShape, ShowValueIndicator? showValueIndicator, TextStyle? valueIndicatorTextStyle, double? minThumbSeparation, Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector, MaterialStateProperty<MouseCursor?>? mouseCursor})
+  /// SliderThemeData SliderThemeData({double? trackHeight, Color? activeTrackColor, Color? inactiveTrackColor, Color? secondaryActiveTrackColor, Color? disabledActiveTrackColor, Color? disabledInactiveTrackColor, Color? disabledSecondaryActiveTrackColor, Color? activeTickMarkColor, Color? inactiveTickMarkColor, Color? disabledActiveTickMarkColor, Color? disabledInactiveTickMarkColor, Color? thumbColor, Color? overlappingShapeStrokeColor, Color? disabledThumbColor, Color? overlayColor, Color? valueIndicatorColor, SliderComponentShape? overlayShape, SliderTickMarkShape? tickMarkShape, SliderComponentShape? thumbShape, SliderTrackShape? trackShape, SliderComponentShape? valueIndicatorShape, RangeSliderTickMarkShape? rangeTickMarkShape, RangeSliderThumbShape? rangeThumbShape, RangeSliderTrackShape? rangeTrackShape, RangeSliderValueIndicatorShape? rangeValueIndicatorShape, ShowValueIndicator? showValueIndicator, TextStyle? valueIndicatorTextStyle, double? minThumbSeparation, Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector, MaterialStateProperty<MouseCursor?>? mouseCursor, SliderInteraction? allowedInteraction})
   SliderThemeData$Mate({
     /// optionalParameters: {double? trackHeight} , default:none
     super.trackHeight,
@@ -146,6 +147,9 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     super.mouseCursor,
+
+    /// optionalParameters: {SliderInteraction? allowedInteraction} , default:none
+    super.allowedInteraction,
   })  : mateParams = {
           'trackHeight': _i2.BuilderArg<double?>(
             name: 'trackHeight',
@@ -297,6 +301,11 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
+          'allowedInteraction': _i2.BuilderArg<_i9.SliderInteraction?>(
+            name: 'allowedInteraction',
+            init: allowedInteraction,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'SliderThemeData';
@@ -332,6 +341,7 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
           minThumbSeparation: p.get('minThumbSeparation').build(),
           thumbSelector: p.get('thumbSelector').build(),
           mouseCursor: p.get('mouseCursor').build(),
+          allowedInteraction: p.get('allowedInteraction').build(),
         );
   }
 

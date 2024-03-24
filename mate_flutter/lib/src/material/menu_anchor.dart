@@ -669,7 +669,7 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
 
 /// class SubmenuButton extends StatefulWidget
 class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
-  /// SubmenuButton SubmenuButton({Key? key, void Function(bool)? onHover, void Function(bool)? onFocusChange, void Function()? onOpen, void Function()? onClose, ButtonStyle? style, MenuStyle? menuStyle, Offset? alignmentOffset, Clip clipBehavior = Clip.hardEdge, FocusNode? focusNode, MaterialStatesController? statesController, Widget? leadingIcon, Widget? trailingIcon, required List<Widget> menuChildren, required Widget? child})
+  /// SubmenuButton SubmenuButton({Key? key, void Function(bool)? onHover, void Function(bool)? onFocusChange, void Function()? onOpen, void Function()? onClose, MenuController? controller, ButtonStyle? style, MenuStyle? menuStyle, Offset? alignmentOffset, Clip clipBehavior = Clip.hardEdge, FocusNode? focusNode, MaterialStatesController? statesController, Widget? leadingIcon, Widget? trailingIcon, required List<Widget> menuChildren, required Widget? child})
   SubmenuButton$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -685,6 +685,9 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
 
     /// optionalParameters: {void Function()? onClose} , default:none
     super.onClose,
+
+    /// optionalParameters: {MenuController? controller} , default:none
+    super.controller,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
     super.style,
@@ -739,6 +742,11 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
           'onClose': _i2.BuilderArg<_i6.VoidCallback?>(
             name: 'onClose',
             init: onClose,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.MenuController?>(
+            name: 'controller',
+            init: controller,
             isNamed: true,
           ),
           'style': _i2.BuilderArg<_i11.ButtonStyle?>(
@@ -802,6 +810,7 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           onOpen: p.get('onOpen').build(),
           onClose: p.get('onClose').build(),
+          controller: p.get('controller').build(),
           style: p.get('style').build(),
           menuStyle: p.get('menuStyle').build(),
           alignmentOffset: p.get('alignmentOffset').build(),

@@ -6,6 +6,10 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
 # v0.2.20230525 - It can run normally on macos
+# todo
+#   1. sub cmd help not work
+#   2. cmd help use @cmd define?
+#   3. split to common bash script ,  can use git tree use it
 #
 # chinese-----------------------------------------------------------------------
 # bake == (bash)ake == 去Make的bash tool
@@ -123,7 +127,7 @@ if ((BASH_VERSINFO[0] < 4 || (\
 fi
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
 function _real_path() (
-  cd  "$(dirname "$1")"
+  cd "$(dirname "$1")"
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
     file="$(readlink "$file")"
@@ -771,17 +775,37 @@ run.macos() {
   flutter_note flutter run --device-id macos "$@"
 }
 
-build() {
+build.web_canvaskit() {
+  flutter_note flutter build web -v \
+    --release --tree-shake-icons \
+    --web-renderer canvaskit "$@"
+}
+build.web_html() {
   flutter_note flutter build web -v \
     --release --tree-shake-icons \
     --web-renderer html "$@"
 }
 
+# skwasm无法运行
+build.web_skwasm() {
+  flutter_note flutter build web -v \
+    --release --tree-shake-icons \
+    --web-renderer skwasm "$@"
+}
+
 preview.web() {
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-  #  build "$@"
-  # 	npx http-server ./app_note/build/web --port 8000
-  _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
+    build "$@"
+#   	npx http-server ./flutter_note/build/web --port 8000
+    _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
+    # flutter pub global activate dhttpd
+    # _exec flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+}
+web.serve() {
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    build "$@"
+#   	npx http-server ./flutter_note/build/web --port 8000
+    _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
 }
 preview.macos() (
   _exec flutter_note flutter build macos -v \
@@ -796,18 +820,18 @@ clean() {
 gen.all() {
   _exec flutter_note dart run tools/gen.dart
   (
-    cd mate_flutter
     _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec dart run  tools/gen_mate_icons.dart
+    _exec mate_flutter dart run  tools/gen_mate_icons.dart
   )
 }
 gen.notes() {
   _exec flutter_note dart run tools/gen.dart
+  _exec flutter_note flutter pub get
+
 }
 gen.mate() (
-    cd mate_flutter
     _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec dart run  tools/gen_mate_icons.dart
+    _exec mate_flutter dart run  tools/gen_mate_icons.dart
 )
 regen() {
   echo "regen1"

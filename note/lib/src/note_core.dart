@@ -1,12 +1,12 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:note/note_conf.dart';
-import 'package:note/src/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
-import 'dart:convert';
-
+import 'package:note/src/conventions.dart';
 import 'package:note/src/utils_core.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -14,7 +14,7 @@ import 'package:note/src/utils_core.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef DeferredNoteConf = Future<FlutterNoteConf> Function();
+typedef DeferredNotePageBuilder = Future<NotePage> Function(Note note);
 typedef NoteSourceData = ({
   List<
       ({
@@ -27,9 +27,7 @@ typedef NoteSourceData = ({
               int end,
               int offset,
             })> specialNodes,
-        int statementCount
       })> cells,
-  String encodedCode,
 // NoteConfPart meta
 });
 
@@ -39,52 +37,39 @@ NoteSourceData _emptyPageGenInfo = (
       cellType: CellType.header.name,
       offset: 0,
       end: 0,
-      statementCount: 0,
       specialNodes: [],
     )
   ],
-  encodedCode: "",
-// meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
-/// <T>: [NavigatorV2.push] 的返回类型
-class FlutterNoteConf<T> {
-  /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
-  final String shortTitle;
-  final NotePageBuilder builder;
-  late final Layout? layout;
-  final bool empty;
-
-  FlutterNoteConf({
-    required this.shortTitle,
-    required this.builder,
-    this.layout,
-    // todo remove empty field
-    this.empty = false,
+class NoteSystem {
+  final Note root;
+  final NoteContentExts contentExtensions;
+  final SpaceConf spaceConf;
+  final SharedPreferences sharedPreferences;
+  NoteSystem({
+    required this.root,
+    required this.contentExtensions,
+    required this.spaceConf,
+    required this.sharedPreferences,
   });
 
-  FlutterNoteConf.empty({String shortTitle = ""})
-      : this(
-          empty: true,
-          shortTitle: shortTitle,
-          builder: (context, print) {},
-        );
-
-  FlutterNoteConf.notEmpty({String shortTitle = ""})
-      : this(
-          empty: false,
-          shortTitle: shortTitle,
-          builder: (context, print) {},
-        );
-
-  @override
-  String toString() {
-    return "PageMeta($shortTitle)";
+  static Future<NoteSystem> load({
+    required Note root,
+    required NoteContentExts contentExtensions,
+  }) async {
+    return NoteSystem(
+      root: root,
+      spaceConf:
+          SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
+      contentExtensions: contentExtensions,
+      sharedPreferences: await SharedPreferences.getInstance(),
+    );
   }
 }
 
-class Note<T> {
+class Note {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
   final String basename;
@@ -92,27 +77,21 @@ class Note<T> {
   final Note? parent;
   bool expand = false;
 
-  FlutterNoteConf<T> confPart = FlutterNoteConf.empty();
-
   NoteSource _source = _emptyPageSource;
 
-  DeferredNoteConf? deferredConf;
+  // TODO QRoute的 deferred处理可以看下 ：https://medium.com/@SchabanBo/reduce-your-flutter-web-app-loading-time-8018d8f442
+  DeferredNotePageBuilder? deferredPageBuilder;
 
-  SpaceNoteConf spaceNoteConf;
+  SpaceNoteConf? spaceNoteConf;
 
-  Note._child({
-    required this.basename,
-    required Note this.parent,
-  })  : confPart = FlutterNoteConf.empty(shortTitle: basename),
-        spaceNoteConf = SpaceNoteConf.empty(displayName: basename);
+  Note._child({required this.basename, required Note this.parent});
 
   Note.root()
       : basename = "",
-        parent = null,
-        spaceNoteConf = SpaceNoteConf.empty(displayName: "");
+        parent = null;
 
-  Note<C> put<C>(
-      String fullPath, NoteSourceData data, DeferredNoteConf deferredConf) {
+  Note put(String fullPath, NoteSourceData data,
+      DeferredNotePageBuilder deferredPageBuilder) {
     var p = fullPath
         .split("/")
         .map((e) => e.trim())
@@ -121,9 +100,8 @@ class Note<T> {
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
-    path.confPart = FlutterNoteConf.notEmpty(shortTitle: path.basename);
-    path.deferredConf = deferredConf;
-    return path as Note<C>;
+    path.deferredPageBuilder = deferredPageBuilder;
+    return path;
   }
 
   void extendTree(bool value) {
@@ -133,15 +111,11 @@ class Note<T> {
     }
   }
 
-  bool get isEmpty => confPart.empty;
-
-  bool get isNotEmpty => !confPart.empty;
-
   List<Note> get children => List.from(_children.values);
 
   NoteSource get source => _source;
 
-  Note _ensurePath<C>(List<String> nameList) {
+  Note _ensurePath(List<String> nameList) {
     if (nameList.isEmpty) {
       return this;
     }
@@ -154,21 +128,6 @@ class Note<T> {
       return child;
     });
     return next._ensurePath(nameList.sublist(1));
-  }
-
-  /// 页面骨架
-  /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  Layout get layout {
-    if (confPart.layout != null) {
-      return confPart.layout!;
-    }
-
-    if (isRoot) {
-      return <T>(Note<T> note) => _DefaultScreen<T>(
-            current: note,
-          );
-    }
-    return parent!.layout;
   }
 
   bool get isLeaf => _children.isEmpty;
@@ -188,21 +147,31 @@ class Note<T> {
 
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
-  String get displayName => spaceNoteConf.displayName;
+  String get displayName =>
+      spaceNoteConf != null ? spaceNoteConf!.displayName : basename;
 
   String get path {
-    if (isRoot) return "/";
+    if (isRoot) return "";
     var parentPath = parent!.path;
-    return parentPath == "/" ? "/$basename" : "$parentPath/$basename";
+    return parentPath == "" ? basename : "$parentPath/$basename";
   }
 
-  List<Note> toList({bool includeThis = true, bool Function(Note path)? test}) {
+  List<Note> toList({
+    bool includeThis = true,
+    bool Function(Note path)? test,
+    Comparator<Note>? sortBy,
+  }) {
     test = test ?? (e) => true;
     if (!test(this)) {
       return [];
     }
-    var flatChildren = _children.values.expand((child) {
-      return child.toList(includeThis: true, test: test);
+    List<Note> children = List.from(_children.values);
+    if (sortBy != null) {
+      children.sort(sortBy);
+    }
+
+    var flatChildren = children.expand((child) {
+      return child.toList(includeThis: true, test: test, sortBy: sortBy);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
@@ -214,6 +183,7 @@ class Note<T> {
     return [...parent!.topList(), this];
   }
 
+  // todo bug
   Note? child(String path) {
     Note? result = this;
     for (var split
@@ -261,6 +231,40 @@ class Note<T> {
       child.visit(visitor);
     }
   }
+
+  String get dartAssetPath => conventions.noteDartAssetPath(path);
+  String get confAssetPath => conventions.noteConfAssetPath(path);
+
+  Future<NotePage> loadPage({NotePageBuilder? builder}) async {
+    return NotePage(
+        note: this,
+        // pageBuilder: await deferredPageBuilder!(this),
+        pageBuilder: builder,
+        conf: spaceNoteConf == null
+            ? null
+            : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+        content: await rootBundle.loadString(dartAssetPath));
+  }
+}
+
+class NotePage {
+  final Note note;
+  final NotePageBuilder? pageBuilder;
+  final NoteConf? conf;
+  final String content; // source code content
+  NotePage({
+    required this.note,
+    required this.pageBuilder,
+    required this.conf,
+    required this.content,
+  });
+
+  String _getCellCode(CodeEntity codeEntity) {
+    if (codeEntity.end > content.length) {
+      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${content.length})  ";
+    }
+    return content.safeSubstring(codeEntity.offset, codeEntity.end);
+  }
 }
 
 ///
@@ -306,27 +310,28 @@ class Pen {
   late final List<NoteCell> cells;
   late NoteCell currentCell;
   final Outline outline;
-  final Note path;
+  final Note note;
+  final NotePage notePage;
   final bool defaultCodeExpand;
 
   // Pen({required this.editors});
   Pen.build(
-    BuildContext context,
-    this.path, {
+    BuildContext context, {
+    required this.notePage,
     required this.contentFactory,
     required this.defaultCodeExpand,
     required this.outline,
-  }) {
-    assert(path.source._pageGenInfo.cells.isNotEmpty,
+  }) : note = notePage.note {
+    assert(note.source._pageGenInfo.cells.isNotEmpty,
         "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);
-    for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
+    for (int i = 0; i < note.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
         contentExtensions: contentFactory,
         pen: this,
         index: i,
-        pageSource: path.source,
+        pageSource: note.source,
       ));
     }
     this.cells = List.unmodifiable(cells);
@@ -336,7 +341,7 @@ class Pen {
     // Skip the header code block
     $____________________________________________________________________();
 
-    path.confPart.builder(context, this);
+    notePage.pageBuilder!(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -362,7 +367,9 @@ class Pen {
 
   void call(Object? object) {
     currentCell.print(object);
-    // currentCell.print(catchStack().safeSubstring(0, 500));
+    // currentCell.print("${object} ======${catchStack()}");
+    // print(
+    //     "${object.toString().safeSubstring(0, 30)} ========  ${catchStack()}");
   }
 
   /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中
@@ -372,17 +379,21 @@ class Pen {
   }
 
 // 法宝cell find
-// String catchStack() {
-//   try {
-//     throw Exception("eeeeee");
-//   } catch (es, stack) {
-//     return "$es : $stack";
-//   }
-// }
+  String catchStack() {
+    try {
+      throw Exception("fetch print to which cell");
+    } catch (es, stack) {
+      return "$es : $stack";
+    }
+  }
 }
 
 /// note content is not widget , it is data.
 abstract class NoteContent {}
+
+mixin NoteContentWidgetMixin on Widget {
+  get isMarkdown;
+}
 
 class NoteContentExts {
   final List<NoteContentExt> contentExtensions;
@@ -395,7 +406,7 @@ class NoteContentExts {
           ObjectContentExt(),
         ];
 
-  NoteWidgetMixin create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin create(Object? data, NoteContentArg arg) {
     for (var ext in contentExtensions) {
       var w = ext.create(data, arg);
       if (w != null) {
@@ -408,7 +419,7 @@ class NoteContentExts {
 }
 
 abstract class NoteContentExt {
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg);
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg);
 }
 
 class NoteContentArg {
@@ -492,51 +503,11 @@ class OutlineNode {
   }
 }
 
-typedef Layout = Screen Function(Note page);
-
-/// 在页面树上找不到任何Layout时套用这个缺省的
-class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
-  final Note<T> current;
-
-  _DefaultScreen({super.key, required this.current});
-
-  @override
-  Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-    return Scaffold(
-      appBar: AppBar(title: const Text("_DefaultScreen")),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Text(
-            "WARN：当前Path上未配置任何Layout: ${current.path}",
-            style: theme.textTheme.titleLarge
-                ?.copyWith(color: theme.colorScheme.error),
-          ),
-        ),
-      ),
-    );
-  }
-
-  @override
-  String get location => current.path;
-}
-
 class NoteSource {
-  late final String code;
   final NoteSourceData _pageGenInfo;
 
   NoteSource({required NoteSourceData pageGenInfo})
-      : _pageGenInfo = pageGenInfo {
-    var decoded = base64.decode(pageGenInfo.encodedCode);
-    code = utf8.decode(decoded);
-  }
-
-  String _getCellCode(CodeEntity codeEntity) {
-    if (codeEntity.end > code.length) {
-      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${code.length})  ";
-    }
-    return code.safeSubstring(codeEntity.offset, codeEntity.end);
-  }
+      : _pageGenInfo = pageGenInfo;
 }
 
 /// CodeEntity is same as analyzer [SyntacticEntity]
@@ -555,24 +526,19 @@ class CodeEntity {
 }
 
 class CellSource {
-  final int index;
   final CellType cellType;
   final CodeEntity codeEntity;
-  final int statementCount;
-  final NoteSource _pageSource;
-  List<SpecialSource> specialSources;
-
+  final List<SpecialSource> specialSources;
+  final NoteCell cell;
   CellSource({
     required this.cellType,
     required this.codeEntity,
     required this.specialSources,
-    required this.statementCount,
-    required NoteCell cell,
-  })  : index = cell.index,
-        _pageSource = cell.pen.path._source {}
+    required this.cell,
+  });
 
   String get code {
-    return _pageSource._getCellCode(codeEntity);
+    return cell.pen.notePage._getCellCode(codeEntity);
   }
 
   bool get isCodeEmpty {
@@ -585,7 +551,7 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellSource(index:$index, block:$codeEntity, statementCount:$statementCount )";
+    return "CellSource(index:${cell.index}, block:$codeEntity )";
   }
 }
 
@@ -600,10 +566,10 @@ class SpecialSource {
     required this.codeType,
     required this.codeEntity,
     required this.cell,
-  }) : pageSource = cell.pen.path.source;
+  }) : pageSource = cell.pen.note.source;
 
   String get code {
-    return pageSource._getCellCode(codeEntity);
+    return cell.pen.notePage._getCellCode(codeEntity);
   }
 
   @override
@@ -625,15 +591,11 @@ enum CellType {
   }
 }
 
-mixin NoteWidgetMixin on Widget {
-  get isMarkdown;
-}
-
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
   final NoteContentExts contentExtensions;
-  final List<NoteWidgetMixin> _contents = List.empty(growable: true);
+  final List<NoteContentWidgetMixin> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
@@ -650,7 +612,6 @@ class NoteCell extends ChangeNotifier {
     var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
       codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
-      statementCount: codeCell.statementCount,
       cellType: CellType.parse(codeCell.cellType),
       cell: this,
       specialSources: codeCell.specialNodes
@@ -663,7 +624,7 @@ class NoteCell extends ChangeNotifier {
     );
   }
 
-  List<NoteWidgetMixin> get contents => List.unmodifiable(_contents);
+  List<NoteContentWidgetMixin> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -685,7 +646,7 @@ class NoteCell extends ChangeNotifier {
         object, NoteContentArg(cell: this, outline: outline)));
   }
 
-  void _add(NoteWidgetMixin content) {
+  void _add(NoteContentWidgetMixin content) {
     _contents.add(content);
     notifyListeners();
   }

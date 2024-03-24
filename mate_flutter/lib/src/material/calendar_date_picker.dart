@@ -12,12 +12,12 @@ import 'package:flutter/gestures.dart' as _i8;
 
 /// class CalendarDatePicker extends StatefulWidget
 class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
-  /// CalendarDatePicker CalendarDatePicker({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, required void Function(DateTime) onDateChanged, void Function(DateTime)? onDisplayedMonthChanged, DatePickerMode initialCalendarMode = DatePickerMode.day, bool Function(DateTime)? selectableDayPredicate})
+  /// CalendarDatePicker CalendarDatePicker({Key? key, required DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, required void Function(DateTime) onDateChanged, void Function(DateTime)? onDisplayedMonthChanged, DatePickerMode initialCalendarMode = DatePickerMode.day, bool Function(DateTime)? selectableDayPredicate})
   CalendarDatePicker$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {required DateTime initialDate} , default:none
+    /// optionalParameters: {required DateTime? initialDate} , default:none
     required super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
@@ -46,7 +46,7 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'initialDate': _i2.BuilderArg<DateTime>(
+          'initialDate': _i2.BuilderArg<DateTime?>(
             name: 'initialDate',
             init: initialDate,
             isNamed: true,
@@ -110,7 +110,7 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
 
 /// class YearPicker extends StatefulWidget
 class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
-  /// YearPicker YearPicker({Key? key, DateTime? currentDate, required DateTime firstDate, required DateTime lastDate, DateTime? initialDate, required DateTime selectedDate, required void Function(DateTime) onChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
+  /// YearPicker YearPicker({Key? key, DateTime? currentDate, required DateTime firstDate, required DateTime lastDate, DateTime? initialDate, required DateTime? selectedDate, required void Function(DateTime) onChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   YearPicker$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -124,10 +124,7 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
     /// optionalParameters: {required DateTime lastDate} , default:none
     required super.lastDate,
 
-    /// optionalParameters: {DateTime? initialDate} , default:none
-    super.initialDate,
-
-    /// optionalParameters: {required DateTime selectedDate} , default:none
+    /// optionalParameters: {required DateTime? selectedDate} , default:none
     required super.selectedDate,
 
     /// optionalParameters: {required void Function(DateTime) onChanged} , default:none
@@ -156,12 +153,7 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
             init: lastDate,
             isNamed: true,
           ),
-          'initialDate': _i2.BuilderArg<DateTime?>(
-            name: 'initialDate',
-            init: initialDate,
-            isNamed: true,
-          ),
-          'selectedDate': _i2.BuilderArg<DateTime>(
+          'selectedDate': _i2.BuilderArg<DateTime?>(
             name: 'selectedDate',
             init: selectedDate,
             isNamed: true,
@@ -186,7 +178,6 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
           currentDate: p.get('currentDate').build(),
           firstDate: p.get('firstDate').build(),
           lastDate: p.get('lastDate').build(),
-          initialDate: p.get('initialDate').build(),
           selectedDate: p.get('selectedDate').build(),
           onChanged: p.get('onChanged').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),

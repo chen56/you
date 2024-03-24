@@ -7,6 +7,40 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i5;
 
+/// class InspectorReferenceData
+class InspectorReferenceData$Mate extends _i1.InspectorReferenceData with _i2.Mate {
+  /// InspectorReferenceData InspectorReferenceData(Object object, String id)
+  InspectorReferenceData$Mate(
+    /// requiredParameters: Object object
+    super.object,
+
+    /// requiredParameters: String id
+    super.id,
+  )   : mateParams = {
+          'object': _i2.BuilderArg<Object>(
+            name: 'object',
+            init: object,
+            isNamed: false,
+          ),
+          'id': _i2.BuilderArg<String>(
+            name: 'id',
+            init: id,
+            isNamed: false,
+          ),
+        },
+        super() {
+    mateBuilderName = 'InspectorReferenceData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => InspectorReferenceData$Mate(
+          p.get('object').value,
+          p.get('id').value,
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class WidgetInspector extends StatefulWidget
 class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
   /// WidgetInspector WidgetInspector({Key? key, required Widget child, required Widget Function(BuildContext, void Function())? selectButtonBuilder})

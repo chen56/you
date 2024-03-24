@@ -9,12 +9,12 @@ import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class DesktopTextSelectionToolbarButton extends StatelessWidget
 class DesktopTextSelectionToolbarButton$Mate extends _i1.DesktopTextSelectionToolbarButton with _i2.Mate {
-  /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
+  /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function()? onPressed, required Widget child})
   DesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {required void Function() onPressed} , default:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required super.onPressed,
 
     /// optionalParameters: {required Widget child} , default:none
@@ -25,7 +25,7 @@ class DesktopTextSelectionToolbarButton$Mate extends _i1.DesktopTextSelectionToo
             init: key,
             isNamed: true,
           ),
-          'onPressed': _i2.BuilderArg<_i4.VoidCallback>(
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
             name: 'onPressed',
             init: onPressed,
             isNamed: true,
@@ -46,7 +46,7 @@ class DesktopTextSelectionToolbarButton$Mate extends _i1.DesktopTextSelectionToo
         );
   }
 
-  /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
+  /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function()? onPressed, required String text})
   DesktopTextSelectionToolbarButton$Mate.text({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -54,7 +54,7 @@ class DesktopTextSelectionToolbarButton$Mate extends _i1.DesktopTextSelectionToo
     /// optionalParameters: {required BuildContext context} , default:none
     required super.context,
 
-    /// optionalParameters: {required void Function() onPressed} , default:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required super.onPressed,
 
     /// optionalParameters: {required String text} , default:none
@@ -70,7 +70,7 @@ class DesktopTextSelectionToolbarButton$Mate extends _i1.DesktopTextSelectionToo
             init: context,
             isNamed: true,
           ),
-          'onPressed': _i2.BuilderArg<_i4.VoidCallback>(
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
             name: 'onPressed',
             init: onPressed,
             isNamed: true,

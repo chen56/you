@@ -8,6 +8,58 @@ import 'package:flutter/src/rendering/viewport_offset.dart' as _i4;
 import 'package:flutter/src/gestures/hit_test.dart' as _i5;
 import 'package:flutter/src/rendering/box.dart' as _i6;
 
+/// class SliverLayoutDimensions
+class SliverLayoutDimensions$Mate extends _i1.SliverLayoutDimensions with _i2.Mate {
+  /// SliverLayoutDimensions SliverLayoutDimensions({required double scrollOffset, required double precedingScrollExtent, required double viewportMainAxisExtent, required double crossAxisExtent})
+  SliverLayoutDimensions$Mate({
+    /// optionalParameters: {required double scrollOffset} , default:none
+    required super.scrollOffset,
+
+    /// optionalParameters: {required double precedingScrollExtent} , default:none
+    required super.precedingScrollExtent,
+
+    /// optionalParameters: {required double viewportMainAxisExtent} , default:none
+    required super.viewportMainAxisExtent,
+
+    /// optionalParameters: {required double crossAxisExtent} , default:none
+    required super.crossAxisExtent,
+  })  : mateParams = {
+          'scrollOffset': _i2.BuilderArg<double>(
+            name: 'scrollOffset',
+            init: scrollOffset,
+            isNamed: true,
+          ),
+          'precedingScrollExtent': _i2.BuilderArg<double>(
+            name: 'precedingScrollExtent',
+            init: precedingScrollExtent,
+            isNamed: true,
+          ),
+          'viewportMainAxisExtent': _i2.BuilderArg<double>(
+            name: 'viewportMainAxisExtent',
+            init: viewportMainAxisExtent,
+            isNamed: true,
+          ),
+          'crossAxisExtent': _i2.BuilderArg<double>(
+            name: 'crossAxisExtent',
+            init: crossAxisExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverLayoutDimensions';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SliverLayoutDimensions$Mate(
+          scrollOffset: p.get('scrollOffset').build(),
+          precedingScrollExtent: p.get('precedingScrollExtent').build(),
+          viewportMainAxisExtent: p.get('viewportMainAxisExtent').build(),
+          crossAxisExtent: p.get('crossAxisExtent').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
 /// class SliverConstraints extends Constraints
 class SliverConstraints$Mate extends _i1.SliverConstraints with _i2.Mate {
   /// SliverConstraints SliverConstraints({required AxisDirection axisDirection, required GrowthDirection growthDirection, required ScrollDirection userScrollDirection, required double scrollOffset, required double precedingScrollExtent, required double overlap, required double remainingPaintExtent, required double crossAxisExtent, required AxisDirection crossAxisDirection, required double viewportMainAxisExtent, required double remainingCacheExtent, required double cacheOrigin})
@@ -134,7 +186,7 @@ class SliverConstraints$Mate extends _i1.SliverConstraints with _i2.Mate {
 
 /// class SliverGeometry with Diagnosticable
 class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
-  /// SliverGeometry SliverGeometry({double scrollExtent = 0.0, double paintExtent = 0.0, double paintOrigin = 0.0, double? layoutExtent, double maxPaintExtent = 0.0, double maxScrollObstructionExtent = 0.0, double? hitTestExtent, bool? visible, bool hasVisualOverflow = false, double? scrollOffsetCorrection, double? cacheExtent})
+  /// SliverGeometry SliverGeometry({double scrollExtent = 0.0, double paintExtent = 0.0, double paintOrigin = 0.0, double? layoutExtent, double maxPaintExtent = 0.0, double maxScrollObstructionExtent = 0.0, double? crossAxisExtent, double? hitTestExtent, bool? visible, bool hasVisualOverflow = false, double? scrollOffsetCorrection, double? cacheExtent})
   SliverGeometry$Mate({
     /// optionalParameters: {double scrollExtent = 0.0} , default:processed=DoubleLiteralImpl
     super.scrollExtent,
@@ -153,6 +205,9 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
 
     /// optionalParameters: {double maxScrollObstructionExtent = 0.0} , default:processed=DoubleLiteralImpl
     super.maxScrollObstructionExtent,
+
+    /// optionalParameters: {double? crossAxisExtent} , default:none
+    super.crossAxisExtent,
 
     /// optionalParameters: {double? hitTestExtent} , default:none
     super.hitTestExtent,
@@ -204,6 +259,11 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
+          'crossAxisExtent': _i2.BuilderArg<double?>(
+            name: 'crossAxisExtent',
+            init: crossAxisExtent,
+            isNamed: true,
+          ),
           'hitTestExtent': _i2.BuilderArg<double?>(
             name: 'hitTestExtent',
             init: hitTestExtent,
@@ -241,6 +301,7 @@ class SliverGeometry$Mate extends _i1.SliverGeometry with _i2.Mate {
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
           maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
+          crossAxisExtent: p.get('crossAxisExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),

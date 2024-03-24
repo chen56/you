@@ -100,7 +100,7 @@ class FlexibleSpaceBar$Mate extends _i1.FlexibleSpaceBar with _i2.Mate {
 
 /// class FlexibleSpaceBarSettings extends InheritedWidget
 class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i2.Mate {
-  /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
+  /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder, bool? hasLeading})
   FlexibleSpaceBarSettings$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -122,6 +122,9 @@ class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i
 
     /// optionalParameters: {bool? isScrolledUnder} , default:none
     super.isScrolledUnder,
+
+    /// optionalParameters: {bool? hasLeading} , default:none
+    super.hasLeading,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -158,6 +161,11 @@ class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i
             init: isScrolledUnder,
             isNamed: true,
           ),
+          'hasLeading': _i2.BuilderArg<bool?>(
+            name: 'hasLeading',
+            init: hasLeading,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'FlexibleSpaceBarSettings';
@@ -170,6 +178,7 @@ class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i
           currentExtent: p.get('currentExtent').build(),
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
+          hasLeading: p.get('hasLeading').build(),
         );
   }
 

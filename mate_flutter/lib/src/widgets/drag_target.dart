@@ -485,7 +485,7 @@ class DragTargetDetails$Mate<T> extends _i1.DragTargetDetails<T> with _i2.Mate {
 
 /// class DragTarget<T extends Object> extends StatefulWidget
 class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate {
-  /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
+  /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, bool Function(DragTargetDetails<T>)? onWillAcceptWithDetails, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
   DragTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -495,6 +495,9 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
 
     /// optionalParameters: {bool Function(T?)? onWillAccept} , default:none
     super.onWillAccept,
+
+    /// optionalParameters: {bool Function(DragTargetDetails<T>)? onWillAcceptWithDetails} , default:none
+    super.onWillAcceptWithDetails,
 
     /// optionalParameters: {void Function(T)? onAccept} , default:none
     super.onAccept,
@@ -524,6 +527,11 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
           'onWillAccept': _i2.BuilderArg<_i1.DragTargetWillAccept<T>?>(
             name: 'onWillAccept',
             init: onWillAccept,
+            isNamed: true,
+          ),
+          'onWillAcceptWithDetails': _i2.BuilderArg<_i1.DragTargetWillAcceptWithDetails<T>?>(
+            name: 'onWillAcceptWithDetails',
+            init: onWillAcceptWithDetails,
             isNamed: true,
           ),
           'onAccept': _i2.BuilderArg<_i1.DragTargetAccept<T>?>(
@@ -560,6 +568,7 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
           key: p.get('key').build(),
           builder: p.get('builder').build(),
           onWillAccept: p.get('onWillAccept').build(),
+          onWillAcceptWithDetails: p.get('onWillAcceptWithDetails').build(),
           onAccept: p.get('onAccept').build(),
           onAcceptWithDetails: p.get('onAcceptWithDetails').build(),
           onLeave: p.get('onLeave').build(),

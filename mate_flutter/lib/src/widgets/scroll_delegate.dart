@@ -4,6 +4,7 @@
 import 'package:flutter/src/widgets/scroll_delegate.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
+import 'package:flutter/src/widgets/two_dimensional_viewport.dart' as _i4;
 
 /// class SliverChildBuilderDelegate extends SliverChildDelegate
 class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate with _i2.Mate {
@@ -229,6 +230,114 @@ class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class TwoDimensionalChildBuilderDelegate extends TwoDimensionalChildDelegate
+class TwoDimensionalChildBuilderDelegate$Mate extends _i1.TwoDimensionalChildBuilderDelegate with _i2.Mate {
+  /// TwoDimensionalChildBuilderDelegate TwoDimensionalChildBuilderDelegate({required Widget? Function(BuildContext, ChildVicinity) builder, int? maxXIndex, int? maxYIndex, bool addRepaintBoundaries = true, bool addAutomaticKeepAlives = true})
+  TwoDimensionalChildBuilderDelegate$Mate({
+    /// optionalParameters: {required Widget? Function(BuildContext, ChildVicinity) builder} , default:none
+    required super.builder,
+
+    /// optionalParameters: {int? maxXIndex} , default:none
+    super.maxXIndex,
+
+    /// optionalParameters: {int? maxYIndex} , default:none
+    super.maxYIndex,
+
+    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
+    super.addRepaintBoundaries,
+
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
+    super.addAutomaticKeepAlives,
+  })  : mateParams = {
+          'builder': _i2.BuilderArg<_i4.TwoDimensionalIndexedWidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'maxXIndex': _i2.BuilderArg<int?>(
+            name: 'maxXIndex',
+            init: maxXIndex,
+            isNamed: true,
+          ),
+          'maxYIndex': _i2.BuilderArg<int?>(
+            name: 'maxYIndex',
+            init: maxYIndex,
+            isNamed: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'TwoDimensionalChildBuilderDelegate';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => TwoDimensionalChildBuilderDelegate$Mate(
+          builder: p.get('builder').build(),
+          maxXIndex: p.get('maxXIndex').build(),
+          maxYIndex: p.get('maxYIndex').build(),
+          addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+          addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class TwoDimensionalChildListDelegate extends TwoDimensionalChildDelegate
+class TwoDimensionalChildListDelegate$Mate extends _i1.TwoDimensionalChildListDelegate with _i2.Mate {
+  /// TwoDimensionalChildListDelegate TwoDimensionalChildListDelegate({bool addRepaintBoundaries = true, bool addAutomaticKeepAlives = true, required List<List<Widget>> children})
+  TwoDimensionalChildListDelegate$Mate({
+    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
+    super.addRepaintBoundaries,
+
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
+    super.addAutomaticKeepAlives,
+
+    /// optionalParameters: {required List<List<Widget>> children} , default:none
+    required super.children,
+  })  : mateParams = {
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'children': _i2.BuilderArg<List<List<_i3.Widget>>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'TwoDimensionalChildListDelegate';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => TwoDimensionalChildListDelegate$Mate(
+          addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+          addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+          children: p.get('children').build(),
         );
   }
 

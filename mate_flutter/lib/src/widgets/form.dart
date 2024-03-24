@@ -5,12 +5,12 @@ import 'package:flutter/src/widgets/form.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
-import 'package:flutter/src/widgets/navigator.dart' as _i5;
+import 'package:flutter/src/widgets/routes.dart' as _i5;
 import 'dart:ui' as _i6;
 
 /// class Form extends StatefulWidget
 class Form$Mate extends _i1.Form with _i2.Mate {
-  /// Form Form({Key? key, required Widget child, Future<bool> Function()? onWillPop, void Function()? onChanged, AutovalidateMode? autovalidateMode})
+  /// Form Form({Key? key, required Widget child, bool? canPop, void Function(bool)? onPopInvoked, Future<bool> Function()? onWillPop, void Function()? onChanged, AutovalidateMode? autovalidateMode})
   Form$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -18,8 +18,11 @@ class Form$Mate extends _i1.Form with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
 
-    /// optionalParameters: {Future<bool> Function()? onWillPop} , default:none
-    super.onWillPop,
+    /// optionalParameters: {bool? canPop} , default:none
+    super.canPop,
+
+    /// optionalParameters: {void Function(bool)? onPopInvoked} , default:none
+    super.onPopInvoked,
 
     /// optionalParameters: {void Function()? onChanged} , default:none
     super.onChanged,
@@ -37,9 +40,14 @@ class Form$Mate extends _i1.Form with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'onWillPop': _i2.BuilderArg<_i5.WillPopCallback?>(
-            name: 'onWillPop',
-            init: onWillPop,
+          'canPop': _i2.BuilderArg<bool?>(
+            name: 'canPop',
+            init: canPop,
+            isNamed: true,
+          ),
+          'onPopInvoked': _i2.BuilderArg<_i5.PopInvokedCallback?>(
+            name: 'onPopInvoked',
+            init: onPopInvoked,
             isNamed: true,
           ),
           'onChanged': _i2.BuilderArg<_i6.VoidCallback?>(
@@ -59,7 +67,8 @@ class Form$Mate extends _i1.Form with _i2.Mate {
     mateBuilder = (p) => Form$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
-          onWillPop: p.get('onWillPop').build(),
+          canPop: p.get('canPop').build(),
+          onPopInvoked: p.get('onPopInvoked').build(),
           onChanged: p.get('onChanged').build(),
           autovalidateMode: p.get('autovalidateMode').build(),
         );

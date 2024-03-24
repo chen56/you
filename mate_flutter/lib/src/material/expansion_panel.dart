@@ -135,7 +135,7 @@ class ExpansionPanelRadio$Mate extends _i1.ExpansionPanelRadio with _i2.Mate {
 
 /// class ExpansionPanelList extends StatefulWidget
 class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
-  /// ExpansionPanelList ExpansionPanelList({Key? key, List<ExpansionPanel> children = const <ExpansionPanel>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
+  /// ExpansionPanelList ExpansionPanelList({Key? key, List<ExpansionPanel> children = const <ExpansionPanel>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor, double materialGapSize = 16.0})
   ExpansionPanelList$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -160,6 +160,9 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
 
     /// optionalParameters: {Color? expandIconColor} , default:none
     super.expandIconColor,
+
+    /// optionalParameters: {double materialGapSize = 16.0} , default:processed=DoubleLiteralImpl
+    super.materialGapSize,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i5.Key?>(
             name: 'key',
@@ -202,6 +205,12 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
             init: expandIconColor,
             isNamed: true,
           ),
+          'materialGapSize': _i2.BuilderArg<double>(
+            name: 'materialGapSize',
+            init: materialGapSize,
+            isNamed: true,
+            defaultValue: 16.0,
+          ),
         },
         super() {
     mateBuilderName = 'ExpansionPanelList';
@@ -215,10 +224,11 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
           dividerColor: p.get('dividerColor').build(),
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
+          materialGapSize: p.get('materialGapSize').build(),
         );
   }
 
-  /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
+  /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor, double materialGapSize = 16.0})
   ExpansionPanelList$Mate.radio({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -246,6 +256,9 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
 
     /// optionalParameters: {Color? expandIconColor} , default:none
     super.expandIconColor,
+
+    /// optionalParameters: {double materialGapSize = 16.0} , default:processed=DoubleLiteralImpl
+    super.materialGapSize,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i5.Key?>(
             name: 'key',
@@ -293,6 +306,12 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
             init: expandIconColor,
             isNamed: true,
           ),
+          'materialGapSize': _i2.BuilderArg<double>(
+            name: 'materialGapSize',
+            init: materialGapSize,
+            isNamed: true,
+            defaultValue: 16.0,
+          ),
         },
         super.radio() {
     mateBuilderName = 'ExpansionPanelList.radio';
@@ -307,6 +326,7 @@ class ExpansionPanelList$Mate extends _i1.ExpansionPanelList with _i2.Mate {
           dividerColor: p.get('dividerColor').build(),
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
+          materialGapSize: p.get('materialGapSize').build(),
         );
   }
 

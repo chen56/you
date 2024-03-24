@@ -211,7 +211,7 @@ class NavigationRail$Mate extends _i1.NavigationRail with _i2.Mate {
 
 /// class NavigationRailDestination
 class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with _i2.Mate {
-  /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
+  /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding, bool disabled = false})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , default:none
     required super.icon,
@@ -230,6 +230,9 @@ class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with 
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     super.padding,
+
+    /// optionalParameters: {bool disabled = false} , default:processed=BooleanLiteralImpl
+    super.disabled,
   })  : mateParams = {
           'icon': _i2.BuilderArg<_i5.Widget>(
             name: 'icon',
@@ -261,6 +264,12 @@ class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with 
             init: padding,
             isNamed: true,
           ),
+          'disabled': _i2.BuilderArg<bool>(
+            name: 'disabled',
+            init: disabled,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationRailDestination';
@@ -272,6 +281,7 @@ class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with 
           indicatorShape: p.get('indicatorShape').build(),
           label: p.get('label').build(),
           padding: p.get('padding').build(),
+          disabled: p.get('disabled').build(),
         );
   }
 

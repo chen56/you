@@ -7,9 +7,11 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
 import 'package:flutter/src/foundation/key.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
-import 'package:flutter/src/foundation/basic_types.dart' as _i8;
-import 'package:flutter/src/painting/edge_insets.dart' as _i9;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i7;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i8;
+import 'package:flutter/src/foundation/basic_types.dart' as _i9;
+import 'package:flutter/src/painting/edge_insets.dart' as _i10;
+import 'package:flutter/src/material/material_state.dart' as _i11;
 
 /// class ControlsDetails
 class ControlsDetails$Mate extends _i1.ControlsDetails with _i2.Mate {
@@ -137,13 +139,16 @@ class Step$Mate extends _i1.Step with _i2.Mate {
 
 /// class Stepper extends StatefulWidget
 class Stepper$Mate extends _i1.Stepper with _i2.Mate {
-  /// Stepper Stepper({Key? key, required List<Step> steps, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin, Widget? Function(int, StepState)? stepIconBuilder})
+  /// Stepper Stepper({Key? key, required List<Step> steps, ScrollController? controller, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin, MaterialStateProperty<Color>? connectorColor, double? connectorThickness, Widget? Function(int, StepState)? stepIconBuilder})
   Stepper$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
     /// optionalParameters: {required List<Step> steps} , default:none
     required super.steps,
+
+    /// optionalParameters: {ScrollController? controller} , default:none
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
     super.physics,
@@ -172,6 +177,12 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     super.margin,
 
+    /// optionalParameters: {MaterialStateProperty<Color>? connectorColor} , default:none
+    super.connectorColor,
+
+    /// optionalParameters: {double? connectorThickness} , default:none
+    super.connectorThickness,
+
     /// optionalParameters: {Widget? Function(int, StepState)? stepIconBuilder} , default:none
     super.stepIconBuilder,
   })  : mateParams = {
@@ -185,7 +196,12 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             init: steps,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+          'controller': _i2.BuilderArg<_i7.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i8.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -202,7 +218,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             isNamed: true,
             defaultValue: 0,
           ),
-          'onStepTapped': _i2.BuilderArg<_i8.ValueChanged<int>?>(
+          'onStepTapped': _i2.BuilderArg<_i9.ValueChanged<int>?>(
             name: 'onStepTapped',
             init: onStepTapped,
             isNamed: true,
@@ -227,9 +243,19 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             init: elevation,
             isNamed: true,
           ),
-          'margin': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
+          'margin': _i2.BuilderArg<_i10.EdgeInsetsGeometry?>(
             name: 'margin',
             init: margin,
+            isNamed: true,
+          ),
+          'connectorColor': _i2.BuilderArg<_i11.MaterialStateProperty<_i3.Color>?>(
+            name: 'connectorColor',
+            init: connectorColor,
+            isNamed: true,
+          ),
+          'connectorThickness': _i2.BuilderArg<double?>(
+            name: 'connectorThickness',
+            init: connectorThickness,
             isNamed: true,
           ),
           'stepIconBuilder': _i2.BuilderArg<_i1.StepIconBuilder?>(
@@ -244,6 +270,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
     mateBuilder = (p) => Stepper$Mate(
           key: p.get('key').build(),
           steps: p.get('steps').build(),
+          controller: p.get('controller').build(),
           physics: p.get('physics').build(),
           type: p.get('type').build(),
           currentStep: p.get('currentStep').build(),
@@ -253,6 +280,8 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
           controlsBuilder: p.get('controlsBuilder').build(),
           elevation: p.get('elevation').build(),
           margin: p.get('margin').build(),
+          connectorColor: p.get('connectorColor').build(),
+          connectorThickness: p.get('connectorThickness').build(),
           stepIconBuilder: p.get('stepIconBuilder').build(),
         );
   }

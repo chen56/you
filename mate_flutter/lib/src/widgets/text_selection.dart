@@ -17,7 +17,7 @@ import 'package:flutter/src/foundation/basic_types.dart' as _i13;
 import 'package:flutter/src/gestures/drag_details.dart' as _i14;
 import 'package:flutter/cupertino.dart' as _i15;
 import 'package:flutter/src/foundation/key.dart' as _i16;
-import 'package:flutter/src/widgets/tap_and_drag_gestures.dart' as _i17;
+import 'package:flutter/src/gestures/tap_and_drag.dart' as _i17;
 import 'package:flutter/src/gestures/force_press.dart' as _i18;
 import 'package:flutter/src/gestures/tap.dart' as _i19;
 import 'package:flutter/src/gestures/long_press.dart' as _i20;
@@ -445,10 +445,16 @@ class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureD
 
 /// class TextSelectionGestureDetector extends StatefulWidget
 class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector with _i2.Mate {
-  /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
+  /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function()? onTapTrackStart, void Function()? onTapTrackReset, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
+
+    /// optionalParameters: {void Function()? onTapTrackStart} , default:none
+    super.onTapTrackStart,
+
+    /// optionalParameters: {void Function()? onTapTrackReset} , default:none
+    super.onTapTrackReset,
 
     /// optionalParameters: {void Function(TapDragDownDetails)? onTapDown} , default:none
     super.onTapDown,
@@ -504,6 +510,16 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
           'key': _i2.BuilderArg<_i16.Key?>(
             name: 'key',
             init: key,
+            isNamed: true,
+          ),
+          'onTapTrackStart': _i2.BuilderArg<_i9.VoidCallback?>(
+            name: 'onTapTrackStart',
+            init: onTapTrackStart,
+            isNamed: true,
+          ),
+          'onTapTrackReset': _i2.BuilderArg<_i9.VoidCallback?>(
+            name: 'onTapTrackReset',
+            init: onTapTrackReset,
             isNamed: true,
           ),
           'onTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
@@ -597,6 +613,8 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionGestureDetector$Mate(
           key: p.get('key').build(),
+          onTapTrackStart: p.get('onTapTrackStart').build(),
+          onTapTrackReset: p.get('onTapTrackReset').build(),
           onTapDown: p.get('onTapDown').build(),
           onForcePressStart: p.get('onForcePressStart').build(),
           onForcePressEnd: p.get('onForcePressEnd').build(),
@@ -640,6 +658,31 @@ class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.
     mateBuilderName = 'ClipboardStatusNotifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class LiveTextInputStatusNotifier extends ValueNotifier<LiveTextInputStatus> with WidgetsBindingObserver
+class LiveTextInputStatusNotifier$Mate extends _i1.LiveTextInputStatusNotifier with _i2.Mate {
+  /// LiveTextInputStatusNotifier LiveTextInputStatusNotifier({LiveTextInputStatus value = LiveTextInputStatus.unknown})
+  LiveTextInputStatusNotifier$Mate(
+      {
+      /// optionalParameters: {LiveTextInputStatus value = LiveTextInputStatus.unknown} , default:processed=PrefixedIdentifierImpl
+      super.value})
+      : mateParams = {
+          'value': _i2.BuilderArg<_i1.LiveTextInputStatus>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+            defaultValue: _i15.LiveTextInputStatus.unknown,
+          )
+        },
+        super() {
+    mateBuilderName = 'LiveTextInputStatusNotifier';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => LiveTextInputStatusNotifier$Mate(value: p.get('value').build());
   }
 
   @override

@@ -10,7 +10,8 @@ import 'package:flutter/src/painting/text_painter.dart' as _i6;
 import 'package:flutter/cupertino.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
 import 'package:flutter/src/painting/strut_style.dart' as _i9;
-import 'package:flutter/src/painting/inline_span.dart' as _i10;
+import 'package:flutter/src/painting/text_scaler.dart' as _i10;
+import 'package:flutter/src/painting/inline_span.dart' as _i11;
 
 /// class DefaultTextStyle extends InheritedTheme
 class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
@@ -175,7 +176,7 @@ class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with 
 
 /// class Text extends StatelessWidget
 class Text$Mate extends _i1.Text with _i2.Mate {
-  /// Text Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
+  /// Text Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, TextScaler? textScaler, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate(
     /// requiredParameters: String data
     super.data, {
@@ -203,8 +204,8 @@ class Text$Mate extends _i1.Text with _i2.Mate {
     /// optionalParameters: {TextOverflow? overflow} , default:none
     super.overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , default:none
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler? textScaler} , default:none
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
@@ -266,9 +267,9 @@ class Text$Mate extends _i1.Text with _i2.Mate {
             init: overflow,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double?>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i10.TextScaler?>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
           ),
           'maxLines': _i2.BuilderArg<int?>(
@@ -310,7 +311,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
           locale: p.get('locale').build(),
           softWrap: p.get('softWrap').build(),
           overflow: p.get('overflow').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           textWidthBasis: p.get('textWidthBasis').build(),
@@ -319,7 +320,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
         );
   }
 
-  /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
+  /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, TextScaler? textScaler, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate.rich(
     /// requiredParameters: InlineSpan textSpan
     super.textSpan, {
@@ -347,8 +348,8 @@ class Text$Mate extends _i1.Text with _i2.Mate {
     /// optionalParameters: {TextOverflow? overflow} , default:none
     super.overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , default:none
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler? textScaler} , default:none
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
@@ -365,7 +366,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
     /// optionalParameters: {Color? selectionColor} , default:none
     super.selectionColor,
   })  : mateParams = {
-          'textSpan': _i2.BuilderArg<_i10.InlineSpan>(
+          'textSpan': _i2.BuilderArg<_i11.InlineSpan>(
             name: 'textSpan',
             init: textSpan,
             isNamed: false,
@@ -410,9 +411,9 @@ class Text$Mate extends _i1.Text with _i2.Mate {
             init: overflow,
             isNamed: true,
           ),
-          'textScaleFactor': _i2.BuilderArg<double?>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i10.TextScaler?>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
           ),
           'maxLines': _i2.BuilderArg<int?>(
@@ -454,7 +455,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
           locale: p.get('locale').build(),
           softWrap: p.get('softWrap').build(),
           overflow: p.get('overflow').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
           textWidthBasis: p.get('textWidthBasis').build(),

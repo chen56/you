@@ -5,11 +5,12 @@ import 'package:flutter/src/material/chip_theme.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
-import 'dart:ui' as _i5;
-import 'package:flutter/src/painting/edge_insets.dart' as _i6;
-import 'package:flutter/src/painting/borders.dart' as _i7;
-import 'package:flutter/src/painting/text_style.dart' as _i8;
-import 'package:flutter/src/widgets/icon_theme_data.dart' as _i9;
+import 'package:flutter/src/material/material_state.dart' as _i5;
+import 'dart:ui' as _i6;
+import 'package:flutter/src/painting/edge_insets.dart' as _i7;
+import 'package:flutter/src/painting/borders.dart' as _i8;
+import 'package:flutter/src/painting/text_style.dart' as _i9;
+import 'package:flutter/src/widgets/icon_theme_data.dart' as _i10;
 
 /// class ChipTheme extends InheritedTheme
 class ChipTheme$Mate extends _i1.ChipTheme with _i2.Mate {
@@ -56,8 +57,11 @@ class ChipTheme$Mate extends _i1.ChipTheme with _i2.Mate {
 
 /// class ChipThemeData with Diagnosticable
 class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
-  /// ChipThemeData ChipThemeData({Color? backgroundColor, Color? deleteIconColor, Color? disabledColor, Color? selectedColor, Color? secondarySelectedColor, Color? shadowColor, Color? surfaceTintColor, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, EdgeInsetsGeometry? labelPadding, EdgeInsetsGeometry? padding, BorderSide? side, OutlinedBorder? shape, TextStyle? labelStyle, TextStyle? secondaryLabelStyle, Brightness? brightness, double? elevation, double? pressElevation, IconThemeData? iconTheme})
+  /// ChipThemeData ChipThemeData({MaterialStateProperty<Color?>? color, Color? backgroundColor, Color? deleteIconColor, Color? disabledColor, Color? selectedColor, Color? secondarySelectedColor, Color? shadowColor, Color? surfaceTintColor, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, EdgeInsetsGeometry? labelPadding, EdgeInsetsGeometry? padding, BorderSide? side, OutlinedBorder? shape, TextStyle? labelStyle, TextStyle? secondaryLabelStyle, Brightness? brightness, double? elevation, double? pressElevation, IconThemeData? iconTheme})
   ChipThemeData$Mate({
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
+    super.color,
+
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
 
@@ -118,42 +122,47 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
     super.iconTheme,
   })  : mateParams = {
-          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+          'color': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
           ),
-          'deleteIconColor': _i2.BuilderArg<_i5.Color?>(
+          'deleteIconColor': _i2.BuilderArg<_i6.Color?>(
             name: 'deleteIconColor',
             init: deleteIconColor,
             isNamed: true,
           ),
-          'disabledColor': _i2.BuilderArg<_i5.Color?>(
+          'disabledColor': _i2.BuilderArg<_i6.Color?>(
             name: 'disabledColor',
             init: disabledColor,
             isNamed: true,
           ),
-          'selectedColor': _i2.BuilderArg<_i5.Color?>(
+          'selectedColor': _i2.BuilderArg<_i6.Color?>(
             name: 'selectedColor',
             init: selectedColor,
             isNamed: true,
           ),
-          'secondarySelectedColor': _i2.BuilderArg<_i5.Color?>(
+          'secondarySelectedColor': _i2.BuilderArg<_i6.Color?>(
             name: 'secondarySelectedColor',
             init: secondarySelectedColor,
             isNamed: true,
           ),
-          'shadowColor': _i2.BuilderArg<_i5.Color?>(
+          'shadowColor': _i2.BuilderArg<_i6.Color?>(
             name: 'shadowColor',
             init: shadowColor,
             isNamed: true,
           ),
-          'surfaceTintColor': _i2.BuilderArg<_i5.Color?>(
+          'surfaceTintColor': _i2.BuilderArg<_i6.Color?>(
             name: 'surfaceTintColor',
             init: surfaceTintColor,
             isNamed: true,
           ),
-          'selectedShadowColor': _i2.BuilderArg<_i5.Color?>(
+          'selectedShadowColor': _i2.BuilderArg<_i6.Color?>(
             name: 'selectedShadowColor',
             init: selectedShadowColor,
             isNamed: true,
@@ -163,42 +172,42 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
             init: showCheckmark,
             isNamed: true,
           ),
-          'checkmarkColor': _i2.BuilderArg<_i5.Color?>(
+          'checkmarkColor': _i2.BuilderArg<_i6.Color?>(
             name: 'checkmarkColor',
             init: checkmarkColor,
             isNamed: true,
           ),
-          'labelPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+          'labelPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
             name: 'labelPadding',
             init: labelPadding,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'side': _i2.BuilderArg<_i7.BorderSide?>(
+          'side': _i2.BuilderArg<_i8.BorderSide?>(
             name: 'side',
             init: side,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
+          'shape': _i2.BuilderArg<_i8.OutlinedBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'labelStyle': _i2.BuilderArg<_i8.TextStyle?>(
+          'labelStyle': _i2.BuilderArg<_i9.TextStyle?>(
             name: 'labelStyle',
             init: labelStyle,
             isNamed: true,
           ),
-          'secondaryLabelStyle': _i2.BuilderArg<_i8.TextStyle?>(
+          'secondaryLabelStyle': _i2.BuilderArg<_i9.TextStyle?>(
             name: 'secondaryLabelStyle',
             init: secondaryLabelStyle,
             isNamed: true,
           ),
-          'brightness': _i2.BuilderArg<_i5.Brightness?>(
+          'brightness': _i2.BuilderArg<_i6.Brightness?>(
             name: 'brightness',
             init: brightness,
             isNamed: true,
@@ -213,7 +222,7 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
             init: pressElevation,
             isNamed: true,
           ),
-          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+          'iconTheme': _i2.BuilderArg<_i10.IconThemeData?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
@@ -223,6 +232,7 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
     mateBuilderName = 'ChipThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChipThemeData$Mate(
+          color: p.get('color').build(),
           backgroundColor: p.get('backgroundColor').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
           disabledColor: p.get('disabledColor').build(),

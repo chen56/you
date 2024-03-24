@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note/note_page.dart';
+import 'package:note/note.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/src/note_core.dart';
@@ -11,7 +11,7 @@ class ObjectContentExt extends NoteContentExt {
   ObjectContentExt();
 
   @override
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
     return ObjectContentWidget(content: ObjectContent(data));
   }
 }
@@ -27,7 +27,7 @@ class ObjectContent extends NoteContent {
   }
 }
 
-class ObjectContentWidget extends StatelessWidget with NoteWidgetMixin {
+class ObjectContentWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectContent content;
 
   const ObjectContentWidget({super.key, required this.content});
@@ -45,7 +45,7 @@ class WidgetContentExtension extends NoteContentExt {
   WidgetContentExtension();
 
   @override
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
     if (data is Widget) {
       return WidgetContentWidget(content: WidgetContent(data));
     } else if (data is WidgetContent) {
@@ -55,7 +55,7 @@ class WidgetContentExtension extends NoteContentExt {
   }
 }
 
-class WidgetContentWidget extends StatelessWidget with NoteWidgetMixin {
+class WidgetContentWidget extends StatelessWidget with NoteContentWidgetMixin {
   final WidgetContent content;
 
   const WidgetContentWidget({super.key, required this.content});
@@ -84,7 +84,7 @@ class MarkdownContentExtension extends NoteContentExt {
   MarkdownContentExtension();
 
   @override
-  NoteWidgetMixin? create(Object? data, NoteContentArg arg) {
+  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
     if (data is MarkdownContent) {
       return MarkdownContentWidget(outline: arg.outline, content: data);
     } else if (data is WidgetContent) {
@@ -111,7 +111,8 @@ class MarkdownContent extends NoteContent {
   }
 }
 
-class MarkdownContentWidget extends StatelessWidget with NoteWidgetMixin {
+class MarkdownContentWidget extends StatelessWidget
+    with NoteContentWidgetMixin {
   final Outline outline;
   final MarkdownContent content;
   final ScrollController controller = ScrollController();

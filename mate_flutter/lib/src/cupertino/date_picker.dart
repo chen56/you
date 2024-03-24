@@ -12,7 +12,7 @@ import 'package:flutter/src/painting/alignment.dart' as _i8;
 
 /// class CupertinoDatePicker extends StatefulWidget
 class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
-  /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false})
+  /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false, double itemExtent = _kItemExtent})
   CupertinoDatePicker$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -52,6 +52,9 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
 
     /// optionalParameters: {bool showDayOfWeek = false} , default:processed=BooleanLiteralImpl
     super.showDayOfWeek,
+
+    /// optionalParameters: {double itemExtent = _kItemExtent} , default:unprocessed=SimpleIdentifierImpl
+    super.itemExtent,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -123,6 +126,11 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'itemExtent': _i2.BuilderArg<double>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'CupertinoDatePicker';
@@ -141,6 +149,7 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
           dateOrder: p.get('dateOrder').build(),
           backgroundColor: p.get('backgroundColor').build(),
           showDayOfWeek: p.get('showDayOfWeek').build(),
+          itemExtent: p.get('itemExtent').build(),
         );
   }
 
@@ -150,7 +159,7 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
 
 /// class CupertinoTimerPicker extends StatefulWidget
 class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
-  /// CupertinoTimerPicker CupertinoTimerPicker({Key? key, CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms, Duration initialTimerDuration = Duration.zero, int minuteInterval = 1, int secondInterval = 1, AlignmentGeometry alignment = Alignment.center, Color? backgroundColor, required void Function(Duration) onTimerDurationChanged})
+  /// CupertinoTimerPicker CupertinoTimerPicker({Key? key, CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms, Duration initialTimerDuration = Duration.zero, int minuteInterval = 1, int secondInterval = 1, AlignmentGeometry alignment = Alignment.center, Color? backgroundColor, double itemExtent = _kItemExtent, required void Function(Duration) onTimerDurationChanged})
   CupertinoTimerPicker$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -172,6 +181,9 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
 
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
+
+    /// optionalParameters: {double itemExtent = _kItemExtent} , default:unprocessed=SimpleIdentifierImpl
+    super.itemExtent,
 
     /// optionalParameters: {required void Function(Duration) onTimerDurationChanged} , default:none
     required super.onTimerDurationChanged,
@@ -216,6 +228,11 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
             init: backgroundColor,
             isNamed: true,
           ),
+          'itemExtent': _i2.BuilderArg<double>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
           'onTimerDurationChanged': _i2.BuilderArg<_i5.ValueChanged<Duration>>(
             name: 'onTimerDurationChanged',
             init: onTimerDurationChanged,
@@ -233,6 +250,7 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
           secondInterval: p.get('secondInterval').build(),
           alignment: p.get('alignment').build(),
           backgroundColor: p.get('backgroundColor').build(),
+          itemExtent: p.get('itemExtent').build(),
           onTimerDurationChanged: p.get('onTimerDurationChanged').build(),
         );
   }

@@ -93,7 +93,7 @@ class Tab$Mate extends _i1.Tab with _i2.Mate {
 
 /// class TabBar extends StatefulWidget implements PreferredSizeWidget
 class TabBar$Mate extends _i1.TabBar with _i2.Mate {
-  /// TabBar TabBar({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
+  /// TabBar TabBar({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, double? dividerHeight, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius, TabAlignment? tabAlignment})
   TabBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -131,6 +131,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {Color? dividerColor} , default:none
     super.dividerColor,
 
+    /// optionalParameters: {double? dividerHeight} , default:none
+    super.dividerHeight,
+
     /// optionalParameters: {Color? labelColor} , default:none
     super.labelColor,
 
@@ -169,6 +172,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
 
     /// optionalParameters: {BorderRadius? splashBorderRadius} , default:none
     super.splashBorderRadius,
+
+    /// optionalParameters: {TabAlignment? tabAlignment} , default:none
+    super.tabAlignment,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -232,6 +238,11 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           'dividerColor': _i2.BuilderArg<_i7.Color?>(
             name: 'dividerColor',
             init: dividerColor,
+            isNamed: true,
+          ),
+          'dividerHeight': _i2.BuilderArg<double?>(
+            name: 'dividerHeight',
+            init: dividerHeight,
             isNamed: true,
           ),
           'labelColor': _i2.BuilderArg<_i7.Color?>(
@@ -300,6 +311,11 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: splashBorderRadius,
             isNamed: true,
           ),
+          'tabAlignment': _i2.BuilderArg<_i1.TabAlignment?>(
+            name: 'tabAlignment',
+            init: tabAlignment,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'TabBar';
@@ -317,6 +333,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           indicator: p.get('indicator').build(),
           indicatorSize: p.get('indicatorSize').build(),
           dividerColor: p.get('dividerColor').build(),
+          dividerHeight: p.get('dividerHeight').build(),
           labelColor: p.get('labelColor').build(),
           labelStyle: p.get('labelStyle').build(),
           labelPadding: p.get('labelPadding').build(),
@@ -330,10 +347,11 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           physics: p.get('physics').build(),
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
+          tabAlignment: p.get('tabAlignment').build(),
         );
   }
 
-  /// TabBar TabBar.secondary({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
+  /// TabBar TabBar.secondary({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, double? dividerHeight, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius, TabAlignment? tabAlignment})
   TabBar$Mate.secondary({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -371,6 +389,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {Color? dividerColor} , default:none
     super.dividerColor,
 
+    /// optionalParameters: {double? dividerHeight} , default:none
+    super.dividerHeight,
+
     /// optionalParameters: {Color? labelColor} , default:none
     super.labelColor,
 
@@ -409,6 +430,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
 
     /// optionalParameters: {BorderRadius? splashBorderRadius} , default:none
     super.splashBorderRadius,
+
+    /// optionalParameters: {TabAlignment? tabAlignment} , default:none
+    super.tabAlignment,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -472,6 +496,11 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           'dividerColor': _i2.BuilderArg<_i7.Color?>(
             name: 'dividerColor',
             init: dividerColor,
+            isNamed: true,
+          ),
+          'dividerHeight': _i2.BuilderArg<double?>(
+            name: 'dividerHeight',
+            init: dividerHeight,
             isNamed: true,
           ),
           'labelColor': _i2.BuilderArg<_i7.Color?>(
@@ -540,6 +569,11 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: splashBorderRadius,
             isNamed: true,
           ),
+          'tabAlignment': _i2.BuilderArg<_i1.TabAlignment?>(
+            name: 'tabAlignment',
+            init: tabAlignment,
+            isNamed: true,
+          ),
         },
         super.secondary() {
     mateBuilderName = 'TabBar.secondary';
@@ -557,6 +591,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           indicator: p.get('indicator').build(),
           indicatorSize: p.get('indicatorSize').build(),
           dividerColor: p.get('dividerColor').build(),
+          dividerHeight: p.get('dividerHeight').build(),
           labelColor: p.get('labelColor').build(),
           labelStyle: p.get('labelStyle').build(),
           labelPadding: p.get('labelPadding').build(),
@@ -570,6 +605,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           physics: p.get('physics').build(),
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
+          tabAlignment: p.get('tabAlignment').build(),
         );
   }
 

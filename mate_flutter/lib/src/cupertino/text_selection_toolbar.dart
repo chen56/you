@@ -9,7 +9,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class CupertinoTextSelectionToolbar extends StatelessWidget
 class CupertinoTextSelectionToolbar$Mate extends _i1.CupertinoTextSelectionToolbar with _i2.Mate {
-  /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder})
+  /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, Offset, Widget) toolbarBuilder = _defaultToolbarBuilder})
   CupertinoTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -23,7 +23,7 @@ class CupertinoTextSelectionToolbar$Mate extends _i1.CupertinoTextSelectionToolb
     /// optionalParameters: {required List<Widget> children} , default:none
     required super.children,
 
-    /// optionalParameters: {Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
+    /// optionalParameters: {Widget Function(BuildContext, Offset, Offset, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
     super.toolbarBuilder,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(

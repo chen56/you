@@ -12,7 +12,7 @@ import 'package:flutter/src/painting/box_decoration.dart' as _i8;
 
 /// class CupertinoListSection extends StatelessWidget
 class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
-  /// CupertinoListSection CupertinoListSection({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kDefaultRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none, double dividerMargin = _kBaseDividerMargin, double? additionalDividerMargin, double? topMargin = _kMarginTop, bool hasLeading = true})
+  /// CupertinoListSection CupertinoListSection({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kDefaultRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none, double dividerMargin = _kBaseDividerMargin, double? additionalDividerMargin, double? topMargin = _kMarginTop, bool hasLeading = true, Color? separatorColor})
   CupertinoListSection$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -49,6 +49,9 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
 
     /// optionalParameters: {bool hasLeading = true} , default:processed=BooleanLiteralImpl
     super.hasLeading,
+
+    /// optionalParameters: {Color? separatorColor} , default:none
+    super.separatorColor,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -113,6 +116,11 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
+          'separatorColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'separatorColor',
+            init: separatorColor,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'CupertinoListSection';
@@ -130,10 +138,11 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
           additionalDividerMargin: p.get('additionalDividerMargin').build(),
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
+          separatorColor: p.get('separatorColor').build(),
         );
   }
 
-  /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true})
+  /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true, Color? separatorColor})
   CupertinoListSection$Mate.insetGrouped({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -170,6 +179,9 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
 
     /// optionalParameters: {bool hasLeading = true} , default:processed=BooleanLiteralImpl
     super.hasLeading,
+
+    /// optionalParameters: {Color? separatorColor} , default:none
+    super.separatorColor,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -234,6 +246,11 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
+          'separatorColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'separatorColor',
+            init: separatorColor,
+            isNamed: true,
+          ),
         },
         super.insetGrouped() {
     mateBuilderName = 'CupertinoListSection.insetGrouped';
@@ -251,6 +268,7 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
           additionalDividerMargin: p.get('additionalDividerMargin').build(),
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
+          separatorColor: p.get('separatorColor').build(),
         );
   }
 

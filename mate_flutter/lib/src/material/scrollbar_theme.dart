@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i6;
 
 /// class ScrollbarThemeData with Diagnosticable
 class ScrollbarThemeData$Mate extends _i1.ScrollbarThemeData with _i2.Mate {
-  /// ScrollbarThemeData ScrollbarThemeData({MaterialStateProperty<bool?>? thumbVisibility, MaterialStateProperty<double?>? thickness, MaterialStateProperty<bool?>? trackVisibility, Radius? radius, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackBorderColor, double? crossAxisMargin, double? mainAxisMargin, double? minThumbLength, bool? interactive, bool? isAlwaysShown, bool? showTrackOnHover})
+  /// ScrollbarThemeData ScrollbarThemeData({MaterialStateProperty<bool?>? thumbVisibility, MaterialStateProperty<double?>? thickness, MaterialStateProperty<bool?>? trackVisibility, Radius? radius, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackBorderColor, double? crossAxisMargin, double? mainAxisMargin, double? minThumbLength, bool? interactive, bool? showTrackOnHover})
   ScrollbarThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<bool?>? thumbVisibility} , default:none
     super.thumbVisibility,

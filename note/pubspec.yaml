@@ -24,12 +24,15 @@ dependencies:
   stack_trace: ^1.11.0
   glob: ^2.1.1
 
-  file: ^6.1.0
+  file: ^7.0.0
+
+  shared_preferences: ^2.2.2
+
 #  async: ^2.11.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

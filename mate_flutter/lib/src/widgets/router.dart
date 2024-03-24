@@ -10,17 +10,17 @@ import 'dart:async' as _i6;
 
 /// class RouteInformation
 class RouteInformation$Mate extends _i1.RouteInformation with _i2.Mate {
-  /// RouteInformation RouteInformation({String? location, Object? state})
+  /// RouteInformation RouteInformation({String? location, Uri? uri, Object? state})
   RouteInformation$Mate({
-    /// optionalParameters: {String? location} , default:none
-    super.location,
+    /// optionalParameters: {Uri? uri} , default:none
+    super.uri,
 
     /// optionalParameters: {Object? state} , default:none
     super.state,
   })  : mateParams = {
-          'location': _i2.BuilderArg<String?>(
-            name: 'location',
-            init: location,
+          'uri': _i2.BuilderArg<Uri?>(
+            name: 'uri',
+            init: uri,
             isNamed: true,
           ),
           'state': _i2.BuilderArg<Object?>(
@@ -33,7 +33,7 @@ class RouteInformation$Mate extends _i1.RouteInformation with _i2.Mate {
     mateBuilderName = 'RouteInformation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RouteInformation$Mate(
-          location: p.get('location').build(),
+          uri: p.get('uri').build(),
           state: p.get('state').build(),
         );
   }

@@ -159,15 +159,15 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
 
 /// class EdgeDraggingAutoScroller
 class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i2.Mate {
-  /// EdgeDraggingAutoScroller EdgeDraggingAutoScroller(ScrollableState scrollable, {void Function()? onScrollViewScrolled, double velocityScalar = _kDefaultAutoScrollVelocityScalar})
+  /// EdgeDraggingAutoScroller EdgeDraggingAutoScroller(ScrollableState scrollable, {void Function()? onScrollViewScrolled, required double velocityScalar})
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
     super.scrollable, {
     /// optionalParameters: {void Function()? onScrollViewScrolled} , default:none
     super.onScrollViewScrolled,
 
-    /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , default:unprocessed=SimpleIdentifierImpl
-    super.velocityScalar,
+    /// optionalParameters: {required double velocityScalar} , default:none
+    required super.velocityScalar,
   })  : mateParams = {
           'scrollable': _i2.BuilderArg<_i7.ScrollableState>(
             name: 'scrollable',

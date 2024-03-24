@@ -22,7 +22,7 @@ dependencies:
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
 
-  analyzer: ^5.10.0
+  analyzer: ^6.4.1
 
   note:
 
@@ -33,8 +33,8 @@ dependencies:
 
   path: ^1.8.2
   code_builder: ^4.4.0
-  file: ^6.1.4
-  shared_preferences: ^2.1.1
+  file: ^7.0.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
 
@@ -42,8 +42,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
    # 这俩不要貌似也没啥影响
-  flutter_lints: ^2.0.1
-  lints: ^2.0.1
+  flutter_lints: ^3.0.1
+  lints: ^3.0.0
 
   dart_style: ^2.0.0
   glob: ^2.1.1

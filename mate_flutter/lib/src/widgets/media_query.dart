@@ -5,15 +5,16 @@ import 'package:flutter/src/widgets/media_query.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/animation.dart' as _i4;
-import 'package:flutter/src/painting/edge_insets.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/gestures/gesture_settings.dart' as _i7;
-import 'package:flutter/src/foundation/key.dart' as _i8;
-import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/painting/text_scaler.dart' as _i5;
+import 'package:flutter/src/painting/edge_insets.dart' as _i6;
+import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/src/gestures/gesture_settings.dart' as _i8;
+import 'package:flutter/src/foundation/key.dart' as _i9;
+import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class MediaQueryData
 class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
-  /// MediaQueryData MediaQueryData({Size size = Size.zero, double devicePixelRatio = 1.0, double textScaleFactor = 1.0, Brightness platformBrightness = Brightness.light, EdgeInsets padding = EdgeInsets.zero, EdgeInsets viewInsets = EdgeInsets.zero, EdgeInsets systemGestureInsets = EdgeInsets.zero, EdgeInsets viewPadding = EdgeInsets.zero, bool alwaysUse24HourFormat = false, bool accessibleNavigation = false, bool invertColors = false, bool highContrast = false, bool disableAnimations = false, bool boldText = false, NavigationMode navigationMode = NavigationMode.traditional, DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop), List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]})
+  /// MediaQueryData MediaQueryData({Size size = Size.zero, double devicePixelRatio = 1.0, double textScaleFactor = 1.0, TextScaler textScaler = _kUnspecifiedTextScaler, Brightness platformBrightness = Brightness.light, EdgeInsets padding = EdgeInsets.zero, EdgeInsets viewInsets = EdgeInsets.zero, EdgeInsets systemGestureInsets = EdgeInsets.zero, EdgeInsets viewPadding = EdgeInsets.zero, bool alwaysUse24HourFormat = false, bool accessibleNavigation = false, bool invertColors = false, bool highContrast = false, bool onOffSwitchLabels = false, bool disableAnimations = false, bool boldText = false, NavigationMode navigationMode = NavigationMode.traditional, DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop), List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]})
   MediaQueryData$Mate({
     /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
     super.size,
@@ -21,8 +22,8 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
     /// optionalParameters: {double devicePixelRatio = 1.0} , default:processed=DoubleLiteralImpl
     super.devicePixelRatio,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler textScaler = _kUnspecifiedTextScaler} , default:unprocessed=SimpleIdentifierImpl
+    super.textScaler,
 
     /// optionalParameters: {Brightness platformBrightness = Brightness.light} , default:processed=PrefixedIdentifierImpl
     super.platformBrightness,
@@ -51,6 +52,9 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
     /// optionalParameters: {bool highContrast = false} , default:processed=BooleanLiteralImpl
     super.highContrast,
 
+    /// optionalParameters: {bool onOffSwitchLabels = false} , default:processed=BooleanLiteralImpl
+    super.onOffSwitchLabels,
+
     /// optionalParameters: {bool disableAnimations = false} , default:processed=BooleanLiteralImpl
     super.disableAnimations,
 
@@ -78,11 +82,10 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
             isNamed: true,
             defaultValue: 1.0,
           ),
-          'textScaleFactor': _i2.BuilderArg<double>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i5.TextScaler>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
-            defaultValue: 1.0,
           ),
           'platformBrightness': _i2.BuilderArg<_i3.Brightness>(
             name: 'platformBrightness',
@@ -90,29 +93,29 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
             isNamed: true,
             defaultValue: _i3.Brightness.light,
           ),
-          'padding': _i2.BuilderArg<_i5.EdgeInsets>(
+          'padding': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'padding',
             init: padding,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
+            defaultValue: _i7.EdgeInsets.zero,
           ),
-          'viewInsets': _i2.BuilderArg<_i5.EdgeInsets>(
+          'viewInsets': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'viewInsets',
             init: viewInsets,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
+            defaultValue: _i7.EdgeInsets.zero,
           ),
-          'systemGestureInsets': _i2.BuilderArg<_i5.EdgeInsets>(
+          'systemGestureInsets': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'systemGestureInsets',
             init: systemGestureInsets,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
+            defaultValue: _i7.EdgeInsets.zero,
           ),
-          'viewPadding': _i2.BuilderArg<_i5.EdgeInsets>(
+          'viewPadding': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'viewPadding',
             init: viewPadding,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
+            defaultValue: _i7.EdgeInsets.zero,
           ),
           'alwaysUse24HourFormat': _i2.BuilderArg<bool>(
             name: 'alwaysUse24HourFormat',
@@ -138,6 +141,12 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'onOffSwitchLabels': _i2.BuilderArg<bool>(
+            name: 'onOffSwitchLabels',
+            init: onOffSwitchLabels,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'disableAnimations': _i2.BuilderArg<bool>(
             name: 'disableAnimations',
             init: disableAnimations,
@@ -154,9 +163,9 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
             name: 'navigationMode',
             init: navigationMode,
             isNamed: true,
-            defaultValue: _i6.NavigationMode.traditional,
+            defaultValue: _i7.NavigationMode.traditional,
           ),
-          'gestureSettings': _i2.BuilderArg<_i7.DeviceGestureSettings>(
+          'gestureSettings': _i2.BuilderArg<_i8.DeviceGestureSettings>(
             name: 'gestureSettings',
             init: gestureSettings,
             isNamed: true,
@@ -173,7 +182,7 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
     mateBuilder = (p) => MediaQueryData$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           platformBrightness: p.get('platformBrightness').build(),
           padding: p.get('padding').build(),
           viewInsets: p.get('viewInsets').build(),
@@ -183,6 +192,7 @@ class MediaQueryData$Mate extends _i1.MediaQueryData with _i2.Mate {
           accessibleNavigation: p.get('accessibleNavigation').build(),
           invertColors: p.get('invertColors').build(),
           highContrast: p.get('highContrast').build(),
+          onOffSwitchLabels: p.get('onOffSwitchLabels').build(),
           disableAnimations: p.get('disableAnimations').build(),
           boldText: p.get('boldText').build(),
           navigationMode: p.get('navigationMode').build(),
@@ -235,7 +245,7 @@ class MediaQuery$Mate extends _i1.MediaQuery with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i8.Key?>(
+          'key': _i2.BuilderArg<_i9.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -245,7 +255,7 @@ class MediaQuery$Mate extends _i1.MediaQuery with _i2.Mate {
             init: data,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i9.Widget>(
+          'child': _i2.BuilderArg<_i10.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

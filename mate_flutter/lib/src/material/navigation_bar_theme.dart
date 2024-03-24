@@ -14,7 +14,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class NavigationBarThemeData with Diagnosticable
 class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Mate {
-  /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior})
+  /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior, MaterialStateProperty<Color?>? overlayColor})
   NavigationBarThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
     super.height,
@@ -45,6 +45,9 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
 
     /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , default:none
     super.labelBehavior,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
+    super.overlayColor,
   })  : mateParams = {
           'height': _i2.BuilderArg<double?>(
             name: 'height',
@@ -96,6 +99,11 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
             init: labelBehavior,
             isNamed: true,
           ),
+          'overlayColor': _i2.BuilderArg<_i5.MaterialStateProperty<_i3.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'NavigationBarThemeData';
@@ -111,6 +119,7 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
           labelBehavior: p.get('labelBehavior').build(),
+          overlayColor: p.get('overlayColor').build(),
         );
   }
 

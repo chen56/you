@@ -11,12 +11,13 @@ import 'package:flutter/src/foundation/basic_types.dart' as _i7;
 import 'dart:ui' as _i8;
 import 'package:flutter/src/painting/borders.dart' as _i9;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i10;
-import 'package:flutter/src/material/theme_data.dart' as _i11;
-import 'package:flutter/src/widgets/icon_theme_data.dart' as _i12;
+import 'package:flutter/src/material/material_state.dart' as _i11;
+import 'package:flutter/src/material/theme_data.dart' as _i12;
+import 'package:flutter/src/widgets/icon_theme_data.dart' as _i13;
 
 /// class FilterChip extends StatelessWidget implements ChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes
 class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
-  /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
+  /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
   FilterChip$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -65,6 +66,9 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
@@ -185,6 +189,11 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'color': _i2.BuilderArg<_i11.MaterialStateProperty<_i8.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
           'backgroundColor': _i2.BuilderArg<_i8.Color?>(
             name: 'backgroundColor',
             init: backgroundColor,
@@ -195,12 +204,12 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
             init: padding,
             isNamed: true,
           ),
-          'visualDensity': _i2.BuilderArg<_i11.VisualDensity?>(
+          'visualDensity': _i2.BuilderArg<_i12.VisualDensity?>(
             name: 'visualDensity',
             init: visualDensity,
             isNamed: true,
           ),
-          'materialTapTargetSize': _i2.BuilderArg<_i11.MaterialTapTargetSize?>(
+          'materialTapTargetSize': _i2.BuilderArg<_i12.MaterialTapTargetSize?>(
             name: 'materialTapTargetSize',
             init: materialTapTargetSize,
             isNamed: true,
@@ -220,7 +229,7 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
             init: surfaceTintColor,
             isNamed: true,
           ),
-          'iconTheme': _i2.BuilderArg<_i12.IconThemeData?>(
+          'iconTheme': _i2.BuilderArg<_i13.IconThemeData?>(
             name: 'iconTheme',
             init: iconTheme,
             isNamed: true,
@@ -266,6 +275,281 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
+          color: p.get('color').build(),
+          backgroundColor: p.get('backgroundColor').build(),
+          padding: p.get('padding').build(),
+          visualDensity: p.get('visualDensity').build(),
+          materialTapTargetSize: p.get('materialTapTargetSize').build(),
+          elevation: p.get('elevation').build(),
+          shadowColor: p.get('shadowColor').build(),
+          surfaceTintColor: p.get('surfaceTintColor').build(),
+          iconTheme: p.get('iconTheme').build(),
+          selectedShadowColor: p.get('selectedShadowColor').build(),
+          showCheckmark: p.get('showCheckmark').build(),
+          checkmarkColor: p.get('checkmarkColor').build(),
+          avatarBorder: p.get('avatarBorder').build(),
+        );
+  }
+
+  /// FilterChip FilterChip.elevated({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
+  FilterChip$Mate.elevated({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Widget? avatar} , default:none
+    super.avatar,
+
+    /// optionalParameters: {required Widget label} , default:none
+    required super.label,
+
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
+    super.labelStyle,
+
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
+    super.labelPadding,
+
+    /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
+    super.selected,
+
+    /// optionalParameters: {required void Function(bool)? onSelected} , default:none
+    required super.onSelected,
+
+    /// optionalParameters: {double? pressElevation} , default:none
+    super.pressElevation,
+
+    /// optionalParameters: {Color? disabledColor} , default:none
+    super.disabledColor,
+
+    /// optionalParameters: {Color? selectedColor} , default:none
+    super.selectedColor,
+
+    /// optionalParameters: {String? tooltip} , default:none
+    super.tooltip,
+
+    /// optionalParameters: {BorderSide? side} , default:none
+    super.side,
+
+    /// optionalParameters: {OutlinedBorder? shape} , default:none
+    super.shape,
+
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    super.clipBehavior,
+
+    /// optionalParameters: {FocusNode? focusNode} , default:none
+    super.focusNode,
+
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    super.autofocus,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
+    super.color,
+
+    /// optionalParameters: {Color? backgroundColor} , default:none
+    super.backgroundColor,
+
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
+    super.padding,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
+    super.visualDensity,
+
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
+    super.materialTapTargetSize,
+
+    /// optionalParameters: {double? elevation} , default:none
+    super.elevation,
+
+    /// optionalParameters: {Color? shadowColor} , default:none
+    super.shadowColor,
+
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
+    super.surfaceTintColor,
+
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
+    super.iconTheme,
+
+    /// optionalParameters: {Color? selectedShadowColor} , default:none
+    super.selectedShadowColor,
+
+    /// optionalParameters: {bool? showCheckmark} , default:none
+    super.showCheckmark,
+
+    /// optionalParameters: {Color? checkmarkColor} , default:none
+    super.checkmarkColor,
+
+    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , default:unprocessed=InstanceCreationExpressionImpl
+    super.avatarBorder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'avatar': _i2.BuilderArg<_i4.Widget?>(
+            name: 'avatar',
+            init: avatar,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i4.Widget>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onSelected': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'pressElevation': _i2.BuilderArg<double?>(
+            name: 'pressElevation',
+            init: pressElevation,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i9.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i9.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i8.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i8.Clip.none,
+          ),
+          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'color': _i2.BuilderArg<_i11.MaterialStateProperty<_i8.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i12.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i12.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i13.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'selectedShadowColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'selectedShadowColor',
+            init: selectedShadowColor,
+            isNamed: true,
+          ),
+          'showCheckmark': _i2.BuilderArg<bool?>(
+            name: 'showCheckmark',
+            init: showCheckmark,
+            isNamed: true,
+          ),
+          'checkmarkColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'checkmarkColor',
+            init: checkmarkColor,
+            isNamed: true,
+          ),
+          'avatarBorder': _i2.BuilderArg<_i9.ShapeBorder>(
+            name: 'avatarBorder',
+            init: avatarBorder,
+            isNamed: true,
+          ),
+        },
+        super.elevated() {
+    mateBuilderName = 'FilterChip.elevated';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => FilterChip$Mate.elevated(
+          key: p.get('key').build(),
+          avatar: p.get('avatar').build(),
+          label: p.get('label').build(),
+          labelStyle: p.get('labelStyle').build(),
+          labelPadding: p.get('labelPadding').build(),
+          selected: p.get('selected').build(),
+          onSelected: p.get('onSelected').build(),
+          pressElevation: p.get('pressElevation').build(),
+          disabledColor: p.get('disabledColor').build(),
+          selectedColor: p.get('selectedColor').build(),
+          tooltip: p.get('tooltip').build(),
+          side: p.get('side').build(),
+          shape: p.get('shape').build(),
+          clipBehavior: p.get('clipBehavior').build(),
+          focusNode: p.get('focusNode').build(),
+          autofocus: p.get('autofocus').build(),
+          color: p.get('color').build(),
           backgroundColor: p.get('backgroundColor').build(),
           padding: p.get('padding').build(),
           visualDensity: p.get('visualDensity').build(),

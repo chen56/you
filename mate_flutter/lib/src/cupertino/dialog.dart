@@ -11,7 +11,7 @@ import 'package:flutter/animation.dart' as _i7;
 import 'dart:ui' as _i8;
 import 'package:flutter/src/painting/text_style.dart' as _i9;
 
-/// class CupertinoAlertDialog extends StatelessWidget
+/// class CupertinoAlertDialog extends StatefulWidget
 class CupertinoAlertDialog$Mate extends _i1.CupertinoAlertDialog with _i2.Mate {
   /// CupertinoAlertDialog CupertinoAlertDialog({Key? key, Widget? title, Widget? content, List<Widget> actions = const <Widget>[], ScrollController? scrollController, ScrollController? actionScrollController, Duration insetAnimationDuration = const Duration(milliseconds: 100), Curve insetAnimationCurve = Curves.decelerate})
   CupertinoAlertDialog$Mate({
@@ -144,7 +144,7 @@ class CupertinoPopupSurface$Mate extends _i1.CupertinoPopupSurface with _i2.Mate
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class CupertinoActionSheet extends StatelessWidget
+/// class CupertinoActionSheet extends StatefulWidget
 class CupertinoActionSheet$Mate extends _i1.CupertinoActionSheet with _i2.Mate {
   /// CupertinoActionSheet CupertinoActionSheet({Key? key, Widget? title, Widget? message, List<Widget>? actions, ScrollController? messageScrollController, ScrollController? actionScrollController, Widget? cancelButton})
   CupertinoActionSheet$Mate({

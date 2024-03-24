@@ -14,5 +14,8 @@ void main() {
 
     expect(getPath("package:flutter_note/page.dart"), ".");
     expect(getPath("package:flutter_note/x/page.dart"), "x");
+
+    expect("a", path.join("","a"));
+    expect("a", path.join("a",""));
   });
 }

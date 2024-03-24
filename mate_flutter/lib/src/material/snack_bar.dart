@@ -8,10 +8,11 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'package:flutter/src/painting/edge_insets.dart' as _i6;
 import 'package:flutter/src/painting/borders.dart' as _i7;
-import 'package:flutter/src/material/snack_bar_theme.dart' as _i8;
-import 'package:flutter/src/animation/animation.dart' as _i9;
-import 'package:flutter/src/widgets/dismissible.dart' as _i10;
-import 'package:flutter/cupertino.dart' as _i11;
+import 'package:flutter/src/rendering/proxy_box.dart' as _i8;
+import 'package:flutter/src/material/snack_bar_theme.dart' as _i9;
+import 'package:flutter/src/animation/animation.dart' as _i10;
+import 'package:flutter/src/widgets/dismissible.dart' as _i11;
+import 'package:flutter/cupertino.dart' as _i12;
 
 /// class SnackBarAction extends StatefulWidget
 class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
@@ -94,7 +95,7 @@ class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
 
 /// class SnackBar extends StatefulWidget
 class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
-  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
+  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, HitTestBehavior? hitTestBehavior, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -119,6 +120,9 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
     super.shape,
+
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , default:none
+    super.hitTestBehavior,
 
     /// optionalParameters: {SnackBarBehavior? behavior} , default:none
     super.behavior,
@@ -190,7 +194,12 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
             init: shape,
             isNamed: true,
           ),
-          'behavior': _i2.BuilderArg<_i8.SnackBarBehavior?>(
+          'hitTestBehavior': _i2.BuilderArg<_i8.HitTestBehavior?>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i9.SnackBarBehavior?>(
             name: 'behavior',
             init: behavior,
             isNamed: true,
@@ -220,7 +229,7 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
             init: duration,
             isNamed: true,
           ),
-          'animation': _i2.BuilderArg<_i9.Animation<double>?>(
+          'animation': _i2.BuilderArg<_i10.Animation<double>?>(
             name: 'animation',
             init: animation,
             isNamed: true,
@@ -230,11 +239,11 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
             init: onVisible,
             isNamed: true,
           ),
-          'dismissDirection': _i2.BuilderArg<_i10.DismissDirection>(
+          'dismissDirection': _i2.BuilderArg<_i11.DismissDirection>(
             name: 'dismissDirection',
             init: dismissDirection,
             isNamed: true,
-            defaultValue: _i11.DismissDirection.down,
+            defaultValue: _i12.DismissDirection.down,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
@@ -255,6 +264,7 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
           padding: p.get('padding').build(),
           width: p.get('width').build(),
           shape: p.get('shape').build(),
+          hitTestBehavior: p.get('hitTestBehavior').build(),
           behavior: p.get('behavior').build(),
           action: p.get('action').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),

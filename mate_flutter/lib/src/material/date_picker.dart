@@ -8,17 +8,18 @@ import 'package:flutter/src/material/date.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
 import 'package:flutter/src/services/text_input.dart' as _i6;
 import 'package:flutter/src/foundation/basic_types.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
+import 'package:flutter/src/widgets/icon.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i9;
 
 /// class DatePickerDialog extends StatefulWidget
 class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
-  /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange})
+  /// DatePickerDialog DatePickerDialog({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange, Icon? switchToInputEntryModeIcon, Icon? switchToCalendarEntryModeIcon})
   DatePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {required DateTime initialDate} , default:none
-    required super.initialDate,
+    /// optionalParameters: {DateTime? initialDate} , default:none
+    super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
     required super.firstDate,
@@ -67,13 +68,19 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
 
     /// optionalParameters: {void Function(DatePickerEntryMode)? onDatePickerModeChange} , default:none
     super.onDatePickerModeChange,
+
+    /// optionalParameters: {Icon? switchToInputEntryModeIcon} , default:none
+    super.switchToInputEntryModeIcon,
+
+    /// optionalParameters: {Icon? switchToCalendarEntryModeIcon} , default:none
+    super.switchToCalendarEntryModeIcon,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'initialDate': _i2.BuilderArg<DateTime>(
+          'initialDate': _i2.BuilderArg<DateTime?>(
             name: 'initialDate',
             init: initialDate,
             isNamed: true,
@@ -160,6 +167,16 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             init: onDatePickerModeChange,
             isNamed: true,
           ),
+          'switchToInputEntryModeIcon': _i2.BuilderArg<_i8.Icon?>(
+            name: 'switchToInputEntryModeIcon',
+            init: switchToInputEntryModeIcon,
+            isNamed: true,
+          ),
+          'switchToCalendarEntryModeIcon': _i2.BuilderArg<_i8.Icon?>(
+            name: 'switchToCalendarEntryModeIcon',
+            init: switchToCalendarEntryModeIcon,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'DatePickerDialog';
@@ -183,6 +200,8 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
           onDatePickerModeChange: p.get('onDatePickerModeChange').build(),
+          switchToInputEntryModeIcon: p.get('switchToInputEntryModeIcon').build(),
+          switchToCalendarEntryModeIcon: p.get('switchToCalendarEntryModeIcon').build(),
         );
   }
 
@@ -192,7 +211,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
 
 /// class DateRangePickerDialog extends StatefulWidget
 class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate {
-  /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, TextInputType keyboardType = TextInputType.datetime, String? restorationId})
+  /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, TextInputType keyboardType = TextInputType.datetime, String? restorationId, Icon? switchToInputEntryModeIcon, Icon? switchToCalendarEntryModeIcon})
   DateRangePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -250,6 +269,12 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
+
+    /// optionalParameters: {Icon? switchToInputEntryModeIcon} , default:none
+    super.switchToInputEntryModeIcon,
+
+    /// optionalParameters: {Icon? switchToCalendarEntryModeIcon} , default:none
+    super.switchToCalendarEntryModeIcon,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -341,11 +366,21 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
-            defaultValue: _i8.TextInputType.datetime,
+            defaultValue: _i9.TextInputType.datetime,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
+            isNamed: true,
+          ),
+          'switchToInputEntryModeIcon': _i2.BuilderArg<_i8.Icon?>(
+            name: 'switchToInputEntryModeIcon',
+            init: switchToInputEntryModeIcon,
+            isNamed: true,
+          ),
+          'switchToCalendarEntryModeIcon': _i2.BuilderArg<_i8.Icon?>(
+            name: 'switchToCalendarEntryModeIcon',
+            init: switchToCalendarEntryModeIcon,
             isNamed: true,
           ),
         },
@@ -372,6 +407,8 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
           fieldEndLabelText: p.get('fieldEndLabelText').build(),
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
+          switchToInputEntryModeIcon: p.get('switchToInputEntryModeIcon').build(),
+          switchToCalendarEntryModeIcon: p.get('switchToCalendarEntryModeIcon').build(),
         );
   }
 

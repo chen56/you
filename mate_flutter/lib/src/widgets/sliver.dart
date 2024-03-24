@@ -815,9 +815,6 @@ class SliverIgnorePointer$Mate extends _i1.SliverIgnorePointer with _i2.Mate {
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     super.ignoring,
 
-    /// optionalParameters: {bool? ignoringSemantics} , default:none
-    super.ignoringSemantics,
-
     /// optionalParameters: {Widget? sliver} , default:none
     super.sliver,
   })  : mateParams = {
@@ -832,11 +829,6 @@ class SliverIgnorePointer$Mate extends _i1.SliverIgnorePointer with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'ignoringSemantics': _i2.BuilderArg<bool?>(
-            name: 'ignoringSemantics',
-            init: ignoringSemantics,
-            isNamed: true,
-          ),
           'sliver': _i2.BuilderArg<_i5.Widget?>(
             name: 'sliver',
             init: sliver,
@@ -849,7 +841,6 @@ class SliverIgnorePointer$Mate extends _i1.SliverIgnorePointer with _i2.Mate {
     mateBuilder = (p) => SliverIgnorePointer$Mate(
           key: p.get('key').build(),
           ignoring: p.get('ignoring').build(),
-          ignoringSemantics: p.get('ignoringSemantics').build(),
           sliver: p.get('sliver').build(),
         );
   }
@@ -938,6 +929,160 @@ class KeepAlive$Mate extends _i1.KeepAlive with _i2.Mate {
           key: p.get('key').build(),
           keepAlive: p.get('keepAlive').build(),
           child: p.get('child').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class SliverConstrainedCrossAxis extends StatelessWidget
+class SliverConstrainedCrossAxis$Mate extends _i1.SliverConstrainedCrossAxis with _i2.Mate {
+  /// SliverConstrainedCrossAxis SliverConstrainedCrossAxis({Key? key, required double maxExtent, required Widget sliver})
+  SliverConstrainedCrossAxis$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required double maxExtent} , default:none
+    required super.maxExtent,
+
+    /// optionalParameters: {required Widget sliver} , default:none
+    required super.sliver,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'maxExtent': _i2.BuilderArg<double>(
+            name: 'maxExtent',
+            init: maxExtent,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i5.Widget>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverConstrainedCrossAxis';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => SliverConstrainedCrossAxis$Mate(
+          key: p.get('key').build(),
+          maxExtent: p.get('maxExtent').build(),
+          sliver: p.get('sliver').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class SliverCrossAxisExpanded extends ParentDataWidget<SliverPhysicalContainerParentData>
+class SliverCrossAxisExpanded$Mate extends _i1.SliverCrossAxisExpanded with _i2.Mate {
+  /// SliverCrossAxisExpanded SliverCrossAxisExpanded({Key? key, required int flex, required Widget sliver})
+  SliverCrossAxisExpanded$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required int flex} , default:none
+    required super.flex,
+
+    /// optionalParameters: {required Widget sliver} , default:none
+    required super.sliver,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'flex': _i2.BuilderArg<int>(
+            name: 'flex',
+            init: flex,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i5.Widget>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverCrossAxisExpanded';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => SliverCrossAxisExpanded$Mate(
+          key: p.get('key').build(),
+          flex: p.get('flex').build(),
+          sliver: p.get('sliver').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class SliverCrossAxisGroup extends MultiChildRenderObjectWidget
+class SliverCrossAxisGroup$Mate extends _i1.SliverCrossAxisGroup with _i2.Mate {
+  /// SliverCrossAxisGroup SliverCrossAxisGroup({Key? key, required List<Widget> slivers})
+  SliverCrossAxisGroup$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required List<Widget> slivers} , default:none
+    required super.slivers,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'slivers': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'slivers',
+            init: slivers,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverCrossAxisGroup';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => SliverCrossAxisGroup$Mate(
+          key: p.get('key').build(),
+          slivers: p.get('slivers').build(),
+        );
+  }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
+}
+
+/// class SliverMainAxisGroup extends MultiChildRenderObjectWidget
+class SliverMainAxisGroup$Mate extends _i1.SliverMainAxisGroup with _i2.Mate {
+  /// SliverMainAxisGroup SliverMainAxisGroup({Key? key, required List<Widget> slivers})
+  SliverMainAxisGroup$Mate({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required List<Widget> slivers} , default:none
+    required super.slivers,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'slivers': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'slivers',
+            init: slivers,
+            isNamed: true,
+          ),
+        },
+        super() {
+    mateBuilderName = 'SliverMainAxisGroup';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => SliverMainAxisGroup$Mate(
+          key: p.get('key').build(),
+          slivers: p.get('slivers').build(),
         );
   }
 

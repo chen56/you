@@ -5,7 +5,6 @@ import 'package:flutter/src/cupertino/activity_indicator.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
-
 /// class CupertinoActivityIndicator extends StatefulWidget
 class CupertinoActivityIndicator$Mate extends _i1.CupertinoActivityIndicator with _i2.Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})

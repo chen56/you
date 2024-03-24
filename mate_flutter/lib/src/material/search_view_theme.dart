@@ -107,7 +107,7 @@ class SearchViewThemeData$Mate extends _i1.SearchViewThemeData with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class SearchViewTheme extends InheritedWidget
+/// class SearchViewTheme extends InheritedTheme
 class SearchViewTheme$Mate extends _i1.SearchViewTheme with _i2.Mate {
   /// SearchViewTheme SearchViewTheme({Key? key, required SearchViewThemeData data, required Widget child})
   SearchViewTheme$Mate({

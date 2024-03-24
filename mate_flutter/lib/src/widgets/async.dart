@@ -80,7 +80,7 @@ class AsyncSnapshot$Mate<T> extends _i1.AsyncSnapshot<T> with _i2.Mate {
 
 /// class StreamBuilder<T> extends StreamBuilderBase<T, AsyncSnapshot<T>>
 class StreamBuilder$Mate<T> extends _i1.StreamBuilder<T> with _i2.Mate {
-  /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
+  /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, required Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -88,8 +88,8 @@ class StreamBuilder$Mate<T> extends _i1.StreamBuilder<T> with _i2.Mate {
     /// optionalParameters: {T? initialData} , default:none
     super.initialData,
 
-    /// optionalParameters: {Stream<T>? stream} , default:none
-    super.stream,
+    /// optionalParameters: {required Stream<T>? stream} , default:none
+    required super.stream,
 
     /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
     required super.builder,
@@ -132,13 +132,13 @@ class StreamBuilder$Mate<T> extends _i1.StreamBuilder<T> with _i2.Mate {
 
 /// class FutureBuilder<T> extends StatefulWidget
 class FutureBuilder$Mate<T> extends _i1.FutureBuilder<T> with _i2.Mate {
-  /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
+  /// FutureBuilder<T> FutureBuilder({Key? key, required Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Future<T>? future} , default:none
-    super.future,
+    /// optionalParameters: {required Future<T>? future} , default:none
+    required super.future,
 
     /// optionalParameters: {T? initialData} , default:none
     super.initialData,

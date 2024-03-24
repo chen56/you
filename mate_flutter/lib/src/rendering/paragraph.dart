@@ -7,9 +7,10 @@ import 'package:flutter/src/painting/inline_span.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/text_painter.dart' as _i5;
 import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/painting/strut_style.dart' as _i7;
-import 'package:flutter/src/rendering/box.dart' as _i8;
-import 'package:flutter/src/rendering/selection.dart' as _i9;
+import 'package:flutter/src/painting/text_scaler.dart' as _i7;
+import 'package:flutter/src/painting/strut_style.dart' as _i8;
+import 'package:flutter/src/rendering/box.dart' as _i9;
+import 'package:flutter/src/rendering/selection.dart' as _i10;
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
 class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSemanticsTag with _i2.Mate {
@@ -35,9 +36,9 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSema
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RenderParagraph extends RenderBox with ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderBoxContainerDefaultsMixin<RenderBox, TextParentData>, RelayoutWhenSystemFontsChangeMixin
+/// class RenderParagraph extends RenderBox with ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderInlineChildrenContainerDefaults, RelayoutWhenSystemFontsChangeMixin
 class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
-  /// RenderParagraph RenderParagraph(InlineSpan text, {TextAlign textAlign = TextAlign.start, required TextDirection textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, List<RenderBox>? children, Color? selectionColor, SelectionRegistrar? registrar})
+  /// RenderParagraph RenderParagraph(InlineSpan text, {TextAlign textAlign = TextAlign.start, required TextDirection textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, TextScaler textScaler = TextScaler.noScaling, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, List<RenderBox>? children, Color? selectionColor, SelectionRegistrar? registrar})
   RenderParagraph$Mate(
     /// requiredParameters: InlineSpan text
     super.text, {
@@ -53,8 +54,8 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     super.overflow,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    super.textScaleFactor,
+    /// optionalParameters: {TextScaler textScaler = TextScaler.noScaling} , default:processed=PrefixedIdentifierImpl
+    super.textScaler,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
@@ -108,11 +109,11 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             isNamed: true,
             defaultValue: _i6.TextOverflow.clip,
           ),
-          'textScaleFactor': _i2.BuilderArg<double>(
-            name: 'textScaleFactor',
-            init: textScaleFactor,
+          'textScaler': _i2.BuilderArg<_i7.TextScaler>(
+            name: 'textScaler',
+            init: textScaler,
             isNamed: true,
-            defaultValue: 1.0,
+            defaultValue: _i6.TextScaler.noScaling,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
@@ -124,7 +125,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i7.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i8.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
@@ -140,7 +141,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.RenderBox>?>(
+          'children': _i2.BuilderArg<List<_i9.RenderBox>?>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -150,7 +151,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             init: selectionColor,
             isNamed: true,
           ),
-          'registrar': _i2.BuilderArg<_i9.SelectionRegistrar?>(
+          'registrar': _i2.BuilderArg<_i10.SelectionRegistrar?>(
             name: 'registrar',
             init: registrar,
             isNamed: true,
@@ -165,7 +166,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           softWrap: p.get('softWrap').build(),
           overflow: p.get('overflow').build(),
-          textScaleFactor: p.get('textScaleFactor').build(),
+          textScaler: p.get('textScaler').build(),
           maxLines: p.get('maxLines').build(),
           locale: p.get('locale').build(),
           strutStyle: p.get('strutStyle').build(),

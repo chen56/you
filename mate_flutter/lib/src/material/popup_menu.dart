@@ -158,7 +158,7 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
 
 /// class CheckedPopupMenuItem<T> extends PopupMenuItem<T>
 class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.Mate {
-  /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
+  /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MaterialStateProperty<TextStyle?>? labelTextStyle, MouseCursor? mouseCursor, Widget? child, void Function()? onTap})
   CheckedPopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -178,11 +178,17 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
     /// optionalParameters: {double height = kMinInteractiveDimension} , default:unprocessed=SimpleIdentifierImpl
     super.height,
 
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
+    super.labelTextStyle,
+
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     super.mouseCursor,
 
     /// optionalParameters: {Widget? child} , default:none
     super.child,
+
+    /// optionalParameters: {void Function()? onTap} , default:none
+    super.onTap,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -216,6 +222,11 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
             init: height,
             isNamed: true,
           ),
+          'labelTextStyle': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
+            name: 'labelTextStyle',
+            init: labelTextStyle,
+            isNamed: true,
+          ),
           'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
@@ -224,6 +235,11 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
           'child': _i2.BuilderArg<_i9.Widget?>(
             name: 'child',
             init: child,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
             isNamed: true,
           ),
         },
@@ -237,8 +253,10 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
           enabled: p.get('enabled').build(),
           padding: p.get('padding').build(),
           height: p.get('height').build(),
+          labelTextStyle: p.get('labelTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
+          onTap: p.get('onTap').build(),
         );
   }
 
@@ -248,7 +266,7 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
 
 /// class PopupMenuButton<T> extends StatefulWidget
 class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
-  /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
+  /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, Color? iconColor, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
   PopupMenuButton$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -306,6 +324,9 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
 
     /// optionalParameters: {Color? color} , default:none
     super.color,
+
+    /// optionalParameters: {Color? iconColor} , default:none
+    super.iconColor,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
@@ -416,6 +437,11 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             init: color,
             isNamed: true,
           ),
+          'iconColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
           'enableFeedback': _i2.BuilderArg<bool?>(
             name: 'enableFeedback',
             init: enableFeedback,
@@ -461,6 +487,7 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
           enabled: p.get('enabled').build(),
           shape: p.get('shape').build(),
           color: p.get('color').build(),
+          iconColor: p.get('iconColor').build(),
           enableFeedback: p.get('enableFeedback').build(),
           constraints: p.get('constraints').build(),
           position: p.get('position').build(),

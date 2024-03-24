@@ -468,7 +468,7 @@ class SemanticsHintOverrides$Mate extends _i1.SemanticsHintOverrides with _i2.Ma
 
 /// class SemanticsProperties extends DiagnosticableTree
 class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
-  /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
+  /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? expanded, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   SemanticsProperties$Mate({
     /// optionalParameters: {bool? enabled} , default:none
     super.enabled,
@@ -478,6 +478,9 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
 
     /// optionalParameters: {bool? mixed} , default:none
     super.mixed,
+
+    /// optionalParameters: {bool? expanded} , default:none
+    super.expanded,
 
     /// optionalParameters: {bool? selected} , default:none
     super.selected,
@@ -663,6 +666,11 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
           'mixed': _i2.BuilderArg<bool?>(
             name: 'mixed',
             init: mixed,
+            isNamed: true,
+          ),
+          'expanded': _i2.BuilderArg<bool?>(
+            name: 'expanded',
+            init: expanded,
             isNamed: true,
           ),
           'selected': _i2.BuilderArg<bool?>(
@@ -958,6 +966,7 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
           enabled: p.get('enabled').build(),
           checked: p.get('checked').build(),
           mixed: p.get('mixed').build(),
+          expanded: p.get('expanded').build(),
           selected: p.get('selected').build(),
           toggled: p.get('toggled').build(),
           button: p.get('button').build(),
@@ -1022,7 +1031,7 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class SemanticsNode extends AbstractNode with DiagnosticableTreeMixin
+/// class SemanticsNode with DiagnosticableTreeMixin
 class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
   /// SemanticsNode SemanticsNode({Key? key, void Function()? showOnScreen})
   SemanticsNode$Mate({

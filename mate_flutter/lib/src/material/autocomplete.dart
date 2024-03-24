@@ -10,7 +10,7 @@ import 'package:flutter/src/services/text_input.dart' as _i6;
 
 /// class Autocomplete<T extends Object> extends StatelessWidget
 class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.Mate {
-  /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
+  /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, OptionsViewOpenDirection optionsViewOpenDirection = OptionsViewOpenDirection.down, TextEditingValue? initialValue})
   Autocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -32,6 +32,9 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
 
     /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , default:none
     super.optionsViewBuilder,
+
+    /// optionalParameters: {OptionsViewOpenDirection optionsViewOpenDirection = OptionsViewOpenDirection.down} , default:processed=PrefixedIdentifierImpl
+    super.optionsViewOpenDirection,
 
     /// optionalParameters: {TextEditingValue? initialValue} , default:none
     super.initialValue,
@@ -73,6 +76,12 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
             init: optionsViewBuilder,
             isNamed: true,
           ),
+          'optionsViewOpenDirection': _i2.BuilderArg<_i4.OptionsViewOpenDirection>(
+            name: 'optionsViewOpenDirection',
+            init: optionsViewOpenDirection,
+            isNamed: true,
+            defaultValue: _i5.OptionsViewOpenDirection.down,
+          ),
           'initialValue': _i2.BuilderArg<_i6.TextEditingValue?>(
             name: 'initialValue',
             init: initialValue,
@@ -90,6 +99,7 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
           onSelected: p.get('onSelected').build(),
           optionsMaxHeight: p.get('optionsMaxHeight').build(),
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
+          optionsViewOpenDirection: p.get('optionsViewOpenDirection').build(),
           initialValue: p.get('initialValue').build(),
         );
   }

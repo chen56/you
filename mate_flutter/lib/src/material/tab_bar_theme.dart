@@ -14,7 +14,7 @@ import 'package:flutter/src/services/mouse_cursor.dart' as _i10;
 
 /// class TabBarTheme with Diagnosticable
 class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
-  /// TabBarTheme TabBarTheme({Decoration? indicator, Color? indicatorColor, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, EdgeInsetsGeometry? labelPadding, TextStyle? labelStyle, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, MaterialStateProperty<Color?>? overlayColor, InteractiveInkFeatureFactory? splashFactory, MaterialStateProperty<MouseCursor?>? mouseCursor})
+  /// TabBarTheme TabBarTheme({Decoration? indicator, Color? indicatorColor, TabBarIndicatorSize? indicatorSize, Color? dividerColor, double? dividerHeight, Color? labelColor, EdgeInsetsGeometry? labelPadding, TextStyle? labelStyle, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, MaterialStateProperty<Color?>? overlayColor, InteractiveInkFeatureFactory? splashFactory, MaterialStateProperty<MouseCursor?>? mouseCursor, TabAlignment? tabAlignment})
   TabBarTheme$Mate({
     /// optionalParameters: {Decoration? indicator} , default:none
     super.indicator,
@@ -27,6 +27,9 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
 
     /// optionalParameters: {Color? dividerColor} , default:none
     super.dividerColor,
+
+    /// optionalParameters: {double? dividerHeight} , default:none
+    super.dividerHeight,
 
     /// optionalParameters: {Color? labelColor} , default:none
     super.labelColor,
@@ -51,6 +54,9 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     super.mouseCursor,
+
+    /// optionalParameters: {TabAlignment? tabAlignment} , default:none
+    super.tabAlignment,
   })  : mateParams = {
           'indicator': _i2.BuilderArg<_i3.Decoration?>(
             name: 'indicator',
@@ -70,6 +76,11 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
           'dividerColor': _i2.BuilderArg<_i4.Color?>(
             name: 'dividerColor',
             init: dividerColor,
+            isNamed: true,
+          ),
+          'dividerHeight': _i2.BuilderArg<double?>(
+            name: 'dividerHeight',
+            init: dividerHeight,
             isNamed: true,
           ),
           'labelColor': _i2.BuilderArg<_i4.Color?>(
@@ -112,6 +123,11 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
+          'tabAlignment': _i2.BuilderArg<_i5.TabAlignment?>(
+            name: 'tabAlignment',
+            init: tabAlignment,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'TabBarTheme';
@@ -121,6 +137,7 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
           indicatorColor: p.get('indicatorColor').build(),
           indicatorSize: p.get('indicatorSize').build(),
           dividerColor: p.get('dividerColor').build(),
+          dividerHeight: p.get('dividerHeight').build(),
           labelColor: p.get('labelColor').build(),
           labelPadding: p.get('labelPadding').build(),
           labelStyle: p.get('labelStyle').build(),
@@ -129,6 +146,7 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
           overlayColor: p.get('overlayColor').build(),
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
+          tabAlignment: p.get('tabAlignment').build(),
         );
   }
 
