@@ -1,34 +1,38 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(
-    // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
-    Directionality(
-      textDirection: TextDirection.ltr,
-      child: test1Unlimit(),
-    ),
-  );
+  runApp(App());
 }
 
-// 查询UI最外层本约束信息
-// 最外层是固定这种：BoxConstraints(w=1103.0, h=566.0)
-Widget test1QueryBasicConstraints() {
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      // 修改这里测试
+      child: test3_ListView_is_ok(),
+    );
+  }
+}
+
+Widget constraintsInfo(String title) {
   return LayoutBuilder(builder: (context, constraints) {
-    debugPrint("constraints: ${constraints}");
-    return Text("LayoutBuilder: ${constraints}");
+    debugPrint("$title: $constraints");
+    return Text("$title: $constraints");
   });
 }
 
 // 查询UI最外层本约束信息
 // 最外层是固定这种：BoxConstraints(w=1103.0, h=566.0)
-Widget test1Unlimit() {
-  Widget constraintsInfo(String title) {
-    return LayoutBuilder(builder: (context, constraints) {
-      debugPrint("${title}: ${constraints}");
-      return Text("${title}: ${constraints}");
-    });
-  }
+Widget test1_QueryBasicConstraints() {
+  return constraintsInfo("/");
+}
 
+// Column直接包ListView汇报错
+Widget test2_ColumnAndListview_error() {
   return Column(
     children: [
       // Column的可以无限高
@@ -42,8 +46,6 @@ Widget test1Unlimit() {
       // 儿ListView说：那我就要无限高吧，我自带滚动条
       // 父Column说：error，我挂了！
       // ListView(children: [Text("")]),
-
-
 
       SizedBox(
         height: 200,
@@ -83,12 +85,25 @@ Widget test1Unlimit() {
 
       // 3.1. 就这样
       Expanded(
-        child: ListView(children: [
-          constraintsInfo("Column>Expanded>ListView")
-        ]),
+        child: ListView(children: [constraintsInfo("Column>Expanded>ListView")]),
       ),
       Divider(),
+    ],
+  );
+}
 
+Widget test3_ListView_is_ok() {
+  return ListView(
+    children: [
+      // Column的可以无限高
+      // BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity)
+      constraintsInfo("ListView"),
+      constraintsInfo("ListView"),
+      constraintsInfo("ListView"),
+      const Divider(),
+      Column(children: [
+        constraintsInfo("ListView>Column"),
+      ],)
     ],
   );
 }
