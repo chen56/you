@@ -1,11 +1,8 @@
-# note_test
+# mate test
 
-Flutter-Note Integration Testing & e2e test.
+why mate test is here?
 
-## Getting Started
+mate test放到mate里的话，会依赖mate_flutter，而放到mate_flutter里的化，
+会把mate_flutter原本基于dart sdk 的依赖改成flutter sdk。
 
-For help getting started with Flutter development, view the online
-[documentation](https://flutter.dev/).
-
-For instructions integrating Flutter modules to your existing applications,
-see the [add-to-app documentation](https://flutter.dev/docs/development/add-to-app).
+目前这种造成依赖问题的集成测试，都放在note_test包里
