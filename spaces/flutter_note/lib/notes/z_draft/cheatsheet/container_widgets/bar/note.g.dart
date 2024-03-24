@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 197,
+          end: 114,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # bar  ## )
         (
           cellType: 'body',
-          offset: 197,
-          end: 312,
+          offset: 114,
+          end: 229,
           specialNodes: <({
             String nodeType,
             int end,
@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(WidgetContent(Container()
         (
           cellType: 'body',
-          offset: 390,
-          end: 939,
+          offset: 307,
+          end: 812,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 939,
-          end: 941,
+          offset: 812,
+          end: 814,
           specialNodes: <({
             String nodeType,
             int end,

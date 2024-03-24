@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 197,
+          end: 114,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # ButtonSt)
         (
           cellType: 'body',
-          offset: 197,
-          end: 752,
+          offset: 114,
+          end: 669,
           specialNodes: <({
             String nodeType,
             int end,
@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Wrap$M)
+        /// (print(WidgetContent(Wrap(child)
         (
           cellType: 'body',
-          offset: 830,
-          end: 969,
+          offset: 747,
+          end: 867,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 范例2 Met)
         (
           cellType: 'body',
-          offset: 1047,
-          end: 1091,
+          offset: 945,
+          end: 989,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1091,
-          end: 1093,
+          offset: 989,
+          end: 991,
           specialNodes: <({
             String nodeType,
             int end,

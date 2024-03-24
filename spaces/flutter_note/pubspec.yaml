@@ -75,7 +75,6 @@ flutter:
     - lib/notes/z_draft/
     - lib/notes/z_draft/cheatsheet/async/
     - lib/notes/z_draft/cheatsheet/container_widgets/bar/
-    - lib/notes/z_draft/cheatsheet/container_widgets/layout/
     - lib/notes/z_draft/cheatsheet/container_widgets/menu/
     - lib/notes/z_draft/cheatsheet/container_widgets/navigation/adaptive_navigation/
     - lib/notes/z_draft/cheatsheet/container_widgets/scrollable/Dismissible/
@@ -114,6 +113,9 @@ flutter:
     - lib/notes/z_draft/other/serialization/json/
     - lib/notes/z_draft/other/thinking_in_ui/readable_html_vs_dart/
     - lib/notes/z_draft/concepts/navigation/
+    - lib/notes/z_draft/concepts/layout/old/layout/
+    - lib/notes/z_draft/concepts/layout/constraints/
+    - lib/notes/z_draft/concepts/layout/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

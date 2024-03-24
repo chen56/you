@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 197,
+          end: 152,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # flutter )
         (
           cellType: 'body',
-          offset: 197,
-          end: 808,
+          offset: 152,
+          end: 763,
           specialNodes: <({
             String nodeType,
             int end,
@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Row$Ma)
+        /// (print(Row(children: <Widget>[.)
         (
           cellType: 'body',
-          offset: 886,
-          end: 1271,
+          offset: 841,
+          end: 1127,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(r''' 如果只是实验性的摆弄)
         (
           cellType: 'body',
-          offset: 1349,
-          end: 1478,
+          offset: 1205,
+          end: 1334,
           specialNodes: <({
             String nodeType,
             int end,
@@ -50,11 +50,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Row$Ma)
+        /// (print(Row(mainAxisAlignment: M)
         (
           cellType: 'body',
-          offset: 1556,
-          end: 1956,
+          offset: 1412,
+          end: 1748,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print.markdown(r''' 暂时不支持代码编辑，)
         (
           cellType: 'body',
-          offset: 2034,
-          end: 2274,
+          offset: 1826,
+          end: 2066,
           specialNodes: <({
             String nodeType,
             int end,
@@ -74,11 +74,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Column)
+        /// (print(Column(children: [const )
         (
           cellType: 'body',
-          offset: 2352,
-          end: 2580,
+          offset: 2144,
+          end: 2370,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// (print.markdown(r'''  组件组合是不是很棒)
         (
           cellType: 'body',
-          offset: 2658,
-          end: 6374,
+          offset: 2448,
+          end: 6164,
           specialNodes: <({
             String nodeType,
             int end,
@@ -101,8 +101,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 6374,
-          end: 6376,
+          offset: 6164,
+          end: 6166,
           specialNodes: <({
             String nodeType,
             int end,

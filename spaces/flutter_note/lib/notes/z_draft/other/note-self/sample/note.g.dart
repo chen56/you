@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 246,
+          end: 201,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 246,
-          end: 249,
+          offset: 201,
+          end: 204,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(''' # 参数化范例  ##)
         (
           cellType: 'body',
-          offset: 327,
-          end: 797,
+          offset: 282,
+          end: 752,
           specialNodes: <({
             String nodeType,
             int end,
@@ -38,11 +38,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(WidgetContent(Container()
         (
           cellType: 'body',
-          offset: 875,
-          end: 985,
+          offset: 830,
+          end: 926,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print.markdown(''' ### String参)
         (
           cellType: 'body',
-          offset: 1063,
-          end: 1109,
+          offset: 1004,
+          end: 1050,
           specialNodes: <({
             String nodeType,
             int end,
@@ -62,11 +62,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Text$M)
+        /// (print(WidgetContent(Text("我是Te)
         (
           cellType: 'body',
-          offset: 1187,
-          end: 1249,
+          offset: 1128,
+          end: 1181,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// (print.markdown(''' ### Color参数)
         (
           cellType: 'body',
-          offset: 1327,
-          end: 1391,
+          offset: 1259,
+          end: 1323,
           specialNodes: <({
             String nodeType,
             int end,
@@ -86,11 +86,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(WidgetContent(Container()
         (
           cellType: 'body',
-          offset: 1469,
-          end: 1796,
+          offset: 1401,
+          end: 1709,
           specialNodes: <({
             String nodeType,
             int end,
@@ -101,8 +101,8 @@ noteInfo() => (
         /// (print.markdown(''' ### bool参数 )
         (
           cellType: 'body',
-          offset: 1874,
-          end: 1918,
+          offset: 1787,
+          end: 1831,
           specialNodes: <({
             String nodeType,
             int end,
@@ -110,11 +110,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(WidgetContent(Container()
         (
           cellType: 'body',
-          offset: 1996,
-          end: 2181,
+          offset: 1909,
+          end: 2080,
           specialNodes: <({
             String nodeType,
             int end,
@@ -125,8 +125,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### 枚举参数  )
         (
           cellType: 'body',
-          offset: 2259,
-          end: 2325,
+          offset: 2158,
+          end: 2224,
           specialNodes: <({
             String nodeType,
             int end,
@@ -134,11 +134,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Row$Ma)
+        /// (print(WidgetContent(Row(mainAx)
         (
           cellType: 'body',
-          offset: 2403,
-          end: 2728,
+          offset: 2302,
+          end: 2608,
           specialNodes: <({
             String nodeType,
             int end,
@@ -149,8 +149,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 其他特性  #)
         (
           cellType: 'body',
-          offset: 2806,
-          end: 2983,
+          offset: 2686,
+          end: 2863,
           specialNodes: <({
             String nodeType,
             int end,
@@ -158,11 +158,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (showAbout() {showAboutDialog(c, print(MateSampleContent(Elevat)
+        /// (showAbout() {showAboutDialog(c, print(WidgetContent(ElevatedBu)
         (
           cellType: 'body',
-          offset: 3061,
-          end: 3480,
+          offset: 2941,
+          end: 3293,
           specialNodes: <({
             String nodeType,
             int end,
@@ -173,8 +173,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### 用循环一次性)
         (
           cellType: 'body',
-          offset: 3558,
-          end: 3609,
+          offset: 3371,
+          end: 3422,
           specialNodes: <({
             String nodeType,
             int end,
@@ -185,8 +185,8 @@ noteInfo() => (
         /// (for (var mainAxisAlignment in )
         (
           cellType: 'body',
-          offset: 3687,
-          end: 4172,
+          offset: 3500,
+          end: 3956,
           specialNodes: <({
             String nodeType,
             int end,
@@ -197,8 +197,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 4172,
-          end: 4174,
+          offset: 3956,
+          end: 3958,
           specialNodes: <({
             String nodeType,
             int end,

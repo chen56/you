@@ -17,10 +17,6 @@ import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/bar/note
     deferred as z_draft_cheatsheet_container_widgets_bar_;
 import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/bar/note.g.dart'
     as z_draft_cheatsheet_container_widgets_bar_g;
-import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/layout/note.dart'
-    deferred as z_draft_cheatsheet_container_widgets_layout_;
-import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/layout/note.g.dart'
-    as z_draft_cheatsheet_container_widgets_layout_g;
 import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/menu/note.dart'
     deferred as z_draft_cheatsheet_container_widgets_menu_;
 import 'package:flutter_note/notes/z_draft/cheatsheet/container_widgets/menu/note.g.dart'
@@ -85,6 +81,16 @@ import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/no
     deferred as z_draft_cheatsheet_style_theming_material3_;
 import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/note.g.dart'
     as z_draft_cheatsheet_style_theming_material3_g;
+import 'package:flutter_note/notes/z_draft/concepts/layout/constraints/note.dart'
+    deferred as z_draft_concepts_layout_constraints_;
+import 'package:flutter_note/notes/z_draft/concepts/layout/constraints/note.g.dart'
+    as z_draft_concepts_layout_constraints_g;
+import 'package:flutter_note/notes/z_draft/concepts/layout/note.dart' deferred as z_draft_concepts_layout_;
+import 'package:flutter_note/notes/z_draft/concepts/layout/note.g.dart' as z_draft_concepts_layout_g;
+import 'package:flutter_note/notes/z_draft/concepts/layout/old/layout/note.dart'
+    deferred as z_draft_concepts_layout_old_layout_;
+import 'package:flutter_note/notes/z_draft/concepts/layout/old/layout/note.g.dart'
+    as z_draft_concepts_layout_old_layout_g;
 import 'package:flutter_note/notes/z_draft/concepts/navigation/note.dart' deferred as z_draft_concepts_navigation_;
 import 'package:flutter_note/notes/z_draft/concepts/navigation/note.g.dart' as z_draft_concepts_navigation_g;
 import 'package:flutter_note/notes/z_draft/concepts/state/1.vanilla_state/note.dart'
@@ -315,6 +321,28 @@ abstract class BaseNotes {
               .loadLibrary()
               .then((value) => z_draft_other_thinking_in_ui_readable_html_vs_dart_.build)));
 
+  final Note z_draft_concepts_layout_constraints = put(
+      "/z_draft/concepts/layout/constraints",
+      z_draft_concepts_layout_constraints_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_concepts_layout_constraints_
+              .loadLibrary()
+              .then((value) => z_draft_concepts_layout_constraints_.build)));
+
+  final Note z_draft_concepts_layout_old_layout = put(
+      "/z_draft/concepts/layout/old/layout",
+      z_draft_concepts_layout_old_layout_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_concepts_layout_old_layout_
+              .loadLibrary()
+              .then((value) => z_draft_concepts_layout_old_layout_.build)));
+
+  final Note z_draft_concepts_layout = put(
+      "/z_draft/concepts/layout",
+      z_draft_concepts_layout_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_concepts_layout_.loadLibrary().then((value) => z_draft_concepts_layout_.build)));
+
   final Note z_draft_concepts_navigation = put(
       "/z_draft/concepts/navigation",
       z_draft_concepts_navigation_g.noteInfo(),
@@ -448,14 +476,6 @@ abstract class BaseNotes {
           builder: await z_draft_cheatsheet_media_assets_file_assets_
               .loadLibrary()
               .then((value) => z_draft_cheatsheet_media_assets_file_assets_.build)));
-
-  final Note z_draft_cheatsheet_container_widgets_layout = put(
-      "/z_draft/cheatsheet/container_widgets/layout",
-      z_draft_cheatsheet_container_widgets_layout_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_cheatsheet_container_widgets_layout_
-              .loadLibrary()
-              .then((value) => z_draft_cheatsheet_container_widgets_layout_.build)));
 
   final Note z_draft_cheatsheet_container_widgets_navigation_adaptive_navigation = put(
       "/z_draft/cheatsheet/container_widgets/navigation/adaptive_navigation",

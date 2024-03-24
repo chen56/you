@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 303,
+          end: 253,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## AppBar )
         (
           cellType: 'body',
-          offset: 303,
-          end: 430,
+          offset: 253,
+          end: 380,
           specialNodes: <({
             String nodeType,
             int end,
@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(AppBar)
+        /// (print(AppBar(title: const Text)
         (
           cellType: 'body',
-          offset: 508,
-          end: 1365,
+          offset: 458,
+          end: 1157,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## BottomA)
         (
           cellType: 'body',
-          offset: 1443,
-          end: 1600,
+          offset: 1235,
+          end: 1392,
           specialNodes: <({
             String nodeType,
             int end,
@@ -50,11 +50,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Bottom)
+        /// (print(BottomAppBar(child: Row()
         (
           cellType: 'body',
-          offset: 1678,
-          end: 2352,
+          offset: 1470,
+          end: 2133,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print.markdown(r'''  ## ~~Bott)
         (
           cellType: 'body',
-          offset: 2430,
-          end: 2784,
+          offset: 2211,
+          end: 2565,
           specialNodes: <({
             String nodeType,
             int end,
@@ -74,11 +74,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Column)
+        /// (print(Column(children: [Contai)
         (
           cellType: 'body',
-          offset: 2862,
-          end: 3438,
+          offset: 2643,
+          end: 3171,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// (print.markdown(r''' Navigation)
         (
           cellType: 'body',
-          offset: 3516,
-          end: 3633,
+          offset: 3249,
+          end: 3366,
           specialNodes: <({
             String nodeType,
             int end,
@@ -98,11 +98,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (var currentPageIndex = 0;, Widget buildNavigationBar(cont, print(MateSampleContent(Statef)
+        /// (var currentPageIndex = 0;, Widget buildNavigationBar(cont, print(StatefulBuilder(builder:)
         (
           cellType: 'body',
-          offset: 3711,
-          end: 4657,
+          offset: 3444,
+          end: 4300,
           specialNodes: <({
             String nodeType,
             int end,
@@ -113,8 +113,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Navigat)
         (
           cellType: 'body',
-          offset: 4735,
-          end: 5072,
+          offset: 4378,
+          end: 4715,
           specialNodes: <({
             String nodeType,
             int end,
@@ -122,11 +122,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Row$Ma)
+        /// (print(Row(children: [SizedBox()
         (
           cellType: 'body',
-          offset: 5150,
-          end: 6460,
+          offset: 4793,
+          end: 6054,
           specialNodes: <({
             String nodeType,
             int end,
@@ -137,8 +137,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## TabBar )
         (
           cellType: 'body',
-          offset: 6538,
-          end: 7036,
+          offset: 6132,
+          end: 6630,
           specialNodes: <({
             String nodeType,
             int end,
@@ -146,11 +146,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Defaul)
+        /// (print(DefaultTabController(len)
         (
           cellType: 'body',
-          offset: 7114,
-          end: 7665,
+          offset: 6708,
+          end: 7185,
           specialNodes: <({
             String nodeType,
             int end,
@@ -161,8 +161,8 @@ noteInfo() => (
         /// (print.markdown(r''' 再来看看加了TabV)
         (
           cellType: 'body',
-          offset: 7743,
-          end: 7808,
+          offset: 7263,
+          end: 7328,
           specialNodes: <({
             String nodeType,
             int end,
@@ -170,11 +170,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Defaul)
+        /// (print(DefaultTabController(ini)
         (
           cellType: 'body',
-          offset: 7886,
-          end: 8917,
+          offset: 7406,
+          end: 8318,
           specialNodes: <({
             String nodeType,
             int end,
@@ -185,8 +185,8 @@ noteInfo() => (
         /// (print.markdown(""" 上面用法和[Navig)
         (
           cellType: 'body',
-          offset: 8995,
-          end: 9266,
+          offset: 8396,
+          end: 8667,
           specialNodes: <({
             String nodeType,
             int end,
@@ -194,11 +194,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (onPressed() {ScaffoldMessenger, print(MateSampleContent(SizedB)
+        /// (onPressed() {ScaffoldMessenger, print(SizedBox(height: 100, ch)
         (
           cellType: 'body',
-          offset: 9344,
-          end: 10131,
+          offset: 8745,
+          end: 9508,
           specialNodes: <({
             String nodeType,
             int end,
@@ -209,8 +209,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## ButtonB)
         (
           cellType: 'body',
-          offset: 10209,
-          end: 10539,
+          offset: 9586,
+          end: 9916,
           specialNodes: <({
             String nodeType,
             int end,
@@ -218,11 +218,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(Container(width: 600, co)
         (
           cellType: 'body',
-          offset: 10617,
-          end: 11056,
+          offset: 9994,
+          end: 10423,
           specialNodes: <({
             String nodeType,
             int end,
@@ -233,8 +233,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Overflo)
         (
           cellType: 'body',
-          offset: 11134,
-          end: 11341,
+          offset: 10501,
+          end: 10708,
           specialNodes: <({
             String nodeType,
             int end,
@@ -242,11 +242,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MateSampleContent(Contai)
+        /// (print(Container(width: 300, ch)
         (
           cellType: 'body',
-          offset: 11419,
-          end: 12229,
+          offset: 10786,
+          end: 11594,
           specialNodes: <({
             String nodeType,
             int end,
@@ -257,8 +257,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Platfor)
         (
           cellType: 'body',
-          offset: 12307,
-          end: 12842,
+          offset: 11672,
+          end: 12207,
           specialNodes: <({
             String nodeType,
             int end,
@@ -266,11 +266,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (click() {showAboutDialog(conte, print(MateSampleContent(MenuBa)
+        /// (click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
         (
           cellType: 'body',
-          offset: 12920,
-          end: 14043,
+          offset: 12285,
+          end: 13370,
           specialNodes: <({
             String nodeType,
             int end,
@@ -281,8 +281,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 14043,
-          end: 14045,
+          offset: 13370,
+          end: 13372,
           specialNodes: <({
             String nodeType,
             int end,
