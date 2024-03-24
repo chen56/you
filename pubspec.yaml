@@ -7,7 +7,7 @@ environment:
 
 
 dev_dependencies:
-  lints: ^2.0.0
+  lints: any
   test: ^1.21.0
   flutter_test:
     sdk: flutter

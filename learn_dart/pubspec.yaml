@@ -18,9 +18,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints:
 
-  lints: ^2.0.0
+  lints:
   test: ^1.21.0
   analyzer:
   path: ^1.8.2

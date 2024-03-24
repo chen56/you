@@ -17,8 +17,8 @@ dependencies:
   mate:
 
 dev_dependencies:
-  lints: ^2.0.0
-  flutter_lints: ^2.0.1
+  lints:
+  flutter_lints:
   analyzer: ">=6.0.0 <7.0.0"
   file: ^7.0.0
   code_builder: ^4.4.0
