@@ -25,8 +25,6 @@ source "$SCRIPT_DIR/bake.bash"
 
 ####################################################################################
 # app script
-# 应用项目补充的公共脚本，不在bake维护范围
-# 此位置以上的全都是bake工具脚本，copy走可以直接用，之下的为项目特定cmd，自己弄
 ####################################################################################
 # print first, then _exec
 _exec() {
@@ -73,16 +71,10 @@ init() {
   run git lfs install
 }
 
-
-bake.opt.set --cmd all --name "aaa"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
-bake.opt.set --cmd all --name "bbb" --abbr v --type bool   --default false --optHelp "verbose, show more info, more hidden commands"
-bake.opt.set --cmd all --name "ccc"              --type string --default info  --optHelp "log level: debug, info, error"
-
-
-
 bake.cmd.set --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE all [any command]"
-bake.cmd.set --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
+p(){ echo "use './$SCRIPT_FILE p -h' see sub commands, there are all projects "; }
 
+bake.cmd.set --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
 p.all() {
   #       目录中有"pubspec.yaml"的，认为是flutter项目
   #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
