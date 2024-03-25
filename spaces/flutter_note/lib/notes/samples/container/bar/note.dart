@@ -257,18 +257,9 @@ TabBar不加TabView长这样：
       children: [
         TabBar(
           tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.cloud_outlined),
-              iconMargin: painting.EdgeInsets.all(10),
-            ),
-            Tab(
-              icon: Icon(Icons.beach_access_sharp),
-              iconMargin: painting.EdgeInsets.all(10),
-            ),
-            Tab(
-              icon: Icon(Icons.brightness_5_sharp),
-              iconMargin: painting.EdgeInsets.all(10),
-            ),
+            Tab(icon: Icon(Icons.cloud_outlined), iconMargin: painting.EdgeInsets.all(10)),
+            Tab(icon: Icon(Icons.beach_access_sharp), iconMargin: painting.EdgeInsets.all(10)),
+            Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: painting.EdgeInsets.all(10)),
           ],
         ),
         Container(

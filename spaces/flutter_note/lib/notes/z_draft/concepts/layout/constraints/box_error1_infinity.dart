@@ -10,11 +10,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
-    return Directionality(
-      textDirection: TextDirection.ltr,
-      // 修改这里测试
-      child: test3_ListView_is_ok(),
-    );
+    return Directionality(textDirection: TextDirection.ltr, /*修改这里测试*/ child: test1_unbounded_fail());
   }
 }
 
@@ -32,27 +28,34 @@ Widget test1_QueryBasicConstraints() {
 }
 
 // Column直接包ListView汇报错
-Widget test2_ColumnAndListview_error() {
+Widget test1_unbounded_fail() {
   return Column(
     children: [
-      // Column的可以无限高
-      // BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity)
-      constraintsInfo("Column"),
-      Divider(),
-
       // 1. 报错
       // error: Vertical viewport was given unbounded height.
       // 父Column说：儿子你可以无限高(BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity))
       // 儿ListView说：那我就要无限高吧，我自带滚动条
       // 父Column说：error，我挂了！
-      // ListView(children: [Text("")]),
+      ListView(children: [const Text("")]),
+    ],
+  );
+}
+
+// Column直接包ListView汇报错
+Widget test1_unbounded_fail_recover() {
+  return Column(
+    children: [
+      // Column的可以无限高
+      // BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity)
+      constraintsInfo("Column"),
+      const Divider(),
 
       SizedBox(
         height: 200,
         // BoxConstraints(0.0<=w<=826.0, h=200.0)
         child: constraintsInfo("Column>SizedBox(height:200)"),
       ),
-      Divider(),
+      const Divider(),
 
       SizedBox(
         width: 200,
@@ -60,7 +63,7 @@ Widget test2_ColumnAndListview_error() {
         // BoxConstraints(w=200.0, h=200.0)
         child: constraintsInfo("Column>SizedBox(width: 200, height:200)"),
       ),
-      Divider(),
+      const Divider(),
 
       // 2.必须限制高度
       // 父Column说：大春，我还是限制下你吧，你比较特殊(BoxConstraints(0.0<=w<=826.0, h=200.0))
@@ -81,18 +84,18 @@ Widget test2_ColumnAndListview_error() {
       Expanded(
         child: constraintsInfo("Column>Expanded"),
       ),
-      Divider(),
+      const Divider(),
 
       // 3.1. 就这样
       Expanded(
         child: ListView(children: [constraintsInfo("Column>Expanded>ListView")]),
       ),
-      Divider(),
+      const Divider(),
     ],
   );
 }
 
-Widget test3_ListView_is_ok() {
+Widget test2_ListView_is_ok() {
   return ListView(
     children: [
       // Column的可以无限高
@@ -101,9 +104,11 @@ Widget test3_ListView_is_ok() {
       constraintsInfo("ListView"),
       constraintsInfo("ListView"),
       const Divider(),
-      Column(children: [
-        constraintsInfo("ListView>Column"),
-      ],)
+      Column(
+        children: [
+          constraintsInfo("ListView>Column"),
+        ],
+      )
     ],
   );
 }

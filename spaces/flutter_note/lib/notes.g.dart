@@ -119,8 +119,6 @@ import 'package:flutter_note/notes/z_draft/other/dev/devtool/vmservice/note.dart
     deferred as z_draft_other_dev_devtool_vmservice_;
 import 'package:flutter_note/notes/z_draft/other/dev/devtool/vmservice/note.g.dart'
     as z_draft_other_dev_devtool_vmservice_g;
-import 'package:flutter_note/notes/z_draft/other/dev/mirror/note.dart' deferred as z_draft_other_dev_mirror_;
-import 'package:flutter_note/notes/z_draft/other/dev/mirror/note.g.dart' as z_draft_other_dev_mirror_g;
 import 'package:flutter_note/notes/z_draft/other/note-self/note.dart' deferred as z_draft_other_note_self_;
 import 'package:flutter_note/notes/z_draft/other/note-self/note.g.dart' as z_draft_other_note_self_g;
 import 'package:flutter_note/notes/z_draft/other/note-self/notebook/note.dart'
@@ -306,12 +304,6 @@ abstract class BaseNotes {
       z_draft_other_dev_debug_g.noteInfo(),
       (note) async => note.loadPage(
           builder: await z_draft_other_dev_debug_.loadLibrary().then((value) => z_draft_other_dev_debug_.build)));
-
-  final Note z_draft_other_dev_mirror = put(
-      "/z_draft/other/dev/mirror",
-      z_draft_other_dev_mirror_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_other_dev_mirror_.loadLibrary().then((value) => z_draft_other_dev_mirror_.build)));
 
   final Note z_draft_other_thinking_in_ui_readable_html_vs_dart = put(
       "/z_draft/other/thinking_in_ui/readable_html_vs_dart",

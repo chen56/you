@@ -100,7 +100,7 @@ flutter:
     - lib/notes/z_draft/other/dev/debug/
     - lib/notes/z_draft/other/dev/devtool/
     - lib/notes/z_draft/other/dev/devtool/vmservice/
-    - lib/notes/z_draft/other/dev/mirror/
+    - lib/notes/z_draft/other/dev/host_mirror/
     - lib/notes/z_draft/other/note-self/
     - lib/notes/z_draft/other/note-self/notebook/
     - lib/notes/z_draft/other/note-self/sample/

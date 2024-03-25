@@ -39,7 +39,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 //     ]),
 //     Path<void>("dev", kids: [
 //       Path<void>("debug", meta: devDebugNote),
-//       Path<void>("mirror", meta: devMirrorNote),
+//       Path<void>("host_mirror", meta: devMirrorNote),
 //     ]),
 //   ]),
 // ]);

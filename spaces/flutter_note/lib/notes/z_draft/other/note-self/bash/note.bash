@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-markdown "
+print.markdown "
 # BASH note
 
 bash can write note too!
