@@ -126,7 +126,7 @@ if ((BASH_VERSINFO[0] < 4 || (\
   exit 1
 fi
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-function _real_path() (
+_real_path() (
   cd "$(dirname "$1")"
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
@@ -145,9 +145,10 @@ cd "${BAKE_DIR}" # set workdir
 
 declare -r _LOG_LEVELS=(error info debug)
 declare LOG=${LOG:-info}
-_current_dir() {
-  echo "${PWD/#$HOME/\~}" # replace $HOME with "~"
-}
+
+# replace $HOME with "~"
+_current_dir() { echo "${PWD/#$HOME/\~}" ; }
+
 _error() {
   if [[ "${_LOG_LEVELS[@]:0}" != *"$LOG"* ]]; then return 0; fi
   echo -e "ERROR $(date "+%F %T") $(_current_dir)\$ ${FUNCNAME[1]}() : $*" >&2
@@ -164,7 +165,7 @@ _debug "LOG level is $LOG :===${_LOG_LEVELS[@]:0}==="
 
 # list internal var , used to debug bake self
 # Usage: _self
-function _self() (
+_self() (
   echo '# bake _self internal var'
   echo
   echo '## _cmdTree'
@@ -224,29 +225,6 @@ TYPE_CMD="type:cmd"
 # bake.path.dirname a/b/c  a/b    => c
 bake.str.cutLeft() { printf "${1#$2}"; }
 
-# escape to 'xxx' or $'xxx'
-#  https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
-bake.str.escape() {
-  #  from 2016 bash 4.4
-  #  ${parameter@Q} : quoted in a format that can be reused as input
-  # to 'xxx' or $'xxx'
-  printf '%s\n' "${1@Q}"
-}
-# unescape from 'xxx' or $'xxx'
-bake.str.unescape() {
-  local str=${1}
-  # $'xx' => xx
-  if [[ "$str" == "\$'"*"'" ]]; then
-    str="${str:2:-1}"
-  # 'xx' => xx
-  elif [[ "${str}" == "'"*"'" ]]; then
-    str="${str:1:-1}"
-  fi
-  #  from 2016 bash 4.4
-  #  ${parameter@E} expanded as with the $'...' quoting mechansim
-  printf '%s' "${str@E}"
-}
-
 # Usage: bake.str.split <str> [delimiter:default /]
 bake.str.split() {
   local str=$1 delimiter=${2:-/}
@@ -258,7 +236,7 @@ bake.str.split() {
 }
 
 # Usage: bake.str.revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
-function bake.str.revertLines() {
+bake.str.revertLines() {
   # cat xxx | tail -r; # macos bsd only, not work on linux
   # so use sed
   sed '1!G;h;$!d' # sed magic
@@ -345,7 +323,7 @@ bake.cmd.children() (
 
 # Usage: bake.cmd.up_chain <cmd>
 # sample: bake.cmd.up_chain a.b      => "a.b", "a", "_root"
-function bake.cmd.up_chain() {
+bake.cmd.up_chain() {
   local path="${1:-_root}"
   local up="$path"
   while [[ "$up" != "" ]]; do
@@ -356,13 +334,13 @@ function bake.cmd.up_chain() {
 }
 # Usage: bake.cmd.down_chain <cmd>
 # reverse of bake.cmd.up_chain
-function bake.cmd.down_chain() {
+bake.cmd.down_chain() {
   bake.cmd.up_chain "$1" | bake.str.revertLines
 }
 
 # Usage: bake.opt.cmd_chain_opts <cmd>
 # return optionDataPath list
-function bake.opt.cmd_chain_opts() {
+bake.opt.cmd_chain_opts() {
   local cmd=$1
   local upCmds
   readarray -t upCmds <<<"$(bake.cmd.up_chain "$cmd")"
@@ -391,6 +369,7 @@ bake.opt._internal_add() {
   _data["$cmd/opts/$opt/default"]="$default"
   _data["$cmd/opts/$opt/optHelp"]="$optHelp"
 }
+
 bake.opt._internal_add bake.opt.set "cmd" "string" "true" "" "" "cmd name"
 bake.opt._internal_add bake.opt.set "name" "string" "true" "" "" "option name"
 bake.opt._internal_add bake.opt.set "type" "string" "true" "" "" "option type"
@@ -413,13 +392,13 @@ bake.opt.set() {
 }
 
 # only use by bake.opt.set,
-function bake.opt.value() {
+bake.opt.get() {
   local cmd="$1" opt="$2"
   printf '%s' "${_data["$cmd/opts/$opt/value"]}"
 }
 
 # Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
-function bake.opt.parse() {
+bake.opt.parse() {
   local cmd="${1:_root}"
   shift # shift cmd arg, left all is options maybe
   # key is -h --help ... candidate words ,
@@ -488,14 +467,14 @@ function bake.opt.parse() {
   echo -e "$resultStr" # echo -e : unescapes backslash
 }
 
-bake.opt.set --cmd bake.cmd.set --name "cmd" --type string --optHelp "cmd, function name"
-bake.opt.set --cmd bake.cmd.set --name "usage" --type string --optHelp "usage"
-bake.opt.set --cmd bake.cmd.set --name "summary" --type string --optHelp "summary help, short, show on cmd list"
-bake.opt.set --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
-
-function bake.cmd.set() {
+bake.opt.set --cmd "bake.cmd.set" --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt.set --cmd "bake.cmd.set" --name "usage"       --type string --optHelp "usage"
+bake.opt.set --cmd "bake.cmd.set" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.opt.set --cmd "bake.cmd.set" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+bake.cmd.set() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+
   if [[ "$cmd" == "" ]]; then
     echo "error: bake.cmd.set [--cmd] required " >&2
     return 1
@@ -508,7 +487,7 @@ function bake.cmd.set() {
 
 # Usage: bake.cmd.register
 # ensure all cmd register
-function bake.cmd.register() {
+bake.cmd.register() {
   local functionName
   while IFS=$'\n' read -r functionName; do
     if [[ "$functionName" == */* ]]; then
@@ -532,7 +511,7 @@ function bake.cmd.register() {
   done <<<"$(compgen -A function)"
 }
 
-function bake.help() (
+bake.help() (
   local cmd="$1"
   shift
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
@@ -600,24 +579,15 @@ Available Commands:"
     local subCmd="$cmd/$subcmdName"
     [[ "$cmd" == "_root" ]] && subCmd="$subcmdName"
 
-    # 第二行开始，都补空格
-    local summary usage
+    local summary
     summary="${_data["$subCmd/summary"]}"
-    usage="${_data["$subCmd/usage"]}"
-    if [[ "$usage" != "" ]]; then
-      [[ "$summary" == "" ]] && summary="Usage: $usage" || summary+="\nUsage: $usage"
-    fi
     summary="$(echo -e "$summary")" #  backslash escapes interpretation
 
-    local padding
-    padding=$(printf %-$((maxLengthOfCmd + 6))b "")
-    summary=$(sed "2,1000s/^/$padding/g" <<<"$summary")
-
-    printf "  %-$((maxLengthOfCmd))s    ${summary}\n" "${subcmdName}"
+    printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subcmdName}"
   done
 )
 
-function bake.go() {
+bake.go() {
   # init register all cmd
 
   bake.cmd.register
@@ -658,9 +628,9 @@ function bake.go() {
 }
 
 # _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt.set --cmd _root --name "help" --abbr h --type bool --default false --optHelp "print help, show all commands"
-bake.opt.set --cmd _root --name "verbose" --abbr v --type bool --default false --optHelp "verbose, show more info, more hidden commands"
-bake.opt.set --cmd _root --name "log" --type string --default info --optHelp "log level: debug, info, error"
+bake.opt.set --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
+bake.opt.set --cmd _root --name "verbose" --abbr v --type bool   --default false --optHelp "verbose, show more info, more hidden commands"
+bake.opt.set --cmd _root --name "log"              --type string --default info  --optHelp "log level: debug, info, error"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here
@@ -673,196 +643,5 @@ fi
 # bake common script end line.
 # The above code is common code that is not related to the specific app,
 # if you want to define app-related commands,
-# please define them below to clean and separate the common and app code
+# please put them below or other file.
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-####################################################################################
-# app script
-# 应用项目补充的公共脚本，不在bake维护范围
-# 此位置以上的全都是bake工具脚本，copy走可以直接用，之下的为项目特定cmd，自己弄
-####################################################################################
-# print first, then _exec
-function _exec() {
-  local project
-  project=$(basename "$PWD")
-  #  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
-  _info "${FUNCNAME[1]}() ▶︎【$*】"
-  "$@"
-  return $?
-}
-
-##########################################
-# app cmd script
-# 应用的命令脚本
-##########################################
-
-bake.cmd.set --cmd _root \
-  --usage "./$BAKE_FILE [cmd] [opts] [args...]" \
-  --summary "flutter-note build cli." \
-  --description "$(
-    cat <<-EOF
-
-____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
-|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
-|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
-
-flutter-note build tools.
-
-Samples:
- ./${BAKE_FILE}                          # default run "get()"
- ./${BAKE_FILE} -h                       # show all commands help
- ./${BAKE_FILE} -h -v                    # show all commands help , include internal commands
- ./${BAKE_FILE} all  flutter pub get     # run "flutter pub get" on all mono projects
- ./${BAKE_FILE} note flutter pub get     # run "flutter pub get" on note project
-
-EOF
-  )"
-
-init() {
-  run git lfs install
-  flutter_note flutter create --platforms=macos .
-}
-
-bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project" \
-  --usage "Usage: ./$BAKE_FILE all [any command]"
-
-function all() {
-  #       目录中有"pubspec.yaml"的，认为是flutter项目
-  #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
-  #          # 用括号()开启子进程执行，可以不影响当前进程的环境
-  #          ( cd "$project" ;  run "$@" ; )
-  #        done
-  (cd learn_dart && _exec "$@")
-  (cd note && _exec "$@")
-  (cd mate_flutter && _exec "$@")
-  (cd mate && _exec "$@")
-  (cd note_test && _exec "$@")
-  (cd note_tools && _exec "$@")
-  (cd spaces/flutter_note && _exec "$@")
-}
-
-bake.cmd.set --cmd note --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
-bake.cmd.set --cmd flutter_note --usage "./$BAKE_FILE flutter_note [any command]"
-bake.cmd.set --cmd mate --usage "./$BAKE_FILE mate [any command]"
-bake.cmd.set --cmd mate_flutter --usage "./$BAKE_FILE mate_flutter [any command]"
-bake.cmd.set --cmd note_test --usage "./$BAKE_FILE note_test [any command]"
-function note() (cd note && _exec "$@")
-function flutter_note() (cd spaces/flutter_note && _exec "$@")
-function mate() (cd mate && _exec "$@")
-function mate_flutter() (cd mate_flutter && _exec "$@")
-function note_test() (cd note_test && _exec "$@")
-function note_tools() (cd note_tools && _exec "$@")
-
-bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
-function get() {
-  _exec all flutter pub get
-}
-
-bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> run all tests in all projects"
-
-function test() {
-  ./test/bake2_test.bash test
-  _exec all flutter test
-}
-
-run.web() {
-  # only work on macos
-  # shellcheck disable=SC2155
-  local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
-  flutter_note flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome "$@"
-}
-run.macos() {
-  flutter_note flutter run --device-id macos "$@"
-}
-
-build.web_canvaskit() {
-  flutter_note flutter build web -v \
-    --release --tree-shake-icons \
-    --web-renderer canvaskit "$@"
-}
-build.web_html() {
-  flutter_note flutter build web -v \
-    --release --tree-shake-icons \
-    --web-renderer html "$@"
-}
-
-# skwasm无法运行
-build.web_skwasm() {
-  flutter_note flutter build web -v \
-    --release --tree-shake-icons \
-    --web-renderer skwasm "$@"
-}
-
-preview.web() {
-  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-    build "$@"
-#   	npx http-server ./flutter_note/build/web --port 8000
-    _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
-    # flutter pub global activate dhttpd
-    # _exec flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
-}
-web.serve() {
-  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-#    build "$@"
-#   	npx http-server ./flutter_note/build/web --port 8000
-    _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli
-}
-preview.macos() (
-  _exec flutter_note flutter build macos -v \
-    --release --tree-shake-icons "$@"
-  _exec flutter_note open build/macos/Build/Products/Release/flutter_note.app
-)
-
-clean() {
-  all flutter clean
-  rm -rf build
-}
-gen.all() {
-  _exec flutter_note dart run tools/gen.dart
-  (
-    _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec mate_flutter dart run  tools/gen_mate_icons.dart
-  )
-}
-gen.notes() {
-  _exec flutter_note dart run tools/gen.dart
-  _exec flutter_note flutter pub get
-
-}
-gen.mate() (
-    _exec mate_flutter dart run  tools/gen_mates.dart
-    _exec mate_flutter dart run  tools/gen_mate_icons.dart
-)
-regen() {
-  echo "regen1"
-  _exec rm -f flutter_note/lib/pages.g.dart
-  _exec rm -rf mate_flutter/lib
-  gen
-}
-
-docker.build() (
-  _exec docker build --progress plain --tag younpc/note:latest .
-  _exec mkdir -p build/flutter_note/web
-  _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)"
-)
-docker.run() {
-  _exec echo "note preview http://localhost:8888/note/"
-  _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note
-}
-docker.preview() {
-  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest .
-  docker.run
-}
-
-docker.debug() {
-  _exec docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash
-}
-
-docker.push() {
-  docker image push younpc/note:latest
-}
-
-####################################################
-# app entry script & _root cmd
-####################################################
-bake.go "$@"

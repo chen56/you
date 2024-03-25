@@ -21,7 +21,7 @@ TEST_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 
-source "$TEST_DIR/../bake"
+source "$TEST_DIR/../bake.bash"
 
 
 bake.assert.fail() {
@@ -56,6 +56,30 @@ function bake.test.all() {
      return 2
   fi
 }
+
+# escape to 'xxx' or $'xxx'
+#  https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
+bake.str.escape() {
+  #  from 2016 bash 4.4
+  #  ${parameter@Q} : quoted in a format that can be reused as input
+  # to 'xxx' or $'xxx'
+  printf '%s\n' "${1@Q}"
+}
+# unescape from 'xxx' or $'xxx'
+bake.str.unescape() {
+  local str=${1}
+  # $'xx' => xx
+  if [[ "$str" == "\$'"*"'" ]]; then
+    str="${str:2:-1}"
+  # 'xx' => xx
+  elif [[ "${str}" == "'"*"'" ]]; then
+    str="${str:1:-1}"
+  fi
+  #  from 2016 bash 4.4
+  #  ${parameter@E} expanded as with the $'...' quoting mechansim
+  printf '%s' "${str@E}"
+}
+
 
 @is(){
   local actual="$1" expected="$2" msg="$3"
@@ -177,11 +201,12 @@ study.pipe(){
 
 
 function test.bake.str.escape() {
-    assert "$(bake.str.escape $'1')"     @is "'1'"
+    assert "$(bake.str.escape $'1' )"     @is "'1'"
     assert "$(bake.str.escape $'1 ')"    @is "'1 '"
     assert "$(bake.str.escape $'1 2 "')" @is "'1 2 \"'"
     assert "$(bake.str.escape $'1 "')"   @is "'1 \"'"
     assert "$(bake.str.escape $'1 2\n')" @is "\$'1 2\n'"
+
 }
 function test.bake.str.unescape() {
     assert "$(bake.str.unescape "$(bake.str.escape $'1'    )")"      @is $'1'

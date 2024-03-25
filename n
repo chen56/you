@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+set -o errtrace  # -E trap inherited in sub script
+set -o errexit   # -e
+set -o functrace # -T If set, any trap on DEBUG and RETURN are inherited by shell functions
+set -o pipefail  # default pipeline status==last command status, If set, status=any command fail
+#set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
+
+# On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
+_real_path() (
+  cd "$(dirname "$1")"
+  file="$PWD/$(basename "$1")"
+  while [[ -L "$file" ]]; do
+    file="$(readlink "$file")"
+    cd -P "$(dirname "$file")"
+    file="$PWD/$(basename "$file")"
+  done
+  echo "$file"
+)
+SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
+
+# include common script
+source "$SCRIPT_DIR/bake.bash"
+
+####################################################################################
+# app script
+# 应用项目补充的公共脚本，不在bake维护范围
+# 此位置以上的全都是bake工具脚本，copy走可以直接用，之下的为项目特定cmd，自己弄
+####################################################################################
+# print first, then _exec
+_exec() {
+  local project
+  project=$(basename "$PWD")
+  #  [[ "$PWD" == "$SCRIPT_DIR" ]] && project="_root"
+  _info "${FUNCNAME[1]}() ▶︎【$*】"
+  "$@"
+  return $?
+}
+
+##########################################
+# app cmd script
+# 应用的命令脚本
+##########################################
+
+bake.cmd.set --cmd _root \
+             --usage "./$SCRIPT_PATH [cmd] [opts] [args...]" \
+             --summary "flutter-note build cli." \
+             --description "$( cat <<-EOF
+
+flutter-note build tools.
+https://github.com/chen56/note
+
+Samples:
+ ./${SCRIPT_PATH}                          # default run "get()"
+ ./${SCRIPT_PATH} -h                       # show all commands help
+ ./${SCRIPT_PATH} -h -v                    # show all commands help , include internal commands
+ ./${SCRIPT_PATH} all  flutter pub get     # run "flutter pub get" on all mono projects
+ ./${SCRIPT_PATH} note flutter pub get     # run "flutter pub get" on note project
+
+EOF
+  )"
+
+
+#   flutter_note flutter create --platforms=macos .
+init() {
+  run git lfs install
+}
+
+
+bake.opt.set --cmd all --name "aaa"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
+bake.opt.set --cmd all --name "bbb" --abbr v --type bool   --default false --optHelp "verbose, show more info, more hidden commands"
+bake.opt.set --cmd all --name "ccc"              --type string --default info  --optHelp "log level: debug, info, error"
+all.a() { echo $@; }
+
+bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_PATH all [any command]"
+all() {
+  #       目录中有"pubspec.yaml"的，认为是flutter项目
+  #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+  #          # 用括号()开启子进程执行，可以不影响当前进程的环境
+  #          ( cd "$project" ;  run "$@" ; )
+  #        done
+  (cd learn_dart && _exec "$@")
+  (cd note && _exec "$@")
+  (cd mate_flutter && _exec "$@")
+  (cd mate && _exec "$@")
+  (cd note_test && _exec "$@")
+  (cd note_tools && _exec "$@")
+  (cd spaces/flutter_note && _exec "$@")
+}
+
+bake.cmd.set --cmd note         --summary "<project> run cmd on note project"         --usage "./$SCRIPT_PATH note [any command]"
+bake.cmd.set --cmd flutter_note --summary "<project> run cmd on flutter_note project" --usage "./$SCRIPT_PATH flutter_note [any command]"
+bake.cmd.set --cmd mate                                                               --usage "./$SCRIPT_PATH mate [any command]"
+bake.cmd.set --cmd mate_flutter --summary "<project> run cmd on mate_flutter project" --usage "./$SCRIPT_PATH mate_flutter [any command]"
+bake.cmd.set --cmd note_test    --summary "<project> run cmd on note_test project"    --usage "./$SCRIPT_PATH note_test [any command]"
+note() (cd note && _exec "$@")
+flutter_note() (cd spaces/flutter_note && _exec "$@")
+mate() (cd mate && _exec "$@")
+mate_flutter() (cd mate_flutter && _exec "$@")
+note_test() (cd note_test && _exec "$@")
+note_tools() (cd note_tools && _exec "$@")
+
+bake.cmd.set --cmd get --usage "./$SCRIPT_PATH get" --summary "<shortcut> ./bake all flutter pub get"
+get() { _exec all flutter pub get; }
+
+bake.cmd.set --cmd test --usage "./$SCRIPT_PATH test" --summary "<shortcut> run all tests in all projects"
+test() (./test/bake2_test.bash test ; _exec all flutter test ;)
+test.bake() ( ./test/bake2_test.bash test ; )
+
+# get ip only work on macos
+#   shellcheck disable=SC2155
+#   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+run.web() { flutter_note flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+run.macos() { flutter_note flutter run --device-id macos "$@"; }
+
+# skwasm无法运行
+build.web_skwasm() {    flutter_note flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
+build.web_canvaskit() { flutter_note flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+build.web_html() {      flutter_note flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ; }
+
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+  #   	npx http-server ./flutter_note/build/web --port 8000
+    # flutter pub global activate dhttpd
+    # _exec flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+preview.web() { build "$@" ; _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+
+#   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    build "$@"
+#   	npx http-server ./flutter_note/build/web --port 8000
+web.serve() {     _exec flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli ;}
+preview.macos() ( _exec flutter_note flutter build macos -v --release --tree-shake-icons "$@";  _exec flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
+
+clean() {     all flutter clean; rm -rf build;}
+gen.all() {   _exec flutter_note dart run tools/gen.dart;        _exec mate_flutter dart run  tools/gen_mates.dart;  _exec mate_flutter dart run  tools/gen_mate_icons.dart; }
+gen.notes() { _exec flutter_note dart run tools/gen.dart;        _exec flutter_note flutter pub get; }
+gen.mate() (  _exec mate_flutter dart run  tools/gen_mates.dart; _exec mate_flutter dart run  tools/gen_mate_icons.dart ; )
+regen() {     _exec rm -f flutter_note/lib/pages.g.dart;         _exec rm -rf mate_flutter/lib; gen; }
+
+docker.build() (    _exec docker build --progress plain --tag younpc/note:latest . ; _exec mkdir -p build/flutter_note/web; _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
+docker.run() {      _exec echo "note preview http://localhost:8888/note/"; _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
+docker.preview() {  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
+docker.debug() {    _exec docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
+docker.push() {     docker image push younpc/note:latest ; }
+
+####################################################
+# app entry script & _root cmd
+####################################################
+bake.go "$@"
+
