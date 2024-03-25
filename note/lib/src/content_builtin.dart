@@ -111,14 +111,12 @@ class MarkdownContent extends NoteContent {
   }
 }
 
-class MarkdownContentWidget extends StatelessWidget
-    with NoteContentWidgetMixin {
+class MarkdownContentWidget extends StatelessWidget with NoteContentWidgetMixin {
   final Outline outline;
   final MarkdownContent content;
   final ScrollController controller = ScrollController();
 
-  MarkdownContentWidget(
-      {super.key, required this.outline, required this.content});
+  MarkdownContentWidget({super.key, required this.outline, required this.content});
 
   @override
   Widget build(BuildContext context) {
@@ -169,10 +167,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
       child: Align(
           alignment: Alignment.centerLeft,
           child: SelectableText.rich(
-            TextSpan(
-                style: preferredStyle?.copyWith(
-                    height: 2, fontWeight: FontWeight.bold),
-                text: text.text),
+            TextSpan(style: preferredStyle?.copyWith(height: 2, fontWeight: FontWeight.bold), text: text.text),
             style: preferredStyle,
           )),
     );

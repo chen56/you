@@ -5,7 +5,7 @@ main() async {
   Env env = Env();
   NotesGenerator gen = NotesGenerator(
       packageBaseName: "flutter_note",
-      fmt: DartFormatter(pageWidth: 120),
+      fmt: DartFormatter(pageWidth: 500),
       fs: env.fs,
       projectDir: env.getFlutterProjectDir());
 
