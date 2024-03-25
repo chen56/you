@@ -147,7 +147,7 @@ class ColorSwatch$Mate<T> extends _i1.ColorSwatch<T> with _i2.Mate {
 
 /// class ColorProperty extends DiagnosticsProperty<Color>
 class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
-  /// ColorProperty ColorProperty(String name, Color? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
+  /// ColorProperty ColorProperty(String name, Color? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
   ColorProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -163,7 +163,7 @@ class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(

@@ -121,7 +121,7 @@ class AttributedString$Mate extends _i1.AttributedString with _i2.Mate {
 
 /// class AttributedStringProperty extends DiagnosticsProperty<AttributedString>
 class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i2.Mate {
-  /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info, String? description})
+  /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info, String? description})
   AttributedStringProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -137,7 +137,7 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {String? description} , default:none

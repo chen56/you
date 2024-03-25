@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart' as _i4;
 
 /// class IconDataProperty extends DiagnosticsProperty<IconData>
 class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
-  /// IconDataProperty IconDataProperty(String name, IconData? value, {String? ifNull, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
+  /// IconDataProperty IconDataProperty(String name, IconData? value, {String? ifNull, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
   IconDataProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -24,7 +24,7 @@ class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(

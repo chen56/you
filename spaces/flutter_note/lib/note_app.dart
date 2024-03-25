@@ -21,7 +21,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 //   Path<void>("not_found", meta: notFoundPage),
 //   Path<void>("note", meta: notePage, kids: [
 //     Path<void>("welcome", meta: welcome, kids: [
-//       Path<void>("note-self", meta: page),
+//       Path<void>("z.about", meta: page),
 //     ]),
 //     Path<void>("layout", meta: layoutNote),
 //     Path<void>("material", kids: [
@@ -99,8 +99,7 @@ class NoteApp extends StatelessWidget {
         spaceConf: noteSystem.spaceConf,
         sharedPreferences: noteSystem.sharedPreferences);
 
-    notes.root.extendTree(true);
-    notes.z_draft.extendTree(false);
+    notes.root.configTree(extendLevel: 2);
 
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',

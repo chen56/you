@@ -16001,7 +16001,7 @@ IconRegister registerIcon() {
   );
   result.register(
     _i1.Icons.info,
-    'info',
+    'app_info',
   );
   result.register(
     _i1.Icons.info_sharp,

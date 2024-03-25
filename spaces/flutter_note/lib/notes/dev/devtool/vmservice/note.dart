@@ -17,7 +17,7 @@ flutter run -h -v | grep vmservice-out-file
 #    --vmservice-out-file=<project/example/out.txt>      A file to write the attached vmservice URL to after an application is started.
 
 # 用--vmservice-out-file参数run app, flutter会在指定文件内写入vmservice的url
-flutter run -d macos --vmservice-out-file vm_url.txt
+flutter run -d macos_config --vmservice-out-file vm_url.txt
 ```
 
 然后可以用文件内的url attach到这个进程
@@ -26,7 +26,7 @@ flutter run -d macos --vmservice-out-file vm_url.txt
 cat vm_url.txt
 # ws://127.0.0.1:61768/hEdm-oGJlDk=
 
-flutter attach -d macos  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
+flutter attach -d macos_config  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
 # -------------------------------------------------
 # Syncing files to device macOS...                                   25.4s
 # Flutter run key commands.

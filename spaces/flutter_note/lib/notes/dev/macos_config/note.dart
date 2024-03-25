@@ -3,7 +3,7 @@ import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# macos
+# macos_config
 
 ## macOS 沙箱
 
@@ -14,8 +14,8 @@ ref: [Protecting user data with App Sandbox](https://developer.apple.com/documen
 
 可在flutter项目中将其关掉：
 
-- macos/Runner/DebugProfile.entitlements
-- macos/Runner/Release.entitlements
+- macos_config/Runner/DebugProfile.entitlements
+- macos_config/Runner/Release.entitlements
 
 ```xml
 	<key>com.apple.security.app-sandbox</key>

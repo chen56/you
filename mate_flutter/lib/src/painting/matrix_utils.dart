@@ -9,7 +9,7 @@ import 'package:flutter/foundation.dart' as _i5;
 
 /// class TransformProperty extends DiagnosticsProperty<Matrix4>
 class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
-  /// TransformProperty TransformProperty(String name, Matrix4? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
+  /// TransformProperty TransformProperty(String name, Matrix4? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info})
   TransformProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -22,7 +22,7 @@ class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(

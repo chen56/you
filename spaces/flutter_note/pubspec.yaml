@@ -38,7 +38,7 @@ dependencies:
   file: ^7.0.0
   shared_preferences: ^2.2.2
 
-  # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos 13.x
+  # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos_config 13.x
 #  flutter_inappwebview: ^5.7.2+3
 
 dev_dependencies:
@@ -69,53 +69,53 @@ flutter:
     - note_space.json
     - lib/notes/
     - lib/notes/1.welcome/
-    - lib/notes/platform&device/
-    - lib/notes/samples/container/bar/
-    - lib/notes/samples/specific/button/
-    - lib/notes/z_draft/
-    - lib/notes/z_draft/cheatsheet/async/
-    - lib/notes/z_draft/cheatsheet/container_widgets/bar/
-    - lib/notes/z_draft/cheatsheet/container_widgets/menu/
-    - lib/notes/z_draft/cheatsheet/container_widgets/navigation/adaptive_navigation/
-    - lib/notes/z_draft/cheatsheet/container_widgets/scrollable/Dismissible/
-    - lib/notes/z_draft/cheatsheet/media&assets&file/assets/
-    - lib/notes/z_draft/cheatsheet/media&assets&file/file/
-    - lib/notes/z_draft/cheatsheet/media&assets&file/icon/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/button/ButtonStyleButton/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/button/FloatingActionButton/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/button/IconButton/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/input/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/selectable/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/slider/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/text/RichText/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/text/Text/
-    - lib/notes/z_draft/cheatsheet/specific_widgets/webview/
-    - lib/notes/z_draft/cheatsheet/style&theming/material3/
-    - lib/notes/z_draft/core_concepts/state/
-    - lib/notes/z_draft/core_concepts/state/1.vanilla_state/
-    - lib/notes/z_draft/core_concepts/state/StatefulBuilder/
-    - lib/notes/z_draft/other/dart/analyzer/
-    - lib/notes/z_draft/other/dart/dart3/
-    - lib/notes/z_draft/other/dart/execption/
-    - lib/notes/z_draft/other/dev/debug/
-    - lib/notes/z_draft/other/dev/devtool/
-    - lib/notes/z_draft/other/dev/devtool/vmservice/
-    - lib/notes/z_draft/other/dev/host_mirror/
-    - lib/notes/z_draft/other/note-self/
-    - lib/notes/z_draft/other/note-self/notebook/
-    - lib/notes/z_draft/other/note-self/sample/
-    - lib/notes/z_draft/other/note-self/test/
-    - lib/notes/z_draft/other/note-self/test/nobody/
-    - lib/notes/z_draft/other/note-self/test/temp/
-    - lib/notes/z_draft/other/optimization/web_optimization/
-    - lib/notes/z_draft/other/platform&device/macos/
-    - lib/notes/z_draft/other/research/remote_view/
-    - lib/notes/z_draft/other/serialization/json/
-    - lib/notes/z_draft/other/thinking_in_ui/readable_html_vs_dart/
-    - lib/notes/z_draft/core_concepts/navigation/
-    - lib/notes/z_draft/core_concepts/layout/old/layout/
-    - lib/notes/z_draft/core_concepts/layout/constraints/
-    - lib/notes/z_draft/core_concepts/layout/
+    - lib/notes/cheetsheet/container/bar/
+    - lib/notes/cheetsheet/specific/button/
+    - lib/notes/cheatsheet_draft/async/
+    - lib/notes/cheatsheet_draft/container_widgets/bar/
+    - lib/notes/cheatsheet_draft/container_widgets/menu/
+    - lib/notes/cheatsheet_draft/container_widgets/navigation/adaptive_navigation/
+    - lib/notes/cheatsheet_draft/container_widgets/scrollable/Dismissible/
+    - lib/notes/cheatsheet_draft/media&assets&file/assets/
+    - lib/notes/cheatsheet_draft/media&assets&file/file/
+    - lib/notes/cheatsheet_draft/media&assets&file/icon/
+    - lib/notes/cheatsheet_draft/specific_widgets/button/ButtonStyleButton/
+    - lib/notes/cheatsheet_draft/specific_widgets/button/FloatingActionButton/
+    - lib/notes/cheatsheet_draft/specific_widgets/button/IconButton/
+    - lib/notes/cheatsheet_draft/specific_widgets/input/
+    - lib/notes/cheatsheet_draft/specific_widgets/selectable/
+    - lib/notes/cheatsheet_draft/specific_widgets/slider/
+    - lib/notes/cheatsheet_draft/specific_widgets/text/RichText/
+    - lib/notes/cheatsheet_draft/specific_widgets/text/Text/
+    - lib/notes/cheatsheet_draft/specific_widgets/webview/
+    - lib/notes/cheatsheet_draft/style&theming/material3/
+    - lib/notes/core_concepts/layout/
+    - lib/notes/core_concepts/layout/constraints/
+    - lib/notes/core_concepts/layout/old/layout/
+    - lib/notes/core_concepts/navigation/
+    - lib/notes/core_concepts/state/
+    - lib/notes/core_concepts/state/1.vanilla_state/
+    - lib/notes/core_concepts/state/StatefulBuilder/
+    - lib/notes/dev/debug/
+    - lib/notes/dev/devtool/
+    - lib/notes/dev/devtool/vmservice/
+    - lib/notes/dev/host_mirror/
+    - lib/notes/dev/macos_config/
+    - lib/notes/pure_dart/analyzer/
+    - lib/notes/pure_dart/dart3/
+    - lib/notes/pure_dart/execption/
+    - lib/notes/pure_dart/serialization_json/
+    - lib/notes/research/remote_view/
+    - lib/notes/thinking_in_ui/readable_html_vs_dart/
+    - lib/notes/z.note_inside/app_info/
+    - lib/notes/z.note_inside/how_note_work/
+    - lib/notes/z.note_inside/note_test_self/
+    - lib/notes/z.note_inside/note_test_self/nobody/
+    - lib/notes/z.note_inside/note_test_self/temp/
+    - lib/notes/z.note_inside/research_parameterized_example/
+    - lib/notes/Improve_app/
+    - lib/notes/Improve_app/1.overview/
+    - lib/notes/Improve_app/web_optimization/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # macos  #)
+        /// (print.markdown(r''' # macos_co)
         (
           cellType: 'body',
           offset: 114,
-          end: 562,
+          end: 583,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 562,
-          end: 564,
+          offset: 583,
+          end: 585,
           specialNodes: <({
             String nodeType,
             int end,

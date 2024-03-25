@@ -19,7 +19,7 @@ void main() {
   });
 
   group("NotesGenerator", () {
-    test('basic info', () {
+    test('basic app_info', () {
       expect(gen.projectDir, ".");
       expect(gen.libDir, "./lib");
       expect(gen.noteRootDir, "./lib/notes");
@@ -65,7 +65,7 @@ void main() {
     });
   });
 
-  group("gen cell info", () {
+  group("gen cell app_info", () {
     test('1', () async {
       fs.file("/n/lib/notes/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
 import 'package:note/note.dart';

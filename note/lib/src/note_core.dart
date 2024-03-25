@@ -48,6 +48,7 @@ class NoteSystem {
   final NoteContentExts contentExtensions;
   final SpaceConf spaceConf;
   final SharedPreferences sharedPreferences;
+
   NoteSystem({
     required this.root,
     required this.contentExtensions,
@@ -61,8 +62,7 @@ class NoteSystem {
   }) async {
     return NoteSystem(
       root: root,
-      spaceConf:
-          SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
+      spaceConf: SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
       contentExtensions: contentExtensions,
       sharedPreferences: await SharedPreferences.getInstance(),
     );
@@ -90,13 +90,8 @@ class Note {
       : basename = "",
         parent = null;
 
-  Note put(String fullPath, NoteSourceData data,
-      DeferredNotePageBuilder deferredPageBuilder) {
-    var p = fullPath
-        .split("/")
-        .map((e) => e.trim())
-        .where((e) => e.isNotEmpty)
-        .toList();
+  Note put(String fullPath, NoteSourceData data, DeferredNotePageBuilder deferredPageBuilder) {
+    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
@@ -104,10 +99,12 @@ class Note {
     return path;
   }
 
-  void extendTree(bool value) {
-    expand = value;
+  void configTree({int extendLevel = 0}) {
+    if (extendLevel <= 0) return;
+
+    expand = extendLevel > 0;
     for (var e in children) {
-      e.extendTree(value);
+      e.configTree(extendLevel: extendLevel - 1);
     }
   }
 
@@ -120,8 +117,7 @@ class Note {
       return this;
     }
     String name = nameList[0];
-    assert(name != "" && name != "/",
-        "path:$nameList, path[0]:'$name' must not be '' and '/' ");
+    assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _children.putIfAbsent(name, () {
       var child = Note._child(basename: name, parent: this);
       _children[name] = child;
@@ -136,8 +132,7 @@ class Note {
 
   int levelTo(Note parent) => this.level - parent.level;
 
-  List<Note> get ancestors =>
-      this.isRoot ? [] : [parent!, ...parent!.ancestors];
+  List<Note> get ancestors => this.isRoot ? [] : [parent!, ...parent!.ancestors];
 
   List<Note> get meAndAncestors => [this, ...ancestors];
 
@@ -147,8 +142,7 @@ class Note {
 
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
-  String get displayName =>
-      spaceNoteConf != null ? spaceNoteConf!.displayName : basename;
+  String get displayName => spaceNoteConf != null ? spaceNoteConf!.displayName : basename;
 
   String get path {
     if (isRoot) return "";
@@ -186,8 +180,7 @@ class Note {
   // todo bug
   Note? child(String path) {
     Note? result = this;
-    for (var split
-        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._children[split];
       if (result == null) break;
     }
@@ -196,8 +189,7 @@ class Note {
 
   /// 扁平化name，去掉排序用的数字前缀
   String get nameFlat {
-    return basename.replaceAll(
-            RegExp("\\d+[.]"), "") // 1.note-self -> note-self
+    return basename.replaceAll(RegExp("\\d+[.]"), "") // 1.z.about -> z.about
         ;
   }
 
@@ -233,6 +225,7 @@ class Note {
   }
 
   String get dartAssetPath => conventions.noteDartAssetPath(path);
+
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
   Future<NotePage> loadPage({NotePageBuilder? builder}) async {
@@ -240,9 +233,7 @@ class Note {
         note: this,
         // pageBuilder: await deferredPageBuilder!(this),
         pageBuilder: builder,
-        conf: spaceNoteConf == null
-            ? null
-            : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+        conf: spaceNoteConf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
         content: await rootBundle.loadString(dartAssetPath));
   }
 }
@@ -322,8 +313,7 @@ class Pen {
     required this.defaultCodeExpand,
     required this.outline,
   }) : note = notePage.note {
-    assert(note.source._pageGenInfo.cells.isNotEmpty,
-        "page cells should not be empty");
+    assert(note.source._pageGenInfo.cells.isNotEmpty, "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < note.source._pageGenInfo.cells.length; i++) {
@@ -413,8 +403,7 @@ class NoteContentExts {
         return w;
       }
     }
-    throw Exception(
-        "Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
+    throw Exception("Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
   }
 }
 
@@ -506,8 +495,7 @@ class OutlineNode {
 class NoteSource {
   final NoteSourceData _pageGenInfo;
 
-  NoteSource({required NoteSourceData pageGenInfo})
-      : _pageGenInfo = pageGenInfo;
+  NoteSource({required NoteSourceData pageGenInfo}) : _pageGenInfo = pageGenInfo;
 }
 
 /// CodeEntity is same as analyzer [SyntacticEntity]
@@ -530,6 +518,7 @@ class CellSource {
   final CodeEntity codeEntity;
   final List<SpecialSource> specialSources;
   final NoteCell cell;
+
   CellSource({
     required this.cellType,
     required this.codeEntity,
@@ -642,8 +631,7 @@ class NoteCell extends ChangeNotifier {
   }
 
   void call(Object? object) {
-    _add(contentExtensions.create(
-        object, NoteContentArg(cell: this, outline: outline)));
+    _add(contentExtensions.create(object, NoteContentArg(cell: this, outline: outline)));
   }
 
   void _add(NoteContentWidgetMixin content) {

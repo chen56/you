@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 114,
+          end: 144,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" # note项目运转 )
+        /// (print.markdown(r''' # VM Servi)
         (
           cellType: 'body',
-          offset: 114,
-          end: 156,
+          offset: 144,
+          end: 1277,
           specialNodes: <({
             String nodeType,
             int end,
@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// ()
+        /// (var serviceInfo = await Servic, print("serviceInfo⚠️: $service, print("serviceInfo.serverUri: , ..., print("serviceInfo.minorVersio, print('🔥🖼️✗✓🔨💪✏️');)
         (
           cellType: 'body',
-          offset: 234,
-          end: 265,
+          offset: 1355,
+          end: 1737,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 265,
-          end: 267,
+          offset: 1737,
+          end: 1739,
           specialNodes: <({
             String nodeType,
             int end,

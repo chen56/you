@@ -229,7 +229,7 @@ class NoteLib {
     var names = dir.split(path.separator).where((e) => e.isNotEmpty);
     return names
         .map((e) => e
-            .replaceAll(RegExp("^\\d+\."), "") // 1.note-self -> note_note-self
+            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
             .replaceAll(".", "_")
             .replaceAll("-", "_")
             .replaceAll("&", "_")

@@ -3,19 +3,10 @@ import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-## dart 3  暂时放弃，等稳定后再搞
+# 完善应用概览
 
-# type
+基本理解flutter后, 就是要完善方方面面，才能成为一个完整的应用。
 
-interface class
-base class
-final class
-sealed class
-mixin class
-
-# records
-
-# match
 
   ''');
 }

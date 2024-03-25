@@ -1,27 +1,23 @@
 {
   "notes": {
+    "/z.note_inside/how_note_work": {
+      "displayName": "Notebook机制",
+      "order": 100
+    },
+    "/z.note_inside/research_parameterized_example": {
+      "displayName": "参数化范例机制",
+      "order": 100
+    },
+    "/z.note_inside/note_test_self": {
+      "displayName": "test",
+      "order": 10
+    },
     "/1.welcome": {
       "displayName": "welcome",
       "order": 0
     },
     "/": {
       "displayName": "flutter-note笔记",
-      "order": 100
-    },
-    "/z_draft/other/note-self/test": {
-      "displayName": "test",
-      "order": 10
-    },
-    "/z_draft/other/note-self/sample": {
-      "displayName": "参数化范例机制",
-      "order": 100
-    },
-    "/z_draft/other/note-self": {
-      "displayName": "note项目自身机制",
-      "order": 1
-    },
-    "/z_draft/other/note-self/notebook": {
-      "displayName": "Notebook机制",
       "order": 100
     }
   }

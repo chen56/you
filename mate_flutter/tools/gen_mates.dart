@@ -554,7 +554,7 @@ void _genMateLib({
               //           var resolveResult = resolveDefaultValue(param, typeRefers);
               //
               //           b.docs.add(
-              //               "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.info}");
+              //               "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.app_info}");
               //           b.defaultTo = resolveResult.value?.code;
               //           //有缺省值的，但无法处理的，就加个required，自己投参吧
               //           b.required = param.hasDefaultValue
