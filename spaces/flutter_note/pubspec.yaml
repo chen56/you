@@ -91,9 +91,9 @@ flutter:
     - lib/notes/z_draft/cheatsheet/specific_widgets/text/Text/
     - lib/notes/z_draft/cheatsheet/specific_widgets/webview/
     - lib/notes/z_draft/cheatsheet/style&theming/material3/
-    - lib/notes/z_draft/concepts/state/
-    - lib/notes/z_draft/concepts/state/1.vanilla_state/
-    - lib/notes/z_draft/concepts/state/StatefulBuilder/
+    - lib/notes/z_draft/core_concepts/state/
+    - lib/notes/z_draft/core_concepts/state/1.vanilla_state/
+    - lib/notes/z_draft/core_concepts/state/StatefulBuilder/
     - lib/notes/z_draft/other/dart/analyzer/
     - lib/notes/z_draft/other/dart/dart3/
     - lib/notes/z_draft/other/dart/execption/
@@ -112,10 +112,10 @@ flutter:
     - lib/notes/z_draft/other/research/remote_view/
     - lib/notes/z_draft/other/serialization/json/
     - lib/notes/z_draft/other/thinking_in_ui/readable_html_vs_dart/
-    - lib/notes/z_draft/concepts/navigation/
-    - lib/notes/z_draft/concepts/layout/old/layout/
-    - lib/notes/z_draft/concepts/layout/constraints/
-    - lib/notes/z_draft/concepts/layout/
+    - lib/notes/z_draft/core_concepts/navigation/
+    - lib/notes/z_draft/core_concepts/layout/old/layout/
+    - lib/notes/z_draft/core_concepts/layout/constraints/
+    - lib/notes/z_draft/core_concepts/layout/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

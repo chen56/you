@@ -174,7 +174,7 @@ noteInfo() => (
         (
           cellType: 'body',
           offset: 7406,
-          end: 8318,
+          end: 8189,
           specialNodes: <({
             String nodeType,
             int end,
@@ -185,8 +185,8 @@ noteInfo() => (
         /// (print.markdown(""" 上面用法和[Navig)
         (
           cellType: 'body',
-          offset: 8396,
-          end: 8667,
+          offset: 8267,
+          end: 8538,
           specialNodes: <({
             String nodeType,
             int end,
@@ -197,8 +197,8 @@ noteInfo() => (
         /// (onPressed() {ScaffoldMessenger, print(SizedBox(height: 100, ch)
         (
           cellType: 'body',
-          offset: 8745,
-          end: 9508,
+          offset: 8616,
+          end: 9379,
           specialNodes: <({
             String nodeType,
             int end,
@@ -209,8 +209,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## ButtonB)
         (
           cellType: 'body',
-          offset: 9586,
-          end: 9916,
+          offset: 9457,
+          end: 9787,
           specialNodes: <({
             String nodeType,
             int end,
@@ -221,8 +221,8 @@ noteInfo() => (
         /// (print(Container(width: 600, co)
         (
           cellType: 'body',
-          offset: 9994,
-          end: 10423,
+          offset: 9865,
+          end: 10294,
           specialNodes: <({
             String nodeType,
             int end,
@@ -233,8 +233,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Overflo)
         (
           cellType: 'body',
-          offset: 10501,
-          end: 10708,
+          offset: 10372,
+          end: 10579,
           specialNodes: <({
             String nodeType,
             int end,
@@ -245,8 +245,8 @@ noteInfo() => (
         /// (print(Container(width: 300, ch)
         (
           cellType: 'body',
-          offset: 10786,
-          end: 11594,
+          offset: 10657,
+          end: 11465,
           specialNodes: <({
             String nodeType,
             int end,
@@ -257,8 +257,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Platfor)
         (
           cellType: 'body',
-          offset: 11672,
-          end: 12207,
+          offset: 11543,
+          end: 12078,
           specialNodes: <({
             String nodeType,
             int end,
@@ -269,8 +269,8 @@ noteInfo() => (
         /// (click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
         (
           cellType: 'body',
-          offset: 12285,
-          end: 13370,
+          offset: 12156,
+          end: 13241,
           specialNodes: <({
             String nodeType,
             int end,
@@ -281,8 +281,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 13370,
-          end: 13372,
+          offset: 13241,
+          end: 13243,
           specialNodes: <({
             String nodeType,
             int end,

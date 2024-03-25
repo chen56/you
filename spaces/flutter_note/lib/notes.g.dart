@@ -81,28 +81,29 @@ import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/no
     deferred as z_draft_cheatsheet_style_theming_material3_;
 import 'package:flutter_note/notes/z_draft/cheatsheet/style&theming/material3/note.g.dart'
     as z_draft_cheatsheet_style_theming_material3_g;
-import 'package:flutter_note/notes/z_draft/concepts/layout/constraints/note.dart'
-    deferred as z_draft_concepts_layout_constraints_;
-import 'package:flutter_note/notes/z_draft/concepts/layout/constraints/note.g.dart'
-    as z_draft_concepts_layout_constraints_g;
-import 'package:flutter_note/notes/z_draft/concepts/layout/note.dart' deferred as z_draft_concepts_layout_;
-import 'package:flutter_note/notes/z_draft/concepts/layout/note.g.dart' as z_draft_concepts_layout_g;
-import 'package:flutter_note/notes/z_draft/concepts/layout/old/layout/note.dart'
-    deferred as z_draft_concepts_layout_old_layout_;
-import 'package:flutter_note/notes/z_draft/concepts/layout/old/layout/note.g.dart'
-    as z_draft_concepts_layout_old_layout_g;
-import 'package:flutter_note/notes/z_draft/concepts/navigation/note.dart' deferred as z_draft_concepts_navigation_;
-import 'package:flutter_note/notes/z_draft/concepts/navigation/note.g.dart' as z_draft_concepts_navigation_g;
-import 'package:flutter_note/notes/z_draft/concepts/state/1.vanilla_state/note.dart'
-    deferred as z_draft_concepts_state_vanilla_state_;
-import 'package:flutter_note/notes/z_draft/concepts/state/1.vanilla_state/note.g.dart'
-    as z_draft_concepts_state_vanilla_state_g;
-import 'package:flutter_note/notes/z_draft/concepts/state/note.dart' deferred as z_draft_concepts_state_;
-import 'package:flutter_note/notes/z_draft/concepts/state/note.g.dart' as z_draft_concepts_state_g;
-import 'package:flutter_note/notes/z_draft/concepts/state/StatefulBuilder/note.dart'
-    deferred as z_draft_concepts_state_StatefulBuilder_;
-import 'package:flutter_note/notes/z_draft/concepts/state/StatefulBuilder/note.g.dart'
-    as z_draft_concepts_state_StatefulBuilder_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/constraints/note.dart'
+    deferred as z_draft_core_concepts_layout_constraints_;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/constraints/note.g.dart'
+    as z_draft_core_concepts_layout_constraints_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/note.dart' deferred as z_draft_core_concepts_layout_;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/note.g.dart' as z_draft_core_concepts_layout_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/old/layout/note.dart'
+    deferred as z_draft_core_concepts_layout_old_layout_;
+import 'package:flutter_note/notes/z_draft/core_concepts/layout/old/layout/note.g.dart'
+    as z_draft_core_concepts_layout_old_layout_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/navigation/note.dart'
+    deferred as z_draft_core_concepts_navigation_;
+import 'package:flutter_note/notes/z_draft/core_concepts/navigation/note.g.dart' as z_draft_core_concepts_navigation_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/1.vanilla_state/note.dart'
+    deferred as z_draft_core_concepts_state_vanilla_state_;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/1.vanilla_state/note.g.dart'
+    as z_draft_core_concepts_state_vanilla_state_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/note.dart' deferred as z_draft_core_concepts_state_;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/note.g.dart' as z_draft_core_concepts_state_g;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/StatefulBuilder/note.dart'
+    deferred as z_draft_core_concepts_state_StatefulBuilder_;
+import 'package:flutter_note/notes/z_draft/core_concepts/state/StatefulBuilder/note.g.dart'
+    as z_draft_core_concepts_state_StatefulBuilder_g;
 import 'package:flutter_note/notes/z_draft/note.dart' deferred as z_draft_;
 import 'package:flutter_note/notes/z_draft/note.g.dart' as z_draft_g;
 import 'package:flutter_note/notes/z_draft/other/dart/analyzer/note.dart' deferred as z_draft_other_dart_analyzer_;
@@ -119,6 +120,8 @@ import 'package:flutter_note/notes/z_draft/other/dev/devtool/vmservice/note.dart
     deferred as z_draft_other_dev_devtool_vmservice_;
 import 'package:flutter_note/notes/z_draft/other/dev/devtool/vmservice/note.g.dart'
     as z_draft_other_dev_devtool_vmservice_g;
+import 'package:flutter_note/notes/z_draft/other/dev/host_mirror/note.dart' deferred as z_draft_other_dev_host_mirror_;
+import 'package:flutter_note/notes/z_draft/other/dev/host_mirror/note.g.dart' as z_draft_other_dev_host_mirror_g;
 import 'package:flutter_note/notes/z_draft/other/note-self/note.dart' deferred as z_draft_other_note_self_;
 import 'package:flutter_note/notes/z_draft/other/note-self/note.g.dart' as z_draft_other_note_self_g;
 import 'package:flutter_note/notes/z_draft/other/note-self/notebook/note.dart'
@@ -187,6 +190,60 @@ abstract class BaseNotes {
 
   final Note root = put("/", root_g.noteInfo(),
       (note) async => note.loadPage(builder: await root_.loadLibrary().then((value) => root_.build)));
+
+  final Note z_draft_core_concepts_layout_constraints = put(
+      "/z_draft/core_concepts/layout/constraints",
+      z_draft_core_concepts_layout_constraints_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_core_concepts_layout_constraints_
+              .loadLibrary()
+              .then((value) => z_draft_core_concepts_layout_constraints_.build)));
+
+  final Note z_draft_core_concepts_layout_old_layout = put(
+      "/z_draft/core_concepts/layout/old/layout",
+      z_draft_core_concepts_layout_old_layout_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_core_concepts_layout_old_layout_
+              .loadLibrary()
+              .then((value) => z_draft_core_concepts_layout_old_layout_.build)));
+
+  final Note z_draft_core_concepts_layout = put(
+      "/z_draft/core_concepts/layout",
+      z_draft_core_concepts_layout_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder:
+              await z_draft_core_concepts_layout_.loadLibrary().then((value) => z_draft_core_concepts_layout_.build)));
+
+  final Note z_draft_core_concepts_navigation = put(
+      "/z_draft/core_concepts/navigation",
+      z_draft_core_concepts_navigation_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_core_concepts_navigation_
+              .loadLibrary()
+              .then((value) => z_draft_core_concepts_navigation_.build)));
+
+  final Note z_draft_core_concepts_state_vanilla_state = put(
+      "/z_draft/core_concepts/state/1.vanilla_state",
+      z_draft_core_concepts_state_vanilla_state_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_core_concepts_state_vanilla_state_
+              .loadLibrary()
+              .then((value) => z_draft_core_concepts_state_vanilla_state_.build)));
+
+  final Note z_draft_core_concepts_state = put(
+      "/z_draft/core_concepts/state",
+      z_draft_core_concepts_state_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder:
+              await z_draft_core_concepts_state_.loadLibrary().then((value) => z_draft_core_concepts_state_.build)));
+
+  final Note z_draft_core_concepts_state_StatefulBuilder = put(
+      "/z_draft/core_concepts/state/StatefulBuilder",
+      z_draft_core_concepts_state_StatefulBuilder_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_core_concepts_state_StatefulBuilder_
+              .loadLibrary()
+              .then((value) => z_draft_core_concepts_state_StatefulBuilder_.build)));
 
   final Note z_draft_other_research_remote_view = put(
       "/z_draft/other/research/remote_view",
@@ -285,6 +342,14 @@ abstract class BaseNotes {
               .loadLibrary()
               .then((value) => z_draft_other_note_self_notebook_.build)));
 
+  final Note z_draft_other_dev_host_mirror = put(
+      "/z_draft/other/dev/host_mirror",
+      z_draft_other_dev_host_mirror_g.noteInfo(),
+      (note) async => note.loadPage(
+          builder: await z_draft_other_dev_host_mirror_
+              .loadLibrary()
+              .then((value) => z_draft_other_dev_host_mirror_.build)));
+
   final Note z_draft_other_dev_devtool_vmservice = put(
       "/z_draft/other/dev/devtool/vmservice",
       z_draft_other_dev_devtool_vmservice_g.noteInfo(),
@@ -312,57 +377,6 @@ abstract class BaseNotes {
           builder: await z_draft_other_thinking_in_ui_readable_html_vs_dart_
               .loadLibrary()
               .then((value) => z_draft_other_thinking_in_ui_readable_html_vs_dart_.build)));
-
-  final Note z_draft_concepts_layout_constraints = put(
-      "/z_draft/concepts/layout/constraints",
-      z_draft_concepts_layout_constraints_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_layout_constraints_
-              .loadLibrary()
-              .then((value) => z_draft_concepts_layout_constraints_.build)));
-
-  final Note z_draft_concepts_layout_old_layout = put(
-      "/z_draft/concepts/layout/old/layout",
-      z_draft_concepts_layout_old_layout_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_layout_old_layout_
-              .loadLibrary()
-              .then((value) => z_draft_concepts_layout_old_layout_.build)));
-
-  final Note z_draft_concepts_layout = put(
-      "/z_draft/concepts/layout",
-      z_draft_concepts_layout_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_layout_.loadLibrary().then((value) => z_draft_concepts_layout_.build)));
-
-  final Note z_draft_concepts_navigation = put(
-      "/z_draft/concepts/navigation",
-      z_draft_concepts_navigation_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder:
-              await z_draft_concepts_navigation_.loadLibrary().then((value) => z_draft_concepts_navigation_.build)));
-
-  final Note z_draft_concepts_state_vanilla_state = put(
-      "/z_draft/concepts/state/1.vanilla_state",
-      z_draft_concepts_state_vanilla_state_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_state_vanilla_state_
-              .loadLibrary()
-              .then((value) => z_draft_concepts_state_vanilla_state_.build)));
-
-  final Note z_draft_concepts_state = put(
-      "/z_draft/concepts/state",
-      z_draft_concepts_state_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_state_.loadLibrary().then((value) => z_draft_concepts_state_.build)));
-
-  final Note z_draft_concepts_state_StatefulBuilder = put(
-      "/z_draft/concepts/state/StatefulBuilder",
-      z_draft_concepts_state_StatefulBuilder_g.noteInfo(),
-      (note) async => note.loadPage(
-          builder: await z_draft_concepts_state_StatefulBuilder_
-              .loadLibrary()
-              .then((value) => z_draft_concepts_state_StatefulBuilder_.build)));
 
   final Note z_draft = put("/z_draft", z_draft_g.noteInfo(),
       (note) async => note.loadPage(builder: await z_draft_.loadLibrary().then((value) => z_draft_.build)));
