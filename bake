@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-set -o errtrace  # -E trap inherited in sub script
-set -o errexit   # -e
-set -o functrace # -T If set, any trap on DEBUG and RETURN are inherited by shell functions
-set -o pipefail  # default pipeline status==last command status, If set, status=any command fail
-#set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
 _real_path() (
@@ -31,7 +26,7 @@ _exec() {
   local project
   project=$(basename "$PWD")
   #  [[ "$PWD" == "$SCRIPT_DIR" ]] && project="_root"
-  _info "${FUNCNAME[1]}() ▶︎【$*】"
+  echo "${FUNCNAME[1]}() ▶︎【$*】"
   "$@"
   return $?
 }
@@ -90,11 +85,6 @@ p.all() {
   (cd spaces/flutter_note && _exec "$@")
 }
 
-bake.cmd.set --cmd p.note         --summary "<project> run cmd on note project"         --usage "./$SCRIPT_FILE note [any command]"
-bake.cmd.set --cmd p.flutter_note --summary "<project> run cmd on flutter_note project" --usage "./$SCRIPT_FILE flutter_note [any command]"
-bake.cmd.set --cmd p.mate                                                               --usage "./$SCRIPT_FILE mate [any command]"
-bake.cmd.set --cmd p.mate_flutter --summary "<project> run cmd on mate_flutter project" --usage "./$SCRIPT_FILE mate_flutter [any command]"
-bake.cmd.set --cmd p.note_test    --summary "<project> run cmd on note_test project"    --usage "./$SCRIPT_FILE note_test [any command]"
 p.note() (cd note && _exec "$@")
 p.flutter_note() (cd spaces/flutter_note && _exec "$@")
 p.mate() (cd mate && _exec "$@")
@@ -102,13 +92,10 @@ p.mate_flutter() (cd mate_flutter && _exec "$@")
 p.note_test() (cd note_test && _exec "$@")
 p.note_tools() (cd note_tools && _exec "$@")
 
-bake.cmd.set --cmd get --usage "./$SCRIPT_FILE get" --summary "<shortcut> ./bake all flutter pub get"
 get() { _exec all flutter pub get; }
 
-bake.cmd.set --cmd test --usage "./$SCRIPT_FILE test" --summary "<shortcut> run all tests in all projects"
-bake.cmd.set --cmd test.bake --usage "./$SCRIPT_FILE test" --summary "<shortcut> run all tests in all projects"
-test() (./test/bake2_test.bash test ; _exec all flutter test ;)
-test.bake() ( ./test/bake2_test.bash test ; )
+test() { ./test/bake2_test.bash test ; _exec all flutter test ;}
+test.bake() { ./test/bake2_test.bash test ; }
 
 # get ip only work on macos
 #   shellcheck disable=SC2155
@@ -144,6 +131,7 @@ docker.run() {      _exec echo "note preview http://localhost:8888/note/"; _exec
 docker.preview() {  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
 docker.debug() {    _exec docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
 docker.push() {     docker image push younpc/note:latest ; }
+
 
 ####################################################
 # app entry script & _root cmd

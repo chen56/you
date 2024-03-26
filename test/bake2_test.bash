@@ -38,7 +38,10 @@ function bake.test.all() {
       # TIMEFORMAT: https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
       # %R==real %U==user %S==sys %P==(user+sys)/real
       TIMEFORMAT="real %R user %U sys %S percent %P"
-      time "$functionName" #2>&1
+      (
+        # 隔离test在子shell里，防止环境互相影响
+        time "$functionName" ;
+      )# 2>&1
     done <<< "$(compgen -A function)"
 }
 
@@ -321,96 +324,96 @@ test.assert_sample(){
   assert $((1+1)) @is 2
 }
 
-test.bake.path.dirname(){
-  assert "$(bake.path.dirname a/b/c '/')" @is "a/b"
-  assert "$(bake.path.dirname a     '/')" @is ""
-  assert "$(bake.path.dirname ""    '/')" @is ""
+test.bake._path_dirname(){
+  assert "$(bake._path_dirname a/b/c '/')" @is "a/b"
+  assert "$(bake._path_dirname a     '/')" @is ""
+  assert "$(bake._path_dirname ""    '/')" @is ""
 
   # abstract path
-  assert "$(bake.path.dirname /a/b/c '/')" @is "/a/b"
-  assert "$(bake.path.dirname /a     '/')" @is ""
-  assert "$(bake.path.dirname /      '/')" @is ""
+  assert "$(bake._path_dirname /a/b/c '/')" @is "/a/b"
+  assert "$(bake._path_dirname /a     '/')" @is ""
+  assert "$(bake._path_dirname /      '/')" @is ""
 }
-test.bake.path.first(){
-  assert "$(bake.path.first a/b/c  '/')" @is "a"
-  assert "$(bake.path.first a      '/')" @is "a"
-  assert "$(bake.path.first ''     '/')" @is ""
+test.bake._path_first(){
+  assert "$(bake._path_first a/b/c  '/')" @is "a"
+  assert "$(bake._path_first a      '/')" @is "a"
+  assert "$(bake._path_first ''     '/')" @is ""
 
-  assert "$(bake.path.first /a/b/c '/')" @is "/a"
+  assert "$(bake._path_first /a/b/c '/')" @is "/a"
 }
 
-test.bake.path.basename(){
-  assert "$(bake.path.basename a/b/c '/')" @is "c"
-  assert "$(bake.path.basename a     '/')" @is "a"
-  assert "$(bake.path.basename ""    '/')" @is ""
+test.bake._path_basename(){
+  assert "$(bake._path_basename a/b/c '/')" @is "c"
+  assert "$(bake._path_basename a     '/')" @is "a"
+  assert "$(bake._path_basename ""    '/')" @is ""
 
   # abstract path
-  assert "$(bake.path.basename "/a"  '/')" @is "a"
-  assert "$(bake.path.basename "/"  '/')"  @is ""
+  assert "$(bake._path_basename "/a"  '/')" @is "a"
+  assert "$(bake._path_basename "/"  '/')"  @is ""
 }
 
-test.bake.str.cutLeft(){
-  assert "$(bake.str.cutLeft a/b/c 'a/b/')" @is "c"
-  assert "$(bake.str.cutLeft a/b/c '')" @is "a/b/c"
+test.bake._str_cutLeft(){
+  assert "$(bake._str_cutLeft a/b/c 'a/b/')" @is "c"
+  assert "$(bake._str_cutLeft a/b/c '')" @is "a/b/c"
 
-  assert "$(bake.str.cutLeft /a/b/c '/')" @is "a/b/c"
+  assert "$(bake._str_cutLeft /a/b/c '/')" @is "a/b/c"
 
-  assert "$(bake.str.cutLeft a/b/c 'notStart')" @is "a/b/c"
-  assert "$(bake.str.cutLeft a/b/c '/')"        @is "a/b/c"
+  assert "$(bake._str_cutLeft a/b/c 'notStart')" @is "a/b/c"
+  assert "$(bake._str_cutLeft a/b/c '/')"        @is "a/b/c"
 }
 
 
-test.bake.cmd.up_chain(){
-  assert "$(bake.cmd.up_chain a.b)" @is_escape "a.b\na\n_root"
-  assert "$(bake.cmd.up_chain '_root')" @is "_root"
-  assert "$(bake.cmd.up_chain '')" @is "_root"
+test.bake._cmd_up_chain(){
+  assert "$(bake._cmd_up_chain a.b)" @is_escape "a.b\na\n_root"
+  assert "$(bake._cmd_up_chain '_root')" @is "_root"
+  assert "$(bake._cmd_up_chain '')" @is "_root"
 }
-test.bake.cmd.children(){
-  assert "$(bake.cmd.children bake.test)" @is_escape "all"
+test.bake._cmd_children(){
+  assert "$(bake._cmd_children bake.test)" @is_escape "all"
 }
 
 test.bake.str.split(){
-  assert "$(bake.str.split "a/b" '/')"  @is_escape "a\nb"
-  assert "$(bake.str.split "a/b/" '/')" @is_escape "a\nb"
+  assert "$(bake._str_split "a/b" '/')"  @is_escape "a\nb"
+  assert "$(bake._str_split "a/b/" '/')" @is_escape "a\nb"
 
   # abstract path
-  assert "$(bake.str.split "/a/b" '/')"  @is_escape "\na\nb"
-  assert "$(bake.str.split "/a/b/" '/')" @is_escape "\na\nb"
+  assert "$(bake._str_split "/a/b" '/')"  @is_escape "\na\nb"
+  assert "$(bake._str_split "/a/b/" '/')" @is_escape "\na\nb"
 
 
   # 包含破坏性特殊字符
-  assert "$(bake.str.split $'a\nb'  "/" )"  @is_escape "a\nb"
-  assert "$(bake.str.split $'a\n/b' "/" )"  @is_escape "a\n\nb"
-  assert "$(bake.str.split "a
+  assert "$(bake._str_split $'a\nb'  "/" )"  @is_escape "a\nb"
+  assert "$(bake._str_split $'a\n/b' "/" )"  @is_escape "a\n\nb"
+  assert "$(bake._str_split "a
 /b
 " )"  @is_escape "a\n\nb"
 
   # default delimiter
-  assert "$(bake.str.split "a/b"  )"  @is_escape "a\nb"
+  assert "$(bake._str_split "a/b"  )"  @is_escape "a\nb"
 
   # other delimiter
-  assert "$(bake.str.split "a.b" '.')"  @is_escape "a\nb"
+  assert "$(bake._str_split "a.b" '.')"  @is_escape "a\nb"
 }
 
-test.bake.cmd.register()(
-  bake.cmd.register
-  assert "$(_self | grep test.bake.cmd.register)" \
-    @contains "test.bake.cmd.register"
-)
+test.bake._cmd_register(){
+  bake._cmd_register
+  assert "$(bake.info | grep test.bake._cmd_register)" \
+    @contains "test.bake._cmd_register"
+}
 test.data.children(){
-  assert "$(bake.data.children "bake.opt.set/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
+  assert "$(bake._data_children "bake.opt.set/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
 }
 
-test.bake.opt.cmd_chain_opts(){
-  assert "$(bake.opt.cmd_chain_opts "_root")" @is \
-"_root/opts/help
-_root/opts/log
+test.bake._opt_cmd_chain_opts(){
+  assert "$(bake._opt_cmd_chain_opts "_root")" @is \
+"_root/opts/debug
+_root/opts/help
 _root/opts/verbose"
 
   # "include parent option"
-  assert "$(bake.opt.cmd_chain_opts "bake.opt.set")" @is \
-"_root/opts/help
-_root/opts/log
+  assert "$(bake._opt_cmd_chain_opts "bake.opt.set")" @is \
+"_root/opts/debug
+_root/opts/help
 _root/opts/verbose
 bake.opt.set/opts/abbr
 bake.opt.set/opts/cmd
@@ -442,16 +445,16 @@ declare optShift=4;'
   assert "$(bake.opt.parse "test.cmd.parse" --no_exists_opt)" @is "declare optShift=0;"
 }
 
-test.bake.opt.set()(
+test.bake.opt.set(){
   bake.opt.set --cmd "test.opt.add" --name boolopt --type bool
-)
+}
 
-test.bake.opt.value.parse_and_get_value()(
+test.bake.opt.value.parse_and_get_value(){
   bake.opt.set --cmd "test.opt.add" --name xxx --type string
   echo $(bake.opt.parse "test.opt.add" --xxx chen)
   eval "$(bake.opt.parse "test.opt.add" --xxx chen)"
   assert "$xxx" @is "chen"
-)
+}
 
 
 function test(){
