@@ -420,7 +420,11 @@ bake._show_cmd_help() {
 
   echo
 
-  echo "Currently running: $(bake._pwd)/$BAKE_FILE $cmd $@"
+  if [[ "$cmd" == "_root" ]] ;then
+      echo "Currently running: $(bake._pwd)/$BAKE_FILE $@"
+  else
+      echo "Currently running: $(bake._pwd)/$BAKE_FILE $cmd $@"
+  fi
 
   echo
 
@@ -714,10 +718,9 @@ bake.go() {
     bake._show_cmd_help "$cmd" "$@"
     return 0
   fi
-  if [[ "$log" != "" ]]; then LOG="$log"; fi
 
-  #    # parse opts
-  if ! declare -f "$cmd" >/dev/null 2>&1; then
+  #  if fileExist then show help
+  if ! declare -F "$cmd" | grep "$cmd" &>/dev/null  2>&1; then
     if [[ "${_cmdTree["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
       bake._show_cmd_help "$cmd" "$@"
       return 0
