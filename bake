@@ -15,6 +15,11 @@ SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
+update(){ curl -L -O https://github.com/chen56/note/raw/main/bake.bash ; }
+if ! [[ -f "$SCRIPT_DIR/bake.bash" ]]; then
+  update
+fi
+
 # include common script
 source "$SCRIPT_DIR/bake.bash"
 
