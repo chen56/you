@@ -9,7 +9,7 @@ import 'dart:ui' as _i5;
 
 /// class OverlayEntry implements Listenable
 class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
-  /// OverlayEntry OverlayEntry({required Widget Function(BuildContext) builder, bool opaque = false, bool maintainState = false})
+  /// OverlayEntry OverlayEntry({required Widget Function(BuildContext) builder, bool opaque = false, bool maintainState = false, bool canSizeOverlay = false})
   OverlayEntry$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required super.builder,
@@ -19,6 +19,9 @@ class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
 
     /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
     super.maintainState,
+
+    /// optionalParameters: {bool canSizeOverlay = false} , default:processed=BooleanLiteralImpl
+    super.canSizeOverlay,
   })  : mateParams = {
           'builder': _i2.BuilderArg<_i3.WidgetBuilder>(
             name: 'builder',
@@ -37,6 +40,12 @@ class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'canSizeOverlay': _i2.BuilderArg<bool>(
+            name: 'canSizeOverlay',
+            init: canSizeOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
         },
         super() {
     mateBuilderName = 'OverlayEntry';
@@ -45,6 +54,7 @@ class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
           builder: p.get('builder').build(),
           opaque: p.get('opaque').build(),
           maintainState: p.get('maintainState').build(),
+          canSizeOverlay: p.get('canSizeOverlay').build(),
         );
   }
 

@@ -276,7 +276,7 @@ class RotationTransition$Mate extends _i1.RotationTransition with _i2.Mate {
 
 /// class SizeTransition extends AnimatedWidget
 class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
-  /// SizeTransition SizeTransition({Key? key, Axis axis = Axis.vertical, required Animation<double> sizeFactor, double axisAlignment = 0.0, Widget? child})
+  /// SizeTransition SizeTransition({Key? key, Axis axis = Axis.vertical, required Animation<double> sizeFactor, double axisAlignment = 0.0, double? fixedCrossAxisSizeFactor, Widget? child})
   SizeTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -289,6 +289,9 @@ class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
 
     /// optionalParameters: {double axisAlignment = 0.0} , default:processed=DoubleLiteralImpl
     super.axisAlignment,
+
+    /// optionalParameters: {double? fixedCrossAxisSizeFactor} , default:none
+    super.fixedCrossAxisSizeFactor,
 
     /// optionalParameters: {Widget? child} , default:none
     super.child,
@@ -315,6 +318,11 @@ class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
+          'fixedCrossAxisSizeFactor': _i2.BuilderArg<double?>(
+            name: 'fixedCrossAxisSizeFactor',
+            init: fixedCrossAxisSizeFactor,
+            isNamed: true,
+          ),
           'child': _i2.BuilderArg<_i6.Widget?>(
             name: 'child',
             init: child,
@@ -329,6 +337,7 @@ class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
           axis: p.get('axis').build(),
           sizeFactor: p.get('sizeFactor').build(),
           axisAlignment: p.get('axisAlignment').build(),
+          fixedCrossAxisSizeFactor: p.get('fixedCrossAxisSizeFactor').build(),
           child: p.get('child').build(),
         );
   }

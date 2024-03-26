@@ -21,21 +21,22 @@ import 'package:flutter/src/rendering/shifted_box.dart' as _i17;
 import 'package:flutter/src/rendering/custom_layout.dart' as _i18;
 import 'package:flutter/src/rendering/box.dart' as _i19;
 import 'package:flutter/src/painting/basic_types.dart' as _i20;
-import 'package:flutter/src/rendering/stack.dart' as _i21;
-import 'package:flutter/src/rendering/flex.dart' as _i22;
-import 'package:flutter/src/rendering/wrap.dart' as _i23;
-import 'package:flutter/src/rendering/flow.dart' as _i24;
-import 'package:flutter/src/painting/inline_span.dart' as _i25;
-import 'package:flutter/src/painting/text_painter.dart' as _i26;
-import 'package:flutter/src/painting/text_scaler.dart' as _i27;
-import 'package:flutter/src/painting/strut_style.dart' as _i28;
-import 'package:flutter/src/rendering/selection.dart' as _i29;
-import 'package:flutter/src/animation/animation.dart' as _i30;
-import 'package:flutter/src/painting/decoration_image.dart' as _i31;
-import 'package:flutter/src/services/asset_bundle.dart' as _i32;
-import 'package:flutter/src/services/mouse_tracking.dart' as _i33;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i34;
-import 'package:flutter/src/semantics/semantics.dart' as _i35;
+import 'package:flutter/rendering.dart' as _i21;
+import 'package:flutter/src/rendering/stack.dart' as _i22;
+import 'package:flutter/src/rendering/flex.dart' as _i23;
+import 'package:flutter/src/rendering/wrap.dart' as _i24;
+import 'package:flutter/src/rendering/flow.dart' as _i25;
+import 'package:flutter/src/painting/inline_span.dart' as _i26;
+import 'package:flutter/src/painting/text_painter.dart' as _i27;
+import 'package:flutter/src/painting/text_scaler.dart' as _i28;
+import 'package:flutter/src/painting/strut_style.dart' as _i29;
+import 'package:flutter/src/rendering/selection.dart' as _i30;
+import 'package:flutter/src/animation/animation.dart' as _i31;
+import 'package:flutter/src/painting/decoration_image.dart' as _i32;
+import 'package:flutter/src/services/asset_bundle.dart' as _i33;
+import 'package:flutter/src/services/mouse_tracking.dart' as _i34;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i35;
+import 'package:flutter/src/semantics/semantics.dart' as _i36;
 export 'package:flutter/animation.dart';
 export 'package:flutter/painting.dart';
 
@@ -2166,7 +2167,7 @@ class LimitedBox$Mate extends _i1.LimitedBox with _i2.Mate {
 
 /// class OverflowBox extends SingleChildRenderObjectWidget
 class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
-  /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
+  /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, OverflowBoxFit fit = OverflowBoxFit.max, Widget? child})
   OverflowBox$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -2185,6 +2186,9 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
 
     /// optionalParameters: {double? maxHeight} , default:none
     super.maxHeight,
+
+    /// optionalParameters: {OverflowBoxFit fit = OverflowBoxFit.max} , default:processed=PrefixedIdentifierImpl
+    super.fit,
 
     /// optionalParameters: {Widget? child} , default:none
     super.child,
@@ -2220,6 +2224,12 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
             init: maxHeight,
             isNamed: true,
           ),
+          'fit': _i2.BuilderArg<_i17.OverflowBoxFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i21.OverflowBoxFit.max,
+          ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
             init: child,
@@ -2236,6 +2246,7 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
           maxWidth: p.get('maxWidth').build(),
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
+          fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
   }
@@ -2725,7 +2736,7 @@ class Stack$Mate extends _i1.Stack with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i21.StackFit>(
+          'fit': _i2.BuilderArg<_i22.StackFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
@@ -2807,7 +2818,7 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
             isNamed: true,
             defaultValue: _i4.Clip.hardEdge,
           ),
-          'sizing': _i2.BuilderArg<_i21.StackFit>(
+          'sizing': _i2.BuilderArg<_i22.StackFit>(
             name: 'sizing',
             init: sizing,
             isNamed: true,
@@ -2980,7 +2991,7 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'rect': _i2.BuilderArg<_i21.RelativeRect>(
+          'rect': _i2.BuilderArg<_i22.RelativeRect>(
             name: 'rect',
             init: rect,
             isNamed: true,
@@ -3205,19 +3216,19 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
             init: direction,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i23.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
             defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i23.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
             defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i23.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
@@ -3305,19 +3316,19 @@ class Row$Mate extends _i1.Row with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i23.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
             defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i23.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
             defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i23.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
@@ -3397,19 +3408,19 @@ class Column$Mate extends _i1.Column with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i23.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
             defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i23.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
             defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i23.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
@@ -3483,7 +3494,7 @@ class Flexible$Mate extends _i1.Flexible with _i2.Mate {
             isNamed: true,
             defaultValue: 1,
           ),
-          'fit': _i2.BuilderArg<_i22.FlexFit>(
+          'fit': _i2.BuilderArg<_i23.FlexFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
@@ -3602,7 +3613,7 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             isNamed: true,
             defaultValue: _i10.Axis.horizontal,
           ),
-          'alignment': _i2.BuilderArg<_i23.WrapAlignment>(
+          'alignment': _i2.BuilderArg<_i24.WrapAlignment>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -3614,7 +3625,7 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'runAlignment': _i2.BuilderArg<_i23.WrapAlignment>(
+          'runAlignment': _i2.BuilderArg<_i24.WrapAlignment>(
             name: 'runAlignment',
             init: runAlignment,
             isNamed: true,
@@ -3626,7 +3637,7 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i23.WrapCrossAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i24.WrapCrossAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
@@ -3698,7 +3709,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
+          'delegate': _i2.BuilderArg<_i25.FlowDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -3745,7 +3756,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
+          'delegate': _i2.BuilderArg<_i25.FlowDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -3828,7 +3839,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'text': _i2.BuilderArg<_i25.InlineSpan>(
+          'text': _i2.BuilderArg<_i26.InlineSpan>(
             name: 'text',
             init: text,
             isNamed: true,
@@ -3850,13 +3861,13 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'overflow': _i2.BuilderArg<_i26.TextOverflow>(
+          'overflow': _i2.BuilderArg<_i27.TextOverflow>(
             name: 'overflow',
             init: overflow,
             isNamed: true,
             defaultValue: _i10.TextOverflow.clip,
           ),
-          'textScaler': _i2.BuilderArg<_i27.TextScaler>(
+          'textScaler': _i2.BuilderArg<_i28.TextScaler>(
             name: 'textScaler',
             init: textScaler,
             isNamed: true,
@@ -3872,12 +3883,12 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i28.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i29.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i26.TextWidthBasis>(
+          'textWidthBasis': _i2.BuilderArg<_i27.TextWidthBasis>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
@@ -3888,7 +3899,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'selectionRegistrar': _i2.BuilderArg<_i29.SelectionRegistrar?>(
+          'selectionRegistrar': _i2.BuilderArg<_i30.SelectionRegistrar?>(
             name: 'selectionRegistrar',
             init: selectionRegistrar,
             isNamed: true,
@@ -4015,7 +4026,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             init: color,
             isNamed: true,
           ),
-          'opacity': _i2.BuilderArg<_i30.Animation<double>?>(
+          'opacity': _i2.BuilderArg<_i31.Animation<double>?>(
             name: 'opacity',
             init: opacity,
             isNamed: true,
@@ -4036,7 +4047,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             isNamed: true,
             defaultValue: _i10.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i31.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i32.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
@@ -4118,7 +4129,7 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'bundle': _i2.BuilderArg<_i32.AssetBundle>(
+          'bundle': _i2.BuilderArg<_i33.AssetBundle>(
             name: 'bundle',
             init: bundle,
             isNamed: true,
@@ -4246,7 +4257,7 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
             init: onPointerUp,
             isNamed: true,
           ),
-          'onPointerHover': _i2.BuilderArg<_i33.PointerHoverEventListener?>(
+          'onPointerHover': _i2.BuilderArg<_i34.PointerHoverEventListener?>(
             name: 'onPointerHover',
             init: onPointerHover,
             isNamed: true,
@@ -4344,22 +4355,22 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'onEnter': _i2.BuilderArg<_i33.PointerEnterEventListener?>(
+          'onEnter': _i2.BuilderArg<_i34.PointerEnterEventListener?>(
             name: 'onEnter',
             init: onEnter,
             isNamed: true,
           ),
-          'onExit': _i2.BuilderArg<_i33.PointerExitEventListener?>(
+          'onExit': _i2.BuilderArg<_i34.PointerExitEventListener?>(
             name: 'onExit',
             init: onExit,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i33.PointerHoverEventListener?>(
+          'onHover': _i2.BuilderArg<_i34.PointerHoverEventListener?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'cursor': _i2.BuilderArg<_i34.MouseCursor>(
+          'cursor': _i2.BuilderArg<_i35.MouseCursor>(
             name: 'cursor',
             init: cursor,
             isNamed: true,
@@ -4578,7 +4589,7 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
 
 /// class Semantics extends SingleChildRenderObjectWidget
 class Semantics$Mate extends _i1.Semantics with _i2.Mate {
-  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, bool? expanded, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
+  /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool blockUserActions = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, bool? expanded, int? maxValueLength, int? currentValueLength, String? identifier, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -4672,6 +4683,9 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
 
     /// optionalParameters: {int? currentValueLength} , default:none
     super.currentValueLength,
+
+    /// optionalParameters: {String? identifier} , default:none
+    super.identifier,
 
     /// optionalParameters: {String? label} , default:none
     super.label,
@@ -4937,12 +4951,17 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: currentValueLength,
             isNamed: true,
           ),
+          'identifier': _i2.BuilderArg<String?>(
+            name: 'identifier',
+            init: identifier,
+            isNamed: true,
+          ),
           'label': _i2.BuilderArg<String?>(
             name: 'label',
             init: label,
             isNamed: true,
           ),
-          'attributedLabel': _i2.BuilderArg<_i35.AttributedString?>(
+          'attributedLabel': _i2.BuilderArg<_i36.AttributedString?>(
             name: 'attributedLabel',
             init: attributedLabel,
             isNamed: true,
@@ -4952,7 +4971,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: value,
             isNamed: true,
           ),
-          'attributedValue': _i2.BuilderArg<_i35.AttributedString?>(
+          'attributedValue': _i2.BuilderArg<_i36.AttributedString?>(
             name: 'attributedValue',
             init: attributedValue,
             isNamed: true,
@@ -4962,7 +4981,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: increasedValue,
             isNamed: true,
           ),
-          'attributedIncreasedValue': _i2.BuilderArg<_i35.AttributedString?>(
+          'attributedIncreasedValue': _i2.BuilderArg<_i36.AttributedString?>(
             name: 'attributedIncreasedValue',
             init: attributedIncreasedValue,
             isNamed: true,
@@ -4972,7 +4991,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: decreasedValue,
             isNamed: true,
           ),
-          'attributedDecreasedValue': _i2.BuilderArg<_i35.AttributedString?>(
+          'attributedDecreasedValue': _i2.BuilderArg<_i36.AttributedString?>(
             name: 'attributedDecreasedValue',
             init: attributedDecreasedValue,
             isNamed: true,
@@ -4982,7 +5001,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: hint,
             isNamed: true,
           ),
-          'attributedHint': _i2.BuilderArg<_i35.AttributedString?>(
+          'attributedHint': _i2.BuilderArg<_i36.AttributedString?>(
             name: 'attributedHint',
             init: attributedHint,
             isNamed: true,
@@ -5007,12 +5026,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'sortKey': _i2.BuilderArg<_i35.SemanticsSortKey?>(
+          'sortKey': _i2.BuilderArg<_i36.SemanticsSortKey?>(
             name: 'sortKey',
             init: sortKey,
             isNamed: true,
           ),
-          'tagForChildren': _i2.BuilderArg<_i35.SemanticsTag?>(
+          'tagForChildren': _i2.BuilderArg<_i36.SemanticsTag?>(
             name: 'tagForChildren',
             init: tagForChildren,
             isNamed: true,
@@ -5077,22 +5096,22 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i35.MoveCursorHandler?>(
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i36.MoveCursorHandler?>(
             name: 'onMoveCursorForwardByCharacter',
             init: onMoveCursorForwardByCharacter,
             isNamed: true,
           ),
-          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i35.MoveCursorHandler?>(
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i36.MoveCursorHandler?>(
             name: 'onMoveCursorBackwardByCharacter',
             init: onMoveCursorBackwardByCharacter,
             isNamed: true,
           ),
-          'onSetSelection': _i2.BuilderArg<_i35.SetSelectionHandler?>(
+          'onSetSelection': _i2.BuilderArg<_i36.SetSelectionHandler?>(
             name: 'onSetSelection',
             init: onSetSelection,
             isNamed: true,
           ),
-          'onSetText': _i2.BuilderArg<_i35.SetTextHandler?>(
+          'onSetText': _i2.BuilderArg<_i36.SetTextHandler?>(
             name: 'onSetText',
             init: onSetText,
             isNamed: true,
@@ -5107,7 +5126,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDidLoseAccessibilityFocus,
             isNamed: true,
           ),
-          'customSemanticsActions': _i2.BuilderArg<Map<_i35.CustomSemanticsAction, _i4.VoidCallback>?>(
+          'customSemanticsActions': _i2.BuilderArg<Map<_i36.CustomSemanticsAction, _i4.VoidCallback>?>(
             name: 'customSemanticsActions',
             init: customSemanticsActions,
             isNamed: true,
@@ -5148,6 +5167,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           expanded: p.get('expanded').build(),
           maxValueLength: p.get('maxValueLength').build(),
           currentValueLength: p.get('currentValueLength').build(),
+          identifier: p.get('identifier').build(),
           label: p.get('label').build(),
           attributedLabel: p.get('attributedLabel').build(),
           value: p.get('value').build(),
@@ -5243,7 +5263,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'properties': _i2.BuilderArg<_i35.SemanticsProperties>(
+          'properties': _i2.BuilderArg<_i36.SemanticsProperties>(
             name: 'properties',
             init: properties,
             isNamed: true,

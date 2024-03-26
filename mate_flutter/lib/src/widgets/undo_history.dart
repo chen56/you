@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i6;
 
 /// class UndoHistory<T> extends StatefulWidget
 class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
-  /// UndoHistory<T> UndoHistory({Key? key, bool Function(T?, T)? shouldChangeUndoStack, required ValueNotifier<T> value, required void Function(T) onTriggered, required FocusNode focusNode, UndoHistoryController? controller, required Widget child})
+  /// UndoHistory<T> UndoHistory({Key? key, bool Function(T?, T)? shouldChangeUndoStack, required ValueNotifier<T> value, required void Function(T) onTriggered, required FocusNode focusNode, T Function(T)? undoStackModifier, UndoHistoryController? controller, required Widget child})
   UndoHistory$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -26,6 +26,9 @@ class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
 
     /// optionalParameters: {required FocusNode focusNode} , default:none
     required super.focusNode,
+
+    /// optionalParameters: {T Function(T)? undoStackModifier} , default:none
+    super.undoStackModifier,
 
     /// optionalParameters: {UndoHistoryController? controller} , default:none
     super.controller,
@@ -62,6 +65,11 @@ class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
             init: focusNode,
             isNamed: true,
           ),
+          'undoStackModifier': _i2.BuilderArg<T Function(T)?>(
+            name: 'undoStackModifier',
+            init: undoStackModifier,
+            isNamed: true,
+          ),
           'controller': _i2.BuilderArg<_i1.UndoHistoryController?>(
             name: 'controller',
             init: controller,
@@ -82,6 +90,7 @@ class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
           value: p.get('value').build(),
           onTriggered: p.get('onTriggered').build(),
           focusNode: p.get('focusNode').build(),
+          undoStackModifier: p.get('undoStackModifier').build(),
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );

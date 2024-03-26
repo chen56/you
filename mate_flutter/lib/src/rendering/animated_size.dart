@@ -13,7 +13,7 @@ import 'package:flutter/src/rendering/box.dart' as _i9;
 
 /// class RenderAnimatedSize extends RenderAligningShiftedBox
 class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
-  /// RenderAnimatedSize RenderAnimatedSize({required TickerProvider vsync, required Duration duration, Duration? reverseDuration, Curve curve = Curves.linear, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.hardEdge})
+  /// RenderAnimatedSize RenderAnimatedSize({required TickerProvider vsync, required Duration duration, Duration? reverseDuration, Curve curve = Curves.linear, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.hardEdge, void Function()? onEnd})
   RenderAnimatedSize$Mate({
     /// optionalParameters: {required TickerProvider vsync} , default:none
     required super.vsync,
@@ -38,6 +38,9 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {void Function()? onEnd} , default:none
+    super.onEnd,
   })  : mateParams = {
           'vsync': _i2.BuilderArg<_i3.TickerProvider>(
             name: 'vsync',
@@ -82,6 +85,11 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
             isNamed: true,
             defaultValue: _i8.Clip.hardEdge,
           ),
+          'onEnd': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'RenderAnimatedSize';
@@ -95,6 +103,7 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          onEnd: p.get('onEnd').build(),
         );
   }
 

@@ -16,7 +16,7 @@ import 'package:flutter/src/material/material_state.dart' as _i12;
 
 /// class PaginatedDataTable extends StatefulWidget
 class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
-  /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary, MaterialStateProperty<Color?>? headingRowColor})
+  /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary, MaterialStateProperty<Color?>? headingRowColor, bool showEmptyRows = true})
   PaginatedDataTable$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -95,6 +95,9 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
 
     /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , default:none
     super.headingRowColor,
+
+    /// optionalParameters: {bool showEmptyRows = true} , default:processed=BooleanLiteralImpl
+    super.showEmptyRows,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -234,6 +237,12 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
             init: headingRowColor,
             isNamed: true,
           ),
+          'showEmptyRows': _i2.BuilderArg<bool>(
+            name: 'showEmptyRows',
+            init: showEmptyRows,
+            isNamed: true,
+            defaultValue: true,
+          ),
         },
         super() {
     mateBuilderName = 'PaginatedDataTable';
@@ -265,6 +274,7 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
           controller: p.get('controller').build(),
           primary: p.get('primary').build(),
           headingRowColor: p.get('headingRowColor').build(),
+          showEmptyRows: p.get('showEmptyRows').build(),
         );
   }
 

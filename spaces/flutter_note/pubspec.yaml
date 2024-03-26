@@ -116,6 +116,7 @@ flutter:
     - lib/notes/Improve_app/
     - lib/notes/Improve_app/1.overview/
     - lib/notes/Improve_app/web_optimization/
+    - lib/notes/core_concepts/layout/box/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -4,10 +4,10 @@
 import 'package:flutter/src/widgets/list_wheel_scroll_view.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
-import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i5;
-import 'package:flutter/src/foundation/key.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i7;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i4;
+import 'package:flutter/src/painting/basic_types.dart' as _i5;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
+import 'package:flutter/src/foundation/key.dart' as _i7;
 import 'package:flutter/rendering.dart' as _i8;
 import 'package:flutter/src/foundation/basic_types.dart' as _i9;
 import 'dart:ui' as _i10;
@@ -98,23 +98,42 @@ class ListWheelChildBuilderDelegate$Mate extends _i1.ListWheelChildBuilderDelega
 
 /// class FixedExtentScrollController extends ScrollController
 class FixedExtentScrollController$Mate extends _i1.FixedExtentScrollController with _i2.Mate {
-  /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0})
-  FixedExtentScrollController$Mate(
-      {
-      /// optionalParameters: {int initialItem = 0} , default:processed=IntegerLiteralImpl
-      super.initialItem})
-      : mateParams = {
+  /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0, void Function(ScrollPosition)? onAttach, void Function(ScrollPosition)? onDetach})
+  FixedExtentScrollController$Mate({
+    /// optionalParameters: {int initialItem = 0} , default:processed=IntegerLiteralImpl
+    super.initialItem,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onAttach} , default:none
+    super.onAttach,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onDetach} , default:none
+    super.onDetach,
+  })  : mateParams = {
           'initialItem': _i2.BuilderArg<int>(
             name: 'initialItem',
             init: initialItem,
             isNamed: true,
             defaultValue: 0,
-          )
+          ),
+          'onAttach': _i2.BuilderArg<_i4.ScrollControllerCallback?>(
+            name: 'onAttach',
+            init: onAttach,
+            isNamed: true,
+          ),
+          'onDetach': _i2.BuilderArg<_i4.ScrollControllerCallback?>(
+            name: 'onDetach',
+            init: onDetach,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'FixedExtentScrollController';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
+    mateBuilder = (p) => FixedExtentScrollController$Mate(
+          initialItem: p.get('initialItem').build(),
+          onAttach: p.get('onAttach').build(),
+          onDetach: p.get('onDetach').build(),
+        );
   }
 
   @override
@@ -166,7 +185,7 @@ class FixedExtentMetrics$Mate extends _i1.FixedExtentMetrics with _i2.Mate {
             init: viewportDimension,
             isNamed: true,
           ),
-          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+          'axisDirection': _i2.BuilderArg<_i5.AxisDirection>(
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
@@ -208,7 +227,7 @@ class FixedExtentScrollPhysics$Mate extends _i1.FixedExtentScrollPhysics with _i
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       super.parent})
       : mateParams = {
-          'parent': _i2.BuilderArg<_i5.ScrollPhysics?>(
+          'parent': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'parent',
             init: parent,
             isNamed: true,
@@ -279,17 +298,17 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {required List<Widget> children} , default:none
     required super.children,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i6.Key?>(
+          'key': _i2.BuilderArg<_i7.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i7.ScrollController?>(
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i5.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -451,17 +470,17 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {required ListWheelChildDelegate childDelegate} , default:none
     required super.childDelegate,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i6.Key?>(
+          'key': _i2.BuilderArg<_i7.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i7.ScrollController?>(
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i5.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -641,7 +660,7 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i6.Key?>(
+          'key': _i2.BuilderArg<_i7.Key?>(
             name: 'key',
             init: key,
             isNamed: true,

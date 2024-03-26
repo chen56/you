@@ -10,16 +10,16 @@ import 'package:flutter/src/painting/borders.dart' as _i6;
 import 'package:flutter/src/painting/text_style.dart' as _i7;
 import 'package:flutter/src/rendering/box.dart' as _i8;
 import 'package:flutter/src/services/text_input.dart' as _i9;
-import 'package:flutter/src/widgets/editable_text.dart' as _i10;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i11;
-import 'package:flutter/src/gestures/tap.dart' as _i12;
-import 'package:flutter/src/foundation/basic_types.dart' as _i13;
+import 'package:flutter/src/foundation/basic_types.dart' as _i10;
+import 'package:flutter/src/widgets/editable_text.dart' as _i11;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i12;
+import 'package:flutter/src/gestures/tap.dart' as _i13;
 import 'package:flutter/src/material/material_state.dart' as _i14;
 import 'package:flutter/src/painting/edge_insets.dart' as _i15;
 
 /// class SearchAnchor extends StatefulWidget
 class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
-  /// SearchAnchor SearchAnchor({Key? key, bool? isFullScreen, SearchController? searchController, Widget Function(Iterable<Widget>)? viewBuilder, Widget? viewLeading, Iterable<Widget>? viewTrailing, String? viewHintText, Color? viewBackgroundColor, double? viewElevation, Color? viewSurfaceTintColor, BorderSide? viewSide, OutlinedBorder? viewShape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor, BoxConstraints? viewConstraints, TextCapitalization? textCapitalization, required Widget Function(BuildContext, SearchController) builder, required FutureOr<Iterable<Widget>> Function(BuildContext, SearchController) suggestionsBuilder})
+  /// SearchAnchor SearchAnchor({Key? key, bool? isFullScreen, SearchController? searchController, Widget Function(Iterable<Widget>)? viewBuilder, Widget? viewLeading, Iterable<Widget>? viewTrailing, String? viewHintText, Color? viewBackgroundColor, double? viewElevation, Color? viewSurfaceTintColor, BorderSide? viewSide, OutlinedBorder? viewShape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor, BoxConstraints? viewConstraints, TextCapitalization? textCapitalization, void Function(String)? viewOnChanged, void Function(String)? viewOnSubmitted, required Widget Function(BuildContext, SearchController) builder, required FutureOr<Iterable<Widget>> Function(BuildContext, SearchController) suggestionsBuilder, TextInputAction? textInputAction, TextInputType? keyboardType})
   SearchAnchor$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -72,11 +72,23 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
     /// optionalParameters: {TextCapitalization? textCapitalization} , default:none
     super.textCapitalization,
 
+    /// optionalParameters: {void Function(String)? viewOnChanged} , default:none
+    super.viewOnChanged,
+
+    /// optionalParameters: {void Function(String)? viewOnSubmitted} , default:none
+    super.viewOnSubmitted,
+
     /// optionalParameters: {required Widget Function(BuildContext, SearchController) builder} , default:none
     required super.builder,
 
     /// optionalParameters: {required FutureOr<Iterable<Widget>> Function(BuildContext, SearchController) suggestionsBuilder} , default:none
     required super.suggestionsBuilder,
+
+    /// optionalParameters: {TextInputAction? textInputAction} , default:none
+    super.textInputAction,
+
+    /// optionalParameters: {TextInputType? keyboardType} , default:none
+    super.keyboardType,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -163,6 +175,16 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
             init: textCapitalization,
             isNamed: true,
           ),
+          'viewOnChanged': _i2.BuilderArg<_i10.ValueChanged<String>?>(
+            name: 'viewOnChanged',
+            init: viewOnChanged,
+            isNamed: true,
+          ),
+          'viewOnSubmitted': _i2.BuilderArg<_i10.ValueChanged<String>?>(
+            name: 'viewOnSubmitted',
+            init: viewOnSubmitted,
+            isNamed: true,
+          ),
           'builder': _i2.BuilderArg<_i1.SearchAnchorChildBuilder>(
             name: 'builder',
             init: builder,
@@ -171,6 +193,16 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
           'suggestionsBuilder': _i2.BuilderArg<_i1.SuggestionsBuilder>(
             name: 'suggestionsBuilder',
             init: suggestionsBuilder,
+            isNamed: true,
+          ),
+          'textInputAction': _i2.BuilderArg<_i9.TextInputAction?>(
+            name: 'textInputAction',
+            init: textInputAction,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i9.TextInputType?>(
+            name: 'keyboardType',
+            init: keyboardType,
             isNamed: true,
           ),
         },
@@ -195,8 +227,12 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
           dividerColor: p.get('dividerColor').build(),
           viewConstraints: p.get('viewConstraints').build(),
           textCapitalization: p.get('textCapitalization').build(),
+          viewOnChanged: p.get('viewOnChanged').build(),
+          viewOnSubmitted: p.get('viewOnSubmitted').build(),
           builder: p.get('builder').build(),
           suggestionsBuilder: p.get('suggestionsBuilder').build(),
+          textInputAction: p.get('textInputAction').build(),
+          keyboardType: p.get('keyboardType').build(),
         );
   }
 
@@ -206,7 +242,7 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
 
 /// class SearchBar extends StatefulWidget
 class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
-  /// SearchBar SearchBar({Key? key, TextEditingController? controller, FocusNode? focusNode, String? hintText, Widget? leading, Iterable<Widget>? trailing, void Function()? onTap, void Function(String)? onChanged, void Function(String)? onSubmitted, BoxConstraints? constraints, MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle, TextCapitalization? textCapitalization})
+  /// SearchBar SearchBar({Key? key, TextEditingController? controller, FocusNode? focusNode, String? hintText, Widget? leading, Iterable<Widget>? trailing, void Function()? onTap, void Function(String)? onChanged, void Function(String)? onSubmitted, BoxConstraints? constraints, MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle, TextCapitalization? textCapitalization, bool autoFocus = false, TextInputAction? textInputAction, TextInputType? keyboardType})
   SearchBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -270,18 +306,27 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
 
     /// optionalParameters: {TextCapitalization? textCapitalization} , default:none
     super.textCapitalization,
+
+    /// optionalParameters: {bool autoFocus = false} , default:processed=BooleanLiteralImpl
+    super.autoFocus,
+
+    /// optionalParameters: {TextInputAction? textInputAction} , default:none
+    super.textInputAction,
+
+    /// optionalParameters: {TextInputType? keyboardType} , default:none
+    super.keyboardType,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i10.TextEditingController?>(
+          'controller': _i2.BuilderArg<_i11.TextEditingController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i11.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i12.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -301,17 +346,17 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
             init: trailing,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i12.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i13.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i13.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i10.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onSubmitted': _i2.BuilderArg<_i13.ValueChanged<String>?>(
+          'onSubmitted': _i2.BuilderArg<_i10.ValueChanged<String>?>(
             name: 'onSubmitted',
             init: onSubmitted,
             isNamed: true,
@@ -376,6 +421,22 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
             init: textCapitalization,
             isNamed: true,
           ),
+          'autoFocus': _i2.BuilderArg<bool>(
+            name: 'autoFocus',
+            init: autoFocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'textInputAction': _i2.BuilderArg<_i9.TextInputAction?>(
+            name: 'textInputAction',
+            init: textInputAction,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i9.TextInputType?>(
+            name: 'keyboardType',
+            init: keyboardType,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'SearchBar';
@@ -402,6 +463,9 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
           textStyle: p.get('textStyle').build(),
           hintStyle: p.get('hintStyle').build(),
           textCapitalization: p.get('textCapitalization').build(),
+          autoFocus: p.get('autoFocus').build(),
+          textInputAction: p.get('textInputAction').build(),
+          keyboardType: p.get('keyboardType').build(),
         );
   }
 

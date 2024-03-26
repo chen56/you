@@ -95,7 +95,7 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
 
 /// class DropdownMenu<T> extends StatefulWidget
 class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
-  /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, String? helperText, String? errorText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, EdgeInsets? expandedInsets, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
+  /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, String? helperText, String? errorText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, EdgeInsets? expandedInsets, int? Function(List<DropdownMenuEntry<T>>, String)? searchCallback, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
   DropdownMenu$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -159,6 +159,9 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
 
     /// optionalParameters: {EdgeInsets? expandedInsets} , default:none
     super.expandedInsets,
+
+    /// optionalParameters: {int? Function(List<DropdownMenuEntry<T>>, String)? searchCallback} , default:none
+    super.searchCallback,
 
     /// optionalParameters: {required List<DropdownMenuEntry<T>> dropdownMenuEntries} , default:none
     required super.dropdownMenuEntries,
@@ -271,6 +274,11 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
             init: expandedInsets,
             isNamed: true,
           ),
+          'searchCallback': _i2.BuilderArg<_i1.SearchCallback<T>?>(
+            name: 'searchCallback',
+            init: searchCallback,
+            isNamed: true,
+          ),
           'dropdownMenuEntries': _i2.BuilderArg<List<_i1.DropdownMenuEntry<T>>>(
             name: 'dropdownMenuEntries',
             init: dropdownMenuEntries,
@@ -302,6 +310,7 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
           onSelected: p.get('onSelected').build(),
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
           expandedInsets: p.get('expandedInsets').build(),
+          searchCallback: p.get('searchCallback').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
   }

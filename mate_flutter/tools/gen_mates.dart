@@ -342,10 +342,13 @@ bool classFilter(ClassElement clazz) {
       !clazz.name.startsWith("_") &&
       !clazz.library.typeProvider.isNonSubtypableClass(clazz) &&
       clazz.constructors.where(constructorFilter).isNotEmpty &&
+      !clazz.isFinal &&
       // This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
       // file:///Users/cccc/git/chen56/note/mate_flutter/lib/src/widgets/icon_data.dart:30:23
       // Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
-      !clazz.name.endsWith("IconData");
+      !clazz.name.endsWith("IconData") &&
+      //这个类有个结构参数，暂时不支持了，mate模式准备放弃(Offset, TextPosition)? startLocation
+       !clazz.name.contains("RawFloatingCursorPoint");
 }
 
 bool libFilter(LibraryElement lib) {

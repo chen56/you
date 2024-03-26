@@ -16,7 +16,7 @@ import 'package:flutter/src/material/material_state.dart' as _i12;
 
 /// class MenuAnchor extends StatefulWidget
 class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
-  /// MenuAnchor MenuAnchor({Key? key, MenuController? controller, FocusNode? childFocusNode, MenuStyle? style, Offset? alignmentOffset = Offset.zero, Clip clipBehavior = Clip.hardEdge, bool anchorTapClosesMenu = false, void Function()? onOpen, void Function()? onClose, bool crossAxisUnconstrained = true, required List<Widget> menuChildren, Widget Function(BuildContext, MenuController, Widget?)? builder, Widget? child})
+  /// MenuAnchor MenuAnchor({Key? key, MenuController? controller, FocusNode? childFocusNode, MenuStyle? style, Offset? alignmentOffset = Offset.zero, Clip clipBehavior = Clip.hardEdge, bool anchorTapClosesMenu = false, bool consumeOutsideTap = false, void Function()? onOpen, void Function()? onClose, bool crossAxisUnconstrained = true, required List<Widget> menuChildren, Widget Function(BuildContext, MenuController, Widget?)? builder, Widget? child})
   MenuAnchor$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -36,8 +36,8 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {bool anchorTapClosesMenu = false} , default:processed=BooleanLiteralImpl
-    super.anchorTapClosesMenu,
+    /// optionalParameters: {bool consumeOutsideTap = false} , default:processed=BooleanLiteralImpl
+    super.consumeOutsideTap,
 
     /// optionalParameters: {void Function()? onOpen} , default:none
     super.onOpen,
@@ -89,9 +89,9 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
             isNamed: true,
             defaultValue: _i6.Clip.hardEdge,
           ),
-          'anchorTapClosesMenu': _i2.BuilderArg<bool>(
-            name: 'anchorTapClosesMenu',
-            init: anchorTapClosesMenu,
+          'consumeOutsideTap': _i2.BuilderArg<bool>(
+            name: 'consumeOutsideTap',
+            init: consumeOutsideTap,
             isNamed: true,
             defaultValue: false,
           ),
@@ -137,7 +137,7 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
           style: p.get('style').build(),
           alignmentOffset: p.get('alignmentOffset').build(),
           clipBehavior: p.get('clipBehavior').build(),
-          anchorTapClosesMenu: p.get('anchorTapClosesMenu').build(),
+          consumeOutsideTap: p.get('consumeOutsideTap').build(),
           onOpen: p.get('onOpen').build(),
           onClose: p.get('onClose').build(),
           crossAxisUnconstrained: p.get('crossAxisUnconstrained').build(),

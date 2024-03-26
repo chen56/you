@@ -18,11 +18,12 @@ import 'package:flutter/src/widgets/localizations.dart' as _i14;
 import 'package:flutter/src/widgets/shortcuts.dart' as _i15;
 import 'package:flutter/src/widgets/actions.dart' as _i16;
 import 'package:flutter/src/widgets/scroll_configuration.dart' as _i17;
-import 'package:flutter/src/widgets/router.dart' as _i18;
+import 'package:flutter/src/animation/animation_style.dart' as _i18;
+import 'package:flutter/src/widgets/router.dart' as _i19;
 
 /// class MaterialApp extends StatefulWidget
 class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
-  /// MaterialApp MaterialApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, bool Function(NavigationNotification)? onNavigationNotification, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// MaterialApp MaterialApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, bool Function(NavigationNotification)? onNavigationNotification, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false, AnimationStyle? themeAnimationStyle})
   MaterialApp$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -134,6 +135,9 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     super.scrollBehavior,
+
+    /// optionalParameters: {AnimationStyle? themeAnimationStyle} , default:none
+    super.themeAnimationStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -329,6 +333,11 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: scrollBehavior,
             isNamed: true,
           ),
+          'themeAnimationStyle': _i2.BuilderArg<_i18.AnimationStyle?>(
+            name: 'themeAnimationStyle',
+            init: themeAnimationStyle,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'MaterialApp';
@@ -371,10 +380,11 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
+          themeAnimationStyle: p.get('themeAnimationStyle').build(),
         );
   }
 
-  /// MaterialApp MaterialApp.router({Key? key, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, bool Function(NavigationNotification)? onNavigationNotification, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
+  /// MaterialApp MaterialApp.router({Key? key, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, bool Function(NavigationNotification)? onNavigationNotification, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false, AnimationStyle? themeAnimationStyle})
   MaterialApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -477,6 +487,9 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     super.scrollBehavior,
+
+    /// optionalParameters: {AnimationStyle? themeAnimationStyle} , default:none
+    super.themeAnimationStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -488,27 +501,27 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: scaffoldMessengerKey,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i18.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i19.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i18.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i19.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
           ),
-          'routerDelegate': _i2.BuilderArg<_i18.RouterDelegate<Object>?>(
+          'routerDelegate': _i2.BuilderArg<_i19.RouterDelegate<Object>?>(
             name: 'routerDelegate',
             init: routerDelegate,
             isNamed: true,
           ),
-          'routerConfig': _i2.BuilderArg<_i18.RouterConfig<Object>?>(
+          'routerConfig': _i2.BuilderArg<_i19.RouterConfig<Object>?>(
             name: 'routerConfig',
             init: routerConfig,
             isNamed: true,
           ),
-          'backButtonDispatcher': _i2.BuilderArg<_i18.BackButtonDispatcher?>(
+          'backButtonDispatcher': _i2.BuilderArg<_i19.BackButtonDispatcher?>(
             name: 'backButtonDispatcher',
             init: backButtonDispatcher,
             isNamed: true,
@@ -657,6 +670,11 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: scrollBehavior,
             isNamed: true,
           ),
+          'themeAnimationStyle': _i2.BuilderArg<_i18.AnimationStyle?>(
+            name: 'themeAnimationStyle',
+            init: themeAnimationStyle,
+            isNamed: true,
+          ),
         },
         super.router() {
     mateBuilderName = 'MaterialApp.router';
@@ -696,6 +714,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
+          themeAnimationStyle: p.get('themeAnimationStyle').build(),
         );
   }
 

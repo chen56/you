@@ -5,5 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
-
+  StatefulBuilder(
+    builder: (BuildContext context, StateSetter setState) {
+      return Text("data");
+    },
+  );
 }

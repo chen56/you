@@ -69,7 +69,7 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
 
 /// class TrackingScrollController extends ScrollController
 class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i2.Mate {
-  /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
+  /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel, void Function(ScrollPosition)? onAttach, void Function(ScrollPosition)? onDetach})
   TrackingScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
     super.initialScrollOffset,
@@ -79,6 +79,12 @@ class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i
 
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onAttach} , default:none
+    super.onAttach,
+
+    /// optionalParameters: {void Function(ScrollPosition)? onDetach} , default:none
+    super.onDetach,
   })  : mateParams = {
           'initialScrollOffset': _i2.BuilderArg<double>(
             name: 'initialScrollOffset',
@@ -97,6 +103,16 @@ class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i
             init: debugLabel,
             isNamed: true,
           ),
+          'onAttach': _i2.BuilderArg<_i1.ScrollControllerCallback?>(
+            name: 'onAttach',
+            init: onAttach,
+            isNamed: true,
+          ),
+          'onDetach': _i2.BuilderArg<_i1.ScrollControllerCallback?>(
+            name: 'onDetach',
+            init: onDetach,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'TrackingScrollController';
@@ -105,6 +121,8 @@ class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i
           initialScrollOffset: p.get('initialScrollOffset').build(),
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
+          onAttach: p.get('onAttach').build(),
+          onDetach: p.get('onDetach').build(),
         );
   }
 

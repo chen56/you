@@ -7,10 +7,11 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/text_style.dart' as _i4;
 import 'package:flutter/src/painting/borders.dart' as _i5;
 import 'package:flutter/src/painting/edge_insets.dart' as _i6;
+import 'package:flutter/src/widgets/dismissible.dart' as _i7;
 
 /// class SnackBarThemeData with Diagnosticable
 class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
-  /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor, double? actionOverflowThreshold, Color? actionBackgroundColor, Color? disabledActionBackgroundColor})
+  /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor, double? actionOverflowThreshold, Color? actionBackgroundColor, Color? disabledActionBackgroundColor, DismissDirection? dismissDirection})
   SnackBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
@@ -53,6 +54,9 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
 
     /// optionalParameters: {Color? disabledActionBackgroundColor} , default:none
     super.disabledActionBackgroundColor,
+
+    /// optionalParameters: {DismissDirection? dismissDirection} , default:none
+    super.dismissDirection,
   })  : mateParams = {
           'backgroundColor': _i2.BuilderArg<_i3.Color?>(
             name: 'backgroundColor',
@@ -124,6 +128,11 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
             init: disabledActionBackgroundColor,
             isNamed: true,
           ),
+          'dismissDirection': _i2.BuilderArg<_i7.DismissDirection?>(
+            name: 'dismissDirection',
+            init: dismissDirection,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'SnackBarThemeData';
@@ -143,6 +152,7 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
           actionBackgroundColor: p.get('actionBackgroundColor').build(),
           disabledActionBackgroundColor: p.get('disabledActionBackgroundColor').build(),
+          dismissDirection: p.get('dismissDirection').build(),
         );
   }
 

@@ -322,7 +322,7 @@ class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
 
 /// class MessageProperty extends DiagnosticsProperty<void>
 class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
-  /// MessageProperty MessageProperty(String name, String message, {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// MessageProperty MessageProperty(String name, String message, {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   MessageProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -332,7 +332,7 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -375,7 +375,7 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
 
 /// class StringProperty extends DiagnosticsProperty<String>
 class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
-  /// StringProperty StringProperty(String name, String? value, {String? description, String? tooltip, bool showName = true, Object? defaultValue = kNoDefaultValue, bool quoted = true, String? ifEmpty, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// StringProperty StringProperty(String name, String? value, {String? description, String? tooltip, bool showName = true, Object? defaultValue = kNoDefaultValue, bool quoted = true, String? ifEmpty, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   StringProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -403,7 +403,7 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -484,7 +484,7 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
 
 /// class DoubleProperty extends _NumProperty<double>
 class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
-  /// DoubleProperty DoubleProperty(String name, double? value, {String? ifNull, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// DoubleProperty DoubleProperty(String name, double? value, {String? ifNull, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DoubleProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -509,7 +509,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -577,7 +577,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
         );
   }
 
-  /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   DoubleProperty$Mate.lazy(
     /// requiredParameters: String name
     super.name,
@@ -599,7 +599,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -666,7 +666,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
 
 /// class IntProperty extends _NumProperty<int>
 class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
-  /// IntProperty IntProperty(String name, int? value, {String? ifNull, bool showName = true, String? unit, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// IntProperty IntProperty(String name, int? value, {String? ifNull, bool showName = true, String? unit, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   IntProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -688,7 +688,7 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -756,7 +756,7 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
 
 /// class PercentProperty extends DoubleProperty
 class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
-  /// PercentProperty PercentProperty(String name, double? fraction, {String? ifNull, bool showName = true, String? tooltip, String? unit, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// PercentProperty PercentProperty(String name, double? fraction, {String? ifNull, bool showName = true, String? tooltip, String? unit, DiagnosticLevel level = DiagnosticLevel.info})
   PercentProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -775,7 +775,7 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
     /// optionalParameters: {String? unit} , default:none
     super.unit,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -836,7 +836,7 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
 
 /// class FlagProperty extends DiagnosticsProperty<bool>
 class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
-  /// FlagProperty FlagProperty(String name, {required bool? value, String? ifTrue, String? ifFalse, bool showName = false, Object? defaultValue, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// FlagProperty FlagProperty(String name, {required bool? value, String? ifTrue, String? ifFalse, bool showName = false, Object? defaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   FlagProperty$Mate(
     /// requiredParameters: String name
     super.name, {
@@ -855,7 +855,7 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue} , default:none
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -916,7 +916,7 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
 
 /// class IterableProperty<T> extends DiagnosticsProperty<Iterable<T>>
 class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
-  /// IterableProperty<T> IterableProperty(String name, Iterable<T>? value, {Object? defaultValue = kNoDefaultValue, String? ifNull, String? ifEmpty = '[]', DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// IterableProperty<T> IterableProperty(String name, Iterable<T>? value, {Object? defaultValue = kNoDefaultValue, String? ifNull, String? ifEmpty = '[]', DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.info})
   IterableProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -941,7 +941,7 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     super.showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1017,7 +1017,7 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
 
 /// class EnumProperty<T extends Enum?> extends DiagnosticsProperty<T>
 class EnumProperty$Mate<T extends Enum?> extends _i1.EnumProperty<T> with _i2.Mate {
-  /// EnumProperty<T> EnumProperty(String name, T? value, {Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// EnumProperty<T> EnumProperty(String name, T? value, {Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   EnumProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -1027,7 +1027,7 @@ class EnumProperty$Mate<T extends Enum?> extends _i1.EnumProperty<T> with _i2.Ma
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1069,7 +1069,7 @@ class EnumProperty$Mate<T extends Enum?> extends _i1.EnumProperty<T> with _i2.Ma
 
 /// class ObjectFlagProperty<T> extends DiagnosticsProperty<T>
 class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate {
-  /// ObjectFlagProperty<T> ObjectFlagProperty(String name, T? value, {String? ifPresent, String? ifNull, bool showName = false, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// ObjectFlagProperty<T> ObjectFlagProperty(String name, T? value, {String? ifPresent, String? ifNull, bool showName = false, DiagnosticLevel level = DiagnosticLevel.info})
   ObjectFlagProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -1085,7 +1085,7 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
     /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
     super.showName,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1134,14 +1134,14 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
         );
   }
 
-  /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
   ObjectFlagProperty$Mate.has(
     /// requiredParameters: String name
     super.name,
 
     /// requiredParameters: T? value
     super.value, {
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1177,7 +1177,7 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
 
 /// class FlagsSummary<T> extends DiagnosticsProperty<Map<String, T?>>
 class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
-  /// FlagsSummary<T> FlagsSummary(String name, Map<String, T?> value, {String? ifEmpty, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// FlagsSummary<T> FlagsSummary(String name, Map<String, T?> value, {String? ifEmpty, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.info})
   FlagsSummary$Mate(
     /// requiredParameters: String name
     super.name,
@@ -1193,7 +1193,7 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     super.showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1249,7 +1249,7 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
 
 /// class DiagnosticsProperty<T> extends DiagnosticsNode
 class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Mate {
-  /// DiagnosticsProperty<T> DiagnosticsProperty(String? name, T? value, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, String? linePrefix, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// DiagnosticsProperty<T> DiagnosticsProperty(String? name, T? value, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, String? linePrefix, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DiagnosticsProperty$Mate(
     /// requiredParameters: String? name
     super.name,
@@ -1295,7 +1295,7 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String?>(
@@ -1410,7 +1410,7 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
         );
   }
 
-  /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.app_info})
+  /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DiagnosticsProperty$Mate.lazy(
     /// requiredParameters: String? name
     super.name,
@@ -1453,7 +1453,7 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String?>(
@@ -1678,7 +1678,7 @@ class DiagnosticPropertiesBuilder$Mate extends _i1.DiagnosticPropertiesBuilder w
 
 /// class DiagnosticsBlock extends DiagnosticsNode
 class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
-  /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.app_info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
+  /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
   DiagnosticsBlock$Mate({
     /// optionalParameters: {String? name} , default:none
     super.name,
@@ -1701,7 +1701,7 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
     /// optionalParameters: {String? description} , default:none
     super.description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {bool allowTruncate = false} , default:processed=BooleanLiteralImpl

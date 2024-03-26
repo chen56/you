@@ -8,8 +8,8 @@ import 'package:flutter/src/painting/image_provider.dart' as _i4;
 import 'package:flutter/src/widgets/image.dart' as _i5;
 import 'package:flutter/src/animation/curves.dart' as _i6;
 import 'package:flutter/animation.dart' as _i7;
-import 'package:flutter/src/painting/box_fit.dart' as _i8;
-import 'dart:ui' as _i9;
+import 'dart:ui' as _i8;
+import 'package:flutter/src/painting/box_fit.dart' as _i9;
 import 'package:flutter/src/painting/alignment.dart' as _i10;
 import 'package:flutter/cupertino.dart' as _i11;
 import 'package:flutter/src/painting/decoration_image.dart' as _i12;
@@ -18,7 +18,7 @@ import 'package:flutter/src/services/asset_bundle.dart' as _i14;
 
 /// class FadeInImage extends StatefulWidget
 class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
-  /// FadeInImage FadeInImage({Key? key, required ImageProvider<Object> placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required ImageProvider<Object> image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false})
+  /// FadeInImage FadeInImage({Key? key, required ImageProvider<Object> placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required ImageProvider<Object> image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, Color? color, BlendMode? colorBlendMode, Color? placeholderColor, BlendMode? placeholderColorBlendMode, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false})
   FadeInImage$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -52,6 +52,18 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
 
     /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     super.fadeInCurve,
+
+    /// optionalParameters: {Color? color} , default:none
+    super.color,
+
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
+    super.colorBlendMode,
+
+    /// optionalParameters: {Color? placeholderColor} , default:none
+    super.placeholderColor,
+
+    /// optionalParameters: {BlendMode? placeholderColorBlendMode} , default:none
+    super.placeholderColorBlendMode,
 
     /// optionalParameters: {double? width} , default:none
     super.width,
@@ -138,6 +150,26 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             isNamed: true,
             defaultValue: _i7.Curves.easeIn,
           ),
+          'color': _i2.BuilderArg<_i8.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'colorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'colorBlendMode',
+            init: colorBlendMode,
+            isNamed: true,
+          ),
+          'placeholderColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'placeholderColor',
+            init: placeholderColor,
+            isNamed: true,
+          ),
+          'placeholderColorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'placeholderColorBlendMode',
+            init: placeholderColorBlendMode,
+            isNamed: true,
+          ),
           'width': _i2.BuilderArg<double?>(
             name: 'width',
             init: width,
@@ -148,23 +180,23 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i8.BoxFit?>(
+          'fit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
+          'placeholderFit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i9.FilterQuality.low,
+            defaultValue: _i8.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
@@ -203,6 +235,10 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
           fadeOutCurve: p.get('fadeOutCurve').build(),
           fadeInDuration: p.get('fadeInDuration').build(),
           fadeInCurve: p.get('fadeInCurve').build(),
+          color: p.get('color').build(),
+          colorBlendMode: p.get('colorBlendMode').build(),
+          placeholderColor: p.get('placeholderColor').build(),
+          placeholderColorBlendMode: p.get('placeholderColorBlendMode').build(),
           width: p.get('width').build(),
           height: p.get('height').build(),
           fit: p.get('fit').build(),
@@ -215,7 +251,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
         );
   }
 
-  /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
+  /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, Color? color, BlendMode? colorBlendMode, Color? placeholderColor, BlendMode? placeholderColorBlendMode, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
   FadeInImage$Mate.memoryNetwork({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -264,6 +300,18 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
 
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
+
+    /// optionalParameters: {Color? color} , default:none
+    super.color,
+
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
+    super.colorBlendMode,
+
+    /// optionalParameters: {Color? placeholderColor} , default:none
+    super.placeholderColor,
+
+    /// optionalParameters: {BlendMode? placeholderColorBlendMode} , default:none
+    super.placeholderColorBlendMode,
 
     /// optionalParameters: {BoxFit? placeholderFit} , default:none
     super.placeholderFit,
@@ -375,23 +423,43 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i8.BoxFit?>(
+          'fit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
+          'color': _i2.BuilderArg<_i8.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'colorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'colorBlendMode',
+            init: colorBlendMode,
+            isNamed: true,
+          ),
+          'placeholderColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'placeholderColor',
+            init: placeholderColor,
+            isNamed: true,
+          ),
+          'placeholderColorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'placeholderColorBlendMode',
+            init: placeholderColorBlendMode,
+            isNamed: true,
+          ),
+          'placeholderFit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i9.FilterQuality.low,
+            defaultValue: _i8.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
@@ -455,6 +523,10 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
           fit: p.get('fit').build(),
+          color: p.get('color').build(),
+          colorBlendMode: p.get('colorBlendMode').build(),
+          placeholderColor: p.get('placeholderColor').build(),
+          placeholderColorBlendMode: p.get('placeholderColorBlendMode').build(),
           placeholderFit: p.get('placeholderFit').build(),
           filterQuality: p.get('filterQuality').build(),
           placeholderFilterQuality: p.get('placeholderFilterQuality').build(),
@@ -468,7 +540,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
         );
   }
 
-  /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
+  /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, Color? color, BlendMode? colorBlendMode, Color? placeholderColor, BlendMode? placeholderColorBlendMode, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
   FadeInImage$Mate.assetNetwork({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -520,6 +592,18 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
 
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
+
+    /// optionalParameters: {Color? color} , default:none
+    super.color,
+
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
+    super.colorBlendMode,
+
+    /// optionalParameters: {Color? placeholderColor} , default:none
+    super.placeholderColor,
+
+    /// optionalParameters: {BlendMode? placeholderColorBlendMode} , default:none
+    super.placeholderColorBlendMode,
 
     /// optionalParameters: {BoxFit? placeholderFit} , default:none
     super.placeholderFit,
@@ -635,23 +719,43 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i8.BoxFit?>(
+          'fit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
+          'color': _i2.BuilderArg<_i8.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'colorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'colorBlendMode',
+            init: colorBlendMode,
+            isNamed: true,
+          ),
+          'placeholderColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'placeholderColor',
+            init: placeholderColor,
+            isNamed: true,
+          ),
+          'placeholderColorBlendMode': _i2.BuilderArg<_i8.BlendMode?>(
+            name: 'placeholderColorBlendMode',
+            init: placeholderColorBlendMode,
+            isNamed: true,
+          ),
+          'placeholderFit': _i2.BuilderArg<_i9.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i9.FilterQuality.low,
+            defaultValue: _i8.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
@@ -716,6 +820,10 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
           fit: p.get('fit').build(),
+          color: p.get('color').build(),
+          colorBlendMode: p.get('colorBlendMode').build(),
+          placeholderColor: p.get('placeholderColor').build(),
+          placeholderColorBlendMode: p.get('placeholderColorBlendMode').build(),
           placeholderFit: p.get('placeholderFit').build(),
           filterQuality: p.get('filterQuality').build(),
           placeholderFilterQuality: p.get('placeholderFilterQuality').build(),

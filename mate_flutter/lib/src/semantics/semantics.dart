@@ -121,7 +121,7 @@ class AttributedString$Mate extends _i1.AttributedString with _i2.Mate {
 
 /// class AttributedStringProperty extends DiagnosticsProperty<AttributedString>
 class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i2.Mate {
-  /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info, String? description})
+  /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info, String? description})
   AttributedStringProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -137,7 +137,7 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {String? description} , default:none
@@ -202,13 +202,16 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
 
 /// class SemanticsData with Diagnosticable
 class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
-  /// SemanticsData SemanticsData({required int flags, required int actions, required AttributedString attributedLabel, required AttributedString attributedValue, required AttributedString attributedIncreasedValue, required AttributedString attributedDecreasedValue, required AttributedString attributedHint, required String tooltip, required TextDirection? textDirection, required Rect rect, required double elevation, required double thickness, required TextSelection? textSelection, required int? scrollIndex, required int? scrollChildCount, required double? scrollPosition, required double? scrollExtentMax, required double? scrollExtentMin, required int? platformViewId, required int? maxValueLength, required int? currentValueLength, Set<SemanticsTag>? tags, Matrix4? transform, List<int>? customSemanticsActionIds})
+  /// SemanticsData SemanticsData({required int flags, required int actions, required String identifier, required AttributedString attributedLabel, required AttributedString attributedValue, required AttributedString attributedIncreasedValue, required AttributedString attributedDecreasedValue, required AttributedString attributedHint, required String tooltip, required TextDirection? textDirection, required Rect rect, required double elevation, required double thickness, required TextSelection? textSelection, required int? scrollIndex, required int? scrollChildCount, required double? scrollPosition, required double? scrollExtentMax, required double? scrollExtentMin, required int? platformViewId, required int? maxValueLength, required int? currentValueLength, Set<SemanticsTag>? tags, Matrix4? transform, List<int>? customSemanticsActionIds})
   SemanticsData$Mate({
     /// optionalParameters: {required int flags} , default:none
     required super.flags,
 
     /// optionalParameters: {required int actions} , default:none
     required super.actions,
+
+    /// optionalParameters: {required String identifier} , default:none
+    required super.identifier,
 
     /// optionalParameters: {required AttributedString attributedLabel} , default:none
     required super.attributedLabel,
@@ -284,6 +287,11 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
           'actions': _i2.BuilderArg<int>(
             name: 'actions',
             init: actions,
+            isNamed: true,
+          ),
+          'identifier': _i2.BuilderArg<String>(
+            name: 'identifier',
+            init: identifier,
             isNamed: true,
           ),
           'attributedLabel': _i2.BuilderArg<_i1.AttributedString>(
@@ -403,6 +411,7 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
     mateBuilder = (p) => SemanticsData$Mate(
           flags: p.get('flags').build(),
           actions: p.get('actions').build(),
+          identifier: p.get('identifier').build(),
           attributedLabel: p.get('attributedLabel').build(),
           attributedValue: p.get('attributedValue').build(),
           attributedIncreasedValue: p.get('attributedIncreasedValue').build(),
@@ -468,7 +477,7 @@ class SemanticsHintOverrides$Mate extends _i1.SemanticsHintOverrides with _i2.Ma
 
 /// class SemanticsProperties extends DiagnosticableTree
 class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
-  /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? expanded, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
+  /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? expanded, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? identifier, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   SemanticsProperties$Mate({
     /// optionalParameters: {bool? enabled} , default:none
     super.enabled,
@@ -544,6 +553,9 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
 
     /// optionalParameters: {int? currentValueLength} , default:none
     super.currentValueLength,
+
+    /// optionalParameters: {String? identifier} , default:none
+    super.identifier,
 
     /// optionalParameters: {String? label} , default:none
     super.label,
@@ -778,6 +790,11 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
             init: currentValueLength,
             isNamed: true,
           ),
+          'identifier': _i2.BuilderArg<String?>(
+            name: 'identifier',
+            init: identifier,
+            isNamed: true,
+          ),
           'label': _i2.BuilderArg<String?>(
             name: 'label',
             init: label,
@@ -988,6 +1005,7 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
           liveRegion: p.get('liveRegion').build(),
           maxValueLength: p.get('maxValueLength').build(),
           currentValueLength: p.get('currentValueLength').build(),
+          identifier: p.get('identifier').build(),
           label: p.get('label').build(),
           attributedLabel: p.get('attributedLabel').build(),
           value: p.get('value').build(),

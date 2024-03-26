@@ -148,7 +148,7 @@ class DefaultPlatformMenuDelegate$Mate extends _i1.DefaultPlatformMenuDelegate w
 
 /// class PlatformMenuBar extends StatefulWidget with DiagnosticableTreeMixin
 class PlatformMenuBar$Mate extends _i1.PlatformMenuBar with _i2.Mate {
-  /// PlatformMenuBar PlatformMenuBar({Key? key, required List<PlatformMenuItem> menus, Widget? child, Widget? body})
+  /// PlatformMenuBar PlatformMenuBar({Key? key, required List<PlatformMenuItem> menus, Widget? child})
   PlatformMenuBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,

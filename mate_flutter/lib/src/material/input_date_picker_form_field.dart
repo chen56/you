@@ -7,10 +7,11 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/material/date.dart' as _i5;
 import 'package:flutter/src/services/text_input.dart' as _i6;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i7;
 
 /// class InputDatePickerFormField extends StatefulWidget
 class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i2.Mate {
-  /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false, bool acceptEmptyDate = false})
+  /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false, bool acceptEmptyDate = false, FocusNode? focusNode})
   InputDatePickerFormField$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -53,6 +54,9 @@ class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i
 
     /// optionalParameters: {bool acceptEmptyDate = false} , default:processed=BooleanLiteralImpl
     super.acceptEmptyDate,
+
+    /// optionalParameters: {FocusNode? focusNode} , default:none
+    super.focusNode,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -126,6 +130,11 @@ class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i
             isNamed: true,
             defaultValue: false,
           ),
+          'focusNode': _i2.BuilderArg<_i7.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'InputDatePickerFormField';
@@ -145,6 +154,7 @@ class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i
           keyboardType: p.get('keyboardType').build(),
           autofocus: p.get('autofocus').build(),
           acceptEmptyDate: p.get('acceptEmptyDate').build(),
+          focusNode: p.get('focusNode').build(),
         );
   }
 

@@ -234,3 +234,57 @@ class _PreBuilder extends MarkdownElementBuilder {
     );
   }
 }
+
+/// 我们约束child为tight模式，以模仿最外层窗口
+class WindowContent extends StatelessWidget {
+  final Widget? child;
+  final double? width;
+  final double? height;
+  final String title;
+
+  WindowContent({
+    super.key,
+    this.title = "模仿窗口固定宽高限制",
+    double? width,
+    double? height,
+    this.child,
+  })  : width = (width == null || width == double.infinity) ? 400 : width,
+        height = (height == null || height == double.infinity) ? 50 : height;
+
+  /// call() == withChild copy
+  WindowContent call(Widget child) {
+    return WindowContent(
+      key: key,
+      width: width,
+      height: height,
+      child: child,
+    );
+  }
+
+  WindowContent withChild(Widget child) {
+    return WindowContent(
+      key: key,
+      child: child,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Column(
+        children: [
+          AppBar(
+            title: Text(title),
+            leading: IconButton(icon: const Icon(Icons.fullscreen_exit), onPressed: () {}),
+            actions: <Widget>[
+              IconButton(icon: const Icon(Icons.fullscreen_exit), onPressed: () {}),
+              IconButton(icon: const Icon(Icons.fullscreen), onPressed: () {}),
+            ],
+          ),
+          // Column是无限高，但我们约束child为tight模式，以模仿窗口
+          ConstrainedBox(constraints: BoxConstraints.tightFor(width: width, height: height), child: child),
+        ],
+      ),
+    );
+  }
+}

@@ -44,7 +44,7 @@ class TapRegionSurface$Mate extends _i1.TapRegionSurface with _i2.Mate {
 
 /// class TapRegion extends SingleChildRenderObjectWidget
 class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
-  /// TapRegion TapRegion({Key? key, required Widget? child, bool enabled = true, HitTestBehavior behavior = HitTestBehavior.deferToChild, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, Object? groupId, String? debugLabel})
+  /// TapRegion TapRegion({Key? key, required Widget? child, bool enabled = true, HitTestBehavior behavior = HitTestBehavior.deferToChild, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, Object? groupId, bool consumeOutsideTaps = false, String? debugLabel})
   TapRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -66,6 +66,9 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
 
     /// optionalParameters: {Object? groupId} , default:none
     super.groupId,
+
+    /// optionalParameters: {bool consumeOutsideTaps = false} , default:processed=BooleanLiteralImpl
+    super.consumeOutsideTaps,
 
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
@@ -107,6 +110,12 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
             init: groupId,
             isNamed: true,
           ),
+          'consumeOutsideTaps': _i2.BuilderArg<bool>(
+            name: 'consumeOutsideTaps',
+            init: consumeOutsideTaps,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'debugLabel': _i2.BuilderArg<String?>(
             name: 'debugLabel',
             init: debugLabel,
@@ -124,6 +133,7 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
           onTapOutside: p.get('onTapOutside').build(),
           onTapInside: p.get('onTapInside').build(),
           groupId: p.get('groupId').build(),
+          consumeOutsideTaps: p.get('consumeOutsideTaps').build(),
           debugLabel: p.get('debugLabel').build(),
         );
   }
@@ -134,13 +144,16 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
 
 /// class RenderTapRegion extends RenderProxyBoxWithHitTestBehavior
 class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
-  /// RenderTapRegion RenderTapRegion({TapRegionRegistry? registry, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, HitTestBehavior behavior = HitTestBehavior.deferToChild, Object? groupId, String? debugLabel})
+  /// RenderTapRegion RenderTapRegion({TapRegionRegistry? registry, bool enabled = true, bool consumeOutsideTaps = false, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, HitTestBehavior behavior = HitTestBehavior.deferToChild, Object? groupId, String? debugLabel})
   RenderTapRegion$Mate({
     /// optionalParameters: {TapRegionRegistry? registry} , default:none
     super.registry,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     super.enabled,
+
+    /// optionalParameters: {bool consumeOutsideTaps = false} , default:processed=BooleanLiteralImpl
+    super.consumeOutsideTaps,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     super.onTapOutside,
@@ -167,6 +180,12 @@ class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
             init: enabled,
             isNamed: true,
             defaultValue: true,
+          ),
+          'consumeOutsideTaps': _i2.BuilderArg<bool>(
+            name: 'consumeOutsideTaps',
+            init: consumeOutsideTaps,
+            isNamed: true,
+            defaultValue: false,
           ),
           'onTapOutside': _i2.BuilderArg<_i1.TapRegionCallback?>(
             name: 'onTapOutside',
@@ -201,6 +220,7 @@ class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
     mateBuilder = (p) => RenderTapRegion$Mate(
           registry: p.get('registry').build(),
           enabled: p.get('enabled').build(),
+          consumeOutsideTaps: p.get('consumeOutsideTaps').build(),
           onTapOutside: p.get('onTapOutside').build(),
           onTapInside: p.get('onTapInside').build(),
           behavior: p.get('behavior').build(),
@@ -215,7 +235,7 @@ class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
 
 /// class TextFieldTapRegion extends TapRegion
 class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
-  /// TextFieldTapRegion TextFieldTapRegion({Key? key, required Widget? child, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, String? debugLabel})
+  /// TextFieldTapRegion TextFieldTapRegion({Key? key, required Widget? child, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, bool consumeOutsideTaps = false, String? debugLabel})
   TextFieldTapRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -231,6 +251,9 @@ class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
     super.onTapInside,
+
+    /// optionalParameters: {bool consumeOutsideTaps = false} , default:processed=BooleanLiteralImpl
+    super.consumeOutsideTaps,
 
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
@@ -261,6 +284,12 @@ class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
             init: onTapInside,
             isNamed: true,
           ),
+          'consumeOutsideTaps': _i2.BuilderArg<bool>(
+            name: 'consumeOutsideTaps',
+            init: consumeOutsideTaps,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'debugLabel': _i2.BuilderArg<String?>(
             name: 'debugLabel',
             init: debugLabel,
@@ -276,6 +305,7 @@ class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
           enabled: p.get('enabled').build(),
           onTapOutside: p.get('onTapOutside').build(),
           onTapInside: p.get('onTapInside').build(),
+          consumeOutsideTaps: p.get('consumeOutsideTaps').build(),
           debugLabel: p.get('debugLabel').build(),
         );
   }

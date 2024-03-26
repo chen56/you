@@ -7,7 +7,7 @@ import 'dart:ui' as _i3;
 
 /// class CupertinoIconThemeData extends IconThemeData with Diagnosticable
 class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData with _i2.Mate {
-  /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows})
+  /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows, bool? applyTextScaling})
   CupertinoIconThemeData$Mate({
     /// optionalParameters: {double? size} , default:none
     super.size,
@@ -32,6 +32,9 @@ class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData with _i2.Ma
 
     /// optionalParameters: {List<Shadow>? shadows} , default:none
     super.shadows,
+
+    /// optionalParameters: {bool? applyTextScaling} , default:none
+    super.applyTextScaling,
   })  : mateParams = {
           'size': _i2.BuilderArg<double?>(
             name: 'size',
@@ -73,6 +76,11 @@ class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData with _i2.Ma
             init: shadows,
             isNamed: true,
           ),
+          'applyTextScaling': _i2.BuilderArg<bool?>(
+            name: 'applyTextScaling',
+            init: applyTextScaling,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'CupertinoIconThemeData';
@@ -86,6 +94,7 @@ class CupertinoIconThemeData$Mate extends _i1.CupertinoIconThemeData with _i2.Ma
           color: p.get('color').build(),
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
+          applyTextScaling: p.get('applyTextScaling').build(),
         );
   }
 

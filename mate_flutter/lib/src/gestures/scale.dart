@@ -12,7 +12,7 @@ import 'package:flutter/gestures.dart' as _i8;
 
 /// class ScaleStartDetails
 class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
-  /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0})
+  /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0, Duration? sourceTimeStamp})
   ScaleStartDetails$Mate({
     /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.focalPoint,
@@ -22,6 +22,9 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
 
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
     super.pointerCount,
+
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
+    super.sourceTimeStamp,
   })  : mateParams = {
           'focalPoint': _i2.BuilderArg<_i3.Offset>(
             name: 'focalPoint',
@@ -40,6 +43,11 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
             isNamed: true,
             defaultValue: 0,
           ),
+          'sourceTimeStamp': _i2.BuilderArg<Duration?>(
+            name: 'sourceTimeStamp',
+            init: sourceTimeStamp,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ScaleStartDetails';
@@ -48,6 +56,7 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
           focalPoint: p.get('focalPoint').build(),
           localFocalPoint: p.get('localFocalPoint').build(),
           pointerCount: p.get('pointerCount').build(),
+          sourceTimeStamp: p.get('sourceTimeStamp').build(),
         );
   }
 
@@ -57,7 +66,7 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
 
 /// class ScaleUpdateDetails
 class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
-  /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero})
+  /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero, Duration? sourceTimeStamp})
   ScaleUpdateDetails$Mate({
     /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.focalPoint,
@@ -82,6 +91,9 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
 
     /// optionalParameters: {Offset focalPointDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.focalPointDelta,
+
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
+    super.sourceTimeStamp,
   })  : mateParams = {
           'focalPoint': _i2.BuilderArg<_i3.Offset>(
             name: 'focalPoint',
@@ -130,6 +142,11 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
             isNamed: true,
             defaultValue: _i4.Offset.zero,
           ),
+          'sourceTimeStamp': _i2.BuilderArg<Duration?>(
+            name: 'sourceTimeStamp',
+            init: sourceTimeStamp,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ScaleUpdateDetails';
@@ -143,6 +160,7 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
           rotation: p.get('rotation').build(),
           pointerCount: p.get('pointerCount').build(),
           focalPointDelta: p.get('focalPointDelta').build(),
+          sourceTimeStamp: p.get('sourceTimeStamp').build(),
         );
   }
 

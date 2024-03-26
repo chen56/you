@@ -217,40 +217,6 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class RawFloatingCursorPoint
-class RawFloatingCursorPoint$Mate extends _i1.RawFloatingCursorPoint with _i2.Mate {
-  /// RawFloatingCursorPoint RawFloatingCursorPoint({Offset? offset, required FloatingCursorDragState state})
-  RawFloatingCursorPoint$Mate({
-    /// optionalParameters: {Offset? offset} , default:none
-    super.offset,
-
-    /// optionalParameters: {required FloatingCursorDragState state} , default:none
-    required super.state,
-  })  : mateParams = {
-          'offset': _i2.BuilderArg<_i4.Offset?>(
-            name: 'offset',
-            init: offset,
-            isNamed: true,
-          ),
-          'state': _i2.BuilderArg<_i1.FloatingCursorDragState>(
-            name: 'state',
-            init: state,
-            isNamed: true,
-          ),
-        },
-        super() {
-    mateBuilderName = 'RawFloatingCursorPoint';
-    matePackageUrl = 'package:flutter/services.dart';
-    mateBuilder = (p) => RawFloatingCursorPoint$Mate(
-          offset: p.get('offset').build(),
-          state: p.get('state').build(),
-        );
-  }
-
-  @override
-  final Map<String, _i2.BuilderArg> mateParams;
-}
-
 /// class TextEditingValue
 class TextEditingValue$Mate extends _i1.TextEditingValue with _i2.Mate {
   /// TextEditingValue TextEditingValue({String text = '', TextSelection selection = const TextSelection.collapsed(offset: -1), TextRange composing = TextRange.empty})

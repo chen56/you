@@ -14,7 +14,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class Tooltip extends StatefulWidget
 class Tooltip$Mate extends _i1.Tooltip with _i2.Mate {
-  /// Tooltip Tooltip({Key? key, String? message, InlineSpan? richMessage, double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback, void Function()? onTriggered, Widget? child})
+  /// Tooltip Tooltip({Key? key, String? message, InlineSpan? richMessage, double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, Duration? exitDuration, bool enableTapToDismiss = true, TooltipTriggerMode? triggerMode, bool? enableFeedback, void Function()? onTriggered, Widget? child})
   Tooltip$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -57,6 +57,12 @@ class Tooltip$Mate extends _i1.Tooltip with _i2.Mate {
 
     /// optionalParameters: {Duration? showDuration} , default:none
     super.showDuration,
+
+    /// optionalParameters: {Duration? exitDuration} , default:none
+    super.exitDuration,
+
+    /// optionalParameters: {bool enableTapToDismiss = true} , default:processed=BooleanLiteralImpl
+    super.enableTapToDismiss,
 
     /// optionalParameters: {TooltipTriggerMode? triggerMode} , default:none
     super.triggerMode,
@@ -140,6 +146,17 @@ class Tooltip$Mate extends _i1.Tooltip with _i2.Mate {
             init: showDuration,
             isNamed: true,
           ),
+          'exitDuration': _i2.BuilderArg<Duration?>(
+            name: 'exitDuration',
+            init: exitDuration,
+            isNamed: true,
+          ),
+          'enableTapToDismiss': _i2.BuilderArg<bool>(
+            name: 'enableTapToDismiss',
+            init: enableTapToDismiss,
+            isNamed: true,
+            defaultValue: true,
+          ),
           'triggerMode': _i2.BuilderArg<_i9.TooltipTriggerMode?>(
             name: 'triggerMode',
             init: triggerMode,
@@ -179,6 +196,8 @@ class Tooltip$Mate extends _i1.Tooltip with _i2.Mate {
           textAlign: p.get('textAlign').build(),
           waitDuration: p.get('waitDuration').build(),
           showDuration: p.get('showDuration').build(),
+          exitDuration: p.get('exitDuration').build(),
+          enableTapToDismiss: p.get('enableTapToDismiss').build(),
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
           onTriggered: p.get('onTriggered').build(),

@@ -59,7 +59,7 @@ ${BoxConstraints.tightFor(width: 600, height: 800)}
 BoxConstraints的print结果中： w是width,h是height
   ''');
 
-  print(WindowContent(width: 400, height: 500)(
+  print(WindowContent()(
     LayoutBuilder(builder: (context, constraints) {
       return Text("WindowContent: ${constraints}");
     }),
@@ -90,60 +90,4 @@ BoxConstraints(w=1103.0, h=566.0)    // w是width,h是height
 
   ''');
   BoxConstraints.tightFor(width: 1, height: 2);
-}
-
-class WindowContent extends StatelessWidget {
-  final Widget? child;
-  final BoxConstraints constraints;
-
-  WindowContent({
-    super.key,
-    double width = 600,
-    double height = 200,
-    this.child,
-  }) : constraints = BoxConstraints.tightFor(width: width, height: height);
-
-  /// call() == withChild copy
-  WindowContent call(Widget child) {
-    return WindowContent(
-      key: key,
-      width: constraints.maxWidth,
-      height: constraints.maxHeight,
-      child: child,
-    );
-  }
-
-  WindowContent withChild(Widget child) {
-    return WindowContent(
-      key: key,
-      width: constraints.maxWidth,
-      height: constraints.maxHeight,
-      child: child,
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: constraints,
-      child: Card(
-        child: Column(
-          children: [
-            AppBar(
-              title: Text("模仿Windows"),
-              leading: IconButton(icon: const Icon(Icons.fullscreen_exit), onPressed: () {}),
-              actions: <Widget>[
-                IconButton(icon: const Icon(Icons.fullscreen_exit), onPressed: () {}),
-                IconButton(icon: const Icon(Icons.fullscreen), onPressed: () {}),
-              ],
-            ),
-            // ConstrainedBox(
-            //   constraints: constraints,
-            //   child: child,
-            // ),
-          ],
-        ),
-      ),
-    );
-  }
 }

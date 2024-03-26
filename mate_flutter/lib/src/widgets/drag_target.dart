@@ -493,14 +493,8 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
     /// optionalParameters: {required Widget Function(BuildContext, List<T?>, List<dynamic>) builder} , default:none
     required super.builder,
 
-    /// optionalParameters: {bool Function(T?)? onWillAccept} , default:none
-    super.onWillAccept,
-
     /// optionalParameters: {bool Function(DragTargetDetails<T>)? onWillAcceptWithDetails} , default:none
     super.onWillAcceptWithDetails,
-
-    /// optionalParameters: {void Function(T)? onAccept} , default:none
-    super.onAccept,
 
     /// optionalParameters: {void Function(DragTargetDetails<T>)? onAcceptWithDetails} , default:none
     super.onAcceptWithDetails,
@@ -524,19 +518,9 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
             init: builder,
             isNamed: true,
           ),
-          'onWillAccept': _i2.BuilderArg<_i1.DragTargetWillAccept<T>?>(
-            name: 'onWillAccept',
-            init: onWillAccept,
-            isNamed: true,
-          ),
           'onWillAcceptWithDetails': _i2.BuilderArg<_i1.DragTargetWillAcceptWithDetails<T>?>(
             name: 'onWillAcceptWithDetails',
             init: onWillAcceptWithDetails,
-            isNamed: true,
-          ),
-          'onAccept': _i2.BuilderArg<_i1.DragTargetAccept<T>?>(
-            name: 'onAccept',
-            init: onAccept,
             isNamed: true,
           ),
           'onAcceptWithDetails': _i2.BuilderArg<_i1.DragTargetAcceptWithDetails<T>?>(
@@ -567,9 +551,7 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
     mateBuilder = (p) => DragTarget$Mate<T>(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
-          onWillAccept: p.get('onWillAccept').build(),
           onWillAcceptWithDetails: p.get('onWillAcceptWithDetails').build(),
-          onAccept: p.get('onAccept').build(),
           onAcceptWithDetails: p.get('onAcceptWithDetails').build(),
           onLeave: p.get('onLeave').build(),
           onMove: p.get('onMove').build(),

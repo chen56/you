@@ -7,12 +7,13 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/edge_insets.dart' as _i4;
 import 'package:flutter/src/painting/alignment.dart' as _i5;
 import 'package:flutter/src/painting/borders.dart' as _i6;
-import 'package:flutter/src/foundation/key.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/src/animation/animation_style.dart' as _i7;
+import 'package:flutter/src/foundation/key.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class ExpansionTileThemeData with Diagnosticable
 class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Mate {
-  /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior})
+  /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, AnimationStyle? expansionAnimationStyle})
   ExpansionTileThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
@@ -49,6 +50,9 @@ class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Ma
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
     super.clipBehavior,
+
+    /// optionalParameters: {AnimationStyle? expansionAnimationStyle} , default:none
+    super.expansionAnimationStyle,
   })  : mateParams = {
           'backgroundColor': _i2.BuilderArg<_i3.Color?>(
             name: 'backgroundColor',
@@ -110,6 +114,11 @@ class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Ma
             init: clipBehavior,
             isNamed: true,
           ),
+          'expansionAnimationStyle': _i2.BuilderArg<_i7.AnimationStyle?>(
+            name: 'expansionAnimationStyle',
+            init: expansionAnimationStyle,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ExpansionTileThemeData';
@@ -127,6 +136,7 @@ class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Ma
           shape: p.get('shape').build(),
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          expansionAnimationStyle: p.get('expansionAnimationStyle').build(),
         );
   }
 
@@ -147,7 +157,7 @@ class ExpansionTileTheme$Mate extends _i1.ExpansionTileTheme with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i7.Key?>(
+          'key': _i2.BuilderArg<_i8.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -157,7 +167,7 @@ class ExpansionTileTheme$Mate extends _i1.ExpansionTileTheme with _i2.Mate {
             init: data,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i9.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

@@ -15,9 +15,9 @@ import 'package:flutter/src/material/material_state.dart' as _i11;
 import 'package:flutter/src/material/theme_data.dart' as _i12;
 import 'package:flutter/src/widgets/icon_theme_data.dart' as _i13;
 
-/// class FilterChip extends StatelessWidget implements ChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes
+/// class FilterChip extends StatelessWidget implements ChipAttributes, DeletableChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes
 class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
-  /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
+  /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
   FilterChip$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -39,6 +39,18 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
 
     /// optionalParameters: {required void Function(bool)? onSelected} , default:none
     required super.onSelected,
+
+    /// optionalParameters: {Widget? deleteIcon} , default:none
+    super.deleteIcon,
+
+    /// optionalParameters: {void Function()? onDeleted} , default:none
+    super.onDeleted,
+
+    /// optionalParameters: {Color? deleteIconColor} , default:none
+    super.deleteIconColor,
+
+    /// optionalParameters: {String? deleteButtonTooltipMessage} , default:none
+    super.deleteButtonTooltipMessage,
 
     /// optionalParameters: {double? pressElevation} , default:none
     super.pressElevation,
@@ -140,6 +152,26 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
           'onSelected': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
             name: 'onSelected',
             init: onSelected,
+            isNamed: true,
+          ),
+          'deleteIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'deleteIcon',
+            init: deleteIcon,
+            isNamed: true,
+          ),
+          'onDeleted': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onDeleted',
+            init: onDeleted,
+            isNamed: true,
+          ),
+          'deleteIconColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'deleteIconColor',
+            init: deleteIconColor,
+            isNamed: true,
+          ),
+          'deleteButtonTooltipMessage': _i2.BuilderArg<String?>(
+            name: 'deleteButtonTooltipMessage',
+            init: deleteButtonTooltipMessage,
             isNamed: true,
           ),
           'pressElevation': _i2.BuilderArg<double?>(
@@ -266,6 +298,10 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
           labelPadding: p.get('labelPadding').build(),
           selected: p.get('selected').build(),
           onSelected: p.get('onSelected').build(),
+          deleteIcon: p.get('deleteIcon').build(),
+          onDeleted: p.get('onDeleted').build(),
+          deleteIconColor: p.get('deleteIconColor').build(),
+          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
           pressElevation: p.get('pressElevation').build(),
           disabledColor: p.get('disabledColor').build(),
           selectedColor: p.get('selectedColor').build(),
@@ -291,7 +327,7 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
         );
   }
 
-  /// FilterChip FilterChip.elevated({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
+  /// FilterChip FilterChip.elevated({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialStateProperty<Color?>? color, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
   FilterChip$Mate.elevated({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -313,6 +349,18 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
 
     /// optionalParameters: {required void Function(bool)? onSelected} , default:none
     required super.onSelected,
+
+    /// optionalParameters: {Widget? deleteIcon} , default:none
+    super.deleteIcon,
+
+    /// optionalParameters: {void Function()? onDeleted} , default:none
+    super.onDeleted,
+
+    /// optionalParameters: {Color? deleteIconColor} , default:none
+    super.deleteIconColor,
+
+    /// optionalParameters: {String? deleteButtonTooltipMessage} , default:none
+    super.deleteButtonTooltipMessage,
 
     /// optionalParameters: {double? pressElevation} , default:none
     super.pressElevation,
@@ -414,6 +462,26 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
           'onSelected': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
             name: 'onSelected',
             init: onSelected,
+            isNamed: true,
+          ),
+          'deleteIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'deleteIcon',
+            init: deleteIcon,
+            isNamed: true,
+          ),
+          'onDeleted': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onDeleted',
+            init: onDeleted,
+            isNamed: true,
+          ),
+          'deleteIconColor': _i2.BuilderArg<_i8.Color?>(
+            name: 'deleteIconColor',
+            init: deleteIconColor,
+            isNamed: true,
+          ),
+          'deleteButtonTooltipMessage': _i2.BuilderArg<String?>(
+            name: 'deleteButtonTooltipMessage',
+            init: deleteButtonTooltipMessage,
             isNamed: true,
           ),
           'pressElevation': _i2.BuilderArg<double?>(
@@ -540,6 +608,10 @@ class FilterChip$Mate extends _i1.FilterChip with _i2.Mate {
           labelPadding: p.get('labelPadding').build(),
           selected: p.get('selected').build(),
           onSelected: p.get('onSelected').build(),
+          deleteIcon: p.get('deleteIcon').build(),
+          onDeleted: p.get('onDeleted').build(),
+          deleteIconColor: p.get('deleteIconColor').build(),
+          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
           pressElevation: p.get('pressElevation').build(),
           disabledColor: p.get('disabledColor').build(),
           selectedColor: p.get('selectedColor').build(),

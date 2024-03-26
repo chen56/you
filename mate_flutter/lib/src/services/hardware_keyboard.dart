@@ -4,11 +4,12 @@
 import 'package:flutter/src/services/hardware_keyboard.dart' as _i1;
 import 'package:mate/mate_core.dart' as _i2;
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i3;
-import 'package:flutter/src/services/raw_keyboard.dart' as _i4;
+import 'dart:ui' as _i4;
+import 'package:flutter/src/services/raw_keyboard.dart' as _i5;
 
 /// class KeyDownEvent extends KeyEvent
 class KeyDownEvent$Mate extends _i1.KeyDownEvent with _i2.Mate {
-  /// KeyDownEvent KeyDownEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp, bool synthesized = false})
+  /// KeyDownEvent KeyDownEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp, bool synthesized = false, KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard})
   KeyDownEvent$Mate({
     /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required super.physicalKey,
@@ -24,6 +25,9 @@ class KeyDownEvent$Mate extends _i1.KeyDownEvent with _i2.Mate {
 
     /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     super.synthesized,
+
+    /// optionalParameters: {KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard} , default:unprocessed=PropertyAccessImpl
+    super.deviceType,
   })  : mateParams = {
           'physicalKey': _i2.BuilderArg<_i3.PhysicalKeyboardKey>(
             name: 'physicalKey',
@@ -51,6 +55,11 @@ class KeyDownEvent$Mate extends _i1.KeyDownEvent with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'deviceType': _i2.BuilderArg<_i4.KeyEventDeviceType>(
+            name: 'deviceType',
+            init: deviceType,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'KeyDownEvent';
@@ -61,6 +70,7 @@ class KeyDownEvent$Mate extends _i1.KeyDownEvent with _i2.Mate {
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
+          deviceType: p.get('deviceType').build(),
         );
   }
 
@@ -70,7 +80,7 @@ class KeyDownEvent$Mate extends _i1.KeyDownEvent with _i2.Mate {
 
 /// class KeyUpEvent extends KeyEvent
 class KeyUpEvent$Mate extends _i1.KeyUpEvent with _i2.Mate {
-  /// KeyUpEvent KeyUpEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, required Duration timeStamp, bool synthesized = false})
+  /// KeyUpEvent KeyUpEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, required Duration timeStamp, bool synthesized = false, KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard})
   KeyUpEvent$Mate({
     /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required super.physicalKey,
@@ -83,6 +93,9 @@ class KeyUpEvent$Mate extends _i1.KeyUpEvent with _i2.Mate {
 
     /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     super.synthesized,
+
+    /// optionalParameters: {KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard} , default:unprocessed=PropertyAccessImpl
+    super.deviceType,
   })  : mateParams = {
           'physicalKey': _i2.BuilderArg<_i3.PhysicalKeyboardKey>(
             name: 'physicalKey',
@@ -105,6 +118,11 @@ class KeyUpEvent$Mate extends _i1.KeyUpEvent with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'deviceType': _i2.BuilderArg<_i4.KeyEventDeviceType>(
+            name: 'deviceType',
+            init: deviceType,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'KeyUpEvent';
@@ -114,6 +132,7 @@ class KeyUpEvent$Mate extends _i1.KeyUpEvent with _i2.Mate {
           logicalKey: p.get('logicalKey').build(),
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
+          deviceType: p.get('deviceType').build(),
         );
   }
 
@@ -123,7 +142,7 @@ class KeyUpEvent$Mate extends _i1.KeyUpEvent with _i2.Mate {
 
 /// class KeyRepeatEvent extends KeyEvent
 class KeyRepeatEvent$Mate extends _i1.KeyRepeatEvent with _i2.Mate {
-  /// KeyRepeatEvent KeyRepeatEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp})
+  /// KeyRepeatEvent KeyRepeatEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp, KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard})
   KeyRepeatEvent$Mate({
     /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required super.physicalKey,
@@ -136,6 +155,9 @@ class KeyRepeatEvent$Mate extends _i1.KeyRepeatEvent with _i2.Mate {
 
     /// optionalParameters: {required Duration timeStamp} , default:none
     required super.timeStamp,
+
+    /// optionalParameters: {KeyEventDeviceType deviceType = ui.KeyEventDeviceType.keyboard} , default:unprocessed=PropertyAccessImpl
+    super.deviceType,
   })  : mateParams = {
           'physicalKey': _i2.BuilderArg<_i3.PhysicalKeyboardKey>(
             name: 'physicalKey',
@@ -157,6 +179,11 @@ class KeyRepeatEvent$Mate extends _i1.KeyRepeatEvent with _i2.Mate {
             init: timeStamp,
             isNamed: true,
           ),
+          'deviceType': _i2.BuilderArg<_i4.KeyEventDeviceType>(
+            name: 'deviceType',
+            init: deviceType,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'KeyRepeatEvent';
@@ -166,6 +193,7 @@ class KeyRepeatEvent$Mate extends _i1.KeyRepeatEvent with _i2.Mate {
           logicalKey: p.get('logicalKey').build(),
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
+          deviceType: p.get('deviceType').build(),
         );
   }
 
@@ -188,7 +216,7 @@ class KeyMessage$Mate extends _i1.KeyMessage with _i2.Mate {
             init: events,
             isNamed: false,
           ),
-          'rawEvent': _i2.BuilderArg<_i4.RawKeyEvent?>(
+          'rawEvent': _i2.BuilderArg<_i5.RawKeyEvent?>(
             name: 'rawEvent',
             init: rawEvent,
             isNamed: false,
@@ -222,7 +250,7 @@ class KeyEventManager$Mate extends _i1.KeyEventManager with _i2.Mate {
             init: _hardwareKeyboard,
             isNamed: false,
           ),
-          '_rawKeyboard': _i2.BuilderArg<_i4.RawKeyboard>(
+          '_rawKeyboard': _i2.BuilderArg<_i5.RawKeyboard>(
             name: '_rawKeyboard',
             init: _rawKeyboard,
             isNamed: false,

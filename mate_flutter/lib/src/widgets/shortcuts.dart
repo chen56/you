@@ -153,7 +153,7 @@ class LogicalKeySet$Mate extends _i2.LogicalKeySet with _i3.Mate {
 
 /// class ShortcutMapProperty extends DiagnosticsProperty<Map<ShortcutActivator, Intent>>
 class ShortcutMapProperty$Mate extends _i2.ShortcutMapProperty with _i3.Mate {
-  /// ShortcutMapProperty ShortcutMapProperty(String name, Map<ShortcutActivator, Intent> value, {bool showName = true, Object defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.app_info, String? description})
+  /// ShortcutMapProperty ShortcutMapProperty(String name, Map<ShortcutActivator, Intent> value, {bool showName = true, Object defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info, String? description})
   ShortcutMapProperty$Mate(
     /// requiredParameters: String name
     super.name,
@@ -166,7 +166,7 @@ class ShortcutMapProperty$Mate extends _i2.ShortcutMapProperty with _i3.Mate {
     /// optionalParameters: {Object defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.app_info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {String? description} , default:none

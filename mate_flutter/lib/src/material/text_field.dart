@@ -14,23 +14,24 @@ import 'package:flutter/src/painting/text_style.dart' as _i10;
 import 'package:flutter/src/painting/strut_style.dart' as _i11;
 import 'dart:ui' as _i12;
 import 'package:flutter/src/painting/alignment.dart' as _i13;
-import 'package:flutter/src/services/text_formatter.dart' as _i14;
-import 'package:flutter/src/foundation/basic_types.dart' as _i15;
-import 'package:flutter/src/painting/edge_insets.dart' as _i16;
-import 'package:flutter/src/gestures/recognizer.dart' as _i17;
-import 'package:flutter/gestures.dart' as _i18;
-import 'package:flutter/src/widgets/text_selection.dart' as _i19;
-import 'package:flutter/src/gestures/tap.dart' as _i20;
-import 'package:flutter/src/widgets/tap_region.dart' as _i21;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i22;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i23;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i24;
-import 'package:flutter/src/widgets/spell_check.dart' as _i25;
-import 'package:flutter/src/widgets/magnifier.dart' as _i26;
+import 'package:flutter/src/material/material_state.dart' as _i14;
+import 'package:flutter/src/services/text_formatter.dart' as _i15;
+import 'package:flutter/src/foundation/basic_types.dart' as _i16;
+import 'package:flutter/src/painting/edge_insets.dart' as _i17;
+import 'package:flutter/src/gestures/recognizer.dart' as _i18;
+import 'package:flutter/gestures.dart' as _i19;
+import 'package:flutter/src/widgets/text_selection.dart' as _i20;
+import 'package:flutter/src/gestures/tap.dart' as _i21;
+import 'package:flutter/src/widgets/tap_region.dart' as _i22;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i23;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i24;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i25;
+import 'package:flutter/src/widgets/spell_check.dart' as _i26;
+import 'package:flutter/src/widgets/magnifier.dart' as _i27;
 
 /// class TextField extends StatefulWidget
 class TextField$Mate extends _i1.TextField with _i2.Mate {
-  /// TextField TextField({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, InputDecoration? decoration = const InputDecoration(), TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, bool? cursorOpacityAnimates, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, void Function(PointerDownEvent)? onTapOutside, MouseCursor? mouseCursor, Widget? Function(BuildContext, {required int currentLength, required bool isFocused, required int? maxLength})? buildCounter, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, bool canRequestFocus = true, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
+  /// TextField TextField({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, InputDecoration? decoration = const InputDecoration(), TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, MaterialStatesController? statesController, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, bool? cursorOpacityAnimates, Color? cursorColor, Color? cursorErrorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, bool onTapAlwaysCalled = false, void Function(PointerDownEvent)? onTapOutside, MouseCursor? mouseCursor, Widget? Function(BuildContext, {required int currentLength, required bool isFocused, required int? maxLength})? buildCounter, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, bool canRequestFocus = true, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   TextField$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -79,6 +80,9 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
+
+    /// optionalParameters: {MaterialStatesController? statesController} , default:none
+    super.statesController,
 
     /// optionalParameters: {String obscuringCharacter = '•'} , default:processed=SimpleStringLiteralImpl
     super.obscuringCharacter,
@@ -146,6 +150,9 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
     /// optionalParameters: {Color? cursorColor} , default:none
     super.cursorColor,
 
+    /// optionalParameters: {Color? cursorErrorColor} , default:none
+    super.cursorErrorColor,
+
     /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
     super.selectionHeightStyle,
 
@@ -169,6 +176,9 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
 
     /// optionalParameters: {void Function()? onTap} , default:none
     super.onTap,
+
+    /// optionalParameters: {bool onTapAlwaysCalled = false} , default:processed=BooleanLiteralImpl
+    super.onTapAlwaysCalled,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     super.onTapOutside,
@@ -299,6 +309,11 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
+          'statesController': _i2.BuilderArg<_i14.MaterialStatesController?>(
+            name: 'statesController',
+            init: statesController,
+            isNamed: true,
+          ),
           'obscuringCharacter': _i2.BuilderArg<String>(
             name: 'obscuringCharacter',
             init: obscuringCharacter,
@@ -355,12 +370,12 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: maxLength,
             isNamed: true,
           ),
-          'maxLengthEnforcement': _i2.BuilderArg<_i14.MaxLengthEnforcement?>(
+          'maxLengthEnforcement': _i2.BuilderArg<_i15.MaxLengthEnforcement?>(
             name: 'maxLengthEnforcement',
             init: maxLengthEnforcement,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
@@ -370,7 +385,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onSubmitted': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+          'onSubmitted': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onSubmitted',
             init: onSubmitted,
             isNamed: true,
@@ -380,7 +395,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: onAppPrivateCommand,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i14.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i15.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -416,6 +431,11 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: cursorColor,
             isNamed: true,
           ),
+          'cursorErrorColor': _i2.BuilderArg<_i12.Color?>(
+            name: 'cursorErrorColor',
+            init: cursorErrorColor,
+            isNamed: true,
+          ),
           'selectionHeightStyle': _i2.BuilderArg<_i12.BoxHeightStyle>(
             name: 'selectionHeightStyle',
             init: selectionHeightStyle,
@@ -431,38 +451,44 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: keyboardAppearance,
             isNamed: true,
           ),
-          'scrollPadding': _i2.BuilderArg<_i16.EdgeInsets>(
+          'scrollPadding': _i2.BuilderArg<_i17.EdgeInsets>(
             name: 'scrollPadding',
             init: scrollPadding,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i17.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i18.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i18.DragStartBehavior.start,
+            defaultValue: _i19.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool?>(
             name: 'enableInteractiveSelection',
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i20.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i20.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i21.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i21.TapRegionCallback?>(
+          'onTapAlwaysCalled': _i2.BuilderArg<bool>(
+            name: 'onTapAlwaysCalled',
+            init: onTapAlwaysCalled,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onTapOutside': _i2.BuilderArg<_i22.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i22.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i23.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -472,12 +498,12 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: buildCounter,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i23.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i24.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i24.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i25.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -526,12 +552,12 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i26.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i27.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -557,6 +583,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
           readOnly: p.get('readOnly').build(),
           showCursor: p.get('showCursor').build(),
           autofocus: p.get('autofocus').build(),
+          statesController: p.get('statesController').build(),
           obscuringCharacter: p.get('obscuringCharacter').build(),
           obscureText: p.get('obscureText').build(),
           autocorrect: p.get('autocorrect').build(),
@@ -579,6 +606,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
           cursorRadius: p.get('cursorRadius').build(),
           cursorOpacityAnimates: p.get('cursorOpacityAnimates').build(),
           cursorColor: p.get('cursorColor').build(),
+          cursorErrorColor: p.get('cursorErrorColor').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
@@ -587,6 +615,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
           enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
+          onTapAlwaysCalled: p.get('onTapAlwaysCalled').build(),
           onTapOutside: p.get('onTapOutside').build(),
           mouseCursor: p.get('mouseCursor').build(),
           buildCounter: p.get('buildCounter').build(),

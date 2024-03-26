@@ -33,9 +33,6 @@ class Focus$Mate extends _i1.Focus with _i2.Mate {
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
     super.onKeyEvent,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    super.onKey,
-
     /// optionalParameters: {bool? canRequestFocus} , default:none
     super.canRequestFocus,
 
@@ -90,11 +87,6 @@ class Focus$Mate extends _i1.Focus with _i2.Mate {
             init: onKeyEvent,
             isNamed: true,
           ),
-          'onKey': _i2.BuilderArg<_i5.FocusOnKeyCallback?>(
-            name: 'onKey',
-            init: onKey,
-            isNamed: true,
-          ),
           'canRequestFocus': _i2.BuilderArg<bool?>(
             name: 'canRequestFocus',
             init: canRequestFocus,
@@ -138,7 +130,6 @@ class Focus$Mate extends _i1.Focus with _i2.Mate {
           autofocus: p.get('autofocus').build(),
           onFocusChange: p.get('onFocusChange').build(),
           onKeyEvent: p.get('onKeyEvent').build(),
-          onKey: p.get('onKey').build(),
           canRequestFocus: p.get('canRequestFocus').build(),
           skipTraversal: p.get('skipTraversal').build(),
           descendantsAreFocusable: p.get('descendantsAreFocusable').build(),

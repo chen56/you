@@ -407,14 +407,12 @@ test.data.children(){
 test.bake._opt_cmd_chain_opts(){
   assert "$(bake._opt_cmd_chain_opts "_root")" @is \
 "_root/opts/debug
-_root/opts/help
-_root/opts/verbose"
+_root/opts/help"
 
   # "include parent option"
   assert "$(bake._opt_cmd_chain_opts "bake.@opt")" @is \
 "_root/opts/debug
 _root/opts/help
-_root/opts/verbose
 bake.@opt/opts/abbr
 bake.@opt/opts/cmd
 bake.@opt/opts/default

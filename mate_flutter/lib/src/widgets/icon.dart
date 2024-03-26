@@ -9,7 +9,7 @@ import 'dart:ui' as _i5;
 
 /// class Icon extends StatelessWidget
 class Icon$Mate extends _i1.Icon with _i2.Mate {
-  /// Icon Icon(IconData? icon, {Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection})
+  /// Icon Icon(IconData? icon, {Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection, bool? applyTextScaling})
   Icon$Mate(
     /// requiredParameters: IconData? icon
     super.icon, {
@@ -42,6 +42,9 @@ class Icon$Mate extends _i1.Icon with _i2.Mate {
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
+
+    /// optionalParameters: {bool? applyTextScaling} , default:none
+    super.applyTextScaling,
   })  : mateParams = {
           'icon': _i2.BuilderArg<_i3.IconData?>(
             name: 'icon',
@@ -98,6 +101,11 @@ class Icon$Mate extends _i1.Icon with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
+          'applyTextScaling': _i2.BuilderArg<bool?>(
+            name: 'applyTextScaling',
+            init: applyTextScaling,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'Icon';
@@ -114,6 +122,7 @@ class Icon$Mate extends _i1.Icon with _i2.Mate {
           shadows: p.get('shadows').build(),
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
+          applyTextScaling: p.get('applyTextScaling').build(),
         );
   }
 

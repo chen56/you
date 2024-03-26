@@ -56,7 +56,7 @@ class SliderTheme$Mate extends _i1.SliderTheme with _i2.Mate {
 
 /// class SliderThemeData with Diagnosticable
 class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
-  /// SliderThemeData SliderThemeData({double? trackHeight, Color? activeTrackColor, Color? inactiveTrackColor, Color? secondaryActiveTrackColor, Color? disabledActiveTrackColor, Color? disabledInactiveTrackColor, Color? disabledSecondaryActiveTrackColor, Color? activeTickMarkColor, Color? inactiveTickMarkColor, Color? disabledActiveTickMarkColor, Color? disabledInactiveTickMarkColor, Color? thumbColor, Color? overlappingShapeStrokeColor, Color? disabledThumbColor, Color? overlayColor, Color? valueIndicatorColor, SliderComponentShape? overlayShape, SliderTickMarkShape? tickMarkShape, SliderComponentShape? thumbShape, SliderTrackShape? trackShape, SliderComponentShape? valueIndicatorShape, RangeSliderTickMarkShape? rangeTickMarkShape, RangeSliderThumbShape? rangeThumbShape, RangeSliderTrackShape? rangeTrackShape, RangeSliderValueIndicatorShape? rangeValueIndicatorShape, ShowValueIndicator? showValueIndicator, TextStyle? valueIndicatorTextStyle, double? minThumbSeparation, Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector, MaterialStateProperty<MouseCursor?>? mouseCursor, SliderInteraction? allowedInteraction})
+  /// SliderThemeData SliderThemeData({double? trackHeight, Color? activeTrackColor, Color? inactiveTrackColor, Color? secondaryActiveTrackColor, Color? disabledActiveTrackColor, Color? disabledInactiveTrackColor, Color? disabledSecondaryActiveTrackColor, Color? activeTickMarkColor, Color? inactiveTickMarkColor, Color? disabledActiveTickMarkColor, Color? disabledInactiveTickMarkColor, Color? thumbColor, Color? overlappingShapeStrokeColor, Color? disabledThumbColor, Color? overlayColor, Color? valueIndicatorColor, Color? valueIndicatorStrokeColor, SliderComponentShape? overlayShape, SliderTickMarkShape? tickMarkShape, SliderComponentShape? thumbShape, SliderTrackShape? trackShape, SliderComponentShape? valueIndicatorShape, RangeSliderTickMarkShape? rangeTickMarkShape, RangeSliderThumbShape? rangeThumbShape, RangeSliderTrackShape? rangeTrackShape, RangeSliderValueIndicatorShape? rangeValueIndicatorShape, ShowValueIndicator? showValueIndicator, TextStyle? valueIndicatorTextStyle, double? minThumbSeparation, Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector, MaterialStateProperty<MouseCursor?>? mouseCursor, SliderInteraction? allowedInteraction})
   SliderThemeData$Mate({
     /// optionalParameters: {double? trackHeight} , default:none
     super.trackHeight,
@@ -105,6 +105,9 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
 
     /// optionalParameters: {Color? valueIndicatorColor} , default:none
     super.valueIndicatorColor,
+
+    /// optionalParameters: {Color? valueIndicatorStrokeColor} , default:none
+    super.valueIndicatorStrokeColor,
 
     /// optionalParameters: {SliderComponentShape? overlayShape} , default:none
     super.overlayShape,
@@ -231,6 +234,11 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
             init: valueIndicatorColor,
             isNamed: true,
           ),
+          'valueIndicatorStrokeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'valueIndicatorStrokeColor',
+            init: valueIndicatorStrokeColor,
+            isNamed: true,
+          ),
           'overlayShape': _i2.BuilderArg<_i1.SliderComponentShape?>(
             name: 'overlayShape',
             init: overlayShape,
@@ -327,6 +335,7 @@ class SliderThemeData$Mate extends _i1.SliderThemeData with _i2.Mate {
           disabledThumbColor: p.get('disabledThumbColor').build(),
           overlayColor: p.get('overlayColor').build(),
           valueIndicatorColor: p.get('valueIndicatorColor').build(),
+          valueIndicatorStrokeColor: p.get('valueIndicatorStrokeColor').build(),
           overlayShape: p.get('overlayShape').build(),
           tickMarkShape: p.get('tickMarkShape').build(),
           thumbShape: p.get('thumbShape').build(),

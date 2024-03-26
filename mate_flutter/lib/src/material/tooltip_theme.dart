@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class TooltipThemeData with Diagnosticable
 class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
-  /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
+  /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, Duration? exitDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
   TooltipThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
     super.height,
@@ -46,6 +46,9 @@ class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
 
     /// optionalParameters: {Duration? showDuration} , default:none
     super.showDuration,
+
+    /// optionalParameters: {Duration? exitDuration} , default:none
+    super.exitDuration,
 
     /// optionalParameters: {TooltipTriggerMode? triggerMode} , default:none
     super.triggerMode,
@@ -108,6 +111,11 @@ class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
             init: showDuration,
             isNamed: true,
           ),
+          'exitDuration': _i2.BuilderArg<Duration?>(
+            name: 'exitDuration',
+            init: exitDuration,
+            isNamed: true,
+          ),
           'triggerMode': _i2.BuilderArg<_i1.TooltipTriggerMode?>(
             name: 'triggerMode',
             init: triggerMode,
@@ -134,6 +142,7 @@ class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
           textAlign: p.get('textAlign').build(),
           waitDuration: p.get('waitDuration').build(),
           showDuration: p.get('showDuration').build(),
+          exitDuration: p.get('exitDuration').build(),
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );

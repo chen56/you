@@ -13,9 +13,6 @@ class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    super.onKey,
-
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
     super.onKeyEvent,
 
@@ -34,11 +31,6 @@ class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
           'debugLabel': _i2.BuilderArg<String?>(
             name: 'debugLabel',
             init: debugLabel,
-            isNamed: true,
-          ),
-          'onKey': _i2.BuilderArg<_i1.FocusOnKeyCallback?>(
-            name: 'onKey',
-            init: onKey,
             isNamed: true,
           ),
           'onKeyEvent': _i2.BuilderArg<_i1.FocusOnKeyEventCallback?>(
@@ -76,7 +68,6 @@ class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FocusNode$Mate(
           debugLabel: p.get('debugLabel').build(),
-          onKey: p.get('onKey').build(),
           onKeyEvent: p.get('onKeyEvent').build(),
           skipTraversal: p.get('skipTraversal').build(),
           canRequestFocus: p.get('canRequestFocus').build(),
@@ -99,9 +90,6 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
     super.onKeyEvent,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    super.onKey,
-
     /// optionalParameters: {bool skipTraversal = false} , default:processed=BooleanLiteralImpl
     super.skipTraversal,
 
@@ -119,11 +107,6 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
           'onKeyEvent': _i2.BuilderArg<_i1.FocusOnKeyEventCallback?>(
             name: 'onKeyEvent',
             init: onKeyEvent,
-            isNamed: true,
-          ),
-          'onKey': _i2.BuilderArg<_i1.FocusOnKeyCallback?>(
-            name: 'onKey',
-            init: onKey,
             isNamed: true,
           ),
           'skipTraversal': _i2.BuilderArg<bool>(
@@ -151,7 +134,6 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
     mateBuilder = (p) => FocusScopeNode$Mate(
           debugLabel: p.get('debugLabel').build(),
           onKeyEvent: p.get('onKeyEvent').build(),
-          onKey: p.get('onKey').build(),
           skipTraversal: p.get('skipTraversal').build(),
           canRequestFocus: p.get('canRequestFocus').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),

@@ -605,7 +605,7 @@ bake._show_cmd_help() {
   fi
 
   shift
-  echo "${FUNCNAME[0]}"-------------"$@"
+
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
   local usage

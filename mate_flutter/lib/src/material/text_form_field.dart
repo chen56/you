@@ -29,10 +29,11 @@ import 'package:flutter/src/widgets/magnifier.dart' as _i25;
 import 'package:flutter/src/widgets/undo_history.dart' as _i26;
 import 'package:flutter/src/gestures/recognizer.dart' as _i27;
 import 'package:flutter/gestures.dart' as _i28;
+import 'package:flutter/src/material/material_state.dart' as _i29;
 
 /// class TextFormField extends FormField<String>
 class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
-  /// TextFormField TextFormField({Key? key, TextEditingController? controller, String? initialValue, FocusNode? focusNode, InputDecoration? decoration = const InputDecoration(), TextInputType? keyboardType, TextCapitalization textCapitalization = TextCapitalization.none, TextInputAction? textInputAction, TextStyle? style, StrutStyle? strutStyle, TextDirection? textDirection, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, bool autofocus = false, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, MaxLengthEnforcement? maxLengthEnforcement, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, void Function(String)? onChanged, void Function()? onTap, void Function(PointerDownEvent)? onTapOutside, void Function()? onEditingComplete, void Function(String)? onFieldSubmitted, void Function(String?)? onSaved, String? Function(String?)? validator, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), bool? enableInteractiveSelection, TextSelectionControls? selectionControls, Widget? Function(BuildContext, {required int currentLength, required bool isFocused, required int? maxLength})? buildCounter, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints, AutovalidateMode? autovalidateMode, ScrollController? scrollController, String? restorationId, bool enableIMEPersonalizedLearning = true, MouseCursor? mouseCursor, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration, UndoHistoryController? undoController, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, bool? cursorOpacityAnimates, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, bool scribbleEnabled = true, bool canRequestFocus = true})
+  /// TextFormField TextFormField({Key? key, TextEditingController? controller, String? initialValue, FocusNode? focusNode, InputDecoration? decoration = const InputDecoration(), TextInputType? keyboardType, TextCapitalization textCapitalization = TextCapitalization.none, TextInputAction? textInputAction, TextStyle? style, StrutStyle? strutStyle, TextDirection? textDirection, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, bool autofocus = false, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, MaxLengthEnforcement? maxLengthEnforcement, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, void Function(String)? onChanged, void Function()? onTap, bool onTapAlwaysCalled = false, void Function(PointerDownEvent)? onTapOutside, void Function()? onEditingComplete, void Function(String)? onFieldSubmitted, void Function(String?)? onSaved, String? Function(String?)? validator, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, Color? cursorErrorColor, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), bool? enableInteractiveSelection, TextSelectionControls? selectionControls, Widget? Function(BuildContext, {required int currentLength, required bool isFocused, required int? maxLength})? buildCounter, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints, AutovalidateMode? autovalidateMode, ScrollController? scrollController, String? restorationId, bool enableIMEPersonalizedLearning = true, MouseCursor? mouseCursor, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration, UndoHistoryController? undoController, void Function(String, Map<String, dynamic>)? onAppPrivateCommand, bool? cursorOpacityAnimates, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ContentInsertionConfiguration? contentInsertionConfiguration, MaterialStatesController? statesController, Clip clipBehavior = Clip.hardEdge, bool scribbleEnabled = true, bool canRequestFocus = true})
   TextFormField$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -121,6 +122,9 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
     /// optionalParameters: {void Function()? onTap} , default:none
     super.onTap,
 
+    /// optionalParameters: {bool onTapAlwaysCalled = false} , default:processed=BooleanLiteralImpl
+    super.onTapAlwaysCalled,
+
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     super.onTapOutside,
 
@@ -153,6 +157,9 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
 
     /// optionalParameters: {Color? cursorColor} , default:none
     super.cursorColor,
+
+    /// optionalParameters: {Color? cursorErrorColor} , default:none
+    super.cursorErrorColor,
 
     /// optionalParameters: {Brightness? keyboardAppearance} , default:none
     super.keyboardAppearance,
@@ -219,6 +226,9 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
 
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     super.contentInsertionConfiguration,
+
+    /// optionalParameters: {MaterialStatesController? statesController} , default:none
+    super.statesController,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
@@ -384,6 +394,12 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: onTap,
             isNamed: true,
           ),
+          'onTapAlwaysCalled': _i2.BuilderArg<bool>(
+            name: 'onTapAlwaysCalled',
+            init: onTapAlwaysCalled,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'onTapOutside': _i2.BuilderArg<_i16.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
@@ -438,6 +454,11 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           'cursorColor': _i2.BuilderArg<_i11.Color?>(
             name: 'cursorColor',
             init: cursorColor,
+            isNamed: true,
+          ),
+          'cursorErrorColor': _i2.BuilderArg<_i11.Color?>(
+            name: 'cursorErrorColor',
+            init: cursorErrorColor,
             isNamed: true,
           ),
           'keyboardAppearance': _i2.BuilderArg<_i11.Brightness?>(
@@ -552,6 +573,11 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: contentInsertionConfiguration,
             isNamed: true,
           ),
+          'statesController': _i2.BuilderArg<_i29.MaterialStatesController?>(
+            name: 'statesController',
+            init: statesController,
+            isNamed: true,
+          ),
           'clipBehavior': _i2.BuilderArg<_i11.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
@@ -604,6 +630,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           maxLength: p.get('maxLength').build(),
           onChanged: p.get('onChanged').build(),
           onTap: p.get('onTap').build(),
+          onTapAlwaysCalled: p.get('onTapAlwaysCalled').build(),
           onTapOutside: p.get('onTapOutside').build(),
           onEditingComplete: p.get('onEditingComplete').build(),
           onFieldSubmitted: p.get('onFieldSubmitted').build(),
@@ -615,6 +642,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           cursorHeight: p.get('cursorHeight').build(),
           cursorRadius: p.get('cursorRadius').build(),
           cursorColor: p.get('cursorColor').build(),
+          cursorErrorColor: p.get('cursorErrorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
@@ -637,6 +665,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          statesController: p.get('statesController').build(),
           clipBehavior: p.get('clipBehavior').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
           canRequestFocus: p.get('canRequestFocus').build(),

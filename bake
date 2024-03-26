@@ -26,7 +26,7 @@ _exec() {
   local project
   project=$(basename "$PWD")
   #  [[ "$PWD" == "$SCRIPT_DIR" ]] && project="_root"
-  echo "${FUNCNAME[1]}() ▶︎【$*】"
+  echo "$project -> ${FUNCNAME[1]}() ▶︎【$*】"
   "$@"
   return $?
 }
@@ -52,10 +52,17 @@ https://github.com/chen56/note
 Examples:
  ./${SCRIPT_FILE}                          # same as  './${SCRIPT_FILE} -h'
  ./${SCRIPT_FILE} -h                       # show all commands help
- ./${SCRIPT_FILE} -h -v                    # show all commands help , include internal function
- ./${SCRIPT_FILE} all  pwd                 # run "pwd" on all mono projects
- ./${SCRIPT_FILE} all  flutter pub get     # run "flutter pub get" on all mono projects
- ./${SCRIPT_FILE} note flutter pub get     # run "flutter pub get" on note project
+ ./${SCRIPT_FILE} -h --debug               # show all commands help , include internal function
+
+ ./${SCRIPT_FILE}  test                    # test all projects
+ ./${SCRIPT_FILE}  build                   # defalut build == flutter build web --web-renderer html
+ ./${SCRIPT_FILE}  preview                 # defalut preview == run server at web build
+ ./${SCRIPT_FILE}  test                    # test all projects
+
+ ./${SCRIPT_FILE}  p -h                    # show all mono project commands help
+ ./${SCRIPT_FILE}  p note pwd              # run "pwd" on note project dir
+ ./${SCRIPT_FILE}  p all pwd               # run "pwd" on all mono projects
+ ./${SCRIPT_FILE}  p all flutter pub get   # run "flutter pub get" on all mono projects
 
 EOF
   )"
@@ -92,9 +99,9 @@ p.mate_flutter() (cd mate_flutter && _exec "$@")
 p.note_test() (cd note_test && _exec "$@")
 p.note_tools() (cd note_tools && _exec "$@")
 
-get() { _exec all flutter pub get; }
+get() { _exec p.all flutter pub get; }
 
-test() { ./test/bake2_test.bash test ; _exec all flutter test ;}
+test() { ./test/bake2_test.bash test ; _exec p.all flutter test ;}
 test.bake() { ./test/bake2_test.bash test ; }
 
 # get ip only work on macos
@@ -104,27 +111,29 @@ run.web() { p.flutter_note flutter run --web-port 8888 --web-renderer html --dev
 run.macos() { p.flutter_note flutter run --device-id macos "$@"; }
 
 # skwasm无法运行
+build.macos() { _exec p.flutter_note flutter build macos -v --release --tree-shake-icons "$@";  }
 build.web_skwasm() {    p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 build.web_canvaskit() { p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-build.web_html() {      p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ; }
+build() {      p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ; }
 
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_note/build/web --port 8000
     # flutter pub global activate dhttpd
     # _exec p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
-preview.web() { build "$@" ; _exec p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+preview() { _exec p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+preview.macos() (  _exec p.flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
 
 #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
 #    build "$@"
 #   	npx http-server ./flutter_note/build/web --port 8000
 web.serve() {     _exec p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli ;}
-preview.macos() ( _exec p.flutter_note flutter build macos -v --release --tree-shake-icons "$@";  _exec p.flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
 
-clean() {     all flutter clean; rm -rf build;}
-gen.all() {   _exec p.flutter_note dart run tools/gen.dart;        _exec p.mate_flutter dart run  tools/gen_mates.dart;  _exec p.mate_flutter dart run  tools/gen_mate_icons.dart; }
+clean() { p.all flutter clean; rm -rf build;}
+
+gen.all() {  gen.notes;  } #  gen.mate;不再用了
 gen.notes() { _exec p.flutter_note dart run tools/gen.dart;        _exec p.flutter_note flutter pub get; }
 gen.mate() (  _exec p.mate_flutter dart run  tools/gen_mates.dart; _exec p.mate_flutter dart run  tools/gen_mate_icons.dart ; )
-regen() {     _exec rm -f p.flutter_note/lib/pages.g.dart;         _exec rm -rf mate_flutter/lib; gen; }
+gen.clean() { _exec rm -f p.flutter_note/lib/pages.g.dart;         _exec rm -rf mate_flutter/lib;  }
 
 docker.build() (    _exec docker build --progress plain --tag younpc/note:latest . ; _exec mkdir -p build/flutter_note/web; _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
 docker.run() {      _exec echo "note preview http://localhost:8888/note/"; _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note;}

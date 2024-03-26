@@ -122,6 +122,228 @@ class Card$Mate extends _i1.Card with _i2.Mate {
         );
   }
 
+  /// Card Card.filled({Key? key, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, ShapeBorder? shape, bool borderOnForeground = true, EdgeInsetsGeometry? margin, Clip? clipBehavior, Widget? child, bool semanticContainer = true})
+  Card$Mate.filled({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Color? color} , default:none
+    super.color,
+
+    /// optionalParameters: {Color? shadowColor} , default:none
+    super.shadowColor,
+
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
+    super.surfaceTintColor,
+
+    /// optionalParameters: {double? elevation} , default:none
+    super.elevation,
+
+    /// optionalParameters: {ShapeBorder? shape} , default:none
+    super.shape,
+
+    /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
+    super.borderOnForeground,
+
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
+    super.margin,
+
+    /// optionalParameters: {Clip? clipBehavior} , default:none
+    super.clipBehavior,
+
+    /// optionalParameters: {Widget? child} , default:none
+    super.child,
+
+    /// optionalParameters: {bool semanticContainer = true} , default:processed=BooleanLiteralImpl
+    super.semanticContainer,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'borderOnForeground': _i2.BuilderArg<bool>(
+            name: 'borderOnForeground',
+            init: borderOnForeground,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'margin': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'semanticContainer': _i2.BuilderArg<bool>(
+            name: 'semanticContainer',
+            init: semanticContainer,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.filled() {
+    mateBuilderName = 'Card.filled';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => Card$Mate.filled(
+          key: p.get('key').build(),
+          color: p.get('color').build(),
+          shadowColor: p.get('shadowColor').build(),
+          surfaceTintColor: p.get('surfaceTintColor').build(),
+          elevation: p.get('elevation').build(),
+          shape: p.get('shape').build(),
+          borderOnForeground: p.get('borderOnForeground').build(),
+          margin: p.get('margin').build(),
+          clipBehavior: p.get('clipBehavior').build(),
+          child: p.get('child').build(),
+          semanticContainer: p.get('semanticContainer').build(),
+        );
+  }
+
+  /// Card Card.outlined({Key? key, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, ShapeBorder? shape, bool borderOnForeground = true, EdgeInsetsGeometry? margin, Clip? clipBehavior, Widget? child, bool semanticContainer = true})
+  Card$Mate.outlined({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {Color? color} , default:none
+    super.color,
+
+    /// optionalParameters: {Color? shadowColor} , default:none
+    super.shadowColor,
+
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
+    super.surfaceTintColor,
+
+    /// optionalParameters: {double? elevation} , default:none
+    super.elevation,
+
+    /// optionalParameters: {ShapeBorder? shape} , default:none
+    super.shape,
+
+    /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
+    super.borderOnForeground,
+
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
+    super.margin,
+
+    /// optionalParameters: {Clip? clipBehavior} , default:none
+    super.clipBehavior,
+
+    /// optionalParameters: {Widget? child} , default:none
+    super.child,
+
+    /// optionalParameters: {bool semanticContainer = true} , default:processed=BooleanLiteralImpl
+    super.semanticContainer,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'borderOnForeground': _i2.BuilderArg<bool>(
+            name: 'borderOnForeground',
+            init: borderOnForeground,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'margin': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'semanticContainer': _i2.BuilderArg<bool>(
+            name: 'semanticContainer',
+            init: semanticContainer,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.outlined() {
+    mateBuilderName = 'Card.outlined';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => Card$Mate.outlined(
+          key: p.get('key').build(),
+          color: p.get('color').build(),
+          shadowColor: p.get('shadowColor').build(),
+          surfaceTintColor: p.get('surfaceTintColor').build(),
+          elevation: p.get('elevation').build(),
+          shape: p.get('shape').build(),
+          borderOnForeground: p.get('borderOnForeground').build(),
+          margin: p.get('margin').build(),
+          clipBehavior: p.get('clipBehavior').build(),
+          child: p.get('child').build(),
+          semanticContainer: p.get('semanticContainer').build(),
+        );
+  }
+
   @override
   final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -8,6 +8,7 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/rendering/box.dart' as _i5;
 import 'package:flutter/src/painting/alignment.dart' as _i6;
 import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/rendering.dart' as _i8;
 
 /// class RenderPadding extends RenderShiftedBox
 class RenderPadding$Mate extends _i1.RenderPadding with _i2.Mate {
@@ -116,7 +117,7 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
 
 /// class RenderConstrainedOverflowBox extends RenderAligningShiftedBox
 class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox with _i2.Mate {
-  /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
+  /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, OverflowBoxFit fit = OverflowBoxFit.max, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderConstrainedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
@@ -132,6 +133,9 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
 
     /// optionalParameters: {double? maxHeight} , default:none
     super.maxHeight,
+
+    /// optionalParameters: {OverflowBoxFit fit = OverflowBoxFit.max} , default:processed=PrefixedIdentifierImpl
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
@@ -164,6 +168,12 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
             init: maxHeight,
             isNamed: true,
           ),
+          'fit': _i2.BuilderArg<_i1.OverflowBoxFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i8.OverflowBoxFit.max,
+          ),
           'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
@@ -185,6 +195,7 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
           maxWidth: p.get('maxWidth').build(),
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
+          fit: p.get('fit').build(),
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );

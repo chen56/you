@@ -12,10 +12,12 @@ import 'package:flutter/src/painting/alignment.dart' as _i8;
 import 'dart:ui' as _i9;
 import 'package:flutter/src/painting/borders.dart' as _i10;
 import 'package:flutter/src/material/list_tile.dart' as _i11;
+import 'package:flutter/src/material/theme_data.dart' as _i12;
+import 'package:flutter/src/animation/animation_style.dart' as _i13;
 
 /// class ExpansionTile extends StatefulWidget
 class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
-  /// ExpansionTile ExpansionTile({Key? key, Widget? leading, required Widget title, Widget? subtitle, void Function(bool)? onExpansionChanged, List<Widget> children = const <Widget>[], Widget? trailing, bool initiallyExpanded = false, bool maintainState = false, EdgeInsetsGeometry? tilePadding, CrossAxisAlignment? expandedCrossAxisAlignment, Alignment? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? backgroundColor, Color? collapsedBackgroundColor, Color? textColor, Color? collapsedTextColor, Color? iconColor, Color? collapsedIconColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, ListTileControlAffinity? controlAffinity, ExpansionTileController? controller})
+  /// ExpansionTile ExpansionTile({Key? key, Widget? leading, required Widget title, Widget? subtitle, void Function(bool)? onExpansionChanged, List<Widget> children = const <Widget>[], Widget? trailing, bool initiallyExpanded = false, bool maintainState = false, EdgeInsetsGeometry? tilePadding, CrossAxisAlignment? expandedCrossAxisAlignment, Alignment? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? backgroundColor, Color? collapsedBackgroundColor, Color? textColor, Color? collapsedTextColor, Color? iconColor, Color? collapsedIconColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, ListTileControlAffinity? controlAffinity, ExpansionTileController? controller, bool? dense, VisualDensity? visualDensity, bool? enableFeedback = true, bool enabled = true, AnimationStyle? expansionAnimationStyle})
   ExpansionTile$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -88,6 +90,21 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
 
     /// optionalParameters: {ExpansionTileController? controller} , default:none
     super.controller,
+
+    /// optionalParameters: {bool? dense} , default:none
+    super.dense,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
+    super.visualDensity,
+
+    /// optionalParameters: {bool? enableFeedback = true} , default:processed=BooleanLiteralImpl
+    super.enableFeedback,
+
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    super.enabled,
+
+    /// optionalParameters: {AnimationStyle? expansionAnimationStyle} , default:none
+    super.expansionAnimationStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -211,6 +228,33 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
             init: controller,
             isNamed: true,
           ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i12.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'expansionAnimationStyle': _i2.BuilderArg<_i13.AnimationStyle?>(
+            name: 'expansionAnimationStyle',
+            init: expansionAnimationStyle,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'ExpansionTile';
@@ -240,6 +284,11 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           controlAffinity: p.get('controlAffinity').build(),
           controller: p.get('controller').build(),
+          dense: p.get('dense').build(),
+          visualDensity: p.get('visualDensity').build(),
+          enableFeedback: p.get('enableFeedback').build(),
+          enabled: p.get('enabled').build(),
+          expansionAnimationStyle: p.get('expansionAnimationStyle').build(),
         );
   }
 

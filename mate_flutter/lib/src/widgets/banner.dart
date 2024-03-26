@@ -78,7 +78,7 @@ class BannerPainter$Mate extends _i1.BannerPainter with _i2.Mate {
   final Map<String, _i2.BuilderArg> mateParams;
 }
 
-/// class Banner extends StatelessWidget
+/// class Banner extends StatefulWidget
 class Banner$Mate extends _i1.Banner with _i2.Mate {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({

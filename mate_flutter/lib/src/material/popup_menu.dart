@@ -14,6 +14,7 @@ import 'package:flutter/animation.dart' as _i10;
 import 'package:flutter/src/painting/borders.dart' as _i11;
 import 'package:flutter/src/rendering/box.dart' as _i12;
 import 'package:flutter/src/material/popup_menu_theme.dart' as _i13;
+import 'package:flutter/src/animation/animation_style.dart' as _i14;
 
 /// class PopupMenuDivider extends PopupMenuEntry<Never>
 class PopupMenuDivider$Mate extends _i1.PopupMenuDivider with _i2.Mate {
@@ -266,7 +267,7 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
 
 /// class PopupMenuButton<T> extends StatefulWidget
 class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
-  /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, Color? iconColor, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
+  /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, Color? iconColor, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none, bool useRootNavigator = false, AnimationStyle? popUpAnimationStyle})
   PopupMenuButton$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -339,6 +340,12 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {bool useRootNavigator = false} , default:processed=BooleanLiteralImpl
+    super.useRootNavigator,
+
+    /// optionalParameters: {AnimationStyle? popUpAnimationStyle} , default:none
+    super.popUpAnimationStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -463,6 +470,17 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             isNamed: true,
             defaultValue: _i4.Clip.none,
           ),
+          'useRootNavigator': _i2.BuilderArg<bool>(
+            name: 'useRootNavigator',
+            init: useRootNavigator,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'popUpAnimationStyle': _i2.BuilderArg<_i14.AnimationStyle?>(
+            name: 'popUpAnimationStyle',
+            init: popUpAnimationStyle,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'PopupMenuButton';
@@ -492,6 +510,8 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
           constraints: p.get('constraints').build(),
           position: p.get('position').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          useRootNavigator: p.get('useRootNavigator').build(),
+          popUpAnimationStyle: p.get('popUpAnimationStyle').build(),
         );
   }
 

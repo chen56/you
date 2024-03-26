@@ -12,7 +12,6 @@ import 'package:flutter/src/rendering/proxy_box.dart' as _i8;
 import 'package:flutter/src/material/snack_bar_theme.dart' as _i9;
 import 'package:flutter/src/animation/animation.dart' as _i10;
 import 'package:flutter/src/widgets/dismissible.dart' as _i11;
-import 'package:flutter/cupertino.dart' as _i12;
 
 /// class SnackBarAction extends StatefulWidget
 class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
@@ -95,7 +94,7 @@ class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
 
 /// class SnackBar extends StatefulWidget
 class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
-  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, HitTestBehavior? hitTestBehavior, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
+  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, HitTestBehavior? hitTestBehavior, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection? dismissDirection, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -148,7 +147,7 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
     /// optionalParameters: {void Function()? onVisible} , default:none
     super.onVisible,
 
-    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DismissDirection? dismissDirection} , default:none
     super.dismissDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
@@ -239,11 +238,10 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
             init: onVisible,
             isNamed: true,
           ),
-          'dismissDirection': _i2.BuilderArg<_i11.DismissDirection>(
+          'dismissDirection': _i2.BuilderArg<_i11.DismissDirection?>(
             name: 'dismissDirection',
             init: dismissDirection,
             isNamed: true,
-            defaultValue: _i12.DismissDirection.down,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',

@@ -30,7 +30,7 @@ import 'package:flutter/src/widgets/magnifier.dart' as _i26;
 
 /// class CupertinoTextField extends StatefulWidget
 class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
-  /// CupertinoTextField CupertinoTextField({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration = _kDefaultRoundedBorderDecoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool enabled = true, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), bool cursorOpacityAnimates = true, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
+  /// CupertinoTextField CupertinoTextField({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration = _kDefaultRoundedBorderDecoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, String? clearButtonSemanticLabel, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool enabled = true, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), bool cursorOpacityAnimates = true, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -70,6 +70,9 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
 
     /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
     super.clearButtonMode,
+
+    /// optionalParameters: {String? clearButtonSemanticLabel} , default:none
+    super.clearButtonSemanticLabel,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
     super.keyboardType,
@@ -294,6 +297,11 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: clearButtonMode,
             isNamed: true,
             defaultValue: _i11.OverlayVisibilityMode.never,
+          ),
+          'clearButtonSemanticLabel': _i2.BuilderArg<String?>(
+            name: 'clearButtonSemanticLabel',
+            init: clearButtonSemanticLabel,
+            isNamed: true,
           ),
           'keyboardType': _i2.BuilderArg<_i12.TextInputType?>(
             name: 'keyboardType',
@@ -590,6 +598,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
           suffix: p.get('suffix').build(),
           suffixMode: p.get('suffixMode').build(),
           clearButtonMode: p.get('clearButtonMode').build(),
+          clearButtonSemanticLabel: p.get('clearButtonSemanticLabel').build(),
           keyboardType: p.get('keyboardType').build(),
           textInputAction: p.get('textInputAction').build(),
           textCapitalization: p.get('textCapitalization').build(),
@@ -645,7 +654,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
         );
   }
 
-  /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool enabled = true, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), bool cursorOpacityAnimates = true, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
+  /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, String? clearButtonSemanticLabel, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool enabled = true, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), bool cursorOpacityAnimates = true, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate.borderless({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -685,6 +694,9 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
 
     /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
     super.clearButtonMode,
+
+    /// optionalParameters: {String? clearButtonSemanticLabel} , default:none
+    super.clearButtonSemanticLabel,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
     super.keyboardType,
@@ -909,6 +921,11 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: clearButtonMode,
             isNamed: true,
             defaultValue: _i11.OverlayVisibilityMode.never,
+          ),
+          'clearButtonSemanticLabel': _i2.BuilderArg<String?>(
+            name: 'clearButtonSemanticLabel',
+            init: clearButtonSemanticLabel,
+            isNamed: true,
           ),
           'keyboardType': _i2.BuilderArg<_i12.TextInputType?>(
             name: 'keyboardType',
@@ -1205,6 +1222,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
           suffix: p.get('suffix').build(),
           suffixMode: p.get('suffixMode').build(),
           clearButtonMode: p.get('clearButtonMode').build(),
+          clearButtonSemanticLabel: p.get('clearButtonSemanticLabel').build(),
           keyboardType: p.get('keyboardType').build(),
           textInputAction: p.get('textInputAction').build(),
           textCapitalization: p.get('textCapitalization').build(),

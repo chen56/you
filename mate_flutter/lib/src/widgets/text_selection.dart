@@ -445,7 +445,7 @@ class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureD
 
 /// class TextSelectionGestureDetector extends StatefulWidget
 class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector with _i2.Mate {
-  /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function()? onTapTrackStart, void Function()? onTapTrackReset, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
+  /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function()? onTapTrackStart, void Function()? onTapTrackReset, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function()? onUserTap, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, bool onUserTapAlwaysCalled = false, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -477,6 +477,9 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
     /// optionalParameters: {void Function()? onSingleTapCancel} , default:none
     super.onSingleTapCancel,
 
+    /// optionalParameters: {void Function()? onUserTap} , default:none
+    super.onUserTap,
+
     /// optionalParameters: {void Function(LongPressStartDetails)? onSingleLongTapStart} , default:none
     super.onSingleLongTapStart,
 
@@ -500,6 +503,9 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
 
     /// optionalParameters: {void Function(TapDragEndDetails)? onDragSelectionEnd} , default:none
     super.onDragSelectionEnd,
+
+    /// optionalParameters: {bool onUserTapAlwaysCalled = false} , default:processed=BooleanLiteralImpl
+    super.onUserTapAlwaysCalled,
 
     /// optionalParameters: {HitTestBehavior? behavior} , default:none
     super.behavior,
@@ -557,6 +563,11 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
             init: onSingleTapCancel,
             isNamed: true,
           ),
+          'onUserTap': _i2.BuilderArg<_i19.GestureTapCallback?>(
+            name: 'onUserTap',
+            init: onUserTap,
+            isNamed: true,
+          ),
           'onSingleLongTapStart': _i2.BuilderArg<_i20.GestureLongPressStartCallback?>(
             name: 'onSingleLongTapStart',
             init: onSingleLongTapStart,
@@ -597,6 +608,12 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
             init: onDragSelectionEnd,
             isNamed: true,
           ),
+          'onUserTapAlwaysCalled': _i2.BuilderArg<bool>(
+            name: 'onUserTapAlwaysCalled',
+            init: onUserTapAlwaysCalled,
+            isNamed: true,
+            defaultValue: false,
+          ),
           'behavior': _i2.BuilderArg<_i21.HitTestBehavior?>(
             name: 'behavior',
             init: behavior,
@@ -622,6 +639,7 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
           onSecondaryTapDown: p.get('onSecondaryTapDown').build(),
           onSingleTapUp: p.get('onSingleTapUp').build(),
           onSingleTapCancel: p.get('onSingleTapCancel').build(),
+          onUserTap: p.get('onUserTap').build(),
           onSingleLongTapStart: p.get('onSingleLongTapStart').build(),
           onSingleLongTapMoveUpdate: p.get('onSingleLongTapMoveUpdate').build(),
           onSingleLongTapEnd: p.get('onSingleLongTapEnd').build(),
@@ -630,6 +648,7 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
           onDragSelectionStart: p.get('onDragSelectionStart').build(),
           onDragSelectionUpdate: p.get('onDragSelectionUpdate').build(),
           onDragSelectionEnd: p.get('onDragSelectionEnd').build(),
+          onUserTapAlwaysCalled: p.get('onUserTapAlwaysCalled').build(),
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );

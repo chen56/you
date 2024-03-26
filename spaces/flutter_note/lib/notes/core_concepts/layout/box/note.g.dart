@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (StatefulBuilder(builder: (Buil)
+        /// (print.markdown(r''' # box layo, print(WindowContent()(LayoutBu, print(WindowContent()(LayoutBu, print(WindowContent(width: 100, print(WindowContent(height: 10)
         (
           cellType: 'body',
           offset: 202,
-          end: 321,
+          end: 1875,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 321,
-          end: 323,
+          offset: 1875,
+          end: 1877,
           specialNodes: <({
             String nodeType,
             int end,

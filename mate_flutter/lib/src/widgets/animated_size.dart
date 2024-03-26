@@ -13,7 +13,7 @@ import 'dart:ui' as _i9;
 
 /// class AnimatedSize extends StatefulWidget
 class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
-  /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge})
+  /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge, void Function()? onEnd})
   AnimatedSize$Mate({
     /// optionalParameters: {Key? key} , default:none
     super.key,
@@ -35,6 +35,9 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
+
+    /// optionalParameters: {void Function()? onEnd} , default:none
+    super.onEnd,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -74,6 +77,11 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
             isNamed: true,
             defaultValue: _i9.Clip.hardEdge,
           ),
+          'onEnd': _i2.BuilderArg<_i9.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
         },
         super() {
     mateBuilderName = 'AnimatedSize';
@@ -86,6 +94,7 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
           duration: p.get('duration').build(),
           reverseDuration: p.get('reverseDuration').build(),
           clipBehavior: p.get('clipBehavior').build(),
+          onEnd: p.get('onEnd').build(),
         );
   }
 
