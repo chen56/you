@@ -73,8 +73,8 @@ init() {
   run git lfs install
 }
 
-bake.@cmd --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE all [any command]"
-p(){ echo "use './$SCRIPT_FILE p -h' see sub commands, there are all projects "; }
+bake.@cmd --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE p <sub_cmd>"
+#p(){ echo "use './$SCRIPT_FILE p -h' see sub commands, there are all projects "; }
 
 bake.@cmd --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
 p.all() {
