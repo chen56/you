@@ -41,20 +41,20 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #      ./bake [all function]     # bake内的所有函数均可以在脚本外直接运行
 #      ./bake _self              # 比如这个内部函数, 看bake内部变量，调试脚本用
 #      ./bake test              # 你如果定义过test()函数，就可以这样运行
-# 2. 带"."的函数，形成父子命令，比如 bake.opt.set()函数是bake.opt()的子命令，bake.opt()
+# 2. 带"."的函数，形成父子命令，比如 bake.@opt()函数是bake.opt()的子命令，bake.opt()
 #    是bake()的子命令，即便未定义父命令，也可以通过父命令列子命令看帮助:
 #      ./bake bake -h           # 运行子命令,或看帮助
 #      ./bake bake opt -h       # 运行子命令,或看帮助
-#      ./bake bake opt set -h   # 运行子命令,或看帮助
-#      ./bake bake opt set -h   # 由于规则1，可直接用函数名运行子命令
+#      ./bake bake.@opt -h   # 运行子命令,或看帮助
+#      ./bake bake.@opt -h   # 由于规则1，可直接用函数名运行子命令
 # 3. 你可以定义根命令"_root()"
 #      ./bake                   # 如果有_root()函数，就执行它
 # 4. 像其他高级语言的cli工具一样，用简单变量就可以获取命令option:
 #    # a. 先在bake文件里里定义app options
-#      bake.opt.set --cmd build --name "target" --type string
+#      bake.@opt --cmd build --name "target" --type string
 #    # b. 解析和使用option
 #      function build() {
-#         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
+#         eval "$(bake.parse "${FUNCNAME[0]}" "$@")";
 #         echo "build ... your option：target: $target";
 #      }
 #    # c. 调用看看:
@@ -70,21 +70,21 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #     ./bake _self        # For example, this internal function,
 #                         # see bake internal variables, used to debug scripts
 #     ./bake test        # If you have a test() function, you can run it like this
-# 2. Functions with "." is parent-child commands, such as bake.opt.set() function
+# 2. Functions with "." is parent-child commands, such as bake.@opt() function
 #    is a subcommand of bake.opt(), bake.opt()  is a subcommand of bake(),
 #    even the parent command is not defined, you can also view the help :
 #     ./bake bake -h          # Run subcommands, or see help
 #     ./bake bake opt -h      # Run subcommands, or see help
-#     ./bake bake.opt.set -h  # Run subcommands, or see help
-#     ./bake bake.opt.set -h  # Due to rule 1, the subcommand can be run directly with the function name
+#     ./bake bake.@opt -h  # Run subcommands, or see help
+#     ./bake bake.@opt -h  # Due to rule 1, the subcommand can be run directly with the function name
 # 3. You can define the root command "_root()"
 #     ./bake                  # If there is a _root() function, execute it
 # 4. Like other high-level language cli tools, command options can be obtained with simple variables:
 #     # a. Define options before the command function
-#     bake.opt.set --cmd build --name "target" --type string
+#     bake.@opt --cmd build --name "target" --type string
 #     # b. Parse and use option
 #       function build() {
-#         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
+#         eval "$(bake.parse "${FUNCNAME[0]}" "$@")";
 #         echo "build ... your option: target: $target";
 #       }
 #     # c. Call it:
@@ -137,7 +137,6 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}" # set workdir
 declare debug=false
 declare help=false
-declare verbose=false
 
 bake._on_error() {
   bake._error "ERROR - trapped an error: ↑ , trace: ↓"
@@ -235,7 +234,6 @@ EOF
   echo
   echo "help   = $help"
   echo "debug  = $debug"
-  echo "verbose= $verbose"
   echo
 
 cat <<- EOF
@@ -403,10 +401,10 @@ bake._opt_cmd_chain_opts() {
   done | sort
 }
 
-# only use by bake.opt.set,
-# because "bake.opt.set" is meta function, use this func to add self
+# only use by bake.@opt,
+# because "bake.@opt" is meta function, use this func to add self
 bake._opt_internal_add() {
-  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" help="$7"
+  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" optHelp="$7"
   _data["$cmd/opts/$opt"]="type:opt"
   _data["$cmd/opts/$opt/name"]="$opt"
   _data["$cmd/opts/$opt/type"]="$type"
@@ -416,15 +414,28 @@ bake._opt_internal_add() {
   _data["$cmd/opts/$opt/optHelp"]="$optHelp"
 }
 
-bake._opt_internal_add bake.opt.set "cmd" "string" "true" "" "" "cmd name"
-bake._opt_internal_add bake.opt.set "name" "string" "true" "" "" "option name"
-bake._opt_internal_add bake.opt.set "type" "string" "true" "" "" "option type"
-bake._opt_internal_add bake.opt.set "required" "bool" "false" "false" "" "option required"
-bake._opt_internal_add bake.opt.set "abbr" "string" "false" "" "" "option abbr"
-bake._opt_internal_add bake.opt.set "default" "string" "false" "" "" "option abbr"
-bake._opt_internal_add bake.opt.set "optHelp" "string" "false" "" "" "option help"
-bake.opt.set() {
-  eval "$(bake.opt.parse ""${FUNCNAME[0]}"" "$@")"
+
+# 为cmd配置参数
+# Examples:
+#   bake.@opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --optHelp "is_zip, build项目时是否压缩"
+# 每个参数可以配置如下信息：
+#   cmd: 参数作用的命令全名
+#   name: 参数长名，可以 ./bake build --is_zip 这样使用
+#   type: 类型，目前支持 bool|string|list
+#   required: 是否必须提供，不提供将报错
+#   abbr: 参数短名, 可以 ./bake build -z 这样使用
+#   default: 缺省值, 未指定参数时，使用此值
+#   optHelp: 参数帮助，将显示在‘./bake build -h’命令帮助里
+# 参考[bake.parse]
+bake._opt_internal_add bake.@opt "cmd"      "string" "true"  ""      ""      "cmd name"
+bake._opt_internal_add bake.@opt "name"     "string" "true"  ""      ""      "option name"
+bake._opt_internal_add bake.@opt "type"     "string" "true"  ""      ""      "option type [bool|string|list]"
+bake._opt_internal_add bake.@opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
+bake._opt_internal_add bake.@opt "abbr"     "string" "false" ""      ""      "option abbr"
+bake._opt_internal_add bake.@opt "default"  "string" "false" ""      ""      "option abbr"
+bake._opt_internal_add bake.@opt "optHelp"  "string" "false" ""      ""      "option optHelp"
+bake.@opt() {
+  eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]]; then
     echo "error: option [--name] required " >&2 && return 1
   fi
@@ -437,10 +448,40 @@ bake.opt.set() {
   bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$optHelp"
 }
 
-# Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
-bake.opt.parse() {
-  local cmd="${1:_root}"
-  shift # shift cmd arg, left all is options maybe
+# 像其他高级语言的cli工具一样，用简单变量就可以获取名称化的命令参数:
+# 支持bool,string,list三种参数，用法如下：
+# 你的./bake脚本里：
+#      bake.@opt --cmd build --name "is_zip" --type bool
+#      bake.@opt --cmd build --name "target" --type string
+#      bake.@opt --cmd build --name "files"  --type string
+#      function build() {
+#         # 模版代码，把生成的脚本eval出来
+#         eval "$(bake.parse "${FUNCNAME[0]}" "$@")";
+
+#         echo "is_zip:$is_zip, target:$target, hosts:${hosts[@]}";
+#      }
+#  调用：
+#      ./bake build --target "macos" --is_zip --host host1 --host2
+#  调用结果是'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
+#  ---------------------------------------------------------
+#  declare is_zip=true;
+#  declare target="macos";
+#  declare hosts=("host1" "host2");
+#  declare optShift=7;
+#  ---------------------------------------------------------
+# eval后，就可以直接使用变量了
+#
+# Usage: bake.parse <cmd:default _root> [arg1] [arg2] ...
+# 参考：[bake.@opt]
+
+bake.parse() {
+  local cmd="${1}"
+  if [[ "$cmd" == "" ]]; then
+    bake._throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default _root> [arg1] [arg2]" ;
+  fi
+
+  shift; # shift cmd arg, left is options
+
   # key is -h --help ... candidate words ,
   # value is optPath
   declare -A allOptOnCmdChain
@@ -507,19 +548,19 @@ bake.opt.parse() {
   echo -e "$resultStr" # echo -e : unescapes backslash
 }
 
-bake.opt.set --cmd "bake.cmd.set" --name "cmd"         --type string --optHelp "cmd, function name"
-bake.opt.set --cmd "bake.cmd.set" --name "usage"       --type string --optHelp "usage"
-bake.opt.set --cmd "bake.cmd.set" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
-bake.opt.set --cmd "bake.cmd.set" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
-bake.cmd.set() {
+bake.@opt --cmd "bake.@cmd" --name "cmd"         --type string --optHelp "cmd, function name"
+bake.@opt --cmd "bake.@cmd" --name "usage"       --type string --optHelp "usage"
+bake.@opt --cmd "bake.@cmd" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.@opt --cmd "bake.@cmd" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+bake.@cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
-  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
   if [[ "$cmd" == "" ]]; then
-    echo "error: bake.cmd.set [--cmd] required " >&2
+    echo "error: bake.@cmd [--cmd] required " >&2
     return 1
   fi
-  #  bake.opt.parse "${FUNCNAME[0]}" "$@" >&2
+  #  bake.parse "${FUNCNAME[0]}" "$@" >&2
   _data["$cmd/usage"]="$usage"
   _data["$cmd/summary"]="$summary"
   _data["$cmd/description"]="$description"
@@ -564,14 +605,15 @@ bake._show_cmd_help() {
   fi
 
   shift
-  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+  echo "${FUNCNAME[0]}"-------------"$@"
+  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
   local usage
   usage="${_data["${cmd}/usage"]}"
   if [[ "$usage" != "" ]]; then
     echo -e "\nUsage:  $usage "
   else
-    echo -e "\nUsage:  ./$BAKE_FILE $(bake.str.split "$cmd" "." | tr "\n" " ") [options] [args...]"
+    echo -e "\nUsage:  ./$BAKE_FILE $(bake._str_split "$cmd" "." | tr "\n" " ") [options] [args...]"
   fi
 
   echo
@@ -617,23 +659,25 @@ bake._show_cmd_help() {
 Available Commands:"
   local maxLengthOfCmd
   maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
-  for subcmdName in $(bake._cmd_children "$cmd"); do
+
+  for subCmd in $(bake._cmd_children "$cmd"); do
 
     # only show public cmd if not verbose
-    if [[ "$verbose" == "" && ("$subcmdName" == _* ||
-      "$subcmdName" == bake*) ||
-      "$subcmdName" == @* ]]; then
-      continue
+    # '_'起头的命令和'bake'命令，只有debug模式才打印出来
+    if [[ ("$subCmd" == _* || "$subCmd" == bake*)  ]]; then
+      if [[  "$debug" != "true" ]]; then
+        continue
+      fi
     fi
 
-    local subCmd="$cmd/$subcmdName"
-    [[ "$cmd" == "_root" ]] && subCmd="$subcmdName"
+    local subCmdPath="$cmd/$subCmd"
+    [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
 
     local summary
-    summary="${_data["$subCmd/summary"]}"
+    summary="${_data["$subCmdPath/summary"]}"
     summary="$(echo -e "$summary")" #  backslash escapes interpretation
 
-    printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subcmdName}"
+    printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subCmd}"
   done
 }
 
@@ -656,7 +700,7 @@ bake.go() {
   done
 
   if [[ "$cmd" == "" ]]; then cmd="_root"; fi
-  eval "$(bake.opt.parse "$cmd" "$@")"
+  eval "$(bake.parse "$cmd" "$@")"
 
   if [[ "$help" == "true" ]]; then
     bake._show_cmd_help "$cmd" "$@"
@@ -677,9 +721,8 @@ bake.go() {
 }
 
 # _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt.set --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
-bake.opt.set --cmd _root --name "verbose" --abbr v --type bool   --default false --optHelp "verbose, show more info, more hidden commands"
-bake.opt.set --cmd _root --name "debug"   --abbr d --type bool   --default false  --optHelp "debug mode, print more internal info"
+bake.@opt --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
+bake.@opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --optHelp "debug mode, print more internal info"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here

@@ -36,7 +36,7 @@ _exec() {
 # 应用的命令脚本
 ##########################################
 
-bake.cmd.set --cmd _root \
+bake.@cmd --cmd _root \
              --usage "./$SCRIPT_FILE [cmd] [opts] [args...]" \
              --summary "flutter-note build cli." \
              --description "$( cat <<-EOF
@@ -66,10 +66,10 @@ init() {
   run git lfs install
 }
 
-bake.cmd.set --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE all [any command]"
+bake.@cmd --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE all [any command]"
 p(){ echo "use './$SCRIPT_FILE p -h' see sub commands, there are all projects "; }
 
-bake.cmd.set --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
+bake.@cmd --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
 p.all() {
   #       目录中有"pubspec.yaml"的，认为是flutter项目
   #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do

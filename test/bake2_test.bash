@@ -401,7 +401,7 @@ test.bake._cmd_register(){
     @contains "test.bake._cmd_register"
 }
 test.data.children(){
-  assert "$(bake._data_children "bake.opt.set/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
+  assert "$(bake._data_children "bake.@opt/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
 }
 
 test.bake._opt_cmd_chain_opts(){
@@ -411,48 +411,48 @@ _root/opts/help
 _root/opts/verbose"
 
   # "include parent option"
-  assert "$(bake._opt_cmd_chain_opts "bake.opt.set")" @is \
+  assert "$(bake._opt_cmd_chain_opts "bake.@opt")" @is \
 "_root/opts/debug
 _root/opts/help
 _root/opts/verbose
-bake.opt.set/opts/abbr
-bake.opt.set/opts/cmd
-bake.opt.set/opts/default
-bake.opt.set/opts/name
-bake.opt.set/opts/optHelp
-bake.opt.set/opts/required
-bake.opt.set/opts/type"
+bake.@opt/opts/abbr
+bake.@opt/opts/cmd
+bake.@opt/opts/default
+bake.@opt/opts/name
+bake.@opt/opts/optHelp
+bake.@opt/opts/required
+bake.@opt/opts/type"
 }
 
 test.cmd.parse(){
-  bake.opt.set --cmd "test.cmd.parse" --name stringOpt --type string
-  bake.opt.set --cmd "test.cmd.parse" --name boolOpt --type bool
-  bake.opt.set --cmd "test.cmd.parse" --name listOpt --type list
+  bake.@opt --cmd "test.cmd.parse" --name stringOpt --type string
+  bake.@opt --cmd "test.cmd.parse" --name boolOpt --type bool
+  bake.@opt --cmd "test.cmd.parse" --name listOpt --type list
 
-  assert "$(bake.opt.parse "test.cmd.parse" --boolOpt )" @is 'declare boolOpt="true";
+  assert "$(bake.parse "test.cmd.parse" --boolOpt )" @is 'declare boolOpt="true";
 declare optShift=1;'
-  assert "$(bake.opt.parse "test.cmd.parse" --stringOpt "1 2" )" @is 'declare stringOpt="1 2";
+  assert "$(bake.parse "test.cmd.parse" --stringOpt "1 2" )" @is 'declare stringOpt="1 2";
 declare optShift=2;'
 
   # list type option
-  assert "$(bake.opt.parse "test.cmd.parse" --listOpt "a 1" --listOpt "b 2" )" @is 'declare listOpt=([0]="a 1" [1]="b 2");
+  assert "$(bake.parse "test.cmd.parse" --listOpt "a 1" --listOpt "b 2" )" @is 'declare listOpt=([0]="a 1" [1]="b 2");
 declare optShift=4;'
 
   # no exists cmd
-  assert "$(bake.opt.parse "no.exists.func" --unknow_opt bool)" @is "declare optShift=0;"
+  assert "$(bake.parse "no.exists.func" --unknow_opt bool)" @is "declare optShift=0;"
 
   # no exists option
-  assert "$(bake.opt.parse "test.cmd.parse" --no_exists_opt)" @is "declare optShift=0;"
+  assert "$(bake.parse "test.cmd.parse" --no_exists_opt)" @is "declare optShift=0;"
 }
 
-test.bake.opt.set(){
-  bake.opt.set --cmd "test.opt.add" --name boolopt --type bool
+test.bake.@opt(){
+  bake.@opt --cmd "test.opt.add" --name boolopt --type bool
 }
 
 test.bake.opt.value.parse_and_get_value(){
-  bake.opt.set --cmd "test.opt.add" --name xxx --type string
-  echo $(bake.opt.parse "test.opt.add" --xxx chen)
-  eval "$(bake.opt.parse "test.opt.add" --xxx chen)"
+  bake.@opt --cmd "test.opt.add" --name xxx --type string
+  echo $(bake.parse "test.opt.add" --xxx chen)
+  eval "$(bake.parse "test.opt.add" --xxx chen)"
   assert "$xxx" @is "chen"
 }
 
