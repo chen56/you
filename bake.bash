@@ -548,16 +548,16 @@ bake.parse() {
   echo -e "$resultStr" # echo -e : unescapes backslash
 }
 
-bake.opt --cmd "bake.@cmd" --name "cmd"         --type string --optHelp "cmd, function name"
-bake.opt --cmd "bake.@cmd" --name "usage"       --type string --optHelp "usage"
-bake.opt --cmd "bake.@cmd" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
-bake.opt --cmd "bake.@cmd" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
-bake.@cmd() {
+bake.opt --cmd "bake.cmd" --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt --cmd "bake.cmd" --name "usage"       --type string --optHelp "usage"
+bake.opt --cmd "bake.cmd" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.opt --cmd "bake.cmd" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
   if [[ "$cmd" == "" ]]; then
-    echo "error: bake.@cmd [--cmd] required " >&2
+    echo "error: bake.cmd [--cmd] required " >&2
     return 1
   fi
   #  bake.parse "${FUNCNAME[0]}" "$@" >&2
