@@ -12,7 +12,7 @@ WORKDIR ./note
 
 RUN ./bake get
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
-RUN ./bake build web_html --base-href "/note/"
+RUN ./bake build --base-href "/note/"
 
 #
 ######################################################################
