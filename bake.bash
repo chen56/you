@@ -413,8 +413,7 @@ bake._show_cmd_help() {
 
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
-  local usage
-  usage="${_data["${cmd}/usage"]}"
+  local usage="${_data["${cmd}/usage"]}"
   if [[ "$usage" != "" ]]; then
     echo -e "\nUsage:  $usage "
   else
@@ -443,8 +442,7 @@ bake._show_cmd_help() {
 
   echo "Available Options:"
   for optPath in $(bake._opt_cmd_chain_opts "$cmd"); do
-    local opt
-    opt=$(bake._path_basename "$optPath")
+    local opt=$(bake._path_basename "$optPath")
     local name=${_data["$optPath/name"]}
     local type=${_data["$optPath/type"]}
     local required=${_data["$optPath/required"]}
@@ -562,10 +560,8 @@ bake.parse() {
   # collect opt from command chain : _root>pub>pub.get
   #   root option first , priority low -> priority high:
   for optPath in $(bake._opt_cmd_chain_opts "$cmd" | bake._str_revertLines); do
-    local opt
-    opt=$(bake._path_basename "$optPath")
-    local abbr
-    abbr=${_data["$optPath/abbr"]}
+    local opt=$(bake._path_basename "$optPath")
+    local abbr=${_data["$optPath/abbr"]}
     allOptOnCmdChain["--$opt"]="${optPath}"
     if [[ "$abbr" != "" ]]; then allOptOnCmdChain["-$abbr"]="${optPath}"; fi
   done
@@ -578,8 +574,7 @@ bake.parse() {
   # while all args , until it is not opt
   while (($# > 0)); do
     # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
-    local optPath
-    optPath=${allOptOnCmdChain["$1"]}
+    local optPath=${allOptOnCmdChain["$1"]}
     # if next arg not a opt , parsing complete;
     if [[ "${optPath}" == "" ]]; then break; fi
 
@@ -614,8 +609,7 @@ bake.parse() {
 
   local resultStr
   for optPath in "${!optVars[@]}"; do
-    local declareStr
-    declareStr=$(declare -p "${optVars["$optPath"]}")
+    local declareStr=$(declare -p "${optVars["$optPath"]}")
     resultStr+="${declareStr/#*_opt_value_/declare };\n"
   done
   resultStr+="declare optShift=$((totalArgs - $#));\n"
