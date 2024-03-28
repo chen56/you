@@ -3,11 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:note/note.dart';
-
 build(BuildContext context, Pen print) {
-  print.markdown(r'''
+  print.markdown('''
 # box layout
-
+s
 ## 常用
 
 垂直&水平排列的组件

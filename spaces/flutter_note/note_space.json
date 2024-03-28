@@ -14,7 +14,7 @@
     },
     "/1.welcome": {
       "displayName": "welcome",
-      "order": 0
+      "order": 10
     },
     "/": {
       "displayName": "flutter-note笔记",

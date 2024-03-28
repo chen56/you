@@ -15,26 +15,13 @@ SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
-update(){ curl -L -O https://github.com/chen56/note/raw/main/bake.bash ; }
-if ! [[ -f "$SCRIPT_DIR/bake.bash" ]]; then
-  update
+_install_bake(){ curl -L -O https://github.com/chen56/note/raw/main/bake.bash ; }
+if ! [[ -f "$SCRIPT_DIR/bake.bash" ]]; then  # 文件不存在就下载
+  _install_bake
 fi
 
 # include common script
 source "$SCRIPT_DIR/bake.bash"
-
-####################################################################################
-# app script
-####################################################################################
-# print first, then _exec
-_exec() {
-  local project
-  project=$(basename "$PWD")
-  #  [[ "$PWD" == "$SCRIPT_DIR" ]] && project="_root"
-  echo "$project -> ${FUNCNAME[1]}() ▶︎【$*】"
-  "$@"
-  return $?
-}
 
 ##########################################
 # app cmd script
@@ -73,6 +60,25 @@ EOF
   )"
 
 
+# run一条命令，先print上下文信息，再执行
+# Usage: run <some cmd>
+# Example:
+# ------------------------------------
+# $ ./bake run pwd
+# /Users/x/git/younpc/bake:733 -> bake.go() ▶︎【pwd】
+# /Users/x/git/younpc
+# ------------------------------------
+run() {
+  local caller_line=$(caller 0 | awk '{print $1}')
+  local project
+  project=$(basename "$PWD")
+  #  [[ "$PWD" == "$SCRIPT_DIR" ]] && project="_root"
+  echo "$SCRIPT_PATH:$caller_line -> ${FUNCNAME[1]} ▶︎【$@】"
+  "$@"
+  return $?
+}
+
+
 #   flutter_note flutter create --platforms=macos .
 init() {
   run git lfs install
@@ -88,25 +94,25 @@ p.all() {
   #          # 用括号()开启子进程执行，可以不影响当前进程的环境
   #          ( cd "$project" ;  run "$@" ; )
   #        done
-  (cd learn_dart && _exec "$@")
-  (cd note && _exec "$@")
-  (cd mate_flutter && _exec "$@")
-  (cd mate && _exec "$@")
-  (cd note_test && _exec "$@")
-  (cd note_tools && _exec "$@")
-  (cd spaces/flutter_note && _exec "$@")
+  (cd learn_dart && run "$@")
+  (cd note && run "$@")
+  (cd mate_flutter && run "$@")
+  (cd mate && run "$@")
+  (cd note_test && run "$@")
+  (cd note_tools && run "$@")
+  (cd spaces/flutter_note && run "$@")
 }
 
-p.note() (cd note && _exec "$@")
-p.flutter_note() (cd spaces/flutter_note && _exec "$@")
-p.mate() (cd mate && _exec "$@")
-p.mate_flutter() (cd mate_flutter && _exec "$@")
-p.note_test() (cd note_test && _exec "$@")
-p.note_tools() (cd note_tools && _exec "$@")
+p.note() (cd note && run "$@")
+p.flutter_note() (cd spaces/flutter_note && run "$@")
+p.mate() (cd mate && run "$@")
+p.mate_flutter() (cd mate_flutter && run "$@")
+p.note_test() (cd note_test && run "$@")
+p.note_tools() (cd note_tools && run "$@")
 
-get() { _exec p.all flutter pub get; }
+get() { run p.all flutter pub get; }
 
-test() { ./test/bake2_test.bash test ; _exec p.all flutter test ;}
+test() { ./test/bake2_test.bash test ; run p.all flutter test ;}
 test.bake() { ./test/bake2_test.bash test ; }
 
 # get ip only work on macos
@@ -116,7 +122,7 @@ run.web() { p.flutter_note flutter run --web-port 8888 --web-renderer html --dev
 run.macos() { p.flutter_note flutter run --device-id macos "$@"; }
 
 # skwasm无法运行
-build.macos() { _exec p.flutter_note flutter build macos -v --release --tree-shake-icons "$@";  }
+build.macos() { run p.flutter_note flutter build macos -v --release --tree-shake-icons "$@";  }
 build.web_skwasm() {    p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 build.web_canvaskit() { p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
 build() {      p.flutter_note flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ; }
@@ -124,26 +130,26 @@ build() {      p.flutter_note flutter build web -v --release --tree-shake-icons 
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_note/build/web --port 8000
     # flutter pub global activate dhttpd
-    # _exec p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
-preview() { _exec p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
-preview.macos() (  _exec p.flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
+    # run p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+preview.web() { run p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+preview.macos() (  run p.flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
 
 #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
 #    build "$@"
 #   	npx http-server ./flutter_note/build/web --port 8000
-web.serve() {     _exec p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli ;}
+web.serve() {     run p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli ;}
 
 clean() { p.all flutter clean; rm -rf build;}
 
 gen.all() {  gen.notes;  } #  gen.mate;不再用了
-gen.notes() { _exec p.flutter_note dart run tools/gen.dart;        _exec p.flutter_note flutter pub get; }
-gen.mate() (  _exec p.mate_flutter dart run  tools/gen_mates.dart; _exec p.mate_flutter dart run  tools/gen_mate_icons.dart ; )
-gen.clean() { _exec rm -f p.flutter_note/lib/pages.g.dart;         _exec rm -rf mate_flutter/lib;  }
+gen.notes() { run p.flutter_note dart run tools/gen.dart;        run p.flutter_note flutter pub get; }
+gen.mate() (  run p.mate_flutter dart run  tools/gen_mates.dart; run p.mate_flutter dart run  tools/gen_mate_icons.dart ; )
+gen.clean() { run rm -f p.flutter_note/lib/pages.g.dart;         run rm -rf mate_flutter/lib;  }
 
-docker.build() (    _exec docker build --progress plain --tag younpc/note:latest . ; _exec mkdir -p build/flutter_note/web; _exec sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
-docker.run() {      _exec echo "note preview http://localhost:8888/note/"; _exec docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
-docker.preview() {  _exec docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
-docker.debug() {    _exec docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
+docker.build() (    run docker build --progress plain --tag younpc/note:latest . ; run mkdir -p build/flutter_note/web; run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
+docker.run() {      run echo "note preview http://localhost:8888/note/"; run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
+docker.preview() {  run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
+docker.debug() {    run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
 docker.push() {     docker image push younpc/note:latest ; }
 
 

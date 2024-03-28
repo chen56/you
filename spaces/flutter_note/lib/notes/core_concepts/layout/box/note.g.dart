@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 202,
+          end: 201,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # box layo, print(WindowContent()(LayoutBu, print(WindowContent()(LayoutBu, print(WindowContent(width: 100, print(WindowContent(height: 10)
+        /// (print.markdown(''' # box layou, print(WindowContent()(LayoutBu, print(WindowContent()(LayoutBu, print(WindowContent(width: 100, print(WindowContent(height: 10)
         (
           cellType: 'body',
-          offset: 202,
-          end: 5828,
+          offset: 201,
+          end: 5827,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 5828,
-          end: 5830,
+          offset: 5827,
+          end: 5829,
           specialNodes: <({
             String nodeType,
             int end,

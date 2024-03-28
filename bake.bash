@@ -12,6 +12,7 @@ _bake_version=v0.3.20240327
 #   1. 尴尬：当前 无法判断错误命令：./bake no_this_cmd ,因为不知道这是否是此命令的参数，
 #      干脆设一个简单的规则：只有叶子命令才能执行，这样非叶子命令就不需要有参数，好判断了
 #   2. 尴尬：当前 无法判断错误options：./bake --no_this_cmd ,同上
+#   3. 类似flutter run [no-]pub 反向选项
 #
 # chinese-----------------------------------------------------------------------
 # bake == (bash)ake == 去Make的bash tool
@@ -545,7 +546,7 @@ bake.opt() {
 #  declare hosts=("host1" "host2");
 #  declare optShift=7;
 #  ---------------------------------------------------------
-# eval后，就可以直接使用变量了
+# eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
 #
 # Usage: bake.parse <cmd:default _root> [arg1] [arg2] ...
 # 参考：[bake.opt]
