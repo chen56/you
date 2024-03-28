@@ -360,14 +360,14 @@ bake._opt_cmd_chain_opts() {
 # only use by bake.opt,
 # because "bake.opt" is meta function, use this func to add self
 bake._opt_internal_add() {
-  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" opt_help="$7"
+  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" help="$7"
   _data["$cmd/opts/$opt"]="type:opt"
   _data["$cmd/opts/$opt/name"]="$opt"
   _data["$cmd/opts/$opt/type"]="$type"
   _data["$cmd/opts/$opt/required"]="$required"
   _data["$cmd/opts/$opt/abbr"]="$abbr"
   _data["$cmd/opts/$opt/default"]="$default"
-  _data["$cmd/opts/$opt/opt_help"]="$opt_help"
+  _data["$cmd/opts/$opt/help"]="$help"
 }
 
 
@@ -450,7 +450,7 @@ bake._show_cmd_help() {
     local required=${_data["$optPath/required"]}
     local abbr=${_data["$optPath/abbr"]}
     local default=${_data["$optPath/default"]}
-    local opt_help="${_data["$optPath/opt_help"]}"
+    local help="${_data["$optPath/help"]}"
 
     local optArgDesc=""
     if [[ "$type" == "string" ]]; then
@@ -461,7 +461,7 @@ bake._show_cmd_help() {
       fi
     fi
 
-    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$opt_help"
+    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$help"
   done
 
   echo "
@@ -493,7 +493,7 @@ Available Commands:"
 
 # 为cmd配置参数(public api)
 # Examples:
-#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --opt_help "is_zip, build项目时是否压缩"
+#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --help "is_zip, build项目时是否压缩"
 # 每个参数可以配置如下信息：
 #   cmd: 参数作用的命令全名
 #   name: 参数长名，可以 ./bake build --is_zip 这样使用
@@ -501,7 +501,7 @@ Available Commands:"
 #   required: 是否必须提供，不提供将报错
 #   abbr: 参数短名, 可以 ./bake build -z 这样使用
 #   default: 缺省值, 未指定参数时，使用此值
-#   opt_help: 参数帮助，将显示在‘./bake build -h’命令帮助里
+#   help: 参数帮助，将显示在‘./bake build -h’命令帮助里
 # 参考[bake.parse]
 bake._opt_internal_add bake.opt "cmd"      "string" "true"  ""      ""      "cmd name"
 bake._opt_internal_add bake.opt "name"     "string" "true"  ""      ""      "option name"
@@ -509,7 +509,7 @@ bake._opt_internal_add bake.opt "type"     "string" "true"  ""      ""      "opt
 bake._opt_internal_add bake.opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
 bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "option abbr"
 bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
-bake._opt_internal_add bake.opt "opt_help"  "string" "false" ""      ""      "option opt_help"
+bake._opt_internal_add bake.opt "help"     "string" "false" ""      ""      "option help"
 bake.opt() {
   eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]]; then
@@ -521,12 +521,12 @@ bake.opt() {
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list" ]]; then
     echo "error: option [--type] must in [bool|string|list] " >&2 && return 1
   fi
-  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$opt_help"
+  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$help"
 }
 
-# bake.opt  (public api)
+# bake.parse  (public api)
 # 像其他高级语言的cli工具一样，用简单变量就可以获取名称化的命令参数:
-# 支持bool,string,list三种参数，用法如下：
+# 目前支持bool,string,list三种参数，用法如下：
 # 你的./bake脚本里：
 #      bake.opt --cmd build --name "is_zip" --type bool
 #      bake.opt --cmd build --name "target" --type string
@@ -539,16 +539,16 @@ bake.opt() {
 #      }
 #  调用：
 #      ./bake build --target "macos" --is_zip --host host1 --host2
-#  调用结果是'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
+#  其中'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
 #  ---------------------------------------------------------
 #  declare is_zip=true;
 #  declare target="macos";
 #  declare hosts=("host1" "host2");
 #  declare optShift=7;
 #  ---------------------------------------------------------
-# eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
+# eval后，就可以直接使用变量了, 在函数中declare不带-g默认为local变量，不会影响全局环境。
 #
-# Usage: bake.parse <cmd:default _root> [arg1] [arg2] ...
+# Usage: bake.parse <cmd> "$@"
 # 参考：[bake.opt]
 bake.parse() {
   local cmd="${1}"
@@ -635,10 +635,10 @@ bake.parse() {
 #             --summary "flutter-note cli." \
 #             --description ".... your root cmd help "
 # 这样就可以用'./your_script -h' 查看根帮助了
-bake.opt --cmd "bake.cmd" --name "cmd"         --type string --opt_help "cmd, function name"
-bake.opt --cmd "bake.cmd" --name "usage"       --type string --opt_help "usage"
-bake.opt --cmd "bake.cmd" --name "summary"     --type string --opt_help "summary help, short, show on cmd list"
-bake.opt --cmd "bake.cmd" --name "description" --type string --opt_help "description, long help ,show on cmd help page"
+bake.opt --cmd "bake.cmd" --name "cmd"         --type string --help "cmd, function name"
+bake.opt --cmd "bake.cmd" --name "usage"       --type string --help "usage"
+bake.opt --cmd "bake.cmd" --name "summary"     --type string --help "summary help, short, show on cmd list"
+bake.opt --cmd "bake.cmd" --name "description" --type string --help "description, long help ,show on cmd help page"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
@@ -735,8 +735,8 @@ bake.go() {
 }
 
 # _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --opt_help "print help, show all commands"
-bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --opt_help "debug mode, print more internal info"
+bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --help "print help, show all commands"
+bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false --help "debug mode, print more internal info"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here
