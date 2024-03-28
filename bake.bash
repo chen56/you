@@ -212,7 +212,7 @@ declare -A _bake_data
 
 # only save all commands, we use it to build command tree
 # it is cache cmd tree from _bake_data
-declare -A _cmdTree
+declare -A _bake_cmds
 
 TYPE_CMD="type:cmd"
 
@@ -307,7 +307,7 @@ bake._cmd_children() (
   fi
 
   # ${!_bake_data[@]}: get all array keys
-  for key in "${!_cmdTree[@]}"; do
+  for key in "${!_bake_cmds[@]}"; do
     # if start $path
     if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "_root" ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
@@ -385,9 +385,9 @@ bake._cmd_register() {
     for upCmd in $(bake._cmd_up_chain "$functionName"); do
       # if upCmd is a function , set upCmd value to data path
       if compgen -A function | grep -q "^$upCmd$"; then
-        _cmdTree["$upCmd"]="$upCmd"
+        _bake_cmds["$upCmd"]="$upCmd"
       else
-        _cmdTree["$upCmd"]="PARENT_CMD_NOT_FUNC"
+        _bake_cmds["$upCmd"]="PARENT_CMD_NOT_FUNC"
       fi
     done
 
@@ -650,10 +650,10 @@ cat <<- EOF
 EOF
   echo '# bake info & internal var'
   echo
-  echo '## _cmdTree'
+  echo '## _bake_cmds'
   echo
-  for key in "${!_cmdTree[@]}"; do
-    printf "cmd  - %-40s = %q\n" "$key" "${_cmdTree["$key"]:0:100}"
+  for key in "${!_bake_cmds[@]}"; do
+    printf "cmd  - %-40s = %q\n" "$key" "${_bake_cmds["$key"]:0:100}"
   done | sort
   echo
   echo '## _bake_data'
@@ -684,7 +684,7 @@ bake.go() {
   local cmd nextCmd arg
   for arg in "$@"; do
     nextCmd="$([[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg")"
-    if [[ "${_cmdTree["$nextCmd"]}" == "" ]]; then break; fi
+    if [[ "${_bake_cmds["$nextCmd"]}" == "" ]]; then break; fi
     cmd="$nextCmd"
     shift
   done
@@ -699,7 +699,7 @@ bake.go() {
 
   #  if fileExist then show help
   if ! declare -F "$cmd" | grep "$cmd" &>/dev/null  2>&1; then
-    if [[ "${_cmdTree["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
+    if [[ "${_bake_cmds["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
       bake._show_cmd_help "$cmd" "$@"
       return 0
     fi
