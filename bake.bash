@@ -208,10 +208,10 @@ bake._log(){
 # Simulating object-oriented data structures with flat associative arrays
 # use ./bake _self to see internal var
 # save all other data
-declare -A _data
+declare -A _bake_data
 
 # only save all commands, we use it to build command tree
-# it is cache cmd tree from _data
+# it is cache cmd tree from _bake_data
 declare -A _cmdTree
 
 TYPE_CMD="type:cmd"
@@ -278,9 +278,9 @@ bake._path_basename() {
 #   return <dataPath> children name
 bake._data_children() {
   local path="$1"
-  # ${!_data[@]}: get all array keys
+  # ${!_bake_data[@]}: get all array keys
   local key
-  for key in "${!_data[@]}"; do
+  for key in "${!_bake_data[@]}"; do
     # if start $path
     if [[ "$key" == "$path"* ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
@@ -306,7 +306,7 @@ bake._cmd_children() (
     path=""
   fi
 
-  # ${!_data[@]}: get all array keys
+  # ${!_bake_data[@]}: get all array keys
   for key in "${!_cmdTree[@]}"; do
     # if start $path
     if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "_root" ]]; then
@@ -346,8 +346,8 @@ bake._opt_cmd_chain_opts() {
   readarray -t upCmds <<<"$(bake._cmd_up_chain "$cmd")"
 
   local key
-  for key in "${!_data[@]}"; do
-    if [[ "${_data["$key"]}" != "type:opt" ]]; then continue; fi
+  for key in "${!_bake_data[@]}"; do
+    if [[ "${_bake_data["$key"]}" != "type:opt" ]]; then continue; fi
     local upCmd
     for upCmd in "${upCmds[@]}"; do
       if [[ "$key" == "$upCmd/opts/"* ]]; then
@@ -361,13 +361,13 @@ bake._opt_cmd_chain_opts() {
 # because "bake.opt" is meta function, use this func to add self
 bake._opt_internal_add() {
   local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" desc="$7"
-  _data["$cmd/opts/$opt"]="type:opt"
-  _data["$cmd/opts/$opt/name"]="$opt"
-  _data["$cmd/opts/$opt/type"]="$type"
-  _data["$cmd/opts/$opt/required"]="$required"
-  _data["$cmd/opts/$opt/abbr"]="$abbr"
-  _data["$cmd/opts/$opt/default"]="$default"
-  _data["$cmd/opts/$opt/desc"]="$desc"
+  _bake_data["$cmd/opts/$opt"]="type:opt"
+  _bake_data["$cmd/opts/$opt/name"]="$opt"
+  _bake_data["$cmd/opts/$opt/type"]="$type"
+  _bake_data["$cmd/opts/$opt/required"]="$required"
+  _bake_data["$cmd/opts/$opt/abbr"]="$abbr"
+  _bake_data["$cmd/opts/$opt/default"]="$default"
+  _bake_data["$cmd/opts/$opt/desc"]="$desc"
 }
 
 
@@ -422,19 +422,18 @@ bake._show_cmd_help() {
   fi
 
   echo
-  echo "${_data["${cmd}/desc"]}"
+  echo "${_bake_data["${cmd}/desc"]}"
   echo
 
   echo "Available Options:"
   for optPath in $(bake._opt_cmd_chain_opts "$cmd"); do
-    local opt
-    opt=$(bake._path_basename "$optPath")
-    local name=${_data["$optPath/name"]}
-    local type=${_data["$optPath/type"]}
-    local required=${_data["$optPath/required"]}
-    local abbr=${_data["$optPath/abbr"]}
-    local default=${_data["$optPath/default"]}
-    local desc="${_data["$optPath/desc"]}"
+    local opt=$(bake._path_basename "$optPath")
+    local name=${_bake_data["$optPath/name"]}
+    local type=${_bake_data["$optPath/type"]}
+    local required=${_bake_data["$optPath/required"]}
+    local abbr=${_bake_data["$optPath/abbr"]}
+    local default=${_bake_data["$optPath/default"]}
+    local desc="${_bake_data["$optPath/desc"]}"
 
     local optArgDesc=""
     if [[ "$type" == "string" ]]; then
@@ -466,7 +465,7 @@ Available Commands:"
     local subCmdPath="$cmd/$subCmd"
     [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
 
-    local desc="${_data["$subCmdPath/desc"]}"
+    local desc="${_bake_data["$subCmdPath/desc"]}"
     desc="$(echo -e "$desc" | head -n 1 )" #  backslash escapes interpretation
 
     printf "  %-$((maxLengthOfCmd))s  ${desc}\n" "${subCmd}"
@@ -550,7 +549,7 @@ bake.parse() {
     local opt
     opt=$(bake._path_basename "$optPath")
     local abbr
-    abbr=${_data["$optPath/abbr"]}
+    abbr=${_bake_data["$optPath/abbr"]}
     allOptOnCmdChain["--$opt"]="${optPath}"
     if [[ "$abbr" != "" ]]; then allOptOnCmdChain["-$abbr"]="${optPath}"; fi
   done
@@ -574,7 +573,7 @@ bake.parse() {
     # reference to the current dynamic  opt variable
     declare -n currentOptValue=${optVars["$optPath"]}
 
-    local optType=${_data["$optPath/type"]}
+    local optType=${_bake_data["$optPath/type"]}
     case $optType in
     bool)
       currentOptValue=true
@@ -626,7 +625,7 @@ bake.cmd() {
     echo "error: bake.cmd [--cmd] required " >&2
     return 1
   fi
-  _data["$cmd/desc"]="$desc"
+  _bake_data["$cmd/desc"]="$desc"
 }
 
 
@@ -657,10 +656,10 @@ EOF
     printf "cmd  - %-40s = %q\n" "$key" "${_cmdTree["$key"]:0:100}"
   done | sort
   echo
-  echo '## _data'
+  echo '## _bake_data'
   echo
-  for key in "${!_data[@]}"; do
-    printf "data - %-40s = %q\n" "$key" "${_data["$key"]:0:100}"
+  for key in "${!_bake_data[@]}"; do
+    printf "data - %-40s = %q\n" "$key" "${_bake_data["$key"]:0:100}"
   done | sort
   echo
   echo '## options'
