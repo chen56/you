@@ -15,13 +15,8 @@ SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
-_install_bake(){ curl -L -O https://github.com/chen56/note/raw/main/bake.bash ; }
-if ! [[ -f "$SCRIPT_DIR/bake.bash" ]]; then  # 文件不存在就下载
-  _install_bake
-fi
-
 # include common script
-source "$SCRIPT_DIR/bake.bash"
+source "$SCRIPT_DIR/vendor/bake.bash"
 
 ##########################################
 # app cmd script
@@ -80,7 +75,7 @@ run() {
 
 
 #   flutter_note flutter create --platforms=macos .
-init() {
+install() {
   run git lfs install
 }
 
