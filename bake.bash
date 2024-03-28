@@ -360,14 +360,14 @@ bake._opt_cmd_chain_opts() {
 # only use by bake.opt,
 # because "bake.opt" is meta function, use this func to add self
 bake._opt_internal_add() {
-  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" optHelp="$7"
+  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" desc="$7"
   _data["$cmd/opts/$opt"]="type:opt"
   _data["$cmd/opts/$opt/name"]="$opt"
   _data["$cmd/opts/$opt/type"]="$type"
   _data["$cmd/opts/$opt/required"]="$required"
   _data["$cmd/opts/$opt/abbr"]="$abbr"
   _data["$cmd/opts/$opt/default"]="$default"
-  _data["$cmd/opts/$opt/optHelp"]="$optHelp"
+  _data["$cmd/opts/$opt/desc"]="$desc"
 }
 
 
@@ -434,7 +434,7 @@ bake._show_cmd_help() {
     local required=${_data["$optPath/required"]}
     local abbr=${_data["$optPath/abbr"]}
     local default=${_data["$optPath/default"]}
-    local optHelp="${_data["$optPath/optHelp"]}"
+    local desc="${_data["$optPath/desc"]}"
 
     local optArgDesc=""
     if [[ "$type" == "string" ]]; then
@@ -445,7 +445,7 @@ bake._show_cmd_help() {
       fi
     fi
 
-    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$optHelp"
+    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$desc"
   done
 
   echo "
@@ -476,7 +476,7 @@ Available Commands:"
 
 # 为cmd配置参数(public api)
 # Examples:
-#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --optHelp "is_zip, build项目时是否压缩"
+#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --desc "is_zip, build项目时是否压缩"
 # 每个参数可以配置如下信息：
 #   cmd: 参数作用的命令全名
 #   name: 参数长名，可以 ./bake build --is_zip 这样使用
@@ -484,7 +484,7 @@ Available Commands:"
 #   required: 是否必须提供，不提供将报错
 #   abbr: 参数短名, 可以 ./bake build -z 这样使用
 #   default: 缺省值, 未指定参数时，使用此值
-#   optHelp: 参数帮助，将显示在‘./bake build -h’命令帮助里
+#   desc: 参数帮助，将显示在‘./bake build -h’命令帮助里
 # 参考[bake.parse]
 bake._opt_internal_add bake.opt "cmd"      "string" "true"  ""      ""      "cmd name"
 bake._opt_internal_add bake.opt "name"     "string" "true"  ""      ""      "option name"
@@ -492,7 +492,7 @@ bake._opt_internal_add bake.opt "type"     "string" "true"  ""      ""      "opt
 bake._opt_internal_add bake.opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
 bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "option abbr"
 bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
-bake._opt_internal_add bake.opt "optHelp"  "string" "false" ""      ""      "option optHelp"
+bake._opt_internal_add bake.opt "desc"  "string" "false" ""      ""      "option desc"
 bake.opt() {
   eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]]; then
@@ -504,7 +504,7 @@ bake.opt() {
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list" ]]; then
     echo "error: option [--type] must in [bool|string|list] " >&2 && return 1
   fi
-  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$optHelp"
+  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$desc"
 }
 
 # bake.opt  (public api)
@@ -616,8 +616,8 @@ bake.parse() {
 #   bake.cmd --cmd _root \
 #             --desc "flutter-note cli."
 # 这样就可以用'./your_script -h' 查看根帮助了
-bake.opt --cmd "bake.cmd" --name "cmd"         --type string --optHelp "cmd, function name"
-bake.opt --cmd "bake.cmd" --name "desc"     --type string --optHelp "cmd desc, show in help"
+bake.opt --cmd "bake.cmd" --name "cmd"         --type string --desc "cmd, function name"
+bake.opt --cmd "bake.cmd" --name "desc"     --type string --desc "cmd desc, show in help"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
@@ -711,8 +711,8 @@ bake.go() {
 }
 
 # _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
-bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --optHelp "debug mode, print more internal info"
+bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --desc "print help, show all commands"
+bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --desc "debug mode, print more internal info"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here

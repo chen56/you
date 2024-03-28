@@ -401,7 +401,7 @@ test.bake._cmd_register(){
     @contains "test.bake._cmd_register"
 }
 test.data.children(){
-  assert "$(bake._data_children "bake.opt/opts")" @is_escape "abbr\ncmd\ndefault\nname\noptHelp\nrequired\ntype"
+  assert "$(bake._data_children "bake.opt/opts")" @is_escape "abbr\ncmd\ndefault\ndesc\nname\nrequired\ntype"
 }
 
 test.bake._opt_cmd_chain_opts(){
@@ -416,8 +416,8 @@ _root/opts/help
 bake.opt/opts/abbr
 bake.opt/opts/cmd
 bake.opt/opts/default
+bake.opt/opts/desc
 bake.opt/opts/name
-bake.opt/opts/optHelp
 bake.opt/opts/required
 bake.opt/opts/type"
 }
