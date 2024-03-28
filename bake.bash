@@ -431,12 +431,12 @@ bake._show_cmd_help() {
 
   echo
 
-  if [[ "${_data["${cmd}/description"]}" != "" ]]; then
-    echo "Description: ${_data["${cmd}/description"]}"
-  elif [[ "${_data[${cmd} / summary]}" != "" ]]; then
-    echo "Description: ${_data["${cmd}/summary"]}"
+  if [[ "${_data["${cmd}/help"]}" != "" ]]; then
+    echo "help: ${_data["${cmd}/help"]}"
+  elif [[ "${_data[${cmd}/summary]}" != "" ]]; then
+    echo "help: ${_data["${cmd}/summary"]}"
   else
-    echo "no description"
+    echo "(no help)"
   fi
 
   echo
@@ -466,8 +466,7 @@ bake._show_cmd_help() {
 
   echo "
 Available Commands:"
-  local maxLengthOfCmd
-  maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
+  local maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
 
   for subCmd in $(bake._cmd_children "$cmd"); do
 
@@ -482,8 +481,7 @@ Available Commands:"
     local subCmdPath="$cmd/$subCmd"
     [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
 
-    local summary
-    summary="${_data["$subCmdPath/summary"]}"
+    local summary="${_data["$subCmdPath/summary"]}"
     summary="$(echo -e "$summary")" #  backslash escapes interpretation
 
     printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subCmd}"
@@ -633,12 +631,12 @@ bake.parse() {
 #   bake.cmd --cmd _root \
 #             --usage "./$SCRIPT_FILE [cmd] [opts] [args...]" \
 #             --summary "flutter-note cli." \
-#             --description ".... your root cmd help "
+#             --help ".... your root cmd help "
 # 这样就可以用'./your_script -h' 查看根帮助了
 bake.opt --cmd "bake.cmd" --name "cmd"         --type string --help "cmd, function name"
 bake.opt --cmd "bake.cmd" --name "usage"       --type string --help "usage"
 bake.opt --cmd "bake.cmd" --name "summary"     --type string --help "summary help, short, show on cmd list"
-bake.opt --cmd "bake.cmd" --name "description" --type string --help "description, long help ,show on cmd help page"
+bake.opt --cmd "bake.cmd" --name "help" --type string --help "help, long help ,show on cmd help page"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
@@ -650,7 +648,7 @@ bake.cmd() {
   #  bake.parse "${FUNCNAME[0]}" "$@" >&2
   _data["$cmd/usage"]="$usage"
   _data["$cmd/summary"]="$summary"
-  _data["$cmd/description"]="$description"
+  _data["$cmd/help"]="$help"
 }
 
 
