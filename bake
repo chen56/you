@@ -16,7 +16,7 @@ SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
 # include common script
-source "$SCRIPT_DIR/bake.bash"
+source "$SCRIPT_DIR/vendor/bake.bash"
 
 ##########################################
 # app cmd script

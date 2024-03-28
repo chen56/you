@@ -360,14 +360,14 @@ bake._opt_cmd_chain_opts() {
 # only use by bake.opt,
 # because "bake.opt" is meta function, use this func to add self
 bake._opt_internal_add() {
-  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" help="$7"
+  local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" optHelp="$7"
   _data["$cmd/opts/$opt"]="type:opt"
   _data["$cmd/opts/$opt/name"]="$opt"
   _data["$cmd/opts/$opt/type"]="$type"
   _data["$cmd/opts/$opt/required"]="$required"
   _data["$cmd/opts/$opt/abbr"]="$abbr"
   _data["$cmd/opts/$opt/default"]="$default"
-  _data["$cmd/opts/$opt/help"]="$help"
+  _data["$cmd/opts/$opt/optHelp"]="$optHelp"
 }
 
 
@@ -413,7 +413,8 @@ bake._show_cmd_help() {
 
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
-  local usage="${_data["${cmd}/usage"]}"
+  local usage
+  usage="${_data["${cmd}/usage"]}"
   if [[ "$usage" != "" ]]; then
     echo -e "\nUsage:  $usage "
   else
@@ -430,25 +431,26 @@ bake._show_cmd_help() {
 
   echo
 
-  if [[ "${_data["${cmd}/help"]}" != "" ]]; then
-    echo "help: ${_data["${cmd}/help"]}"
-  elif [[ "${_data[${cmd}/summary]}" != "" ]]; then
-    echo "help: ${_data["${cmd}/summary"]}"
+  if [[ "${_data["${cmd}/description"]}" != "" ]]; then
+    echo "Description: ${_data["${cmd}/description"]}"
+  elif [[ "${_data[${cmd} / summary]}" != "" ]]; then
+    echo "Description: ${_data["${cmd}/summary"]}"
   else
-    echo "(no help)"
+    echo "no description"
   fi
 
   echo
 
   echo "Available Options:"
   for optPath in $(bake._opt_cmd_chain_opts "$cmd"); do
-    local opt=$(bake._path_basename "$optPath")
+    local opt
+    opt=$(bake._path_basename "$optPath")
     local name=${_data["$optPath/name"]}
     local type=${_data["$optPath/type"]}
     local required=${_data["$optPath/required"]}
     local abbr=${_data["$optPath/abbr"]}
     local default=${_data["$optPath/default"]}
-    local help="${_data["$optPath/help"]}"
+    local optHelp="${_data["$optPath/optHelp"]}"
 
     local optArgDesc=""
     if [[ "$type" == "string" ]]; then
@@ -459,12 +461,13 @@ bake._show_cmd_help() {
       fi
     fi
 
-    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$help"
+    printf " --%-20s -%-2s %-6s required:[%s] %b\n" "$name $optArgDesc" "$abbr" "$type" "$required" "$optHelp"
   done
 
   echo "
 Available Commands:"
-  local maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
+  local maxLengthOfCmd
+  maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
 
   for subCmd in $(bake._cmd_children "$cmd"); do
 
@@ -479,7 +482,8 @@ Available Commands:"
     local subCmdPath="$cmd/$subCmd"
     [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
 
-    local summary="${_data["$subCmdPath/summary"]}"
+    local summary
+    summary="${_data["$subCmdPath/summary"]}"
     summary="$(echo -e "$summary")" #  backslash escapes interpretation
 
     printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subCmd}"
@@ -489,7 +493,7 @@ Available Commands:"
 
 # 为cmd配置参数(public api)
 # Examples:
-#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --help "is_zip, build项目时是否压缩"
+#   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --optHelp "is_zip, build项目时是否压缩"
 # 每个参数可以配置如下信息：
 #   cmd: 参数作用的命令全名
 #   name: 参数长名，可以 ./bake build --is_zip 这样使用
@@ -497,7 +501,7 @@ Available Commands:"
 #   required: 是否必须提供，不提供将报错
 #   abbr: 参数短名, 可以 ./bake build -z 这样使用
 #   default: 缺省值, 未指定参数时，使用此值
-#   help: 参数帮助，将显示在‘./bake build -h’命令帮助里
+#   optHelp: 参数帮助，将显示在‘./bake build -h’命令帮助里
 # 参考[bake.parse]
 bake._opt_internal_add bake.opt "cmd"      "string" "true"  ""      ""      "cmd name"
 bake._opt_internal_add bake.opt "name"     "string" "true"  ""      ""      "option name"
@@ -505,7 +509,7 @@ bake._opt_internal_add bake.opt "type"     "string" "true"  ""      ""      "opt
 bake._opt_internal_add bake.opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
 bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "option abbr"
 bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
-bake._opt_internal_add bake.opt "help"     "string" "false" ""      ""      "option help"
+bake._opt_internal_add bake.opt "optHelp"  "string" "false" ""      ""      "option optHelp"
 bake.opt() {
   eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]]; then
@@ -517,12 +521,12 @@ bake.opt() {
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list" ]]; then
     echo "error: option [--type] must in [bool|string|list] " >&2 && return 1
   fi
-  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$help"
+  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$optHelp"
 }
 
-# bake.parse  (public api)
+# bake.opt  (public api)
 # 像其他高级语言的cli工具一样，用简单变量就可以获取名称化的命令参数:
-# 目前支持bool,string,list三种参数，用法如下：
+# 支持bool,string,list三种参数，用法如下：
 # 你的./bake脚本里：
 #      bake.opt --cmd build --name "is_zip" --type bool
 #      bake.opt --cmd build --name "target" --type string
@@ -535,16 +539,16 @@ bake.opt() {
 #      }
 #  调用：
 #      ./bake build --target "macos" --is_zip --host host1 --host2
-#  其中'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
+#  调用结果是'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
 #  ---------------------------------------------------------
 #  declare is_zip=true;
 #  declare target="macos";
 #  declare hosts=("host1" "host2");
 #  declare optShift=7;
 #  ---------------------------------------------------------
-# eval后，就可以直接使用变量了, 在函数中declare不带-g默认为local变量，不会影响全局环境。
+# eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
 #
-# Usage: bake.parse <cmd> "$@"
+# Usage: bake.parse <cmd:default _root> [arg1] [arg2] ...
 # 参考：[bake.opt]
 bake.parse() {
   local cmd="${1}"
@@ -560,8 +564,10 @@ bake.parse() {
   # collect opt from command chain : _root>pub>pub.get
   #   root option first , priority low -> priority high:
   for optPath in $(bake._opt_cmd_chain_opts "$cmd" | bake._str_revertLines); do
-    local opt=$(bake._path_basename "$optPath")
-    local abbr=${_data["$optPath/abbr"]}
+    local opt
+    opt=$(bake._path_basename "$optPath")
+    local abbr
+    abbr=${_data["$optPath/abbr"]}
     allOptOnCmdChain["--$opt"]="${optPath}"
     if [[ "$abbr" != "" ]]; then allOptOnCmdChain["-$abbr"]="${optPath}"; fi
   done
@@ -574,7 +580,8 @@ bake.parse() {
   # while all args , until it is not opt
   while (($# > 0)); do
     # match $1 arg in allOptOnCmdChain, guess $1 is a "-h" "-help" ...
-    local optPath=${allOptOnCmdChain["$1"]}
+    local optPath
+    optPath=${allOptOnCmdChain["$1"]}
     # if next arg not a opt , parsing complete;
     if [[ "${optPath}" == "" ]]; then break; fi
 
@@ -609,7 +616,8 @@ bake.parse() {
 
   local resultStr
   for optPath in "${!optVars[@]}"; do
-    local declareStr=$(declare -p "${optVars["$optPath"]}")
+    local declareStr
+    declareStr=$(declare -p "${optVars["$optPath"]}")
     resultStr+="${declareStr/#*_opt_value_/declare };\n"
   done
   resultStr+="declare optShift=$((totalArgs - $#));\n"
@@ -625,12 +633,12 @@ bake.parse() {
 #   bake.cmd --cmd _root \
 #             --usage "./$SCRIPT_FILE [cmd] [opts] [args...]" \
 #             --summary "flutter-note cli." \
-#             --help ".... your root cmd help "
+#             --description ".... your root cmd help "
 # 这样就可以用'./your_script -h' 查看根帮助了
-bake.opt --cmd "bake.cmd" --name "cmd"         --type string --help "cmd, function name"
-bake.opt --cmd "bake.cmd" --name "usage"       --type string --help "usage"
-bake.opt --cmd "bake.cmd" --name "summary"     --type string --help "summary help, short, show on cmd list"
-bake.opt --cmd "bake.cmd" --name "help" --type string --help "help, long help ,show on cmd help page"
+bake.opt --cmd "bake.cmd" --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt --cmd "bake.cmd" --name "usage"       --type string --optHelp "usage"
+bake.opt --cmd "bake.cmd" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.opt --cmd "bake.cmd" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
@@ -642,7 +650,7 @@ bake.cmd() {
   #  bake.parse "${FUNCNAME[0]}" "$@" >&2
   _data["$cmd/usage"]="$usage"
   _data["$cmd/summary"]="$summary"
-  _data["$cmd/help"]="$help"
+  _data["$cmd/description"]="$description"
 }
 
 
@@ -727,8 +735,8 @@ bake.go() {
 }
 
 # _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --help "print help, show all commands"
-bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false --help "debug mode, print more internal info"
+bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --optHelp "print help, show all commands"
+bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --optHelp "debug mode, print more internal info"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here
