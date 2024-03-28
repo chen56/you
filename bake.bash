@@ -413,32 +413,16 @@ bake._show_cmd_help() {
 
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
-  local usage
-  usage="${_data["${cmd}/usage"]}"
-  if [[ "$usage" != "" ]]; then
-    echo -e "\nUsage:  $usage "
-  else
-    echo -e "\nUsage:  ./$BAKE_FILE $(bake._str_split "$cmd" "." | tr "\n" " ") [options] [args...]"
-  fi
-
   echo
 
   if [[ "$cmd" == "_root" ]] ;then
-      echo "Currently running: $(bake._pwd)/$BAKE_FILE $@"
+      echo "Running:【: $(bake._pwd)/$BAKE_FILE $@】"
   else
-      echo "Currently running: $(bake._pwd)/$BAKE_FILE $cmd $@"
+      echo "Running:【$(bake._pwd)/$BAKE_FILE $cmd $@】"
   fi
 
   echo
-
-  if [[ "${_data["${cmd}/description"]}" != "" ]]; then
-    echo "Description: ${_data["${cmd}/description"]}"
-  elif [[ "${_data[${cmd} / summary]}" != "" ]]; then
-    echo "Description: ${_data["${cmd}/summary"]}"
-  else
-    echo "no description"
-  fi
-
+  echo "${_data["${cmd}/desc"]}"
   echo
 
   echo "Available Options:"
@@ -482,11 +466,10 @@ Available Commands:"
     local subCmdPath="$cmd/$subCmd"
     [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
 
-    local summary
-    summary="${_data["$subCmdPath/summary"]}"
-    summary="$(echo -e "$summary")" #  backslash escapes interpretation
+    local desc="${_data["$subCmdPath/desc"]}"
+    desc="$(echo -e "$desc" | head -n 1 )" #  backslash escapes interpretation
 
-    printf "  %-$((maxLengthOfCmd))s  ${summary}\n" "${subCmd}"
+    printf "  %-$((maxLengthOfCmd))s  ${desc}\n" "${subCmd}"
   done
 }
 
@@ -628,17 +611,13 @@ bake.parse() {
 # bake.cmd  (public api)
 # 注册一个命令的帮助信息
 # Examples:
-#   bake.cmd --cmd build --summary "build project" --usage "Usage: ./$SCRIPT_FILE build [options]"
+#   bake.cmd --cmd build --desc "build project"
 # 尤其是可以配置_root命令以定制根命令的帮助信息，比如:
 #   bake.cmd --cmd _root \
-#             --usage "./$SCRIPT_FILE [cmd] [opts] [args...]" \
-#             --summary "flutter-note cli." \
-#             --description ".... your root cmd help "
+#             --desc "flutter-note cli."
 # 这样就可以用'./your_script -h' 查看根帮助了
 bake.opt --cmd "bake.cmd" --name "cmd"         --type string --optHelp "cmd, function name"
-bake.opt --cmd "bake.cmd" --name "usage"       --type string --optHelp "usage"
-bake.opt --cmd "bake.cmd" --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
-bake.opt --cmd "bake.cmd" --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+bake.opt --cmd "bake.cmd" --name "desc"     --type string --optHelp "cmd desc, show in help"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
@@ -647,10 +626,7 @@ bake.cmd() {
     echo "error: bake.cmd [--cmd] required " >&2
     return 1
   fi
-  #  bake.parse "${FUNCNAME[0]}" "$@" >&2
-  _data["$cmd/usage"]="$usage"
-  _data["$cmd/summary"]="$summary"
-  _data["$cmd/description"]="$description"
+  _data["$cmd/desc"]="$desc"
 }
 
 

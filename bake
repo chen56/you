@@ -16,7 +16,7 @@ SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
 # include common script
-source "$SCRIPT_DIR/vendor/bake.bash"
+source "$SCRIPT_DIR/bake.bash"
 
 ##########################################
 # app cmd script
@@ -24,9 +24,7 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 ##########################################
 
 bake.cmd --cmd _root \
-             --usage "./$SCRIPT_FILE [cmd] [opts] [args...]" \
-             --summary "flutter-note build cli." \
-             --help "$( cat <<-EOF
+             --desc "$( cat <<-EOF
 
  ___  _        _    _                    _  _       _
 | __|| | _  _ | |_ | |_  ___  _ _       | \| | ___ | |_  ___
@@ -35,6 +33,9 @@ bake.cmd --cmd _root \
 
 flutter-note build tools.
 https://github.com/chen56/note
+
+Usage:
+ ./$SCRIPT_FILE [cmd] [opts] [args...]
 
 Examples:
  ./${SCRIPT_FILE}                          # same as  './${SCRIPT_FILE} -h'
@@ -79,10 +80,9 @@ install() {
   run git lfs install
 }
 
-bake.cmd --cmd p --summary "<mono>  project set" --usage "Usage: ./$SCRIPT_FILE p <sub_cmd>"
-#p(){ echo "use './$SCRIPT_FILE p -h' see sub commands, there are all projects "; }
+bake.cmd --cmd p --desc "<mono>  project set, Usage: ./$SCRIPT_FILE p <sub_cmd>"
 
-bake.cmd --cmd p.all --summary "<mono>  run cmd on all mono project" --usage "Usage: ./$SCRIPT_FILE all [any command]"
+bake.cmd --cmd p.all --desc "<mono>  run cmd on all mono project Usage: ./$SCRIPT_FILE all [any command]"
 p.all() {
   #       目录中有"pubspec.yaml"的，认为是flutter项目
   #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
