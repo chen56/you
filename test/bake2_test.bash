@@ -364,9 +364,9 @@ test.bake._str_cutLeft(){
 
 
 test.bake._cmd_up_chain(){
-  assert "$(bake._cmd_up_chain a.b)" @is_escape "a.b\na\n_root"
-  assert "$(bake._cmd_up_chain '_root')" @is "_root"
-  assert "$(bake._cmd_up_chain '')" @is "_root"
+  assert "$(bake._cmd_up_chain a.b)" @is_escape "a.b\na\nroot"
+  assert "$(bake._cmd_up_chain 'root')" @is "root"
+  assert "$(bake._cmd_up_chain '')" @is "root"
 }
 test.bake._cmd_children(){
   assert "$(bake._cmd_children bake.test)" @is_escape "all"
@@ -405,21 +405,21 @@ test.data.children(){
 }
 
 test.bake._opt_cmd_chain_opts(){
-  assert "$(bake._opt_cmd_chain_opts "_root")" @is \
-"_root/opts/debug
-_root/opts/help"
+  assert "$(bake._opt_cmd_chain_opts "root")" @is \
+"root/opts/debug
+root/opts/help"
 
   # "include parent option"
   assert "$(bake._opt_cmd_chain_opts "bake.opt")" @is \
-"_root/opts/debug
-_root/opts/help
-bake.opt/opts/abbr
+"bake.opt/opts/abbr
 bake.opt/opts/cmd
 bake.opt/opts/default
 bake.opt/opts/desc
 bake.opt/opts/name
 bake.opt/opts/required
-bake.opt/opts/type"
+bake.opt/opts/type
+root/opts/debug
+root/opts/help"
 }
 
 test.cmd.parse(){
@@ -460,7 +460,7 @@ function test(){
 }
 
 # override test
-_root(){
+root(){
   echo "you can run
    ./test/$TEST_FILE test -h       # test subcommands
    ./test/$TEST_FILE test          # or run all test in this file"

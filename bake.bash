@@ -301,15 +301,15 @@ bake._cmd_childrenNameMaxLength() {
   printf "$maxLengthOfCmd"
 }
 bake._cmd_children() (
-  path="$1"
-  if [[ "$path" == _root ]]; then
+  local path="$1"
+  if [[ "$path" == root ]]; then
     path=""
   fi
 
   # ${!_bake_data[@]}: get all array keys
   for key in "${!_bake_cmds[@]}"; do
     # if start $path
-    if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "_root" ]]; then
+    if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "root" ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
       # remove prefix : key:a.b.c leftPathToBeCut:a => b.c
       child=$(bake._str_cutLeft "$key" "$path.")
@@ -321,15 +321,15 @@ bake._cmd_children() (
 )
 
 # Usage: bake._cmd_up_chain <cmd>
-# sample: bake._cmd_up_chain a.b      => "a.b", "a", "_root"
+# sample: bake._cmd_up_chain a.b      => "a.b", "a", "root"
 bake._cmd_up_chain() {
-  local path="${1:-_root}"
+  local path="${1:-root}"
   local up="$path"
   while [[ "$up" != "" ]]; do
     printf '%s\n' "$up"
     up=$(bake._path_dirname "$up" ".")
   done
-  if [[ "$path" != "_root" ]]; then printf "_root\n"; fi
+  if [[ "$path" != "root" ]]; then printf "root\n"; fi
 }
 # Usage: bake._cmd_down_chain <cmd>
 # reverse of bake._cmd_up_chain
@@ -415,7 +415,7 @@ bake._show_cmd_help() {
 
   echo
 
-  if [[ "$cmd" == "_root" ]] ;then
+  if [[ "$cmd" == "root" ]] ;then
       echo "Running:【: $(bake._pwd)/$BAKE_FILE $@】"
   else
       echo "Running:【$(bake._pwd)/$BAKE_FILE $cmd $@】"
@@ -463,7 +463,7 @@ Available Commands:"
     fi
 
     local subCmdPath="$cmd/$subCmd"
-    [[ "$cmd" == "_root" ]] && subCmdPath="$subCmd"
+    [[ "$cmd" == "root" ]] && subCmdPath="$subCmd"
 
     local desc="${_bake_data["$subCmdPath/desc"]}"
     desc="$(echo -e "$desc" | head -n 1 )" #  backslash escapes interpretation
@@ -530,12 +530,12 @@ bake.opt() {
 #  ---------------------------------------------------------
 # eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
 #
-# Usage: bake.parse <cmd:default _root> [arg1] [arg2] ...
+# Usage: bake.parse <cmd:default root> [arg1] [arg2] ...
 # 参考：[bake.opt]
 bake.parse() {
   local cmd="${1}"
   if [[ "$cmd" == "" ]]; then
-    bake._throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default _root> [arg1] [arg2]" ;
+    bake._throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default root> [arg1] [arg2]" ;
   fi
 
   shift; # shift cmd arg, left is options
@@ -543,7 +543,7 @@ bake.parse() {
   # key is -h --help ... candidate words ,
   # value is optPath
   declare -A allOptOnCmdChain
-  # collect opt from command chain : _root>pub>pub.get
+  # collect opt from command chain : root>pub>pub.get
   #   root option first , priority low -> priority high:
   for optPath in $(bake._opt_cmd_chain_opts "$cmd" | bake._str_revertLines); do
     local opt
@@ -611,8 +611,8 @@ bake.parse() {
 # 注册一个命令的帮助信息
 # Examples:
 #   bake.cmd --cmd build --desc "build project"
-# 尤其是可以配置_root命令以定制根命令的帮助信息，比如:
-#   bake.cmd --cmd _root \
+# 尤其是可以配置root命令以定制根命令的帮助信息，比如:
+#   bake.cmd --cmd root \
 #             --desc "flutter-note cli."
 # 这样就可以用'./your_script -h' 查看根帮助了
 bake.opt --cmd "bake.cmd" --name "cmd"         --type string --desc "cmd, function name"
@@ -689,7 +689,7 @@ bake.go() {
     shift
   done
 
-  if [[ "$cmd" == "" ]]; then cmd="_root"; fi
+  if [[ "$cmd" == "" ]]; then cmd="root"; fi
   eval "$(bake.parse "$cmd" "$@")"
 
   if [[ "$help" == "true" ]]; then
@@ -709,9 +709,9 @@ bake.go() {
   $cmd "$@"
 }
 
-# _root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
-bake.opt --cmd _root --name "help"    --abbr h --type bool   --default false --desc "print help, show all commands"
-bake.opt --cmd _root --name "debug"   --abbr d --type bool   --default false  --desc "debug mode, print more internal info"
+# root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options
+bake.opt --cmd root --name "help"    --abbr h --type bool   --default false --desc "print help, show all commands"
+bake.opt --cmd root --name "debug"   --abbr d --type bool   --default false  --desc "debug mode, print more internal info"
 
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here
