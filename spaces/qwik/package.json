@@ -34,6 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "autoprefixer": "^10.4.14",
+    "daisyui": "^4.9.0",
     "eslint": "^8.57.0",
     "eslint-plugin-qwik": "^1.5.1",
     "postcss": "^8.4.31",

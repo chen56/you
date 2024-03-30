@@ -8,12 +8,12 @@ import {
 
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../../../tailwind.config";
-import React from "react"; // Your tailwind config
+import {Config} from "tailwindcss";
 
 
 // https://tailwindcss.com/docs/configuration#using-esm-or-type-script
 // 因为tailwindcss/resolveConfig没有提供ts版本的接口，所以ts模式下会编译失败，所以转any
-let fullConfig = resolveConfig(tailwindConfig) as any;
+let fullConfig = resolveConfig(tailwindConfig as Config) as any;
 fullConfig.theme.screens.md
 // => '768px'
 
