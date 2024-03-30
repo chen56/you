@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-_real_path() (
-  cd "$(dirname "$1")"
+_real_path() {
+  cd "$(dirname "$1")" || exit
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
     file="$(readlink "$file")"
-    cd -P "$(dirname "$file")"
+    cd -P "$(dirname "$file")" || exit
     file="$PWD/$(basename "$file")"
   done
   echo "$file"
-)
+}
 SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
@@ -86,6 +86,7 @@ run() {
 
 #   flutter_note flutter create --platforms=macos .
 install() {
+  _install_bake
   run git lfs install
 }
 
@@ -137,11 +138,6 @@ build() {      p.flutter_note flutter build web -v --release --tree-shake-icons 
     # run p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 preview.web() { run p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
 preview.macos() (  run p.flutter_note open build/macos/Build/Products/Release/flutter_note.app ; )
-
-#   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-#    build "$@"
-#   	npx http-server ./flutter_note/build/web --port 8000
-web.serve() {     run p.flutter_note deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli ;}
 
 clean() { p.all flutter clean; rm -rf build;}
 

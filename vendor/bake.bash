@@ -8,13 +8,10 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 _bake_version=v0.3.20240327
 
 # v0.2.20230528 - It can run normally on macos
-# todo
-#   1. 当前 无法判断错误命令：./bake no_this_cmd ,因为不知道这是否是此命令的参数，
-#      需要设置设一个简单的规则：只有叶子命令才能正常执行，这样非叶子命令就不需要有参数
-#   2. 当前 无法判断错误options：./bake --no_this_opt ,同上
-#   3. 类似flutter run [no-]pub 反向选项
-#
 # bake == (bash)ake == 去Make的bash tool
+# 
+# https://github.com/chen56/bake
+#
 # bake 是个简单的命令行工具，以替代Makefile的子命令功能
 # make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
 # 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
@@ -55,6 +52,12 @@ _bake_version=v0.3.20240327
 # 范例可以看实际案例：
 #     - https://github.com/chen56/note/blob/main/bake
 #     - https://github.com/chen56/younpc/blob/main/bake
+# todo
+#   1. 当前 无法判断错误命令：./bake no_this_cmd ,因为不知道这是否是此命令的参数，
+#      需要设置设一个简单的规则：只有叶子命令才能正常执行，这样非叶子命令就不需要有参数
+#   2. 当前 无法判断错误options：./bake --no_this_opt ,同上
+#   3. 类似flutter run [no-]pub 反向选项
+# 
 
 
 # check bake dependencies
@@ -126,7 +129,6 @@ bake._throw(){
   return 1
 }
 bake._error() {
-  if [[ "${_LOG_LEVELS[@]:0}" != *"$LOG"* ]]; then return 0; fi
   bake._log "$@"
 }
 bake._info() {
@@ -140,7 +142,6 @@ bake._debug() {
 bake._log(){
   local level;
   level=$1
-  if [[ "${_LOG_LEVELS[@]:2}" != *"$LOG"* ]]; then return 0; fi
   echo -e "$level $(date "+%F %T") $(bake._pwd)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 
@@ -168,13 +169,24 @@ TYPE_CMD="type:cmd"
 # bake._path_dirname a/b/c  a/b    => c
 bake._str_cutLeft() { printf "${1#$2}"; }
 
-# Usage: bake.str.split <str> [delimiter:default /]
+# 分割字符串
+# Usage: bake._str_split <str> [delimiter:default /]
+# Example: bake._str_split "a/b/c" "/"
+#  => $'a\nb\nc'    # 会把字符串分割为以换行符间隔的字符串
 bake._str_split() {
-  local str=$1 delimiter=${2:-/}
-  #  # use <() process-substitution
-  #  # don't use <<< "" its add newline
+  #${delimiter:-DEFAULT}  unset 或null 都给默认值
+  # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+  local str="$1"
+  local delimiter="${2:-/}"
+
+  #   use <() process-substitution
+  #   or here string  <<< "" its add newline
   local arr
-  readarray -t arr < <(printf '%s' "${str//$delimiter/$'\n'}")
+  # https://helpmanual.io/builtin/readarray/
+  # -d   The first character of delim is used to terminate each input line, rather than newline.
+  # -t   Remove a trailing delim (default newline) from each line read.
+  readarray -t -d "$delimiter" arr <<< "${str}"
+  # same as: for i in  "${arr[@]}"; do echo "$i" done
   printf '%s\n' "${arr[@]}"
 }
 
