@@ -16,7 +16,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
   return <div>
     <div>
-      <Link href="/tailwind">tailwind</Link>
+      <Link href="/tailwind/breakpoint">tailwind/breakpoint</Link>
     </div>
     <Slot />
   </div>;

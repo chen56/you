@@ -12,3 +12,6 @@ trim_trailing_whitespace=true
 
 [*.dart]
 max_line_length = 500
+
+[*.tsx]
+max_line_length = 500
