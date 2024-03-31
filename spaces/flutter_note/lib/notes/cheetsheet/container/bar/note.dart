@@ -9,6 +9,8 @@ build(BuildContext context, Pen print) {
 ## AppBar
 
 一般放在[Scaffold.appBar].
+a
+b
 
 > ref: <https://api.dev/flutter/material/AppBar-class.html>
 ''');

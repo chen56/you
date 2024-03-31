@@ -21,7 +21,7 @@ SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 #SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
-source "$SCRIPT_DIR/../note.common.bash"
+source "$SCRIPT_DIR/../common.bash"
 
 print.markdown <<'MARKDOWN_END'
 # bash 核心 - 命令行、字符串、分割符、转义
