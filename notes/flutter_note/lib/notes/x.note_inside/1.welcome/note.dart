@@ -102,9 +102,3 @@ build(BuildContext context, Pen print) {
 
   ''');
 }
-
-/// sdf
-@immutable
-void xchaine(){
-
-}

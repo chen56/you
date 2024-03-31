@@ -58,7 +58,7 @@ class ViewCollection$Mate extends _i1.ViewCollection with _i2.Mate {
     super.key,
 
     /// optionalParameters: {required List<Widget> views = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required super.views,
+    super.views,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
             name: 'key',
@@ -76,7 +76,7 @@ class ViewCollection$Mate extends _i1.ViewCollection with _i2.Mate {
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ViewCollection$Mate(
           key: p.get('key').build(),
-          views: p.get('views').build() as List<_i5.Widget>,
+          views: p.get('views').build(),
         );
   }
 
