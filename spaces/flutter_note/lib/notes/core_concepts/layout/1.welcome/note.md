@@ -1,12 +1,5 @@
-// ignore_for_file: prefer_const_constructors
+# box_layout layout
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:note/note.dart';
-build(BuildContext context, Pen print) {
-  print.markdown('''
-# box layout
-s
 ## 常用
 
 垂直&水平排列的组件
@@ -27,7 +20,7 @@ s
   - **Positioned**: 在Stack中结合Positioned使用，可以更精确地控制子组件在Stack中的绝对位置。
   - **IndexedStack**: 允许在一组子组件中切换显示，类似TabView效果，通过索引值控制显示指定子组件。
 - **Align**：Align组件可以用来对齐其子组件，根据alignment参数调整子组件在父组件中的位置。
-   - **Center**：Align子类，Center组件将子组件居中显示，无论父容器大小如何变化，子组件始终保持居中。
+  - **Center**：Align子类，Center组件将子组件居中显示，无论父容器大小如何变化，子组件始终保持居中。
 - Wrap 组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
 - **Wrap**：Wrap组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
 - **ConstrainedBox**：为子组件添加额外的大小限制，常用于在自定义布局中施加特定的宽高约束。
@@ -76,7 +69,7 @@ s
   - 虽然CustomPainter主要用于自定义绘画，但在实现复杂自定义布局时也发挥着重要作用，可以通过`Canvas` API实现精确的像素级布局。
 - **FittedBox**：
   - FittedBox组件会调整其子组件的大小，使其适应自己的尺寸，常用于图标、文本等内容的自适应缩放。
-当然，还有一些其它值得注意的布局相关组件和技术：
+    当然，还有一些其它值得注意的布局相关组件和技术：
 
 
 - **AnimatedContainer**：
@@ -99,52 +92,3 @@ s
 
 
 
-
-
-
-  ''');
-
-  print(WindowContent()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-    return ColoredBox(
-      color: Colors.red,
-      child: Text(" $constraints"),
-    );
-  })));
-  print(WindowContent()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-    return Text(" $constraints");
-  })));
-
-  print(WindowContent(
-    width: 100000,
-  )(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-    return SizedBox.square(
-      dimension: 10000,
-      child: Text("$constraints"),
-    );
-  })));
-  print(WindowContent(
-    height: 100,
-    width: 10000,
-  )(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-    return ListView(
-
-      children: [
-        // Expanded(child: Icon(Icons.add, size: 100)),
-        // Expanded(child: Icon(Icons.add, size: 100)),
-        LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-          return Text(" $constraints");
-        }),
-        Align(alignment:Alignment.bottomRight ,child: LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-          return Text(" $constraints");
-        }),),
-        Align(alignment:Alignment.bottomRight ,child: Icon(Icons.add, size: 100),),
-        Icon(Icons.add, size: 100),
-        Icon(Icons.add, size: 100),
-        LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-          return Text(" $constraints");
-        }),
-        // Container(height: double.infinity,width: 100, color: Colors.red,)
-      ],
-    );
-  })));
-}

@@ -3,7 +3,7 @@ import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown('''
-# adaptive_navigation
+# 响应式设计
 
 ## 自适应的导航组件
 
