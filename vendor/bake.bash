@@ -84,7 +84,6 @@ bake._real_path() (
 BAKE_PATH="$(bake._real_path "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
-cd "${BAKE_DIR}" # set workdir
 declare debug=false
 declare help=false
 

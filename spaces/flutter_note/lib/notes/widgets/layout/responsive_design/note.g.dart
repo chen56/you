@@ -14,35 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # ButtonSt)
+        /// (print.markdown(''' # 响应式设计  ##)
         (
           cellType: 'body',
           offset: 114,
-          end: 679,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(WidgetContent(Wrap(child)
-        (
-          cellType: 'body',
-          offset: 757,
-          end: 877,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## 范例2 Met)
-        (
-          cellType: 'body',
-          offset: 955,
-          end: 999,
+          end: 261,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 999,
-          end: 1001,
+          offset: 261,
+          end: 263,
           specialNodes: <({
             String nodeType,
             int end,

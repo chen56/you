@@ -7,7 +7,7 @@ build(BuildContext context, Pen print) {
 
 ## 自适应的导航组件
 
-https://github.com/material-foundation/flutter-packages/tree/main/packages/adaptive_navigation
+https://github.com/material-foundation/flutter-packages/tree/main/packages/responsive_design
 
   ''');
 

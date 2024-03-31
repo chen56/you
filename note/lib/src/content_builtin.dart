@@ -235,16 +235,18 @@ class _PreBuilder extends MarkdownElementBuilder {
   }
 }
 
+/// 在页面上表现一个样机的模样：模仿浏览器、桌面窗口、手机
 /// 我们约束child为tight模式，以模仿最外层窗口
-class WindowContent extends StatelessWidget {
+/// 参考: https://daisyui.com/components/mockup-window/
+class MockupContent extends StatelessWidget {
   final Widget? child;
   final double? width;
   final double? height;
   final String title;
 
-  WindowContent({
+  const MockupContent({
     super.key,
-    this.title = "模仿窗口固定宽高限制",
+    this.title = "样机：固定宽高限制",
     double? width,
     double? height,
     this.child,
@@ -252,8 +254,8 @@ class WindowContent extends StatelessWidget {
         height = (height == null || height == double.infinity) ? 50 : height;
 
   /// call() == withChild copy
-  WindowContent call(Widget child) {
-    return WindowContent(
+  MockupContent call(Widget child) {
+    return MockupContent(
       key: key,
       width: width,
       height: height,
@@ -261,8 +263,8 @@ class WindowContent extends StatelessWidget {
     );
   }
 
-  WindowContent withChild(Widget child) {
-    return WindowContent(
+  MockupContent withChild(Widget child) {
+    return MockupContent(
       key: key,
       child: child,
     );

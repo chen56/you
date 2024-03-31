@@ -59,7 +59,7 @@ ${BoxConstraints.tightFor(width: 600, height: 800)}
 BoxConstraints的print结果中： w是width,h是height
   ''');
 
-  print(WindowContent()(
+  print(MockupContent()(
     LayoutBuilder(builder: (context, constraints) {
       return Text("WindowContent: ${constraints}");
     }),

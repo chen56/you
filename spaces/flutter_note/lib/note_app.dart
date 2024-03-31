@@ -25,7 +25,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 //     ]),
 //     Path<void>("layout", meta: layoutNote),
 //     Path<void>("material", kids: [
-//       Path<void>("button", kids: [
+//       Path<void>("overview", kids: [
 //         Path<void>("ElevatedButton", meta: widgetElevatedButtonNote),
 //       ]),
 //       Path<void>("text", kids: [
@@ -64,12 +64,12 @@ class Notes extends BaseNotes with Navigable {
   Screen get initial {
     String? last = sharedPreferences.getString("flutter_note.notes.location");
     if (last == null) {
-      return switchTo(welcome.path);
+      return switchTo(widgets_container_widgets_bar.path);
     }
     if (BaseNotes.rootroot.contains(last)) {
       return switchTo(last);
     }
-    return switchTo(welcome.path);
+    return switchTo(widgets_container_widgets_bar.path);
   }
 
   @override

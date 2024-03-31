@@ -68,30 +68,15 @@ flutter:
   assets:
     - note_space.json
     - lib/notes/
-    - lib/notes/1.welcome/
-    - lib/notes/cheetsheet/container/bar/
-    - lib/notes/cheetsheet/specific/button/
-    - lib/notes/cheatsheet_draft/async/
-    - lib/notes/cheatsheet_draft/container_widgets/bar/
-    - lib/notes/cheatsheet_draft/container_widgets/menu/
-    - lib/notes/cheatsheet_draft/container_widgets/navigation/adaptive_navigation/
-    - lib/notes/cheatsheet_draft/container_widgets/scrollable/Dismissible/
-    - lib/notes/cheatsheet_draft/media&assets&file/assets/
-    - lib/notes/cheatsheet_draft/media&assets&file/file/
-    - lib/notes/cheatsheet_draft/media&assets&file/icon/
-    - lib/notes/cheatsheet_draft/specific_widgets/button/ButtonStyleButton/
-    - lib/notes/cheatsheet_draft/specific_widgets/button/FloatingActionButton/
-    - lib/notes/cheatsheet_draft/specific_widgets/button/IconButton/
-    - lib/notes/cheatsheet_draft/specific_widgets/input/
-    - lib/notes/cheatsheet_draft/specific_widgets/selectable/
-    - lib/notes/cheatsheet_draft/specific_widgets/slider/
-    - lib/notes/cheatsheet_draft/specific_widgets/text/RichText/
-    - lib/notes/cheatsheet_draft/specific_widgets/text/Text/
-    - lib/notes/cheatsheet_draft/specific_widgets/webview/
-    - lib/notes/cheatsheet_draft/style&theming/material3/
-    - lib/notes/core_concepts/layout/
-    - lib/notes/core_concepts/layout/constraints/
-    - lib/notes/core_concepts/layout/old/layout/
+    - lib/notes/widgets/container_widgets/bar/
+    - lib/notes/widgets/container_widgets/menu/
+    - lib/notes/widgets/container_widgets/scrollable/Dismissible/
+    - lib/notes/widgets/specific_widgets/input/
+    - lib/notes/widgets/specific_widgets/selectable/
+    - lib/notes/widgets/specific_widgets/slider/
+    - lib/notes/widgets/specific_widgets/text/RichText/
+    - lib/notes/widgets/specific_widgets/text/Text/
+    - lib/notes/widgets/specific_widgets/webview/
     - lib/notes/core_concepts/navigation/
     - lib/notes/core_concepts/state/
     - lib/notes/core_concepts/state/1.vanilla_state/
@@ -107,16 +92,33 @@ flutter:
     - lib/notes/pure_dart/serialization_json/
     - lib/notes/research/remote_view/
     - lib/notes/thinking_in_ui/readable_html_vs_dart/
-    - lib/notes/z.note_inside/app_info/
-    - lib/notes/z.note_inside/how_note_work/
-    - lib/notes/z.note_inside/note_test_self/
-    - lib/notes/z.note_inside/note_test_self/nobody/
-    - lib/notes/z.note_inside/note_test_self/temp/
-    - lib/notes/z.note_inside/research_parameterized_example/
+    - lib/notes/x.note_inside/app_info/
+    - lib/notes/x.note_inside/how_note_work/
+    - lib/notes/x.note_inside/note_test_self/
+    - lib/notes/x.note_inside/note_test_self/nobody/
+    - lib/notes/x.note_inside/note_test_self/temp/
+    - lib/notes/x.note_inside/research_parameterized_example/
     - lib/notes/Improve_app/
     - lib/notes/Improve_app/1.overview/
     - lib/notes/Improve_app/web_optimization/
-    - lib/notes/core_concepts/layout/box/
+    - lib/notes/Improve_app/RepaintBoundary/
+    - lib/notes/Improve_app/event&listener&lifeycle/
+    - lib/notes/i18n/
+    - lib/notes/media&assets&file/assets/
+    - lib/notes/media&assets&file/file/
+    - lib/notes/pure_dart/async/
+    - lib/notes/style&theming/material3/
+    - lib/notes/widgets/layout/
+    - lib/notes/widgets/layout/box_layout/constraints/
+    - lib/notes/widgets/layout/old/layout/
+    - lib/notes/widgets/layout/responsive_design/
+    - lib/notes/widgets/specific_widgets/button/ButtonStyleButton/
+    - lib/notes/widgets/specific_widgets/button/FloatingActionButton/
+    - lib/notes/widgets/specific_widgets/button/IconButton/
+    - lib/notes/widgets/specific_widgets/button/overview/
+    - lib/notes/widgets/specific_widgets/icon/
+    - lib/notes/x.note_inside/1.welcome/
+    - lib/notes/x.note_inside/mockup_content/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

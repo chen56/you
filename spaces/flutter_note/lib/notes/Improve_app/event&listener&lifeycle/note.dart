@@ -3,10 +3,11 @@ import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# 完善应用概览
+# 事件监听&生命期
 
-基本理解flutter后, 就是要完善方方面面，才能成为一个完整的应用。
+## AppLifecycleListener
 
+https://api.flutter.dev/flutter/widgets/AppLifecycleListener-class.html
 
   ''');
 }

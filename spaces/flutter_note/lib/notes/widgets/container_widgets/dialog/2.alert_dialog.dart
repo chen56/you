@@ -49,7 +49,7 @@ class SampleState extends State<Sample> {
   Future<String?> _showMyDialog() async {
     return showDialog<String?>(
       context: context,
-      barrierDismissible: false, // user must tap button!
+      barrierDismissible: false, // user must tap overview!
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Title：好友见面'),

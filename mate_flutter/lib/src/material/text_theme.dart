@@ -7,7 +7,7 @@ import 'package:flutter/src/painting/text_style.dart' as _i3;
 
 /// class TextTheme with Diagnosticable
 class TextTheme$Mate extends _i1.TextTheme with _i2.Mate {
-  /// TextTheme TextTheme({TextStyle? displayLarge, TextStyle? displayMedium, TextStyle? displaySmall, TextStyle? headlineLarge, TextStyle? headlineMedium, TextStyle? headlineSmall, TextStyle? titleLarge, TextStyle? titleMedium, TextStyle? titleSmall, TextStyle? bodyLarge, TextStyle? bodyMedium, TextStyle? bodySmall, TextStyle? labelLarge, TextStyle? labelMedium, TextStyle? labelSmall, TextStyle? headline1, TextStyle? headline2, TextStyle? headline3, TextStyle? headline4, TextStyle? headline5, TextStyle? headline6, TextStyle? subtitle1, TextStyle? subtitle2, TextStyle? bodyText1, TextStyle? bodyText2, TextStyle? caption, TextStyle? button, TextStyle? overline})
+  /// TextTheme TextTheme({TextStyle? displayLarge, TextStyle? displayMedium, TextStyle? displaySmall, TextStyle? headlineLarge, TextStyle? headlineMedium, TextStyle? headlineSmall, TextStyle? titleLarge, TextStyle? titleMedium, TextStyle? titleSmall, TextStyle? bodyLarge, TextStyle? bodyMedium, TextStyle? bodySmall, TextStyle? labelLarge, TextStyle? labelMedium, TextStyle? labelSmall, TextStyle? headline1, TextStyle? headline2, TextStyle? headline3, TextStyle? headline4, TextStyle? headline5, TextStyle? headline6, TextStyle? subtitle1, TextStyle? subtitle2, TextStyle? bodyText1, TextStyle? bodyText2, TextStyle? caption, TextStyle? overview, TextStyle? overline})
   TextTheme$Mate({
     /// optionalParameters: {TextStyle? displayLarge} , default:none
     super.displayLarge,
