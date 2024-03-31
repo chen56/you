@@ -140,8 +140,7 @@ bake._debug() {
 }
 # Usage: bake._log DEBUG "错误消息"
 bake._log(){
-  local level;
-  level=$1
+  local level="$1"
   echo -e "$level $(date "+%F %T") $(bake._pwd)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 
@@ -552,6 +551,7 @@ bake.parse() {
     esac
   done
 
+  # todo 这里是不是可以简化为只用循环：'declare -p 变量名'，由declare完成变量定义的文本转换工作，不要自己弄了？
   local resultStr
   for optPath in "${!optVars[@]}"; do
     local declareStr
