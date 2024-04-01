@@ -156,12 +156,6 @@ EOF
   )"
 
 
-#   flutter_note flutter create --platforms=macos .
-install() {
-  _install_bake
-  _run git lfs install
-}
-
 note.run() (     cd note && _run "$@")
 note.install() ( note.run flutter pub get)
 note.clean() (   note.run flutter clean; rm -rf build;)
@@ -204,12 +198,12 @@ note_tools.install() (note_tools.run flutter pub get)
 note_tools.clean() (  note_tools.run flutter clean; rm -rf build;)
 
 
-install(){
-  _install_bake
-  _run git lfs install
+install(){ pkgs._run_subcmd install; }
 
-  # 执行 note.install、mate.install等命令
-  pkgs._run_subcmd install;
+upgrade() {
+  _install_bake
+  # macos
+  _run brew install git-lfs
 }
 
 
