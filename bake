@@ -2,11 +2,11 @@
 
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
 _real_path() (
-  cd "$(dirname "$1")" || exit
+  cd "$(dirname "$1")" || exit 200
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
     file="$(readlink "$file")"
-    cd -P "$(dirname "$file")" || exit
+    cd -P "$(dirname "$file")" || exit 200
     file="$PWD/$(basename "$file")"
   done
   echo "$file"
@@ -16,7 +16,7 @@ SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
 # 进入脚本所在目录，这样上下文就是本项目了
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR" || exit 200
 
 _install_bake(){
   mkdir -p "$SCRIPT_DIR/vendor"
@@ -36,15 +36,6 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 # 应用的命令脚本 , 公共函数和全局变量
 ##########################################
 
-# run一条命令，先print上下文信息，再执行
-# Usage: run <some cmd>
-# Example:
-# ------------------------------------
-# $ ./bake run pwd
-# /Users/x/git/younpc/bake:733 -> bake.go() ▶︎【pwd】
-# /Users/x/git/younpc
-# ------------------------------------
-
 declare -A _pkgs=(
     ["learn_dart"]="$SCRIPT_DIR/learn_dart"
     ["note"]="$SCRIPT_DIR/note"
@@ -57,22 +48,32 @@ declare -A _pkgs=(
     ["shell"]="$SCRIPT_DIR/notes/shell"
 )
 
+bake.cmd --cmd pkgs --desc "<mono> mono project manage: ./$SCRIPT_FILE pkgs <ls|run>"
 pkgs.ls(){
   for pkg in ${!_pkgs[*]} ; do
     echo "$pkg:${_pkgs[$pkg]}"
   done
 }
+
+bake.cmd --cmd pkgs.run --desc "<mono> run cmd on all pkg,Usage: ./$SCRIPT_FILE pkgs run [any cmd]"
 pkgs.run(){
   for pkg in ${!_pkgs[*]} ; do
     # 子shell内执行，防止环境感染
-    (  cd "${_pkgs[$pkg]}"; run "$@" ; )
+    (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
   done
 }
 
-pkgs.run_subcmd() {
+# 运行所用项目的某子命令
+# Usage:    pkgs._run_subcmd <subcmd>
+# Example:  pkgs._run_subcmd clean
+#     run =>  note.clean
+#             mate.clean
+#             flutter.clean
+#             ...
+pkgs._run_subcmd() {
   local subcmd="$1"
   if [[ "$subcmd" == "" ]] ; then
-    echo "缺subcmd参数 Usage:pkgs.run_subcmd <subcmd>";
+    echo "缺subcmd参数 Usage:pkgs._run_subcmd <subcmd>";
     return 100;
   fi
   for pkg in "${!_pkgs[@]}"; do
@@ -81,8 +82,19 @@ pkgs.run_subcmd() {
 }
 
 
-run() {
-  local caller_line=$(caller 0 | awk '{print $1}')
+
+
+# run一条命令，先print上下文信息，再执行
+# Usage: _run <some cmd>
+# Example:
+# ------------------------------------
+# $ _run pwd
+# /Users/x/git/younpc/bake:733 -> bake.go() ▶︎【pwd】
+# /Users/x/git/younpc
+# ------------------------------------
+_run() {
+  local caller_line;
+  caller_line=$(caller 0 | awk '{print $1}')
   local project
   # home目录替换为"~"符号
   # ${PWD#$HOME}可以删掉home目录前缀, 类似$(echo $PWD | sed "s|^$HOME||")，比sed简单高效,而且sed处理变量总有特殊字符问题
@@ -130,16 +142,16 @@ Examples:
  ./${SCRIPT_FILE} -h                       # show all commands help
  ./${SCRIPT_FILE} -h --debug               # show all commands help , include internal function
 
+ ./${SCRIPT_FILE}  flutter dev             # == cd notes/flutter_note && flutter run --device-id macos
+
  ./${SCRIPT_FILE}  test                    # test all projects
  ./${SCRIPT_FILE}  build                   # defalut build == flutter build web --web-renderer html
- ./${SCRIPT_FILE}  preview                 # defalut preview == run server at web build
+ ./${SCRIPT_FILE}  preview                 # defalut preview == start server at web build
  ./${SCRIPT_FILE}  test                    # test all projects
 
- ./${SCRIPT_FILE}  p -h                    # show all mono project commands help
- ./${SCRIPT_FILE}  p note pwd              # run "pwd" on note project dir
- ./${SCRIPT_FILE}  p all pwd               # run "pwd" on all mono projects
- ./${SCRIPT_FILE}  p all flutter pub get   # run "flutter pub get" on all mono projects
-
+ ./${SCRIPT_FILE}  pkgs ls                   # show all mono project
+ ./${SCRIPT_FILE}  pkgs run pwd              # run "pwd" on all mono project dir
+ ./${SCRIPT_FILE}  pkgs run flutter pub get  # run "flutter pub get" on all mono project dir
 EOF
   )"
 
@@ -147,32 +159,14 @@ EOF
 #   flutter_note flutter create --platforms=macos .
 install() {
   _install_bake
-  run git lfs install
+  _run git lfs install
 }
 
-bake.cmd --cmd p --desc "<mono>  project set, Usage: ./$SCRIPT_FILE p <sub_cmd>"
-
-bake.cmd --cmd p.all --desc "<mono>  run cmd on all mono project Usage: ./$SCRIPT_FILE all [any command]"
-p.all() {
-  #       目录中有"pubspec.yaml"的，认为是flutter项目
-  #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
-  #          # 用括号()开启子进程执行，可以不影响当前进程的环境
-  #          ( cd "$project" ;  run "$@" ; )
-  #        done
-  (cd learn_dart && run "$@")
-  (cd note && run "$@")
-  (cd mate_flutter && run "$@")
-  (cd mate && run "$@")
-  (cd note_test && run "$@")
-  (cd note_tools && run "$@")
-  (cd notes/flutter_note && run "$@")
-}
-
-note.run() (     cd note && run "$@")
+note.run() (     cd note && _run "$@")
 note.install() ( note.run flutter pub get)
 note.clean() (   note.run flutter clean; rm -rf build;)
 
-flutter.run() (                 cd notes/flutter_note && run "$@")
+flutter.run() (                 cd notes/flutter_note && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
 flutter.clean() (               flutter.run flutter clean; rm -rf build;)
 flutter.gen() (                 flutter.run dart run tools/gen.dart; )
@@ -192,47 +186,47 @@ flutter.build() {               flutter.run flutter build web -v --release --tre
     # run p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 flutter.preview() {             flutter.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
 
-mate.run() (    cd mate && run "$@")
+mate.run() (    cd mate && _run "$@")
 mate.install() (mate.run flutter pub get)
 mate.clean() (  mate.run flutter clean; rm -rf build;)
 
-mate_flutter.run() (    cd mate_flutter && run "$@")
+mate_flutter.run() (    cd mate_flutter && _run "$@")
 mate_flutter.install() (mate_flutter.run flutter pub get)
 mate_flutter.clean() (  mate_flutter.run flutter clean; rm -rf build;)
 mate_flutter.gen() (    mate_flutter.run dart run  tools/gen_mates.dart; mate_flutter.run dart run  tools/gen_mate_icons.dart ; )
 
-note_test.run() (        cd note_test && run "$@")
+note_test.run() (        cd note_test && _run "$@")
 note_test.install() (note_test.run flutter pub get)
 note_test.clean() (  note_test.run flutter clean; rm -rf build;)
 
-note_tools.run() (    cd note_tools && run "$@")
+note_tools.run() (    cd note_tools && _run "$@")
 note_tools.install() (note_tools.run flutter pub get)
 note_tools.clean() (  note_tools.run flutter clean; rm -rf build;)
 
 
 install(){
   _install_bake
-  run git lfs install
+  _run git lfs install
 
   # 执行 note.install、mate.install等命令
-  pkgs.run_subcmd install;
+  pkgs._run_subcmd install;
 }
 
 
 # 执行 note.test、mate.test等命令
-test() { pkgs.run_subcmd test; }
+test() { pkgs._run_subcmd test; }
 
 
 # 执行 note.clean、mate.clean等命令
-clean() { pkgs.run_subcmd clean; }
+clean() { pkgs._run_subcmd clean; }
 
 gen.all() (   flutter.gen;  ) #  mate_flutter.gen;暂时不用了
-gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  run rm -rf mate_flutter/lib;  )
+gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  _run rm -rf mate_flutter/lib;  )
 
-docker.build() (    run docker build --progress plain --tag younpc/note:latest . ; run mkdir -p build/flutter_note/web; run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
-docker.run() {      run echo "note preview http://localhost:8888/note/"; run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
-docker.preview() {  run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
-docker.debug() {    run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
+docker.build() (    _run docker build --progress plain --tag younpc/note:latest . ; _run mkdir -p build/flutter_note/web; _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
+docker.run() {      _run echo "note preview http://localhost:8888/note/"; _run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
+docker.preview() {  _run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
+docker.debug() {    _run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
 docker.push() {     docker image push younpc/note:latest ; }
 
 info() {
