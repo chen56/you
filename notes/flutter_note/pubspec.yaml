@@ -77,10 +77,6 @@ flutter:
     - lib/notes/widgets/specific_widgets/text/RichText/
     - lib/notes/widgets/specific_widgets/text/Text/
     - lib/notes/widgets/specific_widgets/webview/
-    - lib/notes/core_concepts/navigation/
-    - lib/notes/core_concepts/state/
-    - lib/notes/core_concepts/state/1.vanilla_state/
-    - lib/notes/core_concepts/state/StatefulBuilder/
     - lib/notes/dev/debug/
     - lib/notes/dev/devtool/
     - lib/notes/dev/devtool/vmservice/
@@ -119,6 +115,10 @@ flutter:
     - lib/notes/widgets/specific_widgets/icon/
     - lib/notes/x.note_inside/1.welcome/
     - lib/notes/x.note_inside/mockup_content/
+    - lib/notes/navigation/
+    - lib/notes/state/
+    - lib/notes/state/1.vanilla_state/
+    - lib/notes/state/StatefulBuilder/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -173,7 +173,11 @@ flutter.dev() {                 flutter.run flutter run --device-id macos "$@"; 
 flutter.build_macos() {         flutter.run flutter build macos -v --release --tree-shake-icons "$@";  }
 flutter.build_web_skwasm() {    flutter.run flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 flutter.build_web_canvaskit() { flutter.run flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter.build() {               flutter.run flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ; }
+flutter.build() {
+  flutter.run flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ;
+  _run pwd
+  _run ls build
+}
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_note/build/web --port 8000
     # flutter pub global activate dhttpd
@@ -215,12 +219,16 @@ test() { pkgs._run_subcmd test; }
 clean() { pkgs._run_subcmd clean; }
 
 gen.all() (   flutter.gen;  ) #  mate_flutter.gen;暂时不用了
-gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  _run rm -rf mate_flutter/lib;  )
+gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  ) # 暂时不用了 _run rm -rf mate_flutter/lib;
 
-docker.build() (    _run docker build --progress plain --tag younpc/note:latest . ; _run mkdir -p build/flutter_note/web; _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";)
+docker.build() (
+  _run docker build --progress plain --tag younpc/note:latest . ;
+  _run mkdir -p build/flutter_note/web;
+  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";
+)
 docker.run() {      _run echo "note preview http://localhost:8888/note/"; _run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
 docker.preview() {  _run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
-docker.debug() {    _run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash ; }
+docker.debug() {    _run docker run -v "$PWD:/home/flutter/note" --workdir /home/flutter/note --rm -it fischerscode/flutter:3.19.0 bash ; }
 docker.push() {     docker image push younpc/note:latest ; }
 
 info() {
