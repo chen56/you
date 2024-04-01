@@ -175,8 +175,6 @@ flutter.build_web_skwasm() {    flutter.run flutter build web -v --release --tre
 flutter.build_web_canvaskit() { flutter.run flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
 flutter.build() {
   flutter.run flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ;
-  _run pwd
-  _run ls build
 }
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_note/build/web --port 8000
