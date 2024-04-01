@@ -10,9 +10,9 @@ COPY --chown=flutter:flutter ./ ./note
 
 WORKDIR ./note
 
-RUN ./bake get
+RUN ./bake install
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
-RUN ./bake build --base-href "/note/"
+RUN ./bake flutter build --base-href "/note/"
 
 #
 ######################################################################
