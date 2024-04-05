@@ -2,7 +2,8 @@
 
 import 'dart:ui';
 
-import 'package:flutter_test/flutter_test.dart';
+import 'package:checks/checks.dart';
+import 'package:test/test.dart';
 
 typedef OnClick = void Function();
 // ignore: camel_case_types
@@ -23,6 +24,18 @@ class Value<T> {
 }
 
 void main() {
+
+  group("is 的用法", () {
+    test('is string ', () {
+      dynamic s = "";
+      dynamic b = false;
+
+      check(s is String).equals(true);
+      check(b is String).equals(false);
+      check(b is! String).equals(true);
+
+    });
+  });
   group("类型和可空类型的比较", () {
     test('本质是范型类型T是严格的 ', () {
       Type getType<T>(T arg) => T;

@@ -365,14 +365,12 @@ bake._show_cmd_help() {
 
   shift
 
-  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
-
   echo
 
   if [[ "$cmd" == "root" ]] ;then
-      echo "Running:【: $(bake._pwd)/$BAKE_FILE $@】"
+      echo "Running:【: $(bake._pwd)/$BAKE_FILE $*】"
   else
-      echo "Running:【$(bake._pwd)/$BAKE_FILE $cmd $@】"
+      echo "Running:【$(bake._pwd)/$BAKE_FILE $cmd $*】"
   fi
 
   echo
@@ -427,6 +425,46 @@ Available Commands:"
 }
 
 
+_bake_go_parse() {
+  # parse cmd :
+  #   ./bake pub get -v -b
+  #     -> { cmd:"pub.get", args:"-v -b" }
+  #   ./bake -h
+  #     -> { cmd:"", args:"-h" }
+  local cmd nextCmd arg
+  for arg in "$@"; do
+    nextCmd="$([[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg")"
+    if [[ "${_bake_cmds["$nextCmd"]}" == "" ]]; then break; fi
+    cmd="$nextCmd"
+    shift
+  done
+
+  if [[ "$cmd" == "" ]]; then cmd="root"; fi
+  eval "$(bake.parse "$cmd" "$@")"
+
+  if [[ "$help" == "true" ]]; then
+    echo bake._show_cmd_help "$cmd" "$@"
+    return 0
+  fi
+
+  #  if fileExist then show help
+  if ! declare -F "$cmd" | grep "$cmd" &>/dev/null  2>&1; then
+    if [[ "${_bake_cmds["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
+      echo bake._show_cmd_help "$cmd" "$@"
+      return 0
+    fi
+    bake._throw "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
+  fi
+
+  echo "$cmd" "$@"
+}
+
+##########################################
+# bake api function
+# 下面都是公开函数
+##########################################
+
+
 # 为cmd配置参数(public api)
 # Examples:
 #   bake.opt --cmd "build" --name "is_zip" --type bool --required --abbr z --default true --desc "is_zip, build项目时是否压缩"
@@ -447,17 +485,17 @@ bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "opt
 bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
 bake._opt_internal_add bake.opt "desc"  "string" "false" ""      ""      "option desc"
 bake.opt() {
-  eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
-  if [[ "$name" == "" ]]; then
-    echo "error: option [--name] required " >&2 && return 1
+  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
+  if [[ "$__name" == "" ]]; then
+    echo "error: option required [--name]" >&2 && return 1
   fi
-  if [[ "$type" == "" ]]; then
-    echo "error: option [--type] required " >&2 && return 1
+  if [[ "$__type" == "" ]]; then
+    echo "error: option required [--type]" >&2 && return 1
   fi
-  if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list" ]]; then
+  if [[ "$__type" != "bool" && "$__type" != "string" && "$__type" != "list" ]]; then
     echo "error: option [--type] must in [bool|string|list] " >&2 && return 1
   fi
-  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$desc"
+  bake._opt_internal_add "$__cmd" "$__name" "$__type" "${__required:-false}" "$__default" "$__abbr" "$__desc"
 }
 
 # bake.opt  (public api)
@@ -477,10 +515,11 @@ bake.opt() {
 #      ./bake build --target "macos" --is_zip --host host1 --host2
 #  调用结果是'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
 #  ---------------------------------------------------------
-#  declare is_zip=true;
-#  declare target="macos";
-#  declare hosts=("host1" "host2");
-#  declare optShift=7;
+#  declare __is_zip=true
+#  declare __target="macos"
+#  declare __hosts=("host1" "host2")
+#  declare __option_count=7
+#  shift 6
 #  ---------------------------------------------------------
 # eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
 #
@@ -521,8 +560,8 @@ bake.parse() {
     # if next arg not a opt , parsing complete;
     if [[ "${optPath}" == "" ]]; then break; fi
 
-    # _opt_value_ prefix : avoid conflicts in the current context
-    optVars["$optPath"]="_opt_value_$(bake._path_basename "$optPath")"
+    # __ prefix : avoid conflicts
+    optVars["$optPath"]="__$(bake._path_basename "$optPath")"
     declare "${optVars["$optPath"]}"
     # reference to the current dynamic  opt variable
     declare -n currentOptValue=${optVars["$optPath"]}
@@ -549,16 +588,10 @@ bake.parse() {
       ;;
     esac
   done
-
-  # todo 这里是不是可以简化为只用循环：'declare -p 变量名'，由declare完成变量定义的文本转换工作，不要自己弄了？
-  local resultStr
   for optPath in "${!optVars[@]}"; do
-    local declareStr
-    declareStr=$(declare -p "${optVars["$optPath"]}")
-    resultStr+="${declareStr/#*_opt_value_/declare };\n"
+    declare -p "${optVars["$optPath"]}"
   done
-  resultStr+="declare optShift=$((totalArgs - $#));\n"
-  echo -e "$resultStr" # echo -e : unescapes backslash
+  echo "shift $(( totalArgs - $# ))"
 }
 
 
@@ -570,17 +603,17 @@ bake.parse() {
 #   bake.cmd --cmd root \
 #             --desc "flutter-note cli."
 # 这样就可以用'./your_script -h' 查看根帮助了
-bake.opt --cmd "bake.cmd" --name "cmd"         --type string --desc "cmd, function name"
-bake.opt --cmd "bake.cmd" --name "desc"     --type string --desc "cmd desc, show in help"
+bake.opt --name "cmd"  --cmd "bake.cmd" --type string --desc "cmd, function name"
+bake.opt --name "desc" --cmd "bake.cmd" --type string --desc "cmd desc, show in help"
 bake.cmd() {
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
 
-  if [[ "$cmd" == "" ]]; then
+  if [[ "$__cmd" == "" ]]; then
     echo "error: bake.cmd [--cmd] required " >&2
     return 1
   fi
-  _bake_data["$cmd/desc"]="$desc"
+  _bake_data["$__cmd/desc"]="$__desc"
 }
 
 
@@ -628,40 +661,18 @@ EOF
 # 入口 (public api)
 bake.go() {
   # init register all cmd
-
   bake._cmd_register
 
-  # parse cmd :
-  #   ./bake pub get -v -b
-  #     -> { cmd:"pub.get", args:"-v -b" }
-  #   ./bake -h
-  #     -> { cmd:"", args:"-h" }
-  local cmd nextCmd arg
-  for arg in "$@"; do
-    nextCmd="$([[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg")"
-    if [[ "${_bake_cmds["$nextCmd"]}" == "" ]]; then break; fi
-    cmd="$nextCmd"
-    shift
-  done
-
-  if [[ "$cmd" == "" ]]; then cmd="root"; fi
-  eval "$(bake.parse "$cmd" "$@")"
-
-  if [[ "$help" == "true" ]]; then
-    bake._show_cmd_help "$cmd" "$@"
-    return 0
-  fi
-
-  #  if fileExist then show help
-  if ! declare -F "$cmd" | grep "$cmd" &>/dev/null  2>&1; then
-    if [[ "${_bake_cmds["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
-      bake._show_cmd_help "$cmd" "$@"
-      return 0
-    fi
-    bake._throw "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
-  fi
-
-  $cmd "$@"
+  # ⚠️ 注意！本函数把外部参数作为命令执行，所以如果有变量一定要__xxxx__格式，避免影响外部程序
+  # ⚠️ 高危场景：在a命令内执行传来的参数是高危操作，假设 :
+  #   1> a(){  local x="a()inner"; $@ ; }
+  #   2> b(){  echo "b()这里你猜能看到a的内部变量吗：x: $x" ; }  
+  #   3> a b
+  #      打印结果 => 这里你猜能看到a的内部变量吗：x: a()inner
+  # 
+  # 行3"a b",将使a函数在其内部执行b函数，这是高危操作，因为a函数的上下文暴露在b函数里，local也不例外
+  # 所以我们用另一个函数_bake_go_parse隔离环境
+  eval "$(_bake_go_parse "$@")"
 }
 
 # root is special cmd(you can define it), bake add some common options to this cmd, you can add yourself options

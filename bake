@@ -18,13 +18,13 @@ SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 # 进入脚本所在目录，这样上下文就是本项目了
 cd "$SCRIPT_DIR" || exit 200
 
-_install_bake(){
+upgrade_bake(){
   mkdir -p "$SCRIPT_DIR/vendor"
-  echo "$SCRIPT_PATH -> _install_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
+  echo "$SCRIPT_PATH -> upgrade_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
   curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/bake/raw/main/bake.bash ;
 }
 if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
-  _install_bake
+  upgrade_bake
 fi
 
 # include common script
@@ -203,9 +203,7 @@ note_tools.clean() (  note_tools.run flutter clean; rm -rf build;)
 install(){ pkgs._run_subcmd install; }
 
 upgrade() {
-  _install_bake
-  # macos
-  _run brew install git-lfs
+  upgrade_bake
 }
 
 

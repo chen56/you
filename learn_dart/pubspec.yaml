@@ -4,25 +4,23 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 
 # Add regular dependencies here.
 dependencies:
-  flutter:
-    sdk: flutter
+  # https://pub.dev/packages/intl
+  # Provides internationalization and localization facilities,
+  # including message translation, plurals and genders,
+  # date/number formatting and parsing, and bidirectional text.
+  intl: ^0.19.0
 
-  note: ^1.0.0
-  note_tools:
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints:
-
   lints:
   test: ^1.21.0
   analyzer:
   path: ^1.8.2
   glob:
+  checks: ^0.3.0
 

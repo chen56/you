@@ -1,6 +1,8 @@
+import 'dart:collection';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   group("dynamic", () {
@@ -62,7 +64,16 @@ void main() {
       );
       expect(x.injectInfo, "myFunc");
     });
-    test('AllTypeFuncInject 这样可以区分Function类型： extension X on Function{} ', () {});
+  });
+  group("runtimeType 关系？", () {
+    test('SpecificTypeFuncInject扩展Function后可在里面加点料，方便mate模型生成代码', () {
+      // 2s多
+      for(int i=0;i<1000*1000*1000;i++){
+        // ignore: unused_local_variable
+        var x =[] is ListBase;
+        // check([] is ListBase).equals(true);
+      }
+    });
   });
 }
 
