@@ -39,7 +39,7 @@ _bake_version=v0.3.20240327
 #      bake.opt --cmd build --name "target" --type string
 #    # b. 解析和使用option
 #      function build() {
-#         eval "$(bake.parse "${FUNCNAME[0]}" "$@")";
+#         eval "$(bake.parse  "$@")";
 #         echo "build ... your option：target: $target";
 #      }
 #    # c. 调用看看:
@@ -485,7 +485,7 @@ bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "opt
 bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
 bake._opt_internal_add bake.opt "desc"  "string" "false" ""      ""      "option desc"
 bake.opt() {
-  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
+  eval "$(bake.parse "$@")"
   if [[ "$__name" == "" ]]; then
     echo "error: option required [--name]" >&2 && return 1
   fi
@@ -507,13 +507,13 @@ bake.opt() {
 #      bake.opt --cmd build --name "files"  --type string
 #      function build() {
 #         # 模版代码，把生成的脚本eval出来
-#         eval "$(bake.parse "${FUNCNAME[0]}" "$@")";
+#         eval "$(bake.parse  "$@")";
 
 #         echo "is_zip:$is_zip, target:$target, hosts:${hosts[@]}";
 #      }
 #  调用：
 #      ./bake build --target "macos" --is_zip --host host1 --host2
-#  调用结果是'bake.parse "${FUNCNAME[0]}" "$@"'将生成如下脚本:
+#  调用结果是'bake.parse  "$@"'将生成如下脚本:
 #  ---------------------------------------------------------
 #  declare __is_zip=true
 #  declare __target="macos"
@@ -523,15 +523,10 @@ bake.opt() {
 #  ---------------------------------------------------------
 # eval后，就可以直接使用变量了, 在函数中declare，不带-g参数默认为local变量，不会影响全局环境。
 #
-# Usage: bake.parse <cmd:default root> [arg1] [arg2] ...
+# Usage: 固定格式：bake.parse "$@"
 # 参考：[bake.opt]
 bake.parse() {
-  local cmd="${1}"
-  if [[ "$cmd" == "" ]]; then
-    bake._throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default root> [arg1] [arg2]" ;
-  fi
-
-  shift; # shift cmd arg, left is options
+  local cmd="${FUNCNAME[1]}"
 
   # key is -h --help ... candidate words ,
   # value is optPath
@@ -603,11 +598,12 @@ bake.parse() {
 #   bake.cmd --cmd root \
 #             --desc "flutter-note cli."
 # 这样就可以用'./your_script -h' 查看根帮助了
-bake.opt --name "cmd"  --cmd "bake.cmd" --type string --desc "cmd, function name"
+bake.opt --name "cmd"  --cmd "bake.cmd" --type string --desc "cmd function  "
 bake.opt --name "desc" --cmd "bake.cmd" --type string --desc "cmd desc, show in help"
 bake.cmd() {
+
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
-  eval "$(bake.parse "${FUNCNAME[0]}" "$@")"
+  eval "$(bake.parse  "$@")"
 
   if [[ "$__cmd" == "" ]]; then
     echo "error: bake.cmd [--cmd] required " >&2
