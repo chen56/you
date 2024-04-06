@@ -1,6 +1,5 @@
 // ignore_for_file: unused_local_variable
 
-import 'dart:ui';
 
 import 'package:checks/checks.dart';
 import 'package:test/test.dart';
@@ -60,14 +59,14 @@ void main() {
     test('本质是范型类型T是严格的 Enum ', () {
       Type getType<T>(T arg) => T;
 
-      TextAlign i = TextAlign.center;
-      TextAlign? i_ = TextAlign.center;
-      Type t = getType<TextAlign>(i);
-      Type t_ = getType<TextAlign?>(i_);
+      String i = "str";
+      String? i_ = "" as String?;
+      Type t = getType<String>(i);
+      Type t_ = getType<String?>(i_);
 
-      expect(TextAlign == i.runtimeType, true);
-      expect(TextAlign == i.runtimeType, true);
-      expect(TextAlign == i_.runtimeType, true);
+      expect(String == i.runtimeType, true);
+      expect(String == i.runtimeType, true);
+      expect(String == i_.runtimeType, true);
       expect(i.runtimeType == i_.runtimeType, true);
 
       expect(t == i.runtimeType, true);

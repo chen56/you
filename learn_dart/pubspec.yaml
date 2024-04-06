@@ -14,6 +14,7 @@ dependencies:
   # including message translation, plurals and genders,
   # date/number formatting and parsing, and bidirectional text.
   intl:
+  test_api: ^0.7.0
 
 
 dev_dependencies:
@@ -23,6 +24,5 @@ dev_dependencies:
   path:
   glob:
   checks:
-  test_api:
 
 

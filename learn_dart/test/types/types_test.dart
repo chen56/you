@@ -1,7 +1,5 @@
 import 'dart:collection';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -45,9 +43,9 @@ void main() {
         return x is Enum;
       }
 
-      Enum e = DiagnosticLevel.debug;
-      DiagnosticLevel? c = DiagnosticLevel.debug;
-      expect(isEnum<DiagnosticLevel>(DiagnosticLevel.debug), true);
+      Enum e = InjectMode.embed;
+      InjectMode? c = InjectMode.embed;
+      expect(isEnum<InjectMode>(InjectMode.embed), true);
       expect(isEnum(e), true);
       // ignore: unnecessary_type_check
       expect(e is Enum, true);
