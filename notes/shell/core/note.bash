@@ -6,16 +6,7 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 
 # 模版代码，获取文件真实路径
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-_real_path() {
-  cd "$(dirname "$1")" || exit
-  file="$PWD/$(basename "$1")"
-  while [[ -L "$file" ]]; do
-    file="$(readlink "$file")"
-    cd -P "$(dirname "$file")" || exit
-    file="$PWD/$(basename "$file")"
-  done
-  echo "$file"
-}
+_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
 
 SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"

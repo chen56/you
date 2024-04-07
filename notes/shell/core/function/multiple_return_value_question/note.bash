@@ -6,25 +6,16 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 
 # 模版代码，获取文件真实路径
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-_real_path() {
-  cd "$(dirname "$1")" || exit
-  file="$PWD/$(basename "$1")"
-  while [[ -L "$file" ]]; do
-    file="$(readlink "$file")"
-    cd -P "$(dirname "$file")" || exit
-    file="$PWD/$(basename "$file")"
-  done
-  echo "$file"
-}
+_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
 
 SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 #SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
-source "$SCRIPT_DIR/../../common.bash"
+source "$SCRIPT_DIR/../../../common.bash"
 
 # 函数多结果所面临的问题
-函数多返回值问题() {
+question() {
 
   print.markdown <<EOF
 # bash 核心 - 命令行、字符串、分割符、转义
@@ -70,8 +61,8 @@ EOF
 }
 
 
-
-函数多返回值问题解决方案() {
+# 函数多返回值问题解决方案
+answer() {
   print.markdown <<EOF___
 
 为什么批bash是一门丧心病狂的语言，就是因为它是个处理字符串的语言，这货基本不支持传递数据结构，
@@ -95,20 +86,30 @@ EOF___
     # 使用IFS（内部字段分隔符）临时设定分隔符，并将输入字符串分配给数组
     local IFS="${delimiter}"
     read -ra array <<<"${input_string}"
+    # TODO 换行符还么搞定，如果有会车就结有问题
+    echo "数组解析：[${array[*]}]" >&2
 
     #####################
     ## 上面没变，看这里:
     #####################
     # declare -p array： 会显示array变量的定义形式：
     # 再把前缀'declare -a array'删掉就是要的：([0]=$'行1\n  行2\n  行3' [1]="另一个值")
-    declare -p array | sed 's/^declare -a array=//'
+    local result
+    local="$(declare -p array | sed 's/^declare -a array=//')"
+    echo "返回这个：$result" >&2
+    echo -e "$result"
   }
 
   # declare -a y :意思是定义一个array类型的变量y
   echo "调用declare -a恢复数组："
-  declare -a result
-  result="$(split_string 'hel lo:world' ':' )"
+  local x
+  x="$(split_string 'hel$ \nlo:wo
+  rld' ':' )"
+  echo "%s %s\n" "split_string的返回值：" "$x"
+  declare -a result="$x"
   declare -p result
+  echo "result[0]:${result[0]}"
+  echo "result[0]:${result[1]}"
 
   # 目前能想到的最简单省心的办法，妈妈再也不用担心我处理错换行、空格啥了。
 }
