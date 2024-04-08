@@ -85,6 +85,18 @@ void main() {
       var o$ToI = o$ as List<int>;
       var o$ToI$ = o$ as List<int>?;
     });
+
+
+  });
+  group("范型丢失问题", () {
+    test('只能靠原始变量自行判断，无法在外部获知其关系 ', () {
+      List list=[GetGenericsType(1)];
+      var lostGenerics = list[0] as GetGenericsType;
+      dynamic fromSomeWhere="";
+      dynamic fromSomeWhere2=1;
+      check(lostGenerics.checkIs(fromSomeWhere)).equals(false);
+      check(lostGenerics.checkIs(fromSomeWhere2)).equals(true);
+    });
   });
 
 }
@@ -97,3 +109,11 @@ bool isNullable<T>() {
 bool isType<Sub, Super>() {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
+class GetGenericsType<T>{
+  T inner;
+  GetGenericsType(this.inner);
+  bool checkIs(dynamic obj){
+    return obj is T;
+  }
+}
+

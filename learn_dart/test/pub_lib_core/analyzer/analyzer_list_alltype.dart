@@ -12,7 +12,7 @@ main() async {
   final collection = AnalysisContextCollection(
     includedPaths: [
       path.normalize(path.absolute(
-          path.join(path.current, "test/analyzer/analyzer_list_alltype.dart")))
+          path.join(path.current, "test/pub_lib_core/analyzer/analyzer_list_alltype.dart")))
     ],
     resourceProvider: resourceProvider,
   );
@@ -48,4 +48,8 @@ main() async {
       }
     }
   }
+}
+class XXXXX{
+  String x="";
+
 }
