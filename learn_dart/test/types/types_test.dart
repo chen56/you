@@ -1,5 +1,6 @@
 import 'dart:collection';
 
+import 'package:checks/checks.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -28,13 +29,25 @@ void main() {
       expect(symbol.toString(), 'Symbol("ssss")');
     });
     test('Symbol', () {
-      String? s = "";
+      Symbol? s = #a;
       expect(isNullableOf(s), false);
-      expect(isNullableOf<String?>(s), true);
+      expect(isNullableOf<Symbol?>(s), true);
 
       dynamic x = s;
-      expect(isNullableOf<String?>(x), true);
+      expect(isNullableOf<Symbol?>(x), true);
       expect(isNullableOf(x), true);
+    });
+    test('Symbol', () {
+      Symbol? a = #a;
+      Symbol? a2 = #a;
+      check(a).equals(a2);
+
+    });
+    test('Object equals', () {
+      check(const Object()==const Object()).equals(true);
+      check(  Object()!=const  Object()).equals(true);
+      check(  Object()!=   Object()).equals(true);
+
     });
   });
   group("Enum", () {
@@ -72,6 +85,13 @@ void main() {
         // check([] is ListBase).equals(true);
       }
     });
+
+  });
+  group("Unique", () {
+    test(' x', () {
+      Uniquely x = Uniquely(name: "x") ;
+       check(x==x).equals(false);
+    });
   });
 }
 
@@ -90,6 +110,20 @@ extension SpecificTypeFuncInject<T> on void Function<T>(Set<T> selected) {
   }) {
     _name[this] = func;
   }
+}
+class Uniquely {
+  final String name;
+
+  Uniquely({required this.name});
+
+  @override
+  bool operator ==(Object other) {
+    // 即使两个对象的id相同，我们也返回false，表示它们在逻辑上不相等
+    return false;
+  }
+
+  @override
+  int get hashCode => name.hashCode; // 这里假设我们还是希望hashCode基于id生成
 }
 
 /// for https://github.com/chen56/note/issues/61

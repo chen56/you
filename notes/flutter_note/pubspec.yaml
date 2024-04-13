@@ -37,6 +37,9 @@ dependencies:
   code_builder: ^4.4.0
   file: ^7.0.0
   shared_preferences: ^2.2.2
+  test:
+  flutter_test:
+    sdk: flutter
 
   # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos_config 13.x
 #  flutter_inappwebview: ^5.7.2+3

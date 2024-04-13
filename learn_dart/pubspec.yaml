@@ -25,4 +25,10 @@ dev_dependencies:
   glob:
   checks:
 
+analyzer:
+  enable-experiment:
+    - annotate_redeclares
 
+linter:
+  rules:
+    - annotate_redeclares
