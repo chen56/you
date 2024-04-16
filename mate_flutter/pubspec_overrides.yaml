@@ -1,8 +1,0 @@
-# melos_managed_dependency_overrides: note
-dependency_overrides:
-  note:
-    path: ../note
-  note_tools:
-    path: ../note_tools
-  mate:
-    path: ../mate

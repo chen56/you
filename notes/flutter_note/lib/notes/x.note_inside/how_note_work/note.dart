@@ -196,7 +196,7 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
         i++;
         print("runInCurrentCell $i");
       },
-      child: Text("runInCurrentCell"),
+      child: const Text("runInCurrentCell"),
     ));
   });
 

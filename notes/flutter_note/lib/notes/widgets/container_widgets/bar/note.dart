@@ -1,6 +1,4 @@
-import 'package:code_builder/code_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:flutter/painting.dart' as painting;
 import 'package:note/note.dart';
 
@@ -23,19 +21,19 @@ b
       actions: <Widget>[
         IconButton(
           icon: const Icon(Icons.add),
-          onPressed: () {}..sampleCodeStr = "(){}",
+          onPressed: () {},
         ),
         IconButton(
           icon: const Icon(Icons.access_alarm),
-          onPressed: () {}..sampleCodeStr = "(){}",
+          onPressed: () {},
         ),
         CheckboxMenuButton(
           value: true,
-          onChanged: (b) {}..sampleCodeStr = "(b){}",
+          onChanged: (b) {},
           child: const Text('CheckboxMenuButton'),
         ),
         FilledButton(
-          onPressed: () {}..sampleCodeStr = "(){}",
+          onPressed: () {},
           child: const Text('FilledButton'),
         ),
       ],
@@ -61,19 +59,19 @@ b
         children: <Widget>[
           IconButton(
             tooltip: 'Open navigation menu',
-            icon: Icon(Icons.menu),
-            onPressed: () {}..sampleCodeStr = "(){}",
+            icon: const Icon(Icons.menu),
+            onPressed: () {},
           ),
-          Spacer(),
+          const Spacer(),
           IconButton(
             tooltip: 'Search',
-            icon: Icon(Icons.search),
-            onPressed: () {}..sampleCodeStr = "(){}",
+            icon: const Icon(Icons.search),
+            onPressed: () {},
           ),
           IconButton(
             tooltip: 'Favorite',
-            icon: Icon(Icons.favorite),
-            onPressed: () {}..sampleCodeStr = "(){}",
+            icon: const Icon(Icons.favorite),
+            onPressed: () {},
           ),
         ],
       ),
@@ -103,15 +101,15 @@ b
   print(
     Column(
       children: [
-        Container(
+        const SizedBox(
           height: 100,
           // color: Colors.lime,
           child: Text("main content body"),
         ),
         NavigationBar(
-          onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
+          onDestinationSelected: (_) {},
           selectedIndex: 1,
-          destinations: <Widget>[
+          destinations: const <Widget>[
             NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
             NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
           ],
@@ -150,7 +148,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
   }
 
   print(StatefulBuilder(
-    builder: buildNavigationBar..sampleCode = refer("buildNavigationBar"),
+    builder: buildNavigationBar,
   ));
 
   print.$____________________________________________________________________();
@@ -178,19 +176,19 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
             // extended: true,
             selectedIndex: 0,
             groupAlignment: 1,
-            onDestinationSelected: (_) {}..sampleCodeStr = "(_){}",
+            onDestinationSelected: (_) {},
             labelType: NavigationRailLabelType.all,
             leading: IconButton(
-              onPressed: () {}..sampleCodeStr = "(){}",
-              icon: Icon(Icons.access_time),
+              onPressed: () {},
+              icon: const Icon(Icons.access_time),
               tooltip: "NavigationRail.leading",
             ),
             trailing: IconButton(
-              onPressed: () {}..sampleCodeStr = "(){}",
-              icon: Icon(Icons.exit_to_app),
+              onPressed: () {},
+              icon: const Icon(Icons.exit_to_app),
               tooltip: "NavigationRail.trailing",
             ),
-            destinations: <NavigationRailDestination>[
+            destinations: const <NavigationRailDestination>[
               NavigationRailDestination(icon: Icon(Icons.sanitizer), label: Text('First')),
               NavigationRailDestination(icon: Icon(Icons.accessible), label: Text('Second')),
             ],
@@ -226,7 +224,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(DefaultTabController(
+  print(const DefaultTabController(
     length: 3,
     child: TabBar(
       tabs: <Widget>[
@@ -252,7 +250,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(DefaultTabController(
+  print(const DefaultTabController(
     initialIndex: 1,
     length: 3,
     child: Column(
@@ -264,7 +262,7 @@ TabBar不加TabView长这样：
             Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: painting.EdgeInsets.all(10)),
           ],
         ),
-        Container(
+        SizedBox(
           height: 200,
           child: TabBarView(
             children: <Widget>[
@@ -320,7 +318,7 @@ DefaultTabController
   print(SizedBox(
     height: 100,
     child: FilledButton(
-      onPressed: onPressed..sampleCode = refer("onPressed"),
+      onPressed: onPressed,
       child: const Text('Show Snack bar'),
     ),
   ));
@@ -344,12 +342,12 @@ DefaultTabController
       child: ButtonBar(
         children: [
           ElevatedButton(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text("ElevatedButton2"),
+            onPressed: () {},
+            child: const Text("ElevatedButton2"),
           ),
           OutlinedButton(
-            onPressed: () {}..sampleCodeStr = "(){}",
-            child: Text('OutlinedButton'),
+            onPressed: () {},
+            child: const Text('OutlinedButton'),
           ),
         ],
       ),
@@ -367,11 +365,11 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   print.$____________________________________________________________________();
   print(
-    Container(
+    SizedBox(
       width: 300,
       child: Column(
         children: [
-          Placeholder(fallbackHeight: 100, color: Colors.deepPurple),
+          const Placeholder(fallbackHeight: 100, color: Colors.deepPurple),
           OverflowBar(
             alignment: MainAxisAlignment.end,
             textDirection: TextDirection.ltr,
@@ -380,12 +378,12 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
             overflowDirection: VerticalDirection.down,
             children: [
               ElevatedButton(
-                onPressed: () {}..sampleCodeStr = "(){}",
-                child: Text("Cancel横排还是竖排取决于width"),
+                onPressed: () {},
+                child: const Text("Cancel横排还是竖排取决于width"),
               ),
               ElevatedButton(
-                onPressed: () {}..sampleCodeStr = "(){}",
-                child: Text("Ok对齐方式取决于排列"),
+                onPressed: () {},
+                child: const Text("Ok对齐方式取决于排列"),
               ),
             ],
           )
@@ -426,25 +424,25 @@ MenuBar相关组件：
     MenuBar(
       children: [
         MenuItemButton(
-          onPressed: () {}..sampleCodeStr = "(){}",
-          child: MenuAcceleratorLabel(
+          onPressed: () {},
+          child: const MenuAcceleratorLabel(
             '&Exit',
-            builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+            builder: MenuAcceleratorLabel.defaultLabelBuilder,
           ),
         ),
         SubmenuButton(
           menuChildren: [
             MenuItemButton(
-              onPressed: click..sampleCodeStr = "click",
-              child: MenuAcceleratorLabel(
+              onPressed: click,
+              child: const MenuAcceleratorLabel(
                 '&flutter_note github',
-                builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+                builder: MenuAcceleratorLabel.defaultLabelBuilder,
               ),
             )
           ],
-          child: MenuAcceleratorLabel(
+          child: const MenuAcceleratorLabel(
             '&Help',
-            builder: MenuAcceleratorLabel.defaultLabelBuilder..sampleCodeStr = "MenuAcceleratorLabel.defaultLabelBuilder",
+            builder: MenuAcceleratorLabel.defaultLabelBuilder,
           ),
         ),
       ],

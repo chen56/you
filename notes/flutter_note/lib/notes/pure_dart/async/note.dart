@@ -1,7 +1,8 @@
 import 'dart:isolate';
 
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
+
+// import 'package:note/src/params/mate_note.dart';
 import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) async {
@@ -21,7 +22,7 @@ build(BuildContext context, Pen print) async {
   {
     Future<String> bomb() async {
       print("s");
-      return Future.delayed(Duration(seconds: 3), () => "bong!!!");
+      return Future.delayed(const Duration(seconds: 3), () => "bong!!!");
     }
 
     // print.runInCurrentCell((print) {
@@ -41,9 +42,7 @@ build(BuildContext context, Pen print) async {
         // debugPrint("ppp2--- ${print.pen.cells}");
       }
 
-      print(FilledButton(
-          onPressed: onPressed..sampleCodeStr = "onPressed",
-          child: const Text("按后3秒后爆炸")));
+      print(FilledButton(onPressed: onPressed, child: const Text("按后3秒后爆炸")));
     });
   }
 
@@ -83,9 +82,7 @@ Error: Unsupported operation: dart:isolate is not supported on dart4web
         }
       }
 
-      print(FilledButton(
-          onPressed: onPressed..sampleCodeStr = "onPressed",
-          child: const Text("开始，每隔一秒发送1，2，3")));
+      print(FilledButton(onPressed: onPressed, child: const Text("开始，每隔一秒发送1，2，3")));
     });
   }
 }

@@ -1,4 +1,5 @@
 /// 基础包，不依赖其他业务代码
+library;
 
 /// result = Sub is Super
 bool isType<Sub, Super>() {

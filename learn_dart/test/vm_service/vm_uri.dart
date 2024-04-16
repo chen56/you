@@ -7,7 +7,7 @@ library service_tester;
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:vm_service/vm_service.dart';
+import 'package:vm_service/vm_service.dart' show VmService;
 
 final String host = 'localhost';
 final int port = 7575;

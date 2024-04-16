@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/note.dart';
 
-import 'pen_extension.dart';
+import 'package:flutter_note/notes/x.note_inside/note_test_self/temp/pen_extension.dart';
 
 build(BuildContext context, Pen print) {
   var i = 1;
@@ -10,7 +10,7 @@ build(BuildContext context, Pen print) {
   });
 
   print.level(
-      title: Text("1"),
+      title: const Text("1"),
       style: const ContentLayout(
         maxColumn: 3,
       ), () {
@@ -26,24 +26,24 @@ build(BuildContext context, Pen print) {
       });
     }
 
-    group(Text("ss"), () {
+    group(const Text("ss"), () {
       // 特殊语句
       print.runInCurrentCell((print) {
         print(i);
       });
     });
     print.level(
-        title: Text("布局"),
+        title: const Text("布局"),
         style: const ContentLayout(
           maxColumn: 3,
         ),
         null)(() {
-      print.level(title: Text("box布局"), style: const ContentLayout(maxColumn: 3), null)(() {
-        print.level(title: Text("box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), null)(() {
+      print.level(title: const Text("box布局"), style: const ContentLayout(maxColumn: 3), null)(() {
+        print.level(title: const Text("box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), null)(() {
           print(const Text(""));
         });
       });
-      print.level(null, title: Text("slaver布局"), style: const ContentLayout(maxColumn: 3))(() {
+      print.level(null, title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3))(() {
         print(const Text(""));
       });
     });
@@ -54,7 +54,7 @@ build(BuildContext context, Pen print) {
           print(const Text(""));
         }));
       }));
-      print(Layer(title: Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
+      print(Layer(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
         print(const Text(""));
       }));
     }));
@@ -65,23 +65,23 @@ build(BuildContext context, Pen print) {
           print(const Text(""));
         })
       ]),
-      Layer(title: Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
+      Layer(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
         print(const Text(""));
       }),
     ]);
 
     print(body);
     RichText(
-      text: TextSpan(text: 'Hello'),
+      text: const TextSpan(text: 'Hello'),
     );
-    group(Text2("ss"), () {
-      group(Text("ss2"), () {});
+    group(const Text2("ss"), () {
+      group(const Text("ss2"), () {});
     });
   }
 }
 
 group(Object x, Function y) {}
 class Text2 extends Text{
-  Text2(super.data, {super.key});
+  const Text2(super.data, {super.key});
 
 }

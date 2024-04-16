@@ -7,7 +7,8 @@ main() {
         print("hahaha:$msg");
       }
 
-      var x;
+      int? y;
+      dynamic x=y;
       x == null ? Never : xx(" null");
       x = 1;
       x == null ? Never : xx("not null");

@@ -21,10 +21,10 @@ build(BuildContext context, Pen print) {
   print.markdown('''
 | name                            | value                                  | comment                                           |
 |---------------------------------|----------------------------------------|---------------------------------------------------|
-| kIsWeb                          | ${kIsWeb}                              | bool.fromEnvironment('dart.library.js_util')      |
-| kReleaseMode                    | ${kReleaseMode}                        | bool.fromEnvironment('dart.vm.product')           |
-| kProfileMode                    | ${kProfileMode}                        | bool.fromEnvironment('dart.vm.profile')           |
-| kDebugMode                      | ${kDebugMode}                          | !kReleaseMode && !kProfileMode                    |
+| kIsWeb                          | $kIsWeb                              | bool.fromEnvironment('dart.library.js_util')      |
+| kReleaseMode                    | $kReleaseMode                        | bool.fromEnvironment('dart.vm.product')           |
+| kProfileMode                    | $kProfileMode                        | bool.fromEnvironment('dart.vm.profile')           |
+| kDebugMode                      | $kDebugMode                          | !kReleaseMode && !kProfileMode                    |
 | theme.platform.name             | ${theme.platform.name}                 |                                                   |
 | theme.visualDensity             | ${theme.visualDensity.toStringShort()} | 视觉密度                                              |
 | mediaQuery.orientation          | ${mediaQuery.orientation}              | landscape/portrait                                |

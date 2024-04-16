@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
 
 build(BuildContext context, Pen print) {
@@ -20,11 +19,11 @@ the Material Design overview types and how they should be used in designs.
   print.$____________________________________________________________________();
   print(WidgetContent(Wrap(
     children: [
-      ElevatedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text("ElevatedButton")),
-      FilledButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('FilledButton')),
-      FilledButton.tonal(onPressed: () {}..sampleCodeStr = "(){}", child: Text('FilledButton.tonal')),
-      OutlinedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('OutlinedButton')),
-      TextButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('TextButton')),
+      ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
+      FilledButton(onPressed: () {}, child: const Text('FilledButton')),
+      FilledButton.tonal(onPressed: () {}, child: const Text('FilledButton.tonal')),
+      OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
+      TextButton(onPressed: () {}, child: const Text('TextButton')),
     ],
   )));
 
@@ -38,9 +37,9 @@ the Material Design overview types and how they should be used in designs.
   print.$____________________________________________________________________();
   print(WidgetContent(Row(
     children: [
-      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.wifi)),
-      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.add)),
-      IconButton(onPressed: () {}..sampleCodeStr = "(){}", tooltip: "IconButton", icon: Icon(Icons.ac_unit)),
+      IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.wifi)),
+      IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.add)),
+      IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.ac_unit)),
     ],
   )));
 
@@ -57,28 +56,28 @@ the Material Design overview types and how they should be used in designs.
   print(WidgetContent(Row(
     children: [
       FloatingActionButton(
-        onPressed: () {}..sampleCodeStr = "(){}",
+        onPressed: () {},
         heroTag: "overview.FloatingActionButton${id++}",
         tooltip: "FloatingActionButton",
-        child: Text("缺省构造器"),
+        child: const Text("缺省构造器"),
       ),
       FloatingActionButton.small(
         // isExtended: false,
-        onPressed: () {}..sampleCodeStr = "(){}",
+        onPressed: () {},
         heroTag: "overview.FloatingActionButton${id++}",
-        child: Text("small"),
+        child: const Text("small"),
       ),
       FloatingActionButton.large(
         // isExtended: false,
-        onPressed: () {}..sampleCodeStr = "(){}",
+        onPressed: () {},
         heroTag: "overview.FloatingActionButton${id++}",
-        child: Text("large"),
+        child: const Text("large"),
       ),
       FloatingActionButton.extended(
         // isExtended: false,
-        onPressed: () {}..sampleCodeStr = "(){}",
-        label: Text('extended'),
-        icon: Icon(Icons.thumb_up),
+        onPressed: () {},
+        label: const Text('extended'),
+        icon: const Icon(Icons.thumb_up),
         heroTag: "overview.FloatingActionButton${id++}",
       ),
     ],
@@ -98,7 +97,7 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(WidgetContent(const Row(
     children: [
       BackButton(),
       CloseButton(),
@@ -121,9 +120,9 @@ the Material Design overview types and how they should be used in designs.
   print(WidgetContent(Row(
     children: [
       ToggleButtons(
-        onPressed: (_) {}..sampleCodeStr = "(_){}",
+        onPressed: (_) {},
         isSelected: const [true, false, true],
-        children: <Widget>[
+        children: const <Widget>[
           Icon(Icons.ac_unit),
           Icon(Icons.call),
           Icon(Icons.cake),
@@ -148,14 +147,14 @@ the Material Design overview types and how they should be used in designs.
     children: [
       SegmentedButton<String>(
         multiSelectionEnabled: true,
-        segments: <ButtonSegment<String>>[
+        segments: const <ButtonSegment<String>>[
           ButtonSegment<String>(value: "Day", label: Text('Day'), icon: Icon(Icons.calendar_view_day)),
           ButtonSegment<String>(value: "Week", label: Text('Week'), icon: Icon(Icons.calendar_view_week)),
           ButtonSegment<String>(value: "Month", label: Text('Month'), icon: Icon(Icons.calendar_view_month)),
           ButtonSegment<String>(value: "Year", label: Text('Year'), icon: Icon(Icons.calendar_today)),
         ],
-        selected: <String>{"Month"},
-        onSelectionChanged: (_) {}..sampleCodeStr = "(_){}",
+        selected: const <String>{"Month"},
+        onSelectionChanged: (_) {},
       ),
     ],
   )));
@@ -205,14 +204,14 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
     WidgetContent(
       Column(
         children: [
-          Text("1.普通Text"),
+          const Text("1.普通Text"),
           InkWell(
-            onTap: () {}..sampleCodeStr = "(){}",
-            child: Text("2.裹了层InkWell的Text"),
+            onTap: () {},
+            child: const Text("2.裹了层InkWell的Text"),
           ),
           InkResponse(
-            onTap: () {}..sampleCodeStr = "(){}",
-            child: Text("3.裹了层InkResponse的Text"),
+            onTap: () {},
+            child: const Text("3.裹了层InkResponse的Text"),
           )
         ],
       ),
@@ -234,9 +233,9 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
         color: Colors.lime.shade50,
         child: ButtonBar(
           children: [
-            ElevatedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text("ElevatedButton2")),
-            OutlinedButton(onPressed: () {}..sampleCodeStr = "(){}", child: Text('OutlinedButton')),
-            CheckboxMenuButton(value: true, onChanged: (_) {}..sampleCodeStr = "(_){}", child: Text('CheckboxMenuButton')),
+            ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton2")),
+            OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
+            CheckboxMenuButton(value: true, onChanged: (_) {}, child: const Text('CheckboxMenuButton')),
           ],
         ),
       ),

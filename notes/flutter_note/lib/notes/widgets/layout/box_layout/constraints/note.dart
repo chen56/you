@@ -54,7 +54,7 @@ ${BoxConstraints.tightFor(width: 600, height: 800)}
   print(Container(width: 100, height: 100, color: Colors.red));
 
   print(LayoutBuilder(builder: (context, constraints) {
-    return Text("LayoutBuilder: ${constraints}");
+    return Text("LayoutBuilder: $constraints");
   }));
   print.markdown(r'''
 BoxConstraints的print结果中： w是width,h是height
@@ -62,7 +62,7 @@ BoxConstraints的print结果中： w是width,h是height
 
   print(MockupContent()(
     LayoutBuilder(builder: (context, constraints) {
-      return Text("WindowContent: ${constraints}");
+      return Text("WindowContent: $constraints");
     }),
   ));
 

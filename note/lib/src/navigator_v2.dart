@@ -59,7 +59,7 @@ class NavigatorV2 extends StatelessWidget {
     return RouterConfig(
       routeInformationProvider: PlatformRouteInformationProvider(
           initialRouteInformation: RouteInformation(
-        location: navigable.initial.location,
+        uri: Uri(path:navigable.initial.location),
       )),
       routerDelegate: LoggableRouterDelegate(
           logger: logger,
@@ -139,7 +139,7 @@ class _MyRouterDelegate extends RouterDelegate<RouteInformation>
   @override
   RouteInformation? get currentConfiguration {
     if (_pages.isEmpty) return null;
-    return RouteInformation(location: _pages.last.name);
+    return RouteInformation(uri: Uri.parse(_pages.last.name!));
   }
 }
 

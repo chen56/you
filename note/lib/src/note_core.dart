@@ -131,9 +131,9 @@ class Note {
 
   int get level => isRoot ? 0 : parent!.level + 1;
 
-  int levelTo(Note parent) => this.level - parent.level;
+  int levelTo(Note parent) => level - parent.level;
 
-  List<Note> get ancestors => this.isRoot ? [] : [parent!, ...parent!.ancestors];
+  List<Note> get ancestors => isRoot ? [] : [parent!, ...parent!.ancestors];
 
   List<Note> get meAndAncestors => [this, ...ancestors];
 
@@ -651,7 +651,6 @@ class NoteCell extends ChangeNotifier {
         CellType.header => false,
         CellType.tail => false,
         CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
-        _ => false,
       };
     }
     return _codeExpand ?? pen.defaultCodeExpand;

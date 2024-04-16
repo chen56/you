@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     double scale = 1;

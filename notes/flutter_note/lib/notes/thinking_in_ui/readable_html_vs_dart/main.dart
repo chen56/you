@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 最佳实践
@@ -11,7 +10,7 @@ main() {
   Row(crossAxisAlignment: CrossAxisAlignment.baseline, children: [
     FilledButton(onPressed: () => {}, child: const Text("ss")),
     Container(color: Colors.amber)(
-      Row(),
+      const Row(),
     ),
   ]);
   const StyledWidget(
@@ -55,7 +54,7 @@ class StyledWidget extends StatelessWidget {
     );
   }
 
-  StyledWidget._copyWithChild({
+  const StyledWidget._copyWithChild({
     this.padding,
     this.decoration,
     this.alignment,

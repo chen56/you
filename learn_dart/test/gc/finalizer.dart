@@ -36,7 +36,7 @@ class Database {
 class DBConnection {
   close() {}
 
-  DBConnection.connect() {}
+  DBConnection.connect();
 }
 main(){
   var x=[Database.connect()];

@@ -228,10 +228,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
 class _NoteTreeView extends StatefulWidget {
   final Note root;
 
-  _NoteTreeView(
-    this.root, {
-    Key? key,
-  }) : super(key: key);
+  const _NoteTreeView(
+    this.root);
 
   @override
   State<_NoteTreeView> createState() => _NoteTreeViewState();
@@ -338,7 +336,7 @@ class _OutlineTreeView extends StatelessWidget {
 
     var column = Column(
       children: [
-        ...nodes.map((e) => headLink(e)).toList(),
+        ...nodes.map((e) => headLink(e)),
       ],
     );
     return SingleChildScrollView(
@@ -471,7 +469,7 @@ class _GetSizeBuilder extends StatelessWidget {
     required this.builder,
     // ignore: unused_element
     this.child,
-  }) {}
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -494,8 +492,7 @@ class _SizeProvider extends StatefulWidget {
   final Function(Size) onChildSize;
 
   const _SizeProvider(
-      {Key? key, required this.onChildSize, required this.child})
-      : super(key: key);
+      {required this.onChildSize, required this.child});
 
   @override
   _SizeProviderState createState() => _SizeProviderState();

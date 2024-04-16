@@ -3,10 +3,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
@@ -36,7 +38,7 @@ Widget test1_unbounded_fail() {
       // 父Column说：儿子你可以无限高(BoxConstraints(0.0<=w<=542.0, 0.0<=h<=Infinity))
       // 儿ListView说：那我就要无限高吧，我自带滚动条
       // 父Column说：error，我挂了！
-      ListView(children: [const Text("")]),
+      ListView(children: const [Text("")]),
     ],
   );
 }
@@ -74,7 +76,7 @@ Widget test1_unbounded_fail_recover() {
         child: ListView(children: [
           // BoxConstraints(w=826.0, 0.0<=h<=Infinity)
           constraintsInfo("Column>SizedBox(width:200,height:200)>ListView"),
-          ...List.generate(100, (index) => Text("list item:${index}")),
+          ...List.generate(100, (index) => Text("list item:$index")),
         ]),
       ),
 

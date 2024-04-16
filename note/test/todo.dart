@@ -4,6 +4,7 @@
 /// 1.是dart:mirror库没法解决这个问题,而ast语法分析还不熟悉，需要花时间研究，暂时搁置。
 ///     20230228 新进展 analyzer的element机制提供类似功能
 /// 这种情况，都直接给super，回避掉这个问题:Container(super.clipBehavior)
+library;
 
 // ！！！！！！！！
 // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;

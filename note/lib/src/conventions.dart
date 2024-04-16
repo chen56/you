@@ -1,4 +1,5 @@
 ///  Configuration conventions for the note package.
+library;
 
 import 'package:path/path.dart' as path;
 

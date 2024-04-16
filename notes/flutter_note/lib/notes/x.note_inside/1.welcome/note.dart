@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:note/note.dart';
-import 'package:mate/mate_note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
@@ -82,7 +81,7 @@ build(BuildContext context, Pen print) {
       children: [
         const Text("1.普通Text,点我"),
         InkResponse(
-          onTap: () {}..sampleCodeStr = "(){}",
+          onTap: () {},
           child: const Text("2.包Ink的Text,点我"),
         ),
       ],

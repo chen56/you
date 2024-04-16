@@ -10,6 +10,7 @@ class HelloMetadata {
   final String text;
   const HelloMetadata(this.text):x=s;
   final dynamic x;
+  @override
   String toString() => "Hello '${s()}'";
 }
 String s(){

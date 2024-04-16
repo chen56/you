@@ -15,9 +15,9 @@ class App extends StatelessWidget {
     );
   }
 
-  Widget test1_defaultConstraints(BuildContext context) {
+  Widget test1defaultConstraints(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return Text("LayoutBuilder: ${constraints}");
+      return Text("LayoutBuilder: $constraints");
     });
   }
 
@@ -37,7 +37,7 @@ class App extends StatelessWidget {
       height: double.infinity,
       color: Colors.blue,
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("LayoutBuilder: ${constraints}");
+        return Text("LayoutBuilder: $constraints");
       }),
     );
   }
@@ -48,7 +48,7 @@ class App extends StatelessWidget {
       height: 200,
       color: Colors.blue,
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("LayoutBuilder: ${constraints}");
+        return Text("LayoutBuilder: $constraints");
       }),
     );
   }
@@ -62,7 +62,7 @@ class App extends StatelessWidget {
         maxHeight: 150,
       ),
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("LayoutBuilder: ${constraints}");
+        return Text("LayoutBuilder: $constraints");
       }),
     );
   }
@@ -70,7 +70,7 @@ class App extends StatelessWidget {
   Widget test6Center(BuildContext context) {
     return Center(
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("LayoutBuilder: ${constraints}");
+        return Text("LayoutBuilder: $constraints");
       }),
     );
   }
@@ -103,7 +103,7 @@ class App extends StatelessWidget {
           width: 1000,
           height: 1000,
           child: LayoutBuilder(builder: (context, constraints) {
-            return Text("LayoutBuilder: ${constraints}");
+            return Text("LayoutBuilder: $constraints");
           }),
         ),
       ),
@@ -123,7 +123,7 @@ class App extends StatelessWidget {
           width: 1000,
           height: 1000,
           child: LayoutBuilder(builder: (context, constraints) {
-            return Text("SizedBox: ${constraints}");
+            return Text("SizedBox: $constraints");
           }),
         ),
       ),
@@ -147,7 +147,7 @@ class App extends StatelessWidget {
   Widget test10UnconstrainedBox(BuildContext context) {
     return UnconstrainedBox(
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("SizedBox: ${constraints}");
+        return Text("SizedBox: $constraints");
       }),
     );
   }
@@ -160,7 +160,7 @@ class App extends StatelessWidget {
         width: 200,
         height: 50,
         child: LayoutBuilder(builder: (context, constraints) {
-          return Text("SizedBox: ${constraints}");
+          return Text("SizedBox: $constraints");
         }),
       ),
     );
@@ -173,7 +173,7 @@ class App extends StatelessWidget {
       maxWidth: double.infinity,
       maxHeight: double.infinity,
       child: LayoutBuilder(builder: (context, constraints) {
-        return Text("SizedBox: ${constraints}");
+        return Text("SizedBox: $constraints");
       }),
     );
   }
@@ -182,7 +182,7 @@ class App extends StatelessWidget {
     return FittedBox(
       child: LayoutBuilder(builder: (context, constraints) {
         return Text(
-            "SizedBoxSizedB oxSizedBoxSizedBoxSi oxSizedBoxSizedBoxSi oxSizedBoxSizedBoxSi zedBoxSizedBoxSizedBoxSizedBoxSizedB oxSizedBoxSizedBoxSizedBoxSizedBoxSize dBoxSizedBoxSizedBo xSizedBoxSizedBoxSizedBoxSizedBoxSizedBox: ${constraints}");
+            "SizedBoxSizedB oxSizedBoxSizedBoxSi oxSizedBoxSizedBoxSi oxSizedBoxSizedBoxSi zedBoxSizedBoxSizedBoxSizedBoxSizedB oxSizedBoxSizedBoxSizedBoxSizedBoxSize dBoxSizedBoxSizedBo xSizedBoxSizedBoxSizedBoxSizedBoxSizedBox: $constraints");
       }),
     );
   }
@@ -193,7 +193,7 @@ class App extends StatelessWidget {
         Container(color: Colors.amber, child: const Text('HelloHello HelloHello HelloHello HelloHello HelloHello Hello!')),
         Container(
           color: Colors.red,
-          child: OverflowBox(child: Text(' HelloHello HelloHello HelloHello HelloHello Hello!'),),
+          child: const OverflowBox(child: Text(' HelloHello HelloHello HelloHello HelloHello Hello!'),),
         ),
       ],
     );

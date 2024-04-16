@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:note/note.dart';
 
-import 'pen_extension.dart';
+import 'package:flutter_note/notes/x.note_inside/note_test_self/temp/pen_extension.dart';
 
 build(BuildContext context, Pen print) {
   LayerWithNamedText(null, title: const Text("布局1"), style: const ContentLayout(maxColumn: 3), children: [

@@ -357,7 +357,7 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   String _configuration(T? configuration) {
     var result = configuration;
-    var str = result is RouteInformation ? "${result.location}" : "$result";
+    var str = result is RouteInformation ? result.location : "$result";
     return str;
   }
 

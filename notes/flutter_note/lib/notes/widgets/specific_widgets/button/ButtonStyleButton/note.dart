@@ -21,7 +21,7 @@ ButtonStyleButton 相关子类
 
   print.$____________________________________________________________________();
   print(WidgetContent(Wrap(children: [
-    ElevatedButton(onPressed: () {}, child: Text("ElevatedButton")),
+    ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
   ])));
 
   print.$____________________________________________________________________();

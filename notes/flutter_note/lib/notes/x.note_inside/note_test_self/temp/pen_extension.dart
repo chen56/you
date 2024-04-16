@@ -8,7 +8,7 @@ extension X on Pen {
 }
 
 class Layer extends StatelessWidget {
-  Layer(Function()? block, {Pen? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
+  Layer(Function()? block, {super.key, Pen? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
     if (print != null) print(this);
   }
 

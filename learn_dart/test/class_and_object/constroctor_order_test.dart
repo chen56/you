@@ -5,9 +5,9 @@ void main() {
 
   test('构造步骤', () {
     AA();
-    logs.forEach((e) {
-      print("'$e',");
-    });
+    for (var e in logs) {
+      print("=======>'$e',");
+    }
 
     //结论：
     //1. 自己的字段
@@ -17,8 +17,8 @@ void main() {
     //5. 自己的构造器
     //6. 父构造器
     check(logs).deepEquals([
-      'field:AA.a',
-      'field:AA():a',
+      'field:AA.aa',
+      'field:AA():aa',
       'field:AA():super(b)',
       'field:A.a',
       'field:[A():a]',
@@ -44,9 +44,9 @@ class A {
 }
 
 class AA extends A {
-  String a = field("AA.a", "x");
+  String aa = field("AA.aa", "x");
 
-  AA() :a = field("AA():a", "x"), super(b:field("AA():super(b)", "x")) {
+  AA() :aa = field("AA():aa", "x"), super(b:field("AA():super(b)", "x")) {
     logs.add("AA()");
   }
 }

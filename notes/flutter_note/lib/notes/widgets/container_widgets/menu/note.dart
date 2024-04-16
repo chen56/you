@@ -19,7 +19,7 @@ build(BuildContext context, Pen print) {
       CheckboxMenuButton(
           value: true,
           onChanged: (bool? value) {},
-          child: Text('CheckboxMenuButton')),
+          child: const Text('CheckboxMenuButton')),
     ],
   )));
 }

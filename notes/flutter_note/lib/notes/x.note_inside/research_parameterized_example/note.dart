@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mate/mate_note.dart';
 import 'package:note/note.dart';
-import 'package:code_builder/code_builder.dart';
 
 build(BuildContext context, Pen print) {
   print.$____________________________________________________________________();
@@ -29,7 +27,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Container(
+  print(WidgetContent(const SizedBox(
     height: 100,
     child: Text("请修改height,调节高度"),
   )));
@@ -40,7 +38,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Text("我是Text.data,修改我")));
+  print(WidgetContent(const Text("我是Text.data,修改我")));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -75,7 +73,7 @@ TODO 暂时只能显示，还不能编辑
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
-    child: Text("修改Text.softWrap: 自动换行", softWrap: true),
+    child: const Text("修改Text.softWrap: 自动换行", softWrap: true),
   )));
 
   print.$____________________________________________________________________();
@@ -126,7 +124,7 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
   print(
     WidgetContent(
       ElevatedButton(
-          onPressed: showAbout..sampleCode = refer("showAbout"),
+          onPressed: showAbout,
           child: const Text("Button1")),
     ),
   );
@@ -142,10 +140,10 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton(
-            onPressed: () {}..sampleCodeStr = "(){}",
+            onPressed: () {},
             child: Text("${mainAxisAlignment.name}:Button1")),
         ElevatedButton(
-            onPressed: () {}..sampleCodeStr = "(){}",
+            onPressed: () {},
             child: Text("${mainAxisAlignment.name}:Button2")),
       ],
     )));
