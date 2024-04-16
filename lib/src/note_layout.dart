@@ -353,7 +353,7 @@ class _OutlineTreeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
-  final NoteContentExts contentExtensions;
+  final NoteContentExtensionPoint contentExtensions;
 
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(

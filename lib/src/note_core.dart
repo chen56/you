@@ -48,7 +48,7 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
   final Note root;
-  final NoteContentExts contentExtensions;
+  final NoteContentExtensionPoint contentExtensions;
   final SpaceConf spaceConf;
   final SharedPreferences sharedPreferences;
 
@@ -61,7 +61,7 @@ class NoteSystem {
 
   static Future<NoteSystem> load({
     required Note root,
-    required NoteContentExts contentExtensions,
+    required NoteContentExtensionPoint contentExtensions,
   }) async {
     return NoteSystem(
       root: root,
@@ -297,7 +297,7 @@ class PrintResult{
 
 }
 class Pen {
-  final NoteContentExts contentFactory;
+  final NoteContentExtensionPoint contentFactory;
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -388,10 +388,10 @@ mixin NoteContentWidgetMixin on Widget {
   get isMarkdown;
 }
 
-class NoteContentExts {
+class NoteContentExtensionPoint {
   final List<NoteContentExt> contentExtensions;
 
-  NoteContentExts.ext(List<NoteContentExt> contentExtensions)
+  NoteContentExtensionPoint.ext(List<NoteContentExt> contentExtensions)
       : contentExtensions = [
           ...contentExtensions,
           MarkdownContentExtension(),
@@ -586,7 +586,7 @@ enum CellType {
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final NoteContentExts contentExtensions;
+  final NoteContentExtensionPoint contentExtensions;
   final List<NoteContentWidgetMixin> _contents = List.empty(growable: true);
 
   // index use to find code
