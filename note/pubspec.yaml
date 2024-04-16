@@ -11,29 +11,35 @@ dependencies:
   flutter:
     sdk: flutter
 
-  markdown: ^7.0.0
-  flutter_markdown: ^0.6.14
-
-  flutter_highlight: ^0.7.0
-  highlight: ^0.7.0
-
-  # for NoteDevTool
-  code_builder: ^4.4.0
-  dart_style: ^2.0.0
+  meta: ^1.11.0
+  collection: ^1.18.0
   path: ^1.8.3
-  stack_trace: ^1.11.0
-  glob: ^2.1.1
-
   file: ^7.0.0
 
+  markdown: ^7.0.0
+  highlight: ^0.7.0
+  code_builder: ^4.4.0
+  dart_style: ^2.0.0
+
+
+  # plugin
   shared_preferences: ^2.2.2
-  meta: ^1.11.0
+  flutter_markdown: ^0.6.14
+  flutter_highlight: ^0.7.0
+
 
 #  async: ^2.11.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints:
+  yaml_edit: ^2.2.0
+  analyzer: ^6.4.1
+
+  # for NoteDevTool
+  stack_trace: ^1.11.0
+  glob: ^2.1.1
+  watcher: ^1.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,5 +1,5 @@
 import 'package:code_builder/code_builder.dart' as code;
-import 'package:dart_style/dart_style.dart';
+import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/params/buildin_editors.dart';

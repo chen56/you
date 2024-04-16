@@ -1,6 +1,7 @@
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note_tools/src/note_dev_gen.dart';
+
+import '../../tools/note_dev_gen.dart';
 
 void main() {
   late NotesGenerator gen;

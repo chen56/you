@@ -1,8 +1,10 @@
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note_tools/src/note_dev_gen.dart';
 import 'package:path/path.dart' as path;
+
+import '../../tools/note_dev_gen.dart';
+
 
 MemoryFileSystem fs = MemoryFileSystem();
 NotesGenerator gen = NotesGenerator(packageBaseName: "test_note", fs: fs, projectDir: path.absolute("/note"));
