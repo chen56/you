@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:meta/meta.dart';
 import 'package:note/note_conf.dart';
 import 'package:flutter/material.dart';
 import 'package:note/src/content_builtin.dart';
@@ -289,7 +290,10 @@ class NotePage {
 /// var y = "some var";
 ///
 ///
+@experimental
+class PrintResult{
 
+}
 class Pen {
   final NoteContentExts contentFactory;
 
@@ -355,11 +359,8 @@ class Pen {
   //   currentCell.print(MarkdownContent(content));
   // }
 
-  void call(Object? object) {
+  void call(Object? object,{String test=""}) {
     currentCell.print(object);
-    // currentCell.print("${object} ======${catchStack()}");
-    // print(
-    //     "${object.toString().safeSubstring(0, 30)} ========  ${catchStack()}");
   }
 
   /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中

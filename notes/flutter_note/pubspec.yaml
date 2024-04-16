@@ -26,7 +26,6 @@ dependencies:
 
   note:
   note_tools:
-  mate:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -37,9 +36,7 @@ dependencies:
   code_builder: ^4.4.0
   file: ^7.0.0
   shared_preferences: ^2.2.2
-  test:
-  flutter_test:
-    sdk: flutter
+  meta: ^1.11.0
 
   # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos_config 13.x
 #  flutter_inappwebview: ^5.7.2+3

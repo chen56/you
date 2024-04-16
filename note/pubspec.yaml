@@ -4,7 +4,7 @@ version: 1.0.0
 homepage: https://github.com/chen56/note
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 
 dependencies:
@@ -27,6 +27,7 @@ dependencies:
   file: ^7.0.0
 
   shared_preferences: ^2.2.2
+  meta: ^1.11.0
 
 #  async: ^2.11.0
 dev_dependencies:
