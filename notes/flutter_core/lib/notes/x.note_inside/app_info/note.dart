@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/note.dart';
+import 'package:note_lang_dart/note.dart';
 import 'package:path/path.dart' as path;
 
 build(BuildContext context, Pen print) {

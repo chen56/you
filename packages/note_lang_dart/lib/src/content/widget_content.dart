@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note/note.dart';
-import 'package:note/src/note_core.dart';
+import 'package:note_lang_dart/note.dart';
+import 'package:note_lang_dart/src/note_core.dart';
 
 
  class WidgetContentWidget extends StatelessWidget with NoteContentWidgetMixin {

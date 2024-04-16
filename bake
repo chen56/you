@@ -30,6 +30,7 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 declare -A _pkgs=(
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
     ["note"]="$SCRIPT_DIR/"
+    ["note_lang_dart"]="$SCRIPT_DIR/packages/note_lang_dart"
     ["flutter"]="$SCRIPT_DIR/notes/flutter_core"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
     ["shell"]="$SCRIPT_DIR/notes/shell"
@@ -143,11 +144,16 @@ EOF
   )"
 
 
-note.run() (    _run "$@")
-note.install() ( note.run flutter pub get)
-note.clean() (   note.run flutter clean; rm -rf build;)
-note.test() (    note.run flutter test;)
+note.run() (     _run "$@")
+note.install() (  note.run flutter pub get;)
+note.clean() (    note.run flutter clean; rm -rf build;)
+note.test() (     note.run flutter test;)
 note.build() (    note.run  dart compile exe bin/notecli.dart ;)
+
+note_lang_dart.run() (     cd packages/note_lang_dart || return 200 && _run "$@")
+note_lang_dart.install() ( note_lang_dart.run flutter pub get)
+note_lang_dart.clean() (   note_lang_dart.run flutter clean; rm -rf build;)
+note_lang_dart.test() (    note_lang_dart.run flutter test;)
 
 flutter.run() (                 cd notes/flutter_core && _run "$@")
 flutter.install() (             flutter.run flutter pub get)

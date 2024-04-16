@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
-import 'package:note/src/content/params.dart';
-import 'package:note/note.dart';
-import 'package:note/src/flutter_highlight.dart';
-import 'package:note/core.dart';
-import 'package:note/ui.dart';
+import 'package:note_lang_dart/src/content/params.dart';
+import 'package:note_lang_dart/note.dart';
+import 'package:note_lang_dart/src/flutter_highlight.dart';
+import 'package:note_lang_dart/core.dart';
+import 'package:note_lang_dart/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page

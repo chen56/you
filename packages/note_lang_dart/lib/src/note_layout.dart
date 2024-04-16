@@ -1,11 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:note/src/flutter_highlight.dart';
-import 'package:note/src/navigator_v2.dart';
-import 'package:note/src/note_core.dart';
-// import 'package:note/src/flutter_highlight.dart';
-import 'package:note/src/utils_ui.dart';
+import 'package:note_lang_dart/src/flutter_highlight.dart';
+import 'package:note_lang_dart/src/navigator_v2.dart';
+import 'package:note_lang_dart/src/note_core.dart';
+import 'package:note_lang_dart/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
