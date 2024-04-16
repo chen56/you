@@ -28,12 +28,8 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 ##########################################
 
 declare -A _pkgs=(
-    ["learn_dart"]="$SCRIPT_DIR/learn_dart"
-    ["note"]="$SCRIPT_DIR/note"
-    ["mate"]="$SCRIPT_DIR/mate"
-    ["mate_flutter"]="$SCRIPT_DIR/mate_flutter"
-    ["note_test"]="$SCRIPT_DIR/note_test"
-    ["note_tools"]="$SCRIPT_DIR/note_tools"
+    ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
+    ["note"]="$SCRIPT_DIR/"
     ["flutter"]="$SCRIPT_DIR/notes/flutter_note"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
     ["shell"]="$SCRIPT_DIR/notes/shell"
@@ -147,9 +143,10 @@ EOF
   )"
 
 
-note.run() (     cd note && _run "$@")
+note.run() (    _run "$@")
 note.install() ( note.run flutter pub get)
 note.clean() (   note.run flutter clean; rm -rf build;)
+note.test() (    note.run flutter test;)
 
 flutter.run() (                 cd notes/flutter_note && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
@@ -173,36 +170,15 @@ flutter.build() {
     # run p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 flutter.preview() {             flutter.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
 
-mate.run() (    cd mate && _run "$@")
-mate.install() (mate.run flutter pub get)
-mate.clean() (  mate.run flutter clean; rm -rf build;)
-
-mate_flutter.run() (    cd mate_flutter && _run "$@")
-mate_flutter.install() (mate_flutter.run flutter pub get)
-mate_flutter.clean() (  mate_flutter.run flutter clean; rm -rf build;)
-mate_flutter.gen() (    mate_flutter.run dart run  tools/gen_mates.dart; mate_flutter.run dart run  tools/gen_mate_icons.dart ; )
-
-note_test.run() (        cd note_test && _run "$@")
-note_test.install() (note_test.run flutter pub get)
-note_test.clean() (  note_test.run flutter clean; rm -rf build;)
-
-note_tools.run() (    cd note_tools && _run "$@")
-note_tools.install() (note_tools.run flutter pub get)
-note_tools.clean() (  note_tools.run flutter clean; rm -rf build;)
-
-
 install(){ pkgs._run_subcmd install; }
 
 upgrade() {
-  upgrade_bake
+  upgrade_bake;
 }
 
 
 # 执行 note.test、mate.test等命令
 test() { pkgs._run_subcmd test; }
-
-
-# 执行 note.clean、mate.clean等命令
 clean() { pkgs._run_subcmd clean; }
 
 gen.all() (   flutter.gen;  ) #  mate_flutter.gen;暂时不用了

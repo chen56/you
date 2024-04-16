@@ -11,7 +11,7 @@ import 'package:glob/glob.dart';
 import 'package:note/note_conf.dart';
 import 'package:path/path.dart' as path;
 
-import 'package:note/core.dart';
+// import 'package:note/core.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 import 'package:watcher/watcher.dart';
 import 'package:yaml_edit/yaml_edit.dart';
@@ -617,5 +617,17 @@ class Pubspec {
   @override
   String toString() {
     return _yamlEditor.toString();
+  }
+}
+
+extension StringExt on String {
+  String safeSubstring(int start, [int? end]) {
+    end ??= length;
+    end = end <= length ? end : length;
+    try {
+      return substring(start, end);
+    } catch (e) {
+      throw Exception("$e, string $this");
+    }
   }
 }
