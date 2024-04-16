@@ -235,6 +235,7 @@ class _PreBuilder extends MarkdownElementBuilder {
   }
 }
 
+/// 样机只是展示风格的装饰器吧？应该可以让所有内容都可以配置
 /// 在页面上表现一个样机的模样：模仿浏览器、桌面窗口、手机
 /// 我们约束child为tight模式，以模仿最外层窗口
 /// 参考: https://daisyui.com/components/mockup-window/

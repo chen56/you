@@ -1,8 +1,12 @@
+/// 代码模版的参数化功能
+
+library;
+
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/src/params/buildin_editors.dart';
+import 'package:note/src/example_content/params_editors.dart';
 import 'package:note/core.dart' as utils;
 
 final defaultEmitter =
