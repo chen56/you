@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'dart:io';
 import 'dart:ui';
 
@@ -76,7 +74,7 @@ path很有意思
       border: TableBorder.all(),
       children: env.entries
           .map((e) => TableRow(
-              children: [SelectableText(e.key), SelectableText(e.value)]))
+              children: [Text(e.key), Text(e.value)]))
           .toList(),
     ));
   }

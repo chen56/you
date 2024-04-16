@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BuildContext, Color, Container, EdgeInsetsGeometry, RichText, StatelessWidget, TextSpan, TextStyle, Widget;
 import 'package:highlight/highlight.dart' show highlight, Node;
 
 /// ------------------------------------------------------------------------------
@@ -99,8 +99,9 @@ class HighlightView extends StatelessWidget {
       // origin: https://github.com/git-touch/highlight.dart/blob/v0.7.0/flutter_highlight/lib/flutter_highlight.dart
       // child: RichText(
       //   text: TextSpan(
-      child: SelectableText.rich(
-        TextSpan(
+      // TODO SelectableText不兼容SelectionArea
+      child: RichText(
+        text:TextSpan(
           style: _textStyle,
           children: _convert(highlight.parse(source, language: language).nodes!),
         ),
@@ -108,3 +109,4 @@ class HighlightView extends StatelessWidget {
     );
   }
 }
+

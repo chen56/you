@@ -1,9 +1,12 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:meta/meta.dart';
+import 'package:note/note.dart';
 import 'package:note/note_conf.dart';
 import 'package:flutter/material.dart';
+import 'package:note/src/content/example_content.dart';
 import 'package:note/src/content/object_content.dart';
+import 'package:note/src/content/params.dart';
 import 'package:note/src/content/widget_content.dart';
 import 'package:note/src/content/markdown_content.dart';
 import 'package:note/src/conventions.dart';
@@ -48,25 +51,21 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
   final Note root;
-  final NoteContentExtensionPoint contentExtensions;
   final SpaceConf spaceConf;
   final SharedPreferences sharedPreferences;
-
+  final Editors editors = Editors(); //暂时不让外部配置了，默认即可
   NoteSystem({
     required this.root,
-    required this.contentExtensions,
     required this.spaceConf,
     required this.sharedPreferences,
   });
 
   static Future<NoteSystem> load({
     required Note root,
-    required NoteContentExtensionPoint contentExtensions,
   }) async {
     return NoteSystem(
       root: root,
       spaceConf: SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
-      contentExtensions: contentExtensions,
       sharedPreferences: await SharedPreferences.getInstance(),
     );
   }
@@ -293,12 +292,9 @@ class NotePage {
 ///
 ///
 @experimental
-class PrintResult{
+class PrintResult {}
 
-}
 class Pen {
-  final NoteContentExtensionPoint contentFactory;
-
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   // void cell(CellBuilder builder);
@@ -310,12 +306,13 @@ class Pen {
   final Note note;
   final NotePage notePage;
   final bool defaultCodeExpand;
+  final NoteSystem noteSystem;
 
   // Pen({required this.editors});
   Pen.build(
     BuildContext context, {
     required this.notePage,
-    required this.contentFactory,
+    required this.noteSystem,
     required this.defaultCodeExpand,
     required this.outline,
   }) : note = notePage.note {
@@ -324,7 +321,7 @@ class Pen {
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < note.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
-        contentExtensions: contentFactory,
+        noteSystem: noteSystem,
         pen: this,
         index: i,
         pageSource: note.source,
@@ -345,6 +342,7 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
+  @Deprecated("还是围绕markdown分割较好")
   void $____________________________________________________________________() {
     int nextCellIndex = currentCell.index + 1;
     // It is already the last cell
@@ -356,22 +354,20 @@ class Pen {
     currentCell = cells[nextCellIndex];
   }
 
-  // /// markdown 独占一个新cell
-  // void markdown(String content) {
-  //   currentCell.print(MarkdownContent(content));
-  // }
-
-  void call(Object? object,{String test=""}) {
+  void call(Object? object, {String test = ""}) {
     currentCell.print(object);
   }
 
   /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中
   /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  @experimental
+  @Deprecated("已经有更好的方案，这个废弃")
   void runInCurrentCell(void Function(NoteCell print) callback) {
     callback(currentCell);
   }
 
-// 法宝cell find
+// TODO 法宝cell find，待确认实验
+  @experimental
   String catchStack() {
     try {
       throw Exception("fetch print to which cell");
@@ -386,28 +382,6 @@ abstract class NoteContent {}
 
 mixin NoteContentWidgetMixin on Widget {
   get isMarkdown;
-}
-
-class NoteContentExtensionPoint {
-  final List<NoteContentExt> contentExtensions;
-
-  NoteContentExtensionPoint.ext(List<NoteContentExt> contentExtensions)
-      : contentExtensions = [
-          ...contentExtensions,
-          MarkdownContentExtension(),
-          WidgetContentExtension(),
-          ObjectContentExt(),
-        ];
-
-  NoteContentWidgetMixin create(Object? data, NoteContentArg arg) {
-    for (var ext in contentExtensions) {
-      var w = ext.create(data, arg);
-      if (w != null) {
-        return w;
-      }
-    }
-    throw Exception("Must provide NoteContentExt for data <$data> of type <${data.runtimeType}>");
-  }
 }
 
 abstract class NoteContentExt {
@@ -586,7 +560,6 @@ enum CellType {
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final NoteContentExtensionPoint contentExtensions;
   final List<NoteContentWidgetMixin> _contents = List.empty(growable: true);
 
   // index use to find code
@@ -594,9 +567,10 @@ class NoteCell extends ChangeNotifier {
   final Pen pen;
   late final CellSource source;
   final Outline outline;
+  final NoteSystem noteSystem;
 
   NoteCell({
-    required this.contentExtensions,
+    required this.noteSystem,
     required this.pen,
     required this.index,
     required NoteSource pageSource,
@@ -633,8 +607,17 @@ class NoteCell extends ChangeNotifier {
     return _contents.every((e) => e.isMarkdown);
   }
 
-  void call(Object? object) {
-    _add(contentExtensions.create(object, NoteContentArg(cell: this, outline: outline)));
+  void call(Object? content) {
+    var result = switch (content) {
+      MarkdownContent _ => MarkdownContentWidget(content: content, outline: outline),
+      WidgetContent _ => WidgetContentWidget(content: content),
+      Widget _ => WidgetContentWidget(content: WidgetContent(content)),
+      ExampleContent _ => ExampleWidget(content: content, rootParam: content.mate.toRootParam(editors: noteSystem.editors), cell: this),
+      _ => ObjectContentWidget(content: ObjectContent(content)),
+    };
+    _add(result as NoteContentWidgetMixin);
+    //TODO remove contentExtensions
+    // _add(contentExtensions.create(object, NoteContentArg(cell: this, outline: outline)));
   }
 
   void _add(NoteContentWidgetMixin content) {

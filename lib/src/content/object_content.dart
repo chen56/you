@@ -3,15 +3,6 @@
 import 'package:note/note.dart';
 import 'package:flutter/material.dart';
 
-class ObjectContentExt extends NoteContentExt {
-  ObjectContentExt();
-
-  @override
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    return ObjectContentWidget(content: ObjectContent(data));
-  }
-}
-
 class ObjectContent extends NoteContent {
   final Object? object;
 
@@ -33,6 +24,6 @@ class ObjectContentWidget extends StatelessWidget with NoteContentWidgetMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SelectableText("${content.object}");
+    return Text("${content.object}");
   }
 }

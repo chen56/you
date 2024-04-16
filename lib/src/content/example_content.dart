@@ -9,33 +9,7 @@ import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page
 
-class ExampleContentExt extends NoteContentExt {
-  final Editors editors;
-
-  ExampleContentExt({required this.editors});
-
-  @override
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    late EampleContent content;
-    if (data is EampleContent) {
-      content = data;
-    } else if (data is Mate) {
-      content = EampleContent(data);
-    } else {
-      return null;
-    }
-
-    return ExampleWidget(
-      content: content,
-      rootParam: content.mate.toRootParam(editors: editors),
-      editors: editors,
-      title: "展开代码(手机上暂时无法编辑文本、数字参数)",
-      cell: arg.cell,
-    );
-  }
-}
-
-class EampleContent extends NoteContent {
+class ExampleContent extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
@@ -44,7 +18,7 @@ class EampleContent extends NoteContent {
   /// if true , we will return : cell code + mate gen code
   /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
   // final bool isUseCellCodeAsTemplate;
-  EampleContent(
+  ExampleContent(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -61,8 +35,7 @@ class EampleContent extends NoteContent {
   }
 }
 
-typedef SampleCodeBuilder = String Function(
-    NoteCell cell, ObjectParam param, Editors editors);
+typedef SampleCodeBuilder = String Function(NoteCell cell, ObjectParam param, Editors editors);
 
 class SampleTemplate {
   String name;
@@ -95,6 +68,7 @@ class SampleTemplate {
         result = formatter.format(result);
         return result;
       });
+
   // ignore: prefer_function_declarations_over_variables
   static final SampleTemplate includeCleanCellCode = SampleTemplate(
       name: "includeCleanCellCode",
@@ -125,25 +99,19 @@ class SampleTemplate {
       });
 
   /// The piece of code to be erased from the cell code
-  static const Set<String> _eraseCodeTypes = {
-    "MateSample.new.firstParentStatement",
-    "Pen.runInCurrentCell"
-  };
+  static const Set<String> _eraseCodeTypes = {"MateSample.new.firstParentStatement", "Pen.runInCurrentCell"};
 
   /// cell代码被转换后作为范例代码
   /// The cell code is transformed as sample code
   static String _cleanCellCode(NoteCell cell, ObjectParam rootParam) {
-    var sources = cell.source.specialSources
-        .where((e) => _eraseCodeTypes.contains(e.codeType))
-        .toList();
+    var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
 
     sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
 
     int offset = cell.source.codeEntity.offset;
     List<String> codes = List.empty(growable: true);
     for (var s in sources) {
-      codes.add(
-          cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
+      codes.add(cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
 
       offset = s.codeEntity.end;
     }
@@ -153,16 +121,14 @@ class SampleTemplate {
 
 class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectParam rootParam;
-  final Editors editors;
   final String title;
-  final EampleContent content;
+  final ExampleContent content;
   final NoteCell cell;
+
   const ExampleWidget({
-    // ignore: unused_element
     super.key,
     required this.rootParam,
-    required this.editors,
-    required this.title,
+    this.title = "展开代码(手机上暂时无法编辑文本、数字参数)",
     required this.content,
     required this.cell,
   });
@@ -171,7 +137,7 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
     required BuildContext context,
     required Widget paramView,
     required Widget codeView,
-    required EampleContent content,
+    required ExampleContent content,
   }) {
     WindowClass win = WindowClass.of(context);
 
@@ -206,15 +172,14 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
   Widget buildParamRow(BuildContext context, Param param) {
     var nameWidget = Container(
       padding: EdgeInsets.only(left: param.level * 15),
-      child: param.nameWidget(context, editors),
+      child: param.nameWidget(context),
     );
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(flex: 40, child: nameWidget),
-        // Flexible(child: param.valueWidget(context, editors)),
-        Expanded(flex: 60, child: param.valueWidget(context, editors)),
+        Expanded(flex: 60, child: param.valueWidget(context)),
       ],
     );
     // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
@@ -223,8 +188,7 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
       // 缩进模仿树形
       padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
       child: Container(
-        decoration: const BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey))),
+        decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
         height: 30,
         child: row,
       ),
@@ -251,7 +215,7 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
       builder: (context, _) {
         return HighlightView(
           // The original code to be highlighted
-          content.toSampleCode(cell, rootParam, editors),
+          content.toSampleCode(cell, rootParam, rootParam.editors),
 
           // Specify language
           // It is recommended to give it a value for performance
@@ -266,11 +230,7 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
         );
       },
     );
-    var paramAndCodeView = responsiveUI(
-        context: context,
-        codeView: codeView,
-        paramView: paramView,
-        content: content);
+    var paramAndCodeView = responsiveUI(context: context, codeView: codeView, paramView: paramView, content: content);
 
     return Card(
       elevation: 5,

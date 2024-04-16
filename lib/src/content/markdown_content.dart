@@ -3,25 +3,10 @@ import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:note/note.dart';
 import 'package:markdown/markdown.dart' as md;
-import 'package:note/src/content/widget_content.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/src/note_core.dart';
 import 'package:note/src/utils_core.dart';
 
-
-class MarkdownContentExtension extends NoteContentExt {
-  MarkdownContentExtension();
-
-  @override
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    if (data is MarkdownContent) {
-      return MarkdownContentWidget(outline: arg.outline, content: data);
-    } else if (data is WidgetContent) {
-      return WidgetContentWidget(content: data);
-    }
-    return null;
-  }
-}
 
 extension MarkdownPenExtension on Pen {
   void markdown(String content) {
@@ -95,6 +80,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
       flex: 0,
       child: Align(
           alignment: Alignment.centerLeft,
+          //TODO SelectableText不兼容SelectionArea
           child: SelectableText.rich(
             TextSpan(style: preferredStyle?.copyWith(height: 2, fontWeight: FontWeight.bold), text: text.text),
             style: preferredStyle,

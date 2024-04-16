@@ -94,7 +94,7 @@ material.io对Compoent的定义如下：
   - Stepper
   - Sliver系列
 
-### 比较独立的组件
+### 比较独立的功能组件
 
 较为独立的、主要目的不是用来做容器（虽然可能赛其他Widget到child），而是特定功用的，比如为呈现某些信息，录入信息等，
 这种组件，一般比较小，也有例外，比如编辑器等：
@@ -104,6 +104,7 @@ material.io对Compoent的定义如下：
   - Text
   - RichText
   - Markdown
+  - SelectionArea 可选择界面一整个区域的文本
 - [ ] 图片、图标多媒体组件
   - Icon
   - Image

@@ -8,7 +8,6 @@ void main() async {
 
   NoteSystem noteSystem = await NoteSystem.load(
     root: BaseNotes.rootroot,
-    contentExtensions: NoteContentExtensionPoint.ext([]),
   );
 
   runApp(NoteApp(noteSystem: noteSystem));

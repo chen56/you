@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
+import 'package:note/src/flutter_highlight.dart';
 import 'package:note/src/navigator_v2.dart';
 import 'package:note/src/note_core.dart';
-import 'package:note/src/flutter_highlight.dart';
+// import 'package:note/src/flutter_highlight.dart';
 import 'package:note/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
@@ -24,8 +25,7 @@ class DeferredScreen extends StatelessWidget with Screen {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            return Text(
-                'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+            return Text('note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
           return LayoutScreen(
             noteSystem: noteSystem,
@@ -88,13 +88,12 @@ class _LayoutScreenState extends State<LayoutScreen> {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
-          contentExtensions: widget.noteSystem.contentExtensions,
         );
 
     Pen pen = Pen.build(
       context,
       notePage: widget.notePage,
-      contentFactory: widget.noteSystem.contentExtensions,
+      noteSystem: widget.noteSystem,
       defaultCodeExpand: false,
       outline: outline,
     );
@@ -167,9 +166,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
               const Text("Devtools"),
               const Spacer(),
               IconButton(
-                  onPressed: () {},
-                  tooltip: 'Search',
-                  icon: const Icon(Icons.search),),
+                onPressed: () {},
+                tooltip: 'Search',
+                icon: const Icon(Icons.search),
+              ),
               IconButton(
                 onPressed: () {},
                 tooltip: 'Favorite',
@@ -181,7 +181,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     ///  Since StatefulWidget will automatically build() when the screen size changes,
     ///  the processing of responsive UI does not require special processing,
     ///  such as ListenableBuilder
-    return switch (WindowClass.of(context)) {
+    var result = switch (WindowClass.of(context)) {
       WindowClass.compact => Scaffold(
           appBar: appBar,
           drawer: Drawer(child: navigatorTree),
@@ -222,14 +222,14 @@ class _LayoutScreenState extends State<LayoutScreen> {
           ),
         ),
     };
+    return SelectionArea(child: result);
   }
 }
 
 class _NoteTreeView extends StatefulWidget {
   final Note root;
 
-  const _NoteTreeView(
-    this.root);
+  const _NoteTreeView(this.root);
 
   @override
   State<_NoteTreeView> createState() => _NoteTreeViewState();
@@ -260,8 +260,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
       return Padding(
         // 缩进模仿树形
-        padding: EdgeInsets.only(
-            left: 10 * (node.levelTo(widget.root) - 1).toDouble()),
+        padding: EdgeInsets.only(left: 10 * (node.levelTo(widget.root) - 1).toDouble()),
         child: TextButton(
           onPressed: click,
           child: Text("$iconExtend ${node.displayName}"),
@@ -294,17 +293,14 @@ class _OutlineTreeView extends StatelessWidget {
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
   final ScrollController mainContentViewController;
 
-  const _OutlineTreeView(
-      {required this.outline, required this.mainContentViewController});
+  const _OutlineTreeView({required this.outline, required this.mainContentViewController});
 
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
-        style: ButtonStyle(
-            padding:
-                MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
+        style: ButtonStyle(padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -353,7 +349,6 @@ class _OutlineTreeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final NoteCell cell;
   final Outline outline;
-  final NoteContentExtensionPoint contentExtensions;
 
   // ignore: prefer_const_constructors_in_immutables
   _NoteCellView(
@@ -361,7 +356,6 @@ class _NoteCellView extends StatelessWidget {
     // ignore: unused_element
     super.key,
     required this.outline,
-    required this.contentExtensions,
   });
 
   @override
@@ -419,8 +413,7 @@ class _NoteCellView extends StatelessWidget {
           // codeVeiw默认很窄，需扩展到占满所有宽度
           var codeViewFillWidth = LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-              return SizedBox(
-                  width: constraints.maxWidth, child: codeHighlightView);
+              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
             },
           );
 
@@ -432,8 +425,7 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.source.isCodeNotEmpty && cell.codeExpand)
-                      codeViewFillWidth,
+                    if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
                     ...cell.contents,
                     _cellSplitBlock,
                   ],
@@ -450,9 +442,7 @@ class _NoteCellView extends StatelessWidget {
         return _GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.source.isCodeEmpty
-        ? Container()
-        : cellView;
+    return cell.contents.isEmpty && cell.source.isCodeEmpty ? Container() : cellView;
   }
 }
 
@@ -491,8 +481,7 @@ class _SizeProvider extends StatefulWidget {
   final Widget child;
   final Function(Size) onChildSize;
 
-  const _SizeProvider(
-      {required this.onChildSize, required this.child});
+  const _SizeProvider({required this.onChildSize, required this.child});
 
   @override
   _SizeProviderState createState() => _SizeProviderState();

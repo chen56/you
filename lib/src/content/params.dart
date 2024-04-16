@@ -131,11 +131,11 @@ abstract class Param extends ChangeNotifier {
         : c.accept(emitter_).toString();
   }
 
-  Widget nameWidget(BuildContext context, Editors editors) {
+  Widget nameWidget(BuildContext context) {
     return getEditor().nameWidget(context);
   }
 
-  valueWidget(BuildContext context, Editors editors) {
+  valueWidget(BuildContext context) {
     return getEditor().valueWidget(context);
   }
 
