@@ -14,7 +14,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # markdown pen
 
   markdown: ^7.0.0
   flutter_markdown: ^0.6.14
