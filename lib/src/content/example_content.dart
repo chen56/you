@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
-import 'package:note/src/example_content/params.dart';
+import 'package:note/src/content/params.dart';
 import 'package:note/note.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/core.dart';

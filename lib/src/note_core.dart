@@ -3,7 +3,7 @@
 import 'package:meta/meta.dart';
 import 'package:note/note_conf.dart';
 import 'package:flutter/material.dart';
-import 'package:note/src/content_builtin.dart';
+import 'package:note/src/content/content_builtin.dart';
 import 'package:note/src/conventions.dart';
 import 'package:note/src/utils_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
