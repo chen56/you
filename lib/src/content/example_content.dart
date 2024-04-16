@@ -9,23 +9,23 @@ import 'package:code_builder/code_builder.dart' as code;
 
 /// this package is dependency by note page
 
-class MateContentExt extends NoteContentExt {
+class ExampleContentExt extends NoteContentExt {
   final Editors editors;
 
-  MateContentExt({required this.editors});
+  ExampleContentExt({required this.editors});
 
   @override
   NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    late MateSampleContent content;
-    if (data is MateSampleContent) {
+    late EampleContent content;
+    if (data is EampleContent) {
       content = data;
     } else if (data is Mate) {
-      content = MateSampleContent(data);
+      content = EampleContent(data);
     } else {
       return null;
     }
 
-    return MateSampleWidget(
+    return ExampleWidget(
       content: content,
       rootParam: content.mate.toRootParam(editors: editors),
       editors: editors,
@@ -35,7 +35,7 @@ class MateContentExt extends NoteContentExt {
   }
 }
 
-class MateSampleContent extends NoteContent {
+class EampleContent extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
@@ -44,7 +44,7 @@ class MateSampleContent extends NoteContent {
   /// if true , we will return : cell code + mate gen code
   /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
   // final bool isUseCellCodeAsTemplate;
-  MateSampleContent(
+  EampleContent(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -151,13 +151,13 @@ class SampleTemplate {
   }
 }
 
-class MateSampleWidget extends StatelessWidget with NoteContentWidgetMixin {
+class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final MateSampleContent content;
+  final EampleContent content;
   final NoteCell cell;
-  const MateSampleWidget({
+  const ExampleWidget({
     // ignore: unused_element
     super.key,
     required this.rootParam,
@@ -171,7 +171,7 @@ class MateSampleWidget extends StatelessWidget with NoteContentWidgetMixin {
     required BuildContext context,
     required Widget paramView,
     required Widget codeView,
-    required MateSampleContent content,
+    required EampleContent content,
   }) {
     WindowClass win = WindowClass.of(context);
 
