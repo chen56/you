@@ -3,82 +3,11 @@ import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:note/note.dart';
 import 'package:markdown/markdown.dart' as md;
+import 'package:note/src/content/widget_content.dart';
 import 'package:note/src/flutter_highlight.dart';
 import 'package:note/src/note_core.dart';
 import 'package:note/src/utils_core.dart';
 
-class ObjectContentExt extends NoteContentExt {
-  ObjectContentExt();
-
-  @override
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    return ObjectContentWidget(content: ObjectContent(data));
-  }
-}
-
-class ObjectContent extends NoteContent {
-  final Object? object;
-
-  ObjectContent(this.object);
-
-  @override
-  String toString() {
-    return "ObjectNote('${object?.toString()}')";
-  }
-}
-
-class ObjectContentWidget extends StatelessWidget with NoteContentWidgetMixin {
-  final ObjectContent content;
-
-  const ObjectContentWidget({super.key, required this.content});
-
-  @override
-  get isMarkdown => false;
-
-  @override
-  Widget build(BuildContext context) {
-    return SelectableText("${content.object}");
-  }
-}
-
-class WidgetContentExtension extends NoteContentExt {
-  WidgetContentExtension();
-
-  @override
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg) {
-    if (data is Widget) {
-      return WidgetContentWidget(content: WidgetContent(data));
-    } else if (data is WidgetContent) {
-      return WidgetContentWidget(content: data);
-    }
-    return null;
-  }
-}
-
-class WidgetContentWidget extends StatelessWidget with NoteContentWidgetMixin {
-  final WidgetContent content;
-
-  const WidgetContentWidget({super.key, required this.content});
-
-  @override
-  get isMarkdown => false;
-
-  @override
-  Widget build(BuildContext context) {
-    return content.widget;
-  }
-}
-
-class WidgetContent extends NoteContent {
-  final Widget widget;
-
-  WidgetContent(this.widget);
-
-  @override
-  String toString() {
-    return "WidgetNote('${widget.runtimeType}')";
-  }
-}
 
 class MarkdownContentExtension extends NoteContentExt {
   MarkdownContentExtension();
