@@ -30,7 +30,7 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 declare -A _pkgs=(
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
     ["note"]="$SCRIPT_DIR/"
-    ["flutter"]="$SCRIPT_DIR/notes/flutter_note"
+    ["flutter"]="$SCRIPT_DIR/notes/flutter_core"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
     ["shell"]="$SCRIPT_DIR/notes/shell"
 )
@@ -129,7 +129,7 @@ Examples:
  ./${SCRIPT_FILE} -h                       # show all commands help
  ./${SCRIPT_FILE} -h --debug               # show all commands help , include internal function
 
- ./${SCRIPT_FILE}  flutter dev             # == cd notes/flutter_note && flutter run --device-id macos
+ ./${SCRIPT_FILE}  flutter dev             # == cd notes/flutter_core && flutter run --device-id macos
 
  ./${SCRIPT_FILE}  test                    # test all projects
  ./${SCRIPT_FILE}  build                   # defalut build == flutter build web --web-renderer html
@@ -149,7 +149,7 @@ note.clean() (   note.run flutter clean; rm -rf build;)
 note.test() (    note.run flutter test;)
 note.build() (    note.run  dart compile exe bin/notecli.dart ;)
 
-flutter.run() (                 cd notes/flutter_note && _run "$@")
+flutter.run() (                 cd notes/flutter_core && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
 flutter.clean() (               flutter.run flutter clean; rm -rf build;)
 flutter.gen() (                 flutter.run dart run bin/gen.dart; )
@@ -166,9 +166,9 @@ flutter.build() {
   flutter.run flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ;
 }
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-  #   	npx http-server ./flutter_note/build/web --port 8000
+  #   	npx http-server ./flutter_core/build/web --port 8000
     # flutter pub global activate dhttpd
-    # run p.flutter_note dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+    # run p.flutter_core dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 flutter.preview() {             flutter.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
 
 install(){ pkgs._run_subcmd install; }
@@ -182,13 +182,13 @@ upgrade() {
 test() { pkgs._run_subcmd test; }
 clean() { pkgs._run_subcmd clean; }
 
-gen.all() (   dart run bin/notecli.dart gen --dir notes/flutter_note/ ;  ) #  mate_flutter.gen;暂时不用了
+gen.all() (   dart run bin/notecli.dart gen --dir notes/flutter_core/ ;  ) #  mate_flutter.gen;暂时不用了
 gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  ) # 暂时不用了 _run rm -rf mate_flutter/lib;
 
 docker.build() (
   _run docker build --progress plain --tag younpc/note:latest . ;
-  _run mkdir -p build/flutter_note/web;
-  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_note/web; tar xf -)";
+  _run mkdir -p build/flutter_core/web;
+  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_core/web; tar xf -)";
 )
 docker.run() {      _run echo "note preview http://localhost:8888/note/"; _run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
 docker.preview() {  _run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }

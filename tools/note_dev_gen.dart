@@ -156,9 +156,9 @@ $fields
 // // ignore_for_file: library_prefixes, non_constant_identifier_names
 //
 // import 'package:note/note.dart';
-// import 'package:flutter_note/1.welcome/page.dart' deferred as welcome_;
-// import 'package:flutter_note/1.welcome/page.g.dart' as welcome_g;
-// import 'package:flutter_note/note_app.dart';
+// import 'package:flutter_core/1.welcome/page.dart' deferred as welcome_;
+// import 'package:flutter_core/1.welcome/page.g.dart' as welcome_g;
+// import 'package:flutter_core/note_app.dart';
 //
 // mixin PathsMixin {
 //   final Note welcome = put2(

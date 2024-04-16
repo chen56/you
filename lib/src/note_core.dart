@@ -269,7 +269,7 @@ class NotePage {
 /// The concept of a cell in jupyter/Observablehq is similar,
 /// but since we do not have a notebook editor, a cell is auto analyzed from Dart code,
 ///
-/// - flutter_note 的cell在界面上是只读的
+/// - flutter_core 的cell在界面上是只读的
 /// - cell是我们对dart文件的一种视角
 ///
 /// 一个dart文件被识别为以下cells

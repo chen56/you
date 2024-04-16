@@ -13,7 +13,7 @@ void main() {
     fs.currentDirectory = "/n";
 
     gen = NotesGenerator(
-      packageBaseName: "flutter_note",
+      packageBaseName: "flutter_core",
       fs: fs,
       projectDir: "./",
     );
@@ -45,7 +45,7 @@ void main() {
     });
     test('absolute path', () {
       gen = NotesGenerator(
-        packageBaseName: "flutter_note",
+        packageBaseName: "flutter_core",
         fs: MemoryFileSystem(),
         projectDir: "/n",
       );
