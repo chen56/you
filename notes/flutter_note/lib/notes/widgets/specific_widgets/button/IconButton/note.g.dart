@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(WidgetContent(Wrap(child)
+        /// (print(WidgetContent(const Wrap)
         (
           cellType: 'body',
           offset: 291,
-          end: 417,
+          end: 423,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 417,
-          end: 419,
+          offset: 423,
+          end: 425,
           specialNodes: <({
             String nodeType,
             int end,

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 161,
+          end: 146,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print.markdown(r''' ```dart va, BoxConstraints.tightFor(width:)
+        /// (print.markdown(r''' # json  [I, OneImpl().a();, OneImpl().a();, OneImpl().b();)
         (
           cellType: 'body',
-          offset: 161,
-          end: 2405,
+          offset: 146,
+          end: 515,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2405,
-          end: 4435,
+          offset: 515,
+          end: 1089,
           specialNodes: <({
             String nodeType,
             int end,

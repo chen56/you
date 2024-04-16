@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 144,
+          end: 205,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (var i = 1;, print.runInCurrentCell((print), print.level(title: Text(""), s, ..., var body = Layer(null, title: , print(body);)
+        /// (var i = 1;, print.runInCurrentCell((print), print.level(title: const Text(, {void x({Text title = const Te)
         (
           cellType: 'body',
-          offset: 144,
-          end: 1932,
+          offset: 205,
+          end: 2469,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1932,
-          end: 1935,
+          offset: 2469,
+          end: 2571,
           specialNodes: <({
             String nodeType,
             int end,

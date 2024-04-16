@@ -117,6 +117,7 @@ flutter:
     - lib/notes/state/
     - lib/notes/state/1.vanilla_state/
     - lib/notes/state/StatefulBuilder/
+    - lib/notes/pure_dart/safe_interface/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

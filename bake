@@ -147,11 +147,12 @@ note.run() (    _run "$@")
 note.install() ( note.run flutter pub get)
 note.clean() (   note.run flutter clean; rm -rf build;)
 note.test() (    note.run flutter test;)
+note.build() (    note.run  dart compile exe bin/notecli.dart ;)
 
 flutter.run() (                 cd notes/flutter_note && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
 flutter.clean() (               flutter.run flutter clean; rm -rf build;)
-flutter.gen() (                 flutter.run dart run tools/gen.dart; )
+flutter.gen() (                 flutter.run dart run bin/gen.dart; )
 # get ip only work on macos
 #   shellcheck disable=SC2155
 #   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
@@ -181,7 +182,7 @@ upgrade() {
 test() { pkgs._run_subcmd test; }
 clean() { pkgs._run_subcmd clean; }
 
-gen.all() (   flutter.gen;  ) #  mate_flutter.gen;暂时不用了
+gen.all() (   dart run bin/notecli.dart gen --dir notes/flutter_note/ ;  ) #  mate_flutter.gen;暂时不用了
 gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  ) # 暂时不用了 _run rm -rf mate_flutter/lib;
 
 docker.build() (
