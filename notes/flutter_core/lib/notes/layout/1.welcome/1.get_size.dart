@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 /// todo 貌似有更先进的测量size方案，可以不用刷2次
 /// /flutter/examples/api/lib/widgets/framework/build_owner.0.dart
-class _GetSizeBuilder extends StatelessWidget {
+class GetSizeBuilder extends StatelessWidget {
   final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
   final ValueWidgetBuilder<Size> builder;
   final Widget? child;
 
-  _GetSizeBuilder({
+  GetSizeBuilder({
     // ignore: unused_element
     super.key,
     required this.builder,
