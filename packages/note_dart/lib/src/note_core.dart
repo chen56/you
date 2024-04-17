@@ -284,8 +284,6 @@ class NotePage {
 /// var y = "some var";
 ///
 ///
-@experimental
-class PrintResult {}
 
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
@@ -371,6 +369,97 @@ class Pen {
 
   void markdown(String content) {
     print(MarkdownContent(outline: outline, content: content));
+  }
+}
+
+/// 一个cell代表note中的一个代码块及其产生的内容
+/// A cell represents a code block in a note and its generated content
+class NoteCell extends ChangeNotifier {
+  final List<Widget> _contents = List.empty(growable: true);
+
+  // index use to find code
+  final int index;
+  final Pen pen;
+  late final CellSource source;
+  final Outline outline;
+  final NoteSystem noteSystem;
+
+  NoteCell({
+    required this.noteSystem,
+    required this.pen,
+    required this.index,
+    required NoteSource pageSource,
+  }) : outline = pen.outline {
+    var codeCell = pageSource._pageGenInfo.cells[index];
+    source = CellSource(
+      codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
+      cellType: CellType.parse(codeCell.cellType),
+      cell: this,
+      specialSources: codeCell.specialNodes
+          .map((e) => SpecialSource(
+        codeType: e.nodeType,
+        codeEntity: CodeEntity(offset: e.offset, end: e.end),
+        cell: this,
+      ))
+          .toList(),
+    );
+  }
+
+  List<Widget> get contents => List.unmodifiable(_contents);
+
+  get name {
+    return "cell[$index]";
+  }
+
+  bool isContentEmpty() => contents.isEmpty;
+
+  void print(Object? object) {
+    call(object);
+  }
+
+  bool get isAllMarkdownContent {
+    if (_contents.isEmpty) return false;
+    return _contents.every((e) => e is MarkdownContent);
+  }
+
+  void call(Object? content) {
+    Widget result = switch (content) {
+      String _ => MarkdownContent(content: content, outline: outline),
+      Widget widget => widget,
+      _ => ObjectContent(content: content),
+    };
+    _add(result);
+  }
+
+  void _add(Widget content) {
+    _contents.add(content);
+    notifyListeners();
+  }
+
+  bool? _codeExpand;
+
+  // show == expand
+  bool get codeExpand {
+    if (source.isCodeEmpty) return false;
+    //markdown cell default hidden code
+    if (_codeExpand == null) {
+      return switch (source.cellType) {
+        CellType.header => false,
+        CellType.tail => false,
+        CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
+      };
+    }
+    return _codeExpand ?? pen.defaultCodeExpand;
+  }
+
+  set codeExpand(bool newValue) {
+    _codeExpand = newValue;
+    notifyListeners();
+  }
+
+  @override
+  String toString() {
+    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }
 
@@ -533,96 +622,5 @@ enum CellType {
       if (t.name == name) return t;
     }
     throw Exception("CellType.name:$name not exist");
-  }
-}
-
-/// 一个cell代表note中的一个代码块及其产生的内容
-/// A cell represents a code block in a note and its generated content
-class NoteCell extends ChangeNotifier {
-  final List<Widget> _contents = List.empty(growable: true);
-
-  // index use to find code
-  final int index;
-  final Pen pen;
-  late final CellSource source;
-  final Outline outline;
-  final NoteSystem noteSystem;
-
-  NoteCell({
-    required this.noteSystem,
-    required this.pen,
-    required this.index,
-    required NoteSource pageSource,
-  }) : outline = pen.outline {
-    var codeCell = pageSource._pageGenInfo.cells[index];
-    source = CellSource(
-      codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
-      cellType: CellType.parse(codeCell.cellType),
-      cell: this,
-      specialSources: codeCell.specialNodes
-          .map((e) => SpecialSource(
-                codeType: e.nodeType,
-                codeEntity: CodeEntity(offset: e.offset, end: e.end),
-                cell: this,
-              ))
-          .toList(),
-    );
-  }
-
-  List<Widget> get contents => List.unmodifiable(_contents);
-
-  get name {
-    return "cell[$index]";
-  }
-
-  bool isContentEmpty() => contents.isEmpty;
-
-  void print(Object? object) {
-    call(object);
-  }
-
-  bool get isAllMarkdownContent {
-    if (_contents.isEmpty) return false;
-    return _contents.every((e) => e is MarkdownContent);
-  }
-
-  void call(Object? content) {
-    Widget result = switch (content) {
-      String _ => MarkdownContent(content: content, outline: outline),
-      Widget widget => widget,
-      _ => ObjectContent(content: content),
-    };
-    _add(result);
-  }
-
-  void _add(Widget content) {
-    _contents.add(content);
-    notifyListeners();
-  }
-
-  bool? _codeExpand;
-
-  // show == expand
-  bool get codeExpand {
-    if (source.isCodeEmpty) return false;
-    //markdown cell default hidden code
-    if (_codeExpand == null) {
-      return switch (source.cellType) {
-        CellType.header => false,
-        CellType.tail => false,
-        CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
-      };
-    }
-    return _codeExpand ?? pen.defaultCodeExpand;
-  }
-
-  set codeExpand(bool newValue) {
-    _codeExpand = newValue;
-    notifyListeners();
-  }
-
-  @override
-  String toString() {
-    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }
