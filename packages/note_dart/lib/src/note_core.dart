@@ -1,9 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:meta/meta.dart';
-import 'package:note_dart/note.dart';
-import 'package:note_dart/note_conf.dart';
 import 'package:flutter/material.dart';
+import 'package:note_dart/note_conf.dart';
 import 'package:note_dart/src/content/example_content.dart';
 import 'package:note_dart/src/content/object_content.dart';
 import 'package:note_dart/src/content/params.dart';
@@ -12,7 +11,6 @@ import 'package:note_dart/src/content/markdown_content.dart';
 import 'package:note_dart/src/conventions.dart';
 import 'package:note_dart/src/utils_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:shared_preferences/shared_preferences.dart';
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -51,22 +49,21 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
   final Note root;
-  final SpaceConf spaceConf;
-  final SharedPreferences sharedPreferences;
-  final Editors editors = Editors(); //暂时不让外部配置了，默认即可
+  final Editors _editors = Editors(); //暂时不让外部配置了，默认即可
   NoteSystem({
     required this.root,
-    required this.spaceConf,
-    required this.sharedPreferences,
   });
 
   static Future<NoteSystem> load({
     required Note root,
   }) async {
+    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('note_space.json'));
+    root.visit((e) {
+      e.spaceNoteConf = spaceConf.notes[e.path];
+      return true;
+    });
     return NoteSystem(
       root: root,
-      spaceConf: SpaceConf.decodeJson(await rootBundle.loadString('note_space.json')),
-      sharedPreferences: await SharedPreferences.getInstance(),
     );
   }
 }
@@ -612,7 +609,7 @@ class NoteCell extends ChangeNotifier {
       MarkdownContent _ => MarkdownContentWidget(content: content, outline: outline),
       WidgetContent _ => WidgetContentWidget(content: content),
       Widget _ => WidgetContentWidget(content: WidgetContent(content)),
-      ExampleContent _ => ExampleWidget(content: content, rootParam: content.mate.toRootParam(editors: noteSystem.editors), cell: this),
+      ExampleContent _ => ExampleWidget(content: content, rootParam: content.mate.toRootParam(editors: noteSystem._editors), cell: this),
       _ => ObjectContentWidget(content: ObjectContent(content)),
     };
     _add(result as NoteContentWidgetMixin);

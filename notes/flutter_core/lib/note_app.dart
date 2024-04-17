@@ -1,6 +1,5 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
-import 'package:note_dart/note_conf.dart';
 import 'package:note_dart/ui.dart';
 import 'package:note_dart/note_shell.dart';
 import 'package:note_dart/note.dart';
@@ -47,18 +46,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 @immutable
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
-  final SpaceConf spaceConf;
   final NoteSystem noteSystem;
   Notes({
     required this.sharedPreferences,
-    required this.spaceConf,
     required this.noteSystem,
-  }) {
-    BaseNotes.rootroot.visit((e) {
-      e.spaceNoteConf = spaceConf.notes[e.path];
-      return true;
-    });
-  }
+  }) ;
 
   @override
   Screen get initial {
@@ -87,8 +79,9 @@ class Notes extends BaseNotes with Navigable {
 
 class NoteApp extends StatelessWidget {
   final NoteSystem noteSystem;
+  final SharedPreferences sharedPreferences;
   // ignore: prefer_const_constructors_in_immutables
-  NoteApp({super.key, required this.noteSystem});
+  NoteApp({super.key, required this.noteSystem, required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context) {
@@ -96,8 +89,7 @@ class NoteApp extends StatelessWidget {
 
     Notes notes = Notes(
         noteSystem: noteSystem,
-        spaceConf: noteSystem.spaceConf,
-        sharedPreferences: noteSystem.sharedPreferences);
+        sharedPreferences: sharedPreferences);
 
     notes.root.configTree(extendLevel: 2);
 

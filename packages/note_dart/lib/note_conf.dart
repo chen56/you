@@ -59,6 +59,7 @@ class SpaceConf {
   }
 }
 
+/// FIXME 这个和NoteConf可以合并
 /// This is a lite version of note.json, summarized in note_space.json, for easy navigation
 class SpaceNoteConf {
   String displayName;
