@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note.dart';
 
 extension X on Pen {
   XX level(Function()? block, {Text title = const Text(""), ContentLayout style = const ContentLayout()}) {

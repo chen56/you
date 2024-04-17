@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note.dart';
 
 build(BuildContext context, Pen print) {
   StatefulBuilder(

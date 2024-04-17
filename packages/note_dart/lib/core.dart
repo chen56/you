@@ -2,4 +2,4 @@
 /// 本包不依赖flutter/dart:ui，可以在dart console环境下使用
 library core;
 
-export 'package:note_lang_dart/src/utils_core.dart';
+export 'package:note_dart/src/utils_core.dart';

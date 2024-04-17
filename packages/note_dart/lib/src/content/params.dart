@@ -6,8 +6,8 @@ import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/src/content/params_editors.dart';
-import 'package:note_lang_dart/core.dart' as utils;
+import 'package:note_dart/src/content/params_editors.dart';
+import 'package:note_dart/core.dart' as utils;
 
 final defaultEmitter =
     code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);

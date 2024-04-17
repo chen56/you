@@ -1,9 +1,9 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/note_conf.dart';
-import 'package:note_lang_dart/ui.dart';
-import 'package:note_lang_dart/note_shell.dart';
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note_conf.dart';
+import 'package:note_dart/ui.dart';
+import 'package:note_dart/note_shell.dart';
+import 'package:note_dart/note.dart';
 import 'package:flutter_core/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

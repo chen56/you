@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note.dart';
 
 import 'package:flutter_core/notes/x.note_inside/note_test_self/temp/pen_extension.dart';
 

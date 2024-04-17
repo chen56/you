@@ -1,16 +1,16 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:meta/meta.dart';
-import 'package:note_lang_dart/note.dart';
-import 'package:note_lang_dart/note_conf.dart';
+import 'package:note_dart/note.dart';
+import 'package:note_dart/note_conf.dart';
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/src/content/example_content.dart';
-import 'package:note_lang_dart/src/content/object_content.dart';
-import 'package:note_lang_dart/src/content/params.dart';
-import 'package:note_lang_dart/src/content/widget_content.dart';
-import 'package:note_lang_dart/src/content/markdown_content.dart';
-import 'package:note_lang_dart/src/conventions.dart';
-import 'package:note_lang_dart/src/utils_core.dart';
+import 'package:note_dart/src/content/example_content.dart';
+import 'package:note_dart/src/content/object_content.dart';
+import 'package:note_dart/src/content/params.dart';
+import 'package:note_dart/src/content/widget_content.dart';
+import 'package:note_dart/src/content/markdown_content.dart';
+import 'package:note_dart/src/conventions.dart';
+import 'package:note_dart/src/utils_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -23,8 +23,8 @@ dependencies:
 
   analyzer: ^6.4.1
 
-  note_lang_dart:
-    path: ../../packages/note_lang_dart
+  note_dart:
+    path: ../../packages/note_dart
 
   note:
     path: ../../

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 build(BuildContext context, Pen print) async {

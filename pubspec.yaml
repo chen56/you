@@ -32,8 +32,8 @@ dependencies:
   glob: ^2.1.1
   watcher: ^1.1.0
 
-  note_lang_dart:
-    path: packages/note_lang_dart
+  note_dart:
+    path: packages/note_dart
 
 #  async: ^2.11.0
 dev_dependencies:

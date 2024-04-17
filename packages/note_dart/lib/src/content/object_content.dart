@@ -1,6 +1,6 @@
 
 
-import 'package:note_lang_dart/note.dart';
+import 'package:note_dart/note.dart';
 import 'package:flutter/material.dart';
 
 class ObjectContent extends NoteContent {
