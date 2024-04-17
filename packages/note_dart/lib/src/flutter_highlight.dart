@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show BuildContext, Color, Container, EdgeInsetsGeometry, RichText, StatelessWidget, TextSpan, TextStyle, Widget;
+import 'package:flutter/material.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
 
 /// ------------------------------------------------------------------------------
@@ -32,14 +32,14 @@ class HighlightView extends StatelessWidget {
   final TextStyle? textStyle;
 
   HighlightView(
-    String input, {
-    super.key,
-    this.language,
-    this.theme = const {},
-    this.padding,
-    this.textStyle,
-    int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
-  }) : source = input.replaceAll('\t', ' ' * tabSize);
+      String input, {
+        super.key,
+        this.language,
+        this.theme = const {},
+        this.padding,
+        this.textStyle,
+        int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
+      }) : source = input.replaceAll('\t', ' ' * tabSize);
 
   List<TextSpan> _convert(List<Node> nodes) {
     List<TextSpan> spans = [];
@@ -100,8 +100,8 @@ class HighlightView extends StatelessWidget {
       // child: RichText(
       //   text: TextSpan(
       // TODO SelectableText不兼容SelectionArea
-      child: RichText(
-        text:TextSpan(
+      child: SelectableText.rich(
+        TextSpan(
           style: _textStyle,
           children: _convert(highlight.parse(source, language: language).nodes!),
         ),
@@ -109,4 +109,3 @@ class HighlightView extends StatelessWidget {
     );
   }
 }
-
