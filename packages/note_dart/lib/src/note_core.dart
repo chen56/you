@@ -225,20 +225,20 @@ class NoteRoute {
 
   Future<NotePage> lazyInit({required NotePageBuilder builder}) async {
     return NotePage(
-        note: this,
+        noteRoute: this,
         pageBuilder: builder,
         conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
         content: await rootBundle.loadString(dartAssetPath));
   }
 }
-
+// TODO 这个类设计的比较突兀，
 class NotePage {
-  final NoteRoute note;
+  final NoteRoute noteRoute;
   final NotePageBuilder pageBuilder;
   final NoteConf? conf;
   final String content; // source code content
   NotePage({
-    required this.note,
+    required this.noteRoute,
     required this.pageBuilder,
     required this.conf,
     required this.content,
@@ -305,7 +305,7 @@ class Pen {
     required this.noteSystem,
     required this.defaultCodeExpand,
     required this.outline,
-  }) : note = notePage.note {
+  }) : note = notePage.noteRoute {
     assert(note.source._pageGenInfo.cells.isNotEmpty, "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);

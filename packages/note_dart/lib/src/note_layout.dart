@@ -49,7 +49,7 @@ class LayoutScreen extends StatefulWidget with Screen<void> {
     required this.noteSystem,
     required this.notePage,
   })  : root = noteSystem.root,
-        note = notePage.note;
+        note = notePage.noteRoute;
 
   @override
   String get location => note.path;

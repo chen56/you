@@ -30,14 +30,14 @@ void main() {
   group("NoteLib", () {
     test('relative path', () {
       var testcases = [
-        (note: "lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
-        (note: "lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
-        (note: "lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
+        (noteRoute: "lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
+        (noteRoute: "lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
+        (noteRoute: "lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
         // number prefix may be use to sort
-        (note: "lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
+        (noteRoute: "lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
       ];
       for (var testcase in testcases) {
-        NoteLib note = gen.noteOf(testcase.note);
+        NoteLib note = gen.noteOf(testcase.noteRoute);
         expect(note.noteKey, testcase.key);
         expect(note.asVariableName, testcase.asVariableName);
         expect(note.asset, testcase.asset);
@@ -51,14 +51,14 @@ void main() {
       );
 
       var testcases = [
-        (note: "/n/lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
-        (note: "/n/lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
-        (note: "/n/lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
+        (noteRoute: "/n/lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
+        (noteRoute: "/n/lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
+        (noteRoute: "/n/lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
         // number prefix may be use to sort
-        (note: "/n/lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
+        (noteRoute: "/n/lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
       ];
       for (var testcase in testcases) {
-        NoteLib note = gen.noteOf(testcase.note);
+        NoteLib note = gen.noteOf(testcase.noteRoute);
         expect(note.noteKey, testcase.key);
         expect(note.asVariableName, testcase.asVariableName);
         expect(note.asset, testcase.asset);
