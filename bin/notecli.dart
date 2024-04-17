@@ -15,7 +15,7 @@ import 'package:path/path.dart' as path;
 
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 import 'package:watcher/watcher.dart';
-import 'package:yaml_edit/yaml_edit.dart';
+import 'package:yaml_edit/yaml_edit.dart' show YamlEditor;
 
 import 'package:note_dart/src/utils_core.dart';
 
@@ -175,7 +175,9 @@ $fields
   // ignore: non_constant_identifier_names
   Future<List<NoteParseResult>> _genAll_note_g_dart() async {
     var result = await _noteLibs.map((e) => e.gen()).asyncExpand((e) => e.asStream()).toList();
-    result.forEach((e)=>_log("gen note: $e"));
+    for (var e in result) {
+      _log("gen note: $e");
+    }
     var pubspec = await _pubspec();
     var toUpdate = result.map((e) => e.noteLib.asset).sorted((a, b) => a.compareTo(b));
     pubspec.noteAssetsUpdate(toUpdate);
@@ -531,7 +533,7 @@ class NoteParseResult {
 
   @override
   String toString() {
-    return "${file}";
+    return "$file";
   }
 }
 

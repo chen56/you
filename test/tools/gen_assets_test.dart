@@ -1,7 +1,7 @@
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as path;
+import 'package:test/test.dart';
 
 import '../../tools/note_dev_gen.dart';
 
