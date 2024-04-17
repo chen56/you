@@ -1,42 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note_dart/note.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note_dart/src/flutter_highlight.dart';
 import 'package:note_dart/src/note_core.dart';
-import 'package:note_dart/src/utils_core.dart';
 
-
-extension MarkdownPenExtension on Pen {
-  void markdown(String content) {
-    call(MarkdownContent(content));
-  }
-}
-
-class MarkdownContent extends NoteContent {
+class MarkdownContent extends StatelessWidget {
+  final Outline outline;
+  final ScrollController controller = ScrollController();
   final String content;
 
-  MarkdownContent(this.content);
-
-  @override
-  String toString() {
-    return "MarkdownContent('${content.replaceAll("\n", "\\n").safeSubstring(0, 50)}')";
-  }
-}
-
-class MarkdownContentWidget extends StatelessWidget with NoteContentWidgetMixin {
-  final Outline outline;
-  final MarkdownContent content;
-  final ScrollController controller = ScrollController();
-
-  MarkdownContentWidget({super.key, required this.outline, required this.content});
+  MarkdownContent({super.key, required this.outline, required this.content});
 
   @override
   Widget build(BuildContext context) {
     var headerBuilder = _HeaderBuilder(outline);
     return Markdown(
-      data: content.content,
+      data: content,
       selectable: true,
       // 得研究下controller层层嵌套要怎么用
       controller: controller,
@@ -96,7 +76,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
   void visitElementBefore(md.Element element) {
     // tag value : h1 | h2 | h3 ....
     currentNode = OutlineNode(
-      // globalKey用来滚动到此位置
+      // FIXME 这里处理有问题，GlobalKey 不能这样用：globalKey用来滚动到此位置
       key: GlobalKey(),
       heading: int.parse(element.tag.substring(1)),
       title: element.textContent,

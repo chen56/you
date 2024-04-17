@@ -3,10 +3,7 @@
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 import 'package:note_dart/note_conf.dart';
-import 'package:note_dart/src/content/example_content.dart';
 import 'package:note_dart/src/content/object_content.dart';
-import 'package:note_dart/src/content/params.dart';
-import 'package:note_dart/src/content/widget_content.dart';
 import 'package:note_dart/src/content/markdown_content.dart';
 import 'package:note_dart/src/conventions.dart';
 import 'package:note_dart/src/utils_core.dart';
@@ -49,7 +46,6 @@ NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
   final Note root;
-  final Editors _editors = Editors(); //暂时不让外部配置了，默认即可
   NoteSystem({
     required this.root,
   });
@@ -372,12 +368,11 @@ class Pen {
       return "$es : $stack";
     }
   }
+
+  void markdown(String content) {
+    print(MarkdownContent(outline: outline, content: content));
+  }
 }
-
-/// note content is not widget , it is data.
-abstract class NoteContent {}
-
-mixin NoteContentWidgetMixin on Widget {}
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -544,7 +539,7 @@ enum CellType {
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final List<NoteContentWidgetMixin> _contents = List.empty(growable: true);
+  final List<Widget> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
@@ -588,20 +583,19 @@ class NoteCell extends ChangeNotifier {
 
   bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
-    return _contents.every((e) => e is MarkdownContentWidget);
+    return _contents.every((e) => e is MarkdownContent);
   }
 
   void call(Object? content) {
-    var result = switch (content) {
-      MarkdownContent _ => MarkdownContentWidget(content: content, outline: outline),
-      Widget _ => WidgetContentWidget(content: content),
-      ExampleContent _ => ExampleWidget(content: content, rootParam: content.mate.toRootParam(editors: noteSystem._editors), cell: this),
-      _ => ObjectContentWidget(content: content),
+    Widget result = switch (content) {
+      String _ => MarkdownContent(content: content, outline: outline),
+      Widget widget => widget,
+      _ => ObjectContent(content: content),
     };
-    _add(result as NoteContentWidgetMixin);
+    _add(result);
   }
 
-  void _add(NoteContentWidgetMixin content) {
+  void _add(Widget content) {
     _contents.add(content);
     notifyListeners();
   }

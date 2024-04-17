@@ -7,9 +7,10 @@ import 'package:note_dart/src/note_core.dart';
 import 'package:note_dart/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
+/// 暂时搁置参数需求
 /// this package is dependency by note page
 
-class ExampleContent extends NoteContent {
+class ExampleContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
@@ -119,7 +120,7 @@ class SampleTemplate {
   }
 }
 
-class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
+class ExampleWidget extends StatelessWidget   {
   final ObjectParam rootParam;
   final String title;
   final ExampleContent content;
