@@ -357,18 +357,8 @@ class Pen {
     callback(currentCell);
   }
 
-// TODO 法宝cell find，待确认实验
-  @experimental
-  String catchStack() {
-    try {
-      throw Exception("fetch print to which cell");
-    } catch (es, stack) {
-      return "$es : $stack";
-    }
-  }
-
   void markdown(String content) {
-    print(MarkdownContent(outline: outline, content: content));
+    call(MarkdownContent(outline: outline, content: content));
   }
 }
 
@@ -424,7 +414,6 @@ class NoteCell extends ChangeNotifier {
 
   void call(Object? content) {
     Widget result = switch (content) {
-      String _ => MarkdownContent(content: content, outline: outline),
       Widget widget => widget,
       _ => ObjectContent(content: content),
     };

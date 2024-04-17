@@ -16,8 +16,8 @@ json 序列化。
   print.$____________________________________________________________________();
   var userJson = '''
   {
-    "name": "Chen Peng",
-    "email": "chenpeng@younpc.com"
+    "name": "chen56",
+    "email": "chen56@chen56.com"
   }
   ''';
   Map<String, dynamic> user = jsonDecode(userJson);

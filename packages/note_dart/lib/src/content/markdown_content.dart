@@ -34,6 +34,7 @@ class MarkdownContent extends StatelessWidget {
       },
     );
   }
+
 }
 
 class _HeaderBuilder extends MarkdownElementBuilder {
