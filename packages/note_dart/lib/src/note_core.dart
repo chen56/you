@@ -347,7 +347,7 @@ class Pen {
     currentCell = cells[nextCellIndex];
   }
 
-  void call(Object? object, {String test = ""}) {
+  void call(Object? object) {
     currentCell.print(object);
   }
 

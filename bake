@@ -9,13 +9,13 @@ SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 # 进入脚本所在目录，这样上下文就是本项目了
 cd "$SCRIPT_DIR" || exit 200
 
-upgrade_bake(){
+bake.upgrade(){
   mkdir -p "$SCRIPT_DIR/vendor"
-  echo "$SCRIPT_PATH -> upgrade_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
+  echo "$SCRIPT_PATH -> bake.upgrade ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
   curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/bake/raw/main/bake.bash ;
 }
 if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
-  upgrade_bake
+  bake.upgrade
 fi
 
 # include common script
@@ -28,8 +28,9 @@ source "$SCRIPT_DIR/vendor/bake.bash"
 ##########################################
 
 declare -A _pkgs=(
+    ["bake"]="$SCRIPT_DIR"
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
-    ["note"]="$SCRIPT_DIR/"
+    ["note"]="$SCRIPT_DIR"
     ["note_dart"]="$SCRIPT_DIR/packages/note_dart"
     ["flutter"]="$SCRIPT_DIR/notes/flutter_core"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
@@ -37,14 +38,14 @@ declare -A _pkgs=(
 )
 
 bake.cmd --cmd pkgs --desc "<mono> mono project manage: ./$SCRIPT_FILE pkgs <ls|run>"
-pkgs.ls(){
+ls(){
   for pkg in ${!_pkgs[*]} ; do
     echo "$pkg:${_pkgs[$pkg]}"
   done
 }
 
 bake.cmd --cmd pkgs.run --desc "<mono> run cmd on all pkg,Usage: ./$SCRIPT_FILE pkgs run [any cmd]"
-pkgs.run(){
+run(){
   for pkg in ${!_pkgs[*]} ; do
     # 子shell内执行，防止环境感染
     (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
@@ -52,25 +53,22 @@ pkgs.run(){
 }
 
 # 运行所用项目的某子命令
-# Usage:    pkgs._run_subcmd <subcmd>
-# Example:  pkgs._run_subcmd clean
+# Usage:    _run_on_all_package <subcmd>
+# Example:  _run_on_all_package clean
 #     run =>  note.clean
 #             mate.clean
 #             flutter.clean
 #             ...
-pkgs._run_subcmd() {
+_run_on_all_package() {
   local subcmd="$1"
   if [[ "$subcmd" == "" ]] ; then
-    echo "缺subcmd参数 Usage:pkgs._run_subcmd <subcmd>";
+    echo "缺subcmd参数 Usage:_run_on_all_package <subcmd>";
     return 100;
   fi
   for pkg in "${!_pkgs[@]}"; do
     if _func_exists "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
   done
 }
-
-
-
 
 # run一条命令，先print上下文信息，再执行
 # Usage: _run <some cmd>
@@ -102,8 +100,6 @@ _func_exists(){
     return 1;
   fi
 }
-
-
 
 ##########################################
 # app cmd script
@@ -143,54 +139,50 @@ Examples:
 EOF
   )"
 
-
 note.run() {      _run "$@";}
 note.install() (  note.run dart pub get;)
 note.clean() (    note.run rm -rf build;note.run rm -rf .dart_tool; )
+note.upgrade() (  note.run  dart pub upgrade ;)
 note.test() (     note.run dart test;)
 note.build() (    note.run  dart compile exe bin/notecli.dart ;)
 
 note_dart.run() (     cd packages/note_dart || return 200 && _run "$@")
 note_dart.install() ( note_dart.run flutter pub get)
 note_dart.clean() (   note_dart.run flutter clean; rm -rf build;)
+note_dart.upgrade() ( note.run  flutter pub upgrade ;)
 note_dart.test() (    note_dart.run flutter test;)
 
 flutter.run() (                 cd notes/flutter_core && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
 flutter.clean() (               flutter.run flutter clean; rm -rf build;)
-flutter.gen() (                 flutter.run dart run bin/gen.dart; )
-# get ip only work on macos
-#   shellcheck disable=SC2155
-#   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
-flutter.dev_web() {             flutter.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter.dev() {                 flutter.run flutter run --device-id macos "$@"; }
-# skwasm无法运行
-flutter.build_macos() {         flutter.run flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter.build_web_skwasm() {    flutter.run flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
-flutter.build_web_canvaskit() { flutter.run flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+flutter.upgrade() (             flutter.run flutter pub upgrade ;)
 flutter.build() {
   flutter.run flutter build web -v --release --tree-shake-icons --web-renderer html "$@" ;
 }
+flutter.build_macos() {         flutter.run flutter build macos -v --release --tree-shake-icons "$@";  }
+flutter.build_web_skwasm() {    flutter.run flutter build web -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
+flutter.build_web_canvaskit() { flutter.run flutter build web -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+# get ip only work on macos
+#   shellcheck disable=SC2155
+#   local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+flutter.dev() {                 flutter.run flutter run --device-id macos "$@"; }
+flutter.dev_web() {             flutter.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+# skwasm无法运行
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_core/build/web --port 8000
     # flutter pub global activate dhttpd
     # run p.flutter_core dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 flutter.preview() {             flutter.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+flutter.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_core/ ;  ) #  mate_flutter.gen;暂时不用了
 
-install(){ pkgs._run_subcmd install; }
+install() { _run_on_all_package install; }
+get() {     _run_on_all_package install; }
+upgrade() { _run_on_all_package upgrade;}
+clean() {   _run_on_all_package clean; }
+test() {    _run_on_all_package test; }
+gen() {     _run_on_all_package gen; }
 
-upgrade() {
-  upgrade_bake;
-}
-
-
-# 执行 note.test、mate.test等命令
-test() { pkgs._run_subcmd test; }
-clean() { pkgs._run_subcmd clean; }
-
-gen.all() (   dart run bin/notecli.dart gen --dir notes/flutter_core/ ;  ) #  mate_flutter.gen;暂时不用了
-gen.clean() ( flutter.run rm -f ./lib/pages.g.dart;  ) # 暂时不用了 _run rm -rf mate_flutter/lib;
-
+# github 发布时使用,参考[.github/workflows/*.yaml]
 docker.build() (
   _run docker build --progress plain --tag younpc/note:latest . ;
   _run mkdir -p build/flutter_core/web;

@@ -93,7 +93,6 @@ flutter:
     - lib/notes/x.note_inside/how_note_work/
     - lib/notes/x.note_inside/note_test_self/
     - lib/notes/x.note_inside/note_test_self/nobody/
-    - lib/notes/x.note_inside/note_test_self/temp/
     - lib/notes/x.note_inside/research_parameterized_example/
     - lib/notes/Improve_app/
     - lib/notes/Improve_app/1.overview/
@@ -117,6 +116,10 @@ flutter:
     - lib/notes/state/1.vanilla_state/
     - lib/notes/state/StatefulBuilder/
     - lib/notes/pure_dart/safe_interface/
+    - lib/notes/layout/
+    - lib/notes/layout/box_layout/constraints/
+    - lib/notes/layout/old/layout/
+    - lib/notes/layout/responsive_design/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

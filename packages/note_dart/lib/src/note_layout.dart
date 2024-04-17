@@ -401,9 +401,7 @@ class _NoteCellView extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Tooltip(
                   message: '${cell.name}',
-                  child: Text(
-                    barText,
-                  ),
+                  child: Text(barText),
                 ),
               ),
             ),

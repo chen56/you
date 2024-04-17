@@ -25,6 +25,14 @@ import 'package:flutter_core/notes/Improve_app/RepaintBoundary/note.dart' deferr
 import 'package:flutter_core/notes/Improve_app/RepaintBoundary/note.g.dart' as Improve_app_RepaintBoundary_g;
 import 'package:flutter_core/notes/Improve_app/web_optimization/note.dart' deferred as Improve_app_web_optimization_;
 import 'package:flutter_core/notes/Improve_app/web_optimization/note.g.dart' as Improve_app_web_optimization_g;
+import 'package:flutter_core/notes/layout/box_layout/constraints/note.dart' deferred as layout_box_layout_constraints_;
+import 'package:flutter_core/notes/layout/box_layout/constraints/note.g.dart' as layout_box_layout_constraints_g;
+import 'package:flutter_core/notes/layout/note.dart' deferred as layout_;
+import 'package:flutter_core/notes/layout/note.g.dart' as layout_g;
+import 'package:flutter_core/notes/layout/old/layout/note.dart' deferred as layout_old_layout_;
+import 'package:flutter_core/notes/layout/old/layout/note.g.dart' as layout_old_layout_g;
+import 'package:flutter_core/notes/layout/responsive_design/note.dart' deferred as layout_responsive_design_;
+import 'package:flutter_core/notes/layout/responsive_design/note.g.dart' as layout_responsive_design_g;
 import 'package:flutter_core/notes/media&assets&file/assets/note.dart' deferred as media_assets_file_assets_;
 import 'package:flutter_core/notes/media&assets&file/assets/note.g.dart' as media_assets_file_assets_g;
 import 'package:flutter_core/notes/media&assets&file/file/note.dart' deferred as media_assets_file_file_;
@@ -97,8 +105,6 @@ import 'package:flutter_core/notes/x.note_inside/note_test_self/nobody/note.dart
 import 'package:flutter_core/notes/x.note_inside/note_test_self/nobody/note.g.dart' as x_note_inside_note_test_self_nobody_g;
 import 'package:flutter_core/notes/x.note_inside/note_test_self/note.dart' deferred as x_note_inside_note_test_self_;
 import 'package:flutter_core/notes/x.note_inside/note_test_self/note.g.dart' as x_note_inside_note_test_self_g;
-import 'package:flutter_core/notes/x.note_inside/note_test_self/temp/note.dart' deferred as x_note_inside_note_test_self_temp_;
-import 'package:flutter_core/notes/x.note_inside/note_test_self/temp/note.g.dart' as x_note_inside_note_test_self_temp_g;
 import 'package:flutter_core/notes/x.note_inside/research_parameterized_example/note.dart' deferred as x_note_inside_research_parameterized_example_;
 import 'package:flutter_core/notes/x.note_inside/research_parameterized_example/note.g.dart' as x_note_inside_research_parameterized_example_g;
 
@@ -109,6 +115,10 @@ abstract class BaseNotes {
     return rootroot.put(path,noteInfo,deferredPageBuilder);
   }
   final Note research_remote_view                                 = put("/research/remote_view",research_remote_view_g.noteInfo(), (note) async => note.loadPage(builder:await research_remote_view_.loadLibrary().then((value) => research_remote_view_.build)));  
+  final Note layout_old_layout                                    = put("/layout/old/layout",layout_old_layout_g.noteInfo(), (note) async => note.loadPage(builder:await layout_old_layout_.loadLibrary().then((value) => layout_old_layout_.build)));  
+  final Note layout_box_layout_constraints                        = put("/layout/box_layout/constraints",layout_box_layout_constraints_g.noteInfo(), (note) async => note.loadPage(builder:await layout_box_layout_constraints_.loadLibrary().then((value) => layout_box_layout_constraints_.build)));  
+  final Note layout_responsive_design                             = put("/layout/responsive_design",layout_responsive_design_g.noteInfo(), (note) async => note.loadPage(builder:await layout_responsive_design_.loadLibrary().then((value) => layout_responsive_design_.build)));  
+  final Note layout                                               = put("/layout",layout_g.noteInfo(), (note) async => note.loadPage(builder:await layout_.loadLibrary().then((value) => layout_.build)));  
   final Note navigation                                           = put("/navigation",navigation_g.noteInfo(), (note) async => note.loadPage(builder:await navigation_.loadLibrary().then((value) => navigation_.build)));  
   final Note state_vanilla_state                                  = put("/state/1.vanilla_state",state_vanilla_state_g.noteInfo(), (note) async => note.loadPage(builder:await state_vanilla_state_.loadLibrary().then((value) => state_vanilla_state_.build)));  
   final Note state                                                = put("/state",state_g.noteInfo(), (note) async => note.loadPage(builder:await state_.loadLibrary().then((value) => state_.build)));  
@@ -135,7 +145,6 @@ abstract class BaseNotes {
   final Note x_note_inside_research_parameterized_example         = put("/x.note_inside/research_parameterized_example",x_note_inside_research_parameterized_example_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_research_parameterized_example_.loadLibrary().then((value) => x_note_inside_research_parameterized_example_.build)));  
   final Note x_note_inside_mockup_content                         = put("/x.note_inside/mockup_content",x_note_inside_mockup_content_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_mockup_content_.loadLibrary().then((value) => x_note_inside_mockup_content_.build)));  
   final Note x_note_inside_welcome                                = put("/x.note_inside/1.welcome",x_note_inside_welcome_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_welcome_.loadLibrary().then((value) => x_note_inside_welcome_.build)));  
-  final Note x_note_inside_note_test_self_temp                    = put("/x.note_inside/note_test_self/temp",x_note_inside_note_test_self_temp_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_note_test_self_temp_.loadLibrary().then((value) => x_note_inside_note_test_self_temp_.build)));  
   final Note x_note_inside_note_test_self_nobody                  = put("/x.note_inside/note_test_self/nobody",x_note_inside_note_test_self_nobody_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_note_test_self_nobody_.loadLibrary().then((value) => x_note_inside_note_test_self_nobody_.build)));  
   final Note x_note_inside_note_test_self                         = put("/x.note_inside/note_test_self",x_note_inside_note_test_self_g.noteInfo(), (note) async => note.loadPage(builder:await x_note_inside_note_test_self_.loadLibrary().then((value) => x_note_inside_note_test_self_.build)));  
   final Note widgets_specific_widgets_input                       = put("/widgets/specific_widgets/input",widgets_specific_widgets_input_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_specific_widgets_input_.loadLibrary().then((value) => widgets_specific_widgets_input_.build)));  
