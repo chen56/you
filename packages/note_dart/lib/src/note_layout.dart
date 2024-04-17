@@ -10,7 +10,7 @@ import 'package:note_dart/src/utils_ui.dart';
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class DeferredScreen extends StatelessWidget with Screen {
-  final Note note;
+  final NoteRoute note;
   final NoteSystem noteSystem;
 
   DeferredScreen({super.key, required this.note, required this.noteSystem});
@@ -18,7 +18,7 @@ class DeferredScreen extends StatelessWidget with Screen {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<NotePage>(
-      future: note.deferredPageBuilder!(note),
+      future: note.noteRouteLazyInitiator!(note),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
@@ -40,9 +40,9 @@ class DeferredScreen extends StatelessWidget with Screen {
 
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
-  final Note note;
+  final NoteRoute note;
   final NotePage notePage;
-  final Note root;
+  final NoteRoute root;
 
   LayoutScreen({
     super.key,
@@ -224,7 +224,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
 }
 
 class _NoteTreeView extends StatefulWidget {
-  final Note root;
+  final NoteRoute root;
 
   const _NoteTreeView(this.root);
 
@@ -238,7 +238,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget noteLink(Note node) {
+    Widget noteLink(NoteRoute node) {
       click() {
         if (node.isLeaf) {
           NavigatorV2.of(context).push(node.path);

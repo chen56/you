@@ -68,7 +68,7 @@ class Notes extends BaseNotes with Navigable {
   Screen switchTo(String location) {
     assert(BaseNotes.rootroot.contains(location),
         "location not found: $location ${BaseNotes.rootroot.toList()}");
-    Note find = BaseNotes.rootroot.child(location)!; // ?? notFound;
+    NoteRoute find = BaseNotes.rootroot.child(location)!; // ?? notFound;
     sharedPreferences.setString("flutter_core.notes.location", location);
     // sync mode
     // return find.createScreen(location);

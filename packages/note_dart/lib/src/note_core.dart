@@ -15,7 +15,7 @@ import 'package:flutter/services.dart' show rootBundle;
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef DeferredNotePageBuilder = Future<NotePage> Function(Note note);
+typedef NoteRouteLazyInitiator = Future<NotePage> Function(NoteRoute note);
 typedef NoteSourceData = ({
   List<
       ({
@@ -45,13 +45,13 @@ NoteSourceData _emptyPageGenInfo = (
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
 class NoteSystem {
-  final Note root;
+  final NoteRoute root;
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required Note root,
+    required NoteRoute root,
   }) async {
     SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('notes.g.json'));
     root.visit((e) {
@@ -64,33 +64,33 @@ class NoteSystem {
   }
 }
 
-class Note {
+class NoteRoute {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
   final String basename;
-  final Map<String, Note> _children = {};
-  final Note? parent;
+  final Map<String, NoteRoute> _children = {};
+  final NoteRoute? parent;
   bool expand = false;
 
   NoteSource _source = _emptyPageSource;
 
   @internal
-  DeferredNotePageBuilder? deferredPageBuilder;
+  NoteRouteLazyInitiator? noteRouteLazyInitiator;
 
   NoteConf? conf;
 
-  Note._child({required this.basename, required Note this.parent});
+  NoteRoute._child({required this.basename, required NoteRoute this.parent});
 
-  Note.root()
+  NoteRoute.root()
       : basename = "",
         parent = null;
 
-  Note put(String fullPath, NoteSourceData data, DeferredNotePageBuilder deferredPageBuilder) {
+  NoteRoute put(String fullPath, NoteSourceData data, NoteRouteLazyInitiator noteRouteLazyInitiator) {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
 
     path._source = NoteSource(pageGenInfo: data);
-    path.deferredPageBuilder = deferredPageBuilder;
+    path.noteRouteLazyInitiator = noteRouteLazyInitiator;
     return path;
   }
 
@@ -103,18 +103,18 @@ class Note {
     }
   }
 
-  List<Note> get children => List.from(_children.values);
+  List<NoteRoute> get children => List.from(_children.values);
 
   NoteSource get source => _source;
 
-  Note _ensurePath(List<String> nameList) {
+  NoteRoute _ensurePath(List<String> nameList) {
     if (nameList.isEmpty) {
       return this;
     }
     String name = nameList[0];
     assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _children.putIfAbsent(name, () {
-      var child = Note._child(basename: name, parent: this);
+      var child = NoteRoute._child(basename: name, parent: this);
       _children[name] = child;
       return child;
     });
@@ -125,15 +125,15 @@ class Note {
 
   int get level => isRoot ? 0 : parent!.level + 1;
 
-  int levelTo(Note parent) => level - parent.level;
+  int levelTo(NoteRoute parent) => level - parent.level;
 
-  List<Note> get ancestors => isRoot ? [] : [parent!, ...parent!.ancestors];
+  List<NoteRoute> get ancestors => isRoot ? [] : [parent!, ...parent!.ancestors];
 
-  List<Note> get meAndAncestors => [this, ...ancestors];
+  List<NoteRoute> get meAndAncestors => [this, ...ancestors];
 
   bool get isRoot => parent == null;
 
-  Note get root => isRoot ? this : parent!.root;
+  NoteRoute get root => isRoot ? this : parent!.root;
 
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
@@ -145,16 +145,16 @@ class Note {
     return parentPath == "" ? basename : "$parentPath/$basename";
   }
 
-  List<Note> toList({
+  List<NoteRoute> toList({
     bool includeThis = true,
-    bool Function(Note path)? test,
-    Comparator<Note>? sortBy,
+    bool Function(NoteRoute path)? test,
+    Comparator<NoteRoute>? sortBy,
   }) {
     test = test ?? (e) => true;
     if (!test(this)) {
       return [];
     }
-    List<Note> children = List.from(_children.values);
+    List<NoteRoute> children = List.from(_children.values);
     if (sortBy != null) {
       children.sort(sortBy);
     }
@@ -165,7 +165,7 @@ class Note {
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  List<Note> topList({bool topDown = true}) {
+  List<NoteRoute> topList({bool topDown = true}) {
     if (isRoot) {
       return [this];
     }
@@ -173,8 +173,8 @@ class Note {
   }
 
   // todo bug
-  Note? child(String path) {
-    Note? result = this;
+  NoteRoute? child(String path) {
+    NoteRoute? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._children[split];
       if (result == null) break;
@@ -198,7 +198,7 @@ class Note {
       return "Page($path ,kids:${_children.values.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (Note n in toList()) {
+      for (NoteRoute n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -210,7 +210,7 @@ class Note {
     return c != null;
   }
 
-  void visit(bool Function(Note note) visitor) {
+  void visit(bool Function(NoteRoute note) visitor) {
     if (!visitor(this)) {
       return;
     }
@@ -223,7 +223,7 @@ class Note {
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
-  Future<NotePage> loadPage({required NotePageBuilder builder}) async {
+  Future<NotePage> lazyInit({required NotePageBuilder builder}) async {
     return NotePage(
         note: this,
         pageBuilder: builder,
@@ -233,7 +233,7 @@ class Note {
 }
 
 class NotePage {
-  final Note note;
+  final NoteRoute note;
   final NotePageBuilder pageBuilder;
   final NoteConf? conf;
   final String content; // source code content
@@ -293,7 +293,7 @@ class Pen {
   late final List<NoteCell> cells;
   late NoteCell currentCell;
   final Outline outline;
-  final Note note;
+  final NoteRoute note;
   final NotePage notePage;
   final bool defaultCodeExpand;
   final NoteSystem noteSystem;
