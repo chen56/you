@@ -1,7 +1,7 @@
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
 
-import '../../tools/note_dev_gen.dart';
+import '../../bin/notecli.dart';
 
 void main() {
   late NotesGenerator gen;
@@ -15,15 +15,15 @@ void main() {
     gen = NotesGenerator(
       packageBaseName: "flutter_core",
       fs: fs,
-      projectDir: "./",
+      projectDir: fs.directory("./"),
     );
   });
 
   group("NotesGenerator", () {
     test('basic app_info', () {
-      expect(gen.projectDir, ".");
-      expect(gen.libDir, "./lib");
-      expect(gen.noteRootDir, "./lib/notes");
+      expect(gen.projectDir.path, "./");
+      expect(gen.libDir.path, "./lib");
+      expect(gen.noteRootDir.path, "./lib/notes");
     });
   });
 
@@ -46,8 +46,8 @@ void main() {
     test('absolute path', () {
       gen = NotesGenerator(
         packageBaseName: "flutter_core",
-        fs: MemoryFileSystem(),
-        projectDir: "/n",
+        fs: fs,
+        projectDir: fs.directory("/n"),
       );
 
       var testcases = [

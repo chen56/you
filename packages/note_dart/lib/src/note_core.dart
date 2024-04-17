@@ -74,7 +74,7 @@ class Note {
 
   NoteSource _source = _emptyPageSource;
 
-  // TODO QRoute的 deferred处理可以看下 ：https://medium.com/@SchabanBo/reduce-your-flutter-web-app-loading-time-8018d8f442
+  @internal
   DeferredNotePageBuilder? deferredPageBuilder;
 
   NoteConf? conf;
@@ -223,10 +223,9 @@ class Note {
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
-  Future<NotePage> loadPage({NotePageBuilder? builder}) async {
+  Future<NotePage> loadPage({required NotePageBuilder builder}) async {
     return NotePage(
         note: this,
-        // pageBuilder: await deferredPageBuilder!(this),
         pageBuilder: builder,
         conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
         content: await rootBundle.loadString(dartAssetPath));
@@ -235,7 +234,7 @@ class Note {
 
 class NotePage {
   final Note note;
-  final NotePageBuilder? pageBuilder;
+  final NotePageBuilder pageBuilder;
   final NoteConf? conf;
   final String content; // source code content
   NotePage({
@@ -325,7 +324,7 @@ class Pen {
     // Skip the header code block
     $____________________________________________________________________();
 
-    notePage.pageBuilder!(context, this);
+    notePage.pageBuilder(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容

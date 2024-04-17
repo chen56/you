@@ -18,8 +18,6 @@ class DeferredScreen extends StatelessWidget with Screen {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<NotePage>(
-      // https://medium.com/@SchabanBo/reduce-your-flutter-web-app-loading-time-8018d8f442
-      // QRoute的 deferred处理可以看下
       future: note.deferredPageBuilder!(note),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {

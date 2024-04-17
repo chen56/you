@@ -3,11 +3,12 @@ import 'package:file/memory.dart';
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 
-import '../../tools/note_dev_gen.dart';
+import '../../bin/notecli.dart';
+
 
 
 MemoryFileSystem fs = MemoryFileSystem();
-NotesGenerator gen = NotesGenerator(packageBaseName: "test_note", fs: fs, projectDir: path.absolute("/note"));
+NotesGenerator gen = NotesGenerator(packageBaseName: "test_note", fs: fs, projectDir: fs.directory(path.absolute("/note")));
 File memoryPubspec(String content) {
   MemoryFileSystem fs = MemoryFileSystem();
   var file = fs.file("/note/pubspec.yaml");
