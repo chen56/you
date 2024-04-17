@@ -3,15 +3,16 @@ import 'package:test/test.dart';
 main() {
   group("??", () {
     test("description", () {
-      void xx(String msg) {
-        print("hahaha:$msg");
-      }
-
-      int? y;
-      dynamic x=y;
-      x == null ? Never : xx(" null");
-      x = 1;
-      x == null ? Never : xx("not null");
+      Map<String, dynamic> map = {"a": "1"};
+      XX(msg: map["sss"]??"s");
     });
   });
+}
+
+class XX {
+  late String msg;
+
+  XX({this.msg = "defalut"}) {
+    print("hahaha:$msg");
+  }
 }

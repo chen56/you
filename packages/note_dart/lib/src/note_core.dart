@@ -57,9 +57,9 @@ class NoteSystem {
   static Future<NoteSystem> load({
     required Note root,
   }) async {
-    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('note_space.json'));
+    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('notes.g.json'));
     root.visit((e) {
-      e.spaceNoteConf = spaceConf.notes[e.path];
+      e.conf = spaceConf.notes[e.path];
       return true;
     });
     return NoteSystem(
@@ -81,7 +81,7 @@ class Note {
   // TODO QRoute的 deferred处理可以看下 ：https://medium.com/@SchabanBo/reduce-your-flutter-web-app-loading-time-8018d8f442
   DeferredNotePageBuilder? deferredPageBuilder;
 
-  SpaceNoteConf? spaceNoteConf;
+  NoteConf? conf;
 
   Note._child({required this.basename, required Note this.parent});
 
@@ -141,7 +141,7 @@ class Note {
 
   /// Note names, which can be set to human-readable names in note.json,
   /// are displayed on the navigation tree
-  String get displayName => spaceNoteConf != null ? spaceNoteConf!.displayName : basename;
+  String get displayName => conf != null ? conf!.displayName : basename;
 
   String get path {
     if (isRoot) return "";
@@ -232,7 +232,7 @@ class Note {
         note: this,
         // pageBuilder: await deferredPageBuilder!(this),
         pageBuilder: builder,
-        conf: spaceNoteConf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+        conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
         content: await rootBundle.loadString(dartAssetPath));
   }
 }

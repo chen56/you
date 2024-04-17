@@ -145,9 +145,9 @@ EOF
 
 
 note.run() {      _run "$@";}
-note.install() (  note.run flutter pub get;)
-note.clean() (    note.run flutter clean; rm -rf build;)
-note.test() (     note.run flutter test;)
+note.install() (  note.run dart pub get;)
+note.clean() (    note.run rm -rf build;note.run rm -rf .dart_tool; )
+note.test() (     note.run dart test;)
 note.build() (    note.run  dart compile exe bin/notecli.dart ;)
 
 note_dart.run() (     cd packages/note_dart || return 200 && _run "$@")

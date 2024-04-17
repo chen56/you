@@ -18,7 +18,7 @@ import 'package:yaml_edit/yaml_edit.dart';
 const String _libRoot = "lib";
 const String _notesRoot = "lib/notes";
 final Glob _noteGlob = Glob("{**/note.dart,note.dart}");
-
+/// FIXME 文件待删除
 class NotesGenerator {
   final DartFormatter _fmt;
   final FileSystem fs;
@@ -112,7 +112,7 @@ $fields
     return (file: file, notes: noteLibs);
   }
 
-  File get _noteSpaceJsonFile => fs.file(path.join(projectDir, "note_space.json"));
+  File get _noteSpaceJsonFile => fs.file(path.join(projectDir, "notes.g.json"));
 
   Future<SpaceConf> _genSpaceJson(List<NoteParseResult> notes) async {
     SpaceConf spaceConf = await SpaceConf.load(_noteSpaceJsonFile);
@@ -121,10 +121,7 @@ $fields
       if (note.noteConf == null) {
         continue;
       }
-      spaceConf.notes[note.noteLib.noteKey] = SpaceNoteConf(
-        displayName: note.noteConf!.displayName,
-        order: note.noteConf!.order,
-      );
+      spaceConf.notes[note.noteLib.noteKey] = note.noteConf!;
     }
     return spaceConf.save(_noteSpaceJsonFile);
   }
