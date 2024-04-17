@@ -167,38 +167,8 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 
   print.$____________________________________________________________________();
   print.markdown("""
-### 处理方案2
-
-用闭包函数的小技巧来记住currentCell，就可以用print做动态效果：
-""");
-  print.$____________________________________________________________________();
-  (NoteCell print) {
-    int i = 0;
-    print(ElevatedButton(
-      onPressed: () {
-        i++;
-        print("闭包记住currentCell $i");
-      },
-      child: const Text("闭包记住currentCell"),
-    ));
-  }(print.currentCell);
-
-  print.$____________________________________________________________________();
-  print.markdown("""
 或用runInCurrentCell函数(与上面同理)来记住currentCell，就可以用print做动态效果：
 """);
-
-  print.$____________________________________________________________________();
-  print.runInCurrentCell((NoteCell print) {
-    int i = 0;
-    print(ElevatedButton(
-      onPressed: () {
-        i++;
-        print("runInCurrentCell $i");
-      },
-      child: const Text("runInCurrentCell"),
-    ));
-  });
 
   print.$____________________________________________________________________();
   print.markdown("""

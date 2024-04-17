@@ -378,18 +378,6 @@ class Pen {
 abstract class NoteContent {}
 
 mixin NoteContentWidgetMixin on Widget {
-  get isMarkdown;
-}
-
-abstract class NoteContentExt {
-  NoteContentWidgetMixin? create(Object? data, NoteContentArg arg);
-}
-
-class NoteContentArg {
-  final NoteCell cell;
-  final Outline outline;
-
-  NoteContentArg({required this.cell, required this.outline});
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
@@ -601,7 +589,7 @@ class NoteCell extends ChangeNotifier {
 
   bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
-    return _contents.every((e) => e.isMarkdown);
+    return _contents.every((e) => e is MarkdownContentWidget);
   }
 
   void call(Object? content) {

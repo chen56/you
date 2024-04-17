@@ -1,7 +1,7 @@
 
 
-import 'package:note_dart/note.dart';
 import 'package:flutter/material.dart';
+import 'package:note_dart/src/note_core.dart';
 
 class ObjectContent extends NoteContent {
   final Object? object;
@@ -18,10 +18,6 @@ class ObjectContentWidget extends StatelessWidget with NoteContentWidgetMixin {
   final ObjectContent content;
 
   const ObjectContentWidget({super.key, required this.content});
-
-  @override
-  get isMarkdown => false;
-
   @override
   Widget build(BuildContext context) {
     return Text("${content.object}");

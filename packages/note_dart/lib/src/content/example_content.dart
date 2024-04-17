@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note_dart/src/content/params.dart';
-import 'package:note_dart/note.dart';
 import 'package:note_dart/src/flutter_highlight.dart';
 import 'package:note_dart/core.dart';
+import 'package:note_dart/src/note_core.dart';
 import 'package:note_dart/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
@@ -257,7 +257,4 @@ class ExampleWidget extends StatelessWidget with NoteContentWidgetMixin {
       ),
     );
   }
-
-  @override
-  get isMarkdown => true;
 }

@@ -8,17 +8,17 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print(MockupContent()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+  print(MockupWindow()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
     return ColoredBox(
       color: Colors.red,
       child: Text(" $constraints"),
     );
   })));
-  print(MockupContent()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+  print(MockupWindow()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
     return Text(" $constraints");
   })));
 
-  print(MockupContent(
+  print(MockupWindow(
     width: 100000,
   )(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
     return SizedBox.square(
@@ -26,7 +26,7 @@ build(BuildContext context, Pen print) {
       child: Text("$constraints"),
     );
   })));
-  print(MockupContent(
+  print(MockupWindow(
     height: 100,
     width: 10000,
   )(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
