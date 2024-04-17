@@ -14,12 +14,9 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(Row(
     children: [
-      CheckboxMenuButton(
-          value: true,
-          onChanged: (bool? value) {},
-          child: const Text('CheckboxMenuButton')),
+      CheckboxMenuButton(value: true, onChanged: (bool? value) {}, child: const Text('CheckboxMenuButton')),
     ],
-  )));
+  ));
 }

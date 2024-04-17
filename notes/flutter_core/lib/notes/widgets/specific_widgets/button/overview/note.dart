@@ -17,7 +17,7 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Wrap(
+  print(Wrap(
     children: [
       ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
       FilledButton(onPressed: () {}, child: const Text('FilledButton')),
@@ -25,7 +25,7 @@ the Material Design overview types and how they should be used in designs.
       OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
       TextButton(onPressed: () {}, child: const Text('TextButton')),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -35,13 +35,13 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(Row(
     children: [
       IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.wifi)),
       IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.add)),
       IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.ac_unit)),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -53,7 +53,7 @@ the Material Design overview types and how they should be used in designs.
   print.$____________________________________________________________________();
   int id = 0;
 
-  print(WidgetContent(Row(
+  print(Row(
     children: [
       FloatingActionButton(
         onPressed: () {},
@@ -81,7 +81,7 @@ the Material Design overview types and how they should be used in designs.
         heroTag: "overview.FloatingActionButton${id++}",
       ),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -97,14 +97,14 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(const Row(
+  print(const Row(
     children: [
       BackButton(),
       CloseButton(),
       DrawerButton(),
       EndDrawerButton(),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -117,7 +117,7 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(Row(
     children: [
       ToggleButtons(
         onPressed: (_) {},
@@ -129,7 +129,7 @@ the Material Design overview types and how they should be used in designs.
         ],
       ),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -143,7 +143,7 @@ the Material Design overview types and how they should be used in designs.
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(Row(
     children: [
       SegmentedButton<String>(
         multiSelectionEnabled: true,
@@ -157,7 +157,7 @@ the Material Design overview types and how they should be used in designs.
         onSelectionChanged: (_) {},
       ),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -200,23 +200,19 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(
-    WidgetContent(
-      Column(
-        children: [
-          const Text("1.普通Text"),
-          InkWell(
-            onTap: () {},
-            child: const Text("2.裹了层InkWell的Text"),
-          ),
-          InkResponse(
-            onTap: () {},
-            child: const Text("3.裹了层InkResponse的Text"),
-          )
-        ],
+  print(Column(
+    children: [
+      const Text("1.普通Text"),
+      InkWell(
+        onTap: () {},
+        child: const Text("2.裹了层InkWell的Text"),
       ),
-    ),
-  );
+      InkResponse(
+        onTap: () {},
+        child: const Text("3.裹了层InkResponse的Text"),
+      )
+    ],
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -226,19 +222,15 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
   ''');
 
   print.$____________________________________________________________________();
-  print(
-    WidgetContent(
-      Container(
-        width: 600,
-        color: Colors.lime.shade50,
-        child: ButtonBar(
-          children: [
-            ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton2")),
-            OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
-            CheckboxMenuButton(value: true, onChanged: (_) {}, child: const Text('CheckboxMenuButton')),
-          ],
-        ),
-      ),
+  print(Container(
+    width: 600,
+    color: Colors.lime.shade50,
+    child: ButtonBar(
+      children: [
+        ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton2")),
+        OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
+        CheckboxMenuButton(value: true, onChanged: (_) {}, child: const Text('CheckboxMenuButton')),
+      ],
     ),
-  );
+  ));
 }

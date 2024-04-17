@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(WidgetContent(Row(childr)
+        /// (print(Row(children: [CheckboxM)
         (
           cellType: 'body',
           offset: 296,
-          end: 494,
+          end: 448,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 494,
-          end: 496,
+          offset: 448,
+          end: 450,
           specialNodes: <({
             String nodeType,
             int end,

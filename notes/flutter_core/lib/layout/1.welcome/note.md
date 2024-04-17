@@ -89,6 +89,10 @@
   - **AlignTransition** 和 **PositionedTransition**：
     - 这两个组件是对`Align`和`Positioned`组件的动画版本，可以为子组件的对齐或定位提供平滑过渡动画。
 
+## 核心知识点
+
+- StatefulWidget在最外层会随着屏幕大小变化自动build
+- /// /flutter/examples/api/lib/widgets/framework/build_owner.0.dart
 
 
 

@@ -20,9 +20,9 @@ ButtonStyleButton 相关子类
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Wrap(children: [
+  print(Wrap(children: [
     ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
-  ])));
+  ]));
 
   print.$____________________________________________________________________();
   print.markdown(r'''

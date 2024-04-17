@@ -26,11 +26,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(WidgetContent(Wrap(child)
+        /// (print(Wrap(children: [Elevated)
         (
           cellType: 'body',
           offset: 762,
-          end: 888,
+          end: 873,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 范例2 Met)
         (
           cellType: 'body',
-          offset: 966,
-          end: 1010,
+          offset: 951,
+          end: 995,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1010,
-          end: 1012,
+          offset: 995,
+          end: 997,
           specialNodes: <({
             String nodeType,
             int end,

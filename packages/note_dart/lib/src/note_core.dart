@@ -377,8 +377,7 @@ class Pen {
 /// note content is not widget , it is data.
 abstract class NoteContent {}
 
-mixin NoteContentWidgetMixin on Widget {
-}
+mixin NoteContentWidgetMixin on Widget {}
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -575,7 +574,7 @@ class NoteCell extends ChangeNotifier {
     );
   }
 
-  List<NoteContentWidgetMixin> get contents => List.unmodifiable(_contents);
+  List<Widget> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -595,14 +594,11 @@ class NoteCell extends ChangeNotifier {
   void call(Object? content) {
     var result = switch (content) {
       MarkdownContent _ => MarkdownContentWidget(content: content, outline: outline),
-      WidgetContent _ => WidgetContentWidget(content: content),
-      Widget _ => WidgetContentWidget(content: WidgetContent(content)),
+      Widget _ => WidgetContentWidget(content: content),
       ExampleContent _ => ExampleWidget(content: content, rootParam: content.mate.toRootParam(editors: noteSystem._editors), cell: this),
-      _ => ObjectContentWidget(content: ObjectContent(content)),
+      _ => ObjectContentWidget(content: content),
     };
     _add(result as NoteContentWidgetMixin);
-    //TODO remove contentExtensions
-    // _add(contentExtensions.create(object, NoteContentArg(cell: this, outline: outline)));
   }
 
   void _add(NoteContentWidgetMixin content) {

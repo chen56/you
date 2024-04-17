@@ -28,12 +28,12 @@ build(BuildContext context, Pen print) {
   };
   for (var entry in sampleIcons.entries) {
     var (name, iconData) = (entry.key, entry.value);
-    print(WidgetContent(Row(
+    print(Row(
       children: [
         Icon(iconData, size: 24, color: Colors.blue),
         Text("Icons.$name"),
       ],
-    )));
+    ));
   }
 // 暂时放弃此范例，因为图标库太大
 //   print.$____________________________________________________________________();

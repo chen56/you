@@ -27,10 +27,10 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(const SizedBox(
+  print(const SizedBox(
     height: 100,
     child: Text("请修改height,调节高度"),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -38,7 +38,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(const Text("我是Text.data,修改我")));
+  print(const Text("我是Text.data,修改我"));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -48,7 +48,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Container(
+  print(Container(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
@@ -61,7 +61,7 @@ TODO 暂时只能显示，还不能编辑
         clipBehavior: Clip.none,
       ),
     ),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -69,12 +69,12 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Container(
+  print(Container(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
     child: const Text("修改Text.softWrap: 自动换行", softWrap: true),
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -84,7 +84,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(Row(
+  print(Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       Container(
@@ -98,7 +98,7 @@ TODO 暂时只能显示，还不能编辑
         color: Colors.green,
       ),
     ],
-  )));
+  ));
 
   print.$____________________________________________________________________();
   print.markdown(r'''
@@ -122,11 +122,9 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   // 包含MateSample调用的语句会被范例代码擦除
   print(
-    WidgetContent(
-      ElevatedButton(
-          onPressed: showAbout,
-          child: const Text("Button1")),
-    ),
+    ElevatedButton(
+        onPressed: showAbout,
+        child: const Text("Button1")),
   );
 
   print.$____________________________________________________________________();
@@ -136,7 +134,7 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 
   print.$____________________________________________________________________();
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    print(WidgetContent(Row(
+    print(Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton(
@@ -146,6 +144,6 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
             onPressed: () {},
             child: Text("${mainAxisAlignment.name}:Button2")),
       ],
-    )));
+    ));
   }
 }

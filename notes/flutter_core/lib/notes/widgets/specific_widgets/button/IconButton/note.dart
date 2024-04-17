@@ -14,7 +14,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(WidgetContent(const Wrap(children: [
+  print(const Wrap(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  ])));
+  ]));
 }

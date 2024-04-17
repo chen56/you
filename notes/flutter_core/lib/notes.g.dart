@@ -63,14 +63,6 @@ import 'package:flutter_core/notes/widgets/container_widgets/menu/note.dart' def
 import 'package:flutter_core/notes/widgets/container_widgets/menu/note.g.dart' as widgets_container_widgets_menu_g;
 import 'package:flutter_core/notes/widgets/container_widgets/scrollable/Dismissible/note.dart' deferred as widgets_container_widgets_scrollable_Dismissible_;
 import 'package:flutter_core/notes/widgets/container_widgets/scrollable/Dismissible/note.g.dart' as widgets_container_widgets_scrollable_Dismissible_g;
-import 'package:flutter_core/notes/widgets/layout/box_layout/constraints/note.dart' deferred as widgets_layout_box_layout_constraints_;
-import 'package:flutter_core/notes/widgets/layout/box_layout/constraints/note.g.dart' as widgets_layout_box_layout_constraints_g;
-import 'package:flutter_core/notes/widgets/layout/note.dart' deferred as widgets_layout_;
-import 'package:flutter_core/notes/widgets/layout/note.g.dart' as widgets_layout_g;
-import 'package:flutter_core/notes/widgets/layout/old/layout/note.dart' deferred as widgets_layout_old_layout_;
-import 'package:flutter_core/notes/widgets/layout/old/layout/note.g.dart' as widgets_layout_old_layout_g;
-import 'package:flutter_core/notes/widgets/layout/responsive_design/note.dart' deferred as widgets_layout_responsive_design_;
-import 'package:flutter_core/notes/widgets/layout/responsive_design/note.g.dart' as widgets_layout_responsive_design_g;
 import 'package:flutter_core/notes/widgets/specific_widgets/button/ButtonStyleButton/note.dart' deferred as widgets_specific_widgets_button_ButtonStyleButton_;
 import 'package:flutter_core/notes/widgets/specific_widgets/button/ButtonStyleButton/note.g.dart' as widgets_specific_widgets_button_ButtonStyleButton_g;
 import 'package:flutter_core/notes/widgets/specific_widgets/button/FloatingActionButton/note.dart' deferred as widgets_specific_widgets_button_FloatingActionButton_;
@@ -157,10 +149,6 @@ abstract class BaseNotes {
   final Note widgets_specific_widgets_text_RichText               = put("/widgets/specific_widgets/text/RichText",widgets_specific_widgets_text_RichText_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_specific_widgets_text_RichText_.loadLibrary().then((value) => widgets_specific_widgets_text_RichText_.build)));  
   final Note widgets_specific_widgets_text_Text                   = put("/widgets/specific_widgets/text/Text",widgets_specific_widgets_text_Text_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_specific_widgets_text_Text_.loadLibrary().then((value) => widgets_specific_widgets_text_Text_.build)));  
   final Note widgets_specific_widgets_icon                        = put("/widgets/specific_widgets/icon",widgets_specific_widgets_icon_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_specific_widgets_icon_.loadLibrary().then((value) => widgets_specific_widgets_icon_.build)));  
-  final Note widgets_layout_old_layout                            = put("/widgets/layout/old/layout",widgets_layout_old_layout_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_layout_old_layout_.loadLibrary().then((value) => widgets_layout_old_layout_.build)));  
-  final Note widgets_layout_box_layout_constraints                = put("/widgets/layout/box_layout/constraints",widgets_layout_box_layout_constraints_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_layout_box_layout_constraints_.loadLibrary().then((value) => widgets_layout_box_layout_constraints_.build)));  
-  final Note widgets_layout_responsive_design                     = put("/widgets/layout/responsive_design",widgets_layout_responsive_design_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_layout_responsive_design_.loadLibrary().then((value) => widgets_layout_responsive_design_.build)));  
-  final Note widgets_layout                                       = put("/widgets/layout",widgets_layout_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_layout_.loadLibrary().then((value) => widgets_layout_.build)));  
   final Note widgets_container_widgets_menu                       = put("/widgets/container_widgets/menu",widgets_container_widgets_menu_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_container_widgets_menu_.loadLibrary().then((value) => widgets_container_widgets_menu_.build)));  
   final Note widgets_container_widgets_scrollable_Dismissible     = put("/widgets/container_widgets/scrollable/Dismissible",widgets_container_widgets_scrollable_Dismissible_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_container_widgets_scrollable_Dismissible_.loadLibrary().then((value) => widgets_container_widgets_scrollable_Dismissible_.build)));  
   final Note widgets_container_widgets_bar                        = put("/widgets/container_widgets/bar",widgets_container_widgets_bar_g.noteInfo(), (note) async => note.loadPage(builder:await widgets_container_widgets_bar_.loadLibrary().then((value) => widgets_container_widgets_bar_.build)));  
