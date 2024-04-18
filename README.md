@@ -5,7 +5,7 @@
 
 ## flutter note
 
-The flutter note project has been published in <https://chen56.github.io/you>,
+The flutter note project has been published in <https://chen56.github.io/you/flutter_web>
 
 you can run it local by yourself:
 
