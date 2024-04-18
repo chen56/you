@@ -9,24 +9,15 @@ SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 # 进入脚本所在目录，这样上下文就是本项目了
 cd "$SCRIPT_DIR" || exit 200
 
-bake.upgrade(){
-  mkdir -p "$SCRIPT_DIR/vendor"
-  echo "bake -> bake.upgrade ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
-  curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/bake/raw/main/bake.bash ;
-}
-if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
-  bake.upgrade
-fi
-
 # include common script
-source "$SCRIPT_DIR/vendor/bake.bash"
+source "packages/you_bake/bake.bash"
 
 ##########################################
 # 应用的命令脚本 , 公共函数和全局变量
 ##########################################
 
 declare -A _pkgs=(
-    ["bake"]="$SCRIPT_DIR"
+    ["bake"]="$SCRIPT_DIR/packages/you_bake"
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
     ["you"]="$SCRIPT_DIR"
     ["note_dart"]="$SCRIPT_DIR/packages/note_dart"
@@ -35,20 +26,6 @@ declare -A _pkgs=(
     ["shell"]="$SCRIPT_DIR/notes/shell"
 )
 
-bake.cmd --cmd pkgs --desc "<mono> mono project manage: ./$SCRIPT_FILE pkgs <ls|run>"
-ls(){
-  for pkg in ${!_pkgs[*]} ; do
-    echo "$pkg:${_pkgs[$pkg]}"
-  done
-}
-
-bake.cmd --cmd pkgs.run --desc "<mono> run cmd on all pkg,Usage: ./$SCRIPT_FILE pkgs run [any cmd]"
-run(){
-  for pkg in ${!_pkgs[*]} ; do
-    # 子shell内执行，防止环境感染
-    (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
-  done
-}
 
 # 运行所用项目的某子命令
 # Usage:    _run_all_package <subcmd>
@@ -103,37 +80,6 @@ _func_exists(){
 # 应用的命令脚本
 ##########################################
 
-bake.cmd --cmd root --desc "$( cat <<-EOF
-
- ___  _        _    _                    _  _       _
-| __|| | _  _ | |_ | |_  ___  _ _       | \| | ___ | |_  ___
-| _| | || || ||  _||  _|/ -_)| '_|      | .  |/ _ \|  _|/ -_)
-|_|  |_| \_._| \__| \__|\___||_|        |_|\_|\___/ \__|\___|
-
-flutter-note build tools.
-https://github.com/chen56/note
-PWD: $PWD
-
-Usage:
- ./bake [cmd] [opts] [args...]
-
-Examples:
- ./bake                           # same as  './bake -h'
- ./bake -h                        # show all commands help
- ./bake -h --debug                # show all commands help , include internal function
-
- ./bake flutter dev               # == cd notes/flutter_web && flutter run --device-id macos
-
- ./bake test                      # test all projects
- ./bake build                     # defalut build == flutter build web --web-renderer html
- ./bake preview                   # defalut preview == start server at web build
- ./bake test                      # test all projects
-
- ./bake pkgs ls                   # show all mono project
- ./bake pkgs run pwd              # run "pwd" on all mono project dir
- ./bake pkgs run flutter pub get  # run "flutter pub get" on all mono project dir
-EOF
-)"
 
 # 根项目，主要是bin/辅助工具等
 you.run() {           _run "$@";}
@@ -142,6 +88,10 @@ you.clean() (         you.run rm -rf build; you.run rm -rf .dart_tool; )
 you.upgrade() (       you.run dart pub upgrade ;)
 you.test() (          you.run dart test;)
 you.build() (         you.run dart compile exe bin/notecli.dart ;)
+
+# bash common script lib
+bake.run() {           _run "$@";}
+bake.test() (          packages/you_bake/test.bash test;)
 
 note_dart.run() (     cd packages/note_dart || return 200 && _run "$@")
 note_dart.install() ( note_dart.run flutter pub get)
@@ -180,6 +130,17 @@ upgrade() { _run_all_package upgrade;}
 clean() {   _run_all_package clean; }
 test() {    _run_all_package test; }
 gen() {     _run_all_package gen; }
+ls(){
+  for pkg in ${!_pkgs[*]} ; do
+    echo "$pkg:${_pkgs[$pkg]}"
+  done
+}
+run(){
+  for pkg in ${!_pkgs[*]} ; do
+    # 子shell内执行，防止环境感染
+    (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
+  done
+}
 
 # github 发布时使用,参考[.github/workflows/*.yaml]
 docker.build() (
@@ -203,5 +164,40 @@ info() {
 ####################################################
 # app entry script & _root cmd
 ####################################################
+bake.cmd --cmd ls --desc "<mono> mono project manage: ./$SCRIPT_FILE pkgs <ls|run>"
+bake.cmd --cmd run --desc "<mono> run cmd on all pkg,Usage: ./$SCRIPT_FILE pkgs run [any cmd]"
+
+bake.cmd --cmd root --desc "$( cat <<-EOF
+
+ ___  _        _    _                    _  _       _
+| __|| | _  _ | |_ | |_  ___  _ _       | \| | ___ | |_  ___
+| _| | || || ||  _||  _|/ -_)| '_|      | .  |/ _ \|  _|/ -_)
+|_|  |_| \_._| \__| \__|\___||_|        |_|\_|\___/ \__|\___|
+
+https://github.com/chen56/you/flutter_web
+
+PWD: $PWD
+
+Usage:
+ ./bake [cmd] [opts] [args...]
+
+Examples:
+ ./bake                           # same as  './bake -h'
+ ./bake -h                        # show all commands help
+ ./bake -h --debug                # show all commands help , include internal function
+
+ ./bake flutter dev               # == cd notes/flutter_web && flutter run --device-id macos
+
+ ./bake test                      # test all projects
+ ./bake build                     # defalut build == flutter build web --web-renderer html
+ ./bake preview                   # defalut preview == start server at web build
+ ./bake test                      # test all projects
+
+ ./bake pkgs ls                   # show all mono project
+ ./bake pkgs run pwd              # run "pwd" on all mono project dir
+ ./bake pkgs run flutter pub get  # run "flutter pub get" on all mono project dir
+EOF
+)"
+
 bake.go "$@"
 

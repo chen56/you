@@ -1,0 +1,158 @@
+#!/usr/bin/env bash
+
+
+########################################################
+# 范例：示范一个稍微复杂点的多模块mono项目
+# 参考：https://github.com/chen56/younpc/blob/main/bake
+# 运行 ./bake -h 查看本文件的效果和帮助
+########################################################
+
+
+########################################################
+# 本节为模版代码，每个copy一下即可，主要是自动下载bake.bash依赖
+########################################################
+
+# 模版脚本，用来获取本文件的realpath
+# 我在我的所有脚本头都会放这个函数，方便得到真正的当前脚本目录
+# On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
+_real_path() (
+  cd "$(dirname "$1")"
+  declare file="$PWD/$(basename "$1")"
+  while [[ -L "$file" ]]; do
+    file="$(readlink "$file")"
+    cd -P "$(dirname "$file")"
+    file="$PWD/$(basename "$file")"
+  done
+  echo "$file"
+)
+SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
+
+# 脚本动态安装bake.bash依赖
+_install_bake(){
+  mkdir -p "$SCRIPT_DIR/vendor"
+  echo "$SCRIPT_PATH -> _install_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
+  curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/bake/raw/main/bake.bash ;
+}
+if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
+  _install_bake
+fi
+
+# include common script
+source "$SCRIPT_DIR/vendor/bake.bash"
+
+
+
+##########################################
+# app cmd script
+# 应用的命令脚本
+##########################################
+
+# 模仿一个mono多包项目
+declare -A pkgs=(
+    ["app"]="$SCRIPT_DIR/app"
+    ["kous"]="$SCRIPT_DIR/kous"
+    ["app_devtools"]="$SCRIPT_DIR/app_devtools"
+)
+
+# 定义根命令的帮助
+bake.cmd --cmd root --desc "$( cat <<-EOF
+
+example cli tools. mono项目，包含多个子项目: ${!pkgs[@]}
+
+https://github.com/chen56/bake
+
+Usage:
+ ./$SCRIPT_FILE [cmd] [opts] [args...]
+
+Examples:
+ ./${SCRIPT_FILE}                # same as  './${SCRIPT_FILE} -h'
+ ./${SCRIPT_FILE} --help         # show all commands help
+ ./${SCRIPT_FILE} -h --debug     # show all commands help , include internal function
+
+ ./${SCRIPT_FILE}  test          # test all pkgs
+ ./${SCRIPT_FILE}  build         # defalut build == flutter build web --web-renderer html
+ ./${SCRIPT_FILE}  preview       # defalut preview == run server at web build
+ ./${SCRIPT_FILE}  test          # test all pkgs
+
+ ./${SCRIPT_FILE}  all -h        # show all mono pkg commands help
+ ./${SCRIPT_FILE}  all ls        # run "ls" on all mono pkgs
+
+ ./${SCRIPT_FILE}  app install   # run app pkg install 
+ ./${SCRIPT_FILE}  app test      # run app pkg install 
+EOF
+  )"
+
+
+# run一条命令，先print上下文信息，再执行
+# Usage: run <some cmd>
+# Example:
+# ------------------------------------
+# $ ./bake run pwd
+# /Users/x/git/younpc/bake:733 -> bake.go ▶︎【pwd】
+# /Users/x/git/younpc
+# ------------------------------------
+run() {
+  local caller_line=$(caller 0 | awk '{print $1}')
+  echo "$SCRIPT_PATH:$caller_line -> ${FUNCNAME[1]} ▶︎【$@】"
+  "$@"
+  return $?
+}
+
+
+## if function not exist return 1;
+# Usage: _exist_func <function>
+# Example: _exist_func app.build
+#         => return 0
+_exist_func(){
+  local func="$1"
+  if ! ( declare -F "$func" | grep "$func" &>/dev/null  2>&1; ) then
+    return 1;
+  fi
+}
+
+bake.cmd --cmd all --desc "<mono>  run cmd on all mono pkg, Usage: ./$SCRIPT_FILE all [any command]"
+all() { for name in "${!pkgs[@]}"; do  run echo "在 <${name}> 目录模仿运行: $@" ; done ; }
+
+# app子项目
+bake.cmd --cmd app --desc "<mono> pkg, Usage: ./$SCRIPT_FILE app [cmd]"
+app.run(){      run echo "在 <${pkgs[app]}> 目录模仿运行: $@" ; }
+app.install(){  app.run flutter pub get ; }
+app.clean(){    app.run flutter clean ; }
+app.dev(){      app.run flutter run --no-pub --device-id macos ; }
+app.build(){    app.run flutter build macos --release --tree-shake-icons "$@";  }
+app.preview(){  app.run open "${pkgs[app]}/build/macos/Build/Products/Release/younpc.app" ; }
+
+# app_devtools子项目
+bake.cmd --cmd app_devtools --desc "<mono> pkg, Usage: ./$SCRIPT_FILE app_devtools [cmd]"
+app_devtools.run(){     run echo "在 <${pkgs[app_devtools]}>目录模仿运行: $@" ; }
+app_devtools.install(){ cd "${pkgs[app_devtools]}" && run flutter pub get ; }
+app_devtools.dev(){     cd "${pkgs[app_devtools]}" && run flutter run -d Chrome --dart-define=use_simulated_environment=true ; }
+app_devtools.build(){   cd "${pkgs[app_devtools]}" && dart run devtools_extensions build_and_copy --source=. --dest="${pkgs[app_devtools]}/extension/devtools" ; }
+
+# 服务器子项目
+bake.cmd --cmd server --desc "<mono> pkg, Usage: ./$SCRIPT_FILE server [cmd]"
+server.run(){      run echo "在 <${pkgs[server]}> 目录模仿运行: $@" ; }
+server.clean(){      server.run "nothing clean" ; }
+server.install(){    server.run go mod tidy    ; }
+
+install(){
+  _install_bake
+  run git lfs install
+  for pkg in "${!pkgs[@]}"; do
+    if _exist_func "$pkg.install" ; then "$pkg.install" ; fi
+  done
+}
+
+clean(){
+  for pkg in "${!pkgs[@]}"; do
+    if _exist_func "$pkg.clean" ; then "$pkg.clean" ; fi
+  done
+}
+
+####################################################
+# app entry script & _root cmd
+####################################################
+bake.go "$@"
+

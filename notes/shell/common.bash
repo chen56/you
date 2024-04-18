@@ -24,8 +24,8 @@ SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
 
 _install_bake(){
   mkdir -p "$SCRIPT_DIR/vendor"
-  echo "$SCRIPT_PATH -> _install_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/bake/raw/main/bake.bash】"
-  curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/bake/raw/main/bake.bash ;
+  echo "$SCRIPT_PATH -> _install_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/you/raw/main/packages/you_bake/bake.bash】"
+  curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/you/raw/main/packages/you_bake/bake.bash ;
 }
 if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
   _install_bake

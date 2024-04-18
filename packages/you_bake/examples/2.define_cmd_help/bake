@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+########################################################
+# 范例：示范父子命令,并为每个命令定义帮助
+# 运行 ./bake -h 查看本文件的效果和帮助
+########################################################
+
+
+########################################################
+# 本节为模版代码，每个copy一下即可，主要是自动下载bake.bash依赖
+########################################################
+
+
+# 模版脚本，用来获取本脚本的realpath
+# 我在我的所有脚本头都会放这个函数，方便得到真正的当前脚本目录
+# On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
+_real_path() (
+  cd "$(dirname "$1")"
+  declare file="$PWD/$(basename "$1")"
+  while [[ -L "$file" ]]; do
+    file="$(readlink "$file")"
+    cd -P "$(dirname "$file")"
+    file="$PWD/$(basename "$file")"
+  done
+  echo "$file"
+)
+
+SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
+
+# 脚本动态安装bake.bash依赖到: vendor/bake.bash
+_install_bake(){
+  mkdir -p "$SCRIPT_DIR/vendor"
+  echo "$SCRIPT_PATH -> _install_bake ▶︎【curl -o $SCRIPT_DIR/bake.bash https://github.com/chen56/you/raw/main/packages/you_bake/bake.bash】"
+  curl -L -o  "$SCRIPT_DIR/vendor/bake.bash" https://github.com/chen56/you/raw/main/packages/you_bake/bake.bash ;
+}
+if ! [[ -f "$SCRIPT_DIR/vendor/bake.bash" ]]; then
+  _install_bake
+fi
+
+# include common script
+source "$SCRIPT_DIR/vendor/bake.bash"
+
+
+##########################################
+# app cmd script
+# 应用的命令脚本
+##########################################
+
+
+# 用bake.cmd命令定义root帮助
+bake.cmd --cmd root --desc "$( cat <<-EOF
+
+bake cli example.
+
+https://github.com/chen56/younpc
+
+Usage:
+ ./$SCRIPT_FILE [cmd] [opts] [args...]
+
+Examples:
+ ./${SCRIPT_FILE}                # same as  './${SCRIPT_FILE} -h'
+ ./${SCRIPT_FILE} --help         # show all commands help
+ ./${SCRIPT_FILE} -h --debug     # show all commands help , include internal function
+
+ ./${SCRIPT_FILE}  test          # test all pkgs
+ ./${SCRIPT_FILE}  build         # defalut build == flutter build web --web-renderer html
+ ./${SCRIPT_FILE}  preview       # defalut preview == run server at web build
+ ./${SCRIPT_FILE}  test          # test all pkgs
+
+EOF
+  )"
+
+
+# 用bake.cmd命令定义其他命令帮助
+bake.cmd --cmd install  --desc "install deps"
+bake.cmd --cmd clean    --desc "clean project"
+bake.cmd --cmd dev      --desc "run dev mode"
+bake.cmd --cmd preview  --desc "run preview mode"
+bake.cmd --cmd test     --desc "test project"
+bake.cmd --cmd build    --desc "build project"
+
+install(){ _install_bake ; }
+clean(){   echo "clean project"; }
+dev(){     echo "run dev mode"; }
+preview(){ echo "run preview mode"; }
+test(){    echo "test project"; }
+build(){   echo "build project"; }
+
+####################################################
+# bake entry
+####################################################
+bake.go "$@"
