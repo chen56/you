@@ -3,7 +3,7 @@ import 'package:note_dart/note.dart';
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# flutter note项目
+# flutter note项目 .
 
 >  **🚫Tip:**
 > 本笔记项目当前主要目标：
