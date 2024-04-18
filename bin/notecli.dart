@@ -302,10 +302,6 @@ class NoteLib {
     );
     return result._gen(result._collectInfo());
   }
-
-// _NoteAnalyzer genSync() async {
-//
-// }
 }
 
 enum _CellType { header, body, tail }

@@ -1,7 +1,7 @@
 name: note
-description: A Flutter note project.
-version: 1.0.0
-homepage: https://github.com/chen56/note
+description: you-* project include some flutter common lib ,and my study notes.
+version: 0.0.2
+homepage: https://github.com/chen56/you
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
