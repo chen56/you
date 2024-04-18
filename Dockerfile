@@ -12,7 +12,7 @@ WORKDIR ./you
 
 RUN ./bake install
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
-RUN ./bake flutter_web build
+RUN ./bake flutter build --base-href "/you/flutter_web/"
 RUN pwd
 RUN ls -l
 
@@ -24,7 +24,7 @@ FROM nginx:1.23.4 as nginx
 # ref:
 # https://github.com/nginxinc/docker-nginx/blob/master/mainline
 
-COPY --from=ci /home/flutter/you/notes/flutter_web/build/web /usr/share/nginx/html/
+COPY --from=ci /home/flutter/you/notes/flutter_web/build/web /usr/share/nginx/html/you/flutter_web
 
 # The port that your application listens to.
 EXPOSE 443
