@@ -21,7 +21,7 @@ jobs:
 #        Remote "mirror" does not support the LFS locking API. Consider disabling it with:
 #        $ git config lfs.https://gitee.com/younpc/note.git/info/lfs.locksverify false
       - run: git config lfs.https://gitee.com/younpc/note.git/info/lfs.locksverify false
-      - run: rm .gitattributes
+      - run: rm .git/hooks/pre-push
 
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
