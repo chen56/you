@@ -435,7 +435,7 @@ MenuBar相关组件：
             MenuItemButton(
               onPressed: click,
               child: const MenuAcceleratorLabel(
-                '&flutter_core github',
+                '&flutter_web github',
                 builder: MenuAcceleratorLabel.defaultLabelBuilder,
               ),
             )

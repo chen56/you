@@ -1,12 +1,12 @@
 # cheetsheet 纲要
 
-## flutter_core纲要计划
+## flutter_web纲要计划
 
 >  **🚫Tip:**
 > 暂不打算写Cupertino相关笔记，看看flutter/src/cupertino目录中的代码数量，很少啊，是认真在搞吗？我们还是学好material相关吧。
 
 
-下面内容为flutter_core项目的提供一个全局视图，后续会逐步填充各个主题页面。
+下面内容为flutter_web项目的提供一个全局视图，后续会逐步填充各个主题页面。
 
 ## Flutter cheatsheet计划
 
@@ -48,7 +48,7 @@ material.io对Compoent的定义如下：
 我们就不单独归类了，直接归为所依附的MenuBar组件群中。
 
 除了组件概念外，还有一些非常明确的主题分类，比如国际化、Layout等，我们分类的原则是，要么不分类，要分类就不要产生混淆。
-加上这些，本flutter_core项目的速查细目分类如下：
+加上这些，本flutter_web项目的速查细目分类如下：
 
 ### 放其他组件的容器
 

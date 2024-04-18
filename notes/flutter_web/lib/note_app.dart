@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note_dart/ui.dart';
 import 'package:note_dart/note_shell.dart';
 import 'package:note_dart/note.dart';
-import 'package:flutter_core/notes.g.dart';
+import 'package:flutter_web/notes.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
@@ -54,7 +54,7 @@ class Notes extends BaseNotes with Navigable {
 
   @override
   Screen get initial {
-    String? last = sharedPreferences.getString("flutter_core.notes.location");
+    String? last = sharedPreferences.getString("flutter_web.notes.location");
     if (last == null) {
       return switchTo(widgets_container_widgets_bar.path);
     }
@@ -69,7 +69,7 @@ class Notes extends BaseNotes with Navigable {
     assert(BaseNotes.rootroot.contains(location),
         "location not found: $location ${BaseNotes.rootroot.toList()}");
     NoteRoute find = BaseNotes.rootroot.child(location)!; // ?? notFound;
-    sharedPreferences.setString("flutter_core.notes.location", location);
+    sharedPreferences.setString("flutter_web.notes.location", location);
     // sync mode
     // return find.createScreen(location);
     // async mode

@@ -1,6 +1,6 @@
 {
-    "displayName": "flutter_core",
-    "short_name": "flutter_core",
+    "displayName": "flutter_web",
+    "short_name": "flutter_web",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -55,7 +55,7 @@ class GenAllCommand extends Command {
     }
 
     _log("gen: $dir");
-    NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_core", fmt: DartFormatter(pageWidth: 500), fs: fs, projectDir: dir);
+    NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_web", fmt: DartFormatter(pageWidth: 500), fs: fs, projectDir: dir);
 
     await gen.gen();
   }
@@ -214,9 +214,9 @@ $fields
 // // ignore_for_file: library_prefixes, non_constant_identifier_names
 //
 // import 'package:note_dart/note.dart';
-// import 'package:flutter_core/1.welcome/page.dart' deferred as welcome_;
-// import 'package:flutter_core/1.welcome/page.g.dart' as welcome_g;
-// import 'package:flutter_core/note_app.dart';
+// import 'package:flutter_web/1.welcome/page.dart' deferred as welcome_;
+// import 'package:flutter_web/1.welcome/page.g.dart' as welcome_g;
+// import 'package:flutter_web/note_app.dart';
 //
 // mixin PathsMixin {
 //   final Note welcome = put2(

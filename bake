@@ -32,7 +32,7 @@ declare -A _pkgs=(
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
     ["note"]="$SCRIPT_DIR"
     ["note_dart"]="$SCRIPT_DIR/packages/note_dart"
-    ["flutter"]="$SCRIPT_DIR/notes/flutter_core"
+    ["flutter"]="$SCRIPT_DIR/notes/flutter_web"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
     ["shell"]="$SCRIPT_DIR/notes/shell"
 )
@@ -53,16 +53,16 @@ run(){
 }
 
 # 运行所用项目的某子命令
-# Usage:    _run_on_all_package <subcmd>
-# Example:  _run_on_all_package clean
+# Usage:    _run_all_package <subcmd>
+# Example:  _run_all_package clean
 #     run =>  note.clean
 #             mate.clean
 #             flutter.clean
 #             ...
-_run_on_all_package() {
+_run_all_package() {
   local subcmd="$1"
   if [[ "$subcmd" == "" ]] ; then
-    echo "缺subcmd参数 Usage:_run_on_all_package <subcmd>";
+    echo "缺subcmd参数 Usage:_run_all_package <subcmd>";
     return 100;
   fi
   for pkg in "${!_pkgs[@]}"; do
@@ -81,7 +81,6 @@ _run_on_all_package() {
 _run() {
   local caller_line;
   caller_line=$(caller 0 | awk '{print $1}')
-  local project
   # home目录替换为"~"符号
   # ${PWD#$HOME}可以删掉home目录前缀, 类似$(echo $PWD | sed "s|^$HOME||")，比sed简单高效,而且sed处理变量总有特殊字符问题
   local current="~${PWD/#$HOME}"
@@ -126,7 +125,7 @@ Examples:
  ./${SCRIPT_FILE} -h                       # show all commands help
  ./${SCRIPT_FILE} -h --debug               # show all commands help , include internal function
 
- ./${SCRIPT_FILE}  flutter dev             # == cd notes/flutter_core && flutter run --device-id macos
+ ./${SCRIPT_FILE}  flutter dev             # == cd notes/flutter_web && flutter run --device-id macos
 
  ./${SCRIPT_FILE}  test                    # test all projects
  ./${SCRIPT_FILE}  build                   # defalut build == flutter build web --web-renderer html
@@ -158,7 +157,7 @@ learn_dart.clean() (   learn_dart.run rm -rf build;learn_dart.run rm -rf .dart_t
 learn_dart.upgrade() ( learn_dart.run dart pub upgrade ;)
 learn_dart.study() (    learn_dart.run dart test;)
 
-flutter.run() (                 cd notes/flutter_core && _run "$@")
+flutter.run() (                 cd notes/flutter_web && _run "$@")
 flutter.install() (             flutter.run flutter pub get)
 flutter.clean() (               flutter.run flutter clean; rm -rf build;)
 flutter.upgrade() (             flutter.run flutter pub upgrade ;)
@@ -175,29 +174,29 @@ flutter.dev() {                 flutter.run flutter run --device-id macos "$@"; 
 flutter.dev_web() {             flutter.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
 # skwasm无法运行
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-  #   	npx http-server ./flutter_core/build/web --port 8000
+  #   	npx http-server ./flutter_web/build/web --port 8000
     # flutter pub global activate dhttpd
-    # run p.flutter_core dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+    # run p.flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
 flutter.preview() {             flutter.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
-flutter.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_core/ ;  ) #  mate_flutter.gen;暂时不用了
+flutter.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_web/ ;  ) #  mate_flutter.gen;暂时不用了
 
-install() { _run_on_all_package install; }
-get() {     _run_on_all_package install; }
-upgrade() { _run_on_all_package upgrade;}
-clean() {   _run_on_all_package clean; }
-test() {    _run_on_all_package test; }
-gen() {     _run_on_all_package gen; }
+install() { _run_all_package install; }
+get() {     _run_all_package install; }
+upgrade() { _run_all_package upgrade;}
+clean() {   _run_all_package clean; }
+test() {    _run_all_package test; }
+gen() {     _run_all_package gen; }
 
 # github 发布时使用,参考[.github/workflows/*.yaml]
 docker.build() (
-  _run docker build --progress plain --tag younpc/note:latest . ;
-  _run mkdir -p build/flutter_core/web;
-  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/flutter_core/web; tar xf -)";
+  _run docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
+  _run mkdir -p build;
+  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/you chen56/you tar cf - ./ | ( cd build; tar xf -)";
 )
-docker.run() {      _run echo "note preview http://localhost:8888/note/"; _run docker run --rm --name note -p 8888:80 -u root:root younpc/note;}
-docker.preview() {  _run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ; docker.run; }
-docker.debug() {    _run docker run -v "$PWD:/home/flutter/note" --workdir /home/flutter/note --rm -it fischerscode/flutter:3.19.0 bash ; }
-docker.push() {     docker image push younpc/note:latest ; }
+docker.preview() {  _run echo "note preview http://localhost:8888/you/flutter_web"; _run docker run --rm --name you -p 8888:80 -u root:root chen56/you; }
+docker.debug() {    _run docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
+docker.attach() {   _run docker run -p 8888:80  --workdir /usr/share/nginx/html/you/ --rm -it chen56/you bash ; }
+docker.push() {     docker image push chen56/you:latest ; }
 
 info() {
   echo "\$PWD        :  $PWD"

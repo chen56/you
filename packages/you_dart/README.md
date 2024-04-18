@@ -15,4 +15,4 @@ A package that facilitates for dart applications.
 
 ## Getting started
 
-ref: https://github.com/chen56/notes/flutter_core
+ref: https://github.com/chen56/notes/flutter_web

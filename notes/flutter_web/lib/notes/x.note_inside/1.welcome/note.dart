@@ -14,7 +14,7 @@ build(BuildContext context, Pen print) {
 自2022年12月开始接触flutter几个月下来，发现flutter非常适合后端程序员搞UI，完全没有css、各种js脚手架等的麻烦问题，
 而且关键是，一门技术跑各端，还跑的贼快，如果您是一名独立开发者，那就更合适了，web版、桌面版、手机版都可以搞，妙啊。
 
-## flutter_core项目介绍
+## flutter_web项目介绍
 
 ### DartPad很棒但是很慢
 
@@ -67,7 +67,7 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_core的范例可能会加一个Dartpad的链接。
+暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_web的范例可能会加一个Dartpad的链接。
 
 ### flutter一切皆widget妙啊
 
