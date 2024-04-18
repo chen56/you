@@ -2,11 +2,11 @@
 
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
-import 'package:note_dart/note_conf.dart';
-import 'package:note_dart/src/content/object_content.dart';
-import 'package:note_dart/src/content/markdown_content.dart';
-import 'package:note_dart/src/conventions.dart';
-import 'package:note_dart/src/utils_core.dart';
+import 'package:you_note_dart/note_conf.dart';
+import 'package:you_note_dart/src/content/object_content.dart';
+import 'package:you_note_dart/src/content/markdown_content.dart';
+import 'package:you_note_dart/src/conventions.dart';
+import 'package:you_note_dart/src/utils_core.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 /// 本项目page开发模型，包括几部分：

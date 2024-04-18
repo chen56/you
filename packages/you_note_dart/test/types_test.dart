@@ -1,4 +1,4 @@
-import 'package:note_dart/core.dart';
+import 'package:you_note_dart/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

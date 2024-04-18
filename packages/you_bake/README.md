@@ -1,5 +1,6 @@
 # bake
 
+纯bash项目，用于父子命令，option能力，类似于dart的args库。
 
 ```bash
 
@@ -114,4 +115,4 @@ Available Commands:
   test
 ```
 
-查看更多范例：[examples](./examples/)
+查看更多范例：[examples](./examples)

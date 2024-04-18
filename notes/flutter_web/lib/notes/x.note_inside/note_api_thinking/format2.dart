@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note_dart/note.dart';
+import 'package:you_note_dart/note.dart';
 
 build(BuildContext context, Function(Object? s) print) {
   print(const Markdown(data: "ssss"));

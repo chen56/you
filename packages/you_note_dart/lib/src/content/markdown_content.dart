@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
-import 'package:note_dart/src/flutter_highlight.dart';
-import 'package:note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/flutter_highlight.dart';
+import 'package:you_note_dart/src/note_core.dart';
 
 class MarkdownContent extends StatelessWidget {
   final Outline outline;

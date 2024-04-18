@@ -20,7 +20,7 @@ declare -A _pkgs=(
     ["bake"]="$SCRIPT_DIR/packages/you_bake"
     ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
     ["you"]="$SCRIPT_DIR"
-    ["note_dart"]="$SCRIPT_DIR/packages/note_dart"
+    ["you_note_dart"]="$SCRIPT_DIR/packages/you_note_dart"
     ["flutter_web"]="$SCRIPT_DIR/notes/flutter_web"
     ["qwik"]="$SCRIPT_DIR/notes/qwik"
     ["shell"]="$SCRIPT_DIR/notes/shell"
@@ -93,11 +93,11 @@ you.build() (         you.run dart compile exe bin/notecli.dart ;)
 bake.run() {           _run "$@";}
 bake.test() (          packages/you_bake/test.bash test;)
 
-note_dart.run() (     cd packages/note_dart || return 200 && _run "$@")
-note_dart.install() ( note_dart.run flutter pub get)
-note_dart.clean() (   note_dart.run flutter clean; rm -rf build;)
-note_dart.upgrade() ( note_dart.run flutter pub upgrade ;)
-note_dart.test() (    note_dart.run flutter test;)
+you_note_dart.run() (     cd packages/you_note_dart || return 200 && _run "$@")
+you_note_dart.install() ( you_note_dart.run flutter pub get)
+you_note_dart.clean() (   you_note_dart.run flutter clean; rm -rf build;)
+you_note_dart.upgrade() ( you_note_dart.run flutter pub upgrade ;)
+you_note_dart.test() (    you_note_dart.run flutter test;)
 
 learn_dart.run() (     cd notes/learn_dart || return 200 && _run "$@")
 learn_dart.install() ( learn_dart.run dart pub get)
