@@ -28,10 +28,6 @@ dependencies:
   analyzer: ^6.4.1
   glob: ^2.1.1
   watcher: ^1.1.0
-  stack_trace: ^1.11.1
-  checks: ^0.3.0
-  source_map_stack_trace: ^2.1.1
-  source_maps: ^0.10.12
 
 #  async: ^2.11.0
 dev_dependencies:
@@ -41,6 +37,8 @@ dev_dependencies:
   yaml_edit: ^2.2.0
 
   # for NoteDevTool
+  stack_trace: ^1.11.0
+  checks: ^0.3.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
