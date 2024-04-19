@@ -27,7 +27,6 @@ main() async {
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/js-0.6.5/lib",
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/flutter_lints-2.0.1/lib",
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/fake_async-1.3.1/lib",
-      "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/cupertino_icons-1.0.5/lib",
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/collection-1.17.0/lib",
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/clock-1.1.1/lib",
       "/Users/cccc/.pub-cache/hosted/pub.flutter-io.cn/characters-1.2.1/lib",

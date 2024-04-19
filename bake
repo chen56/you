@@ -111,21 +111,31 @@ learn_dart.study() (   learn_dart.run dart test;)
   #   	npx http-server ./flutter_web/build/web --port 8000
     # flutter pub global activate dhttpd
     # run p.flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+# install:
+# - flutter pub global activate dhttpd
+# - deno
 flutter_web.run() (                 cd notes/flutter_web && _run "$@")
 flutter_web.install() (             flutter_web.run flutter pub get)
 flutter_web.clean() (               flutter_web.run flutter clean; rm -rf build;)
 flutter_web.upgrade() (             flutter_web.run flutter pub upgrade ;)
+flutter_web.dev() {                 flutter_web.dev_html "$@"; }
+flutter_web.dev_macos() {           flutter_web.run flutter run --device-id macos "$@"; }
+flutter_web.dev_html() {            flutter_web.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.build() {               flutter_web.build_html "$@" ;}
 flutter_web.build_macos() {         flutter_web.run flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter_web.build() {               flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html "$@" ;}
+flutter_web.build_wasm() {          flutter_web.run flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
+flutter_web.build_html() {          flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_web_skwasm() {    flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 flutter_web.build_web_canvaskit() { flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter_web.dev() {                 flutter_web.run flutter run --device-id macos "$@"; }
-flutter_web.dev_web() {             flutter_web.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter_web.preview() {             flutter_web.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+flutter_web.preview() {             flutter_web.preview_html; }
+flutter_web.preview_html() {        echo "http://localhost:8080/you/flutter_web" && flutter_web.run dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
+flutter_web.preview_html_deno() {   flutter_web.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
+flutter_web.preview_wasm() (        cd  notes/flutter_web/build/web_wasm && echo "http://localhost:8080/" && dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; )
 flutter_web.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_web/ ;  ) #  mate_flutter_web.gen;暂时不用了
 
 install() { _run_all_package install; }
 get() {     _run_all_package install; }
+build() {   _run_all_package build; }
 upgrade() { _run_all_package upgrade;}
 clean() {   _run_all_package clean; }
 test() {    _run_all_package test; }

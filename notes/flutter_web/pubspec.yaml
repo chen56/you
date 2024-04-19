@@ -28,19 +28,15 @@ dependencies:
 
   note:
     path: ../../
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  # 应该是不需要这个东东的，暂时注释掉
-#  cupertino_icons: ^1.0.2
 
   path: ^1.8.2
   code_builder: ^4.4.0
   file: ^7.0.0
   shared_preferences: ^2.2.2
   meta: ^1.11.0
-
-  # flutter_inappwebview: ^6.0.0-beta.24+1  #  6.x require macos_config 13.x
-#  flutter_inappwebview: ^5.7.2+3
+  stack_trace: ^1.11.1
+  source_map_stack_trace: ^2.1.1
+  web: ^0.5.1
 
 dev_dependencies:
 
@@ -101,7 +97,6 @@ flutter:
     - lib/notes/Improve_app/event&listener&lifeycle/
     - lib/notes/i18n/
     - lib/notes/media&assets&file/assets/
-    - lib/notes/media&assets&file/file/
     - lib/notes/pure_dart/async/
     - lib/notes/style&theming/material3/
     - lib/notes/widgets/specific_widgets/button/ButtonStyleButton/
@@ -120,6 +115,8 @@ flutter:
     - lib/notes/layout/box_layout/constraints/
     - lib/notes/layout/old/layout/
     - lib/notes/layout/responsive_design/
+    - lib/notes/media&assets&file/file_desktop/
+    - lib/notes/media&assets&file/file_web/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

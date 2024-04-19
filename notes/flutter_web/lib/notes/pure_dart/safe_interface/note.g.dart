@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 151,
+          end: 155,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # json  [I, OneImpl().a();, OneImpl().a();, OneImpl().b();)
         (
           cellType: 'body',
-          offset: 151,
-          end: 520,
+          offset: 155,
+          end: 524,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 520,
-          end: 1094,
+          offset: 524,
+          end: 1098,
           specialNodes: <({
             String nodeType,
             int end,

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 119,
+          end: 170,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" # exception, print("hello");)
+        /// (print.markdown(""" # exception, List log = [];, try {throwException();} catch , print("$log-------");)
         (
           cellType: 'body',
-          offset: 119,
-          end: 179,
+          offset: 170,
+          end: 483,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 179,
-          end: 181,
+          offset: 483,
+          end: 540,
           specialNodes: <({
             String nodeType,
             int end,
