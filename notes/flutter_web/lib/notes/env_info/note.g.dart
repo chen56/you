@@ -30,7 +30,7 @@ noteInfo() => (
         (
           cellType: 'body',
           offset: 379,
-          end: 3992,
+          end: 2401,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(''' ## path  pa)
         (
           cellType: 'body',
-          offset: 4070,
-          end: 4151,
+          offset: 2479,
+          end: 2560,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print(path.absolute("a/b.dart")
         (
           cellType: 'body',
-          offset: 4229,
-          end: 4269,
+          offset: 2638,
+          end: 2678,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print.markdown(''' ## environm)
         (
           cellType: 'body',
-          offset: 4347,
-          end: 4404,
+          offset: 2756,
+          end: 2813,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// (if (kIsWeb) {print("web版无法使用环境)
         (
           cellType: 'body',
-          offset: 4482,
-          end: 4836,
+          offset: 2891,
+          end: 3245,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 4836,
-          end: 4838,
+          offset: 3245,
+          end: 3247,
           specialNodes: <({
             String nodeType,
             int end,

@@ -5,6 +5,11 @@
   },
   "currentMaxNoteId": 1,
   "notes": {
+    "/research/research_parameterized_example": {
+      "displayName": "参数化范例机制",
+      "order": 100,
+      "codeExpand": false
+    },
     "/": {
       "displayName": "flutter-note笔记",
       "order": 100,
@@ -12,11 +17,6 @@
     },
     "/x.note_inside/how_note_work": {
       "displayName": "Notebook机制",
-      "order": 100,
-      "codeExpand": false
-    },
-    "/x.note_inside/research_parameterized_example": {
-      "displayName": "参数化范例机制",
       "order": 100,
       "codeExpand": false
     },

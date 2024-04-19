@@ -87,11 +87,9 @@ flutter:
     - lib/notes/pure_dart/serialization_json/
     - lib/notes/research/remote_view/
     - lib/notes/thinking_in_ui/readable_html_vs_dart/
-    - lib/notes/x.note_inside/app_info/
     - lib/notes/x.note_inside/how_note_work/
     - lib/notes/x.note_inside/note_test_self/
     - lib/notes/x.note_inside/note_test_self/nobody/
-    - lib/notes/x.note_inside/research_parameterized_example/
     - lib/notes/Improve_app/
     - lib/notes/Improve_app/1.overview/
     - lib/notes/Improve_app/web_optimization/
@@ -119,6 +117,8 @@ flutter:
     - lib/notes/layout/responsive_design/
     - lib/notes/media&assets&file/file_desktop/
     - lib/notes/media&assets&file/file_web/
+    - lib/notes/env_info/
+    - lib/notes/research/research_parameterized_example/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

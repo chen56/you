@@ -11,10 +11,6 @@ void build(BuildContext context, Pen print) async {
   print.markdown("""
 # exception
 
-| expression | value | comment |
-| :--:       | :--: | :--: |
-| Uri.base          | ${Uri.base} | web == `window.location.href` |
-
 ## web的js堆栈转换为dart堆栈
 
 """);
