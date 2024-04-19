@@ -54,14 +54,15 @@ class Notes extends BaseNotes with Navigable {
 
   @override
   Screen get initial {
-    String? last = sharedPreferences.getString("flutter_web.notes.location");
-    if (last == null) {
-      return switchTo(widgets_container_widgets_bar.path);
-    }
-    if (BaseNotes.rootroot.contains(last)) {
-      return switchTo(last);
-    }
-    return switchTo(widgets_container_widgets_bar.path);
+    // TODO 能用实际用户的url吗？获取到浏览器的url？ URI.base
+    // String? last = sharedPreferences.getString("flutter_web.notes.location");
+    // if (last == null) {
+    //   return switchTo(widgets_container_widgets_bar.path);
+    // }
+    // if (BaseNotes.rootroot.contains(last)) {
+    //   return switchTo(last);
+    // }
+    return switchTo(this.pure_dart_execption.path);
   }
 
   @override
