@@ -116,7 +116,7 @@ flutter_web.install() (             flutter_web.run flutter pub get)
 flutter_web.clean() (               flutter_web.run flutter clean; rm -rf build;)
 flutter_web.upgrade() (             flutter_web.run flutter pub upgrade ;)
 flutter_web.build_macos() {         flutter_web.run flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter_web.build() {               flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html "$@" ;}
+flutter_web.build() {               flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html --output build/web/you/flutter_web --base-href "/you/flutter_web/" "$@" ;}
 flutter_web.build_web_skwasm() {    flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 flutter_web.build_web_canvaskit() { flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
 flutter_web.dev() {                 flutter_web.run flutter run --device-id macos "$@"; }

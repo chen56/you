@@ -38,6 +38,7 @@ dev_dependencies:
 
   # for NoteDevTool
   stack_trace: ^1.11.0
+  checks: ^0.3.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

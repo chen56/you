@@ -140,9 +140,9 @@ class NoteRoute {
   String get displayName => conf != null ? conf!.displayName : basename;
 
   String get path {
-    if (isRoot) return "";
+    if (isRoot) return "/";
     var parentPath = parent!.path;
-    return parentPath == "" ? basename : "$parentPath/$basename";
+    return parentPath == "/" ? "/$basename" : "$parentPath/$basename";
   }
 
   List<NoteRoute> toList({
@@ -224,11 +224,7 @@ class NoteRoute {
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
   Future<NotePage> lazyInit({required NotePageBuilder builder}) async {
-    return NotePage(
-        noteRoute: this,
-        pageBuilder: builder,
-        conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
-        content: await rootBundle.loadString(dartAssetPath));
+    return NotePage(noteRoute: this, pageBuilder: builder, conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)), content: await rootBundle.loadString(dartAssetPath));
   }
 }
 // TODO 这个类设计的比较突兀，
@@ -386,10 +382,10 @@ class NoteCell extends ChangeNotifier {
       cell: this,
       specialSources: codeCell.specialNodes
           .map((e) => SpecialSource(
-        codeType: e.nodeType,
-        codeEntity: CodeEntity(offset: e.offset, end: e.end),
-        cell: this,
-      ))
+                codeType: e.nodeType,
+                codeEntity: CodeEntity(offset: e.offset, end: e.end),
+                cell: this,
+              ))
           .toList(),
     );
   }
