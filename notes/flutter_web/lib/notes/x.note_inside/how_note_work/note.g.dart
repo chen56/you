@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 210,
+          end: 204,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # Notebook)
         (
           cellType: 'body',
-          offset: 210,
-          end: 359,
+          offset: 204,
+          end: 353,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print("hello flutter-note , i , print("today is ${DateTime.now)
         (
           cellType: 'body',
-          offset: 437,
-          end: 527,
+          offset: 431,
+          end: 521,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(r''' notebook的方)
         (
           cellType: 'body',
-          offset: 605,
-          end: 792,
+          offset: 599,
+          end: 786,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print(ToggleButtons(isSelected)
         (
           cellType: 'body',
-          offset: 870,
-          end: 1048,
+          offset: 864,
+          end: 1042,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print.markdown(r''' 或者，发现[Time)
         (
           cellType: 'body',
-          offset: 1126,
-          end: 1268,
+          offset: 1120,
+          end: 1262,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// (ValueNotifier<int> times = Val, int maxTimes = 600;, var random = Random(1);, Timer.periodic(const Duration(, print(ListenableBuilder(listen)
         (
           cellType: 'body',
-          offset: 1346,
-          end: 2048,
+          offset: 1340,
+          end: 2042,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// (print.markdown(""" notebook模式的)
         (
           cellType: 'body',
-          offset: 2126,
-          end: 2506,
+          offset: 2120,
+          end: 2500,
           specialNodes: <({
             String nodeType,
             int end,
@@ -101,8 +101,8 @@ noteInfo() => (
         /// (print("hello");, print(1);, print(true);, print(["a", "b", "c"]);)
         (
           cellType: 'body',
-          offset: 2584,
-          end: 2659,
+          offset: 2578,
+          end: 2653,
           specialNodes: <({
             String nodeType,
             int end,
@@ -113,8 +113,8 @@ noteInfo() => (
         /// (print.markdown(""" ### Markdow)
         (
           cellType: 'body',
-          offset: 2737,
-          end: 2840,
+          offset: 2731,
+          end: 2834,
           specialNodes: <({
             String nodeType,
             int end,
@@ -125,8 +125,8 @@ noteInfo() => (
         /// (print.markdown("""hello markdo)
         (
           cellType: 'body',
-          offset: 2918,
-          end: 2964,
+          offset: 2912,
+          end: 2958,
           specialNodes: <({
             String nodeType,
             int end,
@@ -137,8 +137,8 @@ noteInfo() => (
         /// (print.markdown(""" ### WidgetC)
         (
           cellType: 'body',
-          offset: 3042,
-          end: 3092,
+          offset: 3036,
+          end: 3086,
           specialNodes: <({
             String nodeType,
             int end,
@@ -149,8 +149,8 @@ noteInfo() => (
         /// (print(Container(width: 100, he)
         (
           cellType: 'body',
-          offset: 3170,
-          end: 3239,
+          offset: 3164,
+          end: 3233,
           specialNodes: <({
             String nodeType,
             int end,
@@ -161,8 +161,8 @@ noteInfo() => (
         /// (print.markdown(""" ### SampleC)
         (
           cellType: 'body',
-          offset: 3317,
-          end: 3560,
+          offset: 3311,
+          end: 3554,
           specialNodes: <({
             String nodeType,
             int end,
@@ -173,8 +173,8 @@ noteInfo() => (
         /// (print(Container(width: 100, he, print(Container(width: 100, he)
         (
           cellType: 'body',
-          offset: 3638,
-          end: 3829,
+          offset: 3632,
+          end: 3823,
           specialNodes: <({
             String nodeType,
             int end,
@@ -185,8 +185,8 @@ noteInfo() => (
         /// (print.markdown(""" ## 事件回调的问题 )
         (
           cellType: 'body',
-          offset: 3907,
-          end: 4005,
+          offset: 3901,
+          end: 3999,
           specialNodes: <({
             String nodeType,
             int end,
@@ -197,8 +197,8 @@ noteInfo() => (
         /// ({int count = 0; print(Elevated)
         (
           cellType: 'body',
-          offset: 4083,
-          end: 4297,
+          offset: 4077,
+          end: 4291,
           specialNodes: <({
             String nodeType,
             int end,
@@ -209,8 +209,8 @@ noteInfo() => (
         /// (print.markdown(""" 问题原因：onPres)
         (
           cellType: 'body',
-          offset: 4375,
-          end: 4651,
+          offset: 4369,
+          end: 4645,
           specialNodes: <({
             String nodeType,
             int end,
@@ -221,8 +221,8 @@ noteInfo() => (
         /// (int i = 0;, print(StatefulBuilder(builder:)
         (
           cellType: 'body',
-          offset: 4729,
-          end: 4938,
+          offset: 4723,
+          end: 4932,
           specialNodes: <({
             String nodeType,
             int end,
@@ -233,8 +233,8 @@ noteInfo() => (
         /// (print.markdown(""" 或用runInCurr)
         (
           cellType: 'body',
-          offset: 5016,
-          end: 5105,
+          offset: 5010,
+          end: 5099,
           specialNodes: <({
             String nodeType,
             int end,
@@ -245,8 +245,8 @@ noteInfo() => (
         /// (print.markdown(""" ## cell的元信息)
         (
           cellType: 'body',
-          offset: 5183,
-          end: 5226,
+          offset: 5177,
+          end: 5220,
           specialNodes: <({
             String nodeType,
             int end,
@@ -254,11 +254,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// ()
+        /// (print("源文件中当前cell的index：${prin, print("源文件中当前cell的起始字符位置：${pri, print("源文件中当前cell的结束字符位置：${pri, print("源文件中当前cell的代码块：${print.)
         (
           cellType: 'body',
-          offset: 5304,
-          end: 5585,
+          offset: 5298,
+          end: 5567,
           specialNodes: <({
             String nodeType,
             int end,
@@ -269,8 +269,8 @@ noteInfo() => (
         /// (print.markdown(""" ## 结束  上面回调)
         (
           cellType: 'body',
-          offset: 5663,
-          end: 5735,
+          offset: 5645,
+          end: 5717,
           specialNodes: <({
             String nodeType,
             int end,
@@ -281,8 +281,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 5735,
-          end: 5737,
+          offset: 5717,
+          end: 5719,
           specialNodes: <({
             String nodeType,
             int end,

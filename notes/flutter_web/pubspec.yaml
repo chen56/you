@@ -37,8 +37,6 @@ dependencies:
   stack_trace: ^1.11.1
   source_map_stack_trace: ^2.1.1
   web: ^0.5.1
-  http: ^1.2.1
-  source_maps: ^0.10.12
 
 dev_dependencies:
 

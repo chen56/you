@@ -29,10 +29,6 @@ dependencies:
   glob: ^2.1.1
   watcher: ^1.1.0
   stack_trace: ^1.11.1
-  checks: ^0.3.0
-  source_map_stack_trace: ^2.1.1
-  source_maps: ^0.10.12
-  http: ^1.2.1
 
 #  async: ^2.11.0
 dev_dependencies:
