@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 221,
+          end: 215,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 221,
-          end: 224,
+          offset: 215,
+          end: 218,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(r''' # 异步  很好的异)
         (
           cellType: 'body',
-          offset: 302,
-          end: 572,
+          offset: 296,
+          end: 566,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ({Future<String> bomb() async {)
         (
           cellType: 'body',
-          offset: 650,
-          end: 1383,
+          offset: 644,
+          end: 1377,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## Isalted)
         (
           cellType: 'body',
-          offset: 1461,
-          end: 1942,
+          offset: 1455,
+          end: 1936,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// ({send123(sendPort) async {for )
         (
           cellType: 'body',
-          offset: 2020,
-          end: 2669,
+          offset: 2014,
+          end: 2663,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2669,
-          end: 2671,
+          offset: 2663,
+          end: 2665,
           specialNodes: <({
             String nodeType,
             int end,

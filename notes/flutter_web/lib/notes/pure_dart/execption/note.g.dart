@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 462,
+          end: 170,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MD("text"));, StackTrace? catchStack;, try {throwException();} catch , var catchStackParsed = Trace.p, print.markdown(""" ### 原始堆栈Sta)
+        /// (print.markdown(""" # exception, List log = [];, try {throwException();} catch , print("$log-------");)
         (
           cellType: 'body',
-          offset: 462,
-          end: 1394,
+          offset: 170,
+          end: 483,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1394,
-          end: 2519,
+          offset: 483,
+          end: 540,
           specialNodes: <({
             String nodeType,
             int end,

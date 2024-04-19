@@ -13,8 +13,6 @@ import 'package:flutter_web/notes/dev/host_mirror/note.dart' deferred as dev_hos
 import 'package:flutter_web/notes/dev/host_mirror/note.g.dart' as dev_host_mirror_g;
 import 'package:flutter_web/notes/dev/macos_config/note.dart' deferred as dev_macos_config_;
 import 'package:flutter_web/notes/dev/macos_config/note.g.dart' as dev_macos_config_g;
-import 'package:flutter_web/notes/env_info/note.dart' deferred as env_info_;
-import 'package:flutter_web/notes/env_info/note.g.dart' as env_info_g;
 import 'package:flutter_web/notes/i18n/note.dart' deferred as i18n_;
 import 'package:flutter_web/notes/i18n/note.g.dart' as i18n_g;
 import 'package:flutter_web/notes/Improve_app/1.overview/note.dart' deferred as Improve_app_overview_;
@@ -59,8 +57,6 @@ import 'package:flutter_web/notes/pure_dart/serialization_json/note.dart' deferr
 import 'package:flutter_web/notes/pure_dart/serialization_json/note.g.dart' as pure_dart_serialization_json_g;
 import 'package:flutter_web/notes/research/remote_view/note.dart' deferred as research_remote_view_;
 import 'package:flutter_web/notes/research/remote_view/note.g.dart' as research_remote_view_g;
-import 'package:flutter_web/notes/research/research_parameterized_example/note.dart' deferred as research_research_parameterized_example_;
-import 'package:flutter_web/notes/research/research_parameterized_example/note.g.dart' as research_research_parameterized_example_g;
 import 'package:flutter_web/notes/state/1.vanilla_state/note.dart' deferred as state_vanilla_state_;
 import 'package:flutter_web/notes/state/1.vanilla_state/note.g.dart' as state_vanilla_state_g;
 import 'package:flutter_web/notes/state/note.dart' deferred as state_;
@@ -101,6 +97,8 @@ import 'package:flutter_web/notes/widgets/specific_widgets/webview/note.dart' de
 import 'package:flutter_web/notes/widgets/specific_widgets/webview/note.g.dart' as widgets_specific_widgets_webview_g;
 import 'package:flutter_web/notes/x.note_inside/1.welcome/note.dart' deferred as x_note_inside_welcome_;
 import 'package:flutter_web/notes/x.note_inside/1.welcome/note.g.dart' as x_note_inside_welcome_g;
+import 'package:flutter_web/notes/x.note_inside/app_info/note.dart' deferred as x_note_inside_app_info_;
+import 'package:flutter_web/notes/x.note_inside/app_info/note.g.dart' as x_note_inside_app_info_g;
 import 'package:flutter_web/notes/x.note_inside/how_note_work/note.dart' deferred as x_note_inside_how_note_work_;
 import 'package:flutter_web/notes/x.note_inside/how_note_work/note.g.dart' as x_note_inside_how_note_work_g;
 import 'package:flutter_web/notes/x.note_inside/mockup_content/note.dart' deferred as x_note_inside_mockup_content_;
@@ -109,6 +107,8 @@ import 'package:flutter_web/notes/x.note_inside/note_test_self/nobody/note.dart'
 import 'package:flutter_web/notes/x.note_inside/note_test_self/nobody/note.g.dart' as x_note_inside_note_test_self_nobody_g;
 import 'package:flutter_web/notes/x.note_inside/note_test_self/note.dart' deferred as x_note_inside_note_test_self_;
 import 'package:flutter_web/notes/x.note_inside/note_test_self/note.g.dart' as x_note_inside_note_test_self_g;
+import 'package:flutter_web/notes/x.note_inside/research_parameterized_example/note.dart' deferred as x_note_inside_research_parameterized_example_;
+import 'package:flutter_web/notes/x.note_inside/research_parameterized_example/note.g.dart' as x_note_inside_research_parameterized_example_g;
 
 
 abstract class BaseNotes {
@@ -116,9 +116,7 @@ abstract class BaseNotes {
   static NoteRoute put(String path, NoteSourceData noteInfo, NoteRouteLazyInitiator noteRouteLazyInitiator) {
     return rootroot.put(path,noteInfo,noteRouteLazyInitiator);
   }
-  final NoteRoute research_research_parameterized_example              = put("/research/research_parameterized_example",research_research_parameterized_example_g.noteInfo(), (note) async => note.lazyInit(builder:await research_research_parameterized_example_.loadLibrary().then((value) => research_research_parameterized_example_.build)));  
   final NoteRoute research_remote_view                                 = put("/research/remote_view",research_remote_view_g.noteInfo(), (note) async => note.lazyInit(builder:await research_remote_view_.loadLibrary().then((value) => research_remote_view_.build)));  
-  final NoteRoute env_info                                             = put("/env_info",env_info_g.noteInfo(), (note) async => note.lazyInit(builder:await env_info_.loadLibrary().then((value) => env_info_.build)));  
   final NoteRoute layout_old_layout                                    = put("/layout/old/layout",layout_old_layout_g.noteInfo(), (note) async => note.lazyInit(builder:await layout_old_layout_.loadLibrary().then((value) => layout_old_layout_.build)));  
   final NoteRoute layout_box_layout_constraints                        = put("/layout/box_layout/constraints",layout_box_layout_constraints_g.noteInfo(), (note) async => note.lazyInit(builder:await layout_box_layout_constraints_.loadLibrary().then((value) => layout_box_layout_constraints_.build)));  
   final NoteRoute layout_responsive_design                             = put("/layout/responsive_design",layout_responsive_design_g.noteInfo(), (note) async => note.lazyInit(builder:await layout_responsive_design_.loadLibrary().then((value) => layout_responsive_design_.build)));  
@@ -146,6 +144,8 @@ abstract class BaseNotes {
   final NoteRoute i18n                                                 = put("/i18n",i18n_g.noteInfo(), (note) async => note.lazyInit(builder:await i18n_.loadLibrary().then((value) => i18n_.build)));  
   final NoteRoute thinking_in_ui_readable_html_vs_dart                 = put("/thinking_in_ui/readable_html_vs_dart",thinking_in_ui_readable_html_vs_dart_g.noteInfo(), (note) async => note.lazyInit(builder:await thinking_in_ui_readable_html_vs_dart_.loadLibrary().then((value) => thinking_in_ui_readable_html_vs_dart_.build)));  
   final NoteRoute x_note_inside_how_note_work                          = put("/x.note_inside/how_note_work",x_note_inside_how_note_work_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_how_note_work_.loadLibrary().then((value) => x_note_inside_how_note_work_.build)));  
+  final NoteRoute x_note_inside_app_info                               = put("/x.note_inside/app_info",x_note_inside_app_info_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_app_info_.loadLibrary().then((value) => x_note_inside_app_info_.build)));  
+  final NoteRoute x_note_inside_research_parameterized_example         = put("/x.note_inside/research_parameterized_example",x_note_inside_research_parameterized_example_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_research_parameterized_example_.loadLibrary().then((value) => x_note_inside_research_parameterized_example_.build)));  
   final NoteRoute x_note_inside_mockup_content                         = put("/x.note_inside/mockup_content",x_note_inside_mockup_content_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_mockup_content_.loadLibrary().then((value) => x_note_inside_mockup_content_.build)));  
   final NoteRoute x_note_inside_welcome                                = put("/x.note_inside/1.welcome",x_note_inside_welcome_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_welcome_.loadLibrary().then((value) => x_note_inside_welcome_.build)));  
   final NoteRoute x_note_inside_note_test_self_nobody                  = put("/x.note_inside/note_test_self/nobody",x_note_inside_note_test_self_nobody_g.noteInfo(), (note) async => note.lazyInit(builder:await x_note_inside_note_test_self_nobody_.loadLibrary().then((value) => x_note_inside_note_test_self_nobody_.build)));  

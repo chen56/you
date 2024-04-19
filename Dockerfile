@@ -24,7 +24,7 @@ FROM nginx:1.23.4 as nginx
 # ref:
 # https://github.com/nginxinc/docker-nginx/blob/master/mainline
 
-COPY --from=ci /home/flutter/you/notes/flutter_web/build/web /usr/share/nginx/html/you/flutter_web
+COPY --from=ci /home/flutter/you/notes/flutter_web/build/web /usr/share/nginx/html/
 
 # The port that your application listens to.
 EXPOSE 443
