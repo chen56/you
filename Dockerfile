@@ -12,7 +12,7 @@ WORKDIR ./you
 
 RUN ./bake install
 RUN if [[ "$test" = "on" ]]; then ./bake test ; fi
-RUN ./bake flutter build
+RUN ./bake flutter_web build
 RUN pwd
 RUN ls -l
 
