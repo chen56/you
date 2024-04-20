@@ -15,3 +15,6 @@ max_line_length = 500
 
 [*.tsx]
 max_line_length = 500
+
+[bake]
+max_line_length = 200
