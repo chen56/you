@@ -140,7 +140,7 @@ get() {     _run_all_package install; }
 build() {   _run_all_package build; }
 upgrade() { _run_all_package upgrade;}
 clean() {   _run_all_package clean; }
-tests() {   _run_all_package test; }
+test() {   _run_all_package test; }
 gen() {     _run_all_package gen; }
 ls(){
   for pkg in ${!_pkgs[*]} ; do
