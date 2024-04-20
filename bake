@@ -13,10 +13,6 @@ cd "$_ROOT_DIR" || exit 200
 # include common script
 source "packages/you_bake/bake.bash"
 
-##########################################
-# 应用的命令脚本 , 公共函数和全局变量
-##########################################
-
 declare -A _pkgs=(
     ["bake"]="$_ROOT_DIR/packages/you_bake"
     ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
@@ -27,6 +23,48 @@ declare -A _pkgs=(
     ["shell"]="$_ROOT_DIR/notes/shell"
 )
 
+
+####################################################
+# app entry script & _root cmd
+####################################################
+bake.cmd --cmd ls --desc "<mono> mono project manage: ./bake pkgs <ls|run>"
+bake.cmd --cmd run --desc "<mono> run cmd on all pkg,Usage: ./bake pkgs run [any cmd]"
+
+bake.cmd --cmd root --desc "$( cat <<-EOF
+
+ ___  _        _    _                    _  _       _
+| __|| | _  _ | |_ | |_  ___  _ _       | \| | ___ | |_  ___
+| _| | || || ||  _||  _|/ -_)| '_|      | .  |/ _ \|  _|/ -_)
+|_|  |_| \_._| \__| \__|\___||_|        |_|\_|\___/ \__|\___|
+
+https://github.com/chen56/you/flutter_web
+
+PWD: $PWD
+
+Usage:
+ ./bake [cmd] [opts] [args...]
+
+Examples:
+ ./bake                           # same as  './bake -h'
+ ./bake -h                        # show all commands help
+ ./bake -h --debug                # show all commands help , include internal function
+
+ ./bake flutter dev               # == cd notes/flutter_web && flutter run --device-id macos
+
+ ./bake test                      # test all projects
+ ./bake build                     # defalut build == flutter build web --web-renderer html
+ ./bake preview                   # defalut preview == start server at web build
+ ./bake test                      # test all projects
+
+ ./bake pkgs ls                   # show all mono project
+ ./bake pkgs run pwd              # run "pwd" on all mono project dir
+ ./bake pkgs run flutter pub get  # run "flutter pub get" on all mono project dir
+EOF
+)"
+
+##########################################
+#  公共函数区，初始化语句和变量只放脚本头尾
+##########################################
 
 # 运行所用项目的某子命令
 # Usage:    _run_all_package <subcmd>
@@ -45,6 +83,13 @@ _run_all_package() {
     if _func_exists "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
   done
 }
+
+_run_cd_pkg() {
+  local pkg=${1:?required project arg,Usage: _run_at_pkg <pkg>}
+  shift
+  (cd "${_pkgs[$pkg]}" || exit 200 ; _run "$@" )
+}
+
 
 # run一条命令，先print上下文信息，再执行
 # Usage: _run <some cmd>
@@ -90,21 +135,21 @@ you.upgrade() (       you.run dart pub upgrade ;)
 you.test() (          you.run dart test;)
 you.build() (         you.run dart compile exe bin/notecli.dart ;)
 
-# bash common script lib
+# bash。bash is common script lib
 bake.run() {           _run "$@";}
 bake.test() (          packages/you_bake/test.bash test;)
 
-you_note_dart.run() (     cd packages/you_note_dart || return 200 && _run "$@")
-you_note_dart.install() ( you_note_dart.run flutter pub get)
-you_note_dart.clean() (   you_note_dart.run flutter clean; rm -rf build;)
-you_note_dart.upgrade() ( you_note_dart.run flutter pub upgrade ;)
-you_note_dart.test() (    you_note_dart.run flutter test;)
+you_note_dart.run()     { _run_cd_pkg you_note_dart "$@";                         }
+you_note_dart.install() { _run_cd_pkg you_note_dart flutter pub get;              }
+you_note_dart.clean()   { _run_cd_pkg you_note_dart flutter clean; rm -rf build;  }
+you_note_dart.upgrade() { _run_cd_pkg you_note_dart flutter pub upgrade ;         }
+you_note_dart.test()    { _run_cd_pkg you_note_dart flutter test;                 }
 
-learn_dart.run() (     cd notes/learn_dart || return 200 && _run "$@")
-learn_dart.install() ( learn_dart.run dart pub get)
-learn_dart.clean() (   learn_dart.run rm -rf build;learn_dart.run rm -rf .dart_tool;)
-learn_dart.upgrade() ( learn_dart.run dart pub upgrade ;)
-learn_dart.study() (   learn_dart.run dart test;)
+learn_dart.run()     { _run_cd_pkg learn_dart "$@";                                  }
+learn_dart.install() { _run_cd_pkg learn_dart dart pub get ;                                  }
+learn_dart.clean()   { _run_cd_pkg learn_dart rm -rf build;learn_dart.run rm -rf .dart_tool;}
+learn_dart.upgrade() { _run_cd_pkg learn_dart dart pub upgrade ;                              }
+learn_dart.study()   { _run_cd_pkg learn_dart dart test;                                    }
 
 
 # skwasm无法运行
@@ -115,22 +160,22 @@ learn_dart.study() (   learn_dart.run dart test;)
 # install:
 # - flutter pub global activate dhttpd
 # - deno
-flutter_web.run() (                 cd notes/flutter_web && _run "$@")
-flutter_web.install() (             flutter_web.run flutter pub get)
-flutter_web.clean() (               flutter_web.run flutter clean; rm -rf build;)
-flutter_web.upgrade() (             flutter_web.run flutter pub upgrade ;)
-flutter_web.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_web/ ;  ) #  mate_flutter_web.gen;暂时不用了
-flutter_web.dev() {                 flutter_web.dev_html "$@"; }
-flutter_web.build() {               flutter_web.build_html "$@" ;}
-flutter_web.preview() {             flutter_web.build_html; flutter_web.preview_html_deno; }
+flutter_web.run()         {         _run_cd_pkg flutter_web _run "$@"  ;                       }
+flutter_web.install()     {         _run_cd_pkg flutter_web flutter pub get ;                      }
+flutter_web.clean()       {         _run_cd_pkg flutter_web flutter clean; rm -rf build;             }
+flutter_web.upgrade()     {         _run_cd_pkg flutter_web flutter pub upgrade ;                  }
+flutter_web.gen()         {         dart run bin/notecli.dart gen --dir notes/flutter_web/ ;   }
+flutter_web.dev()         {         flutter_web.dev_html "$@";                                 }
+flutter_web.build()       {         flutter_web.build_html "$@" ;                            }
+flutter_web.preview()     {         flutter_web.build_html; flutter_web.preview_html_deno; }
 
-flutter_web.dev_macos() {           flutter_web.run flutter run --device-id macos "$@"; }
-flutter_web.dev_html() {            flutter_web.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter_web.build_macos() {         flutter_web.run flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter_web.build_wasm() {          flutter_web.run flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
-flutter_web.build_html() {          flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
-flutter_web.build_web_skwasm() {    flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
-flutter_web.build_web_canvaskit() { flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+flutter_web.dev_macos() {           _run_cd_pkg flutter_web flutter run --device-id macos "$@"; }
+flutter_web.dev_html() {            _run_cd_pkg flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.build_macos() {         _run_cd_pkg flutter_web flutter build macos -v --release --tree-shake-icons "$@";  }
+flutter_web.build_wasm() {          _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
+flutter_web.build_html() {          _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
+flutter_web.build_web_skwasm() {    _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
+flutter_web.build_web_canvaskit() { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
 flutter_web.preview_html_run() {    echo "http://localhost:8080/you/flutter_web" && flutter_web.run dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
 flutter_web.preview_html_deno() {   echo "http://localhost:8080/you/flutter_web" && flutter_web.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
 flutter_web.preview_wasm() (        cd  notes/flutter_web/build/web_wasm && echo "http://localhost:8080/" && dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; )
@@ -171,44 +216,6 @@ info() {
   echo "\$_ROOT_DIR :   $_ROOT_DIR"
   echo
 }
-
-####################################################
-# app entry script & _root cmd
-####################################################
-bake.cmd --cmd ls --desc "<mono> mono project manage: ./bake pkgs <ls|run>"
-bake.cmd --cmd run --desc "<mono> run cmd on all pkg,Usage: ./bake pkgs run [any cmd]"
-
-bake.cmd --cmd root --desc "$( cat <<-EOF
-
- ___  _        _    _                    _  _       _
-| __|| | _  _ | |_ | |_  ___  _ _       | \| | ___ | |_  ___
-| _| | || || ||  _||  _|/ -_)| '_|      | .  |/ _ \|  _|/ -_)
-|_|  |_| \_._| \__| \__|\___||_|        |_|\_|\___/ \__|\___|
-
-https://github.com/chen56/you/flutter_web
-
-PWD: $PWD
-
-Usage:
- ./bake [cmd] [opts] [args...]
-
-Examples:
- ./bake                           # same as  './bake -h'
- ./bake -h                        # show all commands help
- ./bake -h --debug                # show all commands help , include internal function
-
- ./bake flutter dev               # == cd notes/flutter_web && flutter run --device-id macos
-
- ./bake test                      # test all projects
- ./bake build                     # defalut build == flutter build web --web-renderer html
- ./bake preview                   # defalut preview == start server at web build
- ./bake test                      # test all projects
-
- ./bake pkgs ls                   # show all mono project
- ./bake pkgs run pwd              # run "pwd" on all mono project dir
- ./bake pkgs run flutter pub get  # run "flutter pub get" on all mono project dir
-EOF
-)"
 
 bake.go "$@"
 
