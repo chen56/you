@@ -366,7 +366,7 @@ class Pen {
     currentCell.print(object);
   }
 
-  /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
   /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
   @experimental
   @Deprecated("已经有更好的方案，这个废弃")
