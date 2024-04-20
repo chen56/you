@@ -127,17 +127,28 @@ _func_exists(){
 ##########################################
 
 
-# 根项目，主要是bin/辅助工具等
-you.run() {           _run "$@";}
-you.install() (       you.run dart pub get;)
-you.clean() (         you.run rm -rf build; you.run rm -rf .dart_tool; )
-you.upgrade() (       you.run dart pub upgrade ;)
-you.test() (          you.run dart test;)
-you.build() (         you.run dart compile exe bin/notecli.dart ;)
+ls()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
+run()         { for pkg in ${!_pkgs[*]} ; do _run_cd_pkg "$pkg" "$@" ;   done  }
+install()     { _run_all_package install;                                      }
+get()         { _run_all_package install;                                      }
+build()       { _run_all_package build;                                        }
+upgrade()     { _run_all_package upgrade;                                      }
+clean()       { _run_all_package clean;                                        }
+test()        { _run_all_package test;                                         }
+gen()         { _run_all_package gen;                                          }
 
-# bash。bash is common script lib
-bake.run() {           _run "$@";}
-bake.test() (          packages/you_bake/test.bash test;)
+
+# 根项目，主要是bin/辅助工具等
+you.run()               { _run_cd_pkg you "$@";                                                }
+you.install()           { _run_cd_pkg you dart pub get;                                        }
+you.clean()             { _run_cd_pkg you rm -rf build; _run_cd_pkg you rm -rf .dart_tool;     }
+you.upgrade()           { _run_cd_pkg you dart pub upgrade ;                                   }
+you.test()              { _run_cd_pkg you dart test;                                           }
+you.build()             { _run_cd_pkg you dart compile exe bin/notecli.dart ;                  }
+
+# bash。bash is1 common script lib
+bake.run()              { _run_cd_pkg bake "$@";                                               }
+bake.test()             { _run_cd_pkg bake ./test.bash test;                                   }
 
 you_note_dart.run()     { _run_cd_pkg you_note_dart "$@";                         }
 you_note_dart.install() { _run_cd_pkg you_note_dart flutter pub get;              }
@@ -145,13 +156,11 @@ you_note_dart.clean()   { _run_cd_pkg you_note_dart flutter clean; rm -rf build;
 you_note_dart.upgrade() { _run_cd_pkg you_note_dart flutter pub upgrade ;         }
 you_note_dart.test()    { _run_cd_pkg you_note_dart flutter test;                 }
 
-learn_dart.run()     { _run_cd_pkg learn_dart "$@";                                  }
-learn_dart.install() { _run_cd_pkg learn_dart dart pub get ;                                  }
-learn_dart.clean()   { _run_cd_pkg learn_dart rm -rf build;learn_dart.run rm -rf .dart_tool;}
-learn_dart.upgrade() { _run_cd_pkg learn_dart dart pub upgrade ;                              }
-learn_dart.study()   { _run_cd_pkg learn_dart dart test;                                    }
-
-
+learn_dart.run()        { _run_cd_pkg learn_dart "$@";                                           }
+learn_dart.install()    { _run_cd_pkg learn_dart dart pub get ;                                  }
+learn_dart.clean()      { _run_cd_pkg learn_dart rm -rf build;learn_dart.run rm -rf .dart_tool;  }
+learn_dart.upgrade()    { _run_cd_pkg learn_dart dart pub upgrade ;                              }
+learn_dart.study()      { _run_cd_pkg learn_dart dart test;                                      }
 # skwasm无法运行
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_web/build/web --port 8000
@@ -160,44 +169,26 @@ learn_dart.study()   { _run_cd_pkg learn_dart dart test;                        
 # install:
 # - flutter pub global activate dhttpd
 # - deno
-flutter_web.run()         {         _run_cd_pkg flutter_web _run "$@"  ;                       }
-flutter_web.install()     {         _run_cd_pkg flutter_web flutter pub get ;                      }
-flutter_web.clean()       {         _run_cd_pkg flutter_web flutter clean; rm -rf build;             }
-flutter_web.upgrade()     {         _run_cd_pkg flutter_web flutter pub upgrade ;                  }
-flutter_web.gen()         {         dart run bin/notecli.dart gen --dir notes/flutter_web/ ;   }
-flutter_web.dev()         {         flutter_web.dev_html "$@";                                 }
-flutter_web.build()       {         flutter_web.build_html "$@" ;                            }
-flutter_web.preview()     {         flutter_web.build_html; flutter_web.preview_html_deno; }
+flutter_web.run()      { _run_cd_pkg flutter_web _run "$@"  ;                      }
+flutter_web.install()  { _run_cd_pkg flutter_web flutter pub get ;                 }
+flutter_web.clean()    { _run_cd_pkg flutter_web flutter clean; rm -rf build;      }
+flutter_web.upgrade()  { _run_cd_pkg flutter_web flutter pub upgrade ;             }
+flutter_web.gen()      { dart run bin/notecli.dart gen --dir notes/flutter_web/;   }
+flutter_web.dev()      { flutter_web.dev_html "$@";                                }
+flutter_web.build()    { flutter_web.build_html "$@" ;                             }
+flutter_web.preview()  { flutter_web.build_html; flutter_web.preview_html_deno;    }
 
-flutter_web.dev_macos() {           _run_cd_pkg flutter_web flutter run --device-id macos "$@"; }
-flutter_web.dev_html() {            _run_cd_pkg flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter_web.build_macos() {         _run_cd_pkg flutter_web flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter_web.build_wasm() {          _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
-flutter_web.build_html() {          _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
-flutter_web.build_web_skwasm() {    _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
-flutter_web.build_web_canvaskit() { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter_web.preview_html_run() {    echo "http://localhost:8080/you/flutter_web" && flutter_web.run dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
-flutter_web.preview_html_deno() {   echo "http://localhost:8080/you/flutter_web" && flutter_web.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
-flutter_web.preview_wasm() (        cd  notes/flutter_web/build/web_wasm && echo "http://localhost:8080/" && dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; )
+flutter_web.dev_macos()             { _run_cd_pkg flutter_web flutter run --device-id macos "$@"; }
+flutter_web.dev_html()              { _run_cd_pkg flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.build_macos()           { _run_cd_pkg flutter_web flutter build macos -v --release --tree-shake-icons "$@";  }
+flutter_web.build_wasm()            { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
+flutter_web.build_html()            { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
+flutter_web.build_web_skwasm()      { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
+flutter_web.build_web_canvaskit()   { _run_cd_pkg flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+flutter_web.preview_html_run()      { echo "http://localhost:8080/you/flutter_web"; _run_cd_pkg flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
+flutter_web.preview_html_deno()     { echo "http://localhost:8080/you/flutter_web"; _run_cd_pkg flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
+flutter_web.preview_wasm()          { echo "http://localhost:8080/you/flutter_web"; _run_cd_pkg flutter_web  dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; }
 
-install() { _run_all_package install; }
-get() {     _run_all_package install; }
-build() {   _run_all_package build; }
-upgrade() { _run_all_package upgrade;}
-clean() {   _run_all_package clean; }
-test() {   _run_all_package test; }
-gen() {     _run_all_package gen; }
-ls(){
-  for pkg in ${!_pkgs[*]} ; do
-    echo "$pkg:${_pkgs[$pkg]}"
-  done
-}
-run(){
-  for pkg in ${!_pkgs[*]} ; do
-    # 子shell内执行，防止环境感染
-    (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
-  done
-}
 
 # github 发布时使用,参考[.github/workflows/*.yaml]
 docker.build() (
@@ -205,15 +196,18 @@ docker.build() (
   _run mkdir -p build;
   _run sh -c "docker run --rm --workdir /usr/share/nginx/html/you chen56/you tar cf - ./ | ( cd build; tar xf -)";
 )
-docker.preview() {  _run echo "note preview http://localhost:8888/you/flutter_web"; _run docker run --rm --name you -p 8888:80 -u root:root chen56/you; }
-docker.debug() {    _run docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
-docker.exec() {     _run docker exec -it --workdir /usr/share/nginx/html/you/ you bash ; }
-docker.push() {     _run docker image push chen56/you:latest ; }
+docker.preview() { _run echo "note preview http://localhost:8888/you/flutter_web"; _run docker run --rm --name you -p 8888:80 -u root:root chen56/you; }
+docker.debug()   { _run docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
+docker.exec()    { _run docker exec -it --workdir /usr/share/nginx/html/you/ you bash ; }
+docker.push()    { _run docker image push chen56/you:latest ; }
+
 
 info() {
-  echo "\$PWD        :  $PWD"
-  echo "\bake:  bake"
-  echo "\$_ROOT_DIR :   $_ROOT_DIR"
+  echo "PWD         :  $PWD"
+  echo "_ROOT_DIR   :  $_ROOT_DIR"
+  echo
+  echo "## pkgs"
+  ls
   echo
 }
 
