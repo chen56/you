@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
-SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
-SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+#_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
+#_ROOT_BAKE_PATH="$(_real_path "${BASH_SOURCE[0]}")"
+#_ROOT_DIR="$(dirname "$_ROOT_BAKE_PATH")"
+_ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+#_ROOT_BAKE_PATH="${_ROOT_DIR}/bake"
 
 # 进入脚本所在目录，这样上下文就是本项目了
-cd "$SCRIPT_DIR" || exit 200
+cd "$_ROOT_DIR" || exit 200
 
 # include common script
 source "packages/you_bake/bake.bash"
@@ -16,13 +18,13 @@ source "packages/you_bake/bake.bash"
 ##########################################
 
 declare -A _pkgs=(
-    ["bake"]="$SCRIPT_DIR/packages/you_bake"
-    ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
-    ["you"]="$SCRIPT_DIR"
-    ["you_note_dart"]="$SCRIPT_DIR/packages/you_note_dart"
-    ["flutter_web"]="$SCRIPT_DIR/notes/flutter_web"
-    ["qwik"]="$SCRIPT_DIR/notes/qwik"
-    ["shell"]="$SCRIPT_DIR/notes/shell"
+    ["bake"]="$_ROOT_DIR/packages/you_bake"
+    ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
+    ["you"]="$_ROOT_DIR"
+    ["you_note_dart"]="$_ROOT_DIR/packages/you_note_dart"
+    ["flutter_web"]="$_ROOT_DIR/notes/flutter_web"
+    ["qwik"]="$_ROOT_DIR/notes/qwik"
+    ["shell"]="$_ROOT_DIR/notes/shell"
 )
 
 
@@ -138,7 +140,7 @@ get() {     _run_all_package install; }
 build() {   _run_all_package build; }
 upgrade() { _run_all_package upgrade;}
 clean() {   _run_all_package clean; }
-test() {    _run_all_package test; }
+tests() {   _run_all_package test; }
 gen() {     _run_all_package gen; }
 ls(){
   for pkg in ${!_pkgs[*]} ; do
@@ -166,7 +168,7 @@ docker.push() {     _run docker image push chen56/you:latest ; }
 info() {
   echo "\$PWD        :  $PWD"
   echo "\bake:  bake"
-  echo "\$SCRIPT_DIR :   $SCRIPT_DIR"
+  echo "\$_ROOT_DIR :   $_ROOT_DIR"
   echo
 }
 

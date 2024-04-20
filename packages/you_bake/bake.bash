@@ -492,6 +492,7 @@ _bake_go_parse() {
 # bake.opt自己的options:
 #   cmd: 参数作用的命令全名
 #   long: 参数长名，可以 ./bake build --is_zip 这样使用
+#   TODO type按理不要分bool和string，因为没其他类型了，是不是直接叫flag和option之类的
 #   type: 类型，目前支持 bool|string|list
 #   required: 是否必须提供，不提供将报错
 #   short: 参数短名, 可以 ./bake build -z 这样使用
@@ -541,6 +542,7 @@ bake.opt() {
 #
 # Usage: 固定格式：bake.parse "$@"
 # 参考：[bake.opt]
+# TODO default value目前没搞，啥时候搞搞
 bake.parse() {
   local cmd="${FUNCNAME[1]}"
 
