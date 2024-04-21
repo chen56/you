@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 470,
+          end: 481,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(''' # Material )
         (
           cellType: 'body',
-          offset: 470,
-          end: 572,
+          offset: 481,
+          end: 583,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (var sampleIcons = {"access_tim, for (var entry in sampleIcons.)
         (
           cellType: 'body',
-          offset: 650,
-          end: 2466,
+          offset: 661,
+          end: 2477,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2466,
-          end: 4961,
+          offset: 2477,
+          end: 4972,
           specialNodes: <({
             String nodeType,
             int end,

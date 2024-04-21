@@ -37,6 +37,10 @@ void build(BuildContext context, CellPrint printc) {
   ]));
 
   printc(Cell.position(title: Text("全named 参数 root, 格式化时强制换行，无法调整啊"), style: ContentLayout(maxColumn: 3), (printc) {
+    int i = 0;
+    i++;
+    printc(i);
+
     printc(Cell.position(title: Text("1"), style: ContentLayout(maxColumn: 3), (printc) {
       printc(Text(""));
     }));
@@ -44,6 +48,10 @@ void build(BuildContext context, CellPrint printc) {
     printc(Cell.position(title: Text("2"), style: ContentLayout(maxColumn: 3), (printc) {
       printc(Text(""));
     }));
+
+    printc(Text(""));
+
+
   }));
 
   printc(Cell.positionList(title: Text("位置参数block，root"), style: ContentLayout(maxColumn: 3), children: [

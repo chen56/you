@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 153,
+          end: 164,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # VM Servi)
         (
           cellType: 'body',
-          offset: 153,
-          end: 1286,
+          offset: 164,
+          end: 1297,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (var serviceInfo = await Servic, print("serviceInfo⚠️: $service, print("serviceInfo.serverUri: , ..., print("serviceInfo.minorVersio, print('🔥🖼️✗✓🔨💪✏️');)
         (
           cellType: 'body',
-          offset: 1364,
-          end: 1746,
+          offset: 1375,
+          end: 1757,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1746,
-          end: 1748,
+          offset: 1757,
+          end: 1759,
           specialNodes: <({
             String nodeType,
             int end,

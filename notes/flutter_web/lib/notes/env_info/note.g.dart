@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 243,
+          end: 254,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(''' # Platform和)
         (
           cellType: 'body',
-          offset: 243,
-          end: 301,
+          offset: 254,
+          end: 312,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (ThemeData theme = Theme.of(con, MediaQueryData mediaQuery = Me, print.markdown(''' | name     )
         (
           cellType: 'body',
-          offset: 379,
-          end: 2401,
+          offset: 390,
+          end: 2412,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown(''' ## path  pa)
         (
           cellType: 'body',
-          offset: 2479,
-          end: 2560,
+          offset: 2490,
+          end: 2571,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print(path.absolute("a/b.dart")
         (
           cellType: 'body',
-          offset: 2638,
-          end: 2678,
+          offset: 2649,
+          end: 2689,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print.markdown(''' ## environm)
         (
           cellType: 'body',
-          offset: 2756,
-          end: 2813,
+          offset: 2767,
+          end: 2824,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// (if (kIsWeb) {print("web版无法使用环境)
         (
           cellType: 'body',
-          offset: 2891,
-          end: 3245,
+          offset: 2902,
+          end: 3256,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 3245,
-          end: 3247,
+          offset: 3256,
+          end: 3258,
           specialNodes: <({
             String nodeType,
             int end,

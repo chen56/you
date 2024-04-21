@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 178,
+          end: 189,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # json  js)
         (
           cellType: 'body',
-          offset: 178,
-          end: 231,
+          offset: 189,
+          end: 242,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (var userJson = '''   {     "na, Map<String, dynamic> user = js, print('user: ${user['name']}!', print('email: ${user['email']})
         (
           cellType: 'body',
-          offset: 309,
-          end: 526,
+          offset: 320,
+          end: 537,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 526,
-          end: 528,
+          offset: 537,
+          end: 539,
           specialNodes: <({
             String nodeType,
             int end,

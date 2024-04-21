@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 185,
+          end: 196,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 185,
-          end: 188,
+          offset: 196,
+          end: 199,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
-          offset: 266,
-          end: 396,
+          offset: 277,
+          end: 407,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 396,
-          end: 398,
+          offset: 407,
+          end: 409,
           specialNodes: <({
             String nodeType,
             int end,

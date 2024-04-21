@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 251,
+          end: 262,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(''' # analyzer )
         (
           cellType: 'body',
-          offset: 251,
-          end: 357,
+          offset: 262,
+          end: 368,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (var x = analyzer_util.parseStr, for (var e in x.unit.directive)
         (
           cellType: 'body',
-          offset: 435,
-          end: 626,
+          offset: 446,
+          end: 637,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print.markdown('''  ## 性能不错  看)
         (
           cellType: 'body',
-          offset: 704,
-          end: 781,
+          offset: 715,
+          end: 792,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (DateTime start = DateTime.now(, int times = 1000;, for (int i = 0; i < times; i++, print("分析本页面源文件:$times 次, 花费时间)
         (
           cellType: 'body',
-          offset: 859,
-          end: 1192,
+          offset: 870,
+          end: 1203,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1192,
-          end: 1194,
+          offset: 1203,
+          end: 1205,
           specialNodes: <({
             String nodeType,
             int end,
