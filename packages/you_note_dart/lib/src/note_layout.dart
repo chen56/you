@@ -148,10 +148,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         ],
       ),
     );
-    var appBar = AppBar(
-      title: Text(widget.note.displayName),
-      toolbarHeight: 36,
-    );
+    var appBar = AppBar(title: Text(widget.note.displayName), toolbarHeight: 36);
 
     //only for debug mode
     var bottomDevBar = kReleaseMode
@@ -162,16 +159,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
             child: Row(children: [
               const Text("Devtools"),
               const Spacer(),
-              IconButton(
-                onPressed: () {},
-                tooltip: 'Search',
-                icon: const Icon(Icons.search),
-              ),
-              IconButton(
-                onPressed: () {},
-                tooltip: 'Favorite',
-                icon: const Icon(Icons.favorite),
-              ),
+              IconButton(onPressed: () {}, tooltip: 'Search', icon: const Icon(Icons.search)),
+              IconButton(onPressed: () {}, tooltip: 'Favorite', icon: const Icon(Icons.favorite)),
             ]));
 
     ///  Responsive UI:
@@ -192,13 +181,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
           endDrawer: null,
           bottomNavigationBar: bottomDevBar,
           body: SafeArea(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(child: pageBody),
-                SizedBox(width: 250, child: outlineView),
-              ],
-            ),
+            child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              Expanded(child: pageBody),
+              SizedBox(width: 250, child: outlineView),
+            ]),
           ),
         ),
       // full screen size expand all
@@ -208,14 +194,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
           endDrawer: null,
           bottomNavigationBar: bottomDevBar,
           body: SafeArea(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SizedBox(width: 220, child: navigatorTree),
-                Expanded(child: pageBody),
-                SizedBox(width: 250, child: outlineView),
-              ],
-            ),
+            child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              SizedBox(width: 220, child: navigatorTree),
+              Expanded(child: pageBody),
+              SizedBox(width: 250, child: outlineView),
+            ]),
           ),
         ),
     };

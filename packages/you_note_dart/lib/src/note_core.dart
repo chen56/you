@@ -317,7 +317,6 @@ class CellPrint {
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < _note.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
-        noteSystem: _noteSystem,
         pen: this,
         index: i,
         pageSource: _note.source,
@@ -335,10 +334,6 @@ class CellPrint {
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
   /// Add a new cell, which is a code block and its generated content in the note
-  ///
-  /// 通过[builder]参数可以重建此cell
-  /// cell can be rebuilt using the [builder] arg
-  @Deprecated("还是围绕markdown分割较好")
   void $____________________________________________________________________() {
     int nextCellIndex = _currentCell.index + 1;
     // It is already the last cell
@@ -392,10 +387,8 @@ class NoteCell extends ChangeNotifier {
   final CellPrint pen;
   late final CellSource source;
   final Outline outline;
-  final NoteSystem noteSystem;
 
   NoteCell({
-    required this.noteSystem,
     required this.pen,
     required this.index,
     required NoteSource pageSource,
