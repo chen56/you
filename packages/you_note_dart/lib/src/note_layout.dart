@@ -4,6 +4,7 @@ import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/note_route.dart';
 import 'package:you_note_dart/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
