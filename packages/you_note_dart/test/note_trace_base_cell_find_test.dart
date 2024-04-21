@@ -1,7 +1,7 @@
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:stack_trace/stack_trace.dart';
-import 'package:you_note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/note_cell.dart';
 
 final _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
 
@@ -74,7 +74,7 @@ Exception: my throw
         "org-dartlang-sdk:///dart-sdk/lib/async/stream.dart",
         "org-dartlang-sdk:///dart-sdk/lib/async/stream_controller.dart",
         "../../../lib/notes/pure_dart/execption/note.dart",
-        "../../../../../packages/you_note_dart/lib/src/note_core.dart",
+        "../../../../../packages/you_note_dart/lib/src/note_cell.dart",
         "org-dartlang-sdk:///dart-sdk/lib/_internal/js_runtime/lib/js_array.dart",
         "org-dartlang-sdk:///dart-sdk/lib/internal/iterable.dart",
         "../../../../../../../../.pub-cache/hosted/pub.flutter-io.cn/http-1.2.1/lib/http.dart",

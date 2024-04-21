@@ -7,7 +7,7 @@ import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/src/content/object_content.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
-import 'package:you_note_dart/src/note_route.dart';
+import 'package:you_note_dart/src/note_page.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:stack_trace/stack_trace.dart';
 import 'package:path/path.dart' as path;

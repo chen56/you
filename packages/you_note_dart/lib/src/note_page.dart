@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
-import 'package:you_note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/utils_core.dart';
 
 
