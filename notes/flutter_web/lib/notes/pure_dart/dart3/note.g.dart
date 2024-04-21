@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 122,
+          end: 128,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## dart 3 )
         (
           cellType: 'body',
-          offset: 122,
-          end: 257,
+          offset: 128,
+          end: 263,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 257,
-          end: 259,
+          offset: 263,
+          end: 265,
           specialNodes: <({
             String nodeType,
             int end,

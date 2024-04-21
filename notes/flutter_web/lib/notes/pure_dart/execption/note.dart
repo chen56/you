@@ -7,17 +7,8 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 
-void build(BuildContext context, Pen print) async {
-  print.markdown("""
-# exception
-
-| expression | value | comment |
-| :--:       | :--: | :--: |
-| Uri.base          | ${Uri.base} | web == `window.location.href` |
-
-## web的js堆栈转换为dart堆栈
-
-""");
+void build(BuildContext context, Cell print) async {
+  print(MD("text"));
   StackTrace? catchStack;
   try {
     throwException();
@@ -52,14 +43,8 @@ kIsWeb && kReleaseMode 时是js堆栈，要对齐为dart，需要解析工具：
 
 ```shell
 ${await convertDartTraceIfJsTrace(catchStack!)}
-####### dartTrace2
-${(await print.caller()).dartTrace}
-
 ```
   """);
-
-
-   print.caller();
 }
 
 void throwException() {
@@ -83,7 +68,7 @@ Future<Trace> convertDartTraceIfJsTrace(StackTrace trace) async {
 
   Future<Trace> jsTraceToDartTrace(StackTrace stackTrace) async {
     Uri jsMapUri = getJsMapUriFromJsTrace(trace);
-    String sourceMap = await (await http.get(jsMapUri)).body;
+    String sourceMap = (await http.get(jsMapUri)).body;
     var dartTrace = source_map_stack_trace.mapStackTrace(source_map.parse(sourceMap), stackTrace);
     return Trace.from(dartTrace);
   }

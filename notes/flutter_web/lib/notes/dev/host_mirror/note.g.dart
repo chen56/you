@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 124,
+          end: 128,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r'''  ## flutte)
         (
           cellType: 'body',
-          offset: 124,
-          end: 2955,
+          offset: 128,
+          end: 2959,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2955,
-          end: 2957,
+          offset: 2959,
+          end: 2961,
           specialNodes: <({
             String nodeType,
             int end,

@@ -236,10 +236,6 @@ class NotePage {
     return content.safeSubstring(codeEntity.offset, codeEntity.end);
   }
 
-  String getCellCode2(Cell cell){
-    return "var i ='not impl getCellCode'";
-  }
-
   static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
     required StackTrace trace,
     required Uri location,
