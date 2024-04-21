@@ -300,7 +300,6 @@ class CellPrint {
   @internal
   final NotePage notePage;
   final bool _defaultCodeExpand;
-  final NoteSystem _noteSystem;
 
   late NoteCell _currentCell;
 
@@ -308,10 +307,9 @@ class CellPrint {
   CellPrint.build(
     BuildContext context, {
     required this.notePage,
-    required NoteSystem noteSystem,
     required bool defaultCodeExpand,
     required this.outline,
-  }) : _defaultCodeExpand = defaultCodeExpand, _noteSystem = noteSystem, _note = notePage.noteRoute {
+  }) : _defaultCodeExpand = defaultCodeExpand, _note = notePage.noteRoute {
     assert(_note.source._pageGenInfo.cells.isNotEmpty, "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);

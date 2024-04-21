@@ -90,7 +90,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
     CellPrint pen = CellPrint.build(
       context,
       notePage: widget.notePage,
-      noteSystem: widget.noteSystem,
       defaultCodeExpand: false,
       outline: outline,
     );
