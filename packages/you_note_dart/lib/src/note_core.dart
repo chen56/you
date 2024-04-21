@@ -302,7 +302,7 @@ class CellPrint {
   final bool _defaultCodeExpand;
   final NoteSystem _noteSystem;
 
-  late NoteCell currentCell;
+  late NoteCell _currentCell;
 
   @internal
   CellPrint.build(
@@ -325,7 +325,7 @@ class CellPrint {
     }
     this.cells = List.unmodifiable(cells);
     // first cell is dart head code , All code before the build() function
-    currentCell = cells.first;
+    _currentCell = cells.first;
 
     // Skip the header code block
     $____________________________________________________________________();
@@ -340,14 +340,14 @@ class CellPrint {
   /// cell can be rebuilt using the [builder] arg
   @Deprecated("还是围绕markdown分割较好")
   void $____________________________________________________________________() {
-    int nextCellIndex = currentCell.index + 1;
+    int nextCellIndex = _currentCell.index + 1;
     // It is already the last cell
     // It is possible that the code generation has not been synchronized
     if (nextCellIndex >= cells.length) {
       return;
     }
 
-    currentCell = cells[nextCellIndex];
+    _currentCell = cells[nextCellIndex];
   }
 
   /// FIXME 待处理
@@ -364,7 +364,7 @@ class CellPrint {
   }
 
   void call(Object? object) {
-    currentCell.print(object);
+    _currentCell.print(object);
   }
 
   /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
@@ -372,7 +372,7 @@ class CellPrint {
   @experimental
   @Deprecated("已经有更好的方案，这个废弃")
   void runInCurrentCell(void Function(NoteCell print) callback) {
-    callback(currentCell);
+    callback(_currentCell);
   }
 
   void markdown(String content) {
