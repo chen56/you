@@ -87,7 +87,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
           outline: outline,
         );
 
-    Pen pen = Pen.build(
+    CellPrint pen = CellPrint.build(
       context,
       notePage: widget.notePage,
       noteSystem: widget.noteSystem,

@@ -1,34 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, Pen print) {
-  print(Layer(title: const Text("布局"), style: const ContentLayout(maxColumn: 3), () {
-    print(Layer(title: const Text("box布局"), style: const ContentLayout(maxColumn: 3), () {
-      print(Layer(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
-        print(const Text(""));
-      }));
+/// 单print api，print作为单一全局函数，倒是api简单
+/// 全靠print或CellBlock内部静态收集器来工作，
+/// - 同步时：静态变量做cell区隔收集
+/// - 异步时：就必须要靠Trace来跟踪哪个Cell了，要不没线索
+void build(BuildContext context, CellPrint print) {
+  print(CellBlock(title: const Text("布局"), style: const ContentLayout(maxColumn: 3), () {
+    print(CellBlock(title: const Text("box布局"), style: const ContentLayout(maxColumn: 3), () {}));
+    print(CellBlock(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
+      print(const Text(""));
     }));
-    print(Layer(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
+    print(CellBlock(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
       print(const Text(""));
     }));
   }));
 
-
-
-  Layer(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
-    Layer(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
+  CellBlock(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {
+    CellBlock(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
       print(const Text(""));
     });
-    Layer(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
+    CellBlock(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {
       print(const Text(""));
     });
   });
-
-
-
 }
 
-void noUse(Pen print) {
+void noUse(CellPrint print) {
   var i = 1;
   print.runInCurrentCell((print) {
     print(i);
@@ -79,14 +77,14 @@ void noUse(Pen print) {
 
 void group(Text text, Null Function() param1) {}
 
-extension X on Pen {
+extension X on CellPrint {
   XX level(Function()? block, {Text title = const Text(""), ContentLayout style = const ContentLayout()}) {
     return XX(block, title: title, style: style);
   }
 }
 
-class Layer extends StatelessWidget {
-  Layer(dynamic block, {super.key, Pen? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
+class CellBlock extends StatelessWidget {
+  CellBlock(dynamic block, {super.key, CellPrint? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
     if (print != null) print(this);
   }
 

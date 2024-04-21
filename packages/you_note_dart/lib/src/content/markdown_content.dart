@@ -6,9 +6,15 @@ import 'package:meta/meta.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
 import 'package:you_note_dart/src/note_core.dart';
 
-class MD{
+class MD extends StatelessWidget {
   final String text;
-  MD(this.text);
+
+  const MD(this.text,{Object? debugLabel});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text);
+  }
 }
 
 @internal
@@ -41,7 +47,6 @@ class MarkdownContent extends StatelessWidget {
       },
     );
   }
-
 }
 
 class _HeaderBuilder extends MarkdownElementBuilder {

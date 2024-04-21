@@ -21,7 +21,7 @@ import 'package:source_maps/source_maps.dart' as source_map;
 /// - [Layout]的具体实现，比如
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
-typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
+typedef NotePageBuilder = void Function(BuildContext context, CellPrint pen);
 typedef NoteRouteLazyInitiator = Future<NotePage> Function(NoteRoute note);
 typedef NoteSourceData = ({
   List<
@@ -289,7 +289,7 @@ class NotePage {
 ///
 ///
 
-class Pen {
+class CellPrint {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   // void cell(CellBuilder builder);
@@ -304,7 +304,7 @@ class Pen {
   final NoteSystem noteSystem;
 
   // Pen({required this.editors});
-  Pen.build(
+  CellPrint.build(
     BuildContext context, {
     required this.notePage,
     required this.noteSystem,
@@ -388,7 +388,7 @@ class NoteCell extends ChangeNotifier {
 
   // index use to find code
   final int index;
-  final Pen pen;
+  final CellPrint pen;
   late final CellSource source;
   final Outline outline;
   final NoteSystem noteSystem;

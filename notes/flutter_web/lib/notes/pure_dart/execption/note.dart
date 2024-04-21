@@ -7,7 +7,7 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 
-void build(BuildContext context, Pen print) async {
+void build(BuildContext context, CellPrint print) async {
   print(MD("text"));
   StackTrace? catchStack;
   try {
