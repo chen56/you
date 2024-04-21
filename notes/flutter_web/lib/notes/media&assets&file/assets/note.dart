@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-void build(BuildContext context, CellPrint print) async {
+void build(BuildContext context, Cell print) async {
   print.$____________________________________________________________________();
   print.markdown(r'''
 # asset

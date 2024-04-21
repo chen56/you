@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 133,
+          end: 128,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # 完善应用概览  )
         (
           cellType: 'body',
-          offset: 133,
-          end: 213,
+          offset: 128,
+          end: 208,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 213,
-          end: 215,
+          offset: 208,
+          end: 210,
           specialNodes: <({
             String nodeType,
             int end,

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // import 'package:you_note_dart/src/params/mate_note.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, CellPrint print) async {
+void build(BuildContext context, Cell print) async {
   print.$____________________________________________________________________();
   print.markdown(r'''
 # 异步

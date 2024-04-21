@@ -7,7 +7,7 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 
-void build(BuildContext context, CellPrint print) async {
+void build(BuildContext context, Cell print) async {
   print(MD("text"));
   StackTrace? catchStack;
   try {
@@ -43,13 +43,8 @@ kIsWeb && kReleaseMode 时是js堆栈，要对齐为dart，需要解析工具：
 
 ```shell
 ${await convertDartTraceIfJsTrace(catchStack!)}
-####### dartTrace2
-${(await print.caller()).dartTrace}
-
 ```
   """);
-
-  print.caller();
 }
 
 void throwException() {

@@ -31,12 +31,12 @@ class ExampleContent {
     return "MateSample('${mate.toString()}')";
   }
 
-  String toSampleCode(NoteCell cell, ObjectParam param, Editors editors) {
+  String toSampleCode(Cell cell, ObjectParam param, Editors editors) {
     return codeTemplate.codeBuilder(cell, param, editors);
   }
 }
 
-typedef SampleCodeBuilder = String Function(NoteCell cell, ObjectParam param, Editors editors);
+typedef SampleCodeBuilder = String Function(Cell cell, ObjectParam param, Editors editors);
 
 class SampleTemplate {
   String name;
@@ -104,7 +104,7 @@ class SampleTemplate {
 
   /// cell代码被转换后作为范例代码
   /// The cell code is transformed as sample code
-  static String _cleanCellCode(NoteCell cell, ObjectParam rootParam) {
+  static String _cleanCellCode(Cell cell, ObjectParam rootParam) {
     var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
 
     sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
@@ -124,7 +124,7 @@ class ExampleWidget extends StatelessWidget   {
   final ObjectParam rootParam;
   final String title;
   final ExampleContent content;
-  final NoteCell cell;
+  final Cell cell;
 
   const ExampleWidget({
     super.key,

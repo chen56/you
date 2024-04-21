@@ -10,7 +10,6 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 
-
 NoteSourceData _emptyPageGenInfo = (
   cells: [
     (
@@ -23,22 +22,22 @@ NoteSourceData _emptyPageGenInfo = (
 );
 
 typedef NoteSourceData = ({
-List<
-    ({
-    String cellType,
-    int end,
-    int offset,
-    List<
-        ({
-        String nodeType,
+  List<
+      ({
+        String cellType,
         int end,
         int offset,
-        })> specialNodes,
-    })> cells,
+        List<
+            ({
+              String nodeType,
+              int end,
+              int offset,
+            })> specialNodes,
+      })> cells,
 // NoteConfPart meta
 });
 
-typedef NotePageBuilder = void Function(BuildContext context, CellPrint pen);
+typedef NotePageBuilder = void Function(BuildContext context, Cell pen);
 
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
@@ -204,10 +203,17 @@ class NoteRoute {
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
   Future<NotePage> lazyInit({required NotePageBuilder builder}) async {
-    return NotePage(noteRoute: this, pageBuilder: builder, conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)), content: await rootBundle.loadString(dartAssetPath));
+    return NotePage(
+      noteRoute: this,
+      pageBuilder: builder,
+      conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
+      content: await rootBundle.loadString(dartAssetPath),
+    );
   }
 }
 
+
+/// ref: [NoteRouteLazyInitiator]
 class NotePage {
   final NoteRoute noteRoute;
   final NotePageBuilder pageBuilder;
@@ -218,7 +224,9 @@ class NotePage {
     required this.pageBuilder,
     required this.conf,
     required this.content,
-  });
+  }){
+
+  }
 
   @internal
   String getCellCode(CodeEntity codeEntity) {
@@ -227,7 +235,6 @@ class NotePage {
     }
     return content.safeSubstring(codeEntity.offset, codeEntity.end);
   }
-
 
   static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
     required StackTrace trace,
@@ -274,7 +281,6 @@ class NotePage {
 
     return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
   }
-
 }
 
 class NoteSystem {
@@ -328,11 +334,11 @@ class CellSource {
     required this.specialSources,
     required this.page,
   });
+
   final CellType cellType;
   final CodeEntity codeEntity;
   final List<SpecialSource> specialSources;
   final NotePage page;
-
 
   String get code {
     return page.getCellCode(codeEntity);

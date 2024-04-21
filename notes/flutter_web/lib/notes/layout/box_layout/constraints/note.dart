@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, CellPrint print) {
+void build(BuildContext context, Cell print) {
 
   print.markdown(r'''
 # flutter layout
@@ -95,7 +95,7 @@ BoxConstraints(w=1103.0, h=566.0)    // w是width,h是height
 }
 
 
-question01ColumnAddListView(BuildContext context, CellPrint print) {
+question01ColumnAddListView(BuildContext context, Cell print) {
 
 
   print.markdown(r'''

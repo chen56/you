@@ -171,7 +171,7 @@ flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
 flutter_web.gen()      { dart run bin/notecli.dart gen --dir notes/flutter_web/;   }
-flutter_web.dev()      { flutter_web.dev_html "$@";                                }
+flutter_web.dev()      { flutter_web.dev_macos "$@";                                }
 flutter_web.build()    { flutter_web.build_html "$@" ;                             }
 flutter_web.preview()  { flutter_web.build_html;
                          flutter_web.preview_html_deno;                            }

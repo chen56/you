@@ -8,19 +8,19 @@ import 'package:you_note_dart/note.dart';
 ///   - 但同步异步都可以完全不靠Trace来定位cell，
 ///   - 可信度也较高（Trace总觉得有点不太靠谱，收集定位 source code 也就行了），
 ///   - 甚至可以作为通用架构来做note外的开发
-void build(BuildContext context, CellPrint printc) {
-  printc(Cell.namedBlock(
+void build(BuildContext context, Cell printc) {
+  printc(TestCell.namedBlock(
       title: Text("全named 参数 root, 格式化时,所有参数强制换行，无法调整啊"),
       style: ContentLayout(maxColumn: 3),
       block: (printc) {
-        printc(Cell.namedBlock(
+        printc(TestCell.namedBlock(
             title: Text("1"),
             style: ContentLayout(maxColumn: 3),
             block: (printc) {
               return printc(Text(""));
             }));
         // 这样也可以，嵌套多一层，但api单一化了，都是print思路
-        printc(Cell.namedBlock(
+        printc(TestCell.namedBlock(
             title: Text("2"),
             style: ContentLayout(maxColumn: 3),
             block: (printc) {
@@ -28,37 +28,37 @@ void build(BuildContext context, CellPrint printc) {
             }));
       }));
 
-  printc(Cell.named(title: Text("3"), style: ContentLayout(maxColumn: 3), children: [
-    Cell.namedBlock(
+  printc(TestCell.named(title: Text("3"), style: ContentLayout(maxColumn: 3), children: [
+    TestCell.namedBlock(
       title: Text("3"),
       style: ContentLayout(maxColumn: 3),
       block: (printc) => printc(Text("")),
     )
   ]));
 
-  printc(Cell.position(title: Text("全named 参数 root, 格式化时强制换行，无法调整啊"), style: ContentLayout(maxColumn: 3), (printc) {
+  printc(TestCell.position(title: Text("全named 参数 root, 格式化时强制换行，无法调整啊"), style: ContentLayout(maxColumn: 3), (printc) {
     int i = 0;
     i++;
     printc(i);
 
-    printc(Cell.position(title: Text("1"), style: ContentLayout(maxColumn: 3), (printc) {
+    printc(TestCell.position(title: Text("1"), style: ContentLayout(maxColumn: 3), (printc) {
       printc(Text(""));
     }));
-    // 这样也可以，嵌套多一层，但api单一化了，都是print思路
-    printc(Cell.position(title: Text("2"), style: ContentLayout(maxColumn: 3), (printc) {
-      printc(Text(""));
-    }));
+    for (int i = 0; i < 10; i++) {
+      // 这样也可以，嵌套多一层，但api单一化了，都是print思路
+      printc(TestCell.position(title: Text("2"), style: ContentLayout(maxColumn: 3), (printc) {
+        printc(Text(""));
+      }));
+    }
 
     printc(Text(""));
-
-
   }));
 
-  printc(Cell.positionList(title: Text("位置参数block，root"), style: ContentLayout(maxColumn: 3), children: [
-    Cell.position(title: Text("1"), style: ContentLayout(maxColumn: 3), (printc) {
+  printc(TestCell.positionList(title: Text("位置参数block，root"), style: ContentLayout(maxColumn: 3), children: [
+    TestCell.position(title: Text("1"), style: ContentLayout(maxColumn: 3), (printc) {
       printc("hello");
     }),
-    Cell.position(
+    TestCell.position(
       (printc) {
         printc("hello");
       },
@@ -68,24 +68,26 @@ void build(BuildContext context, CellPrint printc) {
   ]).style(ContentLayout(maxColumn: 3)));
 }
 
-class Cell extends StatelessWidget {
-  Cell.namedBlock({dynamic block, super.key, CellPrint? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Cell> children = const <Cell>[]}) {
+class TestCell extends StatelessWidget {
+  TestCell.namedBlock({dynamic block, super.key, Cell? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<TestCell> children = const <TestCell>[]}) {
     if (print != null) print(this);
   }
 
-  Cell.named({super.key, required Text title, required ContentLayout style, required List<Cell> children}) {}
+  TestCell.named({super.key, required Text title, required ContentLayout style, required List<TestCell> children}) {}
 
-  Cell.position(
+  TestCell.position(
     Function(dynamic printc) block, {
     required Text title,
     required ContentLayout style,
   }) {}
 
-  Cell.positionList({required Text title, required ContentLayout style, List<Cell> children = const []}) {}
+  TestCell.positionList({required Text title, required ContentLayout style, List<TestCell> children = const []}) {}
 
-  Cell style(ContentLayout style) {
+  TestCell style(ContentLayout style) {
     return this;
   }
+
+  call() {}
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +96,7 @@ class Cell extends StatelessWidget {
 }
 
 class PositionArgBlock extends StatelessWidget {
-  PositionArgBlock(dynamic block, {super.key, CellPrint? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Cell> children = const <Cell>[]}) {
+  PositionArgBlock(dynamic block, {super.key, Cell? print, Text title = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<TestCell> children = const <TestCell>[]}) {
     if (print != null) print(this);
   }
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
-void build(BuildContext context, CellPrint print) {
+void build(BuildContext context, Cell print) {
   print.markdown('''
 # analyzer
 
@@ -14,7 +14,7 @@ void build(BuildContext context, CellPrint print) {
   print.$____________________________________________________________________();
 
   var x = analyzer_util.parseString(
-      content: print.notePage.content,
+      content: """int i=1;""",
       featureSet: FeatureSet.latestLanguageVersion());
   for (var e in x.unit.directives) {
     print(e);
@@ -33,7 +33,7 @@ void build(BuildContext context, CellPrint print) {
   int times = 1000;
   for (int i = 0; i < times; i++) {
     analyzer_util.parseString(
-        content: print.notePage.content,
+        content: """int i=1;""",
         featureSet: FeatureSet.latestLanguageVersion());
   }
   print(

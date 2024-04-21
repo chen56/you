@@ -32,12 +32,7 @@ asf
   print(CodeTemplate(const Text("### xxx markdwon"), () {
     return const Text("里面的xxx");
   }));
-  print(CodeTemplateNoReturn(const Text("### xxx markdwon"), ({required CellPrint cell}) {
-    var i = 1;
-    i++;
-    cell(i);
-  }));
-  CodeTemplateNoReturn(Text("ss"), ({required CellPrint cell}) {});
+  CodeTemplateNoReturn(Text("ss"), ({required TestCell cell}) {});
   var cell = print(Text("sss"));
   void x() {
     cell.clear();
@@ -47,23 +42,15 @@ asf
   x();
 }
 
-class Group extends StatelessWidget {
-  Group(Text title, Function()? block, {super.key, CellPrint? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
+
+class TestCell extends StatelessWidget {
+  TestCell(Text title, Function()? block, {super.key, TestCell? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
     if (print != null) print(this);
   }
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
+  call(dynamic){
 
-class Cell extends StatelessWidget {
-  Cell(Text title, Function()? block, {super.key, CellPrint? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
-    if (print != null) print(this);
   }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -72,7 +59,7 @@ class Cell extends StatelessWidget {
 }
 
 class CodeTemplate extends StatelessWidget {
-  CodeTemplate(Text title, Widget Function()? block, {super.key, CellPrint? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
+  CodeTemplate(Text title, Widget Function()? block, {super.key, TestCell? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
     if (print != null) print(this);
   }
 
@@ -84,7 +71,7 @@ class CodeTemplate extends StatelessWidget {
 }
 
 class CodeTemplateNoReturn extends StatelessWidget {
-  CodeTemplateNoReturn(Text title, void Function({required CellPrint cell})? block, {super.key, CellPrint? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
+  CodeTemplateNoReturn(Text title, void Function({required TestCell cell})? block, {super.key, TestCell? print, Text title2 = const Text(""), Widget? textBox, ContentLayout style = const ContentLayout(), List<Widget> children = const <Widget>[]}) {
     if (print != null) print(this);
   }
 

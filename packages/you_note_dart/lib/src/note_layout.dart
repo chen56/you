@@ -83,7 +83,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
   }
 
   ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
-    _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
+    _NoteCellView newCellView(Cell cell) => _NoteCellView(
           cell,
           outline: outline,
         );
@@ -94,6 +94,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
       defaultCodeExpand: false,
       outline: outline,
     );
+
+    //first
+    widget.notePage.pageBuilder(context, pen.next());
+
     return (
       cells: pen.cells.map((cell) => newCellView(cell)).toList(),
       outline: outline,
@@ -327,7 +331,7 @@ class _OutlineTreeView extends StatelessWidget {
 /// bar  | -------------------
 /// view | contentView
 class _NoteCellView extends StatelessWidget {
-  final NoteCell cell;
+  final Cell cell;
   final Outline outline;
 
   // ignore: prefer_const_constructors_in_immutables

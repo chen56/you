@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:path/path.dart' as path;
 
-void build(BuildContext context, CellPrint print) {
+void build(BuildContext context, Cell print) {
   print.markdown('''
 # Platform和设备信息
 

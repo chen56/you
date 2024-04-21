@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 134,
+          end: 129,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print.markdown(r''' # IconButt)
         (
           cellType: 'body',
-          offset: 134,
-          end: 233,
+          offset: 129,
+          end: 228,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print(const Wrap(children: []))
         (
           cellType: 'body',
-          offset: 311,
-          end: 428,
+          offset: 306,
+          end: 423,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 428,
-          end: 430,
+          offset: 423,
+          end: 425,
           specialNodes: <({
             String nodeType,
             int end,
