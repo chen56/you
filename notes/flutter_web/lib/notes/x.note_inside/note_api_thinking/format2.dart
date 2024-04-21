@@ -1,8 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Function(Object? s) print) {
+void build(BuildContext context, Function(Object? s) print) {
   print(const Markdown(data: "ssss"));
   print(const Markdown(data: '''
 ## 2级标题

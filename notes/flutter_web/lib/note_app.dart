@@ -62,7 +62,7 @@ class Notes extends BaseNotes with Navigable {
     // if (BaseNotes.rootroot.contains(last)) {
     //   return switchTo(last);
     // }
-    return switchTo(this.pure_dart_execption.path);
+    return switchTo(pure_dart_execption.path);
   }
 
   @override

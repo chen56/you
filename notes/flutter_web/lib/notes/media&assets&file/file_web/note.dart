@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:web/web.dart' as web;
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Pen print) {
   print.markdown(r'''
 # file access on web
   ''');

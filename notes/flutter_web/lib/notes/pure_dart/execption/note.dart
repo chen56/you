@@ -8,12 +8,7 @@ import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 
 void build(BuildContext context, Pen print) async {
-  print.markdown("""
-# exception
-
-## web的js堆栈转换为dart堆栈
-
-""");
+  print(MD("text"));
   StackTrace? catchStack;
   try {
     throwException();
@@ -54,8 +49,7 @@ ${(await print.caller()).dartTrace}
 ```
   """);
 
-
-   print.caller();
+  print.caller();
 }
 
 void throwException() {
@@ -79,7 +73,7 @@ Future<Trace> convertDartTraceIfJsTrace(StackTrace trace) async {
 
   Future<Trace> jsTraceToDartTrace(StackTrace stackTrace) async {
     Uri jsMapUri = getJsMapUriFromJsTrace(trace);
-    String sourceMap = await (await http.get(jsMapUri)).body;
+    String sourceMap = (await http.get(jsMapUri)).body;
     var dartTrace = source_map_stack_trace.mapStackTrace(source_map.parse(sourceMap), stackTrace);
     return Trace.from(dartTrace);
   }

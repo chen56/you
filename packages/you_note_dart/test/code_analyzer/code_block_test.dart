@@ -5,7 +5,7 @@ import 'package:you_note_dart/src/content/source_code.dart';
 
 void main() {
   group("code analyzer", () {
-    test("block", () async {
+    test("use_case_basic", () async {
       SourceCode code = SourceCode.parseFile("test/code_analyzer/use_case_basic.dart");
       check(code.line(8)).equals(r'  print("x:$x");');
       check(code.findCellCode(line: 8)!.blockContent).equals(r"""

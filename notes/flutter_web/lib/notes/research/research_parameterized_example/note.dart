@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Pen print) {
   print.$____________________________________________________________________();
   print.markdown('''
 # 参数化范例

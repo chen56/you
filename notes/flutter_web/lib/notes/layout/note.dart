@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Pen print) {
   StatefulBuilder(
     builder: (BuildContext context, StateSetter setState) {
       return Text("data");

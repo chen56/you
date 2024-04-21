@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) async {
+void build(BuildContext context, Pen print) async {
   print.markdown(r'''
 ## 打印组件树
 

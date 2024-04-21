@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Pen print) {
   print(Layer(title: const Text("布局"), style: const ContentLayout(maxColumn: 3), () {
     print(Layer(title: const Text("box布局"), style: const ContentLayout(maxColumn: 3), () {
       print(Layer(title: const Text("box布局 box布局.Column vs ListView"), style: const ContentLayout(maxColumn: 3), () {

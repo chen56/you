@@ -379,8 +379,10 @@ class Pen {
   }
 }
 
+
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
+@internal
 class NoteCell extends ChangeNotifier {
   final List<Widget> _contents = List.empty(growable: true);
 
@@ -431,6 +433,7 @@ class NoteCell extends ChangeNotifier {
 
   void call(Object? content) {
     Widget result = switch (content) {
+      MD md => MarkdownContent(content: md.text, outline: outline),
       Widget widget => widget,
       _ => ObjectContent(content: content),
     };
@@ -515,7 +518,9 @@ class NoteCell extends ChangeNotifier {
   }
 }
 
+
 // markdown 的结构轮廓，主要用来显示TOC
+@internal
 class Outline {
   bool _done = false;
 
@@ -539,6 +544,7 @@ class Outline {
   }
 }
 
+@internal
 class OutlineNode {
   GlobalKey key;
 
@@ -589,12 +595,14 @@ class OutlineNode {
   }
 }
 
+@internal
 class NoteSource {
   final NoteSourceData _pageGenInfo;
 
   NoteSource({required NoteSourceData pageGenInfo}) : _pageGenInfo = pageGenInfo;
 }
 
+@internal
 /// CodeEntity is same as analyzer [SyntacticEntity]
 class CodeEntity {
   final int offset;
@@ -641,6 +649,7 @@ class CellSource {
   }
 }
 
+@internal
 class SpecialSource {
   /// todo codeType to enum, common use by this and note_dev_gen.dart
   String codeType;
@@ -664,6 +673,7 @@ class SpecialSource {
   }
 }
 
+@internal
 enum CellType {
   header,
   body,

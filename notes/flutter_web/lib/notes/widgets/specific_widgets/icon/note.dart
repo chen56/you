@@ -8,7 +8,7 @@ import 'package:you_note_dart/note.dart';
 
 Set<String> iconTypes = {"sharp", "rounded", "outlined"};
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Pen print) {
   print.markdown('''
 # Material Icon
 

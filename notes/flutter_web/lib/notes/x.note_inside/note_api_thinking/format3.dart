@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen cell) {
+void build(BuildContext context, Pen cell) {
 
   Layer(cell,title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), (cell) {
 
