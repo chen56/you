@@ -1,7 +1,7 @@
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:stack_trace/stack_trace.dart';
-import 'package:you_note_dart/src/note_cell.dart';
+import 'package:you_note_dart/src/note_page.dart';
 
 final _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
 
@@ -9,7 +9,7 @@ void main() {
   group("jsSourceMap", () {
     test("get ok", () async {
       late Uri jsMapUri;
-      await NoteCell.findCallerLine(
+      await NotePage.findCallerLine(
           trace: StackTrace.fromString("""
 Exception: my throw
     at Object.f (http://localhost:8080/you/flutter_web/main.dart.js:4119:19)
@@ -26,7 +26,7 @@ Exception: my throw
     });
     test("not found error", () async {
       try {
-        await NoteCell.findCallerLine(
+        await NotePage.findCallerLine(
             trace: StackTrace.fromString(
               """
 Exception: my throw
@@ -49,7 +49,7 @@ Exception: my throw
   });
   group("findCallerLine", () {
     test("js trace", () async {
-      ({Trace dartTrace, Frame? callerFrame}) found = await NoteCell.findCallerLine(
+      ({Trace dartTrace, Frame? callerFrame}) found = await NotePage.findCallerLine(
         trace: StackTrace.fromString( r"""
 Exception: my throw
     at Object.e (http://localhost:8080/you/flutter_web/main.dart.js:4207:19)

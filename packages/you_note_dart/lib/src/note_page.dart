@@ -1,10 +1,14 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
+import 'package:stack_trace/stack_trace.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/utils_core.dart';
+import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
+import 'package:path/path.dart' as path;
+import 'package:source_maps/source_maps.dart' as source_map;
 
 
 NoteSourceData _emptyPageGenInfo = (
@@ -224,6 +228,54 @@ class NotePage {
     }
     return content.safeSubstring(codeEntity.offset, codeEntity.end);
   }
+
+
+  static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
+    required StackTrace trace,
+    required Uri location,
+    Future<String> Function(Uri uri)? jsSourceMapLoader,
+  }) async {
+    Uri getJsMapUriFromJsTrace(StackTrace trace) {
+      var parsed = Trace.from(trace);
+      for (var frame in parsed.frames) {
+        // 如果遇到解析不了的行(可能发生在测试中或其他情况)
+        if (frame.line == null || frame.uri.path == "unparsed") {
+          continue;
+        }
+        if (path.basename(frame.uri.path) != "main.dart.js") {
+          return frame.uri.replace(path: "${frame.uri.path}.map");
+        }
+      }
+      throw AssertionError("current only support deferred import page, that uri looks like: http://localhost:8080/you/flutter_web/main.dart.js_24.part.js, but your stack: $trace  ");
+    }
+
+    Frame? findCallerLineInDartTrace(StackTrace stackTrace, Uri location) {
+      var trace = Trace.from(stackTrace);
+      Frame? found;
+      // 找到堆栈中连续出现的本页面中最后一个，就是哪一行实际触发了异常
+      for (var frame in trace.frames) {
+        if (frame.uri.path.endsWith(path.normalize("/notes/${location.fragment}/note.dart"))) {
+          found = frame;
+        } else {
+          if (found != null) {
+            return found;
+          }
+        }
+      }
+      return found;
+    }
+
+    Future<Trace> jsTraceToDartTrace(StackTrace jsTrace, Uri location) async {
+      String sourceMap = await jsSourceMapLoader!(getJsMapUriFromJsTrace(trace));
+      var dartTrace = source_map_stack_trace.mapStackTrace(source_map.parse(sourceMap), jsTrace);
+      return Trace.from(dartTrace);
+    }
+
+    var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
+
+    return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
+  }
+
 }
 
 class NoteSystem {

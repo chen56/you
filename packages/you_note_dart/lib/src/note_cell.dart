@@ -8,10 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/src/content/object_content.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/note_page.dart';
-import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:stack_trace/stack_trace.dart';
-import 'package:path/path.dart' as path;
-import 'package:source_maps/source_maps.dart' as source_map;
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -106,12 +103,11 @@ class CellPrint {
     _currentCell = cells[nextCellIndex];
   }
 
-  /// FIXME 待处理
   Future<({Trace dartTrace, Frame? callerFrame})> caller() {
     try {
       throw Exception("track caller line");
     } catch (e, trace) {
-      return NoteCell.findCallerLine(
+      return NotePage.findCallerLine(
         trace: trace,
         location: Uri.base,
         jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
@@ -123,7 +119,6 @@ class CellPrint {
     _currentCell.print(object);
   }
 
-  /// TODO 这个方案不错，可惜编辑器导航条需要有一个Text组件，加一个title
   /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
   /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
   @experimental
@@ -220,52 +215,6 @@ class NoteCell extends ChangeNotifier {
     notifyListeners();
   }
 
-  static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
-    required StackTrace trace,
-    required Uri location,
-    Future<String> Function(Uri uri)? jsSourceMapLoader,
-  }) async {
-    Uri getJsMapUriFromJsTrace(StackTrace trace) {
-      var parsed = Trace.from(trace);
-      for (var frame in parsed.frames) {
-        // 如果遇到解析不了的行(可能发生在测试中或其他情况)
-        if (frame.line == null || frame.uri.path == "unparsed") {
-          continue;
-        }
-        if (path.basename(frame.uri.path) != "main.dart.js") {
-          return frame.uri.replace(path: "${frame.uri.path}.map");
-        }
-      }
-      throw AssertionError("current only support deferred import page, that uri looks like: http://localhost:8080/you/flutter_web/main.dart.js_24.part.js, but your stack: $trace  ");
-    }
-
-    Frame? findCallerLineInDartTrace(StackTrace stackTrace, Uri location) {
-      var trace = Trace.from(stackTrace);
-      Frame? found;
-      // 找到堆栈中连续出现的本页面中最后一个，就是哪一行实际触发了异常
-      for (var frame in trace.frames) {
-        if (frame.uri.path.endsWith(path.normalize("/notes/${location.fragment}/note.dart"))) {
-          found = frame;
-        } else {
-          if (found != null) {
-            return found;
-          }
-        }
-      }
-      return found;
-    }
-
-    Future<Trace> jsTraceToDartTrace(StackTrace jsTrace, Uri location) async {
-      String sourceMap = await jsSourceMapLoader!(getJsMapUriFromJsTrace(trace));
-      var dartTrace = source_map_stack_trace.mapStackTrace(source_map.parse(sourceMap), jsTrace);
-      return Trace.from(dartTrace);
-    }
-
-    var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
-
-    return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
-  }
-
   @override
   String toString() {
     return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
@@ -312,20 +261,20 @@ class OutlineNode {
   String title;
 
   OutlineNode? _parent;
-  List<OutlineNode> kids = List.empty(growable: true);
+  List<OutlineNode> children = List.empty(growable: true);
 
   OutlineNode({required this.title, required this.heading, required this.key});
 
   OutlineNode add(OutlineNode newNode) {
     if (_parent == null || heading < newNode.heading) {
       newNode._parent = this;
-      kids.add(newNode);
+      children.add(newNode);
       return newNode;
     }
     return _parent!.add(newNode);
   }
 
-  bool get isLeaf => kids.isEmpty;
+  bool get isLeaf => children.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
@@ -334,16 +283,16 @@ class OutlineNode {
   OutlineNode get root => isRoot ? this : _parent!.root;
 
   List<OutlineNode> toList({bool includeThis = true}) {
-    var flatChildren = kids.expand((element) => element.toList()).toList();
+    var flatChildren = children.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
   @override
   String toString() {
-    return "heading:$heading title:$title kids:${kids.length}";
+    return "heading:$heading title:$title kids:${children.length}";
   }
 
   void clear() {
-    kids.clear();
+    children.clear();
   }
 }
