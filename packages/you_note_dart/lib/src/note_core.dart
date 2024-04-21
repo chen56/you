@@ -292,34 +292,35 @@ class NotePage {
 class CellPrint {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
-  // void cell(CellBuilder builder);
-  // final List<NoteCell> cells = List.empty(growable: true);
-  // NoteCell _currentCell = NoteCell(index: 0);
+  @internal
   late final List<NoteCell> cells;
-  late NoteCell currentCell;
+  @internal
   final Outline outline;
-  final NoteRoute note;
+  final NoteRoute _note;
+  @internal
   final NotePage notePage;
-  final bool defaultCodeExpand;
-  final NoteSystem noteSystem;
+  final bool _defaultCodeExpand;
+  final NoteSystem _noteSystem;
 
-  // Pen({required this.editors});
+  late NoteCell currentCell;
+
+  @internal
   CellPrint.build(
     BuildContext context, {
     required this.notePage,
-    required this.noteSystem,
-    required this.defaultCodeExpand,
+    required NoteSystem noteSystem,
+    required bool defaultCodeExpand,
     required this.outline,
-  }) : note = notePage.noteRoute {
-    assert(note.source._pageGenInfo.cells.isNotEmpty, "page cells should not be empty");
+  }) : _defaultCodeExpand = defaultCodeExpand, _noteSystem = noteSystem, _note = notePage.noteRoute {
+    assert(_note.source._pageGenInfo.cells.isNotEmpty, "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);
-    for (int i = 0; i < note.source._pageGenInfo.cells.length; i++) {
+    for (int i = 0; i < _note.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
-        noteSystem: noteSystem,
+        noteSystem: _noteSystem,
         pen: this,
         index: i,
-        pageSource: note.source,
+        pageSource: _note.source,
       ));
     }
     this.cells = List.unmodifiable(cells);
@@ -380,7 +381,7 @@ class CellPrint {
 }
 
 
-/// 一个cell代表note中的一个代码块及其产生的内容
+/// 一个cell代表note中的一个代码块及其产生的内容qcancel mate function mate feature
 /// A cell represents a code block in a note and its generated content
 @internal
 class NoteCell extends ChangeNotifier {
@@ -455,10 +456,10 @@ class NoteCell extends ChangeNotifier {
       return switch (source.cellType) {
         CellType.header => false,
         CellType.tail => false,
-        CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
+        CellType.body => pen._defaultCodeExpand && !isAllMarkdownContent,
       };
     }
-    return _codeExpand ?? pen.defaultCodeExpand;
+    return _codeExpand ?? pen._defaultCodeExpand;
   }
 
   set codeExpand(bool newValue) {
@@ -661,7 +662,7 @@ class SpecialSource {
     required this.codeType,
     required this.codeEntity,
     required this.cell,
-  }) : pageSource = cell.pen.note.source;
+  }) : pageSource = cell.pen._note.source;
 
   String get code {
     return cell.pen.notePage._getCellCode(codeEntity);
