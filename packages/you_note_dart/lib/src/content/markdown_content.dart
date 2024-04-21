@@ -5,6 +5,7 @@ import 'package:markdown/markdown.dart' as md;
 import 'package:meta/meta.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
 import 'package:you_note_dart/src/note_cell.dart';
+import 'package:you_note_dart/src/note_page.dart';
 
 class MD extends StatelessWidget {
   final String text;

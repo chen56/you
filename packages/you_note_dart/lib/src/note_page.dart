@@ -208,7 +208,6 @@ class NoteRoute {
   }
 }
 
-// TODO 这个类设计的比较突兀，
 class NotePage {
   final NoteRoute noteRoute;
   final NotePageBuilder pageBuilder;
@@ -323,20 +322,20 @@ class CodeEntity {
 }
 
 class CellSource {
-  final CellType cellType;
-  final CodeEntity codeEntity;
-  final List<SpecialSource> specialSources;
-  final NoteCell cell;
-
   CellSource({
     required this.cellType,
     required this.codeEntity,
     required this.specialSources,
-    required this.cell,
+    required this.page,
   });
+  final CellType cellType;
+  final CodeEntity codeEntity;
+  final List<SpecialSource> specialSources;
+  final NotePage page;
+
 
   String get code {
-    return cell.pen.notePage.getCellCode(codeEntity);
+    return page.getCellCode(codeEntity);
   }
 
   bool get isCodeEmpty {
@@ -349,7 +348,7 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellSource(index:${cell.index}, block:$codeEntity )";
+    return "CellSource:cellType:$cellType block:$codeEntity )";
   }
 }
 
@@ -358,17 +357,19 @@ class SpecialSource {
   /// todo codeType to enum, common use by this and note_dev_gen.dart
   String codeType;
   final CodeEntity codeEntity;
-  final NoteCell cell;
+  final NotePage page;
+  final NoteRoute note;
   final NoteSource pageSource;
 
   SpecialSource({
     required this.codeType,
     required this.codeEntity,
-    required this.cell,
-  }) : pageSource = cell.pen.note.source;
+    required this.page,
+    required this.note,
+  }) : pageSource = note.source;
 
   String get code {
-    return cell.pen.notePage.getCellCode(codeEntity);
+    return page.getCellCode(codeEntity);
   }
 
   @override
@@ -388,5 +389,56 @@ enum CellType {
       if (t.name == name) return t;
     }
     throw Exception("CellType.name:$name not exist");
+  }
+}
+
+@internal
+class OutlineNode {
+  GlobalKey key;
+
+  /// markdown 的原始标题级数：
+  ///   root特殊为 0级
+  ///   # 一级
+  ///   ## 二级
+  ///   等等...
+  /// heading 和 level不一定想等，有时候markdown 的级数可能乱标，我们按idea,vscode的父子逻辑
+  /// 来组织tree
+  int heading;
+  String title;
+
+  OutlineNode? _parent;
+  List<OutlineNode> children = List.empty(growable: true);
+
+  OutlineNode({required this.title, required this.heading, required this.key});
+
+  OutlineNode add(OutlineNode newNode) {
+    if (_parent == null || heading < newNode.heading) {
+      newNode._parent = this;
+      children.add(newNode);
+      return newNode;
+    }
+    return _parent!.add(newNode);
+  }
+
+  bool get isLeaf => children.isEmpty;
+
+  int get level => isRoot ? 0 : _parent!.level + 1;
+
+  bool get isRoot => _parent == null;
+
+  OutlineNode get root => isRoot ? this : _parent!.root;
+
+  List<OutlineNode> toList({bool includeThis = true}) {
+    var flatChildren = children.expand((element) => element.toList()).toList();
+    return includeThis ? [this, ...flatChildren] : flatChildren;
+  }
+
+  @override
+  String toString() {
+    return "heading:$heading title:$title kids:${children.length}";
+  }
+
+  void clear() {
+    children.clear();
   }
 }
