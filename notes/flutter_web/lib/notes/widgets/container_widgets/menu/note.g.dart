@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 123,
+          end: 129,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,23 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb)
+        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb, print = print.next(title: cons, print(Row(children: [CheckboxM)
         (
           cellType: 'body',
-          offset: 123,
-          end: 222,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(Row(children: [CheckboxM)
-        (
-          cellType: 'body',
-          offset: 300,
-          end: 452,
+          offset: 129,
+          end: 444,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 452,
-          end: 454,
+          offset: 444,
+          end: 446,
           specialNodes: <({
             String nodeType,
             int end,

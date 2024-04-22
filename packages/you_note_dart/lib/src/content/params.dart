@@ -604,11 +604,11 @@ class Editors {
   Editor get(Param param, {EditorBuilder? onNotFound}) {
     // 20230401 dart2js compile error: can not use patterns.
     // flutter build web --enable-experiment=records,patterns --release --web-renderer html --base-href "/note/"
-    // new cell-------------------
+    // --------------------------------------------------
     // Error: Expected an identifier, but got 'switch'.
     // var isPrimary = switch (color) {
     // ^^^^^^
-    // new cell-------------------
+    // --------------------------------------------------
     // var xx = switch (T) {
     // int => IntEditor(param, editors: this),
     // _ => onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this)

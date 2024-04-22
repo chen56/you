@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 175,
+          end: 181,
           specialNodes: <({
             String nodeType,
             int end,
@@ -14,263 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## AppBar )
+        /// (print.markdown(r''' ## AppBar , print = print.next(title: cons, print(AppBar(title: const Text, ..., click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
         (
           cellType: 'body',
-          offset: 175,
-          end: 306,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(AppBar(title: const Text)
-        (
-          cellType: 'body',
-          offset: 384,
-          end: 986,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## BottomA)
-        (
-          cellType: 'body',
-          offset: 1064,
-          end: 1221,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(BottomAppBar(child: Row()
-        (
-          cellType: 'body',
-          offset: 1299,
-          end: 1914,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r'''  ## ~~Bott)
-        (
-          cellType: 'body',
-          offset: 1992,
-          end: 2346,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(Column(children: [const )
-        (
-          cellType: 'body',
-          offset: 2424,
-          end: 2938,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' Navigation)
-        (
-          cellType: 'body',
-          offset: 3016,
-          end: 3133,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (var currentPageIndex = 0;, Widget buildNavigationBar(cont, print(StatefulBuilder(builder:)
-        (
-          cellType: 'body',
-          offset: 3211,
-          end: 4025,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## Navigat)
-        (
-          cellType: 'body',
-          offset: 4103,
-          end: 4440,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(Row(children: [SizedBox()
-        (
-          cellType: 'body',
-          offset: 4518,
-          end: 5724,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## TabBar )
-        (
-          cellType: 'body',
-          offset: 5802,
-          end: 6300,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(const DefaultTabControll)
-        (
-          cellType: 'body',
-          offset: 6378,
-          end: 6861,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' 再来看看加了TabV)
-        (
-          cellType: 'body',
-          offset: 6939,
-          end: 7004,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(const DefaultTabControll)
-        (
-          cellType: 'body',
-          offset: 7082,
-          end: 7870,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(""" 上面用法和[Navig)
-        (
-          cellType: 'body',
-          offset: 7948,
-          end: 8219,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (onPressed() {ScaffoldMessenger, print(SizedBox(height: 100, ch)
-        (
-          cellType: 'body',
-          offset: 8297,
-          end: 9027,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## ButtonB)
-        (
-          cellType: 'body',
-          offset: 9105,
-          end: 9435,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(Container(width: 600, co)
-        (
-          cellType: 'body',
-          offset: 9513,
-          end: 9906,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## Overflo)
-        (
-          cellType: 'body',
-          offset: 9984,
-          end: 10191,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print(SizedBox(width: 300, chi)
-        (
-          cellType: 'body',
-          offset: 10269,
-          end: 11046,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (print.markdown(r''' ## Platfor)
-        (
-          cellType: 'body',
-          offset: 11124,
-          end: 11659,
-          specialNodes: <({
-            String nodeType,
-            int end,
-            int offset,
-          })>[],
-        ),
-
-        /// (click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
-        (
-          cellType: 'body',
-          offset: 11737,
-          end: 12610,
+          offset: 181,
+          end: 12322,
           specialNodes: <({
             String nodeType,
             int end,
@@ -281,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 12610,
-          end: 12612,
+          offset: 12322,
+          end: 12324,
           specialNodes: <({
             String nodeType,
             int end,

@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 123,
+          end: 129,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 123,
-          end: 126,
+          offset: 129,
+          end: 132,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(r''' # overview)
         (
           cellType: 'body',
-          offset: 204,
-          end: 458,
+          offset: 181,
+          end: 435,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// (print(Wrap(children: [Elevated)
         (
           cellType: 'body',
-          offset: 536,
-          end: 964,
+          offset: 484,
+          end: 912,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### IconBu)
         (
           cellType: 'body',
-          offset: 1042,
-          end: 1098,
+          offset: 961,
+          end: 1017,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// (print(Row(children: [IconButto)
         (
           cellType: 'body',
-          offset: 1176,
-          end: 1491,
+          offset: 1066,
+          end: 1381,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### Floati)
         (
           cellType: 'body',
-          offset: 1569,
-          end: 1657,
+          offset: 1430,
+          end: 1518,
           specialNodes: <({
             String nodeType,
             int end,
@@ -89,8 +89,8 @@ noteInfo() => (
         /// (int id = 0;, print(Row(children: [FloatingA)
         (
           cellType: 'body',
-          offset: 1735,
-          end: 2617,
+          offset: 1567,
+          end: 2449,
           specialNodes: <({
             String nodeType,
             int end,
@@ -101,8 +101,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### 几个特殊的系)
         (
           cellType: 'body',
-          offset: 2695,
-          end: 3031,
+          offset: 2498,
+          end: 2834,
           specialNodes: <({
             String nodeType,
             int end,
@@ -113,8 +113,8 @@ noteInfo() => (
         /// (print(const Row(children: [Bac)
         (
           cellType: 'body',
-          offset: 3109,
-          end: 3249,
+          offset: 2883,
+          end: 3023,
           specialNodes: <({
             String nodeType,
             int end,
@@ -125,8 +125,8 @@ noteInfo() => (
         /// (print.markdown(r'''  ### Toggl)
         (
           cellType: 'body',
-          offset: 3327,
-          end: 3480,
+          offset: 3072,
+          end: 3225,
           specialNodes: <({
             String nodeType,
             int end,
@@ -137,8 +137,8 @@ noteInfo() => (
         /// (print(Row(children: [ToggleBut)
         (
           cellType: 'body',
-          offset: 3558,
-          end: 3840,
+          offset: 3274,
+          end: 3556,
           specialNodes: <({
             String nodeType,
             int end,
@@ -149,8 +149,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### Segmen)
         (
           cellType: 'body',
-          offset: 3918,
-          end: 4123,
+          offset: 3605,
+          end: 3810,
           specialNodes: <({
             String nodeType,
             int end,
@@ -161,8 +161,8 @@ noteInfo() => (
         /// (print(Row(children: [Segmented)
         (
           cellType: 'body',
-          offset: 4201,
-          end: 4887,
+          offset: 3859,
+          end: 4545,
           specialNodes: <({
             String nodeType,
             int end,
@@ -173,8 +173,8 @@ noteInfo() => (
         /// (print.markdown(r''' ## 相关组件  #)
         (
           cellType: 'body',
-          offset: 4965,
-          end: 5500,
+          offset: 4594,
+          end: 5129,
           specialNodes: <({
             String nodeType,
             int end,
@@ -185,8 +185,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### Ink*组件)
         (
           cellType: 'body',
-          offset: 5578,
-          end: 5772,
+          offset: 5178,
+          end: 5372,
           specialNodes: <({
             String nodeType,
             int end,
@@ -197,8 +197,8 @@ noteInfo() => (
         /// (print(Column(children: [const )
         (
           cellType: 'body',
-          offset: 5850,
-          end: 6124,
+          offset: 5421,
+          end: 5695,
           specialNodes: <({
             String nodeType,
             int end,
@@ -209,8 +209,8 @@ noteInfo() => (
         /// (print.markdown(r''' ### Button)
         (
           cellType: 'body',
-          offset: 6202,
-          end: 6310,
+          offset: 5744,
+          end: 5852,
           specialNodes: <({
             String nodeType,
             int end,
@@ -221,8 +221,8 @@ noteInfo() => (
         /// (print(Container(width: 600, co)
         (
           cellType: 'body',
-          offset: 6388,
-          end: 6778,
+          offset: 5901,
+          end: 6291,
           specialNodes: <({
             String nodeType,
             int end,
@@ -233,8 +233,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 6778,
-          end: 6780,
+          offset: 6291,
+          end: 6293,
           specialNodes: <({
             String nodeType,
             int end,

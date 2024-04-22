@@ -27,7 +27,7 @@ cat vm_url.txt
 # ws://127.0.0.1:61768/hEdm-oGJlDk=
 
 flutter attach -d macos_config  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
-# new cell------------------
+# -------------------------------------------------
 # Syncing files to device macOS...                                   25.4s
 # Flutter run key commands.
 # r Hot reload. 🔥🔥🔥

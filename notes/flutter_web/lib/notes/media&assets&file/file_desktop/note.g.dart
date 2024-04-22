@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 249,
+          end: 255,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (if (kIsWeb) {print("本页面只适合桌面版本, print.markdown(r''' # file   ', LocalFileSystem fs = const Loc, print(fs.directory("").absolut, print("Directory.current:${Dir)
         (
           cellType: 'body',
-          offset: 249,
-          end: 558,
+          offset: 255,
+          end: 564,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 558,
-          end: 561,
+          offset: 564,
+          end: 567,
           specialNodes: <({
             String nodeType,
             int end,

@@ -15,11 +15,11 @@ import 'package:stack_trace/stack_trace.dart';
 class CellPrint {
   @internal
   CellPrint.build(
-    BuildContext context, {
-    required this.notePage,
-    required bool defaultCodeExpand,
-    required this.outline,
-  })  : _defaultCodeExpand = defaultCodeExpand,
+      BuildContext context, {
+        required this.notePage,
+        required bool defaultCodeExpand,
+        required this.outline,
+      })  : _defaultCodeExpand = defaultCodeExpand,
         note = notePage.noteRoute;
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
@@ -33,13 +33,14 @@ class CellPrint {
   final NotePage notePage;
   final bool _defaultCodeExpand;
 
-  Cell next() {
-    var result = Cell(pen: this, index: cells.length, pageSource: note.source);
+  Cell next({Object title = ""}) {
+    var result = Cell(title: title, pen: this, index: cells.length, pageSource: note.source);
     cells.add(result);
     return result;
   }
 }
 
+/// TODO Cell应该时个普通的配置对象，类似Widget,用户可以扩展
 /// 一个cell代表note中的一个代码块及其产生的内容qcancel mate function mate feature
 /// A cell represents a code block in a note and its generated content
 class Cell extends ChangeNotifier {
@@ -50,8 +51,10 @@ class Cell extends ChangeNotifier {
   final CellPrint pen;
   late final CellSource source;
   final Outline outline;
+  final Object title;
 
   Cell({
+    this.title = "",
     required this.pen,
     required this.index,
     required NoteSource pageSource,
@@ -63,11 +66,11 @@ class Cell extends ChangeNotifier {
       page: pen.notePage,
       specialSources: codeCell.specialNodes
           .map((e) => SpecialSource(
-                codeType: e.nodeType,
-                codeEntity: CodeEntity(offset: e.offset, end: e.end),
-                page: pen.notePage,
-                note: pen.note,
-              ))
+        codeType: e.nodeType,
+        codeEntity: CodeEntity(offset: e.offset, end: e.end),
+        page: pen.notePage,
+        note: pen.note,
+      ))
           .toList(),
     );
   }
@@ -93,7 +96,7 @@ class Cell extends ChangeNotifier {
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
   /// Add a new cell, which is a code block and its generated content in the note
-  Cell $____________________________________________________________________() {
+  Cell next({Object title = ""}) {
     return pen.next();
   }
 
@@ -155,7 +158,7 @@ class Cell extends ChangeNotifier {
 
   @override
   String toString() {
-    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
+    return "$name(hash:$hashCode  index:$index ,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }
 

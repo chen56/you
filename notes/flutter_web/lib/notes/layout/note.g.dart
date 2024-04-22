@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 211,
+          end: 176,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (StatefulBuilder(builder: (Buil)
         (
           cellType: 'body',
-          offset: 211,
-          end: 330,
+          offset: 176,
+          end: 295,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 330,
-          end: 332,
+          offset: 295,
+          end: 297,
           specialNodes: <({
             String nodeType,
             int end,

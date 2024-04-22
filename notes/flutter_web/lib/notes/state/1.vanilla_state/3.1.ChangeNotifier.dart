@@ -14,12 +14,12 @@ main() {
 
 
 父组件维护状态，子组件使用状态
-new cell---------------------------
+----------------------------------------------------------
 App                      : StatelessWidget，state 数据在这里,提供读写方法
   ValueListenableBuilder : StatefulWidget，监听App.size
     ChildRead            : StatelessWidget，读数据
   ChildWrite             : StatelessWidget，写数据,无监听无变化
-new cell---------------------------
+----------------------------------------------------------
 */
 class App extends StatefulWidget {
   const App({super.key});
