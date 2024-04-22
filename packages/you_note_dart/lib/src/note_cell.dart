@@ -41,7 +41,7 @@ class CellPrint {
 }
 
 /// TODO Cell应该时个普通的配置对象，类似Widget,用户可以扩展
-/// 一个cell代表note中的一个代码块及其产生的内容qcancel mate function mate feature
+/// 一个cell代表note中的一个代码块及其产生的内容cancel mate function mate feature
 /// A cell represents a code block in a note and its generated content
 class Cell extends ChangeNotifier {
   final List<Widget> _contents = List.empty(growable: true);
