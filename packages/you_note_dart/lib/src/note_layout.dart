@@ -16,14 +16,14 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    CellPrint pen = CellPrint.build(
+    NotePage pen = NotePage.build(
       context,
       note: note,
       outline: Outline(),
     );
     Cell firstCell = pen.next();
     return FutureBuilder<void>(
-      future: note.noteRouteLazyInitiator!(context, firstCell),
+      future: note.lazyNoteBuilder!(context, firstCell),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
@@ -48,7 +48,7 @@ class DeferredScreen extends StatelessWidget with Screen {
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final CellPrint notePage;
+  final NotePage notePage;
   final NoteRoute rootNote;
 
   LayoutScreen({

@@ -5,15 +5,17 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
+
+// FIXME  130  remove
 import 'package:you_note_dart/src/content/object_content.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/note_page.dart';
 import 'package:stack_trace/stack_trace.dart';
 
 @internal
-class CellPrint {
+class NotePage {
   @internal
-  CellPrint.build(
+  NotePage.build(
     BuildContext context, {
     required this.outline,
     required this.note,
@@ -28,7 +30,7 @@ class CellPrint {
   final NoteRoute note;
 
   Cell next({Object title = ""}) {
-    var result = Cell(title: title, pen: this, index: cells.length, pageSource: note.source);
+    var result = Cell(title: title, pen: this, index: cells.length);
     cells.add(result);
     return result;
   }
@@ -38,11 +40,11 @@ class CellPrint {
 /// 一个cell代表note中的一个代码块及其产生的内容cancel mate function mate feature
 /// A cell represents a code block in a note and its generated content
 class Cell extends ChangeNotifier {
-  final List<Widget> _contents = List.empty(growable: true);
+  final List<Object?> _contents = List.empty(growable: true);
 
   // index use to find code
   final int index;
-  final CellPrint pen;
+  final NotePage pen;
   final Outline outline;
   final Object title;
 
@@ -50,7 +52,6 @@ class Cell extends ChangeNotifier {
     this.title = "",
     required this.pen,
     required this.index,
-    required NoteSource pageSource,
   }) : outline = pen.outline {
     // TODO 130 remove
     // var codeCell = pageSource.pageGenInfo.cells[index];
@@ -98,7 +99,7 @@ class Cell extends ChangeNotifier {
     try {
       throw Exception("track caller line");
     } catch (e, trace) {
-      return NotePage.findCallerLine(
+      return NoteSystem.findCallerLine(
         trace: trace,
         location: Uri.base,
         jsSourceMapLoader: (uri) async => (await http.get(uri)).body,

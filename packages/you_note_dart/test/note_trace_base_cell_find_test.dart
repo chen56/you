@@ -9,7 +9,7 @@ void main() {
   group("jsSourceMap", () {
     test("get ok", () async {
       late Uri jsMapUri;
-      await NotePage.findCallerLine(
+      await NoteSystem.findCallerLine(
           trace: StackTrace.fromString("""
 Exception: my throw
     at Object.f (http://localhost:8080/you/flutter_web/main.dart.js:4119:19)
@@ -26,7 +26,7 @@ Exception: my throw
     });
     test("not found error", () async {
       try {
-        await NotePage.findCallerLine(
+        await NoteSystem.findCallerLine(
             trace: StackTrace.fromString(
               """
 Exception: my throw
@@ -49,7 +49,7 @@ Exception: my throw
   });
   group("findCallerLine", () {
     test("js trace", () async {
-      ({Trace dartTrace, Frame? callerFrame}) found = await NotePage.findCallerLine(
+      ({Trace dartTrace, Frame? callerFrame}) found = await NoteSystem.findCallerLine(
         trace: StackTrace.fromString( r"""
 Exception: my throw
     at Object.e (http://localhost:8080/you/flutter_web/main.dart.js:4207:19)

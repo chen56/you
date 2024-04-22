@@ -2,45 +2,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:stack_trace/stack_trace.dart';
-import 'package:you_note_dart/note_conf.dart';
-import 'package:you_note_dart/src/conventions.dart';
-import 'package:you_note_dart/src/note_cell.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
+import 'package:you_note_dart/note_conf.dart';
+import 'package:you_note_dart/src/conventions.dart';
+import 'package:you_note_dart/src/note_cell.dart';
 
-NoteSourceData _emptyPageGenInfo = (
-  cells: [
-    (
-      cellType: CellType.header.name,
-      offset: 0,
-      end: 0,
-      specialNodes: [],
-    )
-  ],
-);
-
-typedef NoteSourceData = ({
-  List<
-      ({
-        String cellType,
-        int end,
-        int offset,
-        List<
-            ({
-              String nodeType,
-              int end,
-              int offset,
-            })> specialNodes,
-      })> cells,
-// NoteConfPart meta
-});
-
-typedef NotePageBuilder = void Function(BuildContext context, Cell pen);
-
-NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
-
-typedef NoteRouteLazyInitiator = Future<void> Function(BuildContext context, Cell print);
+typedef NoteBuilder = void Function(BuildContext context, Cell print);
+typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
 
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path
@@ -50,10 +20,8 @@ class NoteRoute {
   final NoteRoute? parent;
   bool expand = false;
 
-  NoteSource _source = _emptyPageSource;
-
   @internal
-  NoteRouteLazyInitiator? noteRouteLazyInitiator;
+  LazyNoteBuilder? lazyNoteBuilder;
 
   NoteConf? conf;
 
@@ -63,12 +31,11 @@ class NoteRoute {
       : basename = "",
         parent = null;
 
-  NoteRoute put(String fullPath, NoteSourceData data, NoteRouteLazyInitiator noteRouteLazyInitiator) {
+  NoteRoute put(String fullPath, LazyNoteBuilder lazyNoteBuilder) {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
 
-    path._source = NoteSource(pageGenInfo: data);
-    path.noteRouteLazyInitiator = noteRouteLazyInitiator;
+    path.lazyNoteBuilder = lazyNoteBuilder;
     return path;
   }
 
@@ -82,8 +49,6 @@ class NoteRoute {
   }
 
   List<NoteRoute> get children => List.from(_children.values);
-
-  NoteSource get source => _source;
 
   NoteRoute _ensurePath(List<String> nameList) {
     if (nameList.isEmpty) {
@@ -200,39 +165,26 @@ class NoteRoute {
   String get dartAssetPath => conventions.noteDartAssetPath(path);
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
-
-  NotePage lazyInit({required NotePageBuilder builder}) {
-    return NotePage(
-      noteRoute: this,
-      pageBuilder: builder,
-      // TODO 130 remove
-      // content: await rootBundle.loadString(dartAssetPath),
-    );
-  }
 }
 
-/// ref: [NoteRouteLazyInitiator]
-class NotePage {
-  final NoteRoute noteRoute;
-  final NotePageBuilder pageBuilder;
+class NoteSystem {
+  final NoteRoute root;
 
-  // TODO 130 remove
-  // final String content; // source code content
-  NotePage({
-    required this.noteRoute,
-    required this.pageBuilder,
-    // TODO 130 remove
-    // required this.content,
+  NoteSystem({
+    required this.root,
   });
 
-  @internal
-  String getCellCode(CodeEntity codeEntity) {
-    // TODO 130 remove
-    // if (codeEntity.end > content.length) {
-    //   return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${content.length})  ";
-    // }
-    // return content.safeSubstring(codeEntity.offset, codeEntity.end);
-    return "";
+  static Future<NoteSystem> load({
+    required NoteRoute root,
+  }) async {
+    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('notes.g.json'));
+    root.visit((e) {
+      e.conf = spaceConf.notes[e.path];
+      return true;
+    });
+    return NoteSystem(
+      root: root,
+    );
   }
 
   static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
@@ -279,121 +231,6 @@ class NotePage {
     var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
 
     return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
-  }
-}
-
-class NoteSystem {
-  final NoteRoute root;
-
-  NoteSystem({
-    required this.root,
-  });
-
-  static Future<NoteSystem> load({
-    required NoteRoute root,
-  }) async {
-    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('notes.g.json'));
-    root.visit((e) {
-      e.conf = spaceConf.notes[e.path];
-      return true;
-    });
-    return NoteSystem(
-      root: root,
-    );
-  }
-}
-
-@internal
-class NoteSource {
-  final NoteSourceData pageGenInfo;
-
-  NoteSource({required this.pageGenInfo});
-}
-
-@internal
-class CodeEntity {
-  /// CodeEntity is same as analyzer [SyntacticEntity] class CodeEntity {
-  final int offset;
-  final int end;
-
-  CodeEntity({required this.offset, required this.end});
-
-  int get length => end - offset;
-
-  @override
-  String toString() {
-    return "CodeEntity(offset:$offset, end:$end, length:$length )";
-  }
-}
-
-class CellSource {
-  CellSource({
-    required this.cellType,
-    required this.codeEntity,
-    required this.specialSources,
-    required this.page,
-  });
-
-  final CellType cellType;
-  final CodeEntity codeEntity;
-  final List<SpecialSource> specialSources;
-  final NotePage page;
-
-  String get code {
-    return page.getCellCode(codeEntity);
-  }
-
-  bool get isCodeEmpty {
-    return code.contains(RegExp(r'^\s*$'));
-  }
-
-  bool get isCodeNotEmpty {
-    return !isCodeEmpty;
-  }
-
-  @override
-  String toString() {
-    return "CellSource:cellType:$cellType block:$codeEntity )";
-  }
-}
-
-@internal
-class SpecialSource {
-  /// todo codeType to enum, common use by this and note_dev_gen.dart
-  String codeType;
-  final CodeEntity codeEntity;
-  final NotePage page;
-  final NoteRoute note;
-  final NoteSource pageSource;
-
-  SpecialSource({
-    required this.codeType,
-    required this.codeEntity,
-    required this.page,
-    required this.note,
-  }) : pageSource = note.source;
-
-  String get code {
-    return page.getCellCode(codeEntity);
-  }
-
-  @override
-  String toString() {
-    return "SpecialSource(codeType:$codeType,codeEntity:$codeEntity,)";
-  }
-}
-
-@internal
-enum CellType {
-  header,
-  body,
-  tail;
-
-  static CellType parse(String name) {
-    for (CellType t in CellType.values) {
-      if (t.name == name) return t;
-    }
-    throw Exception("CellType.name:$name not exist");
   }
 }
 
