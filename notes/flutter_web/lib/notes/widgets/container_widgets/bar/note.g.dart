@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 181,
+          end: 182,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' ## AppBar , print = print.next(title: cons, print(AppBar(title: const Text, ..., click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
         (
           cellType: 'body',
-          offset: 181,
-          end: 12333,
+          offset: 182,
+          end: 12334,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 12333,
-          end: 12335,
+          offset: 12334,
+          end: 12336,
           specialNodes: <({
             String nodeType,
             int end,

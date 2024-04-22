@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 191,
+          end: 192,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'body',
-          offset: 191,
-          end: 194,
+          offset: 192,
+          end: 195,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print(const MD(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
-          offset: 249,
-          end: 380,
+          offset: 250,
+          end: 381,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 380,
-          end: 382,
+          offset: 381,
+          end: 383,
           specialNodes: <({
             String nodeType,
             int end,

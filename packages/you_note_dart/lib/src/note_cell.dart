@@ -5,16 +5,17 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
+import 'package:you_flutter/you_state.dart';
 
 import 'package:you_note_dart/src/note_page.dart';
 import 'package:stack_trace/stack_trace.dart';
 
-class Note extends ChangeNotifier {
-  Note();
+class Print {
+  Print();
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
-  final List<Object?> _contents = [];
+  final List<Object?> _contents = [].signal();
 
   List<Object?> get contents => List.unmodifiable(_contents);
 
@@ -24,7 +25,6 @@ class Note extends ChangeNotifier {
 
   void _add(Object? content) {
     _contents.add(content);
-    notifyListeners();
   }
 
   Cell next({Widget? title}) {
@@ -38,14 +38,14 @@ class Note extends ChangeNotifier {
   /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
   /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
   @experimental
-  void runInCurrentCell(void Function(Note print) callback, {Widget? title}) {
+  void runInCurrentCell(void Function(Print print) callback, {Widget? title}) {
     callback(this);
   }
 
 }
 
-class Cell extends Note {
-  final Note pen;
+class Cell extends Print {
+  final Print pen;
   final Widget? title;
 
   Cell({

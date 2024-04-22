@@ -122,7 +122,7 @@ class NotesGenerator {
     var fields = noteLibs.map((noteLib) {
       var noteVarNameWithPadding = noteLib.asVariableName.padRight(nameMaxLen);
       // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
-      return """  final $noteVarNameWithPadding = put("${noteLib.noteKey}", (context,printc) async => await ${noteLib.asVariableName}_.loadLibrary().then((value) => ${noteLib.asVariableName}_.build(context,printc)));  """;
+      return """  final $noteVarNameWithPadding = put("${noteLib.noteKey}", (context,print) async => await ${noteLib.asVariableName}_.loadLibrary().then((value) => ${noteLib.asVariableName}_.build(context,print)));  """;
     }).join("\n");
     Library importCode = Library(
       (b) => b

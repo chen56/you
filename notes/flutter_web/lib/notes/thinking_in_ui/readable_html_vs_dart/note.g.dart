@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 129,
+          end: 130,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' # flutter )
         (
           cellType: 'body',
-          offset: 129,
-          end: 3468,
+          offset: 130,
+          end: 3469,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 3468,
-          end: 3470,
+          offset: 3469,
+          end: 3471,
           specialNodes: <({
             String nodeType,
             int end,

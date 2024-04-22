@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 175,
+          end: 176,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(MD('''     '''));, print(MockupWindow()(LayoutBui, print(MockupWindow()(LayoutBui, print(MockupWindow(width: 1000, print(MockupWindow(height: 100)
         (
           cellType: 'body',
-          offset: 175,
-          end: 1768,
+          offset: 176,
+          end: 1769,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1768,
-          end: 1770,
+          offset: 1769,
+          end: 1771,
           specialNodes: <({
             String nodeType,
             int end,

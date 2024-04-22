@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 176,
+          end: 177,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print(const MD(r''' ```dart va, BoxConstraints.tightFor(width:)
         (
           cellType: 'body',
-          offset: 176,
-          end: 2417,
+          offset: 177,
+          end: 2418,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2417,
-          end: 4449,
+          offset: 2418,
+          end: 4450,
           specialNodes: <({
             String nodeType,
             int end,

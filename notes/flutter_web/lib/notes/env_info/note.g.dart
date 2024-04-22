@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 249,
+          end: 250,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(''' # Platform和, print = print.next(title: cons, ThemeData theme = Theme.of(con, ..., print = print.next(title: cons, if (kIsWeb) {print("web版无法使用环境)
         (
           cellType: 'body',
-          offset: 249,
-          end: 3156,
+          offset: 250,
+          end: 3157,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 3156,
-          end: 3158,
+          offset: 3157,
+          end: 3159,
           specialNodes: <({
             String nodeType,
             int end,

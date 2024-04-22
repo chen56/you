@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:you_flutter/you_state.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
@@ -18,7 +19,7 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    Note note = Note();
+    Print note = Print();
     return FutureBuilder<void>(
       future: noteRoute.lazyNoteBuilder!(context, note),
       builder: (context, snapshot) {
@@ -45,7 +46,7 @@ class DeferredScreen extends StatelessWidget with Screen {
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final Note notePage;
+  final Print notePage;
   final NoteRoute rootNote;
 
   LayoutScreen({
@@ -121,25 +122,28 @@ class _LayoutScreenState extends State<LayoutScreen> {
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
 
-    var contents = widget.notePage.contents.expand((content) sync* {
-      yield switch (content) {
-        Cell _ => _NoteCellView(content, outline: outline),
-        MD _ => MarkdownContent(outline: outline, content: content.text),
-        Widget widget => widget,
-        _ => Text("$content"),
-      };
-    });
 
     var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
-      child: ListBody(
-        children: [
-          ...contents,
-          //page下留白，避免被os工具栏遮挡
-          const SizedBox(height: 300),
-        ],
-      ),
+      child: Watch((context) {
+        var contents = widget.notePage.contents.expand((content) sync* {
+          yield switch (content) {
+            Cell _ => _NoteCellView(content, outline: outline),
+            MD _ => MarkdownContent(outline: outline, content: content.text),
+            Widget widget => widget,
+            _ => Text("$content"),
+          };
+        });
+
+        return ListBody(
+            children: [
+              ...contents,
+              //page下留白，避免被os工具栏遮挡
+              const SizedBox(height: 300),
+            ],
+          );
+      }),
     );
     var appBar = AppBar(title: Text(widget.note.displayName), toolbarHeight: 36);
 
@@ -353,9 +357,8 @@ class _NoteCellView extends StatelessWidget {
     //   // Specify text style
     // );
 
-    var cellView = ListenableBuilder(
-      listenable: cell,
-      builder: (context, child) {
+    var cellView = Watch(
+      (context) {
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {

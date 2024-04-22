@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 476,
+          end: 477,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(''' # Material , print = print.next(title: cons, var sampleIcons = {"access_tim, for (var entry in sampleIcons.)
         (
           cellType: 'body',
-          offset: 476,
-          end: 1121,
+          offset: 477,
+          end: 1122,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1121,
-          end: 1123,
+          offset: 1122,
+          end: 1124,
           specialNodes: <({
             String nodeType,
             int end,

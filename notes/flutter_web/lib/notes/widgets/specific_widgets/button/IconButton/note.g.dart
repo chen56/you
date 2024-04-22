@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 129,
+          end: 130,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' # IconButt, print = print.next(title: cons, print(const Wrap(children: []))
         (
           cellType: 'body',
-          offset: 129,
-          end: 410,
+          offset: 130,
+          end: 411,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 410,
-          end: 412,
+          offset: 411,
+          end: 413,
           specialNodes: <({
             String nodeType,
             int end,

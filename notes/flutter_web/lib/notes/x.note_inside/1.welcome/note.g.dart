@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 129,
+          end: 130,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' # flutter , print = print.next(title: cons, print(Row(children: <Widget>[., ..., print = print.next(title: cons, print(const MD(r'''  组件组合是不是很棒)
         (
           cellType: 'body',
-          offset: 129,
-          end: 2557,
+          offset: 130,
+          end: 2558,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2557,
-          end: 2559,
+          offset: 2558,
+          end: 2560,
           specialNodes: <({
             String nodeType,
             int end,

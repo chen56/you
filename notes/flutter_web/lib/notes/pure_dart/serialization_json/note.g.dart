@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 184,
+          end: 185,
           specialNodes: <({
             String nodeType,
             int end,
@@ -17,8 +17,8 @@ noteInfo() => (
         /// (print(const MD(r''' # json  js, print = print.next(title: cons, var userJson = '''   {     "na, ..., print('user: ${user['name']}!', print('email: ${user['email']})
         (
           cellType: 'body',
-          offset: 184,
-          end: 519,
+          offset: 185,
+          end: 520,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 519,
-          end: 521,
+          offset: 520,
+          end: 522,
           specialNodes: <({
             String nodeType,
             int end,

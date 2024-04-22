@@ -9,8 +9,8 @@ import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 
-typedef NoteBuilder = void Function(BuildContext context, Note print);
-typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Note print);
+typedef NoteBuilder = void Function(BuildContext context, Print print);
+typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Print print);
 
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path
