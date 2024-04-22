@@ -7,7 +7,6 @@ import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 
 // FIXME  130  remove
-import 'package:you_note_dart/src/content/object_content.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/note_page.dart';
 import 'package:stack_trace/stack_trace.dart';
@@ -70,7 +69,7 @@ class Cell extends ChangeNotifier {
     // );
   }
 
-  List<Widget> get contents => List.unmodifiable(_contents);
+  List<Object?> get contents => List.unmodifiable(_contents);
 
   get name {
     return "cell[$index]";
@@ -117,15 +116,10 @@ class Cell extends ChangeNotifier {
   }
 
   void call(Object? content) {
-    Widget result = switch (content) {
-      MD md => MarkdownContent(content: md.text, outline: outline),
-      Widget widget => widget,
-      _ => ObjectContent(content: content),
-    };
-    _add(result);
+    _add(content);
   }
 
-  void _add(Widget content) {
+  void _add(Object? content) {
     _contents.add(content);
     notifyListeners();
   }

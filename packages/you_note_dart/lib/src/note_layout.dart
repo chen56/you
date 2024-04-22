@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/note_page.dart';
@@ -89,23 +90,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
   }
 
   ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
-    _NoteCellView newCellView(Cell cell) => _NoteCellView(
-          cell,
-          outline: outline,
-        );
-
-    // TODO 130 remove
-    // CellPrint pen = CellPrint.build(
-    //   context,
-    //   notePage: widget.notePage,
-    //   defaultCodeExpand: false,
-    //   outline: outline,
-    // );
-    //first
-    // widget.notePage.pageBuilder(context, pen.next());
-
     return (
-      cells: widget.notePage.cells.map((cell) => newCellView(cell)).toList(),
+      cells: widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)).toList(),
       outline: outline,
     );
   }
@@ -122,12 +108,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var noteResult = buildNote(context);
     var navigatorTree = _NoteTreeView(widget.rootNote);
 
     var outlineView = _OutlineTreeView(
       mainContentViewController: controllerV,
-      outline: noteResult.outline,
+      outline: outline,
     );
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
@@ -152,7 +137,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
       controller: controllerV,
       child: ListBody(
         children: [
-          ...noteResult.cells,
+          ...widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)),
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
@@ -411,6 +396,13 @@ class _NoteCellView extends StatelessWidget {
           //   },
           // );
 
+          var cellContents = cell.contents.map((content) {
+            return switch (content) {
+              MD md => MarkdownContent(content: md.text, outline: outline),
+              Widget widget => widget,
+              _ => Text("$content"),
+            };
+          });
           var cellFillSize = Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -421,7 +413,7 @@ class _NoteCellView extends StatelessWidget {
                   children: [
                     // TODO 130 remove
                     // if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
-                    ...cell.contents,
+                    ...cellContents,
                     _cellSplitBlock,
                   ],
                 ),
