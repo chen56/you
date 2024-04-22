@@ -3,7 +3,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
-import 'package:web/web.dart' as web;
+// import 'package:web/web.dart' as web;
 
 build(BuildContext context, Cell print) {
   print.markdown(r'''
@@ -11,6 +11,6 @@ build(BuildContext context, Cell print) {
   ''');
 
   print("Uri.base(window.location.href): ${Uri.base}");
-  print("web.window.location.href: ${web.window.location.href};");
+  // print("web.window.location.href: ${web.window.location.href};");
 }
 

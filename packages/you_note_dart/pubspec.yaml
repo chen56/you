@@ -28,6 +28,10 @@ dependencies:
   shared_preferences: ^2.2.2
   flutter_markdown: ^0.6.14
   flutter_highlight: ^0.7.0
+  http: ^1.2.1
+  stack_trace: ^1.11.1
+  source_map_stack_trace: ^2.1.1
+  source_maps: ^0.10.12
 
 #  async: ^2.11.0
 dev_dependencies:
@@ -37,7 +41,6 @@ dev_dependencies:
   yaml_edit: ^2.2.0
 
   # for NoteDevTool
-  stack_trace: ^1.11.0
   checks: ^0.3.0
 
 # For information on the generic Dart part of this file, see the

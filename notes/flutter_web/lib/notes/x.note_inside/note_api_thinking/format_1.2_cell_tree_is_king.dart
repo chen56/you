@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
@@ -73,15 +73,15 @@ class TestCell extends StatelessWidget {
     if (print != null) print(this);
   }
 
-  TestCell.named({super.key, required Text title, required ContentLayout style, required List<TestCell> children}) {}
+  const TestCell.named({super.key, required Text title, required ContentLayout style, required List<TestCell> children});
 
-  TestCell.position(
+  const TestCell.position(
     Function(dynamic printc) block, {
     required Text title,
     required ContentLayout style,
-  }) {}
+  });
 
-  TestCell.positionList({required Text title, required ContentLayout style, List<TestCell> children = const []}) {}
+  const TestCell.positionList({required Text title, required ContentLayout style, List<TestCell> children = const []});
 
   TestCell style(ContentLayout style) {
     return this;

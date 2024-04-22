@@ -27,7 +27,7 @@ _defaultOnConnectedImmediatelyClose(SignalSubscription conn) {
 extension StoreExtension<T extends Store> on T {
   /// 在自定义Store时需提供[field] [at]，会注册字段
   T signal({String field = "", Type at = Null, String debugLabel = ""}) {
-    this._debugLabel = debugLabel;
+    _debugLabel = debugLabel;
     return this;
   }
 }
@@ -115,7 +115,7 @@ final class _Notifier with ChangeNotifier {
   }
   @override
   String toString() {
-    return "${runtimeType}  ";
+    return "$runtimeType  ";
   }
 }
 class _Watcher {

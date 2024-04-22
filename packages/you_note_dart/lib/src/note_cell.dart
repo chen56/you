@@ -10,7 +10,6 @@ import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/note_page.dart';
 import 'package:stack_trace/stack_trace.dart';
 
-@Deprecated("和NotePage合并?")
 @internal
 class CellPrint {
   @internal

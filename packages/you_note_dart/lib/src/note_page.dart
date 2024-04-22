@@ -224,9 +224,7 @@ class NotePage {
     required this.pageBuilder,
     required this.conf,
     required this.content,
-  }){
-
-  }
+  });
 
   @internal
   String getCellCode(CodeEntity codeEntity) {
@@ -308,7 +306,7 @@ class NoteSystem {
 class NoteSource {
   final NoteSourceData pageGenInfo;
 
-  NoteSource({required NoteSourceData pageGenInfo}) : pageGenInfo = pageGenInfo;
+  NoteSource({required this.pageGenInfo});
 }
 
 @internal
