@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 # 参数化范例
 
@@ -26,28 +26,28 @@ void build(BuildContext context, Cell print) {
 请您点击开下面范例小箭头，修改Container.height，观察范例展示及代码的变化：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(const SizedBox(
     height: 100,
     child: Text("请修改height,调节高度"),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 ### String参数
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(const Text("我是Text.data,修改我"));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(Container(
     width: 200,
     height: 100,
@@ -63,12 +63,12 @@ TODO 暂时只能显示，还不能编辑
     ),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 ### bool参数
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(Container(
     width: 100,
     // height: 100,
@@ -76,14 +76,14 @@ TODO 暂时只能显示，还不能编辑
     child: const Text("修改Text.softWrap: 自动换行", softWrap: true),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ### 枚举参数
 
 修改下mainAxisAlignment：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
@@ -100,7 +100,7 @@ TODO 暂时只能显示，还不能编辑
     ],
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## 其他特性
 
@@ -111,7 +111,7 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
 和范例生成的代码的异同：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   showAbout() {
     showAboutDialog(
       context: context,
@@ -127,12 +127,12 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
         child: const Text("Button1")),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ### 用循环一次性构造一组范例
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   for (var mainAxisAlignment in MainAxisAlignment.values) {
     print(Row(
       mainAxisAlignment: mainAxisAlignment,

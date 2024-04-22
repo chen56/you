@@ -13,12 +13,12 @@ void build(BuildContext context, Cell print) {
 ## 平台参数
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print.markdown('''
 | name                            | value                                    | comment                                                          |
-|---------------------------------|------------------------------------------|------------------------------------------------------------------|
+|---------------------------------|------------------------------------------|new cell-----------------------------------|
 | kIsWeb                          | $kIsWeb                                  | bool.fromEnvironment('dart.library.js_util')                     |
 | kReleaseMode                    | $kReleaseMode                            | bool.fromEnvironment('dart.vm.product')                          |
 | kProfileMode                    | $kProfileMode                            | bool.fromEnvironment('dart.vm.profile')                          |
@@ -35,7 +35,7 @@ void build(BuildContext context, Cell print) {
 
 
 ''');
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 ## path
 
@@ -45,16 +45,16 @@ path很有意思
 - macos版正常普通目录名
 
   ''');
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(path.absolute("a/b.dart"));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 ## environment(web不可用)
 
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   if (kIsWeb) {
     print("web版无法使用环境变量,会报错：Unsupported operation: Platform._environment");
   } else {

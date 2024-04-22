@@ -5,6 +5,7 @@ import 'package:you_note_dart/src/flutter_highlight.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/note_page.dart';
+import 'package:you_note_dart/src/utils_core.dart';
 import 'package:you_note_dart/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
@@ -83,11 +84,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
   }
 
   ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
-    _NoteCellView newCellView(Cell cell) => _NoteCellView(
-          cell,
-          outline: outline,
-        );
-
     CellPrint pen = CellPrint.build(
       context,
       notePage: widget.notePage,
@@ -99,7 +95,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     widget.notePage.pageBuilder(context, pen.next());
 
     return (
-      cells: pen.cells.map((cell) => newCellView(cell)).toList(),
+      cells: pen.cells.map((cell) => _NoteCellView(page: widget.notePage, cell: cell, outline: outline)).toList(),
       outline: outline,
     );
   }
@@ -333,20 +329,23 @@ class _OutlineTreeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final Cell cell;
   final Outline outline;
+  final NotePage page;
 
   // ignore: prefer_const_constructors_in_immutables
-  _NoteCellView(
-    this.cell, {
+  _NoteCellView({
     // ignore: unused_element
     super.key,
     required this.outline,
+    required this.cell,
+    required this.page,
   });
 
   @override
   Widget build(BuildContext context) {
+    String cellCode=page.getCellCode2(cell);
     var codeHighlightView = HighlightView(
       // The original code to be highlighted
-      cell.source.code,
+      cellCode,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -371,7 +370,7 @@ class _NoteCellView extends StatelessWidget {
           // if (size.width < 20 || size.height < 20) {
           //   size = Size(20, 20);
           // }
-          var barText = cell.source.isCodeEmpty
+          var barText = strings.isBlankText(cellCode)
               ? " "
               : cell.codeExpand
                   ? "▽"

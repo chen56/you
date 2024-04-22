@@ -11,7 +11,7 @@ void build(BuildContext context, Cell print) {
 
 分析本页dart文件，并打印出import and export directives
   ''');
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
 
   var x = analyzer_util.parseString(
       content: """int i=1;""",
@@ -20,7 +20,7 @@ void build(BuildContext context, Cell print) {
     print(e);
   }
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown('''
 
 ## 性能不错
@@ -28,7 +28,7 @@ void build(BuildContext context, Cell print) {
 看下面性能测试，可以实时在UI上处理单文件语法树，不需要预处理了：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   DateTime start = DateTime.now();
   int times = 1000;
   for (int i = 0; i < times; i++) {

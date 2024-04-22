@@ -451,7 +451,7 @@ class NoteParseResult {
 
   /// _cellStatementType.line :
   /// ```dart
-  ///    print.$____________________________________________________________________();
+  ///    print.next(title:const Text("new cell-----------------"));
   /// ```
   static _CellStatementType _cellStatementType(Statement statement) {
     if (statement is! ExpressionStatement) {
@@ -464,13 +464,13 @@ class NoteParseResult {
     }
     // print(
     //     "_cellStatementType expression.target?.staticType: ${expression.target}");
-    // print.$____________________________________________________________________()
+    // print.next(title:const Text("new cell-----------------"))
     if (expression.target?.toString() != "print") {
       return _CellStatementType.normal;
     }
     // print(
     //     "_cellStatementType expression.methodName.name: ${expression.methodName.name}");
-    if (expression.methodName.name != "\$____________________________________________________________________") {
+    if (expression.methodName.name != "next") {
       return _CellStatementType.normal;
     }
 

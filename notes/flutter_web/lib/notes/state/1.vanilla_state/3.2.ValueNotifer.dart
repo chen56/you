@@ -17,13 +17,13 @@ main() {
 
 父组件维护状态，子组件使用状态,父组件可以是StatelessWidget，因为状态变化由各
 子组件的ValueListenableBuilder完成，父组件已不需要setState了。
-----------------------------------------------------------
+new cell---------------------------
 App                      : StatelessWidget，state 数据在这里,提供读写方法
   ValueListenableBuilder : StatefulWidget，监听App.size
     ChildRead            : StatelessWidget，读数据
   ValueListenableBuilder : StatefulWidget，监听App.size
     ChildWrite           : StatelessWidget，写数据
-----------------------------------------------------------
+new cell---------------------------
 */
 class App extends StatelessWidget {
   static const double defaultSize = 24;

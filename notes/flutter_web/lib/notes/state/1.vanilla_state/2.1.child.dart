@@ -6,11 +6,11 @@ main() {
 
 /*
 父组件维护状态，子组件使用状态
-----------------------------------------------------------
+new cell---------------------------
 AppState     : StatefulWidget，父组件，state 数据在这里,提供读写方法，在此setState更新组件树
   ChildRead  : StatelessWidget，读数据，通过构造器参数传递父组件状态
   ChildWrite : StatelessWidget，写数据，通过BuildContext.findAncestorStateOfType()获取祖先状态
-----------------------------------------------------------
+new cell---------------------------
 */
 // ignore: camel_case_types
 class App extends StatefulWidget {

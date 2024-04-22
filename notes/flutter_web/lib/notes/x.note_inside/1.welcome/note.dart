@@ -27,7 +27,7 @@ void build(BuildContext context, Cell print) {
 如果用flutter写笔记，那笔记中的范例，不就可以立刻展示出来了吗，look：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     Row(
       children: <Widget>[
@@ -42,14 +42,14 @@ void build(BuildContext context, Cell print) {
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 如果只是实验性的摆弄几下长宽高或者对齐方式的枚举参数，你还需要等待编译，那等试玩几个枚举，茶都凉了。
 
 所以，我觉得应该像下面一样，你点下mainAxisAlignment换个枚举值看看效果：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -65,7 +65,7 @@ void build(BuildContext context, Cell print) {
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_web的范例可能会加一个Dartpad的链接。
 
@@ -75,7 +75,7 @@ void build(BuildContext context, Cell print) {
 比如想让一个普通组件拥有Material3设计风格，套个马甲[InkResponse]就行了，look:
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     Column(
       children: [
@@ -88,7 +88,7 @@ void build(BuildContext context, Cell print) {
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 
 组件组合是不是很棒！

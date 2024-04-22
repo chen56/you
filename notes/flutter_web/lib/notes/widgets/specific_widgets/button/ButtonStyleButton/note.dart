@@ -19,12 +19,12 @@ ButtonStyleButton 相关子类
 
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(Wrap(children: [
     ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
   ]));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## 范例2 Meta
 

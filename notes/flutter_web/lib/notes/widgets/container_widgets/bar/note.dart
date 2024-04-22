@@ -13,7 +13,7 @@ b
 > ref: <https://api.dev/flutter/material/AppBar-class.html>
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     AppBar(
       title: const Text('AppBar Title'),
@@ -40,7 +40,7 @@ b
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## BottomAppBar
 
@@ -51,7 +51,7 @@ b
 ''');
   //
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     BottomAppBar(
       // shape: CircularNotchedRectangle(),
@@ -78,7 +78,7 @@ b
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 
 ## ~~BottomNavigationBar~~
@@ -97,7 +97,7 @@ b
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     Column(
       children: [
@@ -118,12 +118,12 @@ b
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   var currentPageIndex = 0;
   Widget buildNavigationBar(context, setState) {
     var views = [
@@ -151,7 +151,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     builder: buildNavigationBar,
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## NavigationRail
 
@@ -163,7 +163,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 > a BottomNavigationBar should be used instead.
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
 
   print(
     Row(
@@ -204,7 +204,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## TabBar
 
@@ -223,7 +223,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(const DefaultTabController(
     length: 3,
     child: TabBar(
@@ -244,12 +244,12 @@ TabBar不加TabView长这样：
     ),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 再来看看加了TabView的完整体，即TabBar实际使用模式：
 ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(const DefaultTabController(
     initialIndex: 1,
     length: 3,
@@ -276,7 +276,7 @@ TabBar不加TabView长这样：
     ),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown("""
 上面用法和[NavigationBar]很像，主要就是在多个页面间切换，好处在，连事件逻辑都不需要，组件树如下结构即可：
 
@@ -294,7 +294,7 @@ DefaultTabController
   ## SnackBar
 """);
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   onPressed() {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -323,7 +323,7 @@ DefaultTabController
     ),
   ));
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## ButtonBar
 
@@ -334,7 +334,7 @@ DefaultTabController
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，其横向还是纵向排列，取决于其宽度：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     Container(
       width: 600,
@@ -354,7 +354,7 @@ DefaultTabController
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## OverflowBar
 
@@ -363,7 +363,7 @@ DefaultTabController
 OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排，修改下面最外层Container.width看看：
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print(
     SizedBox(
       width: 300,
@@ -392,7 +392,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
     ),
   );
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   print.markdown(r'''
 ## PlatformMenuBar
 
@@ -411,7 +411,7 @@ MenuBar相关组件：
 - MenuItemButton, a leaf menu item which displays the label, an optional shortcut label, and optional leading and trailing icons.
   ''');
 
-  print.$____________________________________________________________________();
+  print=print.next(title:const Text("new cell-----------------"));
   click() {
     showAboutDialog(
       context: context,

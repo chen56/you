@@ -57,11 +57,23 @@ R castSet<R>({required Iterable from, required Set to}) {
 }
 
 extension StringExt on String {
-  String safeSubstring(int start, [int? end]) {
-    end ??= length;
-    end = end <= length ? end : length;
+  String safeSubstring(int start, [int? end]) => strings.safeSubstring(this, start, end);
+}
+
+Strings strings = Strings();
+
+class Strings {
+  /// content only space、/r/n ...not useful text
+  bool isBlankText(String str) {
+    // \s: 匹配任何空白字符，包括空格、制表符、换行符等。
+    return str.contains(RegExp(r'^\s*$'));
+  }
+
+  String safeSubstring(String str, int start, [int? end]) {
+    end ??= str.length;
+    end = end <= str.length ? end : str.length;
     try {
-      return substring(start, end);
+      return str.substring(start, end);
     } catch (e) {
       throw Exception("$e, string $this");
     }
