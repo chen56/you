@@ -1,171 +1,36 @@
 #!/usr/bin/env bash
 
 # On Mac OS, readlink -f doesn't work, so use._real_path get the real path of the file
-_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
-SCRIPT_PATH="$(_real_path "${BASH_SOURCE[0]}")"
-SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
-SCRIPT_FILE="$(basename "$SCRIPT_PATH")"
+#_real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
+#_ROOT_BAKE_PATH="$(_real_path "${BASH_SOURCE[0]}")"
+#_ROOT_DIR="$(dirname "$_ROOT_BAKE_PATH")"
+_ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+_ROOT_BAKE_PATH="${_ROOT_DIR}/bake"
 
 # 进入脚本所在目录，这样上下文就是本项目了
-cd "$SCRIPT_DIR" || exit 200
+cd "$_ROOT_DIR" || exit 200
 
 # include common script
 source "packages/you_bake/bake.bash"
 
-##########################################
-# 应用的命令脚本 , 公共函数和全局变量
-##########################################
-
 declare -A _pkgs=(
-    ["bake"]="$SCRIPT_DIR/packages/you_bake"
-    ["learn_dart"]="$SCRIPT_DIR/notes/learn_dart"
-    ["you"]="$SCRIPT_DIR"
-    ["you_note_dart"]="$SCRIPT_DIR/packages/you_note_dart"
-    ["flutter_web"]="$SCRIPT_DIR/notes/flutter_web"
-    ["qwik"]="$SCRIPT_DIR/notes/qwik"
-    ["shell"]="$SCRIPT_DIR/notes/shell"
+    ["bake"]="$_ROOT_DIR/packages/you_bake"
+    ["you_dart"]="$_ROOT_DIR/packages/you_dart"
+    ["you_flutter"]="$_ROOT_DIR/packages/you_flutter"
+    ["you_note_dart"]="$_ROOT_DIR/packages/you_note_dart"
+    ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
+    ["root"]="$_ROOT_DIR"
+    ["flutter_web"]="$_ROOT_DIR/notes/flutter_web"
+    ["qwik"]="$_ROOT_DIR/notes/qwik"
+    ["shell"]="$_ROOT_DIR/notes/shell"
 )
 
-
-# 运行所用项目的某子命令
-# Usage:    _run_all_package <subcmd>
-# Example:  _run_all_package clean
-#     run =>  note.clean
-#             mate.clean
-#             flutter_web.clean
-#             ...
-_run_all_package() {
-  local subcmd="$1"
-  if [[ "$subcmd" == "" ]] ; then
-    echo "缺subcmd参数 Usage:_run_all_package <subcmd>";
-    return 100;
-  fi
-  for pkg in "${!_pkgs[@]}"; do
-    if _func_exists "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
-  done
-}
-
-# run一条命令，先print上下文信息，再执行
-# Usage: _run <some cmd>
-# Example:
-# ------------------------------------
-# $ _run pwd
-# /Users/x/git/younpc/bake:733 -> bake.go() ▶︎【pwd】
-# /Users/x/git/younpc
-# ------------------------------------
-_run() {
-  local caller_line;
-  caller_line=$(caller 0 | awk '{print $1}')
-  # home目录替换为"~"符号
-  # ${PWD#$HOME}可以删掉home目录前缀, 类似$(echo $PWD | sed "s|^$HOME||")，比sed简单高效,而且sed处理变量总有特殊字符问题
-  local current="~${PWD/#$HOME}"
-  echo "bake:$caller_line -> ${FUNCNAME[1]} ▶︎ 【$current$ $*】"
-  "$@"
-  return $?
-}
-
-## if function not exist return 1;
-# Usage: _func_exists <function>
-# Example: _func_exists app.build
-#         => return 0
-_func_exists(){
-  local func="$1"
-  if ! ( declare -F "$func" | grep "$func" &>/dev/null  2>&1; ) then
-    return 1;
-  fi
-}
-
-##########################################
-# app cmd script
-# 应用的命令脚本
-##########################################
-
-
-# 根项目，主要是bin/辅助工具等
-you.run() {           _run "$@";}
-you.install() (       you.run dart pub get;)
-you.clean() (         you.run rm -rf build; you.run rm -rf .dart_tool; )
-you.upgrade() (       you.run dart pub upgrade ;)
-you.test() (          you.run dart test;)
-you.build() (         you.run dart compile exe bin/notecli.dart ;)
-
-# bash common script lib
-bake.run() {           _run "$@";}
-bake.test() (          packages/you_bake/test.bash test;)
-
-you_note_dart.run() (     cd packages/you_note_dart || return 200 && _run "$@")
-you_note_dart.install() ( you_note_dart.run flutter pub get)
-you_note_dart.clean() (   you_note_dart.run flutter clean; rm -rf build;)
-you_note_dart.upgrade() ( you_note_dart.run flutter pub upgrade ;)
-you_note_dart.test() (    you_note_dart.run flutter test;)
-
-learn_dart.run() (     cd notes/learn_dart || return 200 && _run "$@")
-learn_dart.install() ( learn_dart.run dart pub get)
-learn_dart.clean() (   learn_dart.run rm -rf build;learn_dart.run rm -rf .dart_tool;)
-learn_dart.upgrade() ( learn_dart.run dart pub upgrade ;)
-learn_dart.study() (   learn_dart.run dart test;)
-
-
-# skwasm无法运行
-  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-  #   	npx http-server ./flutter_web/build/web --port 8000
-    # flutter pub global activate dhttpd
-    # run p.flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
-flutter_web.run() (                 cd notes/flutter_web && _run "$@")
-flutter_web.install() (             flutter_web.run flutter pub get)
-flutter_web.clean() (               flutter_web.run flutter clean; rm -rf build;)
-flutter_web.upgrade() (             flutter_web.run flutter pub upgrade ;)
-flutter_web.build_macos() {         flutter_web.run flutter build macos -v --release --tree-shake-icons "$@";  }
-flutter_web.build() {               flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer html --output build/web/you/flutter_web --base-href "/you/flutter_web/" "$@" ;}
-flutter_web.build_web_skwasm() {    flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
-flutter_web.build_web_canvaskit() { flutter_web.run flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter_web.dev() {                 flutter_web.run flutter run --device-id macos "$@"; }
-flutter_web.dev_web() {             flutter_web.run flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter_web.preview() {             flutter_web.run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000 -g --brotli; }
-flutter_web.gen() (                 dart run bin/notecli.dart gen --dir notes/flutter_web/ ;  ) #  mate_flutter_web.gen;暂时不用了
-
-install() { _run_all_package install; }
-get() {     _run_all_package install; }
-upgrade() { _run_all_package upgrade;}
-clean() {   _run_all_package clean; }
-test() {    _run_all_package test; }
-gen() {     _run_all_package gen; }
-ls(){
-  for pkg in ${!_pkgs[*]} ; do
-    echo "$pkg:${_pkgs[$pkg]}"
-  done
-}
-run(){
-  for pkg in ${!_pkgs[*]} ; do
-    # 子shell内执行，防止环境感染
-    (  cd "${_pkgs[$pkg]}" || exit 200  ; _run "$@" ; )
-  done
-}
-
-# github 发布时使用,参考[.github/workflows/*.yaml]
-docker.build() (
-  _run docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
-  _run mkdir -p build;
-  _run sh -c "docker run --rm --workdir /usr/share/nginx/html/you chen56/you tar cf - ./ | ( cd build; tar xf -)";
-)
-docker.preview() {  _run echo "note preview http://localhost:8888/you/flutter_web"; _run docker run --rm --name you -p 8888:80 -u root:root chen56/you; }
-docker.debug() {    _run docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
-docker.exec() {     _run docker exec -it --workdir /usr/share/nginx/html/you/ you bash ; }
-docker.push() {     _run docker image push chen56/you:latest ; }
-
-info() {
-  echo "\$PWD        :  $PWD"
-  echo "\bake:  bake"
-  echo "\$SCRIPT_DIR :   $SCRIPT_DIR"
-  echo "\$SCRIPT_FILE:  $SCRIPT_FILE"
-  echo
-}
 
 ####################################################
 # app entry script & _root cmd
 ####################################################
-bake.cmd --cmd ls --desc "<mono> mono project manage: ./$SCRIPT_FILE pkgs <ls|run>"
-bake.cmd --cmd run --desc "<mono> run cmd on all pkg,Usage: ./$SCRIPT_FILE pkgs run [any cmd]"
+bake.cmd --cmd ls --desc "<mono> mono project manage: ./bake pkgs <ls|run>"
+bake.cmd --cmd run --desc "<mono> run cmd on all pkg,Usage: ./bake pkgs run [any cmd]"
 
 bake.cmd --cmd root --desc "$( cat <<-EOF
 
@@ -199,5 +64,165 @@ Examples:
 EOF
 )"
 
-bake.go "$@"
+##########################################
+#  公共函数区，初始化语句和变量只放脚本头尾
+##########################################
+_is_cmd() {
+  command -v "$1" >/dev/null 2>&1
+}
 
+
+# 在所有项目上运行某命令
+# Usage:    _run_all_pkgs <sub cmd>
+# Example:  _run_all_pkgs clean
+#     run =>  note.clean
+#             mate.clean
+#             flutter_web.clean
+#             ...
+_run_all() {
+  local subcmd="$1"
+  if [[ "$subcmd" == "" ]] ; then
+    echo "缺subcmd参数 Usage:_run_all <sub cmd>";
+    return 100;
+  fi
+  for pkg in "${!_pkgs[@]}"; do
+    if _is_cmd "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
+  done
+}
+
+# 先cd到项目目录，再print上下文信息，最后执行
+# Usage:   _run <pkg> <some cmd>
+# Example: _run flutter_web pwd
+_run() {
+  local pkg=${1:?required project arg,Usage: _run_at_pkg <pkg>}
+  shift
+  local cmd="${1}"
+  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
+
+  # 进入工作目录
+  local workdir="${_pkgs[$pkg]}"
+  pushd "$workdir" > /dev/null || { echo "pushd failure"; exit 200; }
+
+  local caller_line;
+  caller_line=$(caller 0 | awk '{print $1}')
+
+  if ! _is_cmd "$cmd" ; then
+    echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+  else
+    echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+    "$@"
+  fi
+  # 退出工作目录，不弄脏环境,不需要打印popd执行结果
+  popd > /dev/null || { echo "popd failure"; exit 200; }
+}
+
+##########################################
+# app cmd script
+# 应用的命令脚本
+##########################################
+
+
+ls()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
+run()         { for pkg in ${!_pkgs[*]} ; do _run "$pkg" "$@" ;   done         }
+install()     { _run_all install;                                              }
+get()         { _run_all install;                                              }
+build()       { _run_all build;                                                }
+upgrade()     { _run_all upgrade;                                              }
+clean()       { _run_all clean;                                                }
+test()        { _run_all test;                                                 }
+gen()         { _run_all gen;                                                  }
+
+
+# 根项目，主要是bin/辅助工具等
+root.run()               { _run root "$@";                                          }
+root.install()           { _run root dart pub get;                                  }
+root.upgrade()           { _run root dart pub upgrade ;                             }
+root.test()              { _run root dart test;                                     }
+root.build()             { _run root dart compile exe bin/notecli.dart ;            }
+root.clean()             { _run root rm -rf build;
+                           _run root rm -rf .dart_tool;                             }
+# bash。bash is1 common scri
+bake.run()              { _run bake "$@";                                           }
+bake.test()             { _run bake ./test.bash test;                               }
+
+
+you_dart.run()     { _run you_dart "$@";                                 }
+you_dart.install() { _run you_dart flutter pub get;                      }
+you_dart.clean()   { _run you_dart flutter clean; rm -rf build;          }
+you_dart.upgrade() { _run you_dart flutter pub upgrade ;                 }
+you_dart.test()    { _run you_dart flutter test;                         }
+
+you_flutter.run()     { _run you_flutter "$@";                                 }
+you_flutter.install() { _run you_flutter flutter pub get;                      }
+you_flutter.clean()   { _run you_flutter flutter clean; rm -rf build;          }
+you_flutter.upgrade() { _run you_flutter flutter pub upgrade ;                 }
+you_flutter.test()    { _run you_flutter flutter test;                         }
+
+
+you_note_dart.run()     { _run root_note_dart "$@";                                 }
+you_note_dart.install() { _run root_note_dart flutter pub get;                      }
+you_note_dart.clean()   { _run root_note_dart flutter clean; rm -rf build;          }
+you_note_dart.upgrade() { _run root_note_dart flutter pub upgrade ;                 }
+you_note_dart.test()    { _run root_note_dart flutter test;                         }
+
+learn_dart.run()        { _run learn_dart "$@";                                     }
+learn_dart.install()    { _run learn_dart dart pub get ;                            }
+learn_dart.clean()      { _run learn_dart rm -rf
+                          _run learn_dart rm -rf .dart_tool;                        }
+learn_dart.upgrade()    { _run learn_dart dart pub upgrade ;                        }
+learn_dart.study()      { _run learn_dart dart test;                                }
+# skwasm无法运行
+  #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+  #   	npx http-server ./flutter_web/build/web --port 8000
+    # flutter pub global activate dhttpd
+    # run p.flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'
+# install:
+# - flutter pub global activate dhttpd
+# - deno
+flutter_web.run()      { _run flutter_web "$@"  ;                           }
+flutter_web.install()  { _run flutter_web flutter pub get ;                 }
+flutter_web.clean()    { _run flutter_web flutter clean;
+                         rm -rf build;                                             }
+flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
+flutter_web.gen()      { dart run bin/notecli.dart gen --dir notes/flutter_web/;   }
+flutter_web.dev()      { flutter_web.dev_macos "$@";                                }
+flutter_web.build()    { flutter_web.build_html "$@" ;                             }
+flutter_web.preview()  { flutter_web.build_html;
+                         flutter_web.preview_html_deno;                            }
+
+flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
+flutter_web.dev_html()              { _run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.build_macos()           { _run flutter_web flutter build macos -v --release --tree-shake-icons "$@";  }
+flutter_web.build_wasm()            { _run flutter_web flutter build web   -v --release --tree-shake-icons --wasm "$@" ;}
+flutter_web.build_html()            { _run flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
+flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer skwasm "$@" ; }
+flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   -v --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
+flutter_web.preview_html_run()      { echo "http://localhost:8080/you/flutter_web";
+                                      _run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
+flutter_web.preview_html_deno()     { echo "http://localhost:8080/you/flutter_web";
+                                      _run flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
+flutter_web.preview_wasm()          { echo "http://localhost:8080/you/flutter_web";
+                                      _run flutter_web  dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; }
+
+
+# github 发布时使用,参考[.github/workflows/*.yaml]
+docker.build() {   _run root docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
+                   _run root mkdir -p build;
+                   _run root sh -c "docker run --rm --workdir /usr/share/nginx/html/you chen56/you tar cf - ./ | ( cd build; tar xf -)";    }
+docker.preview() { _run root echo "note preview http://localhost:8888/you/flutter_web";
+                   _run root docker run --rm --name you -p 8888:80 -u root:root chen56/you;                                                 }
+docker.debug()   { _run root docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
+docker.exec()    { _run root docker exec -it --workdir /usr/share/nginx/html/you/ you bash ;                                                }
+docker.push()    { _run root docker image push chen56/you:latest ;                                                                          }
+
+
+info() {
+  echo "PWD         :  $PWD"
+  echo "_ROOT_DIR   :  $_ROOT_DIR"
+  echo
+  echo "## pkgs"
+  ls
+  echo
+}
+
+bake.go "$@"

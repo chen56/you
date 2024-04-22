@@ -1,6 +1,6 @@
 name: you_flutter
 description: "Flutter framework project, for state , navigator and other flutter development infrastructure ."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  you_dart: ^0.0.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
