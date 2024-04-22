@@ -1,7 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:you_note_dart/src/flutter_highlight.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/note_page.dart';
@@ -18,16 +16,24 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<NotePage>(
-      future: note.noteRouteLazyInitiator!(note),
+    CellPrint pen = CellPrint.build(
+      context,
+      note: note,
+      outline: Outline(),
+    );
+    Cell firstCell = pen.next();
+    return FutureBuilder<void>(
+      future: note.noteRouteLazyInitiator!(context, firstCell),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
             return Text('note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
+
           return LayoutScreen(
+            note: note,
             noteSystem: noteSystem,
-            notePage: snapshot.data!,
+            notePage: pen,
           );
         }
         return const CircularProgressIndicator();
@@ -42,15 +48,15 @@ class DeferredScreen extends StatelessWidget with Screen {
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final NotePage notePage;
-  final NoteRoute root;
+  final CellPrint notePage;
+  final NoteRoute rootNote;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
     required this.notePage,
-  })  : root = noteSystem.root,
-        note = notePage.noteRoute;
+    required this.note,
+  }) : rootNote = noteSystem.root;
 
   @override
   String get location => note.path;
@@ -88,18 +94,18 @@ class _LayoutScreenState extends State<LayoutScreen> {
           outline: outline,
         );
 
-    CellPrint pen = CellPrint.build(
-      context,
-      notePage: widget.notePage,
-      defaultCodeExpand: false,
-      outline: outline,
-    );
-
+    // TODO 130 remove
+    // CellPrint pen = CellPrint.build(
+    //   context,
+    //   notePage: widget.notePage,
+    //   defaultCodeExpand: false,
+    //   outline: outline,
+    // );
     //first
-    widget.notePage.pageBuilder(context, pen.next());
+    // widget.notePage.pageBuilder(context, pen.next());
 
     return (
-      cells: pen.cells.map((cell) => newCellView(cell)).toList(),
+      cells: widget.notePage.cells.map((cell) => newCellView(cell)).toList(),
       outline: outline,
     );
   }
@@ -117,7 +123,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
-    var navigatorTree = _NoteTreeView(widget.root);
+    var navigatorTree = _NoteTreeView(widget.rootNote);
 
     var outlineView = _OutlineTreeView(
       mainContentViewController: controllerV,
@@ -344,23 +350,25 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var codeHighlightView = HighlightView(
-      // The original code to be highlighted
-      cell.source.code,
-
-      // Specify language
-      // It is recommended to give it a value for performance
-      language: 'dart',
-
-      // Specify highlight theme
-      // All available themes are listed in `themes` folder
-      theme: atelierForestLightTheme,
-
-      // Specify padding
-      padding: const EdgeInsets.all(0),
-
-      // Specify text style
-    );
+    // TODO 130 remove
+    // var codeHighlightView = HighlightView(
+    //   // The original code to be highlighted
+    //   // TODO 130 remove
+    //   // cell.source.code,
+    //   "fack code TODO 130 remove",
+    //   // Specify language
+    //   // It is recommended to give it a value for performance
+    //   language: 'dart',
+    //
+    //   // Specify highlight theme
+    //   // All available themes are listed in `themes` folder
+    //   theme: atelierForestLightTheme,
+    //
+    //   // Specify padding
+    //   padding: const EdgeInsets.all(0),
+    //
+    //   // Specify text style
+    // );
 
     var cellView = ListenableBuilder(
       listenable: cell,
@@ -371,33 +379,37 @@ class _NoteCellView extends StatelessWidget {
           // if (size.width < 20 || size.height < 20) {
           //   size = Size(20, 20);
           // }
-          var barText = cell.source.isCodeEmpty
-              ? " "
-              : cell.codeExpand
-                  ? "▽"
-                  : "▷";
+          // TODO 130 remove
+          // var barText = cell.source.isCodeEmpty
+          //     ? " "
+          //     : cell.codeExpand
+          //         ? "▽"
+          //         : "▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
-                cell.codeExpand = !cell.codeExpand;
+                // TODO 130 remove
+                // cell.codeExpand = !cell.codeExpand;
               },
               child: Container(
                 height: size.height,
                 alignment: Alignment.topCenter,
                 child: Tooltip(
                   message: '${cell.name}',
-                  child: Text(barText),
+                  // TODO 130 remove
+                  child: Text("code\ntodo"),
                 ),
               ),
             ),
           );
 
+          // TODO 130 remove
           // codeVeiw默认很窄，需扩展到占满所有宽度
-          var codeViewFillWidth = LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
-            },
-          );
+          // var codeViewFillWidth = LayoutBuilder(
+          //   builder: (BuildContext context, BoxConstraints constraints) {
+          //     return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+          //   },
+          // );
 
           var cellFillSize = Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -407,7 +419,8 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
+                    // TODO 130 remove
+                    // if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
                     ...cell.contents,
                     _cellSplitBlock,
                   ],
@@ -424,7 +437,9 @@ class _NoteCellView extends StatelessWidget {
         return _GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.source.isCodeEmpty ? Container() : cellView;
+    // TODO 130 remove
+    // return cell.contents.isEmpty && cell.source.isCodeEmpty ? Container() : cellView;
+    return cell.contents.isEmpty ? Container() : cellView;
   }
 }
 

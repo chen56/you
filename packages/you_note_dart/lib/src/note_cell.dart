@@ -14,12 +14,10 @@ import 'package:stack_trace/stack_trace.dart';
 class CellPrint {
   @internal
   CellPrint.build(
-      BuildContext context, {
-        required this.notePage,
-        required bool defaultCodeExpand,
-        required this.outline,
-      })  : _defaultCodeExpand = defaultCodeExpand,
-        note = notePage.noteRoute;
+    BuildContext context, {
+    required this.outline,
+    required this.note,
+  });
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -28,9 +26,6 @@ class CellPrint {
   final Outline outline;
   @internal
   final NoteRoute note;
-  @internal
-  final NotePage notePage;
-  final bool _defaultCodeExpand;
 
   Cell next({Object title = ""}) {
     var result = Cell(title: title, pen: this, index: cells.length, pageSource: note.source);
@@ -48,7 +43,6 @@ class Cell extends ChangeNotifier {
   // index use to find code
   final int index;
   final CellPrint pen;
-  late final CellSource source;
   final Outline outline;
   final Object title;
 
@@ -58,20 +52,21 @@ class Cell extends ChangeNotifier {
     required this.index,
     required NoteSource pageSource,
   }) : outline = pen.outline {
-    var codeCell = pageSource.pageGenInfo.cells[index];
-    source = CellSource(
-      codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
-      cellType: CellType.parse(codeCell.cellType),
-      page: pen.notePage,
-      specialSources: codeCell.specialNodes
-          .map((e) => SpecialSource(
-        codeType: e.nodeType,
-        codeEntity: CodeEntity(offset: e.offset, end: e.end),
-        page: pen.notePage,
-        note: pen.note,
-      ))
-          .toList(),
-    );
+    // TODO 130 remove
+    // var codeCell = pageSource.pageGenInfo.cells[index];
+    // source = CellSource(
+    //   codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
+    //   cellType: CellType.parse(codeCell.cellType),
+    //   page: pen.notePage,
+    //   specialSources: codeCell.specialNodes
+    //       .map((e) => SpecialSource(
+    //     codeType: e.nodeType,
+    //     codeEntity: CodeEntity(offset: e.offset, end: e.end),
+    //     page: pen.notePage,
+    //     note: pen.note,
+    //   ))
+    //       .toList(),
+    // );
   }
 
   List<Widget> get contents => List.unmodifiable(_contents);
@@ -134,30 +129,30 @@ class Cell extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool? _codeExpand;
-
+  // TODO 130 remove
   // show == expand
-  bool get codeExpand {
-    if (source.isCodeEmpty) return false;
-    //markdown cell default hidden code
-    if (_codeExpand == null) {
-      return switch (source.cellType) {
-        CellType.header => false,
-        CellType.tail => false,
-        CellType.body => pen._defaultCodeExpand && !isAllMarkdownContent,
-      };
-    }
-    return _codeExpand ?? pen._defaultCodeExpand;
-  }
+  // bool get codeExpand {
+  //   if (source.isCodeEmpty) return false;
+  //   //markdown cell default hidden code
+  //   if (_codeExpand == null) {
+  //     return switch (source.cellType) {
+  //       CellType.header => false,
+  //       CellType.tail => false,
+  //       CellType.body => pen._defaultCodeExpand && !isAllMarkdownContent,
+  //     };
+  //   }
+  //   return _codeExpand ?? pen._defaultCodeExpand;
+  // }
 
-  set codeExpand(bool newValue) {
-    _codeExpand = newValue;
-    notifyListeners();
-  }
+  // TODO 130 remove
+  // set codeExpand(bool newValue) {
+  //   _codeExpand = newValue;
+  //   notifyListeners();
+  // }
 
   @override
   String toString() {
-    return "$name(hash:$hashCode  index:$index ,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
+    return "$name(hash:$hashCode  index:$index ,isMarkdownCell:$isAllMarkdownContent,  contents-${contents.length}:$contents)";
   }
 }
 

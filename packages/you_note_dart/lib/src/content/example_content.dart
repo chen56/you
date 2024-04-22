@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:you_note_dart/src/content/params.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
-import 'package:you_note_dart/core.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
@@ -100,22 +99,26 @@ class SampleTemplate {
       });
 
   /// The piece of code to be erased from the cell code
-  static const Set<String> _eraseCodeTypes = {"MateSample.new.firstParentStatement", "Pen.runInCurrentCell"};
+  // TODO 130 remove
+  // static const Set<String> _eraseCodeTypes = {"MateSample.new.firstParentStatement", "Pen.runInCurrentCell"};
 
   /// cell代码被转换后作为范例代码
   /// The cell code is transformed as sample code
   static String _cleanCellCode(Cell cell, ObjectParam rootParam) {
-    var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
 
-    sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
-
-    int offset = cell.source.codeEntity.offset;
+    // TODO 130 remove
+    // // var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
+    // //
+    // // sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
+    // //
+    // // int offset = cell.source.codeEntity.offset;
     List<String> codes = List.empty(growable: true);
-    for (var s in sources) {
-      codes.add(cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
-
-      offset = s.codeEntity.end;
-    }
+    // TODO 130 remove
+    // for (var s in sources) {
+    //   // codes.add(cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
+    //
+    //   offset = s.codeEntity.end;
+    // }
     return codes.join(" ");
   }
 }

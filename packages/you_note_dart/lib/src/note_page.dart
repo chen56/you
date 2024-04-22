@@ -5,7 +5,6 @@ import 'package:stack_trace/stack_trace.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:you_note_dart/src/note_cell.dart';
-import 'package:you_note_dart/src/utils_core.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
@@ -41,7 +40,7 @@ typedef NotePageBuilder = void Function(BuildContext context, Cell pen);
 
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
-typedef NoteRouteLazyInitiator = Future<NotePage> Function(NoteRoute note);
+typedef NoteRouteLazyInitiator = Future<void> Function(BuildContext context, Cell print);
 
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path
@@ -202,36 +201,38 @@ class NoteRoute {
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
 
-  Future<NotePage> lazyInit({required NotePageBuilder builder}) async {
+  NotePage lazyInit({required NotePageBuilder builder}) {
     return NotePage(
       noteRoute: this,
       pageBuilder: builder,
-      conf: conf == null ? null : NoteConf.decode(await rootBundle.loadString(confAssetPath)),
-      content: await rootBundle.loadString(dartAssetPath),
+      // TODO 130 remove
+      // content: await rootBundle.loadString(dartAssetPath),
     );
   }
 }
-
 
 /// ref: [NoteRouteLazyInitiator]
 class NotePage {
   final NoteRoute noteRoute;
   final NotePageBuilder pageBuilder;
-  final NoteConf? conf;
-  final String content; // source code content
+
+  // TODO 130 remove
+  // final String content; // source code content
   NotePage({
     required this.noteRoute,
     required this.pageBuilder,
-    required this.conf,
-    required this.content,
+    // TODO 130 remove
+    // required this.content,
   });
 
   @internal
   String getCellCode(CodeEntity codeEntity) {
-    if (codeEntity.end > content.length) {
-      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${content.length})  ";
-    }
-    return content.safeSubstring(codeEntity.offset, codeEntity.end);
+    // TODO 130 remove
+    // if (codeEntity.end > content.length) {
+    //   return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${content.length})  ";
+    // }
+    // return content.safeSubstring(codeEntity.offset, codeEntity.end);
+    return "";
   }
 
   static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
