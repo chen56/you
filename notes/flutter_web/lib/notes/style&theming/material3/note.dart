@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # Material3
 
 > Material3 组件索引参考:
@@ -10,5 +10,5 @@ void build(BuildContext context, Cell print) {
 
 
 
-  ''');
+  '''));
 }

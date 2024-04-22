@@ -7,7 +7,7 @@ import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) async {
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 # 异步
 
 很好的异步视频：
@@ -16,7 +16,7 @@ void build(BuildContext context, Cell print) async {
 
 ## Future
 
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   {
@@ -47,7 +47,7 @@ void build(BuildContext context, Cell print) async {
   }
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## Isalted
 
 web 模式不支持 Isolated，如果运行在web模式下，此范例将报错
@@ -57,7 +57,7 @@ Error: Unsupported operation: dart:isolate is not supported on dart4web
 2018年前dart1支持web版Isolated，但dart2后被去掉了，详细信息参考：
 [[dart-announce] Dart2 Breaking Change: Removing web support for dart:mirrors and dart:isolate 2018年2月24日 ](https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1)
 <https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1>
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   {

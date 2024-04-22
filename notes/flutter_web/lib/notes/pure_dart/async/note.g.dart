@@ -26,7 +26,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # 异步  很好的异)
+        /// (print(const MD(r''' # 异步  很好的异)
         (
           cellType: 'body',
           offset: 279,
@@ -50,7 +50,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## Isalted)
+        /// (print(const MD(r''' ## Isalted)
         (
           cellType: 'body',
           offset: 1392,

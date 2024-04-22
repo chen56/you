@@ -26,7 +26,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
+        /// (print(const MD(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
           offset: 249,

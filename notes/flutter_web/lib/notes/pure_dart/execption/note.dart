@@ -17,7 +17,7 @@ void build(BuildContext context, Cell print) async {
   }
   var catchStackParsed = Trace.parse(catchStack.toString());
 
-  print.markdown("""
+  print(MD("""
 ### 原始堆栈StackTrace
 
 我们自己抛一个, 捕获到的堆栈runtimeType:`${catchStack.runtimeType}，内容：
@@ -44,7 +44,7 @@ kIsWeb && kReleaseMode 时是js堆栈，要对齐为dart，需要解析工具：
 ```shell
 ${await convertDartTraceIfJsTrace(catchStack!)}
 ```
-  """);
+  """));
 }
 
 void throwException() {

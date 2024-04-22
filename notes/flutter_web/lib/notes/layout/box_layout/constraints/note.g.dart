@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print.markdown(r''' ```dart va, BoxConstraints.tightFor(width:)
+        /// (print(const MD(r''' # flutter , print("${BoxConstraints(minWid, print("${BoxConstraints(minWid, ..., print(const MD(r''' ```dart va, BoxConstraints.tightFor(width:)
         (
           cellType: 'body',
           offset: 176,

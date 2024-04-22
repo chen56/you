@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## AppBar , print = print.next(title: cons, print(AppBar(title: const Text, ..., click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
+        /// (print(const MD(r''' ## AppBar , print = print.next(title: cons, print(AppBar(title: const Text, ..., click() {showAboutDialog(conte, print(MenuBar(children: [MenuI)
         (
           cellType: 'body',
           offset: 181,

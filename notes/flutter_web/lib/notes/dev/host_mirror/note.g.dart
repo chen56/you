@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r'''  ## flutte)
+        /// (print(const MD(r'''  ## flutte)
         (
           cellType: 'body',
           offset: 128,

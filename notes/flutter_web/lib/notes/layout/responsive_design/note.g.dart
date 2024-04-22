@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' # 响应式设计  ##)
+        /// (print(MD(''' # 响应式设计  ##)
         (
           cellType: 'body',
           offset: 129,

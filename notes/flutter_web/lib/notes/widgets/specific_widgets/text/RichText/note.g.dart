@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## 范例1 普通文)
+        /// (print(const MD(r''' ## 范例1 普通文)
         (
           cellType: 'body',
           offset: 128,

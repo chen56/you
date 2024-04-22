@@ -3,7 +3,7 @@ import 'package:you_note_dart/note.dart';
 import 'dart:developer';
 
 void build(BuildContext context, Cell print) async {
-  print.markdown(r'''
+  print(const MD(r'''
 # VM Service
 
 ## vmservice URL
@@ -43,7 +43,7 @@ flutter attach -d macos_config  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
 
 > ⚠️ web模式不支持
 
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   var serviceInfo = await Service.getInfo();

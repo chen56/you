@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # Material)
+        /// (print(const MD(r''' # Material)
         (
           cellType: 'body',
           offset: 129,

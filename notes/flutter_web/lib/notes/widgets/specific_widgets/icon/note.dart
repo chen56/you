@@ -9,14 +9,14 @@ import 'package:you_note_dart/note.dart';
 Set<String> iconTypes = {"sharp", "rounded", "outlined"};
 
 void build(BuildContext context, Cell print) {
-  print.markdown('''
+  print(const MD('''
 # Material Icon
 
 官方图标库：package:flutter/material/icons.dart
 
 ## 基本用法
 
-  ''');
+  '''));
 
   print = print.next(title: const Text("new cell-----------------"));
   // ignore: constant_identifier_names

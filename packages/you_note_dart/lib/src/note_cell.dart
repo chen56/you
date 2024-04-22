@@ -6,30 +6,19 @@ import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 
-// FIXME  130  remove
-import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/note_page.dart';
 import 'package:stack_trace/stack_trace.dart';
 
 @internal
-class NotePage {
-  @internal
-  NotePage.build(
-    BuildContext context, {
-    required this.outline,
-    required this.note,
-  });
+class Note {
+  Note();
 
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   final List<Cell> cells = [];
-  @internal
-  final Outline outline;
-  @internal
-  final NoteRoute note;
 
-  Cell next({Object title = ""}) {
-    var result = Cell(title: title, pen: this, index: cells.length);
+  Cell next({Widget? title}) {
+    var result = Cell(title: title, pen: this);
     cells.add(result);
     return result;
   }
@@ -40,18 +29,13 @@ class NotePage {
 /// A cell represents a code block in a note and its generated content
 class Cell extends ChangeNotifier {
   final List<Object?> _contents = List.empty(growable: true);
-
-  // index use to find code
-  final int index;
-  final NotePage pen;
-  final Outline outline;
-  final Object title;
+  final Note pen;
+  final Widget? title;
 
   Cell({
-    this.title = "",
+    this.title,
     required this.pen,
-    required this.index,
-  }) : outline = pen.outline {
+  }) {
     // TODO 130 remove
     // var codeCell = pageSource.pageGenInfo.cells[index];
     // source = CellSource(
@@ -70,10 +54,6 @@ class Cell extends ChangeNotifier {
   }
 
   List<Object?> get contents => List.unmodifiable(_contents);
-
-  get name {
-    return "cell[$index]";
-  }
 
   bool isContentEmpty() => contents.isEmpty;
 
@@ -104,15 +84,6 @@ class Cell extends ChangeNotifier {
         jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
       );
     }
-  }
-
-  void markdown(String content) {
-    call(MarkdownContent(outline: outline, content: content));
-  }
-
-  bool get isAllMarkdownContent {
-    if (_contents.isEmpty) return false;
-    return _contents.every((e) => e is MarkdownContent);
   }
 
   void call(Object? content) {
@@ -147,31 +118,6 @@ class Cell extends ChangeNotifier {
 
   @override
   String toString() {
-    return "$name(hash:$hashCode  index:$index ,isMarkdownCell:$isAllMarkdownContent,  contents-${contents.length}:$contents)";
-  }
-}
-
-// markdown 的结构轮廓，主要用来显示TOC
-@internal
-class Outline {
-  bool _done = false;
-
-  OutlineNode root = OutlineNode(key: GlobalKey(), heading: 0, title: "");
-  OutlineNode? current;
-
-  void add(OutlineNode newNode) {
-    if (_done) return;
-    if (current == null) {
-      current = root.add(newNode);
-      return;
-    }
-    current = current!.add(newNode);
-  }
-
-  /// bed design: 目前非常糟糕的设计，因为outline会在markdown 第一次Widget.build后才能装配好
-  /// 第一次build时 界面上是看不到outline的，后面如果因为resize多次build，会造成outline持续重复增加内容
-  /// 所以要结束掉它
-  void collectDone() {
-    _done = true;
+    return "$Cell(hash:$hashCode, contents[${contents.length}]:$contents)";
   }
 }

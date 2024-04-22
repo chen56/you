@@ -6,9 +6,9 @@ import 'package:you_note_dart/note.dart';
 // import 'package:web/web.dart' as web;
 
 build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # file access on web
-  ''');
+  '''));
 
   print("Uri.base(window.location.href): ${Uri.base}");
   // print("web.window.location.href: ${web.window.location.href};");

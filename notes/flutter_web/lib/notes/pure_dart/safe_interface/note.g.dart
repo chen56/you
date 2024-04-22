@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # json  [I, OneImpl().a();, OneImpl().a();, OneImpl().b();)
+        /// (print(const MD(r''' # json  [I, OneImpl().a();, OneImpl().a();, OneImpl().b();)
         (
           cellType: 'body',
           offset: 161,

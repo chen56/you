@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # 国际化i18n )
+        /// (print(const MD(r''' # 国际化i18n )
         (
           cellType: 'body',
           offset: 128,

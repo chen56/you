@@ -13,9 +13,9 @@ void build(BuildContext context, Cell print) {
     return;
   }
 
-  print.markdown(r'''
+  print(const MD(r'''
 # file
-  ''');
+  '''));
 
   LocalFileSystem fs = const LocalFileSystem();
   // print(fs.isWatchSupported);

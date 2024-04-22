@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # Notebook)
+        /// (print(const MD(r''' # Notebook)
         (
           cellType: 'body',
           offset: 210,
@@ -38,7 +38,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' notebook的方)
+        /// (print(const MD(r''' notebook的方)
         (
           cellType: 'body',
           offset: 559,
@@ -62,7 +62,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' 或者，发现[Time)
+        /// (print(const MD(r''' 或者，发现[Time)
         (
           cellType: 'body',
           offset: 1034,
@@ -86,7 +86,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" notebook模式的)
+        /// (print(MD(""" notebook模式的)
         (
           cellType: 'body',
           offset: 1988,
@@ -110,7 +110,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ### Markdow)
+        /// (print(MD(""" ### Markdow)
         (
           cellType: 'body',
           offset: 2553,
@@ -122,7 +122,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown("""hello markdo)
+        /// (print(MD("""hello markdo)
         (
           cellType: 'body',
           offset: 2711,
@@ -134,7 +134,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ### WidgetC)
+        /// (print(MD(""" ### WidgetC)
         (
           cellType: 'body',
           offset: 2812,
@@ -158,7 +158,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ### SampleC)
+        /// (print(MD(""" ### SampleC)
         (
           cellType: 'body',
           offset: 3041,
@@ -182,7 +182,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ## 事件回调的问题 )
+        /// (print(MD(""" ## 事件回调的问题 )
         (
           cellType: 'body',
           offset: 3585,
@@ -206,7 +206,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" 问题原因：onPres)
+        /// (print(MD(""" 问题原因：onPres)
         (
           cellType: 'body',
           offset: 4007,
@@ -230,7 +230,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" 或用runInCurr)
+        /// (print(MD(""" 或用runInCurr)
         (
           cellType: 'body',
           offset: 4602,
@@ -242,7 +242,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ## cell的元信息)
+        /// (print(MD(""" ## cell的元信息)
         (
           cellType: 'body',
           offset: 4746,
@@ -266,7 +266,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(""" ## 结束  上面回调)
+        /// (print(MD(""" ## 结束  上面回调)
         (
           cellType: 'body',
           offset: 5180,

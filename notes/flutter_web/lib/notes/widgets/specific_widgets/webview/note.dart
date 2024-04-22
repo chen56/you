@@ -4,12 +4,12 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # webview
 
 ## 加载local html/js
 
 ref: <https://itnext.io/load-local-html-file-into-webview-in-flutter-call-js-function-from-flutter-2d9404c8f7d4>
 
-  ''');
+  '''));
 }

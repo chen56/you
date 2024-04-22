@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # flutter 可读性问题
 
 flutter的helloworld 一个简单的程序，也可能让人阅读产生不适
@@ -133,5 +133,5 @@ Column(modifier = Modifier.padding(16.dp)) {
 
 
 
-  ''');
+  '''));
 }

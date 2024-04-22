@@ -3,7 +3,7 @@ import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
   print.next(title:const Text("--------new cell------"));
-  print.markdown('''
+  print(const MD('''
 # 参数化范例
 
 ## 可调参范例
@@ -24,7 +24,7 @@ void build(BuildContext context, Cell print) {
 ### num参数
 
 请您点击开下面范例小箭头，修改Container.height，观察范例展示及代码的变化：
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   print(const SizedBox(
@@ -33,19 +33,19 @@ void build(BuildContext context, Cell print) {
   ));
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown('''
+  print(const MD('''
 ### String参数
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   print(const Text("我是Text.data,修改我"));
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown('''
+  print(const MD('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   print(Container(
@@ -64,9 +64,9 @@ TODO 暂时只能显示，还不能编辑
   ));
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown('''
+  print(const MD('''
 ### bool参数
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   print(Container(
@@ -77,11 +77,11 @@ TODO 暂时只能显示，还不能编辑
   ));
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ### 枚举参数
 
 修改下mainAxisAlignment：
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   print(Row(
@@ -101,7 +101,7 @@ TODO 暂时只能显示，还不能编辑
   ));
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## 其他特性
 
 ### 按cell模版生成范例代码
@@ -109,7 +109,7 @@ TODO 暂时只能显示，还不能编辑
 我们的范例代码生成机制虽然看起来还不错，但有个小问题，函数代码较难处理，目前的做法是：提取
 Notebook 当前cell的代码作为模版，配合代码生成一起，可以解决此疑难，您可以观察下cell本身的代码
 和范例生成的代码的异同：
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   showAbout() {
@@ -128,9 +128,9 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
   );
 
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ### 用循环一次性构造一组范例
-  ''');
+  '''));
 
   print.next(title:const Text("--------new cell------"));
   for (var mainAxisAlignment in MainAxisAlignment.values) {

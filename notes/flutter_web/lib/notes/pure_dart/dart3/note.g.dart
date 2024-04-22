@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## dart 3 )
+        /// (print(const MD(r''' ## dart 3 )
         (
           cellType: 'body',
           offset: 128,

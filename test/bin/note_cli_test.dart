@@ -72,11 +72,11 @@ void main() {
 import 'package:you_note_dart/note.dart';
 
 build(BuildContext context, Pen print) {
-  print.markdown(r'''## cell 2''');
+  print(const MD(r'''## cell 2'''));
   print("in cell 2");
 
   /// print.markdown is cell separator
-  print.markdown(r'''## cell 3''');
+  print(const MD(r'''## cell 3'''));
   print("in cell 3");
 }
       """);

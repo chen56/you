@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # flutter State
 
 StatefulWidget 重要特性：
@@ -13,5 +13,5 @@ StatefulWidget 重要特性：
 
 RestorationMixin
 WidgetsApp.restorationScopeId
-  ''');
+  '''));
 }

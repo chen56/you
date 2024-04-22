@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (if (kIsWeb) {print("本页面只适合桌面版本, print.markdown(r''' # file   ', LocalFileSystem fs = const Loc, print(fs.directory("").absolut, print("Directory.current:${Dir)
+        /// (if (kIsWeb) {print("本页面只适合桌面版本, print(const MD(r''' # file   ', LocalFileSystem fs = const Loc, print(fs.directory("").absolut, print("Directory.current:${Dir)
         (
           cellType: 'body',
           offset: 255,

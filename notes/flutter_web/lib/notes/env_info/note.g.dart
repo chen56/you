@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' # Platform和, print = print.next(title: cons, ThemeData theme = Theme.of(con, ..., print = print.next(title: cons, if (kIsWeb) {print("web版无法使用环境)
+        /// (print(MD(''' # Platform和, print = print.next(title: cons, ThemeData theme = Theme.of(con, ..., print = print.next(title: cons, if (kIsWeb) {print("web版无法使用环境)
         (
           cellType: 'body',
           offset: 249,

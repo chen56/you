@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # macos_config
 
 ## macOS 沙箱
@@ -22,5 +22,5 @@ ref: [Protecting user data with App Sandbox](https://developer.apple.com/documen
 	<false/>
 ```
 
-  ''');
+  '''));
 }

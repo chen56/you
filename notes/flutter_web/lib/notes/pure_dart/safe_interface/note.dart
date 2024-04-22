@@ -5,14 +5,14 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # json
 
 [Interface default methods #dart-lang/language/issues/884](https://github.com/dart-lang/language/issues/884#issuecomment-2058089580)
 
 my answer
 
-  ''');
+  '''));
 
   // 1. one month ago, it is ok
   OneImpl().a();

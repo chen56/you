@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' # analyzer , print = print.next(title: cons, var x = analyzer_util.parseStr, ..., for (int i = 0; i < times; i++, print("分析本页面源文件:$times 次, 花费时间)
+        /// (print(MD(''' # analyzer , print = print.next(title: cons, var x = analyzer_util.parseStr, ..., for (int i = 0; i < times; i++, print("分析本页面源文件:$times 次, 花费时间)
         (
           cellType: 'body',
           offset: 257,

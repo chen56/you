@@ -26,7 +26,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' # 参数化范例  ##)
+        /// (print(MD(''' # 参数化范例  ##)
         (
           cellType: 'body',
           offset: 187,
@@ -50,7 +50,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' ### String参)
+        /// (print(MD(''' ### String参)
         (
           cellType: 'body',
           offset: 853,
@@ -74,7 +74,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' ### Color参数)
+        /// (print(MD(''' ### Color参数)
         (
           cellType: 'body',
           offset: 1053,
@@ -98,7 +98,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(''' ### bool参数 )
+        /// (print(MD(''' ### bool参数 )
         (
           cellType: 'body',
           offset: 1520,
@@ -122,7 +122,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ### 枚举参数  )
+        /// (print(const MD(r''' ### 枚举参数  )
         (
           cellType: 'body',
           offset: 1836,
@@ -146,7 +146,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ## 其他特性  #)
+        /// (print(const MD(r''' ## 其他特性  #)
         (
           cellType: 'body',
           offset: 2303,
@@ -170,7 +170,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' ### 用循环一次性)
+        /// (print(const MD(r''' ### 用循环一次性)
         (
           cellType: 'body',
           offset: 2877,

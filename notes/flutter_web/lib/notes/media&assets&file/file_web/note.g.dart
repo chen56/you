@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # file acc, print("Uri.base(window.locatio)
+        /// (print(const MD(r''' # file acc, print("Uri.base(window.locatio)
         (
           cellType: 'body',
           offset: 197,

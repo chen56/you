@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # json  js, print = print.next(title: cons, var userJson = '''   {     "na, ..., print('user: ${user['name']}!', print('email: ${user['email']})
+        /// (print(const MD(r''' # json  js, print = print.next(title: cons, var userJson = '''   {     "na, ..., print('user: ${user['name']}!', print('email: ${user['email']})
         (
           cellType: 'body',
           offset: 184,

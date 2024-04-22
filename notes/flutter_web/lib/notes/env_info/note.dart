@@ -7,16 +7,16 @@ import 'package:you_note_dart/note.dart';
 import 'package:path/path.dart' as path;
 
 void build(BuildContext context, Cell print) {
-  print.markdown('''
+  print(const MD('''
 # Platform和设备信息
 
 ## 平台参数
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
-  print.markdown('''
+  print(MD('''
 | name                            | value                                    | comment                                                          |
 |---------------------------------|------------------------------------------|new cell-----------------------------------|
 | kIsWeb                          | $kIsWeb                                  | bool.fromEnvironment('dart.library.js_util')                     |
@@ -34,9 +34,9 @@ void build(BuildContext context, Cell print) {
 
 
 
-''');
+'''));
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown('''
+  print(const MD('''
 ## path
 
 path很有意思
@@ -44,15 +44,15 @@ path很有意思
 - web版会变为url
 - macos版正常普通目录名
 
-  ''');
+  '''));
   print=print.next(title:const Text("new cell-----------------"));
   print(path.absolute("a/b.dart"));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown('''
+  print(const MD('''
 ## environment(web不可用)
 
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   if (kIsWeb) {

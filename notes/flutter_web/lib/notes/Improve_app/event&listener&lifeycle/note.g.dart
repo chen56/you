@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # 事件监听&生命期)
+        /// (print(const MD(r''' # 事件监听&生命期)
         (
           cellType: 'body',
           offset: 128,

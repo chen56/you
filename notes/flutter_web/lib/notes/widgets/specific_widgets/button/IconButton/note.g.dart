@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # IconButt, print = print.next(title: cons, print(const Wrap(children: []))
+        /// (print(const MD(r''' # IconButt, print = print.next(title: cons, print(const Wrap(children: []))
         (
           cellType: 'body',
           offset: 129,

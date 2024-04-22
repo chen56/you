@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
+import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note_cell.dart';
 import 'package:you_note_dart/src/note_page.dart';
@@ -10,31 +11,27 @@ import 'package:you_note_dart/src/utils_ui.dart';
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class DeferredScreen extends StatelessWidget with Screen {
-  final NoteRoute note;
+  final NoteRoute noteRoute;
   final NoteSystem noteSystem;
 
-  DeferredScreen({super.key, required this.note, required this.noteSystem});
+  DeferredScreen({super.key, required this.noteRoute, required this.noteSystem});
 
   @override
   Widget build(BuildContext context) {
-    NotePage pen = NotePage.build(
-      context,
-      note: note,
-      outline: Outline(),
-    );
-    Cell firstCell = pen.next();
+    Note note = Note();
+    Cell firstCell = note.next();
     return FutureBuilder<void>(
-      future: note.lazyNoteBuilder!(context, firstCell),
+      future: noteRoute.lazyNoteBuilder!(context, firstCell),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            return Text('note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+            return Text('note load error(${noteRoute.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
 
           return LayoutScreen(
-            note: note,
+            note: noteRoute,
             noteSystem: noteSystem,
-            notePage: pen,
+            notePage: note,
           );
         }
         return const CircularProgressIndicator();
@@ -43,13 +40,13 @@ class DeferredScreen extends StatelessWidget with Screen {
   }
 
   @override
-  String get location => note.path;
+  String get location => noteRoute.path;
 }
 
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final NotePage notePage;
+  final Note notePage;
   final NoteRoute rootNote;
 
   LayoutScreen({
@@ -379,11 +376,11 @@ class _NoteCellView extends StatelessWidget {
               child: Container(
                 height: size.height,
                 alignment: Alignment.topCenter,
-                child: Tooltip(
-                  message: '${cell.name}',
-                  // TODO 130 remove
-                  child: Text("code\ntodo"),
-                ),
+                // child: Tooltip(
+                //   message: 'TODO code 展开',
+                //   // TODO 130 remove
+                //   child: Text("▷"),
+                // ),
               ),
             ),
           );

@@ -3,7 +3,7 @@ import 'package:flutter/painting.dart' as painting;
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 ## AppBar
 
 一般放在[Scaffold.appBar].
@@ -11,7 +11,7 @@ a
 b
 
 > ref: <https://api.dev/flutter/material/AppBar-class.html>
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(
@@ -41,14 +41,14 @@ b
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## BottomAppBar
 
 一般放在[Scaffold.bottomNavigationBar].
 
 > ref <https://api.dev/flutter/material/BottomAppBar-class.html>
 
-''');
+'''));
   //
 
   print=print.next(title:const Text("new cell-----------------"));
@@ -79,7 +79,7 @@ b
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 
 ## ~~BottomNavigationBar~~
 
@@ -95,7 +95,7 @@ b
 
 
 先看看不加逻辑时NavigationBar的长相：
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(
@@ -119,9 +119,9 @@ b
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
   var currentPageIndex = 0;
@@ -152,7 +152,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
   ));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## NavigationRail
 
 主要用在Pad或桌面应用上。
@@ -161,7 +161,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 > The navigation rail is meant for layouts with wide viewports, such as a desktop web
 > or tablet landscape layout. For smaller layouts, like mobile portrait,
 > a BottomNavigationBar should be used instead.
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
 
@@ -205,7 +205,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## TabBar
 
 > <https://api.flutter-io.cn/flutter/material/TabBar-class.html>
@@ -221,7 +221,7 @@ TabBar 很好理解就是Tab栏切换的组件。一般放在[Scaffold.appBar.bo
 TabController主要是为了协调Tab和TabView的切换关系。
 
 TabBar不加TabView长这样：
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(const DefaultTabController(
@@ -245,9 +245,9 @@ TabBar不加TabView长这样：
   ));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 再来看看加了TabView的完整体，即TabBar实际使用模式：
-''');
+'''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(const DefaultTabController(
@@ -277,7 +277,7 @@ TabBar不加TabView长这样：
   ));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown("""
+  print(const MD("""
 上面用法和[NavigationBar]很像，主要就是在多个页面间切换，好处在，连事件逻辑都不需要，组件树如下结构即可：
 
 DefaultTabController
@@ -292,7 +292,7 @@ DefaultTabController
       - Widget View 3
 
   ## SnackBar
-""");
+"""));
 
   print=print.next(title:const Text("new cell-----------------"));
   onPressed() {
@@ -324,7 +324,7 @@ DefaultTabController
   ));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## ButtonBar
 
 > <https://api.flutter-io.cn/flutter/material/ButtonBar-class.html>
@@ -332,7 +332,7 @@ DefaultTabController
 > Used by Dialog to arrange the actions at the bottom of the dialog.
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，其横向还是纵向排列，取决于其宽度：
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(
@@ -355,13 +355,13 @@ DefaultTabController
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## OverflowBar
 
 > <https://api.flutter-io.cn/flutter/material/ButtonBar-class.html>
 
 OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排，修改下面最外层Container.width看看：
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(
@@ -393,7 +393,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
   );
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## PlatformMenuBar
 
 > <https://api.flutter-io.cn/flutter/widgets/PlatformMenuBar-class.html>
@@ -409,7 +409,7 @@ MenuBar相关组件：
 - MenuAnchor, a widget that creates a region with a submenu and shows it when requested.
 - SubmenuButton, a menu item which manages a submenu.
 - MenuItemButton, a leaf menu item which displays the label, an optional shortcut label, and optional leading and trailing icons.
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   click() {

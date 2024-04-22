@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # VM Servi, print = print.next(title: cons, var serviceInfo = await Servic, ..., print("serviceInfo.minorVersio, print('🔥🖼️✗✓🔨💪✏️');)
+        /// (print(const MD(r''' # VM Servi, print = print.next(title: cons, var serviceInfo = await Servic, ..., print("serviceInfo.minorVersio, print('🔥🖼️✗✓🔨💪✏️');)
         (
           cellType: 'body',
           offset: 159,

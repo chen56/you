@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb, print = print.next(title: cons, print(Row(children: [CheckboxM)
+        /// (print(const MD(r''' # 菜单Menu  , print(const MD(r'''  ## Checkb, print = print.next(title: cons, print(Row(children: [CheckboxM)
         (
           cellType: 'body',
           offset: 129,

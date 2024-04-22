@@ -4,13 +4,13 @@ import 'package:you_note_dart/note.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
 void build(BuildContext context, Cell print) {
-  print.markdown('''
+  print(const MD('''
 # analyzer
 
 ## 分析器可以在web模式运转
 
 分析本页dart文件，并打印出import and export directives
-  ''');
+  '''));
   print=print.next(title:const Text("new cell-----------------"));
 
   var x = analyzer_util.parseString(
@@ -21,12 +21,12 @@ void build(BuildContext context, Cell print) {
   }
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown('''
+  print(const MD('''
 
 ## 性能不错
 
 看下面性能测试，可以实时在UI上处理单文件语法树，不需要预处理了：
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   DateTime start = DateTime.now();

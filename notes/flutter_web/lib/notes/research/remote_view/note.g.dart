@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # Remote f)
+        /// (print(const MD(r''' # Remote f)
         (
           cellType: 'body',
           offset: 129,

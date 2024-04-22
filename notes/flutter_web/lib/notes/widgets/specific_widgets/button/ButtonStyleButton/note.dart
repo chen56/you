@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # ButtonStyleButton
 
 ButtonStyleButton 相关子类
@@ -17,7 +17,7 @@ ButtonStyleButton 相关子类
     * [TextButton], a overview with no outline or fill color.
 
 
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   print(Wrap(children: [
@@ -25,8 +25,8 @@ ButtonStyleButton 相关子类
   ]));
 
   print=print.next(title:const Text("new cell-----------------"));
-  print.markdown(r'''
+  print(const MD(r'''
 ## 范例2 Meta
 
-  ''');
+  '''));
 }

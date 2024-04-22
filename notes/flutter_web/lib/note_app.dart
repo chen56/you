@@ -81,7 +81,7 @@ class Notes extends BaseNotes with Navigable {
     // sync mode
     // return find.createScreen(location);
     // async mode
-    return DeferredScreen(note: find, noteSystem: noteSystem);
+    return DeferredScreen(noteRoute: find, noteSystem: noteSystem);
   }
 }
 

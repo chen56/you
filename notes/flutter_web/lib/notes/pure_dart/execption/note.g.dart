@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(const MD("text"));, StackTrace? catchStack;, try {throwException();} catch , var catchStackParsed = Trace.p, print.markdown(""" ### 原始堆栈Sta)
+        /// (print(const MD("text"));, StackTrace? catchStack;, try {throwException();} catch , var catchStackParsed = Trace.p, print(MD(""" ### 原始堆栈Sta)
         (
           cellType: 'body',
           offset: 462,

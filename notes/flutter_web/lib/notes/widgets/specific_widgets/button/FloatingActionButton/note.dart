@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
@@ -14,5 +14,5 @@ void build(BuildContext context, Cell print) {
     - 构造器[FloatingActionButton.small] 小一点
     - 构造器[FloatingActionButton.large] 大一点
     - 构造器[FloatingActionButton.extended] icon + label
-  ''');
+  '''));
 }

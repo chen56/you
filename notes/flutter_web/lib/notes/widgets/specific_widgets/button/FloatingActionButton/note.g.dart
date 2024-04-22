@@ -14,7 +14,7 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print.markdown(r''' # Floating)
+        /// (print(const MD(r''' # Floating)
         (
           cellType: 'body',
           offset: 129,

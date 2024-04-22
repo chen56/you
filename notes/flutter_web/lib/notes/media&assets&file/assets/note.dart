@@ -4,10 +4,10 @@ import 'package:flutter/services.dart' show rootBundle;
 
 void build(BuildContext context, Cell print) async {
   print.next(title:const Text("--------new cell------"));
-  print.markdown(r'''
+  print(const MD(r'''
 # asset
 
-  ''');
+  '''));
   var jsonAsset = await rootBundle.loadString('lib/notes/note.dart');
   print(jsonAsset);
 }

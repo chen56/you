@@ -4,10 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # test自测目录
 
 本目录放置自测页面，以验证基础功能。
 
-  ''');
+  '''));
 }

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 ## 范例1 普通文本
 
 什么是状态管理？在Flutter UI中，
@@ -36,9 +36,9 @@ void build(BuildContext context, Cell print) {
 State
   最简单的StatefulWidget
 
-  ''');
+  '''));
 
-  print.markdown(r'''
+  print(const MD(r'''
 ## InheritedWidget有点麻烦
 
 多个状态管理，需要aspect，或每个状态一个nheritedWidget
@@ -65,5 +65,5 @@ ParentWidget
    products
    xxx
 
-  ''');
+  '''));
 }

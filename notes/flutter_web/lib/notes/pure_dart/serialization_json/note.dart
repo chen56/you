@@ -6,12 +6,12 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Cell print) {
-  print.markdown(r'''
+  print(const MD(r'''
 # json
 
 json 序列化。
 
-  ''');
+  '''));
 
   print=print.next(title:const Text("new cell-----------------"));
   var userJson = '''
