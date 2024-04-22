@@ -4,8 +4,7 @@ import 'package:you_flutter/you_state.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
-import 'package:you_note_dart/src/note_cell.dart';
-import 'package:you_note_dart/src/note_page.dart';
+import 'package:you_note_dart/src/note.dart';
 import 'package:you_note_dart/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
@@ -122,27 +121,17 @@ class _LayoutScreenState extends State<LayoutScreen> {
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
 
-
     var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
       child: Watch((context) {
-        var contents = widget.notePage.contents.expand((content) sync* {
-          yield switch (content) {
-            Cell _ => _NoteCellView(content, outline: outline),
-            MD _ => MarkdownContent(outline: outline, content: content.text),
-            Widget widget => widget,
-            _ => Text("$content"),
-          };
-        });
-
         return ListBody(
-            children: [
-              ...contents,
-              //page下留白，避免被os工具栏遮挡
-              const SizedBox(height: 300),
-            ],
-          );
+          children: [
+            ...widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)),
+            //page下留白，避免被os工具栏遮挡
+            const SizedBox(height: 300),
+          ],
+        );
       }),
     );
     var appBar = AppBar(title: Text(widget.note.displayName), toolbarHeight: 36);

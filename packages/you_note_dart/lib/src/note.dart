@@ -5,9 +5,10 @@ import 'package:stack_trace/stack_trace.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
+import 'package:you_flutter/you_state.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
-import 'package:you_note_dart/src/note_cell.dart';
+import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Print print);
 typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Print print);
@@ -231,5 +232,108 @@ class NoteSystem {
     var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
 
     return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
+  }
+}
+
+/// Print
+///   Cell[0]
+///     List<Object?> contents
+///   Cell[1]
+///     List<Object?> contents
+base class Print {
+  Print() : _cells = <Cell>[].signal();
+
+  /// open data,can crud
+  final List<Cell> _cells;
+  List<Cell> get cells=>List.unmodifiable(_cells);
+  static Iterable<Cell> _deepGetCell(Print print) sync* {
+    if (print is Cell) {
+      yield print;
+    }
+    for (var cell in print._cells) {
+      yield* _deepGetCell(cell);
+    }
+  }
+
+  void call(Object? content) {
+    if (content is Print) {
+      _cells.addAll(_deepGetCell(content));
+    } else {
+      if (_cells.isEmpty) {
+        _cells.add(Cell());
+      }
+      _cells.last(content);
+    }
+  }
+
+  Cell next({Widget? title, Cell? cell}) {
+    cell = cell ?? Cell();
+    cell._parent = this;
+    _cells.add(cell);
+    return cell;
+  }
+
+  @nonVirtual
+  bool isEmpty() => _cells.isEmpty;
+
+  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  @experimental
+  @nonVirtual
+  void runInCurrentCell(void Function(Print print) callback, {Widget? title}) {
+    callback(this);
+  }
+}
+
+base class Cell extends Print {
+  final Widget? title;
+  final List<Object?> _contents = [].signal();
+
+  Print? _parent;
+
+  Cell({
+    this.title,
+  });
+
+  @nonVirtual
+  List<Object?> get contents => List.unmodifiable(_contents);
+
+  /// Cell上就别在看cell了
+  @visibleForTesting
+  @override
+  List<Cell> get cells => super.cells;
+
+  @override
+  void call(Object? content) {
+    if (content is Print) {
+      _cells.addAll(Print._deepGetCell(content));
+    } else {
+      _contents.add(content);
+    }
+  }
+
+  @nonVirtual
+  @override
+  Cell next({Widget? title, Cell? cell}) {
+    assert(_parent != null, "Orphan cells cannot build new cells");
+    return _parent!.next(title: title, cell: cell);
+  }
+
+  @internal
+  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
+    try {
+      throw Exception("track caller line");
+    } catch (e, trace) {
+      return NoteSystem.findCallerLine(
+        trace: trace,
+        location: Uri.base,
+        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
+      );
+    }
+  }
+
+  @override
+  String toString() {
+    return "$Cell(hash:$hashCode, contents[${_cells.length}]:$_cells)";
   }
 }

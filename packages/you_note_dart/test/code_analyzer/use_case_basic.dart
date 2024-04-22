@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:you_note_dart/src/note_cell.dart';
+import 'package:you_note_dart/src/note.dart';
 
 var x = "x";
 

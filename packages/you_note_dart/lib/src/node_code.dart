@@ -1,6 +1,6 @@
 
 import 'package:meta/meta.dart';
-import 'package:you_note_dart/src/note_page.dart';
+import 'package:you_note_dart/src/note.dart';
 
 
 typedef NoteSourceData = ({
