@@ -29,8 +29,8 @@ noteInfo() => (
         /// (print.markdown(r''' # asset   , var jsonAsset = await rootBund, print(jsonAsset);)
         (
           cellType: 'body',
-          offset: 243,
-          end: 373,
+          offset: 249,
+          end: 379,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 373,
-          end: 375,
+          offset: 379,
+          end: 381,
           specialNodes: <({
             String nodeType,
             int end,
