@@ -18,7 +18,7 @@ noteInfo() => (
         (
           cellType: 'body',
           offset: 129,
-          end: 444,
+          end: 446,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 444,
-          end: 446,
+          offset: 446,
+          end: 448,
           specialNodes: <({
             String nodeType,
             int end,

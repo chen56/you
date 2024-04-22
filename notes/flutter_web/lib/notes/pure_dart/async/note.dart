@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // import 'package:you_note_dart/src/params/mate_note.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, Cell print) async {
+void build(BuildContext context, Note print) async {
   print.next(title:const Text("--------new cell------"));
   print(const MD(r'''
 # 异步

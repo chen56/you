@@ -8,7 +8,7 @@ import 'package:you_note_dart/note.dart';
 ///   - 但同步异步都可以完全不靠Trace来定位cell，
 ///   - 可信度也较高（Trace总觉得有点不太靠谱，收集定位 source code 也就行了），
 ///   - 甚至可以作为通用架构来做note外的开发
-void build(BuildContext context, Cell printc) {
+void build(BuildContext context, Note printc) {
   printc(TestCell.namedBlock(
       title: Text("全named 参数 root, 格式化时,所有参数强制换行，无法调整啊"),
       style: ContentLayout(maxColumn: 3),

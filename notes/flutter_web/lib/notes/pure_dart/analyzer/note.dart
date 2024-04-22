@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
-void build(BuildContext context, Cell print) {
+void build(BuildContext context, Note print) {
   print(const MD('''
 # analyzer
 

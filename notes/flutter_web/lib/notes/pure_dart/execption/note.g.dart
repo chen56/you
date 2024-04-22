@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(const MD("text"));, StackTrace? catchStack;, try {throwException();} catch , var catchStackParsed = Trace.p, print(MD(""" ### 原始堆栈Sta)
+        /// (print(const MD("text"));, StackTrace? catchStack;, try {throwException();} catch , var catchStackParsed = Trace.p, print(MD(""" ### 原始堆栈StackTrac)
         (
           cellType: 'body',
           offset: 462,
-          end: 1400,
+          end: 1395,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 1400,
-          end: 2525,
+          offset: 1395,
+          end: 2520,
           specialNodes: <({
             String nodeType,
             int end,

@@ -3,7 +3,7 @@ import 'package:you_note_dart/src/note_cell.dart';
 
 var x = "x";
 
-void build(BuildContext context, Cell print) {
+void build(BuildContext context, Note print) {
   // begin comment 中文字符
   print("x:$x");
   // end comment 中文字符

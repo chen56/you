@@ -19,9 +19,8 @@ class DeferredScreen extends StatelessWidget with Screen {
   @override
   Widget build(BuildContext context) {
     Note note = Note();
-    Cell firstCell = note.next();
     return FutureBuilder<void>(
-      future: noteRoute.lazyNoteBuilder!(context, firstCell),
+      future: noteRoute.lazyNoteBuilder!(context, note),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {

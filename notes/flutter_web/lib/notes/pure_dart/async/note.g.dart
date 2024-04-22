@@ -30,7 +30,7 @@ noteInfo() => (
         (
           cellType: 'body',
           offset: 279,
-          end: 549,
+          end: 550,
           specialNodes: <({
             String nodeType,
             int end,
@@ -41,8 +41,8 @@ noteInfo() => (
         /// ({Future<String> bomb() async {)
         (
           cellType: 'body',
-          offset: 604,
-          end: 1337,
+          offset: 605,
+          end: 1338,
           specialNodes: <({
             String nodeType,
             int end,
@@ -53,8 +53,8 @@ noteInfo() => (
         /// (print(const MD(r''' ## Isalted)
         (
           cellType: 'body',
-          offset: 1392,
-          end: 1873,
+          offset: 1393,
+          end: 1875,
           specialNodes: <({
             String nodeType,
             int end,
@@ -65,8 +65,8 @@ noteInfo() => (
         /// ({send123(sendPort) async {for )
         (
           cellType: 'body',
-          offset: 1928,
-          end: 2577,
+          offset: 1930,
+          end: 2579,
           specialNodes: <({
             String nodeType,
             int end,
@@ -77,8 +77,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 2577,
-          end: 2579,
+          offset: 2579,
+          end: 2581,
           specialNodes: <({
             String nodeType,
             int end,

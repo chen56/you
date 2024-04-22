@@ -14,11 +14,11 @@ noteInfo() => (
           })>[],
         ),
 
-        /// (print(MD(''' # 响应式设计  ##)
+        /// (print(const MD(''' # 响应式设计  ##)
         (
           cellType: 'body',
           offset: 129,
-          end: 276,
+          end: 277,
           specialNodes: <({
             String nodeType,
             int end,
@@ -29,8 +29,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 276,
-          end: 278,
+          offset: 277,
+          end: 279,
           specialNodes: <({
             String nodeType,
             int end,

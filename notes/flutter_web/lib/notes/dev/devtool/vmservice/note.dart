@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 import 'dart:developer';
 
-void build(BuildContext context, Cell print) async {
+void build(BuildContext context, Note print) async {
   print(const MD(r'''
 # VM Service
 
