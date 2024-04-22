@@ -1,7 +1,4 @@
 library you_state;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:you_dart/state.dart';
+export 'src/state_widget.dart' show Watch;
