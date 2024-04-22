@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 /// 仔细想，md来做中控，那代码的嵌套block 算啥呢？2种层级树貌似难以理解
-void build(BuildContext context, Function(Object? s) print) {
+void build(BuildContext context, Function(Object? content) print) {
   print(MD(debugLabel: Text("debug label"), "ssss"));
   print(MD(debugLabel: Text("debug label2"), '''
 ## 2级标题
@@ -36,7 +36,7 @@ asf
   var cell = print(Text("sss"));
   void x() {
     cell.clear();
-    cell.print("");
+    cell("");
   }
 
   x();

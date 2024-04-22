@@ -86,13 +86,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
     });
   }
 
-  ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
-    return (
-      cells: widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)).toList(),
-      outline: outline,
-    );
-  }
-
   @override
   void didUpdateWidget(covariant LayoutScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -129,12 +122,21 @@ class _LayoutScreenState extends State<LayoutScreen> {
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
 
+    var contents = widget.notePage.contents.expand((content) sync* {
+      yield switch (content) {
+        Cell _ => _NoteCellView(content, outline: outline),
+        MD _ => MarkdownContent(outline: outline, content: content.text),
+        Widget widget => widget,
+        _ => Text("$content"),
+      };
+    });
+
     var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
       child: ListBody(
         children: [
-          ...widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)),
+          ...contents,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],

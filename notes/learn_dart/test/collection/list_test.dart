@@ -2,6 +2,7 @@
 
 import 'dart:core';
 
+import 'package:checks/checks.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -18,6 +19,22 @@ void main() {
       expect(nullableNull is List<int>?, true);
     });
   });
-
-
+  group("List.expand", () {
+    var x = [
+      [1, 2],
+      [4, 5]
+    ];
+    test('yield', () {
+      check(x.expand((e) sync* {
+        for (var i in e) {
+          yield i;
+        }
+      })).deepEquals([1, 2, 4, 5]);
+    });
+    test('yield*', () {
+      check(x.expand((e) sync* {
+        yield* e;
+      })).deepEquals([1, 2, 4, 5]);
+    });
+  });
 }
