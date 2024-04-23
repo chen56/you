@@ -251,7 +251,6 @@ base class Cell {
   /// open data,can crud
   final List<Cell> _children = <Cell>[].signal();
 
-
   @nonVirtual
   List<Object?> get contents => List.unmodifiable(_contents);
 

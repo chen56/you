@@ -127,7 +127,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
       child: Watch((context) {
         return ListBody(
           children: [
-            ...widget.rootCell.toList().map((cell) => _NoteCellView(cell, outline: outline)),
+            ...widget.rootCell.toList().where((e) => !e.isContentsEmpty()).map((cell) => _NoteCellView(cell, outline: outline)),
             //page下留白，避免被os工具栏遮挡
             const SizedBox(height: 300),
           ],
