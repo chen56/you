@@ -3,6 +3,7 @@ import 'package:meta/meta.dart';
 /// 基础包，不依赖其他业务代码
 
 Types types = Types();
+Strings strings = Strings();
 
 
 @experimental
@@ -55,17 +56,6 @@ base mixin class Types {
   }
 }
 
-extension type StringExt(String str) {
-  String safeSubstring(int start, [int? end]) {
-    end ??= str.length;
-    end = end <= str.length ? end : str.length;
-    try {
-      return str.substring(start, end);
-    } catch (e) {
-      throw Exception("$e, string $this");
-    }
-  }
-}
 
 /// 范型参数只有在类型内才能看见，比如Map Signal内的key, value类型外部是无法看见的，
 /// 只能通过钩子传出来
@@ -87,6 +77,9 @@ final class TypeHook<T> {
   bool isNullable() {
     return null is T;
   }
+  bool isNullableOf(T t) {
+    return null is T || t == null;
+  }
 
   bool isTypeOf(obj) {
     return obj is T;
@@ -105,4 +98,22 @@ class Unique {
   @override
   String toString() => '[#$name:${shortHash(this)}]';
 
+}
+
+class Strings {
+  /// content only space、/r/n ...not useful text
+  bool isBlankText(String str) {
+    // \s: 匹配任何空白字符，包括空格、制表符、换行符等。
+    return str.contains(RegExp(r'^\s*$'));
+  }
+
+  String safeSubstring(String str, int start, [int? end]) {
+    end ??= str.length;
+    end = end <= str.length ? end : str.length;
+    try {
+      return str.substring(start, end);
+    } catch (e) {
+      throw Exception("$e, string $this");
+    }
+  }
 }

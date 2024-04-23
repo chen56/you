@@ -1,6 +1,6 @@
 name: you_note_dart
 description: A Flutter note project.
-version: 1.0.0
+version: 0.0.4
 homepage: https://github.com/chen56/note
 
 environment:
@@ -32,7 +32,8 @@ dependencies:
   stack_trace: ^1.11.1
   source_map_stack_trace: ^2.1.1
   source_maps: ^0.10.12
-  you_flutter: ^0.0.3
+  you_dart: ^0.0.4
+  you_flutter: ^0.0.4
 
 #  async: ^2.11.0
 dev_dependencies:
@@ -80,3 +81,12 @@ flutter:
 #
 # For details regarding fonts in packages, see
 # https://flutter.dev/custom-fonts/#from-packages
+dependency_overrides:
+  #  dart CHANGELOG 3.0.0 2023-05-10
+  #   - dart pub publish will no longer warn about dependency_overrides.
+  #     Dependency overrides only take effect in the root package of a resolution.
+  #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  you_dart:
+    path: ../you_dart
+  you_flutter:
+    path: ../you_flutter

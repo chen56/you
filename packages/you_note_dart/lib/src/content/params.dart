@@ -7,10 +7,9 @@ import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/src/content/params_editors.dart';
-import 'package:you_note_dart/core.dart' as utils;
+import 'package:you_dart/src/core.dart';
 
-final defaultEmitter =
-    code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
+final defaultEmitter = code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
 
 // 一般以80个字符为编辑器宽度
 final defaultDartFormatter = DartFormatter(
@@ -33,10 +32,15 @@ abstract class Param extends ChangeNotifier {
   }
 
   dynamic get value => _value;
+
   String get name => builderArg.name;
+
   dynamic get init => builderArg.init;
+
   bool get nullable => builderArg.nullable;
+
   bool get isNamed => builderArg.isNamed;
+
   dynamic get defaultValue => builderArg.defaultValue;
 
   set value(dynamic newValue) {
@@ -107,10 +111,7 @@ abstract class Param extends ChangeNotifier {
     bool includeThis = true,
     bool Function(Param element)? test,
   }) {
-    return [
-      this,
-      ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))
-    ];
+    return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
   }
 
   @nonVirtual
@@ -126,9 +127,7 @@ abstract class Param extends ChangeNotifier {
     var formatter_ = editors.formatter;
 
     var c = toCodeExpression(editors: editors);
-    return format
-        ? formatter_.formatStatement(c.statement.accept(emitter_).toString())
-        : c.accept(emitter_).toString();
+    return format ? formatter_.formatStatement(c.statement.accept(emitter_).toString()) : c.accept(emitter_).toString();
   }
 
   Widget nameWidget(BuildContext context) {
@@ -156,7 +155,7 @@ Param _toParam({
   required Param parent,
   required Editors editors,
 }) {
-  if (builderArg.isSubType<List>()) {
+  if (builderArg.type.isType<List>()) {
     var result = ListParam(
       builderArg: builderArg,
       parent: parent,
@@ -165,7 +164,7 @@ Param _toParam({
 
     return result;
   }
-  if (builderArg.isSubType<Set>()) {
+  if (builderArg.type.isType<Set>()) {
     var result = SetParam(
       builderArg: builderArg,
       parent: parent,
@@ -217,8 +216,7 @@ class ListParam extends Param {
     if (init != null) {
       List notNull = init as List;
       for (int i = 0; i < notNull.length; i++) {
-        assert(notNull[i] != null,
-            "list element [$i] should not be null init: $init");
+        assert(notNull[i] != null, "list element [$i] should not be null init: $init");
         params.add(_toParam(
           builderArg: BuilderArg(
             name: "$i",
@@ -240,8 +238,7 @@ class ListParam extends Param {
     // 直接返回map后的list会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toList() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
-    return utils.castList<dynamic>(
-        from: params.map((e) => e.build()), to: init as List);
+    return types.castList<dynamic>(from: params.map((e) => e.build()), to: init as List);
   }
 
   @override
@@ -251,6 +248,7 @@ class ListParam extends Param {
 class SetParam extends Param {
   final List<Param> params = List.empty(growable: true);
   int _index = 0;
+
   SetParam({
     required super.builderArg,
     required Param parent,
@@ -259,8 +257,7 @@ class SetParam extends Param {
     if (init != null) {
       Iterable notNull = init as Iterable;
       for (var e in notNull) {
-        assert(
-            e != null, "set element[$_index] should not be null init: $init");
+        assert(e != null, "set element[$_index] should not be null init: $init");
         params.add(_toParam(
           builderArg: BuilderArg(
             name: "$_index",
@@ -283,8 +280,7 @@ class SetParam extends Param {
     // 直接返回map后的toSet()会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toSet() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
-    return utils.castSet<dynamic>(
-        from: params.map((e) => e.build()), to: init as Set);
+    return types.castSet<dynamic>(from: params.map((e) => e.build()), to: init as Set);
   }
 
   @override
@@ -308,8 +304,7 @@ class ObjectParam extends Param {
     required this.builderRefer,
     required super.editors,
   }) {
-    _params.addAll(args.map((key, value) =>
-        MapEntry(key, value.toParam(parent: this, editors: editors))));
+    _params.addAll(args.map((key, value) => MapEntry(key, value.toParam(parent: this, editors: editors))));
   }
 
   Map<String, Param> get params => _params;
@@ -341,8 +336,7 @@ class ObjectParam extends Param {
           args: {},
           builder: builder,
           //根对象
-          builderRefer:
-              code.refer("ObjectParam", "package:mate/mate_core.dart"),
+          builderRefer: code.refer("ObjectParam", "package:mate/mate_core.dart"),
           editors: editors,
         );
 
@@ -428,9 +422,7 @@ void main() {
 
     String result = toCode.accept(emitter).toString();
     if (format) {
-      result = snippet
-          ? formatter.formatStatement(result)
-          : formatter.format(result);
+      result = snippet ? formatter.formatStatement(result) : formatter.format(result);
     }
     return result;
   }
@@ -445,11 +437,11 @@ class BuilderArg<T> {
   final bool isNamed;
   final Object? defaultValue;
   final T init;
-  late final bool nullable;
   late final Param param;
 
   /// if create from [ObjectParam.use] or [Mate] <T>  type is provided
   final bool isTypeProvided;
+  final TypeHook<T> type = TypeHook<T>();
 
   BuilderArg({
     required this.name,
@@ -457,11 +449,14 @@ class BuilderArg<T> {
     required this.isNamed,
     this.isTypeProvided = false,
     this.defaultValue,
-  }) : nullable = utils.isNullableOf<T>(init);
+  }) ;
+
+  bool get nullable=>type.isNullableOf(init);
 
   T get value => param.value;
 
   Type get argType => T;
+
   set value(T newValue) {
     param.value = newValue;
   }
@@ -486,11 +481,7 @@ class BuilderArg<T> {
 
   String toCodeExpressionString() => param.toCodeExpressionString();
 
-  /// 此时param可能还未初始化
-  isSubType<Super>() => utils.isSubTypeOf<T, Super>(init);
-
-  isSubTypeWithParam<Super>() =>
-      utils.isSubTypeOf<T, Super>(init) || param.init is Super;
+  isSubTypeWithParam<Super>() => type.isType<Super>() || param.init is Super;
 
   @override
   String toString() {
@@ -506,6 +497,7 @@ mixin Mate {
   late final String mateBuilderName;
   @protected
   late final String matePackageUrl;
+
   // The purpose of the cache variable is to ensure that to Root Param is only called once,
   // because multiple calls will cause BuildArg.param to initialize multiple times
   // and report an error
@@ -538,9 +530,7 @@ abstract class Editor {
 
   @nonVirtual
   Widget nameWidget(BuildContext context) {
-    Widget? icon = param.builderArg.isSubType<Widget>()
-        ? const Tooltip(message: "Widget", child: Icon(Icons.widgets, size: 15))
-        : null;
+    Widget? icon = param.builderArg.type.isType<Widget>() ? const Tooltip(message: "Widget", child: Icon(Icons.widgets, size: 15)) : null;
     if (param._parent is ListParam && param is ObjectParam) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -556,8 +546,7 @@ abstract class Editor {
       children: [
         if (icon != null) icon,
         // Text加Expanded 防止溢出
-        Expanded(
-            child: Text("${param.displayName}${param.isRoot ? '' : ': '} "))
+        Expanded(child: Text("${param.displayName}${param.isRoot ? '' : ': '} "))
       ],
     );
   }
@@ -565,6 +554,7 @@ abstract class Editor {
   Param get param;
 
   Widget valueWidget(BuildContext context);
+
   code.Expression toCode();
 
   /// sub class should not override
@@ -572,9 +562,7 @@ abstract class Editor {
   String toCodeString({format = false}) {
     var c = toCode();
     // 如果要格式化，转成statement以使其不报错
-    return format
-        ? formatter.formatStatement(c.statement.accept(emitter).toString())
-        : c.accept(emitter).toString();
+    return format ? formatter.formatStatement(c.statement.accept(emitter).toString()) : c.accept(emitter).toString();
   }
 }
 
@@ -642,8 +630,7 @@ class Editors {
       return ColorEditor(param, editors: this);
     }
     if (arg.isSubTypeWithParam<Enum>()) {
-      return EnumEditor(param,
-          editors: this, enums: enumRegister.getOrEmpty(arg.argType));
+      return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(arg.argType));
     }
     if (arg.isSubTypeWithParam<IconData>()) {
       return IconDataEditor(param, editors: this);
@@ -688,9 +675,7 @@ class Editors {
     //     ..body = const code.Code("")).closure;
     //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     // }
-    return onNotFound != null
-        ? onNotFound(param)
-        : UnknowTypeParamEditor(param, editors: this);
+    return onNotFound != null ? onNotFound(param) : UnknowTypeParamEditor(param, editors: this);
   }
 }
 
@@ -749,8 +734,8 @@ class IconRegisters {
 class IconRegister {
   final Map<IconData, String> icons = {};
   final code.Reference ref;
-  IconRegister(String refSymbol, String refUrl)
-      : ref = code.Reference(refSymbol, refUrl);
+
+  IconRegister(String refSymbol, String refUrl) : ref = code.Reference(refSymbol, refUrl);
 
   void register(IconData icon, String name) {
     icons[icon] = name;

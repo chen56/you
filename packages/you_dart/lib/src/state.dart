@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:meta/meta.dart';
-import 'package:you_dart/src/_core.dart';
+import 'package:you_dart/src/core.dart';
 
 _defaultOnSignalDoNothing(Signal signal) {}
 

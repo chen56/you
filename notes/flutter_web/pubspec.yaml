@@ -23,12 +23,6 @@ dependencies:
 
   analyzer: ^6.4.1
 
-  you_note_dart:
-    path: ../../packages/you_note_dart
-
-  note:
-    path: ../../
-
   path: ^1.8.2
   code_builder: ^4.4.0
   file: ^7.0.0
@@ -38,7 +32,11 @@ dependencies:
   source_map_stack_trace: ^2.1.1
   http: ^1.2.1
   source_maps: ^0.10.12
+
+  # you_*
+  you_dart: ^0.0.4
   you_flutter: ^0.0.4
+  you_note_dart: ^0.0.4
 
 dev_dependencies:
 
@@ -128,3 +126,15 @@ flutter:
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+dependency_overrides:
+    #  dart CHANGELOG 3.0.0 2023-05-10
+    #   - dart pub publish will no longer warn about dependency_overrides.
+    #     Dependency overrides only take effect in the root package of a resolution.
+    #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  you_dart:
+    path: ../../packages/you_dart
+  you_note_dart:
+    path: ../../packages/you_note_dart
+  you_flutter:
+    path: ../../packages/you_flutter

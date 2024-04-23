@@ -2,7 +2,7 @@ import 'dart:collection';
 import 'dart:convert';
 
 import 'package:meta/meta.dart';
-import 'package:you_dart/src/_core.dart';
+import 'package:you_dart/src/core.dart';
 import 'package:you_dart/src/state.dart';
 
 /// [Store] 的编解码器，为[Store]对象赋予json等的能力, 目前支持
