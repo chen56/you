@@ -14,24 +14,27 @@ dependencies:
   collection: ^1.18.0
   path: ^1.8.3
   file: ^7.0.0
+  http: ^1.2.1
+  glob: ^2.1.1
 
+  # content
   markdown: ^7.0.0
   highlight: ^0.7.0
+
+  # code analyzer
+  analyzer: ^6.4.1
   code_builder: ^4.4.0
   dart_style: ^2.0.0
-  args: ^2.4.2
-  analyzer: ^6.4.1
-  glob: ^2.1.1
-  watcher: ^1.1.0
-
-  # plugin
-  shared_preferences: ^2.2.2
-  flutter_markdown: ^0.6.14
-  flutter_highlight: ^0.7.0
-  http: ^1.2.1
   stack_trace: ^1.11.1
   source_map_stack_trace: ^2.1.1
   source_maps: ^0.10.12
+
+  # plugin
+  shared_preferences: ^2.2.2
+  flutter_markdown: ^0.7.1
+  flutter_highlight: ^0.7.0
+
+  # you_*
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
 

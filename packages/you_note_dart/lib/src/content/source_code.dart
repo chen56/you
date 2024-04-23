@@ -120,7 +120,7 @@ class _CodeVisitor extends GeneralizingAstVisitor {
 
    @override
   visitFunctionExpressionInvocation(FunctionExpressionInvocation node) {
-    print("node: ${node}");
+    print("node: $node");
     return super.visitFunctionExpressionInvocation(node);
   }
   @override
