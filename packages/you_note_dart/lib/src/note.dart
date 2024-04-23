@@ -1,4 +1,3 @@
-
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
@@ -11,8 +10,8 @@ import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:http/http.dart' as http;
 
-typedef NoteBuilder = void Function(BuildContext context, Print print);
-typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Print print);
+typedef NoteBuilder = void Function(BuildContext context, Cell print);
+typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
 
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path
@@ -236,119 +235,40 @@ class NoteSystem {
   }
 }
 
-/// Print
-///   Cell[0]
-///     List<Object?> contents
-///   Cell[1]
-///     List<Object?> contents
-base class Print {
-  Print() : _cells = <Cell>[].signal();
-
-  /// open data,can crud
-  final List<Cell> _cells;
-
-  List<Cell> get cells => List.unmodifiable(_cells);
-
-  static Iterable<Cell> _deepGetCell(Print print) sync* {
-    if (print is Cell) {
-      yield print;
-    }
-    for (var cell in print._cells) {
-      yield* _deepGetCell(cell);
-    }
-  }
-
-  void call(Object? content) {
-    if (content is Print) {
-      Iterable<Cell> all= _deepGetCell(content);
-      for(var i in all){
-        i._parent=this;
-        i._cells.clear();
-      }
-      _cells.addAll(all);
-    } else {
-      if (_cells.isEmpty) {
-        _cells.add(Cell.empty());
-      }
-      _cells.last(content);
-    }
-  }
-
-  Cell nextCell({Widget? title}) {
-    Cell cell = Cell.empty(title: title);
-    cell._parent = this;
-    _cells.add(cell);
-    return cell;
-  }
-
-  /// 可以传入自定义Cell
-  Cell nextWith(Cell cell) {
-    Iterable<Cell> all= _deepGetCell(cell);
-    for(var i in all){
-      i._parent=this;
-      i._cells.clear();
-    }
-    _cells.addAll(all);
-    return cell;
-  }
-
-  @nonVirtual
-  bool isEmpty() => _cells.isEmpty;
-
-  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
-  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
-  @experimental
-  @nonVirtual
-  void runInCurrentCell(void Function(Print print) callback, {Widget? title}) {
-    callback(this);
-  }
-}
-
-base class Cell extends Print {
-  final Widget? title;
-  final List<Object?> _contents = [].signal();
-
-  Print? _parent;
-
+base class Cell {
   Cell(
     Function(Cell print) callback, {
     this.title,
-  }){
+  }) {
     callback(this);
   }
 
   Cell.empty({this.title});
 
+  final Object? title;
+  final List<Object?> _contents = [].signal();
+
+  /// open data,can crud
+  final List<Cell> _children = <Cell>[].signal();
+
+
   @nonVirtual
   List<Object?> get contents => List.unmodifiable(_contents);
 
-  /// Cell上就别在看cell了
-  @visibleForTesting
-  @override
-  List<Cell> get cells => super.cells;
+  List<Cell> get children => List.unmodifiable(_children);
 
-  @override
   void call(Object? content) {
-    if (content is Print) {
-      _cells.addAll(Print._deepGetCell(content));
-    } else {
-      _contents.add(content);
-    }
+    _contents.add(content);
   }
 
-  @nonVirtual
-  @override
-  Cell nextCell({Widget? title}) {
-    assert(_parent != null, "Orphan cells cannot build new cells");
-    return _parent!.nextCell(title: title);
+  Cell addCell({Object? title}) {
+    return addCellWith(Cell.empty(title: title));
   }
 
   /// 可以传入自定义Cell
-  @nonVirtual
-  @override
-  Cell nextWith(Cell cell) {
-    assert(_parent != null, "Orphan cells cannot build new cells");
-    return _parent!.nextWith(cell);
+  Cell addCellWith(Cell cell) {
+    _children.add(cell);
+    return cell;
   }
 
   @internal
@@ -364,8 +284,33 @@ base class Cell extends Print {
     }
   }
 
+  @nonVirtual
+  bool isCellsEmpty() => _children.isEmpty;
+
+  @nonVirtual
+  bool isContentsEmpty() => _contents.isEmpty;
+
+  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  @experimental
+  @nonVirtual
+  void runInCurrentCell(void Function(Cell print) callback, {Widget? title}) {
+    callback(this);
+  }
+
+  static Iterable<Cell> _traverse(Cell node) sync* {
+    yield node;
+    for (var cell in node._children) {
+      yield* _traverse(cell);
+    }
+  }
+
   @override
   String toString() {
-    return "$Cell(hash:$hashCode, contents[${_cells.length}]:$_cells)";
+    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
+  }
+
+  List<Cell> toList() {
+    return List.from(_traverse(this));
   }
 }

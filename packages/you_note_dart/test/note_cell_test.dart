@@ -4,59 +4,52 @@ import 'package:you_note_dart/note.dart';
 import 'package:you_note_dart/src/note.dart';
 
 void main() {
-  group("Print.call", () {
-    test("Print.call auto add first cell ", () async {
-      Print print = Print();
-      check(print.cells).deepEquals([]);
+  group("Cell.call", () {
+    test("print(obj) == Cell.call(obj) == Cell.contents.add(obj)", () async {
+      Cell print = Cell.empty();
+      check(print.children).deepEquals([]);
 
       //when
       print("hello");
+
       //then
-      check(print.cells.length, because: "auto add cell").equals(1);
-      check(print.cells[0].contents, because: "add to cells[0]").deepEquals(["hello"]);
+      check(print.contents, because: "root no contents").deepEquals(["hello"]);
+      check(print.children.isEmpty).isTrue();
     });
-    test("Print.print(Cell) == get all Cells", () async {
-      Cell cell = Cell.empty();
-      Cell cell2 = Cell.empty();
-      cell("print");
-      cell(cell2);
 
-      Print print = Print();
-      print(cell);
-      check(print.cells).deepEquals([cell, cell2]);
-    });
-    test("Print.print(Print) == get all Cells ", () async {
-      Print print1 = Print();
-      Cell cell1 = Cell.empty();
-      Cell cell2 = Cell.empty();
-      print1(cell1);
-      print1(cell2);
-      check(print1.cells).deepEquals([cell1, cell2]);
-
-      Print rootPrint = Print();
-      rootPrint(print1);
-      check(rootPrint.cells).deepEquals([cell1, cell2]);
+    test("Root Cell print(Cell) == root.contents.add(Cell)", () async {
+      Cell print = Cell.empty();
+      Cell childPrint = Cell.empty();
+      print(childPrint);
+      check(print.children.length).equals(0);
+      check(print.contents, because: "print == add content").deepEquals([childPrint]);
     });
   });
   group("Print.next", () {
-    test("Print.next cell ", () async {
-      Print print = Print();
-
-      //when
-      Cell cell1 = print.nextCell();
-      Cell cell2 = cell1.nextCell();
-      //then
-      check(print.cells).deepEquals([cell1, cell2]);
+    test("addCell()", () async {
+      Cell print = Cell.empty();
+      print.addCell(title: "1");
+      print.addCell(title: "2");
+      check(print.children.map((e) => e.title)).deepEquals(["1", "2"]);
     });
-    test("Cell.next Orphan cells cannot build new cells ", () async {
-      Cell cell1 = Cell.empty();
+  });
+  group("Cell.toList", () {
+    test("toList()", () async {
+      Cell print = Cell.empty(title: "0");
+      print.addCell(title: "1");
+      print.addCell(title: "2").addCell(title: "2.1");
+      check(print.toList().map((e) => e.title)).deepEquals(["0", "1", "2", "2.1"]);
+    });
+    test("note Sequential writing style", () async {
+      Cell print = Cell.empty(title: "0");
+      var root=print;
 
-      try {
-        cell1.nextCell();
-        fail("not here");
-      } catch (e) {
-        check((e as AssertionError).message).equals("Orphan cells cannot build new cells");
-      }
+      print("0:content");
+      print = print.addCell(title: "1");
+      print("1:content");
+      print = print.addCell(title: "2");
+      print("2:content");
+      check(root.toList().map((e) => e.title)).deepEquals(["0", "1", "2"]);
     });
   });
 }

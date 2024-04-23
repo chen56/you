@@ -5,7 +5,7 @@ import 'package:you_note_dart/note.dart';
 /// 全靠print或CellBlock内部静态收集器来工作，
 /// - 同步时：静态变量做cell区隔收集
 /// - 异步时：就必须要靠Trace来跟踪哪个Cell了，要不没线索
-void build(BuildContext context, Print print) {
+void build(BuildContext context, Cell print) {
   print(CellBlock(title: const Text("布局"), style: const ContentLayout(maxColumn: 3), () {
     print(CellBlock(title: const Text("box布局"), style: const ContentLayout(maxColumn: 3), () {}));
     print(CellBlock(title: const Text("slaver布局"), style: const ContentLayout(maxColumn: 3), () {

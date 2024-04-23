@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, Print print) {
+void build(BuildContext context, Cell print) {
   print(const MD(r'''
 # ButtonStyleButton
 
@@ -19,12 +19,12 @@ ButtonStyleButton 相关子类
 
   '''));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(Wrap(children: [
     ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
   ]));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(const MD(r'''
 ## 范例2 Meta
 

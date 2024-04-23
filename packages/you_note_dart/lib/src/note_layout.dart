@@ -18,9 +18,9 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    Print note = Print();
+    Cell noteRootCell = Cell.empty();
     return FutureBuilder<void>(
-      future: noteRoute.lazyNoteBuilder!(context, note),
+      future: noteRoute.lazyNoteBuilder!(context, noteRootCell),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
@@ -30,7 +30,7 @@ class DeferredScreen extends StatelessWidget with Screen {
           return LayoutScreen(
             note: noteRoute,
             noteSystem: noteSystem,
-            notePage: note,
+            rootCell: noteRootCell,
           );
         }
         return const CircularProgressIndicator();
@@ -45,13 +45,13 @@ class DeferredScreen extends StatelessWidget with Screen {
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final Print notePage;
+  final Cell rootCell;
   final NoteRoute rootNote;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
-    required this.notePage,
+    required this.rootCell,
     required this.note,
   }) : rootNote = noteSystem.root;
 
@@ -127,7 +127,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
       child: Watch((context) {
         return ListBody(
           children: [
-            ...widget.notePage.cells.map((cell) => _NoteCellView(cell, outline: outline)),
+            ...widget.rootCell.toList().map((cell) => _NoteCellView(cell, outline: outline)),
             //page下留白，避免被os工具栏遮挡
             const SizedBox(height: 300),
           ],

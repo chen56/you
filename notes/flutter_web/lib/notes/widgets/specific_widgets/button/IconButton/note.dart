@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-void build(BuildContext context, Print print) {
+void build(BuildContext context, Cell print) {
   print(const MD(r'''
 # IconButton
 
@@ -13,7 +13,7 @@ void build(BuildContext context, Print print) {
   - [IconButton]
   '''));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(const Wrap(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ]));

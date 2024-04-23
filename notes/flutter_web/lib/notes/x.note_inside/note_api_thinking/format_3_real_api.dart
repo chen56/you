@@ -8,8 +8,8 @@ import 'package:you_note_dart/note.dart';
 ///   - 但同步异步都可以完全不靠Trace来定位cell，
 ///   - 可信度也较高（Trace总觉得有点不太靠谱，收集定位 source code 也就行了），
 ///   - 甚至可以作为通用架构来做note外的开发
-void build(BuildContext context, Print print) {
-  print.nextWith(Cell(title: Text("ssss"), (print) {
+void build(BuildContext context, Cell print) {
+  print.addCellWith(Cell(title: Text("ssss"), (print) {
     print("ss");
   }));
 }

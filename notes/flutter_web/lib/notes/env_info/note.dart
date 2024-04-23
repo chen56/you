@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:path/path.dart' as path;
 
-void build(BuildContext context, Print print) {
+void build(BuildContext context, Cell print) {
   print(const MD('''
 # Platform和设备信息
 
 ## 平台参数
   '''));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print(MD('''
@@ -34,7 +34,7 @@ void build(BuildContext context, Print print) {
 '''));
 
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(const MD('''
 ## path
 
@@ -46,16 +46,16 @@ path很有意思
   '''));
 
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(path.absolute("a/b.dart"));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   print(const MD('''
 ## environment(web不可用)
 
   '''));
 
-  print=print.nextCell(title:const Text("new cell-----------------"));
+  print=print.addCell(title:const Text("new cell-----------------"));
   if (kIsWeb) {
     print("web版无法使用环境变量,会报错：Unsupported operation: Platform._environment");
   } else {
