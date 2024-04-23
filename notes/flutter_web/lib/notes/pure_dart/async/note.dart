@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
 void build(BuildContext context, Print print) async {
-  print.next(title:const Text("--------new cell------"));
+  print.nextCell(title:const Text("--------new cell------"));
   print(const MD(r'''
 # 异步
 
@@ -18,7 +18,7 @@ void build(BuildContext context, Print print) async {
 
   '''));
 
-  print.next(title:const Text("--------new cell------"));
+  print.nextCell(title:const Text("--------new cell------"));
   {
     Future<String> bomb() async {
       print("s");
@@ -46,7 +46,7 @@ void build(BuildContext context, Print print) async {
     });
   }
 
-  print.next(title:const Text("--------new cell------"));
+  print.nextCell(title:const Text("--------new cell------"));
   print(const MD(r'''
 ## Isalted
 
@@ -59,7 +59,7 @@ Error: Unsupported operation: dart:isolate is not supported on dart4web
 <https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1>
   '''));
 
-  print.next(title:const Text("--------new cell------"));
+  print.nextCell(title:const Text("--------new cell------"));
   {
     send123(sendPort) async {
       for (var message in ["1", "2", "3"]) {

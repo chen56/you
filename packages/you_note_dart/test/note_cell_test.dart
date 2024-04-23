@@ -16,8 +16,8 @@ void main() {
       check(print.cells[0].contents, because: "add to cells[0]").deepEquals(["hello"]);
     });
     test("Print.print(Cell) == get all Cells", () async {
-      Cell cell = Cell();
-      Cell cell2 = Cell();
+      Cell cell = Cell.empty();
+      Cell cell2 = Cell.empty();
       cell("print");
       cell(cell2);
 
@@ -27,8 +27,8 @@ void main() {
     });
     test("Print.print(Print) == get all Cells ", () async {
       Print print1 = Print();
-      Cell cell1 = Cell();
-      Cell cell2 = Cell();
+      Cell cell1 = Cell.empty();
+      Cell cell2 = Cell.empty();
       print1(cell1);
       print1(cell2);
       check(print1.cells).deepEquals([cell1, cell2]);
@@ -43,16 +43,16 @@ void main() {
       Print print = Print();
 
       //when
-      Cell cell1 = print.next();
-      Cell cell2 = cell1.next();
+      Cell cell1 = print.nextCell();
+      Cell cell2 = cell1.nextCell();
       //then
       check(print.cells).deepEquals([cell1, cell2]);
     });
     test("Cell.next Orphan cells cannot build new cells ", () async {
-      Cell cell1 = Cell();
+      Cell cell1 = Cell.empty();
 
       try {
-        cell1.next();
+        cell1.nextCell();
         fail("not here");
       } catch (e) {
         check((e as AssertionError).message).equals("Orphan cells cannot build new cells");

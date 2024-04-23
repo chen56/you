@@ -45,7 +45,7 @@ flutter attach -d macos_config  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
 
   '''));
 
-  print=print.next(title:const Text("new cell-----------------"));
+  print=print.nextCell(title:const Text("new cell-----------------"));
   var serviceInfo = await Service.getInfo();
   print("serviceInfo⚠️: $serviceInfo");
   print("serviceInfo.serverUri: ${serviceInfo.serverUri}");

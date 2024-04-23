@@ -13,7 +13,7 @@ void build(BuildContext context, Print print) {
 
   '''));
 
-  print=print.next(title:const Text("new cell-----------------"));
+  print=print.nextCell(title:const Text("new cell-----------------"));
   print(Row(
     children: [
       CheckboxMenuButton(value: true, onChanged: (bool? value) {}, child: const Text('CheckboxMenuButton')),

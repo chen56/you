@@ -1,3 +1,4 @@
+
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
@@ -245,7 +246,9 @@ base class Print {
 
   /// open data,can crud
   final List<Cell> _cells;
-  List<Cell> get cells=>List.unmodifiable(_cells);
+
+  List<Cell> get cells => List.unmodifiable(_cells);
+
   static Iterable<Cell> _deepGetCell(Print print) sync* {
     if (print is Cell) {
       yield print;
@@ -257,19 +260,35 @@ base class Print {
 
   void call(Object? content) {
     if (content is Print) {
-      _cells.addAll(_deepGetCell(content));
+      Iterable<Cell> all= _deepGetCell(content);
+      for(var i in all){
+        i._parent=this;
+        i._cells.clear();
+      }
+      _cells.addAll(all);
     } else {
       if (_cells.isEmpty) {
-        _cells.add(Cell());
+        _cells.add(Cell.empty());
       }
       _cells.last(content);
     }
   }
 
-  Cell next({Widget? title, Cell? cell}) {
-    cell = cell ?? Cell();
+  Cell nextCell({Widget? title}) {
+    Cell cell = Cell.empty(title: title);
     cell._parent = this;
     _cells.add(cell);
+    return cell;
+  }
+
+  /// 可以传入自定义Cell
+  Cell nextWith(Cell cell) {
+    Iterable<Cell> all= _deepGetCell(cell);
+    for(var i in all){
+      i._parent=this;
+      i._cells.clear();
+    }
+    _cells.addAll(all);
     return cell;
   }
 
@@ -291,9 +310,14 @@ base class Cell extends Print {
 
   Print? _parent;
 
-  Cell({
+  Cell(
+    Function(Cell print) callback, {
     this.title,
-  });
+  }){
+    callback(this);
+  }
+
+  Cell.empty({this.title});
 
   @nonVirtual
   List<Object?> get contents => List.unmodifiable(_contents);
@@ -314,9 +338,17 @@ base class Cell extends Print {
 
   @nonVirtual
   @override
-  Cell next({Widget? title, Cell? cell}) {
+  Cell nextCell({Widget? title}) {
     assert(_parent != null, "Orphan cells cannot build new cells");
-    return _parent!.next(title: title, cell: cell);
+    return _parent!.nextCell(title: title);
+  }
+
+  /// 可以传入自定义Cell
+  @nonVirtual
+  @override
+  Cell nextWith(Cell cell) {
+    assert(_parent != null, "Orphan cells cannot build new cells");
+    return _parent!.nextWith(cell);
   }
 
   @internal

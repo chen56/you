@@ -18,7 +18,7 @@ void build(BuildContext context, Print print) {
 
   '''));
 
-  print = print.next(title: const Text("new cell-----------------"));
+  print = print.nextCell(title: const Text("new cell-----------------"));
   // ignore: constant_identifier_names
   var sampleIcons = {"access_time": Icons.access_time, "access_time_outlined": Icons.access_time_outlined, "access_time_sharp": Icons.access_time_sharp, "access_time_filled": Icons.access_time_filled};
   for (var entry in sampleIcons.entries) {

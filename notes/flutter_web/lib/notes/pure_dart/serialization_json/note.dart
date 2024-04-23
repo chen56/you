@@ -13,7 +13,7 @@ json 序列化。
 
   '''));
 
-  print=print.next(title:const Text("new cell-----------------"));
+  print=print.nextCell(title:const Text("new cell-----------------"));
   var userJson = '''
   {
     "name": "chen56",

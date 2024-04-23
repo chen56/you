@@ -13,7 +13,7 @@ void build(BuildContext context, Print print) {
   - [IconButton]
   '''));
 
-  print=print.next(title:const Text("new cell-----------------"));
+  print=print.nextCell(title:const Text("new cell-----------------"));
   print(const Wrap(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ]));

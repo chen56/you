@@ -109,6 +109,7 @@ extension ValueExtension<T> on T {
 ///
 ///
 
+/// FIXME 临时实现，未处理signal集合的删除case，所以急需实现一种无生命周期的通知机制
 final class _Notifier with ChangeNotifier {
   void fireChanged() {
     notifyListeners();
