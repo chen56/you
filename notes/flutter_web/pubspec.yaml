@@ -38,6 +38,7 @@ dependencies:
   source_map_stack_trace: ^2.1.1
   http: ^1.2.1
   source_maps: ^0.10.12
+  you_flutter: ^0.0.4
 
 dev_dependencies:
 

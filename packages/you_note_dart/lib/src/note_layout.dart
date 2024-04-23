@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:you_flutter/you_state.dart';
+import 'package:you_flutter/state.dart';
 import 'package:you_note_dart/src/content/markdown_content.dart';
 import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';

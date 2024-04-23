@@ -31,10 +31,9 @@ void build(BuildContext context, Print print) {
 | window.devicePixelRatio         | ${window.devicePixelRatio}               | physical pixel= logical pixel *  devicePixelRatio                |
 | Uri.base                        | ${Uri.base}                              | web == `window.location.href`                                    |
 
-
-
-
 '''));
+
+
   print=print.next(title:const Text("new cell-----------------"));
   print(const MD('''
 ## path
@@ -45,6 +44,8 @@ path很有意思
 - macos版正常普通目录名
 
   '''));
+
+
   print=print.next(title:const Text("new cell-----------------"));
   print(path.absolute("a/b.dart"));
 
