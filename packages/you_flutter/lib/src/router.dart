@@ -7,7 +7,9 @@ import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/log.dart';
 
 /*
-ref: https://github.com/react-navigation/react-navigation
+ref:
+- https://flutter.cn/community/tutorials/understanding-navigator-v2
+- https://github.com/react-navigation/react-navigation
 
 
 ## 用例：聊天窗口在
@@ -42,36 +44,10 @@ ref: https://github.com/react-navigation/react-navigation
 //   Uri get uri;
 // }
 
-typedef PageBuilder = Widget Function(BuildContext context, ToUri location);
-typedef LayoutBuilder = LayoutMixin Function(BuildContext context, ToUri location, WidgetBuilder builder);
-
-/// flutter official Page class , this Builder use to Navigator v2: [MaterialApp.router]
-typedef FlutterPageBuilder = Page<dynamic> Function(BuildContext context, ToUri location, Widget child);
-
-// TODO 改成 和page、layout一样的配置模式？没必要一个基础类
-base mixin LayoutMixin on Widget {
-  /// flutter default impl
-  /// TODO flutterPage是否也变为builder形式？
-  Page<dynamic> flutterPage(BuildContext context, ToUri uri) {
-    return MaterialPage(key: ValueKey(uri.toString()), child: this);
-  }
-}
-
-final class _DefaultLayout extends StatelessWidget with LayoutMixin {
-  final WidgetBuilder builder;
-  final ToUri location;
-
-  _DefaultLayout({required this.location, required this.builder});
-
-  @override
-  Widget build(BuildContext context) {
-    return builder(context);
-  }
-}
+typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
 
 class NotFoundError extends ArgumentError {
-  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"})
-      : super.value(invalidValue, name, message);
+  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
 }
 
 extension UriExt on Uri {
@@ -86,11 +62,9 @@ class YouRouter {
     required this.initial,
     required this.navigatorKey,
   }) : assert(root.uriTemplate == "/") {
-    routerDelegate =
-        LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: navigatorKey, router: this));
+    routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: navigatorKey, router: this));
     config = RouterConfig<Object>(
-      routeInformationProvider:
-          PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
+      routeInformationProvider: PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
       routerDelegate: routerDelegate,
       routeInformationParser: _RouteInformationParser(router: this),
     );
@@ -172,12 +146,10 @@ base class To {
   final LayoutRetry layoutRetry;
   final List<To> children;
   final PageBuilder? page;
-  final LayoutBuilder? layout;
 
   To(
     this.part, {
     this.page,
-    this.layout,
     this.layoutRetry = LayoutRetry.none,
     this.children = const [],
   }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
@@ -200,8 +172,6 @@ base class To {
 
   List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
 
-  /// traverse from the this node to the root node
-  List<To> get _meToRoot => [this, ...ancestors];
 
   To get root => isRoot ? this : _parent!.root;
 
@@ -441,19 +411,7 @@ class ToUri implements Uri {
     String? fragment,
     Map<String, String>? routeParameters,
   }) {
-    return ToUri._(
-        to: to,
-        routeParameters: routeParameters ?? this.routeParameters,
-        uri: _uri.replace(
-            scheme: scheme,
-            userInfo: userInfo,
-            host: host,
-            port: port,
-            path: path,
-            pathSegments: pathSegments,
-            query: query,
-            queryParameters: queryParameters,
-            fragment: fragment));
+    return ToUri._(to: to, routeParameters: routeParameters ?? this.routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
   }
 
   @override
@@ -542,28 +500,18 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
   }
 
   @override
+  Future<bool> popRoute() {
+    return super.popRoute();
+  }
+  @override
   Widget build(BuildContext context) {
     Page<dynamic> buildPage(ToUri location) {
       if (location.to.page == null) {
         throw NotFoundError(invalidValue: location._uri);
       }
-
-      pageBuilder(context) => location.to.page!(context, location);
-
-      LayoutMixin? upLayout;
-      // 向上一层层被包在上一层的layout中
-      for (var upRoute in location.to._meToRoot) {
-        if (upRoute.layout == null) {
-          continue;
-        }
-        // upLayout==null: page's first upstream layout
-        // upLayout!=null: up up up layout warp child
-        WidgetBuilder child = upLayout == null ? pageBuilder : (context) => upLayout!;
-        upLayout = upRoute.layout!(context, location, child);
-      }
-      // if null, it's means upstream not found any layout , give a default
-      upLayout ??= _DefaultLayout(location: location, builder: pageBuilder);
-      return upLayout.flutterPage(context, location);
+      var pageContent = location.to.page!(context, location);
+      // 在本router api稳定下来之前，不暴露flutter Page 相关api
+      return MaterialPage(key: ValueKey(location.toString()), child: pageContent);
     }
 
     return _RouterScope(
@@ -573,6 +521,7 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
         return Navigator(
           key: navigatorKey,
           onPopPage: (route, result) {
+            debugPrint("onPopPage> $route");
             if (!route.didPop(result)) {
               return false;
             }
