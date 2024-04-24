@@ -51,6 +51,7 @@ typedef FlutterPageBuilder = Page<dynamic> Function(BuildContext context, ToUri 
 // TODO 改成 和page、layout一样的配置模式？没必要一个基础类
 base mixin LayoutMixin on Widget {
   /// flutter default impl
+  /// TODO flutterPage是否也变为builder形式？
   Page<dynamic> flutterPage(BuildContext context, ToUri uri) {
     return MaterialPage(key: ValueKey(uri.toString()), child: this);
   }
