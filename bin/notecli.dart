@@ -20,7 +20,7 @@ import 'package:yaml_edit/yaml_edit.dart' show YamlEditor;
 import 'package:you_dart/src/core.dart';
 
 const String _libRoot = "lib";
-const String _notesRoot = "lib/notes";
+const String _notesRoot = "lib/pages";
 final Glob _noteGlob = Glob("{**/page.dart,page.dart}");
 
 /// 新思路，cell 树形
@@ -152,7 +152,7 @@ $fields
     return (file: file, notes: noteLibs);
   }
 
-  File get _noteSpaceJsonFile => projectDir.childFile("notes.g.json");
+  File get _noteSpaceJsonFile => projectDir.childFile("lib/pages.g.json");
 
   Future<void> _genNoteGJson(List<PageData> notes) async {
     int maxNoteId = 1;
@@ -180,6 +180,9 @@ $fields
         spaceConf.notes[note.noteLib.noteKey] = note.noteConf!;
       }
     }
+    _log("_genSpaceJson: $_noteSpaceJsonFile " );
+    _log("_genSpaceJson: ${spaceConf.toString()} " );
+
     return await spaceConf.save(_noteSpaceJsonFile);
   }
 
@@ -252,7 +255,7 @@ class NoteLib {
   String get asset => "${path.relative(file.parent.path, from: projectDir.path)}/";
 
   /// note name平整化,可作为变量名：
-  /// lib/notes/1.a/b/page.dart  ---> a_b
+  /// lib/pages/1.a/b/page.dart  ---> a_b
   String get asVariableName {
     String dir = noteKey;
     if (dir == "/") {
@@ -650,8 +653,8 @@ class Pubspec {
     for (int i = 0; i < oldAssets.length; i++) {
       var oldAsset = oldAssets[i];
       // manual config, leave it
-      // lib/notes is our Generated
-      if (!oldAsset.startsWith("lib/notes")) {
+      // lib/pages is our Generated
+      if (!oldAsset.startsWith("lib/pages")) {
         continue;
       }
       // our Generated, no change , no need to repeat add
@@ -660,7 +663,7 @@ class Pubspec {
         continue;
       }
 
-      // prefix lib/notes is previously Generated ,and now not exists
+      // prefix lib/pages is previously Generated ,and now not exists
       _yamlEditor.remove([..._yamlePathAssets, i - removed]);
       removed++;
     }

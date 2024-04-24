@@ -178,7 +178,7 @@ class NoteSystem {
   static Future<NoteSystem> load({
     required NoteRoute root,
   }) async {
-    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('notes.g.json'));
+    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('lib/pages.g.json'));
     root.visit((e) {
       e.conf = spaceConf.notes[e.path];
       return true;

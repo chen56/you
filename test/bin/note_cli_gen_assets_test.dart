@@ -24,19 +24,19 @@ void main() {
 flutter:
   assets:
     - assets/manual1                   # manual config, keep it
-    - lib/notes/                       # previously Generated ,keep it
-    - lib/notes/rm/              # previously Generated ,remove it
+    - lib/pages/                       # previously Generated ,keep it
+    - lib/pages/rm/              # previously Generated ,remove it
     - assets/manual2                   # manual config, keep it
 """);
       Pubspec pubspec = await Pubspec.parseFile(file);
       var old = pubspec.assets;
-      expect(old, ["assets/manual1", "lib/notes/", "lib/notes/rm/", "assets/manual2"]);
+      expect(old, ["assets/manual1", "lib/pages/", "lib/pages/rm/", "assets/manual2"]);
 
       // when
-      pubspec.noteAssetsUpdate(["lib/notes/", "lib/notes/new/"]);
+      pubspec.noteAssetsUpdate(["lib/pages/", "lib/pages/new/"]);
 
       // then
-      expect(pubspec.assets, ['assets/manual1', 'lib/notes/', 'assets/manual2', 'lib/notes/new/']);
+      expect(pubspec.assets, ['assets/manual1', 'lib/pages/', 'assets/manual2', 'lib/pages/new/']);
     });
   });
 }

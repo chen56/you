@@ -61,7 +61,7 @@ class Notes extends BaseNotes with Navigable {
     }
 
     // 如果最后一个页面卡bug了，按存储恢复时，会卡在这个bug页面上
-    // String? last = sharedPreferences.getString("flutter_web.notes.location");
+    // String? last = sharedPreferences.getString("flutter_web.pages.location");
     // if (last == null) {
     //   return switchTo(widgets_container_widgets_bar.path);
     // }
@@ -77,7 +77,7 @@ class Notes extends BaseNotes with Navigable {
     assert(BaseNotes.rootroot.contains(location),
     "location($location) not found!  ${BaseNotes.rootroot.toList()}");
     NoteRoute find = BaseNotes.rootroot.child(location)!; // ?? notFound;
-    sharedPreferences.setString("flutter_web.notes.location", location);
+    sharedPreferences.setString("flutter_web.pages.location", location);
     // sync mode
     // return find.createScreen(location);
     // async mode

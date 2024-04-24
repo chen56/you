@@ -9,7 +9,7 @@ void main() {
 
   setUp(() {
     fs = MemoryFileSystem();
-    fs.directory("/n/lib/notes").createSync(recursive: true);
+    fs.directory("/n/lib/pages").createSync(recursive: true);
     fs.currentDirectory = "/n";
 
     gen = NotesGenerator(
@@ -23,18 +23,18 @@ void main() {
     test('basic app_info', () {
       expect(gen.projectDir.path, "./");
       expect(gen.libDir.path, "./lib");
-      expect(gen.noteRootDir.path, "./lib/notes");
+      expect(gen.noteRootDir.path, "./lib/pages");
     });
   });
 
   group("NoteLib", () {
     test('relative path', () {
       var testcases = [
-        (noteRoute: "lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
-        (noteRoute: "lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
-        (noteRoute: "lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
+        (noteRoute: "lib/pages/note.dart", key: "/", asVariableName: "root", asset: "lib/pages/"),
+        (noteRoute: "lib/pages/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/pages/a/"),
+        (noteRoute: "lib/pages/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/pages/a/b/"),
         // number prefix may be use to sort
-        (noteRoute: "lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
+        (noteRoute: "lib/pages/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/pages/1.a/"),
       ];
       for (var testcase in testcases) {
         NoteLib note = gen.noteOf(testcase.noteRoute);
@@ -51,11 +51,11 @@ void main() {
       );
 
       var testcases = [
-        (noteRoute: "/n/lib/notes/note.dart", key: "/", asVariableName: "root", asset: "lib/notes/"),
-        (noteRoute: "/n/lib/notes/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/notes/a/"),
-        (noteRoute: "/n/lib/notes/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/notes/a/b/"),
+        (noteRoute: "/n/lib/pages/note.dart", key: "/", asVariableName: "root", asset: "lib/pages/"),
+        (noteRoute: "/n/lib/pages/a/note.dart", key: "/a", asVariableName: "a", asset: "lib/pages/a/"),
+        (noteRoute: "/n/lib/pages/a/b/note.dart", key: "/a/b", asVariableName: "a_b", asset: "lib/pages/a/b/"),
         // number prefix may be use to sort
-        (noteRoute: "/n/lib/notes/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/notes/1.a/"),
+        (noteRoute: "/n/lib/pages/1.a/note.dart", key: "/1.a", asVariableName: "a", asset: "lib/pages/1.a/"),
       ];
       for (var testcase in testcases) {
         NoteLib note = gen.noteOf(testcase.noteRoute);
@@ -68,7 +68,7 @@ void main() {
 
   group("gen cell app_info", () {
     test('1', () async {
-      fs.file("/n/lib/notes/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
+      fs.file("/n/lib/pages/note.dart").writeAsStringSync("""import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
 build(BuildContext context, Pen print) {
@@ -80,7 +80,7 @@ build(BuildContext context, Pen print) {
   print("in cell 3");
 }
       """);
-      var noteLib = gen.noteOf("lib/notes/note.dart");
+      var noteLib = gen.noteOf("lib/pages/note.dart");
       // ignore: unused_local_variable
       PageData noteGen = await noteLib.collectPageData();
       // expect(noteGen.noteConf?.displayName, "/");
