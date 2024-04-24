@@ -9,8 +9,10 @@ environment:
   flutter: ">=3.19.0"
 
 dependencies:
+  checks: ^0.3.0
   flutter:
     sdk: flutter
+  meta: ^1.12.0
   you_dart: ^0.0.4
 dev_dependencies:
   flutter_test:
