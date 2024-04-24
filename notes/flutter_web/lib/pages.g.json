@@ -5,27 +5,27 @@
   },
   "currentMaxNoteId": 1,
   "notes": {
-    "/research/research_parameterized_example": {
+    "/notes/research/research_parameterized_example": {
       "displayName": "参数化范例机制",
       "order": 100,
       "codeExpand": false
     },
-    "/": {
+    "/notes": {
       "displayName": "flutter-note笔记",
       "order": 100,
       "codeExpand": false
     },
-    "/x.note_inside/how_note_work": {
+    "/notes/x.note_inside/how_note_work": {
       "displayName": "Notebook机制",
       "order": 100,
       "codeExpand": false
     },
-    "/x.note_inside/1.welcome": {
+    "/notes/x.note_inside/1.welcome": {
       "displayName": "welcome",
       "order": 10,
       "codeExpand": false
     },
-    "/x.note_inside/note_test_self": {
+    "/notes/x.note_inside/note_test_self": {
       "displayName": "test",
       "order": 10,
       "codeExpand": false

@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web/pages/widgets/container_widgets/Card/sample1.dart';
+import 'package:flutter_web/pages/notes/widgets/container_widgets/Card/sample1.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 

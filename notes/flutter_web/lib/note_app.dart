@@ -47,14 +47,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
   final NoteSystem noteSystem;
+
   Notes({
     required this.sharedPreferences,
     required this.noteSystem,
-  }) ;
+  });
 
   @override
   Screen get initial {
-    if(Uri.base.isScheme("http")||Uri.base.isScheme("https")){
+    if (Uri.base.isScheme("http") || Uri.base.isScheme("https")) {
       // flutter use fragment as navigator path
       // http://localhost:8888/you/flutter_web/#/env_info
       return switchTo(Uri.base.fragment.toString());
@@ -69,13 +70,12 @@ class Notes extends BaseNotes with Navigable {
     //   return switchTo(last);
     // }
 
-    return switchTo(pure_dart_execption.path);
+    return switchTo(notes_pure_dart_execption.path);
   }
 
   @override
   Screen switchTo(String location) {
-    assert(BaseNotes.rootroot.contains(location),
-    "location($location) not found!  ${BaseNotes.rootroot.toList()}");
+    assert(BaseNotes.rootroot.contains(location), "location($location) not found!  ${BaseNotes.rootroot.toList()}");
     NoteRoute find = BaseNotes.rootroot.child(location)!; // ?? notFound;
     sharedPreferences.setString("flutter_web.pages.location", location);
     // sync mode
@@ -88,6 +88,7 @@ class Notes extends BaseNotes with Navigable {
 class NoteApp extends StatelessWidget {
   final NoteSystem noteSystem;
   final SharedPreferences sharedPreferences;
+
   // ignore: prefer_const_constructors_in_immutables
   NoteApp({super.key, required this.noteSystem, required this.sharedPreferences});
 
@@ -95,11 +96,9 @@ class NoteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // BaseNotes.rootroot这个设计临时的，可以改善
 
-    Notes notes = Notes(
-        noteSystem: noteSystem,
-        sharedPreferences: sharedPreferences);
+    Notes notes = Notes(noteSystem: noteSystem, sharedPreferences: sharedPreferences);
 
-    notes.root.configTree(extendLevel: 2);
+    notes.notes.configTree(extendLevel: 2);
 
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',
