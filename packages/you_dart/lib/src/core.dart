@@ -102,7 +102,7 @@ class Unique {
 
 class Strings {
   /// content only space、/r/n ...not useful text
-  bool isBlankText(String str) {
+  bool isBlank(String str) {
     // \s: 匹配任何空白字符，包括空格、制表符、换行符等。
     return str.contains(RegExp(r'^\s*$'));
   }

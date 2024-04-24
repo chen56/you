@@ -1,4 +1,3 @@
-
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
@@ -7,72 +6,131 @@ import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/memory_file_system.dart';
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
+import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
+import 'package:you_note_dart/src/utils_core.dart';
+import 'package:you_dart/src/core.dart';
+
+typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
+
 /// SourceCode : dart file
 ///   - List<CodeBlock> manyBlocks; // block cut by Print.xxx
+@internal
 class SourceCode {
   final String content;
-  final CodeBlock? _build;
-  final CompilationUnit compilationUnit;
-  final ResolvedUnitResult resolvedUnitResult;
+  final FunctionDeclaration? buildFunction;
+  final List<({int lineNo, String content, int offset, int end})> lines;
+  final Iterable<(_AddCell, _AddCell?)> addCells;
 
-  SourceCode._(this._build, this.resolvedUnitResult)
-      : content = resolvedUnitResult.content,
-        compilationUnit = resolvedUnitResult.unit;
-
-  // static SourceCode parseFile(String path) {
-  //   return SourceCode.parse(io.File(path).readAsStringSync());
-  // }
-
-  // static SourceCode parse(String content) {
-  //   var parseResult = parseString(content: content, featureSet: FeatureSet.latestLanguageVersion());
-  //   var unit = parseResult.unit;
-  //   _CodeVisitor visitor = _CodeVisitor(content);
-  //   unit.visitChildren(visitor);
-  //
-  //   return SourceCode._(visitor.build, content, unit);
-  // }
+  SourceCode._(this.content, this.buildFunction, this.addCells) : lines = _lineOffsets(content).toList();
 
   static SourceCode parseUnit(ResolvedUnitResult resolvedUnitResult) {
     _CodeVisitor visitor = _CodeVisitor(resolvedUnitResult.content);
     resolvedUnitResult.unit.visitChildren(visitor);
-    return SourceCode._(visitor.build, resolvedUnitResult);
-  }
+    Block? findFirstBlockParent(AstNode node) {
+      var parent = node.parent;
+      if (parent == null) {
+        return null;
+      }
+      if (parent is Block) {
+        return parent;
+      }
+      return findFirstBlockParent(parent);
+    }
 
-  /// note page: inside build() blocks
-  List<CodeBlock> get builderBlocks => _build == null
-      ? []
-      : _build._children.isEmpty
-          ? [_build]
-          : _build.children;
-
-  CodeBlock? findBlock({required int line}) {
-    int offsetOfLine = _lineOffset(content, line);
-
-    for (var code in builderBlocks) {
-      if (code.contains(offsetOfLine)) {
-        return code;
+    List<({MethodInvocation invocation, Block belongTo})> addCells = [];
+    for (var i in visitor.addCells) {
+      Block? found = findFirstBlockParent(i);
+      if (found != null) {
+        addCells.add((invocation: i, belongTo: found));
       }
     }
-    return null;
+    var addCellWithNextList = collections.combineNext(addCells);
+
+    return SourceCode._(resolvedUnitResult.content, visitor.buildFunction, addCellWithNextList);
   }
 
-  /// return [line]'s offset
-  static int _lineOffset(String content, int line) {
+  String findCellCodeByLineNo(int lineNo) {
+    assert(lineNo <= lines.length);
+
+    AstNode? findDirectSon(Block baba, AstNode node) {
+      AstNode? parent = node.parent;
+      if (parent == null) {
+        return null;
+      }
+
+      if (parent == baba) {
+        return node;
+      } else {
+        return findDirectSon(baba, parent);
+      }
+    }
+
+    if (addCells.isEmpty) {
+      if (buildFunction == null) {
+        return "";
+      } else {
+        var body = buildFunction!.functionExpression.body;
+        var result = content.substring(body.beginToken.end, body.endToken.offset);
+        return _trimBlankLine(result);
+
+      }
+    }
+
+    for (var addCellWithNext in addCells) {
+      var (current, next) = addCellWithNext;
+      int beginLine = offsetAtLine(current.invocation.offset);
+      int endLine = offsetAtLine(current.invocation.end);
+      if (!(beginLine <= lineNo && lineNo <= endLine)) {
+        continue;
+      }
+      // 最后一个，就直接返回到父block结束位置
+      if (next == null) {
+        // 调用表达式addCell可能嵌套在某语句内，需要找到是block亲儿子的那条根语句。
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.end, current.belongTo.endToken.offset);
+        return _trimBlankLine(result);
+      }
+      // 查找下一个addCell与自己共同属于父块的那个语句
+      var brother = findDirectSon(current.belongTo, next.invocation);
+      if (brother == null) {
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.end, current.belongTo.endToken.offset);
+        return _trimBlankLine(result);
+      } else {
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.endToken.end, brother.offset);
+        return _trimBlankLine(result);
+      }
+    }
+    return "";
+  }
+  static String _trimBlankLine(String str){
+    return str.split("\n").where((line)=>!strings.isBlank(line)).join("\n");
+  }
+  int offsetAtLine(int offset) {
+    for (var line in lines) {
+      if (line.offset <= offset && offset <= line.end) {
+        return line.lineNo;
+      }
+    }
+    throw AssertionError("The offset:($offset) parameter is out of bounds(${content.length})");
+  }
+
+  String line(int lineNo) {
+    assert(lineNo <= lines.length);
+    return lines[lineNo - 1].content;
+  }
+
+  /// return all lines info,
+  // line start 1,offset start 0
+  static Iterable<({int lineNo, String content, int offset, int end})> _lineOffsets(String content) sync* {
     int offset = 0;
-    for (var MapEntry(key: i, value: lineContent) in content.split("\n").asMap().entries) {
-      if (i + 1 == line) {
-        break;
-      }
-      //  '+1' : '\n'
-      offset += 1 + lineContent.length;
+    for (var MapEntry(key: index, value: content) in content.split("\n").asMap().entries) {
+      yield (lineNo: index + 1, content: content, offset: offset, end: offset + content.length);
+      //  '+1' is '\n'
+      offset += 1 + content.length;
     }
-    return offset;
-  }
-
-  line(int line) {
-    var lines = content.split("\n");
-    return lines[line - 1];
   }
 }
 
@@ -103,31 +161,39 @@ class CodeBlock {
 }
 
 class _CodeVisitor extends GeneralizingAstVisitor {
-  CodeBlock? build;
+  FunctionDeclaration? buildFunction;
   final String content;
+  List<MethodInvocation> addCells = [];
 
   _CodeVisitor(this.content);
 
   @override
   visitFunctionDeclaration(FunctionDeclaration node) {
     if (node.name.lexeme == "build") {
-      var body = node.functionExpression.body as BlockFunctionBody;
-      var block = body.block;
-      build = CodeBlock(compilationUnitContent: content, offset: block.leftBracket.end, end: block.rightBracket.offset);
+      buildFunction = node;
     }
     return super.visitFunctionDeclaration(node);
   }
 
-   @override
-  visitFunctionExpressionInvocation(FunctionExpressionInvocation node) {
-    print("node: $node");
-    return super.visitFunctionExpressionInvocation(node);
-  }
   @override
   visitMethodInvocation(MethodInvocation node) {
-    print("visitMethodInvocation---: $node");
+    if (<String>{"addCell", "addCellWith"}.contains(node.methodName.name)) {
+      addCells.add(node);
+    }
     return super.visitMethodInvocation(node);
   }
+
+  // @override
+  // visitNode(AstNode node) {
+  //   print("ssssss node:${node.runtimeType}: ${node.toSource()}");
+  //   return super.visitNode(node);
+  // }
+}
+
+class FindCellAdd {
+  final InvocationExpression invocation;
+
+  FindCellAdd(this.invocation);
 }
 
 class CodeAnalyzer {
@@ -137,19 +203,16 @@ class CodeAnalyzer {
   final ({String path, String content}) _defaultInitLib = (
     path: "/lib/note.dart",
     content: """
-class Print {
+class Cell{
   void call(Object? content) {}
-  Cell next() => Cell();
-}
-class Cell extends Print {
-  void call(Object? content) {}
-  Cell next() => Cell();
+  Cell addCell() => Cell();
+  Cell addCellWith() => Cell();
 }
   """
   );
 
   CodeAnalyzer() {
-    var libs =  [_defaultInitLib];
+    var libs = [_defaultInitLib];
     for (var lib in libs) {
       _newFile(lib.path, lib.content);
     }

@@ -10,7 +10,6 @@ void main() {
       check(path.dirname("")).equals(".");
       check(path.basename("/")).equals("/");
       check(path.basename("")).equals("");
-
     });
   });
 }
