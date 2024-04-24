@@ -16,7 +16,7 @@ dependencies:
     sdk: flutter
 
   markdown: ^7.0.0
-  flutter_markdown: ^0.6.14
+  flutter_markdown: ^0.7.1
 
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
