@@ -56,8 +56,10 @@ class GenAllCommand extends Command {
 
     _log("gen: $dir");
     NotesGenerator gen = NotesGenerator(packageBaseName: "flutter_web", fmt: DartFormatter(pageWidth: 500), fs: fs, projectDir: dir);
-
-    await gen.gen();
+    var notes = await gen._genAll_note_g_dart();
+    await gen._genSpaceJson(notes);
+    await gen._genNoteGenConf(notes);
+    await gen._gen_notes_g_dart(notes.map((e) => e.noteLib).toList());
   }
 }
 
@@ -77,14 +79,6 @@ class NotesGenerator {
   }) : _fmt = fmt ?? DartFormatter() {
     libDir = projectDir.childDirectory(_libRoot);
     noteRootDir = projectDir.childDirectory(_notesRoot);
-  }
-
-  Future<void> gen() async {
-    // TODO 130 remove
-    var notes = await _genAll_note_g_dart();
-    await _genSpaceJson(notes);
-    await _genNoteGenConf(notes);
-    await _gen_notes_g_dart(notes.map((e) => e.noteLib).toList());
   }
 
   Stream<WatchEvent> watch() async* {
