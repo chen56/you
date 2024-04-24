@@ -82,7 +82,7 @@ build(BuildContext context, Pen print) {
       """);
       var noteLib = gen.noteOf("lib/notes/note.dart");
       // ignore: unused_local_variable
-      NoteParseResult noteGen = await noteLib.gen();
+      PageData noteGen = await noteLib.collectPageData();
       // expect(noteGen.noteConf?.displayName, "/");
     });
   });

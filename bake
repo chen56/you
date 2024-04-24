@@ -122,7 +122,7 @@ _run() {
 ##########################################
 
 
-ls()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
+pkgs()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
 run()         { for pkg in ${!_pkgs[*]} ; do _run "$pkg" "$@" ;   done         }
 install()     { _run_all install;                                              }
 get()         { _run_all install;                                              }
@@ -223,6 +223,25 @@ info() {
   echo "## pkgs"
   ls
   echo
+}
+
+temp(){
+
+  # 指定需要遍历的目录，例如当前目录可以使用 "."
+  directory="notes/flutter_web/lib"
+
+  # 遍历目录中的所有note.dart文件
+  for file in $(find 'notes/flutter_web/lib' -type f -name 'note.json') ; do
+#    echo "xxx $file"
+#      # 检查文件是否存在
+      if [ -f "$file" ]; then
+          # 构建新的文件名，即将note.dart替换为page.dart
+          new_file="${file//note.json/page.json}"
+          # 执行重命名操作
+          git mv "$file" "$new_file"
+          echo "mv $file to $new_file"
+      fi
+  done
 }
 
 bake.go "$@"
