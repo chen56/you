@@ -208,7 +208,7 @@ flutter_web.preview_wasm()          { echo "http://localhost:8080/you/flutter_we
 # github 发布时使用,参考[.github/workflows/*.yaml]
 docker.build() {   _run root docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
                    _run root mkdir -p build;
-                   _run root sh -c "docker run --rm --workdir /usr/share/nginx/html/you chen56/you tar cf - ./ | ( cd build; tar xf -)";    }
+                   _run root sh -c "docker run --rm --workdir /usr/share/nginx/html/ chen56/you tar cf - ./ | ( cd build; tar xf -)";    }
 docker.preview() { _run root echo "note preview http://localhost:8888/you/flutter_web";
                    _run root docker run --rm --name you -p 8888:80 -u root:root chen56/you;                                                 }
 docker.debug()   { _run root docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
