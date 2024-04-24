@@ -1,10 +1,11 @@
 name: you_note_dart
 description: A Flutter note project.
-version: 0.0.4
+version: 0.0.6-dev.1
 homepage: https://github.com/chen56/note
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.4.0-282.2.beta <4.0.0'
+  flutter: ">=3.22.0-0.2.pre"
 
 dependencies:
   flutter:
@@ -43,7 +44,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints:
-  yaml_edit: ^2.2.0
 
   # for NoteDevTool
   checks: ^0.3.0

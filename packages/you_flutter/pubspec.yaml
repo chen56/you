@@ -1,6 +1,6 @@
 name: you_flutter
 description: "Flutter framework project, for state , navigator and other flutter development infrastructure ."
-version: 0.0.5
+version: 0.0.6-dev.1
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
