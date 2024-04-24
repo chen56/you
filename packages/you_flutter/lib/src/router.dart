@@ -136,7 +136,11 @@ enum RouteType {
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
-  final String part;
+  /// pattern is a uri path segment template
+  /// /[user]/[repository]
+  ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
+  ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
+  final String pattern;
   late final String _name;
   late final RouteType _type;
 
@@ -148,12 +152,12 @@ base class To {
   final PageBuilder? page;
 
   To(
-    this.part, {
+    this.pattern, {
     this.page,
     this.layoutRetry = LayoutRetry.none,
     this.children = const [],
-  }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
-    var parsed = _parse(part);
+  }) : assert(pattern == "/" || !pattern.contains("/"), "part:'$pattern' should be '/' or legal directory name") {
+    var parsed = _parse(pattern);
     _name = parsed.$1;
     _type = parsed.$2;
 
@@ -168,7 +172,7 @@ base class To {
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
   //     - [user]     -> uriTemplate: /users/[user]
-  String get uriTemplate => isRoot ? "/" : path_.join(_parent!.uriTemplate, part);
+  String get uriTemplate => isRoot ? "/" : path_.join(_parent!.uriTemplate, pattern);
 
   List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
 
@@ -499,10 +503,6 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
     return stack.isEmpty ? null : stack.last;
   }
 
-  @override
-  Future<bool> popRoute() {
-    return super.popRoute();
-  }
   @override
   Widget build(BuildContext context) {
     Page<dynamic> buildPage(ToUri location) {

@@ -5,10 +5,12 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/memory_file_system.dart';
+// ignore: implementation_imports, there is no other way i don t want to copy it .
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_note_dart/src/utils_core.dart';
+// ignore: implementation_imports, internal import /src of the same project
 import 'package:you_dart/src/core.dart';
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
