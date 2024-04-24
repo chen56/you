@@ -7,15 +7,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Cell print) {
   if (kIsWeb) {
     print("本页面只适合桌面版本， web版无法使用File功能,会报错");
     return;
   }
 
-  print.markdown(r'''
+  print(const MD(r'''
 # file
-  ''');
+  '''));
 
   LocalFileSystem fs = const LocalFileSystem();
   // print(fs.isWatchSupported);

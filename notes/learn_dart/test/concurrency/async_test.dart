@@ -10,5 +10,16 @@ void main() {
       var y = await z;
       print(y);
     });
+    test('async return', () async {
+      Future xx() async{
+        return Future.delayed(Duration(milliseconds: 10),(){
+          print("after 1s");
+        });
+      }
+      await xx();
+    });
+
+
+
   });
 }

@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
+void build(BuildContext context, Cell print) {
 
-  print.markdown(r'''
+  print(const MD(r'''
 # flutter layout
 
 ## flutter布局(layout)的基本逻辑
@@ -16,12 +16,12 @@ build(BuildContext context, Pen print) {
 约束(constraints)指：上级组件对下级组件的限制，用[BoxConstraints]表示。
 
 比如：
-  ''');
+  '''));
 
   print("${BoxConstraints(minWidth: 0, maxWidth: 800, minHeight: 100, maxHeight: 300)}: 儿子，你宽要在0～800之间，高在100～300之间");
   print("${BoxConstraints(minWidth: 800, maxWidth: 800, minHeight: 300, maxHeight: 300)}: 儿子，你宽只能是800，高只能300");
 
-  print.markdown('''
+  print(MD('''
 BoxConstraints的print结果中： w是width,h是height
 
 布局(layout)的约束(constraints)流程如下：
@@ -49,16 +49,16 @@ ${BoxConstraints.tightFor(width: 600, height: 800)}
 - 最后，老子（窗口）给儿子（app最外层widget）具体坐标位置：窗口在坐标x:0,y:0位置画一个宽600，高800的儿子。
 
 看一个经典错误理解：
-  ''');
+  '''));
 
   print(Container(width: 100, height: 100, color: Colors.red));
 
   print(LayoutBuilder(builder: (context, constraints) {
     return Text("LayoutBuilder: $constraints");
   }));
-  print.markdown(r'''
+  print(const MD(r'''
 BoxConstraints的print结果中： w是width,h是height
-  ''');
+  '''));
 
   print(MockupWindow()(
     LayoutBuilder(builder: (context, constraints) {
@@ -66,7 +66,7 @@ BoxConstraints的print结果中： w是width,h是height
     }),
   ));
 
-  print.markdown(r'''
+  print(const MD(r'''
 ```dart
 var c = BoxConstraints(minWidth: 0,maxWidth: 800,minHeight: 100,maxHeight: 300);
 print(c);
@@ -89,16 +89,16 @@ BoxConstraints(w=1103.0, h=566.0)    // w是width,h是height
 
 ## RenderObject的各类属性
 
-  ''');
+  '''));
   BoxConstraints.tightFor(width: 1, height: 2);
 
 }
 
 
-question01ColumnAddListView(BuildContext context, Pen print) {
+question01ColumnAddListView(BuildContext context, Cell print) {
 
 
-  print.markdown(r'''
+  print(const MD(r'''
 ======== Exception caught by rendering library ===================================================== The following assertion was thrown during performResize(): Vertical viewport was given unbounded height.
 
 Viewports expand in the scrolling direction to fill their container. In this case, a vertical viewport was given an unlimited amount of vertical space in which to expand. This situation typically happens when a scrollable widget is nested inside another scrollable widget.
@@ -160,6 +160,6 @@ Column(
 考虑使用CustomScrollView： 当您确实需要在一个可滚动视图中嵌套另一个可滚动视图时，
 可以使用CustomScrollView结合SliverList等组件来构建复合滚动视图。
 
-  ''');
+  '''));
 }
 

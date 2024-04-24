@@ -1,32 +1,36 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/atelier-forest-light.dart';
-import 'package:you_note_dart/src/flutter_highlight.dart';
+import 'package:you_flutter/state.dart';
+import 'package:you_note_dart/src/content/markdown_content.dart';
+import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
-import 'package:you_note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/note.dart';
 import 'package:you_note_dart/src/utils_ui.dart';
 
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class DeferredScreen extends StatelessWidget with Screen {
-  final NoteRoute note;
+  final NoteRoute noteRoute;
   final NoteSystem noteSystem;
 
-  DeferredScreen({super.key, required this.note, required this.noteSystem});
+  DeferredScreen({super.key, required this.noteRoute, required this.noteSystem});
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<NotePage>(
-      future: note.noteRouteLazyInitiator!(note),
+    Cell noteRootCell = Cell.empty();
+    return FutureBuilder<void>(
+      future: noteRoute.lazyNoteBuilder!(context, noteRootCell),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            return Text('note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+            return Text('note load error(${noteRoute.path}): ${snapshot.error} \n${snapshot.stackTrace}');
           }
+
           return LayoutScreen(
+            note: noteRoute,
             noteSystem: noteSystem,
-            notePage: snapshot.data!,
+            rootCell: noteRootCell,
           );
         }
         return const CircularProgressIndicator();
@@ -35,21 +39,21 @@ class DeferredScreen extends StatelessWidget with Screen {
   }
 
   @override
-  String get location => note.path;
+  String get location => noteRoute.path;
 }
 
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
   final NoteRoute note;
-  final NotePage notePage;
-  final NoteRoute root;
+  final Cell rootCell;
+  final NoteRoute rootNote;
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
-    required this.notePage,
-  })  : root = noteSystem.root,
-        note = notePage.noteRoute;
+    required this.rootCell,
+    required this.note,
+  }) : rootNote = noteSystem.root;
 
   @override
   String get location => note.path;
@@ -81,25 +85,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
     });
   }
 
-  ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
-    _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
-          cell,
-          outline: outline,
-        );
-
-    Pen pen = Pen.build(
-      context,
-      notePage: widget.notePage,
-      noteSystem: widget.noteSystem,
-      defaultCodeExpand: false,
-      outline: outline,
-    );
-    return (
-      cells: pen.cells.map((cell) => newCellView(cell)).toList(),
-      outline: outline,
-    );
-  }
-
   @override
   void didUpdateWidget(covariant LayoutScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -112,12 +97,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var noteResult = buildNote(context);
-    var navigatorTree = _NoteTreeView(widget.root);
+    var navigatorTree = _NoteTreeView(widget.rootNote);
 
     var outlineView = _OutlineTreeView(
       mainContentViewController: controllerV,
-      outline: noteResult.outline,
+      outline: outline,
     );
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
@@ -140,18 +124,17 @@ class _LayoutScreenState extends State<LayoutScreen> {
     var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
-      child: ListBody(
-        children: [
-          ...noteResult.cells,
-          //page下留白，避免被os工具栏遮挡
-          const SizedBox(height: 300),
-        ],
-      ),
+      child: Watch((context) {
+        return ListBody(
+          children: [
+            ...widget.rootCell.toList().where((e) => !e.isContentsEmpty()).map((cell) => _NoteCellView(cell, outline: outline)),
+            //page下留白，避免被os工具栏遮挡
+            const SizedBox(height: 300),
+          ],
+        );
+      }),
     );
-    var appBar = AppBar(
-      title: Text(widget.note.displayName),
-      toolbarHeight: 36,
-    );
+    var appBar = AppBar(title: Text(widget.note.displayName), toolbarHeight: 36);
 
     //only for debug mode
     var bottomDevBar = kReleaseMode
@@ -162,16 +145,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
             child: Row(children: [
               const Text("Devtools"),
               const Spacer(),
-              IconButton(
-                onPressed: () {},
-                tooltip: 'Search',
-                icon: const Icon(Icons.search),
-              ),
-              IconButton(
-                onPressed: () {},
-                tooltip: 'Favorite',
-                icon: const Icon(Icons.favorite),
-              ),
+              IconButton(onPressed: () {}, tooltip: 'Search', icon: const Icon(Icons.search)),
+              IconButton(onPressed: () {}, tooltip: 'Favorite', icon: const Icon(Icons.favorite)),
             ]));
 
     ///  Responsive UI:
@@ -192,13 +167,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
           endDrawer: null,
           bottomNavigationBar: bottomDevBar,
           body: SafeArea(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(child: pageBody),
-                SizedBox(width: 250, child: outlineView),
-              ],
-            ),
+            child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              Expanded(child: pageBody),
+              SizedBox(width: 250, child: outlineView),
+            ]),
           ),
         ),
       // full screen size expand all
@@ -208,14 +180,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
           endDrawer: null,
           bottomNavigationBar: bottomDevBar,
           body: SafeArea(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SizedBox(width: 220, child: navigatorTree),
-                Expanded(child: pageBody),
-                SizedBox(width: 250, child: outlineView),
-              ],
-            ),
+            child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              SizedBox(width: 220, child: navigatorTree),
+              Expanded(child: pageBody),
+              SizedBox(width: 250, child: outlineView),
+            ]),
           ),
         ),
     };
@@ -297,7 +266,7 @@ class _OutlineTreeView extends StatelessWidget {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
-        style: ButtonStyle(padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
+        style: ButtonStyle(padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -344,7 +313,7 @@ class _OutlineTreeView extends StatelessWidget {
 /// bar  | -------------------
 /// view | contentView
 class _NoteCellView extends StatelessWidget {
-  final NoteCell cell;
+  final Cell cell;
   final Outline outline;
 
   // ignore: prefer_const_constructors_in_immutables
@@ -357,61 +326,73 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var codeHighlightView = HighlightView(
-      // The original code to be highlighted
-      cell.source.code,
+    // TODO 130 remove
+    // var codeHighlightView = HighlightView(
+    //   // The original code to be highlighted
+    //   // TODO 130 remove
+    //   // cell.source.code,
+    //   "fack code TODO 130 remove",
+    //   // Specify language
+    //   // It is recommended to give it a value for performance
+    //   language: 'dart',
+    //
+    //   // Specify highlight theme
+    //   // All available themes are listed in `themes` folder
+    //   theme: atelierForestLightTheme,
+    //
+    //   // Specify padding
+    //   padding: const EdgeInsets.all(0),
+    //
+    //   // Specify text style
+    // );
 
-      // Specify language
-      // It is recommended to give it a value for performance
-      language: 'dart',
-
-      // Specify highlight theme
-      // All available themes are listed in `themes` folder
-      theme: atelierForestLightTheme,
-
-      // Specify padding
-      padding: const EdgeInsets.all(0),
-
-      // Specify text style
-    );
-
-    var cellView = ListenableBuilder(
-      listenable: cell,
-      builder: (context, child) {
+    var cellView = Watch(
+      (context) {
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {
           // if (size.width < 20 || size.height < 20) {
           //   size = Size(20, 20);
           // }
-          var barText = cell.source.isCodeEmpty
-              ? " "
-              : cell.codeExpand
-                  ? "▽"
-                  : "▷";
+          // TODO 130 remove
+          // var barText = cell.source.isCodeEmpty
+          //     ? " "
+          //     : cell.codeExpand
+          //         ? "▽"
+          //         : "▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
-                cell.codeExpand = !cell.codeExpand;
+                // TODO 130 remove
+                // cell.codeExpand = !cell.codeExpand;
               },
               child: Container(
                 height: size.height,
                 alignment: Alignment.topCenter,
-                child: Tooltip(
-                  message: '${cell.name}',
-                  child: Text(barText),
-                ),
+                // child: Tooltip(
+                //   message: 'TODO code 展开',
+                //   // TODO 130 remove
+                //   child: Text("▷"),
+                // ),
               ),
             ),
           );
 
+          // TODO 130 remove
           // codeVeiw默认很窄，需扩展到占满所有宽度
-          var codeViewFillWidth = LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
-            },
-          );
+          // var codeViewFillWidth = LayoutBuilder(
+          //   builder: (BuildContext context, BoxConstraints constraints) {
+          //     return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+          //   },
+          // );
 
+          var cellContents = cell.contents.map((content) {
+            return switch (content) {
+              MD md => MarkdownContent(content: md.text, outline: outline),
+              Widget widget => widget,
+              _ => Text("$content"),
+            };
+          });
           var cellFillSize = Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -420,8 +401,9 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
-                    ...cell.contents,
+                    // TODO 130 remove
+                    // if (cell.source.isCodeNotEmpty && cell.codeExpand) codeViewFillWidth,
+                    ...cellContents,
                     _cellSplitBlock,
                   ],
                 ),
@@ -437,7 +419,9 @@ class _NoteCellView extends StatelessWidget {
         return _GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.source.isCodeEmpty ? Container() : cellView;
+    // TODO 130 remove
+    // return cell.contents.isEmpty && cell.source.isCodeEmpty ? Container() : cellView;
+    return cell.contents.isEmpty ? Container() : cellView;
   }
 }
 

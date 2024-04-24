@@ -27,7 +27,7 @@ _defaultOnConnectedImmediatelyClose(SignalSubscription conn) {
 extension StoreExtension<T extends Store> on T {
   /// 在自定义Store时需提供[field] [at]，会注册字段
   T signal({String field = "", Type at = Null, String debugLabel = ""}) {
-    this._debugLabel = debugLabel;
+    _debugLabel = debugLabel;
     return this;
   }
 }
@@ -109,13 +109,14 @@ extension ValueExtension<T> on T {
 ///
 ///
 
+/// FIXME 临时实现，未处理signal集合的删除case，所以急需实现一种无生命周期的通知机制
 final class _Notifier with ChangeNotifier {
   void fireChanged() {
     notifyListeners();
   }
   @override
   String toString() {
-    return "${runtimeType}  ";
+    return "$runtimeType  ";
   }
 }
 class _Watcher {

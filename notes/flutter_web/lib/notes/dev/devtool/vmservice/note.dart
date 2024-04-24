@@ -2,8 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 import 'dart:developer';
 
-build(BuildContext context, Pen print) async {
-  print.markdown(r'''
+void build(BuildContext context, Cell print) async {
+  print(const MD(r'''
 # VM Service
 
 ## vmservice URL
@@ -43,9 +43,9 @@ flutter attach -d macos_config  --debug-url ws://127.0.0.1:61768/hEdm-oGJlDk=/ws
 
 > ⚠️ web模式不支持
 
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print=print.addCell(title:const Text("new cell-----------------"));
   var serviceInfo = await Service.getInfo();
   print("serviceInfo⚠️: $serviceInfo");
   print("serviceInfo.serverUri: ${serviceInfo.serverUri}");

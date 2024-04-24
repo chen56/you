@@ -35,7 +35,7 @@ fi
 source "$SCRIPT_DIR/vendor/bake.bash"
 
 
-print.markdown(){
+print() {
   # IFS= 表示将IFS清空，也就是将内部字段分隔符设置为空字符串，这样一来，在执行 read 命令时，
   # 将整行文本视为一个单独的字段（即使行中有多个空格、制表符或换行符）。
   # -r 参数告诉 read 命令不进行反斜杠转义（backslash escaping），即不对行中的反斜杠进行特殊处理。

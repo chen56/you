@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+void build(BuildContext context, Cell print) {
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 # overview
 
 <https://m3.material.io/components/buttons/overview>, an overview of each of
@@ -14,9 +14,9 @@ the Material Design overview types and how they should be used in designs.
 ### 主要按钮
 
 以下几种主要Button都继承自[ButtonStyleButton]
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Wrap(
     children: [
       ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
@@ -27,14 +27,14 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### IconButton
 
 图标按钮。
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Row(
     children: [
       IconButton(onPressed: () {}, tooltip: "IconButton", icon: const Icon(Icons.wifi)),
@@ -43,14 +43,14 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   int id = 0;
 
   print(Row(
@@ -83,8 +83,8 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### 几个特殊的系统Button
 
 继承关系：
@@ -94,9 +94,9 @@ the Material Design overview types and how they should be used in designs.
     - [CloseButton] A Material Design close icon overview
     - [DrawerButton] A Material Design drawer icon overview
     - [EndDrawerButton] A Material Design drawer icon overview
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(const Row(
     children: [
       BackButton(),
@@ -106,17 +106,17 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 
 ### ToggleButtons
 
 一组可多选｜单选的按钮组。
 
 > **📣提示**：此组件实现于Material 2，类似于Material 3的[SegmentedButton]。可用[SegmentedButton]替换之。
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Row(
     children: [
       ToggleButtons(
@@ -131,8 +131,8 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### SegmentedButton
 
 一组可多选｜单选的按钮组。
@@ -140,9 +140,9 @@ the Material Design overview types and how they should be used in designs.
 > **📣提示**：此组件实现于Material 3，类似于Material 2的[ToggleButtons]，可用替换掉[ToggleButtons]。
 
 <https://m3.material.io/components/segmented-buttons>
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Row(
     children: [
       SegmentedButton<String>(
@@ -159,8 +159,8 @@ the Material Design overview types and how they should be used in designs.
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ## 相关组件
 
 ### GestureDetector
@@ -173,7 +173,7 @@ GestureDetector(
   child: Text("文本变按钮"),
 )
 ```
-  ''');
+  '''));
 
   // todo 增加GestureDetector范例
   // print.sampleMate(GestureDetector(
@@ -183,8 +183,8 @@ GestureDetector(
   //   onTap: () {/**todo UI log，显示到控制台便于一般性的事件展示**/},
   // ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### Ink*组件
 
 可被用来模仿Button。
@@ -197,9 +197,9 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
     - InkWell
 
 您在下面三种不同的文本上点点看区别：
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Column(
     children: [
       const Text("1.普通Text"),
@@ -214,14 +214,14 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
     ],
   ));
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ### ButtonBar
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，您把下面范例中父容器Container.width调小些看看：
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   print(Container(
     width: 600,
     color: Colors.lime.shade50,

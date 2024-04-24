@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
-  print.markdown(r'''
+void build(BuildContext context, Cell print) {
+  print(const MD(r'''
 # Remote flutter view
 
 设想：
@@ -59,5 +59,5 @@ WidgetInspectorService.instance.screenshot() //最外层了
 但如果把pipelineOwner.flushPaint()替换掉，让它改调用PaintingContext.debugInstrumentRepaintCompositedChild(PaintingContext)
 可能是可行的。
 
-  ''');
+  '''));
 }

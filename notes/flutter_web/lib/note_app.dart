@@ -54,26 +54,34 @@ class Notes extends BaseNotes with Navigable {
 
   @override
   Screen get initial {
-    String? last = sharedPreferences.getString("flutter_web.notes.location");
-    if (last == null) {
-      return switchTo(widgets_container_widgets_bar.path);
+    if(Uri.base.isScheme("http")||Uri.base.isScheme("https")){
+      // flutter use fragment as navigator path
+      // http://localhost:8888/you/flutter_web/#/env_info
+      return switchTo(Uri.base.fragment.toString());
     }
-    if (BaseNotes.rootroot.contains(last)) {
-      return switchTo(last);
-    }
-    return switchTo(widgets_container_widgets_bar.path);
+
+    // 如果最后一个页面卡bug了，按存储恢复时，会卡在这个bug页面上
+    // String? last = sharedPreferences.getString("flutter_web.notes.location");
+    // if (last == null) {
+    //   return switchTo(widgets_container_widgets_bar.path);
+    // }
+    // if (BaseNotes.rootroot.contains(last)) {
+    //   return switchTo(last);
+    // }
+
+    return switchTo(pure_dart_execption.path);
   }
 
   @override
   Screen switchTo(String location) {
     assert(BaseNotes.rootroot.contains(location),
-        "location not found: $location ${BaseNotes.rootroot.toList()}");
+    "location($location) not found!  ${BaseNotes.rootroot.toList()}");
     NoteRoute find = BaseNotes.rootroot.child(location)!; // ?? notFound;
     sharedPreferences.setString("flutter_web.notes.location", location);
     // sync mode
     // return find.createScreen(location);
     // async mode
-    return DeferredScreen(note: find, noteSystem: noteSystem);
+    return DeferredScreen(noteRoute: find, noteSystem: noteSystem);
   }
 }
 

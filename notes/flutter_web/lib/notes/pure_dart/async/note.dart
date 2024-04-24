@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 // import 'package:you_note_dart/src/params/mate_note.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) async {
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+void build(BuildContext context, Cell print) async {
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 # 异步
 
 很好的异步视频：
@@ -16,9 +16,9 @@ build(BuildContext context, Pen print) async {
 
 ## Future
 
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   {
     Future<String> bomb() async {
       print("s");
@@ -46,8 +46,8 @@ build(BuildContext context, Pen print) async {
     });
   }
 
-  print.$____________________________________________________________________();
-  print.markdown(r'''
+  print.addCell(title:const Text("--------new cell------"));
+  print(const MD(r'''
 ## Isalted
 
 web 模式不支持 Isolated，如果运行在web模式下，此范例将报错
@@ -57,9 +57,9 @@ Error: Unsupported operation: dart:isolate is not supported on dart4web
 2018年前dart1支持web版Isolated，但dart2后被去掉了，详细信息参考：
 [[dart-announce] Dart2 Breaking Change: Removing web support for dart:mirrors and dart:isolate 2018年2月24日 ](https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1)
 <https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1>
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print.addCell(title:const Text("--------new cell------"));
   {
     send123(sendPort) async {
       for (var message in ["1", "2", "3"]) {

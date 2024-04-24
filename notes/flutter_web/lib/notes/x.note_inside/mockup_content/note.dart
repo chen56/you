@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:you_note_dart/note.dart';
-build(BuildContext context, Pen print) {
-  print.markdown('''
+void build(BuildContext context, Cell print) {
+  print(MD('''
 
 
-  ''');
+  '''));
 
   print(MockupWindow()(LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
     return ColoredBox(

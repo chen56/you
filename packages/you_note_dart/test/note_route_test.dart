@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:checks/checks.dart';
 import 'package:path/path.dart' as path;
@@ -11,7 +10,6 @@ void main() {
       check(path.dirname("")).equals(".");
       check(path.basename("/")).equals("/");
       check(path.basename("")).equals("");
-
     });
   });
 }

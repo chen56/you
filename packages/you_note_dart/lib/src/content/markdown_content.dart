@@ -2,9 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
+import 'package:meta/meta.dart';
+import 'package:you_note_dart/src/content/outline.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
-import 'package:you_note_dart/src/note_core.dart';
 
+class MD extends StatelessWidget {
+  final String text;
+
+  const MD(this.text,{Object? debugLabel});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text);
+  }
+}
+
+@internal
 class MarkdownContent extends StatelessWidget {
   final Outline outline;
   final ScrollController controller = ScrollController();
@@ -34,7 +47,6 @@ class MarkdownContent extends StatelessWidget {
       },
     );
   }
-
 }
 
 class _HeaderBuilder extends MarkdownElementBuilder {
@@ -77,7 +89,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
   void visitElementBefore(md.Element element) {
     // tag value : h1 | h2 | h3 ....
     currentNode = OutlineNode(
-      // FIXME 这里处理有问题，GlobalKey 不能这样用：globalKey用来滚动到此位置
+      // FIXME GlobalKey 没有做dispose处理
       key: GlobalKey(),
       heading: int.parse(element.tag.substring(1)),
       title: element.textContent,

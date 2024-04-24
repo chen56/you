@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:you_note_dart/src/content/params.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
-import 'package:you_note_dart/core.dart';
-import 'package:you_note_dart/src/note_core.dart';
+import 'package:you_note_dart/src/note.dart';
 import 'package:you_note_dart/ui.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
@@ -31,12 +30,12 @@ class ExampleContent {
     return "MateSample('${mate.toString()}')";
   }
 
-  String toSampleCode(NoteCell cell, ObjectParam param, Editors editors) {
+  String toSampleCode(Cell cell, ObjectParam param, Editors editors) {
     return codeTemplate.codeBuilder(cell, param, editors);
   }
 }
 
-typedef SampleCodeBuilder = String Function(NoteCell cell, ObjectParam param, Editors editors);
+typedef SampleCodeBuilder = String Function(Cell cell, ObjectParam param, Editors editors);
 
 class SampleTemplate {
   String name;
@@ -100,22 +99,26 @@ class SampleTemplate {
       });
 
   /// The piece of code to be erased from the cell code
-  static const Set<String> _eraseCodeTypes = {"MateSample.new.firstParentStatement", "Pen.runInCurrentCell"};
+  // TODO 130 remove
+  // static const Set<String> _eraseCodeTypes = {"MateSample.new.firstParentStatement", "Pen.runInCurrentCell"};
 
   /// cell代码被转换后作为范例代码
   /// The cell code is transformed as sample code
-  static String _cleanCellCode(NoteCell cell, ObjectParam rootParam) {
-    var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
+  static String _cleanCellCode(Cell cell, ObjectParam rootParam) {
 
-    sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
-
-    int offset = cell.source.codeEntity.offset;
+    // TODO 130 remove
+    // // var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
+    // //
+    // // sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
+    // //
+    // // int offset = cell.source.codeEntity.offset;
     List<String> codes = List.empty(growable: true);
-    for (var s in sources) {
-      codes.add(cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
-
-      offset = s.codeEntity.end;
-    }
+    // TODO 130 remove
+    // for (var s in sources) {
+    //   // codes.add(cell.pen.notePage.content.safeSubstring(offset, s.codeEntity.offset));
+    //
+    //   offset = s.codeEntity.end;
+    // }
     return codes.join(" ");
   }
 }
@@ -124,7 +127,7 @@ class ExampleWidget extends StatelessWidget   {
   final ObjectParam rootParam;
   final String title;
   final ExampleContent content;
-  final NoteCell cell;
+  final Cell cell;
 
   const ExampleWidget({
     super.key,

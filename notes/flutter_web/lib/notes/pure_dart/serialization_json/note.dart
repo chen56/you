@@ -5,15 +5,15 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:you_note_dart/note.dart';
 
-build(BuildContext context, Pen print) {
-  print.markdown(r'''
+void build(BuildContext context, Cell print) {
+  print(const MD(r'''
 # json
 
 json 序列化。
 
-  ''');
+  '''));
 
-  print.$____________________________________________________________________();
+  print=print.addCell(title:const Text("new cell-----------------"));
   var userJson = '''
   {
     "name": "chen56",

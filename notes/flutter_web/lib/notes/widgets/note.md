@@ -3,8 +3,6 @@
 ## flutter_web纲要计划
 
 >  **🚫Tip:**
-> 暂不打算写Cupertino相关笔记，看看flutter/src/cupertino目录中的代码数量，很少啊，是认真在搞吗？我们还是学好material相关吧。
-
 
 下面内容为flutter_web项目的提供一个全局视图，后续会逐步填充各个主题页面。
 
