@@ -62,7 +62,7 @@ class YouRouter {
     // [PlatformRouteInformationProvider.initialRouteInformation]
     required this.initial,
     required this.navigatorKey,
-  }) : assert(root.uriTemplate == "/") {
+  }) : assert(root.templatePath == "/") {
     routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: navigatorKey, router: this));
     config = RouterConfig<Object>(
       routeInformationProvider: PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
@@ -137,11 +137,11 @@ enum RouteType {
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
-  /// pattern is a uri path segment template
+  /// template is a uri path segment template
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
   ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
-  final String pattern;
+  final String template;
   late final String _name;
   late final RouteType _type;
 
@@ -154,13 +154,13 @@ base class To {
   final PageBuilderAsync? builderAsync;
 
   To(
-    this.pattern, {
+    this.template, {
     this.builder,
     this.builderAsync,
     this.layoutRetry = LayoutRetry.none,
     this.children = const [],
-  }) : assert(pattern == "/" || !pattern.contains("/"), "part:'$pattern' should be '/' or legal directory name") {
-    var parsed = _parse(pattern);
+  }) : assert(template == "/" || !template.contains("/"), "part:'$template' should be '/' or legal directory name") {
+    var parsed = _parse(template);
     _name = parsed.$1;
     _type = parsed.$2;
 
@@ -175,7 +175,7 @@ base class To {
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
   //     - [user]     -> uriTemplate: /users/[user]
-  String get uriTemplate => isRoot ? "/" : path_.join(_parent!.uriTemplate, pattern);
+  String get templatePath => isRoot ? "/" : path_.join(_parent!.templatePath, template);
 
   List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
 
@@ -293,18 +293,32 @@ base class To {
 
   @override
   String toString({bool deep = false}) {
-    if (!deep) return "<Route path='$uriTemplate' children.length=${children.length} />";
+    if (!deep) return "<Route path='$templatePath' children.length=${children.length} />";
     return _toStringDeep(level: 0);
   }
 
   String _toStringDeep({int level = 0}) {
     if (children.isEmpty) {
-      return "${"  " * level}<Route path='$uriTemplate' />";
+      return "${"  " * level}<Route path='$templatePath' />";
     }
 
-    return '''${"  " * level}<Route path='$uriTemplate' >
+    return '''${"  " * level}<Route path='$templatePath' >
 ${children.map((e) => e._toStringDeep(level: level + 1)).join("\n")}
 ${"  " * level}</Route>''';
+  }
+
+  To? find(String templatePath) {
+    return _findBySegments(Uri.parse(templatePath).pathSegments.where((e)=>e.isNotEmpty).toList());
+  }
+  To? _findBySegments(List<String> segments) {
+    if(segments.isEmpty) return this;
+    var [first,...rest] = segments;
+    for(var c in children){
+        if(c.template==first){
+          return c._findBySegments(rest);
+        }
+    }
+    return null;
   }
 }
 

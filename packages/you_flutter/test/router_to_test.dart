@@ -27,7 +27,7 @@ void main() {
     // Tos.user_repository_tree_branch_file(user:"chen56",repository:"note",branch:"main",file:"a/b");
     void match(String path, {required ({String location, Map<String, String> routeParameters}) expected}) {
       var match = router.match(path);
-      expect(match.to.uriTemplate, equals(expected.location));
+      expect(match.to.templatePath, equals(expected.location));
       expect(match.routeParameters, equals(expected.routeParameters));
     }
 
@@ -94,7 +94,7 @@ void main() {
 
     void match(String path, {required String matched, required Map<String, String> params}) {
       var match = router.match(path);
-      expect(match.to.uriTemplate, equals(matched));
+      expect(match.to.templatePath, equals(matched));
       expect(match.routeParameters, equals(params));
     }
 
@@ -114,6 +114,25 @@ void main() {
       // notFound
       checkNotFound(uri: "/no_exists_path");
       checkNotFound(uri: "/settings/no_exists_path");
+    });
+  });
+  group("get path", () {
+    var router = YouRouter(
+      initial: Uri.parse("/"),
+      navigatorKey: GlobalKey(),
+      root: To("/", children: [
+        To("settings", children: [
+          To("profile"),
+        ]),
+      ]),
+    );
+
+     test('find', () {
+       check(router.root.find("")!.templatePath).equals("/");
+       check(router.root.find("/")!.templatePath).equals("/");
+       check(router.root.find("settings")!.templatePath).equals("/settings");
+       check(router.root.find("/settings/profile")!.templatePath).equals("/settings/profile");
+       check(router.root.find("/settings/profile/not_exists")).isNull();
     });
   });
 }
