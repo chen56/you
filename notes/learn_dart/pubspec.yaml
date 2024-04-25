@@ -13,6 +13,7 @@ dependencies:
   # Provides internationalization and localization facilities,
   # including message translation, plurals and genders,
   # date/number formatting and parsing, and bidirectional text.
+  file: ^7.0.0
   intl:
   test_api: ^0.7.0
   vm_service: ^14.2.0

@@ -158,9 +158,13 @@ $fields
   }
 }
 
+class PageFile{
+  PageFile();
+}
+
 class PageLib {
   final FileSystem fs;
-  final Directory pagesDir;
+  final Directory pagesRootDir;
   final Directory libDir;
   final String pkgName;
   final File file;
@@ -172,10 +176,10 @@ class PageLib {
     required this.pkgDir,
   })  : fs = file.fileSystem,
         libDir = pkgDir.childDirectory(_LIB_ROOT),
-        pagesDir = pkgDir.childDirectory(_PAGES_ROOT);
+        pagesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
 
   String get noteRoutePath {
-    String result = path.dirname(path.relative(file.path, from: pagesDir.path));
+    String result = path.dirname(path.relative(file.path, from: pagesRootDir.path));
     return result == "." ? "/" : path.join("/", result);
   }
 
