@@ -45,6 +45,7 @@ ref:
 // }
 
 typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
+typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
 class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
@@ -149,11 +150,13 @@ base class To {
 
   final LayoutRetry layoutRetry;
   final List<To> children;
-  final PageBuilder? page;
+  final PageBuilder? builder;
+  final PageBuilderAsync? builderAsync;
 
   To(
     this.pattern, {
-    this.page,
+    this.builder,
+    this.builderAsync,
     this.layoutRetry = LayoutRetry.none,
     this.children = const [],
   }) : assert(pattern == "/" || !pattern.contains("/"), "part:'$pattern' should be '/' or legal directory name") {
@@ -175,7 +178,6 @@ base class To {
   String get uriTemplate => isRoot ? "/" : path_.join(_parent!.uriTemplate, pattern);
 
   List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
-
 
   To get root => isRoot ? this : _parent!.root;
 
@@ -506,10 +508,23 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
   @override
   Widget build(BuildContext context) {
     Page<dynamic> buildPage(ToUri location) {
-      if (location.to.page == null) {
-        throw NotFoundError(invalidValue: location._uri);
-      }
-      var pageContent = location.to.page!(context, location);
+      Widget pageContent = switch (location.to) {
+        To(builder: var builder) when builder != null => builder(context, location),
+        To(builderAsync: var builder) when builder != null => FutureBuilder<Widget>(
+            future: builder(context, location),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasError) {
+                  return Text('page load error($location): ${snapshot.error} \n${snapshot.stackTrace}');
+                }
+                return snapshot.data!;
+              }
+              return const CircularProgressIndicator();
+            },
+          ),
+        _ => throw NotFoundError(invalidValue: location),
+      };
+
       // 在本router api稳定下来之前，不暴露flutter Page 相关api
       return MaterialPage(key: ValueKey(location.toString()), child: pageContent);
     }
