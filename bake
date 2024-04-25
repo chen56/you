@@ -136,13 +136,7 @@ gen()         { _run_all gen;                                                  }
 
 # 根项目，主要是bin/辅助工具等
 root.run()               { _run root "$@";                                          }
-root.install()           { _run root dart pub get;                                  }
-root.upgrade()           { _run root dart pub upgrade ;                             }
-root.test()              { _run root dart test;                                     }
-root.build()             { _run root dart compile exe bin/notecli.dart ;            }
-root.clean()             { _run root rm -rf build;
-                           _run root rm -rf .dart_tool;                             }
-# bash。bash is1 common scri
+
 bake.run()              { _run bake "$@";                                           }
 bake.test()             { _run bake ./test.bash test;                               }
 
@@ -163,11 +157,11 @@ you_cli.run()         { _run you_cli "$@";                                 }
 you_cli.test()        { _run you_cli dart test;                                 }
 
 
-you_note_dart.run()     { _run root_note_dart "$@";                                 }
-you_note_dart.install() { _run root_note_dart flutter pub get;                      }
-you_note_dart.clean()   { _run root_note_dart flutter clean; rm -rf build;          }
-you_note_dart.upgrade() { _run root_note_dart flutter pub upgrade ;                 }
-you_note_dart.test()    { _run root_note_dart flutter test;                         }
+you_note_dart.run()     { _run you_note_dart "$@";                                 }
+you_note_dart.install() { _run you_note_dart flutter pub get;                      }
+you_note_dart.clean()   { _run you_note_dart flutter clean; rm -rf build;          }
+you_note_dart.upgrade() { _run you_note_dart flutter pub upgrade ;                 }
+you_note_dart.test()    { _run you_note_dart flutter test;                         }
 
 learn_dart.run()        { _run learn_dart "$@";                                     }
 learn_dart.install()    { _run learn_dart dart pub get ;                            }
@@ -188,7 +182,7 @@ flutter_web.install()  { _run flutter_web flutter pub get ;                 }
 flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()      { _run root dart run packages/you_cli/bin/you_cli.dart gen all --dir notes/flutter_web/;   }
+flutter_web.gen()      { _run root dart run packages/you_cli/bin/you_cli2.dart gen all --dir notes/flutter_web/;   }
 flutter_web.dev()      { flutter_web.dev_html ; }
 flutter_web.build()    { flutter_web.build_html ;}
 flutter_web.preview()  { flutter_web.build_html;

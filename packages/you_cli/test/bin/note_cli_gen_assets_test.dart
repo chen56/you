@@ -1,8 +1,8 @@
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
+import 'package:you_cli/src/yaml.dart';
 
-import '../../bin/you_cli.dart';
 
 void main() {
   late MemoryFileSystem fs;
@@ -25,7 +25,7 @@ flutter:
   assets:
     - assets/manual1                   # manual config, keep it
 """);
-      Pubspec pubspec = await Pubspec.parseFile(file);
+      PubspecEdit pubspec =   PubspecEdit.parseFileSync(file);
       expect(pubspec.assets, ["assets/manual1"]);
 
       // when
@@ -42,7 +42,7 @@ flutter:
     - assets/manual1                   # manual config, keep it
     - lib/pages/notes/rm/              # to remove
 """);
-      Pubspec pubspec = await Pubspec.parseFile(file);
+      PubspecEdit pubspec =   PubspecEdit.parseFileSync(file);
       var old = pubspec.assets;
       expect(old, ["assets/manual1" ,"lib/pages/notes/rm/"]);
 
