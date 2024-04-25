@@ -1,6 +1,5 @@
 import 'package:checks/checks.dart';
 import 'package:code_builder/code_builder.dart';
-import 'package:dart_style/dart_style.dart';
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
 import 'package:you_cli/src/page.dart';
@@ -12,7 +11,7 @@ void main() {
       fs.directory("/note/lib/pages/notes/page_1").create(recursive: true);
       fs.directory("/note/lib/pages/notes/page_1/page_1_1").create(recursive: true);
       fs.directory("/note/lib/pages/notes/page_1/page_1_2").create(recursive: true);
-      var rootPage = RouteDir.fromSync(fs.directory("/note/lib/pages"));
+      var rootPage = PageDir.fromSync(fs.directory("/note/lib/pages"));
       check(rootPage.toList().map((e) => e.routePath)).deepEquals([
         "/",
         "/notes",
@@ -21,8 +20,8 @@ void main() {
         "/notes/page_1/page_1_2",
       ]);
 
-      print("111111 ${DartFormatter().format('${genRouteExpression(rootPage).accept(DartEmitter())}')}");
-      print("222222 ${genRouteString(rootPage)}");
+      // print("111111 ${DartFormatter().format('${genRouteExpression(rootPage).accept(DartEmitter())}')}");
+      // print("222222 ${genRouteString(rootPage)}");
     });
   });
 }
@@ -36,7 +35,7 @@ void main() {
 //   ]),
 // ]);
 
-Expression genRouteExpression(RouteDir rootPage) {
+Expression genRouteExpression(PageDir rootPage) {
   final $To = refer('To', 'package:you_flutter/router.dart');
   return $To.newInstance([
     literalString(rootPage.dir.basename)
@@ -47,7 +46,7 @@ Expression genRouteExpression(RouteDir rootPage) {
   });
 }
 
-String genRouteString(RouteDir rootPage) {
+String genRouteString(PageDir rootPage) {
   if(rootPage.children.isEmpty){
     return '''To("${rootPage.dir.basename}", builderAsync: ${rootPage.flatName}.build)''';
   }

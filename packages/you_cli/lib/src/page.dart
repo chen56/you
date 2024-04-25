@@ -1,23 +1,23 @@
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 
-class RouteDir {
-  List<RouteDir> children;
+class PageDir {
+  List<PageDir> children;
   Directory dir;
-  late RouteDir _parent = this;
+  late PageDir _parent = this;
 
-  RouteDir({required this.dir, required this.children}) {
+  PageDir({required this.dir, required this.children}) {
     for (var child in children) {
       child._parent = this;
     }
   }
 
-  static RouteDir fromSync(Directory dir) {
+  static PageDir fromSync(Directory dir) {
     var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => fromSync(e));
-    return RouteDir(dir: dir, children: children.toList());
+    return PageDir(dir: dir, children: children.toList());
   }
 
-  RouteDir get root => isRoot ? this : _parent.root;
+  PageDir get root => isRoot ? this : _parent.root;
 
   bool get isRoot => _parent == this;
 
@@ -62,16 +62,16 @@ class RouteDir {
         .replaceAll("@", "_"))
         .join("_");
   }
-  List<RouteDir> toList({
+  List<PageDir> toList({
     bool includeThis = true,
-    bool Function(RouteDir path)? where,
-    Comparator<RouteDir>? sortBy,
+    bool Function(PageDir path)? where,
+    Comparator<PageDir>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<RouteDir> sorted = List.from(children);
+    List<PageDir> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -86,13 +86,13 @@ class RouteDir {
     return dir.toString();
   }
 
-  RouteDir? findLayout() {
+  PageDir? findLayoutSync() {
     if(layout_dart.existsSync()) {
       return this;
     }
     if(isRoot) {
       return null;
     }
-    return _parent.findLayout();
+    return _parent.findLayoutSync();
   }
 }

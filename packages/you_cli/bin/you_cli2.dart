@@ -99,6 +99,7 @@ class Cmd_gen extends Command {
 class Cmd_gen_routes_g_dart extends Command {
   Cmd_gen_routes_g_dart({required this.fs}) : libMode = false {
     argParser.addOption("dir", mandatory: true, help: "要生成的flutter note项目根目录");
+    argParser.addFlag("async", help: "import deferred as模式生成(默认同步加载)，web环境下异步加载资源可减少首屏下载");
   }
 
   Cmd_gen_routes_g_dart.libMode({
@@ -106,6 +107,7 @@ class Cmd_gen_routes_g_dart extends Command {
   }) : libMode = true;
 
   bool libMode;
+  bool async = false;
   late Directory dir;
 
   @override
@@ -119,28 +121,29 @@ class Cmd_gen_routes_g_dart extends Command {
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
-  String _genRouteBuilderExpression(RouteDir node) {
-    String result = '';
-    if (node.page_dart.existsSync()) {
-      result = '(context,print)async=> await ${node.flatName}_.loadLibrary().then((_) => ${node.flatName}_.build(context,print))';
-      RouteDir? layout = node.findLayout();
-      if (layout != null) {
-        result = '${layout.flatName}__.layout($result)';
-      }
+  String _builderExpression(PageDir node) {
+    if (!node.page_dart.existsSync()) {
+      return '';
     }
-    return result;
+    String builder = '${node.flatName}_.build';
+    PageDir? layout = node.findLayoutSync();
+    if (layout != null) {
+      builder = "${layout.flatName}__.layout($builder)";
+    }
+    if (async) {
+      return '(context,print)async=> await ${node.flatName}_.loadLibrary().then((_) => $builder(context,print))';
+    } else {
+      return builder;
+    }
   }
 
-  String _genRouteCode(RouteDir node) {
-    String buildCode = _genRouteBuilderExpression(node);
-    if (buildCode != '') {
-      buildCode = ",builder:_B.${node.flatName}";
-    }
+  String _genRouteTreeCode(PageDir node) {
+    String buildArg = !node.page_dart.existsSync() ? "" : ",${async?"builderAsync":"builder"}:${_builderExpression(node)}";
     if (node.children.isEmpty) {
-      return '''To("${node.dir.basename}" $buildCode)''';
+      return '''To("${node.dir.basename}" $buildArg)''';
     }
-    return '''To("${node.dir.basename}" $buildCode, children:[
-${node.children.map((e) => _genRouteCode(e)).map((e) => "$e,").join("")}
+    return '''To("${node.dir.basename}" $buildArg, children:[
+${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
 ])''';
   }
 
@@ -148,53 +151,41 @@ ${node.children.map((e) => _genRouteCode(e)).map((e) => "$e,").join("")}
   @override
   Future<void> run() async {
     if (!libMode) {
-      String dirOpt = argResults?["dir"]!;
+      String dirOpt = argResults!["dir"];
       dir = fs.directory(path.absolute(dirOpt));
       if (!dir.existsSync()) {
         throw AssertionError("【--dir $dir】 not exists");
       }
+      async = argResults!.flag("async");
     }
 
     CliSystem cli = CliSystem(pkgDir: fs.directory(dir));
-    var routeRoot = RouteDir.fromSync(cli.pagesDir);
-    Iterable<RouteDir> routeList = routeRoot.toList();
+    var rootRoute = PageDir.fromSync(cli.pagesDir);
+    Iterable<PageDir> pageDirs = rootRoute.toList();
 
-    var nameMaxLen = routeList.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
-    var routeFields = routeList.where((e) => e.page_dart.existsSync()).map((page) {
-      var varWithPadding = page.flatName.padRight(nameMaxLen);
+    var nameMaxLen = pageDirs.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
+    var routeFields = pageDirs.where((e) => e.page_dart.existsSync()).map((pageDir) {
+      var varWithPadding = pageDir.flatName.padRight(nameMaxLen);
       // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
-      return """  final $varWithPadding = put("${page.routePath}", (context,print) async => await ${page.flatName}_.loadLibrary().then((value) => ${page.flatName}_.build(context,print)));  """;
+      return """  final $varWithPadding = put("${pageDir.routePath}", (context,print) async => await ${pageDir.flatName}_.loadLibrary().then((value) => ${pageDir.flatName}_.build(context,print)));  """;
     }).join("\n");
 
-    var routeBuilders = routeList.where((e) => e.page_dart.existsSync()).map((routeDir) {
-      var varWithPadding = routeDir.flatName.padRight(nameMaxLen);
-      // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
-      return """  static final $varWithPadding = ${_genRouteBuilderExpression(routeDir)} ;  """;
-    }).join("\n");
-
-    var newRoutes = routeList.where((e) => e.page_dart.existsSync()).map((routeDir) {
+    var newRoutes = pageDirs.where((e) => e.page_dart.existsSync()).map((routeDir) {
       var varWithPadding = routeDir.flatName.padRight(nameMaxLen);
       // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
       return """  final $varWithPadding = root.find("${routeDir.routePath}")! ;  """;
     }).join("\n");
 
     Library pageImports = Library((b) => b
-      ..comments.addAll(["Generated by github.com/chen56/you, please don't edit! ", "ignore_for_file: library_prefixes, non_constant_identifier_names"])
-      ..comments.addAll(["###########################################"])
-      ..comments.addAll(["####################pages##################"])
-      ..comments.addAll(["###########################################"])
       ..directives.addAll(
-        routeList.where((e) => e.page_dart.existsSync()).map((lib) {
+        pageDirs.where((e) => e.page_dart.existsSync()).map((lib) {
           return code.Directive.importDeferredAs(lib.pageImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}_");
         }),
       ));
     Library layoutImports = Library(
       (b) => b
-        ..comments.addAll(["###########################################"])
-        ..comments.addAll(["###################layouts#################"])
-        ..comments.addAll(["###########################################"])
         ..directives.addAll(
-          routeList.where((e) => e.layout_dart.existsSync()).map((lib) {
+          pageDirs.where((e) => e.layout_dart.existsSync()).map((lib) {
             return code.Directive.importDeferredAs(lib.layoutImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}__");
           }),
         ),
@@ -205,16 +196,27 @@ ${node.children.map((e) => _genRouteCode(e)).map((e) => "$e,").join("")}
     String pageImportsCode = fmt.format('${pageImports.accept(dartEmitter)}');
     String layoutImportsCode = fmt.format('${layoutImports.accept(dartEmitter)}');
 
-    // print("ssssssssss${_genRouteCode(routeRoot)}");
-    String routeConfigCode = fmt.format("var root=${_genRouteCode(routeRoot)} ;");
+    String routeConfigCode = fmt.format("var root=${_genRouteTreeCode(rootRoute)} ;");
 
     String allCode = """
+// Generated by github.com/chen56/you, please don't edit!
+// ignore_for_file: prefer_function_declarations_over_variables
+// ignore_for_file: library_prefixes
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:you_note_dart/note.dart';
 import 'package:you_flutter/router.dart';
 
+// ###########################################
+// ## pages
+// ###########################################
 $pageImportsCode
 
+// ###########################################
+// ## layouts
+// ###########################################
 $layoutImportsCode
+
 
 final Routes routes=Routes();
 
@@ -232,11 +234,6 @@ abstract class BaseNotes {
 $routeFields
 
 }
-
-final class _B{
-$routeBuilders
-}
-
 """;
 
     await cli.pkgDir.childFile("lib/routes.g.dart").writeAsString(allCode);
