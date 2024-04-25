@@ -15,31 +15,39 @@ import 'package:path/path.dart' as path;
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 import 'package:watcher/watcher.dart';
 import 'package:yaml_edit/yaml_edit.dart' show YamlEditor;
-
-
+import 'dart:io' as io;
 const String _libRoot = "lib";
 const String _notesRoot = "lib/pages";
 final Glob _noteGlob = Glob("{**/page.dart,page.dart}");
 
+
 /// 新思路，cell 树形
 main(List<String> args) async {
+  _log("Platform.script  : ${io.Platform.script}");
+  _log("Directory.current: ${io.Directory.current}");
   FileSystem fs = const LocalFileSystem();
 
   var runner = CommandRunner("note", "A flutter note tools.");
-  runner.addCommand(GenAllCommand(fs: fs));
+  runner.addCommand(
+    Cmd_gen(fs: fs)
+      ..addSubcommand(Cmd_gen_all(fs: fs))
+      ..addSubcommand(Cmd_gen_notes_g_dart(fs: fs)),
+  );
+
   await runner.run(args);
 }
 
-class GenAllCommand extends Command {
+// ignore: camel_case_types
+class Cmd_gen_all extends Command {
   // The [name] and [description] properties must be defined by every
   // subclass.
-  GenAllCommand({required this.fs}) {
+  Cmd_gen_all({required this.fs}) {
     argParser.addOption("dir", mandatory: true, help: "要生成的flutter note项目根目录");
   }
 
   final FileSystem fs;
   @override
-  final name = "gen";
+  final name = "all";
   @override
   final description = "gen all .";
 
@@ -62,6 +70,36 @@ class GenAllCommand extends Command {
     // await gen._genNoteGJson(pageDataList);
     await gen._gen_notes_g_dart(pageDataList.map((e) => e.noteLib).toList());
   }
+}
+
+// ignore: camel_case_types
+class Cmd_gen extends Command {
+  Cmd_gen({required this.fs});
+
+  final FileSystem fs;
+  @override
+  final name = "gen";
+  @override
+  final description = "gen management .";
+
+  // [run] may also return a Future.
+  @override
+  Future<void> run() async {}
+}
+
+// ignore: camel_case_types
+class Cmd_gen_notes_g_dart extends Command {
+  Cmd_gen_notes_g_dart({required this.fs});
+
+  @override
+  final name = "gen.notes.g.dart";
+  @override
+  final description = "gen.notes.g.dart .";
+  final FileSystem fs;
+
+  // [run] may also return a Future.
+  @override
+  Future<void> run() async {}
 }
 
 class NotesGenerator {
@@ -96,10 +134,10 @@ class NotesGenerator {
       switch (e.type) {
         case ChangeType.ADD || ChangeType.MODIFY:
           await noteLib.collectPageData();
-          pubspec.noteAssetsAdd(noteLib.asset);
+          pubspec.addAsset(noteLib.asset);
         case ChangeType.REMOVE:
           var noteAsset = path.relative(file.parent.path, from: projectDir.path);
-          pubspec.noteAssetsRemove(noteAsset);
+          pubspec.removeAsset(noteAsset);
         default:
           throw Exception("unknown ChangeType ${e.type}");
       }
@@ -178,8 +216,8 @@ $fields
         spaceConf.notes[note.noteLib.noteKey] = note.noteConf!;
       }
     }
-    _log("_genSpaceJson: $_noteSpaceJsonFile " );
-    _log("_genSpaceJson: ${spaceConf.toString()} " );
+    _log("_genSpaceJson: $_noteSpaceJsonFile ");
+    _log("_genSpaceJson: ${spaceConf.toString()} ");
 
     return await spaceConf.save(_noteSpaceJsonFile);
   }
@@ -190,8 +228,11 @@ $fields
   Future<void> _genPubspec(List<PageData> pageDataList) async {
     var pubspec = await _pubspec();
     var toUpdate = pageDataList.map((e) => e.noteLib.asset).sorted((a, b) => a.compareTo(b));
-    pubspec.noteAssetsUpdate(toUpdate);
-    _log("gen pubspec toUpdate: ${pubspec.toString()}");
+    pubspec.updateAssets(toUpdatePath:"lib/pages/notes/",toUpdate: toUpdate);
+    for (var e in toUpdate) {
+      _log("gen pubspec.yaml pubspec.assets toUpdate: $e");
+    }
+    _log("gen pubspec.yaml new file: ${pubspec.toString()}");
     await pubspec.save();
   }
 
@@ -317,7 +358,7 @@ _log(Object? o) {
 }
 
 class Pubspec {
-  static const _yamlePathAssets = ["flutter", "assets"];
+  static const _yamlPathAssets = ["flutter", "assets"];
   late final YamlEditor _yamlEditor;
   late List<String> _assetsCache;
 
@@ -334,22 +375,22 @@ class Pubspec {
   }
 
   List<String> get assets {
-    return (_yamlEditor.parseAt(_yamlePathAssets) as List).map((e) => "$e").toList();
+    return (_yamlEditor.parseAt(_yamlPathAssets) as List).map((e) => "$e").toList();
   }
 
-  void noteAssetsRemove(String noteAsset) {
-    _yamlEditor.remove([..._yamlePathAssets, assets.indexOf(noteAsset)]);
+  void removeAsset(String noteAsset) {
+    _yamlEditor.remove([..._yamlPathAssets, assets.indexOf(noteAsset)]);
   }
 
-  void noteAssetsAdd(String noteAsset) {
+  void addAsset(String noteAsset) {
     if (assets.contains(noteAsset)) return;
-    _yamlEditor.appendToList([..._yamlePathAssets], noteAsset);
+    _yamlEditor.appendToList([..._yamlPathAssets], noteAsset);
   }
 
   /// 1. remove previously Generated
   /// 2. add new
-  void noteAssetsUpdate(List<String> toUpdate) {
-    var toAdd = List.from(toUpdate, growable: true);
+  void updateAssets({required String toUpdatePath,required List<String> toUpdate}) {
+    List<String> toAdd = List.from(toUpdate, growable: true);
 
     var oldAssets = assets;
     var removed = 0;
@@ -357,7 +398,7 @@ class Pubspec {
       var oldAsset = oldAssets[i];
       // manual config, leave it
       // lib/pages is our Generated
-      if (!oldAsset.startsWith("lib/pages")) {
+      if (!oldAsset.startsWith(toUpdatePath)) {
         continue;
       }
       // our Generated, no change , no need to repeat add
@@ -367,11 +408,11 @@ class Pubspec {
       }
 
       // prefix lib/pages is previously Generated ,and now not exists
-      _yamlEditor.remove([..._yamlePathAssets, i - removed]);
+      _yamlEditor.remove([..._yamlPathAssets, i - removed]);
       removed++;
     }
     for (var add in toAdd) {
-      _yamlEditor.appendToList(_yamlePathAssets, add);
+      _yamlEditor.appendToList(_yamlPathAssets, add);
     }
   }
 

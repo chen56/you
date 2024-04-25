@@ -14,12 +14,13 @@ cd "$_ROOT_DIR" || exit 200
 source "packages/you_bake/bake.bash"
 
 declare -A _pkgs=(
+    ["root"]="$_ROOT_DIR"
     ["bake"]="$_ROOT_DIR/packages/you_bake"
     ["you_dart"]="$_ROOT_DIR/packages/you_dart"
     ["you_flutter"]="$_ROOT_DIR/packages/you_flutter"
     ["you_note_dart"]="$_ROOT_DIR/packages/you_note_dart"
+    ["you_cli"]="$_ROOT_DIR/packages/you_cli"
     ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
-    ["root"]="$_ROOT_DIR"
     ["flutter_web"]="$_ROOT_DIR/notes/flutter_web"
     ["qwik"]="$_ROOT_DIR/notes/qwik"
     ["shell"]="$_ROOT_DIR/notes/shell"
@@ -158,6 +159,9 @@ you_flutter.clean()   { _run you_flutter flutter clean; rm -rf build;          }
 you_flutter.upgrade() { _run you_flutter flutter pub upgrade ;                 }
 you_flutter.test()    { _run you_flutter flutter test;                         }
 
+you_cli.run()         { _run you_cli "$@";                                 }
+you_cli.test()        { _run you_cli dart test;                                 }
+
 
 you_note_dart.run()     { _run root_note_dart "$@";                                 }
 you_note_dart.install() { _run root_note_dart flutter pub get;                      }
@@ -184,25 +188,23 @@ flutter_web.install()  { _run flutter_web flutter pub get ;                 }
 flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()      { dart run bin/notecli.dart gen --dir notes/flutter_web/;   }
-flutter_web.dev()      { flutter_web.dev_macos "$@";                                }
-flutter_web.build()    { flutter_web.build_html "$@" ;                             }
+flutter_web.gen()      { _run root dart run packages/you_cli/bin/you_cli.dart gen all --dir notes/flutter_web/;   }
+flutter_web.dev()      { flutter_web.dev_html ; }
+flutter_web.build()    { flutter_web.build_html ;}
 flutter_web.preview()  { flutter_web.build_html;
-                         flutter_web.preview_html_deno;                            }
+                         flutter_web.server_deno;                            }
 
-flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
 flutter_web.dev_html()              { _run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
+flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_macos()           { _run flutter_web flutter build macos --release --tree-shake-icons "$@";  }
 flutter_web.build_wasm()            { _run flutter_web flutter build web   --release --tree-shake-icons --wasm "$@" ;}
-flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter_web.preview_html_run()      { echo "http://localhost:8080/you/flutter_web";
+flutter_web.server_dhttpd()      { echo "http://localhost:8080/you/flutter_web";
                                       _run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
-flutter_web.preview_html_deno()     { echo "http://localhost:8080/you/flutter_web";
+flutter_web.server_deno()     { echo "http://localhost:8080/you/flutter_web";
                                       _run flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
-flutter_web.preview_wasm()          { echo "http://localhost:8080/you/flutter_web";
-                                      _run flutter_web  dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; }
 
 
 # github 发布时使用,参考[.github/workflows/*.yaml]

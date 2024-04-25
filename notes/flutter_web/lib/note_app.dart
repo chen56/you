@@ -70,7 +70,7 @@ class Notes extends BaseNotes with Navigable {
     //   return switchTo(last);
     // }
 
-    return switchTo(notes_pure_dart_execption.path);
+    return switchTo("/notes");
   }
 
   @override

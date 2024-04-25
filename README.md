@@ -12,6 +12,6 @@ you can run it local by yourself:
 ```bash
 git clone git@github.com:chen56/note.git
 ./bake install
-./bake flutter dev      # run as local macos app
-./bake flutter dev_web  # run as local web app
+./bake flutter_web dev      # run as local macos app
+./bake flutter_web dev_html  # run as local web html app
 ```

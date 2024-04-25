@@ -1,7 +1,7 @@
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
 
-import '../../bin/notecli.dart';
+import '../../bin/you_cli.dart';
 
 void main() {
   late NotesGenerator gen;

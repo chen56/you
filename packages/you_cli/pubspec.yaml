@@ -1,6 +1,6 @@
-name: note
-description: you-* project include some flutter common lib ,and my study notes.
-version: 0.0.4
+name: you_cli
+description: you-* project include some flutter common lib ,and study notes.
+version: 0.0.6-dev.1
 homepage: https://github.com/chen56/you
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -34,6 +34,6 @@ dependency_overrides:
   #     Dependency overrides only take effect in the root package of a resolution.
   #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
   you_dart:
-    path: packages/you_dart
+    path: ../you_dart
   you_note_dart:
-    path: packages/you_note_dart
+    path: ../you_note_dart
