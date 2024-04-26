@@ -20,24 +20,26 @@ final class NoteLayoutStyle1 extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        /// Watch是you_flutter的state管理组件， 包裹着内容列表计算的过程，可以在Cell内容变化时刷新
-        child: Watch((context) {
-          // contents是收集到调用print(xx)的所有结果
-          var pageContents = rootCell.toList().expand((cell) sync* {
-            for (var content in cell.contents) {
-              yield Align(
-                alignment: Alignment.centerLeft,
-                child: contents.contentToWidget(content),
-              );
-            }
-          }).toList();
-          return Row(
-            children: [
-              LimitedBox(maxWidth: 500, child: _NoteTreeView(uri)),
-              Flexible(child: ListView(children: pageContents)),
-            ],
-          );
-        }),
+        child: SelectionArea(
+          /// Watch是you_flutter的state管理组件， 被其包裹的状态可以被观测刷新(ref: Cell._contents = [].signal())
+          child: Watch((context) {
+            // contents是收集到调用print(xx)的所有结果
+            var pageContents = rootCell.toList().expand((cell) sync* {
+              for (var content in cell.contents) {
+                yield Align(
+                  alignment: Alignment.centerLeft,
+                  child: contents.contentToWidget(content),
+                );
+              }
+            }).toList();
+            return Row(
+              children: [
+                LimitedBox(maxWidth: 500, child: _NoteTreeView(uri)),
+                Flexible(child: ListView(children: pageContents)),
+              ],
+            );
+          }),
+        ),
       ),
     );
   }
@@ -52,8 +54,8 @@ class _NoteTreeView extends StatelessWidget {
   Widget build(BuildContext context) {
     YouRouter router = YouRouter.of(context);
 
-    var routes = uri.to.root.toList().map((node) {
-      String title = "▼ ${node.part} ${node.isValid ? "" : "x"}";
+    var routeWidgets = uri.to.root.toList().where((e) => !e.isLeaf || (e.isValid)).map((node) {
+      String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
 
       var click = () {
@@ -63,11 +65,14 @@ class _NoteTreeView extends StatelessWidget {
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 10),
         // 一页一个链接
-        child: Align(alignment: Alignment.centerLeft, child: TextButton(onPressed: click, child: Text(title))),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
+        ),
       );
     });
     return ListView(
-      children: [...routes],
+      children: [...routeWidgets],
     );
   }
 }

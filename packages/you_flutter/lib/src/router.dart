@@ -164,6 +164,8 @@ base class To {
 
   bool get isRoot => _parent == this;
 
+  bool get isLeaf => children.isEmpty;
+
   bool get isValid => builder != null || builderAsync != null;
 
   // 对于page目录树：
