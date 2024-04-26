@@ -3,17 +3,14 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const App());
-}
-
-class App extends StatelessWidget {
-  const App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    // flutter程序外部必须有一个Directionality文本方向组件，要不会报错
-    return Directionality(textDirection: TextDirection.ltr, /*修改这里测试*/ child: test1_unbounded_fail());
-  }
+  runApp(
+    Builder(
+      builder: (context) => Directionality(
+        textDirection: TextDirection.ltr,
+        /*修改这里测试*/ child: test2_ListView_is_ok(),
+      ),
+    ),
+  );
 }
 
 Widget constraintsInfo(String title) {
@@ -43,7 +40,7 @@ Widget test1_unbounded_fail() {
   );
 }
 
-// Column直接包ListView汇报错
+// Column直接包ListView报错
 Widget test1_unbounded_fail_recover() {
   return Column(
     children: [

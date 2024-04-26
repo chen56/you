@@ -1,98 +1,171 @@
-# box_layout layout
+# Layout
 
-## 常用
+## 基础布局
 
-垂直&水平排列的组件
-- Flex: Flexbox布局模型,Flex(子类Row、Column)和Flexible（子类Expanded）组合
-  - **Spacer**：
-    - Spacer组件内部包装了一个Expanded，在`Row`或`Column`布局中占位，可以根据主轴方向自动拉伸占据剩余空间，辅助调整布局间距。
-- **LayoutBuilder**：
-  - 它根据父组件提供的布局约束来动态构建其子组件，使子组件能够适应不同尺寸的屏幕或容器。
-- **填充大小相关**：
-  - **FittedBox**：
-    `FittedBox`是一个用于调整其子组件尺寸以适应可用空间的小部件。保证内容按比例适应容器。FittedBox提供了几种不同的`fit`模式，例如`BoxFit.contain`、`BoxFit.cover`、`BoxFit.fill`等，每种模式决定了内容如何适应容器的尺寸。
-    - `FittedBox`主要作用在于调整内部子组件的尺寸，保证内容按比例适应容器，涉及内容的可视化展示。
-  - **Placeholder**：
-    `Placeholder`小部件通常用于占位，在加载数据或资源尚未准备就绪时显示临时内容。它可以作为一个视觉提示，提醒用户该位置的内容随后会被填充。它不具有自适应尺寸的功能，但可以设置默认尺寸，并且常与异步数据加载结合使用，确保即使在真实内容加载前也有良好的用户体验。
-  - **Spacer**：
-    上面已在Flex提到，主要用于分配布局中的空白空间。通常用于`Row`、`Column`或Flex布局中，作为填充空间的占位符。当希望某个方向上的剩余空间被均匀分配时，可以放置一个或多个Spacer。它没有自身的尺寸，而是根据Flex布局规则来决定占用的空间大小。
-- **Stack**：Stack允许子组件堆叠展示，支持定位（alignment）和z轴排序（index），可以用于制作悬浮按钮、叠加图片、标签页指示器等效果。
-  - **Positioned**: 在Stack中结合Positioned使用，可以更精确地控制子组件在Stack中的绝对位置。
-  - **IndexedStack**: 允许在一组子组件中切换显示，类似TabView效果，通过索引值控制显示指定子组件。
+- **AspectRatio**：此组件强制其子组件保持特定的宽高比，确保内容在不同屏幕尺寸下都能保持一致的比例关系。
+- **Container**: 虽然本身不是一个布局组件，但它提供了装饰、边距、填充等功能，结合其子组件可以实现复杂的布局效果。
+- **ConstrainedBox&ConstrainedBox**：
+  - **ConstrainedBox**：为子组件添加额外的大小限制，常用于在自定义布局中施加特定的宽高约束。
+    - 【场景】当你需要对子Widget施加尺寸上的约束，但允许其在一定范围内自适应时，使用ConstrainedBox
+  - **UnconstrainedBox**: 取消对其子组件的所有约束，使得子组件能自由根据其内容大小进行布局。
+- **FittedBox**：`FittedBox`可调整其子组件大小以适应自己的尺寸。保证内容按比例适应容器，常用于图标、文本等内容的自适应缩放。FittedBox提供了几种不同的`fit`模式，例如`BoxFit.contain`、`BoxFit.cover`、`BoxFit.fill`等，每种模式决定了内容如何适应容器的尺寸。
+- **Flex**: Flexbox布局模型,Flex(子类Row、Column)和Flexible（子类Expanded）组合
+  - **Flexible**：它不会强制填满所有剩余空间，而是根据子Widget的实际需求和可用空间来调整大小。这意味着，如果子Widget不需要那么多空间，它不会撑满，可以比分配的最小空间小。
+    - 【场景】当你希望子Widget能够根据内容自适应大小，同时允许它们在必要时伸展以填充额外空间时，使用Flexible。这种情况下，子Widget的大小会更加动态，根据实际内容和可用空间来调整。
+    - 【原理】Flexible的fit属性默认为FlexFit.loose，Flexible的fit属性默认为FlexFit.loose，允许子Widget在满足其最小尺寸的前提下可以不填满所有分配的空间
+  - **Expanded**：Expanded 会强制填充父布局中剩余的所有可用空间。这意味着，如果你在一个Row或Column中有多个Expanded子Widget，它们会按照各自的flex属性分配剩余空间，并且至少会填满分配给它们的空间。
+    - 【场景】当你需要确保某一部分总是占据剩余的所有空间时，使用Expanded。这在实现如分栏布局、列表项中标题和详细信息的自适应布局时很有用。
+    - 【原理】Flexible的子类，Expanded的fit属性固定为FlexFit.tight，指示它必须填满分配的空间
+  - **Spacer**：可以根据主轴方向自动拉伸占据剩余空间，辅助调整布局间距。
+    - 【原理】Spacer组件内部包装了一个Expanded，在`Row`或`Column`布局中占位
+- **FractionallySizedBox**：用于根据父Widget的尺寸按比例设置子Widget的大小。它是基于父Widget尺寸的百分比来决定子Widget的宽度和高度，而不是绝对值。
+  通过widthFactor和heightFactor属性设置宽度和高度的比例因子，这两个值是0到1之间的浮点数，分别代表宽度和高度占父Widget相应维度的比例。这对于创建响应式布局非常有用，特别是在你希望子Widget始终占据父Widget一定比例空间的场景。
+  - 【场景】当你需要按比例设置子Widget尺寸，尤其适合响应式设计，确保子Widget能够随父Widget尺寸变化而按比例缩放。
+- **LayoutBuilder**：它根据父组件提供的布局约束来动态构建其子组件，使子组件能够适应不同尺寸的屏幕或容器。
+  - 【场景】
+    - 响应式设计: 当需要根据屏幕尺寸（如手机横竖屏切换）改变布局时，LayoutBuilder可以轻松实现UI的自适应。
+    - 流式布局: 在列表项或网格布局中，根据父容器的可用空间动态决定每行显示的子项数量。
+    - 分栏布局: 根据屏幕宽度决定是否采用单列或双列（或多列）布局，常见于新闻阅读应用或商品展示页面。
+    - 自定义滚动区域: 确定特定Widget的尺寸，以便创建精确的滚动效果，例如在图片查看器中根据图片大小自动调整滚动视图。
+  - 【原理】
+    - 获取约束信息: 它提供了一个BuildContext和一个BoxConstraints对象。BoxConstraints包含了当前Widget在布局过程中可以使用的空间限制，比如最大宽度、最小高度等，这让开发者能够做出智能的布局决策。
+    - 动态布局: LayoutBuilder可以在运行时根据可用空间动态调整子Widget的尺寸和位置。这意味着开发者可以根据屏幕尺寸、方向变化或其他父Widget的约束来定制布局。
+- **LimitedBox**：LimitedBox 类似于 ConstrainedBox，但它主要用来限制最大尺寸，特别是当子Widget可能无限增长时（例如，因为文字溢出）。它允许你设置最大宽度和高度。主要是用来限制极端情况下的尺寸，防止过度膨胀导致的布局问题，而不是直接控制尺寸，因此它更偏向于防御性布局策略
+  - 【场景】当你担心子Widget尺寸无限制增长，需要设定一个最大尺寸限制时，使用LimitedBox。
+- **IntrinsicHeight & IntrinsicWidth**：这两个组件会使子组件的高度或宽度与其内容匹配，而不是依赖于外部约束。
+  - 【场景】当你需要让一个Widget的高度由其内部子Widget的最高高度决定时使用。换句话说，它会使整个Widget的高度等于其最高子Widget的高度，而宽度则根据正常布局规则确定。
+  - 【原理】它会遍历所有子Widget，找到最高的那个，然后将自己的高度设置为该高度。这样，即使外部容器有其他高度约束，IntrinsicHeight 内部也会优先满足最高子Widget的需求。
+- **SizedBox**：SizedBox 是最简单的尺寸限制类容器，它强制其子Widget具有固定的宽度和高度。提供width和height参数来直接指定大小，适用于静态布局，不考虑子Widget本身的大小请求。
+  -  【场景】当你需要一个确切大小的Widget时，使用SizedBox。
+- **Wrap**：Wrap组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
+
+
+## 布局辅助组件
+
+### 溢出处理
+
+- **OverflowBox**：允许其子组件的尺寸超出自身约束范围，适用于实现部分组件溢出父容器的情况。
+  - 【原理】
+    - 忽略约束: OverflowBox 会忽略传递给它的大小限制（constraints），转而使用子 Widget 自身的大小需求（size request）来确定最终的大小。这意味着，如果子 Widget 想要占用比父 Widget 允许的更大的空间，OverflowBox 将允许这种情况发生，即使这会导致溢出（overflow）或被父级剪裁（clipping）。
+    - 溢出处理: 默认情况下，溢出的内容会被剪裁，但是，通过设置父级或兄弟 Widget 的 clipBehavior，可以改变这一行为，比如允许溢出内容可见。
+  - 【场景】
+    - 临时展示: 当需要短暂展示一些内容，而这些内容的大小可能暂时超过其容器时，例如弹出提示、气泡对话等。
+    - 精确控制: 在某些特定的布局中，你可能需要精确控制某个元素的位置和尺寸，即使这会导致溢出，OverflowBox 可以帮助实现这样的布局效果。
+    - 调试辅助: 在调试布局问题时，使用 OverflowBox 可以帮助你直观地看到子 Widget 实际需要的尺寸，从而调整布局逻辑。
+- **SizedOverflowBox**：SizedOverflowBox 允许你为子 Widget 指定一个特定的尺寸，即使这个尺寸超出了其正常约束范围而溢出
+  - 【原理】
+    - 指定尺寸: 不同于 OverflowBox 直接使用子 Widget 的尺寸需求，SizedOverflowBox 允许你显式地设置一个尺寸（宽度和高度），这个尺寸可以独立于子 Widget 自身的尺寸请求。这意味着，无论子 Widget 实际需要多少空间，你都可以强制它按照你指定的尺寸来渲染。
+    - 溢出处理: 和 OverflowBox 一样，SizedOverflowBox 中超出其指定尺寸的内容默认会被剪裁。这意味着，如果你指定的尺寸小于子 Widget 所需的尺寸，超出部分将不可见。同样，也可以通过外部容器的 clipBehavior 来调整是否剪裁。
+- **剪裁**：用于裁剪其子组件的绘制区域，尽管主要用于图形效果，但在实现特定布局和视觉效果时也会使用
+  - **ClipRect**：for more efficient clips without rounded corners
+  - **ClipOval**：for an elliptical clip
+  - **ClipRRect**：for a clip with rounded corners
+  - **ClipPath**：for an arbitrarily shaped clip
+  - **CustomClipper**：custom clips
+
+### 旋转
+
+- **RotatedBox**
+- **Transform**：提供对子组件的旋转、缩放和平移变换功能，在特定布局场景中也有应用。
+
+### 对齐
+
+- **Baseline**：Baseline组件用于基于文本基线对齐其子组件，尤其在处理多行文本或混合文本与其他元素时，可以确保文本行间的基线一致性。
 - **Align**：Align组件可以用来对齐其子组件，根据alignment参数调整子组件在父组件中的位置。
   - **Center**：Align子类，Center组件将子组件居中显示，无论父容器大小如何变化，子组件始终保持居中。
-- Wrap 组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
-- **Wrap**：Wrap组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
-- **ConstrainedBox**：为子组件添加额外的大小限制，常用于在自定义布局中施加特定的宽高约束。
-  - **UnconstrainedBox**: 取消对其子组件的所有约束，使得子组件能自由根据其内容大小进行布局。
-- **Container**: 虽然本身不是一个布局组件，但它提供了装饰、边距、填充等功能，结合其子组件可以实现复杂的布局效果。
-- **Padding**：Padding组件用于在子组件周围添加内边距，可以在不影响子组件本身尺寸的前提下调整其在父容器中的位置。
-- Table 和 DataTable：Table用于创建表格布局，可以灵活定义行和列的数量及内容。
-  - **DataTable**： Table的增强版，为表格提供了更丰富的样式和交互功能，适合展示具有表头、索引列和操作列的数据。
-- **FractionallySizedBox**：可以根据父容器尺寸按比例调整子组件的尺寸。
-- IntrinsicHeight 和 IntrinsicWidth：这两个组件会使子组件的高度或宽度与其内容匹配，而不是依赖于外部约束。
-- Flow：Flow组件允许子组件在二维平面上进行布局，可以实现一些自定义的复杂布局效果。
-- CustomSingleChildLayout与CustomMultiChildLayout： 实现SingleChildLayoutDelegate/MultiChildLayoutDelegate自定义子组件的布局。
-- LayoutId 和 CustomScrollView：在CustomScrollView中结合使用，可以实现自定义的滚动视图布局，如多个不同滚动速度的列表视图。
-- 滚动类
-  - ScrollView
-    - ListView 可滚动的、单列数据的组件，支持垂直或水平滚动，结合ListView.builder可以高效地展示大量数据。
-      - **ListView.separated**：与ListView类似，但提供了item之间插入分割线的功能。
-    - GridView 网格布局，可以创建类似表格或卡片列表的效果，支持横向或纵向滚动。
-    - **BoxScrollView**
-    - **CustomScrollView**
-  - NestedScrollView：在同一滚动视图中嵌套其他滚动视图，如顶部有一个固定的AppBar和底部有一个可滚动的列表。
+
+### 装饰器
+
+- **简介**：是外观样式或特性增强
+- **BoxDecoration**：指定颜色、背景图片、边框`BoxBorder`
 - **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
-- **PageView**
-  - 用于实现滑动页面效果，常见于幻灯片、轮播图或页面间的滑动切换。
-- **Hero动画**
-  - 虽非布局组件，但与布局转换相关。它在不同路由或页面间实现元素共享及动画过渡，常用于Material Design中的共享元素过渡效果。
-- **OverflowBox**
-  - 允许其子组件的尺寸超出自身约束范围，适用于实现部分组件溢出父容器的情况。
-- **Transform**
-  - 提供对子组件的旋转、缩放和平移变换功能，在特定布局场景中也有应用。
-- **ClipRect** 和 **ClipRRect**
-  - 用于裁剪其子组件的绘制区域，尽管主要用于图形效果，但在实现特定布局和视觉效果时也会使用。
-- **Layer** 类组件
-  - 如 `RepaintBoundary`、`PhysicalModel`、`Opacity` 等，它们在Flutter渲染架构层面对布局和绘制产生影响，可用于优化性能或实现特殊视觉效果。
-- **Sliver系列组件**
+- **Padding**：Padding组件用于在子组件周围添加内边距，可以在不影响子组件本身尺寸的前提下调整其在父容器中的位置。
+- **PhysicalModel**：用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
+  - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
+  - 与 Container 结合 BoxShadow 使用相比，PhysicalModel 更简洁，直接通过 elevation 参数就能实现阴影效果。
+  - 与 ClipRRect 或 ClipOval 结合使用时，PhysicalModel 可以同时提供剪辑和物理外观效果，但直接设置 borderRadius 可以简化代码。
+- **RepaintBoundary**：
+- **SafeArea**：SafeArea组件用于确保其子组件避开屏幕边缘的不安全区域，如手机的刘海屏、摄像头孔位或底部的虚拟按键区域，确保内容布局在可视且不受遮挡的安全区域内。
+- **Offstage**：用于控制其子Widget是否参与布局和绘制过程。
+  - 【原理】
+    - offstage: 一个布尔型属性，默认值为false。当设置为true时，表示子Widget将不会被布局或绘制，即该子Widget会被“隐藏”起来，但仍然保持在Widget树中，保持状态并且继续接收生命周期方法调用（如build）。当设置为false时，子Widget则正常参与布局和绘制，可见于屏幕上。
+    - performLayout: 另一个布尔型属性，默认与offstage属性值相同。这个属性控制是否执行子Widget的布局过程，即使offstage为true时，也可以通过设置performLayout为false来完全跳过布局步骤，这在某些性能敏感场景下可能有帮助。
+  - 【场景】
+    - 动画切换: 当需要在两个Widget之间进行切换显示时，可以使用Offstage配合AnimatedCrossFade或其他动画Widget，避免不必要的重建和初始化，提高性能。
+    - 条件渲染: 类似于 Visibility Widget，但更适用于那些需要保持状态不变或避免重建成本较高的Widget。例如，在分页组件中，可以利用Offstage隐藏当前未显示的页面内容，同时保持它们的状态。
+    - 预加载: 如果你希望预先加载一些复杂的Widget但初始时不显示它们，可以使用Offstage将其“隐藏”，这样当需要显示时能迅速切换，提升用户体验。
+    - 性能优化: 对于昂贵的渲染操作（如大量数据的列表），可以在滚动到可视区域外时使用Offstage隐藏它们，减少不必要的计算和渲染负担。
+
+### 填充留白
+
+- **Divider**
+  - **ListTile.divideTiles** another approach to dividing widgets in a list.
+  - **PopupMenuDivider** which is the equivalent but for popup menus.
+  - **VerticalDivider** which is the vertical analog of this widget.
+- **Placeholder**：常用于占位，在加载数据或资源尚未准备就绪时显示临时内容。它可以作为一个视觉提示，提醒用户该位置的内容随后会被填充。它不具有自适应尺寸的功能，但可以设置默认尺寸，并且常与异步数据加载结合使用，确保即使在真实内容加载前也有良好的用户体验。
+- **Spacer**：已在`Flex`中提到，主要用于分配布局中的空白空间。通常用于`Row`、`Column`或`Flex`布局中，作为填充空间的占位符。当希望某个方向上的剩余空间被均匀分配时，可以放置一个或多个`Spacer`。它没有自身的尺寸，而是根据`Flex`布局规则来决定占用的空间大小。
+
+## 高级特性复杂布局
+
+- **AppBar**
+- **Card**：Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
+- **GridView** 网格布局，可以创建类似表格或卡片列表的效果，支持横向或纵向滚动。
+- **ListView&ListBody**：可在 ListView 的头部或尾部使用 ListBody 来渲染一些固定的内容,这样可以充分利用两者的优势。
+  - **ListBody**: 列表容器，不支持滚动、懒加载等高级特性。
+    - 【原理】通过 Flex 布局算法来决定子 Widget 的位置。它只负责布局,不提供滚动功能。
+    - 【场景】适用于列表项数量较少、不需要滚动功能的场景,比如简单的菜单列表。
+  - **ListView**: 列表容器，还支持滚动、懒加载、头尾部件等丰富的功能。
+    - 【原理】内部使用 Sliver 技术来实现滚动效果。它不仅提供列表布局,还支持滚动、懒加载等功能。
+    - 【场景】适用于需要处理大量列表项、支持滚动和懒加载的场景,比如新闻列表、电商列表等。
+- **Scaffold**：Scaffold是Material Design风格应用的基础布局组件，包含了app bar、body、bottomNavigationBar、drawer等常见布局元素，有助于快速构建标准的Material应用界面。
+- **Table**：表格布局，可以灵活定义行和列的数量及内容。
+  - **DataTable**： Table的增强版，为表格提供了更丰富的样式和交互功能，适合展示具有表头、索引列和操作列的数据。
+- **堆叠&可切换**
+  - **PageView**：用于实现滑动页面效果，常见于幻灯片、轮播图或页面间的滑动切换。
+  - **Stack**：Stack允许子组件堆叠展示，支持定位（alignment）和z轴排序（index），可以用于制作悬浮按钮、叠加图片、标签页指示器等效果。
+    - **Positioned**: 在Stack中结合Positioned使用，可以更精确地控制子组件在Stack中的绝对位置。
+    - **IndexedStack**: 内部包了个Stack，允许在一组子组件中切换显示，类似TabView效果，通过索引值控制显示指定子组件。
+      - 【场景】适合于页面数量相对较少且需要快速切换、同时保持页面状态（比如滚动位置）的场景，它不包含任何动画效果，页面切换是瞬间完成的。
+      - 【原理】IndexedStack是一个能够记住其子Widget状态的Stack。当你改变索引时，它不会销毁和重建未显示的子Widget，而是简单地改变可见性，从而保留之前页面的状态。
+  - **TabView**: 是一个用于实现带标签页导航的Widget，常与TabBar配合使用，提供平滑的页面切换动画。提供了丰富的自定义选项，比如页面切换动画、指示器样式等。
+    - 【原理】当用户在不同的tab之间切换时，TabView默认会销毁离开的页面并重建进入的页面，这意味着页面状态不会被保留（除非额外采取措施，比如使用AutomaticKeepAliveClientMixin）。
+    - 【场景】更适用于有多个固定分类内容展示的场景，比如应用的主页有新闻、视频、我的等几个固定的tab。
+
+## 滚动性
+
+- **ScrollView**:
+  - **BoxScrollView**：其父类是ScrollView，而ListView和GridView是BoxScrollView子类
+  - **CustomScrollView**：LayoutId 和CustomScrollView结合使用，可以实现自定义的滚动视图布局，如多个不同滚动速度的列表视图。
+  - **NestedScrollView**：在同一滚动视图中嵌套其他滚动视图，如顶部有一个固定的AppBar和底部有一个可滚动的列表。
+- **已提及的其他可滚动组件**
+  - GridView
+  - ListView
+
+## **自定义Custom**
+
+- **CustomSingleChildLayout** 实现SingleChildLayoutDelegate自定义子组件的布局。
+- **CustomMultiChildLayout**  实现MultiChildLayoutDelegate自定义子组件的布局。
+- **CustomPainter**：虽然主要用于自定义绘画，但在实现复杂自定义布局时也发挥着重要作用，可以通过`Canvas` API实现精确的像素级布局。
+- **Flow**：可以指定`FlowDelegate`实现自己的绘制逻辑，你可以根据子 Widget 的大小和位置来动态调整子 Widget 的位置和大小。这个 Widget 非常适合用于实现复杂的布局需求,例如文本编辑器、绘图工具等。
+- **RenderObjectWidget** 和 **RenderBox**：虽然它们不是直接的布局组件，但理解和使用RenderObjectWidget和RenderBox对于自定义布局逻辑至关重要。通过继承和自定义这些底层渲染对象，可以创建高度自定义的布局效果。
+- **已提及的其他可自定义的组件**
+  - CustomClipper
+  - CustomScrollView
+
+## **Sliver系列**
+
+- **介绍**
   - 如 `SliverAppBar`、`SliverList`、`SliverGrid` 等，专为`CustomScrollView`设计，用于高效实现滚动视图布局。
-- **SafeArea**：
-  - SafeArea组件用于确保其子组件避开屏幕边缘的不安全区域，如手机的刘海屏、摄像头孔位或底部的虚拟按键区域，确保内容布局在可视且不受遮挡的安全区域内。
-- **AspectRatio**：
-  - 此组件强制其子组件保持特定的宽高比，确保内容在不同屏幕尺寸下都能保持一致的比例关系。
-- **Card**：
-  - Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
-- **Baseline**：
-  - Baseline组件用于基于文本基线对齐其子组件，尤其在处理多行文本或混合文本与其他元素时，可以确保文本行间的基线一致性。
-- **CustomPainter**：
-  - 虽然CustomPainter主要用于自定义绘画，但在实现复杂自定义布局时也发挥着重要作用，可以通过`Canvas` API实现精确的像素级布局。
-- **FittedBox**：
-  - FittedBox组件会调整其子组件的大小，使其适应自己的尺寸，常用于图标、文本等内容的自适应缩放。
-    当然，还有一些其它值得注意的布局相关组件和技术：
+- **ShrinkWrappingViewport**：类似于ListView，但它的大小可以根据其子组件的大小进行收缩，而不是根据父容器的大小进行填充。
 
+## **布局&动画**
 
-- **AnimatedContainer**：
-  - AnimatedContainer组件在更改其尺寸、颜色、边距等属性时，会为其变化提供平滑的动画效果，非常适合构建动态布局变化的场景。
+- **AlignTransition** 和 **PositionedTransition**：
+  - 这两个组件是对`Align`和`Positioned`组件的动画版本，可以为子组件的对齐或定位提供平滑过渡动画。
+- **Hero动画**：虽非布局组件，但与布局转换相关。它在不同路由或页面间实现元素共享及动画过渡，常用于Material Design中的共享元素过渡效果。
+- **AnimatedContainer**：AnimatedContainer组件在更改其尺寸、颜色、边距等属性时，会为其变化提供平滑的动画效果，非常适合构建动态布局变化的场景。
 
-- **Scaffold**：
-  - Scaffold是Material Design风格应用的基础布局组件，包含了app bar、body、bottomNavigationBar、drawer等常见布局元素，有助于快速构建标准的Material应用界面。
-
-- **ShrinkWrappingViewport**：
-  - 类似于ListView，但它的大小可以根据其子组件的大小进行收缩，而不是根据父容器的大小进行填充。
-
-- **RenderObjectWidget** 和 **RenderBox**：
-  - 虽然它们不是直接的布局组件，但理解和使用RenderObjectWidget和RenderBox对于自定义布局逻辑至关重要。通过继承和自定义这些底层渲染对象，可以创建高度自定义的布局效果。
-
-
-- 布局相关动画
-  - **AlignTransition** 和 **PositionedTransition**：
-    - 这两个组件是对`Align`和`Positioned`组件的动画版本，可以为子组件的对齐或定位提供平滑过渡动画。
-
-## 核心知识点
+## 其他参考
 
 - StatefulWidget在最外层会随着屏幕大小变化自动build
 - /// /flutter/examples/api/lib/widgets/framework/build_owner.0.dart
-
-
-
