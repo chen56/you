@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-typedef _StyleWarp = Widget Function(Widget child);
+typedef _WidgetWarp = Widget Function(Widget child);
 
 bool _isDebug = kDebugMode && true;
 
@@ -21,12 +21,11 @@ bool _isDebug = kDebugMode && true;
 BetterUI betterUI = BetterUI._([]);
 
 final class BetterUI {
-  final List<_StyleWarp> _warps;
+  final List<_WidgetWarp> _warps;
 
   BetterUI._(this._warps);
 
-
-  BetterUI _with(_StyleWarp newWarp) {
+  BetterUI _wrap(_WidgetWarp newWarp) {
     return BetterUI._([..._warps, newWarp]);
   }
 
@@ -39,15 +38,15 @@ final class BetterUI {
   }
 
   BetterUI expanded({int flex = 1}) {
-    return _with((child) => Expanded(flex: flex, child: child));
+    return _wrap((child) => Expanded(flex: flex, child: child));
   }
 
   BetterUI padding(EdgeInsetsGeometry padding) {
-    return _with((child) => Padding(padding: padding, child: child));
+    return _wrap((child) => Padding(padding: padding, child: child));
   }
 
   BetterUI paddingAll(double value) {
-    return _with((child) => Padding(padding: EdgeInsets.all(value), child: child));
+    return _wrap((child) => Padding(padding: EdgeInsets.all(value), child: child));
   }
 
   BetterUI paddingOnly({
@@ -56,36 +55,52 @@ final class BetterUI {
     double right = 0.0,
     double bottom = 0.0,
   }) {
-    return _with((child) => Padding(
+    return _wrap((child) => Padding(
           padding: EdgeInsets.only(left: left, top: top, right: right, bottom: bottom),
           child: child,
         ));
   }
 
   BetterUI paddingSymmetric({double vertical = 0.0, double horizontal = 0.0}) {
-    return _with((child) => Padding(
+    return _wrap((child) => Padding(
           padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
           child: child,
         ));
   }
 
   BetterUI center({double? widthFactor, double? heightFactor}) {
-    return _with((child) => Center(
+    return _wrap((child) => Center(
           widthFactor: widthFactor,
           heightFactor: heightFactor,
+          child: child,
+        ));
+  }
+
+  /// [LimitedBox]
+  /// [maxWidth] The maximum width limit to apply in the absence of a
+  /// [BoxConstraints.maxWidth] constraint.
+  /// [maxHeight] The maximum height limit to apply in the absence of a
+  /// [BoxConstraints.maxHeight] constraint.
+  BetterUI limit({double maxWidth = double.infinity, double maxHeight = double.infinity}) {
+    return _wrap((child) => LimitedBox(
+          maxWidth: maxWidth,
+          maxHeight: maxHeight,
           child: child,
         ));
   }
 }
 
 extension StyleExtension on Widget {
-  Widget $padding(EdgeInsetsGeometry padding) => Padding(padding: padding, child: this);
+  /// Warp a [Padding]
+  Widget padding$(EdgeInsetsGeometry padding) => Padding(padding: padding, child: this);
 
-  Widget $paddingAll(double value) {
+  /// Warp a [Padding]
+  Widget paddingAll$(double value) {
     return Padding(padding: EdgeInsets.all(value), child: this);
   }
 
-  Widget $paddingOnly({
+  /// Warp a [Padding]
+  Widget paddingOnly$({
     double left = 0.0,
     double top = 0.0,
     double right = 0.0,
@@ -97,28 +112,71 @@ extension StyleExtension on Widget {
     );
   }
 
-  Widget $paddingSymmetric({double vertical = 0.0, double horizontal = 0.0}) {
+  /// Warp a [Padding]
+  Widget paddingSymmetric$({double vertical = 0.0, double horizontal = 0.0}) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
       child: this,
     );
   }
 
-  Widget $expanded({int flex = 1}) => Expanded(flex: flex, child: this);
-  Widget $flexible({int flex = 1, FlexFit fit = FlexFit.loose}) => Flexible(flex: flex, fit: fit, child: this);
+  /// Warp a [Expanded]
+  Widget expanded$({int flex = 1}) => Expanded(flex: flex, child: this);
 
-  Widget $center({double? widthFactor, double? heightFactor}) {
+  /// Warp a [Flexible]
+  /// [flex]Default to 1
+  /// [fit]Default to FlexFit.loose
+  Widget flexible$({int flex = 1, FlexFit fit = FlexFit.loose}) {
+    return Flexible(flex: flex, fit: fit, child: this);
+  }
+
+  Widget clipRect$({Clip clipBehavior = Clip.hardEdge}) {
+    return ClipRect(clipBehavior: clipBehavior, child: this);
+  }
+
+  /// Warp a [Center]
+  Widget center$({double? widthFactor, double? heightFactor}) {
     return Center(widthFactor: widthFactor, heightFactor: heightFactor, child: this);
   }
 
-  Widget $align({
-    Alignment alignment = Alignment.center,
-    double? widthFactor,
-    double? heightFactor,
-  }) =>
-      Align(alignment: alignment, widthFactor: widthFactor, heightFactor: heightFactor, child: this);
+  /// Warp a [LimitedBox]
+  /// [maxWidth] The maximum width limit to apply in the absence of a
+  /// [BoxConstraints.maxWidth] constraint.
+  /// [maxHeight] The maximum height limit to apply in the absence of a
+  /// [BoxConstraints.maxHeight] constraint.
+  Widget limitedBox$({double maxWidth = double.infinity, double maxHeight = double.infinity}) {
+    return LimitedBox(
+      maxWidth: maxWidth,
+      maxHeight: maxHeight,
+      child: this,
+    );
+  }
 
-  Widget $borderAll({
+  /// Warp a [FittedBox]
+  /// [fit]How to inscribe the child into the space allocated during layout.
+  /// [alignment]Defaults to [Alignment.center].
+  /// [clipBehavior]Defaults to [Clip.none].
+  Widget fittedBox$({BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none}) {
+    return FittedBox(
+      fit: fit,
+      alignment: alignment,
+      clipBehavior: clipBehavior,
+      child: this,
+    );
+  }
+
+  /// Warp a [Align]
+  Widget align$({Alignment alignment = Alignment.center, double? widthFactor, double? heightFactor}) {
+    return Align(alignment: alignment, widthFactor: widthFactor, heightFactor: heightFactor, child: this);
+  }
+
+  /// Warp a [Align]
+  Widget singleChildScrollView$({Axis scrollDirection = Axis.vertical}) {
+    return SingleChildScrollView(scrollDirection: scrollDirection, child: this);
+  }
+
+  /// Warp a [DecoratedBox], and add border
+  Widget borderAll$({
     Color color = const Color(0xFF000000),
     double width = 1.0,
     BorderStyle style = BorderStyle.solid,
@@ -135,7 +193,20 @@ extension StyleExtension on Widget {
     );
   }
 
-  Widget $debugBorder({double paddingAll = 6}) {
+  /// if(kDebugMode) Warp a [LayoutBuilder], and print constraints info
+  Widget debugLayoutBuilder$() {
+    if (!_isDebug) {
+      return this;
+    }
+
+    return LayoutBuilder(builder: (context, constraints) {
+      debugPrint("\$debugLayoutBuilder: this:$runtimeType, constraints:$constraints, this:$this");
+      return this;
+    });
+  }
+
+  /// if(kDebugMode)  add border and padding, show what is looks like.
+  Widget debugBorder$({double paddingAll = 6}) {
     if (!_isDebug) {
       return this;
     }
@@ -152,10 +223,9 @@ extension StyleExtension on Widget {
         ),
       ),
       child: this,
-    ).$paddingAll(paddingAll);
+    ).paddingAll$(paddingAll);
   }
 }
-
 
 /// 小屏手机优先的响应式设计
 ///
@@ -250,14 +320,11 @@ final class DesignTokens {
 
   DesignTokens(this.context) : colors = Theme.of(context).colorScheme;
 
-  ButtonStyle get elevatedButtonPrimary =>
-      ElevatedButton.styleFrom(backgroundColor: colors.primaryContainer, foregroundColor: colors.primary);
+  ButtonStyle get elevatedButtonPrimary => ElevatedButton.styleFrom(backgroundColor: colors.primaryContainer, foregroundColor: colors.primary);
 
-  ButtonStyle get elevatedButtonSecondary =>
-      ElevatedButton.styleFrom(backgroundColor: colors.secondaryContainer, foregroundColor: colors.secondary);
+  ButtonStyle get elevatedButtonSecondary => ElevatedButton.styleFrom(backgroundColor: colors.secondaryContainer, foregroundColor: colors.secondary);
 
-  ButtonStyle get elevatedButtonTertiary =>
-      ElevatedButton.styleFrom(backgroundColor: colors.tertiaryContainer, foregroundColor: colors.tertiary);
+  ButtonStyle get elevatedButtonTertiary => ElevatedButton.styleFrom(backgroundColor: colors.tertiaryContainer, foregroundColor: colors.tertiary);
 
   TextStyle get textPrimary => TextStyle(color: colors.onPrimary);
 
@@ -265,6 +332,7 @@ final class DesignTokens {
 
   TextStyle get textTertiary => TextStyle(color: colors.onTertiary);
 }
+
 enum ColorSeed {
   m3baseline('M3 Baseline', Color(0xff6750a4)),
   indigo('Indigo', Colors.indigo),
@@ -278,6 +346,7 @@ enum ColorSeed {
   pink('Pink', Colors.pink);
 
   const ColorSeed(this.label, this.color);
+
   final String label;
   final Color color;
 }

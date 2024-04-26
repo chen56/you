@@ -2,7 +2,7 @@
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:you_note_dart/src/content/source_code.dart';
+import 'package:you_note_dart/src/contents/source_code.dart';
 
 void main() {
   late CodeAnalyzer analyzer;

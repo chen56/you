@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/src/content/markdown_content.dart';
-import 'package:you_note_dart/src/content/outline.dart';
+import 'package:you_note_dart/src/contents/markdown_content.dart';
+import 'package:you_note_dart/src/contents/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note.dart';
 import 'package:you_note_dart/src/utils_ui.dart';

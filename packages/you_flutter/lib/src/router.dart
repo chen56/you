@@ -171,6 +171,8 @@ base class To {
 
   bool get isRoot => _parent == null;
 
+  bool get isValid => builder != null || builderAsync != null;
+
   // 对于page目录树：
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
@@ -180,6 +182,8 @@ base class To {
   List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
 
   To get root => isRoot ? this : _parent!.root;
+
+  int get level => isRoot ? 0 : _parent!.level + 1;
 
   To? _matchChild({required String segment}) {
     To? matched = children.where((e) => e._type == RouteType.static).where((e) => segment == e._name).firstOrNull;
@@ -308,17 +312,23 @@ ${"  " * level}</Route>''';
   }
 
   To? find(String templatePath) {
-    return _findBySegments(Uri.parse(templatePath).pathSegments.where((e)=>e.isNotEmpty).toList());
+    return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
+
   To? _findBySegments(List<String> segments) {
-    if(segments.isEmpty) return this;
-    var [first,...rest] = segments;
-    for(var c in children){
-        if(c.template==first){
-          return c._findBySegments(rest);
-        }
+    if (segments.isEmpty) return this;
+    var [first, ...rest] = segments;
+    for (var c in children) {
+      if (c.template == first) {
+        return c._findBySegments(rest);
+      }
     }
     return null;
+  }
+
+  Uri toUri() {
+    // FIXME 临时实现，需要增加模版参数
+    return Uri.parse(templatePath);
   }
 }
 

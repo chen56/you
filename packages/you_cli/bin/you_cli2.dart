@@ -29,8 +29,7 @@ main(List<String> args) async {
   var runner = CommandRunner("note", "you page tools.");
   runner.addCommand(
     Cmd_gen(fs: fs)
-      ..addSubcommand(Cmd_gen_all(fs: fs))
-      ..addSubcommand(Cmd_gen_routes_g_dart(fs: fs)),
+      ..addSubcommand(Cmd_gen_all(fs: fs))..addSubcommand(Cmd_gen_routes_g_dart(fs: fs)),
   );
 
   await runner.run(args);
@@ -53,7 +52,8 @@ class CliSystem {
 
   Stream<PageLib> pages() {
     var noteRootDir = pkgDir.childDirectory(_NOTES_ROOT);
-    return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) => PageLib(
+    return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) =>
+        PageLib(
           file: e as File,
           pkgName: pubspec.name,
           pkgDir: pkgDir,
@@ -138,7 +138,7 @@ class Cmd_gen_routes_g_dart extends Command {
   }
 
   String _genRouteTreeCode(PageDir node) {
-    String buildArg = !node.page_dart.existsSync() ? "" : ",${async?"builderAsync":"builder"}:${_builderExpression(node)}";
+    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:${_builderExpression(node)}";
     if (node.children.isEmpty) {
       return '''To("${node.dir.basename}" $buildArg)''';
     }
@@ -176,17 +176,27 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
       return """  final $varWithPadding = root.find("${routeDir.routePath}")! ;  """;
     }).join("\n");
 
-    Library pageImports = Library((b) => b
+    Library pageImports = Library((b) =>
+    b
       ..directives.addAll(
         pageDirs.where((e) => e.page_dart.existsSync()).map((lib) {
-          return code.Directive.importDeferredAs(lib.pageImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}_");
+          if (async) {
+            return code.Directive.importDeferredAs(lib.pageImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}_");
+          } else {
+            return code.Directive.import(lib.pageImportUri(cli.pubspec.name, cli.libDir), as: "${lib.flatName}_");
+          }
         }),
       ));
     Library layoutImports = Library(
-      (b) => b
+          (b) =>
+      b
         ..directives.addAll(
           pageDirs.where((e) => e.layout_dart.existsSync()).map((lib) {
-            return code.Directive.importDeferredAs(lib.layoutImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}__");
+            if (async) {
+              return code.Directive.importDeferredAs(lib.layoutImportUri(cli.pubspec.name, cli.libDir), "${lib.flatName}__");
+            } else {
+              return code.Directive.import(lib.layoutImportUri(cli.pubspec.name, cli.libDir), as: "${lib.flatName}__");
+            }
           }),
         ),
     );
@@ -217,6 +227,7 @@ $pageImportsCode
 // ###########################################
 $layoutImportsCode
 
+$routeConfigCode
 
 final Routes routes=Routes();
 
@@ -224,16 +235,6 @@ class Routes{
 $newRoutes
 }
 
-$routeConfigCode
-
-abstract class BaseNotes {
-  static final NoteRoute rootroot = NoteRoute.root();
-  static NoteRoute put(String path, LazyNoteBuilder lazyNoteBuilder) {
-    return rootroot.put(path, lazyNoteBuilder);
-  }
-$routeFields
-
-}
 """;
 
     await cli.pkgDir.childFile("lib/routes.g.dart").writeAsString(allCode);
@@ -254,7 +255,8 @@ class PageLib {
     required this.file,
     required this.pkgName,
     required this.pkgDir,
-  })  : fs = file.fileSystem,
+  })
+      : fs = file.fileSystem,
         libDir = pkgDir.childDirectory(_LIB_ROOT),
         pagesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
 
@@ -277,8 +279,9 @@ class PageLib {
     }
     var names = dir.split(path.separator).where((e) => e.isNotEmpty);
     return names
-        .map((e) => e
-            // ignore: unnecessary_string_escapes
+        .map((e) =>
+        e
+        // ignore: unnecessary_string_escapes
             .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
             .replaceAll(".", "_")
             .replaceAll("-", "_")

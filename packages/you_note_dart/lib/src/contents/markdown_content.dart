@@ -3,13 +3,13 @@ import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:meta/meta.dart';
-import 'package:you_note_dart/src/content/outline.dart';
+import 'package:you_note_dart/src/contents/outline.dart';
 import 'package:you_note_dart/src/flutter_highlight.dart';
 
 class MD extends StatelessWidget {
   final String text;
 
-  const MD(this.text,{Object? debugLabel});
+  const MD(this.text, {Object? debugLabel});
 
   @override
   Widget build(BuildContext context) {
@@ -19,20 +19,22 @@ class MD extends StatelessWidget {
 
 @internal
 class MarkdownContent extends StatelessWidget {
-  final Outline outline;
-  final ScrollController controller = ScrollController();
+  final Outline _outline;
+  final ScrollController controller;
   final String content;
 
-  MarkdownContent({super.key, required this.outline, required this.content});
+  MarkdownContent({super.key, ScrollController? controller, Outline? outline, required this.content})
+      : controller = controller ?? ScrollController(),
+        _outline = outline ?? Outline();
 
   @override
   Widget build(BuildContext context) {
-    var headerBuilder = _HeaderBuilder(outline);
+    var headerBuilder = _HeaderBuilder(_outline);
     return Markdown(
       data: content,
       selectable: true,
       // 得研究下controller层层嵌套要怎么用
-      controller: controller,
+      // controller: controller,
       shrinkWrap: true,
 
       builders: <String, MarkdownElementBuilder>{
@@ -135,7 +137,7 @@ class _PreBuilder extends MarkdownElementBuilder {
     //目前看，markdown中的code/prd 不滚动是不是更好些，一般内容不会很长
     return Container(
       padding: const EdgeInsets.only(right: 100),
-      child: noScroll,
+      child: Text(text.textContent),
     );
   }
 }
