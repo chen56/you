@@ -68,7 +68,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     var navigatorTree = _NoteTreeView(widget.rootNote);
 
     var outlineView = _OutlineTreeView(
-      mainContentViewController: controllerV,
+      pageController: controllerV,
       outline: outline,
     );
 
@@ -208,9 +208,9 @@ class _OutlineTreeView extends StatelessWidget {
   final Outline outline;
 
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
-  final ScrollController mainContentViewController;
+  final ScrollController pageController;
 
-  const _OutlineTreeView({required this.outline, required this.mainContentViewController});
+  const _OutlineTreeView({required this.outline, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +232,7 @@ class _OutlineTreeView extends StatelessWidget {
         ),
         onPressed: () {
           // 防止异常
-          if (mainContentViewController.hasClients) {
+          if (pageController.hasClients) {
             Scrollable.ensureVisible(node.key.currentContext!);
           }
         },

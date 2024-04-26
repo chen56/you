@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
@@ -6,6 +5,7 @@ import 'package:you_note_dart/src/contents/contents.dart';
 import 'package:you_note_dart/src/note.dart';
 
 /// 一个极简的笔记布局范例
+/// 左边routes树，右边页面内容
 final class NoteLayoutStyle1 extends StatelessWidget {
   final NoteBuilder builder;
   final ToUri uri;
