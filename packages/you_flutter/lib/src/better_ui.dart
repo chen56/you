@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 typedef _WidgetWarp = Widget Function(Widget child);
 
@@ -152,6 +153,49 @@ extension StyleExtension on Widget {
     );
   }
 
+  Widget constrainedBox$({required BoxConstraints constraints}) {
+    return ConstrainedBox(
+      constraints: constraints,
+      child: this,
+    );
+  }
+  Widget intrinsicWidth$({double? stepWidth, double? stepHeight}) {
+    return IntrinsicWidth(
+      stepWidth: stepWidth,
+      stepHeight: stepHeight,
+      child: this,
+    );
+  }
+
+  /// [width]If non-null, requires the child to have exactly this width.
+  /// [height]If non-null, requires the child to have exactly this height.
+  Widget sizedBox$({double? width, double? height}) {
+    return SizedBox(
+      width: width,
+      height: height,
+      child: this,
+    );
+  }
+
+  Widget sizedBoxExpand$() {
+    return SizedBox.expand(
+      child: this,
+    );
+  }
+
+  Widget sizedBoxShrink$() {
+    return SizedBox.shrink(
+      child: this,
+    );
+  }
+
+  Widget sizedBoxSquare$({double? dimension}) {
+    return SizedBox.square(
+      dimension: dimension,
+      child: this,
+    );
+  }
+
   /// Warp a [FittedBox]
   /// [fit]How to inscribe the child into the space allocated during layout.
   /// [alignment]Defaults to [Alignment.center].
@@ -161,6 +205,23 @@ extension StyleExtension on Widget {
       fit: fit,
       alignment: alignment,
       clipBehavior: clipBehavior,
+      child: this,
+    );
+  }
+
+
+  /// [minWidth]The minimum width constraint to give the child. Set this to null (the
+  /// default) to use the constraint from the parent instead.
+  /// [maxWidth]The maximum width constraint to give the child. Set this to null (the
+  /// default) to use the constraint from the parent instead.
+  /// [minHeight]The minimum height constraint to give the child. Set this to null (the
+  /// default) to use the constraint from the parent instead.
+  /// [maxHeight]The maximum height constraint to give the child. Set this to null (the
+  /// default) to use the constraint from the parent instead.
+  Widget overflowBox$({ AlignmentGeometry alignment = Alignment.center,double? minWidth,double? maxWidth, double? minHeight,double? maxHeight,OverflowBoxFit fit = OverflowBoxFit.max}) {
+    return OverflowBox(
+      fit: fit,
+      alignment: alignment,
       child: this,
     );
   }

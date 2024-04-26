@@ -4,7 +4,7 @@
 
 - **AspectRatio**:此组件强制其子组件保持特定的宽高比，确保内容在不同屏幕尺寸下都能保持一致的比例关系。
 - **Container**: 虽然本身不是一个布局组件，但它提供了装饰、边距、填充等功能，结合其子组件可以实现复杂的布局效果。
-- **ConstrainedBox&ConstrainedBox**:
+- **ConstrainedBox**:
   - **ConstrainedBox**:为子组件添加额外的大小限制，常用于在自定义布局中施加特定的宽高约束。
     - 【场景】当你需要对子Widget施加尺寸上的约束，但允许其在一定范围内自适应时，使用ConstrainedBox
   - **UnconstrainedBox**: 取消对其子组件的所有约束，使得子组件能自由根据其内容大小进行布局。

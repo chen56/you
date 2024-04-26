@@ -34,7 +34,8 @@ final class NoteLayoutStyle1 extends StatelessWidget {
             }).toList();
             return Row(
               children: [
-                LimitedBox(maxWidth: 500, child: _NoteTreeView(uri)),
+                // IntrinsicWidth(child: _NoteTreeView(uri)),
+                _NoteTreeView(uri),
                 Flexible(child: ListView(children: pageContents)),
               ],
             );
@@ -54,25 +55,23 @@ class _NoteTreeView extends StatelessWidget {
   Widget build(BuildContext context) {
     YouRouter router = YouRouter.of(context);
 
-    var routeWidgets = uri.to.root.toList().where((e) => !e.isLeaf || (e.isValid)).map((node) {
+    var validRoutes = uri.to.root.toList().where((e) => !e.isLeaf || (e.isValid));
+    var routeWidgets = validRoutes.map((node) {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
 
       var click = () {
         router.to(node.toUri());
       };
-      return Padding(
-        // 缩进模仿树形
-        padding: EdgeInsets.only(left: 10),
-        // 一页一个链接
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
-        ),
+      return Align(
+        alignment: Alignment.centerLeft,
+        child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
       );
     });
-    return ListView(
-      children: [...routeWidgets],
-    );
+    return ConstrainedBox(
+        constraints: BoxConstraints.tightFor(width: 350),
+        child: ListView(
+          children: [...routeWidgets],
+        ));
   }
 }
