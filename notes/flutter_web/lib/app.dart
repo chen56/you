@@ -1,4 +1,3 @@
-// part of "pages.g.dart";
 import 'package:flutter/material.dart';
 import 'package:flutter_web/routes.g.dart';
 import 'package:you_flutter/better_ui.dart';
