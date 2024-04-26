@@ -164,9 +164,8 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
     Iterable<PageDir> pageDirs = rootRoute.toList();
 
     var nameMaxLen = pageDirs.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
-    var routeFields = pageDirs.where((e) => e.page_dart.existsSync()).map((pageDir) {
+    pageDirs.where((e) => e.page_dart.existsSync()).map((pageDir) {
       var varWithPadding = pageDir.flatName.padRight(nameMaxLen);
-      // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
       return """  final $varWithPadding = put("${pageDir.routePath}", (context,print) async => await ${pageDir.flatName}_.loadLibrary().then((value) => ${pageDir.flatName}_.build(context,print)));  """;
     }).join("\n");
 
@@ -214,7 +213,6 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:you_note_dart/note.dart';
 import 'package:you_flutter/router.dart';
 
 // ###########################################

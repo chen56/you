@@ -1,10 +1,10 @@
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
+import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
@@ -169,20 +169,15 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final NoteRoute root;
+  final To root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required NoteRoute root,
+    required To root,
   }) async {
-    SpaceConf spaceConf = SpaceConf.decodeJson(await rootBundle.loadString('lib/pages.g.json'));
-    root.visit((e) {
-      e.conf = spaceConf.notes[e.path];
-      return true;
-    });
     return NoteSystem(
       root: root,
     );
