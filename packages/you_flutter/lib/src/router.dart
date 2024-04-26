@@ -12,6 +12,7 @@ ref:
 - https://github.com/react-navigation/react-navigation
 
 
+## 关于自动化push选择的问题，是否能在大多数情况下减少由客户程序员选择pop,push,replace等等？
 ## 用例：聊天窗口在
   手机屏：push新page
   桌面屏：层级展示（没有push新page）
@@ -39,11 +40,6 @@ ref:
     我
  */
 
-/// static type route instance
-// mixin PageMixin on Widget {
-//   Uri get uri;
-// }
-
 typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
 typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
@@ -56,10 +52,15 @@ extension UriExt on Uri {
   Uri join(String child) => replace(pathSegments: ["", ...pathSegments, child]);
 }
 
+/// TODO P1 应针对2种flutter 支持的route模式进行适配：
+///   path base: https://example.com/product/1
+///   fragment base: https://example.com/base-harf/#/product/1
+///
 class YouRouter {
   YouRouter({
     required this.root,
-    // [PlatformRouteInformationProvider.initialRouteInformation]
+
+    /// [PlatformRouteInformationProvider.initialRouteInformation]
     required this.initial,
     required this.navigatorKey,
   }) : assert(root.templatePath == "/") {
@@ -84,12 +85,11 @@ class YouRouter {
   }
 
   ToUri matchUri(Uri uri) {
-    return root.match(uri);
-    // assert(uri.path.startsWith("/"));
-    // if (uri.path == "/") return ToUri._(uri: uri, to: root);
-    //
-    // Map<String, String> params = {};
-    // return root._match(uri: uri, segments: uri.pathSegments, params: params);
+    assert(uri.path.startsWith("/"));
+    if (uri.path == "/") return ToUri._(uri: uri, to: root, routeParameters: const {});
+
+    Map<String, String> params = {};
+    return root._match(uri: uri, segments: uri.pathSegments, params: params);
   }
 
   ToUri match(String uri) => matchUri(Uri.parse(uri));
@@ -105,32 +105,27 @@ class YouRouter {
   }
 }
 
-/// Layout失败重试策略
-enum LayoutRetry {
-  /// 失败后, 直接放弃layout，push 此页面自己的内容
-  none,
-
-  /// 失败后, 再尝试用上层layout处理
-  up;
-}
-
-/// 路由类型
-enum RouteType {
-  /// 正常路径片段: /settings
+enum RoutePartType {
+  /// static path : /settings
   static,
 
-  /// 动态参数  /user/[id]  :
+  /// dynamic param single part:  /user/[id]  :
   ///     /user/1 -> id==1
   dynamic,
 
-  /// 动态参数  /file/[...path]  :
+  /// dynamic param rest parts:  /file/[...path]  :
   ///     /file/a.txt  ->  path==a.txt
   ///     /file/a/b/c.txt -> path==a/b/c.txt
-  dynamicAll;
+  dynamicRest;
 
-  static RouteType parse(String name) {
+  static RoutePartType? parse(String name) {
     /// FIXME what??
-    return RouteType.static;
+    for(var i in values){
+      if(i.name==name){
+        return i;
+      }
+    }
+    return null;
   }
 }
 
@@ -141,26 +136,24 @@ base class To {
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
   ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
-  final String template;
+  final String part;
   late final String _name;
-  late final RouteType _type;
+  late final RoutePartType _type;
 
   // TODO 可以使之非空，改为root指向自己
-  To? _parent;
+  late To _parent = this;
 
-  final LayoutRetry layoutRetry;
   final List<To> children;
   final PageBuilder? builder;
   final PageBuilderAsync? builderAsync;
 
   To(
-    this.template, {
+    this.part, {
     this.builder,
     this.builderAsync,
-    this.layoutRetry = LayoutRetry.none,
     this.children = const [],
-  }) : assert(template == "/" || !template.contains("/"), "part:'$template' should be '/' or legal directory name") {
-    var parsed = _parse(template);
+  }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
+    var parsed = _parse(part);
     _name = parsed.$1;
     _type = parsed.$2;
 
@@ -169,7 +162,7 @@ base class To {
     }
   }
 
-  bool get isRoot => _parent == null;
+  bool get isRoot => _parent == this;
 
   bool get isValid => builder != null || builderAsync != null;
 
@@ -177,29 +170,13 @@ base class To {
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
   //     - [user]     -> uriTemplate: /users/[user]
-  String get templatePath => isRoot ? "/" : path_.join(_parent!.templatePath, template);
+  String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
-  List<To> get ancestors => isRoot ? [] : [_parent!, ..._parent!.ancestors];
+  List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
 
-  To get root => isRoot ? this : _parent!.root;
+  To get root => isRoot ? this : _parent.root;
 
-  int get level => isRoot ? 0 : _parent!.level + 1;
-
-  To? _matchChild({required String segment}) {
-    To? matched = children.where((e) => e._type == RouteType.static).where((e) => segment == e._name).firstOrNull;
-    if (matched != null) return matched;
-    matched = children.where((e) => e._type == RouteType.dynamic || e._type == RouteType.dynamicAll).firstOrNull;
-    if (matched != null) return matched;
-    return null;
-  }
-
-  ToUri match(Uri uri) {
-    assert(uri.path.startsWith("/"));
-    if (uri.path == "/") return ToUri._(uri: uri, to: root);
-
-    Map<String, String> params = {};
-    return _match(uri: uri, segments: uri.pathSegments, params: params);
-  }
+  int get level => isRoot ? 0 : _parent.level + 1;
 
   ToUri _match({
     required Uri uri,
@@ -212,16 +189,25 @@ base class To {
 
     // 忽略后缀'/'
     // next=="" 代表最后以 '/' 结尾,当前 segments==[""]
-    if (_type == RouteType.static && next == "") {
+    if (_type == RoutePartType.static && next == "") {
       return ToUri._(uri: uri, to: this, routeParameters: params);
     }
 
-    To? matchedNext = _matchChild(segment: next);
+    To? matchChild({required String segment}) {
+      To? matched = children.where((e) => e._type == RoutePartType.static).where((e) => segment == e._name).firstOrNull;
+      if (matched != null) return matched;
+      matched = children.where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest).firstOrNull;
+      if (matched != null) return matched;
+      return null;
+    }
+
+    To? matchedNext = matchChild(segment: next);
     if (matchedNext == null) {
+      /// FIXME NotFoundError如何处理
       throw NotFoundError(invalidValue: uri);
     }
 
-    if (matchedNext._type == RouteType.dynamicAll) {
+    if (matchedNext._type == RoutePartType.dynamicRest) {
       // /tree/[...file]
       //     /tree/x/y   --> {"file":"x/y"}
       //     /tree/x/y/  --> {"file":"x/y/"}
@@ -232,7 +218,7 @@ base class To {
       if (next == "") {
         return ToUri._(uri: uri, to: this, routeParameters: params);
       }
-      if (matchedNext._type == RouteType.dynamic) {
+      if (matchedNext._type == RoutePartType.dynamic) {
         params[matchedNext._name] = next;
       }
     }
@@ -274,11 +260,11 @@ base class To {
   /// parse("user")       -->  (name:"user",type:ToNodeType.normal)
   /// parse("[id]")       -->  (name:"id",  type:ToNodeType.dynamic)
   /// parse("[...path]")  -->  (name:"path",type:ToNodeType.dynamicAll)
-  static (String, RouteType) _parse(String pattern) {
+  static (String, RoutePartType) _parse(String pattern) {
     assert(pattern.isNotEmpty);
 
     if (pattern[0] != "[" || pattern[pattern.length - 1] != "]") {
-      return (pattern, RouteType.static);
+      return (pattern, RoutePartType.static);
     }
 
     assert(pattern != "[]");
@@ -289,9 +275,9 @@ base class To {
     final removeBrackets = pattern.substring(1, pattern.length - 1);
 
     if (removeBrackets.startsWith("...")) {
-      return (removeBrackets.substring(3), RouteType.dynamicAll);
+      return (removeBrackets.substring(3), RoutePartType.dynamicRest);
     } else {
-      return (removeBrackets, RouteType.dynamic);
+      return (removeBrackets, RoutePartType.dynamic);
     }
   }
 
@@ -319,19 +305,21 @@ ${"  " * level}</Route>''';
     if (segments.isEmpty) return this;
     var [first, ...rest] = segments;
     for (var c in children) {
-      if (c.template == first) {
+      if (c.part == first) {
         return c._findBySegments(rest);
       }
     }
     return null;
   }
 
-  Uri toUri() {
-    // FIXME 临时实现，需要增加模版参数
+  Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
+    // TODO 临时实现，需要增加模版参数
     return Uri.parse(templatePath);
   }
 }
-
+// TODO TOUri 设计的还不完善，
+//  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
+//  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
 class ToUri implements Uri {
   final To to;
   final Uri _uri;
@@ -340,9 +328,10 @@ class ToUri implements Uri {
   ToUri._({
     required Uri uri,
     required this.to,
-    Map<String, String> routeParameters = const {},
+    required Map<String, String> routeParameters,
   })  : _uri = uri,
         _routeParameters = /*safe copy*/ Map.from(routeParameters);
+
 
   Map<String, String> get routeParameters {
     return UnmodifiableMapView<String, String>(_routeParameters);
@@ -439,9 +428,8 @@ class ToUri implements Uri {
     String? query,
     Map<String, dynamic>? queryParameters,
     String? fragment,
-    Map<String, String>? routeParameters,
   }) {
-    return ToUri._(to: to, routeParameters: routeParameters ?? this.routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
+    return ToUri._(to: to, routeParameters: routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
   }
 
   @override
@@ -484,6 +472,7 @@ class _RouteInformationParser extends RouteInformationParser<ToUri> {
 
   _RouteInformationParser({required this.router});
 
+  // TODO P1 routeInformation.uri 这个在web上是fragments或path base路由，要区分
   @override
   Future<ToUri> parseRouteInformation(RouteInformation routeInformation) {
     ToUri location = router.matchUri(routeInformation.uri);
@@ -546,11 +535,13 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
               return const CircularProgressIndicator();
             },
           ),
+
+        /// FIXME NotFoundError如何处理
         _ => throw NotFoundError(invalidValue: location),
       };
 
       // 在本router api稳定下来之前，不暴露flutter Page 相关api
-      return MaterialPage(key: ValueKey(location.toString()), child: pageContent);
+      return MaterialPage(key: ValueKey(location), child: pageContent);
     }
 
     return _RouterScope(

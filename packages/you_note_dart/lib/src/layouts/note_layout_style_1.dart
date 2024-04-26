@@ -53,7 +53,7 @@ class _NoteTreeView extends StatelessWidget {
     YouRouter router = YouRouter.of(context);
 
     var routes = uri.to.root.toList().map((node) {
-      String title = "▼ ${node.template} ${node.isValid ? "" : "x"}";
+      String title = "▼ ${node.part} ${node.isValid ? "" : "x"}";
       title = title.padLeft((node.level * 3) + title.length);
 
       var click = () {
