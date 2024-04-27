@@ -144,15 +144,14 @@ base class To {
   late To _parent = this;
 
   final List<To> children;
-  final PageBuilder? builder;
-  final LazyPageBuilder? builderAsync;
+  late PageBuilder? _builder;
 
   To(
     this.part, {
-    this.builder,
-    this.builderAsync,
+    Widget Function(BuildContext, ToUri)? builder,
     this.children = const [],
-  }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
+  })  : _builder = builder,
+        assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
     var parsed = _parse(part);
     _name = parsed.$1;
     _type = parsed.$2;
@@ -162,11 +161,32 @@ base class To {
     }
   }
 
+  To.lazy(
+    this.part, {
+    LazyPageBuilder? builder,
+    this.children = const [],
+  }) {
+    _builder = builder == null
+        ? null
+        : (BuildContext context, ToUri uri) => FutureBuilder<Widget>(
+              future: builder().then((b) => b(context, uri)),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  if (snapshot.hasError) {
+                    return Text('page load error($uri): ${snapshot.error} \n${snapshot.stackTrace}');
+                  }
+                  return snapshot.data!;
+                }
+                return const CircularProgressIndicator();
+              },
+            );
+  }
+
   bool get isRoot => _parent == this;
 
   bool get isLeaf => children.isEmpty;
 
-  bool get isValid => builder != null || builderAsync != null;
+  bool get isValid => _builder != null;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /
@@ -522,28 +542,13 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
 
   @override
   Widget build(BuildContext context) {
-    Page<dynamic> buildPage(ToUri location) {
-      Widget pageContent = switch (location.to) {
-        To(builder: var builder) when builder != null => builder(context, location),
-        To(builderAsync: var lazyBuilder) when lazyBuilder != null => FutureBuilder<Widget>(
-            future: lazyBuilder().then((builder) => builder(context, location)),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.done) {
-                if (snapshot.hasError) {
-                  return Text('page load error($location): ${snapshot.error} \n${snapshot.stackTrace}');
-                }
-                return snapshot.data!;
-              }
-              return const CircularProgressIndicator();
-            },
-          ),
-
-        /// FIXME NotFoundError如何处理
-        _ => throw NotFoundError(invalidValue: location),
-      };
-
+    Page<dynamic> buildPage(ToUri uri) {
+      if (uri.to._builder == null) {
+        // FIXME NotFoundError如何处理
+        throw NotFoundError(invalidValue: uri);
+      }
       // 在本router api稳定下来之前，不暴露flutter Page 相关api
-      return MaterialPage(key: ValueKey(location), child: pageContent);
+      return MaterialPage(key: ValueKey(uri), child: uri.to._builder!(context, uri));
     }
 
     return _RouterScope(

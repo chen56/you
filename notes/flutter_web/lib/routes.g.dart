@@ -71,110 +71,109 @@ import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/page.dart'
 // ###########################################
 import 'package:flutter_web/routes/notes/layout.dart' deferred as notes__;
 
-
-var root=To("routes" , children:[
-  To("notes" ,builderAsync:() async  {  await notes_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_.build); } , children:[
-    To("research" , children:[
-      To("research_parameterized_example" ,builderAsync:() async  {  await notes_research_research_parameterized_example_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_research_research_parameterized_example_.build); } ) ,
-      To("remote_view" ,builderAsync:() async  {  await notes_research_remote_view_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_research_remote_view_.build); } ) ,
-      To("research_note_bash" ) ,
+var root=To.lazy("routes" , children:[
+  To.lazy("notes" ,builder:() async  {  await notes_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_.build); } , children:[
+    To.lazy("research" , children:[
+      To.lazy("research_parameterized_example" ,builder:() async  {  await notes_research_research_parameterized_example_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_research_research_parameterized_example_.build); } ) ,
+      To.lazy("remote_view" ,builder:() async  {  await notes_research_remote_view_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_research_remote_view_.build); } ) ,
+      To.lazy("research_note_bash" ) ,
 ]),
-    To("env_info" ,builderAsync:() async  {  await notes_env_info_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_env_info_.build); } ) ,
-    To("layout" ,builderAsync:() async  {  await notes_layout_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_.build); } , children:[
-      To("old" , children:[
-        To("layout" ,builderAsync:() async  {  await notes_layout_old_layout_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_old_layout_.build); } ) ,
+    To.lazy("env_info" ,builder:() async  {  await notes_env_info_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_env_info_.build); } ) ,
+    To.lazy("layout" ,builder:() async  {  await notes_layout_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_.build); } , children:[
+      To.lazy("old" , children:[
+        To.lazy("layout" ,builder:() async  {  await notes_layout_old_layout_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_old_layout_.build); } ) ,
 ]),
-      To("box_layout" , children:[
-        To("constraints" ,builderAsync:() async  {  await notes_layout_box_layout_constraints_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_box_layout_constraints_.build); } ) ,
+      To.lazy("box_layout" , children:[
+        To.lazy("constraints" ,builder:() async  {  await notes_layout_box_layout_constraints_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_box_layout_constraints_.build); } ) ,
 ]),
-      To("responsive_design" ,builderAsync:() async  {  await notes_layout_responsive_design_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_responsive_design_.build); } ) ,
-      To("1.welcome" ) ,
+      To.lazy("responsive_design" ,builder:() async  {  await notes_layout_responsive_design_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_layout_responsive_design_.build); } ) ,
+      To.lazy("1.welcome" ) ,
 ]),
-    To("navigation" ,builderAsync:() async  {  await notes_navigation_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_navigation_.build); } , children:[
-      To("navigator_v1" ) ,
-      To("navigator_v2" ) ,
+    To.lazy("navigation" ,builder:() async  {  await notes_navigation_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_navigation_.build); } , children:[
+      To.lazy("navigator_v1" ) ,
+      To.lazy("navigator_v2" ) ,
 ]),
-    To("state" ,builderAsync:() async  {  await notes_state_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_.build); } , children:[
-      To("1.vanilla_state" ,builderAsync:() async  {  await notes_state_vanilla_state_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_vanilla_state_.build); } ) ,
-      To("StatefulBuilder" ,builderAsync:() async  {  await notes_state_StatefulBuilder_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_StatefulBuilder_.build); } ) ,
+    To.lazy("state" ,builder:() async  {  await notes_state_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_.build); } , children:[
+      To.lazy("1.vanilla_state" ,builder:() async  {  await notes_state_vanilla_state_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_vanilla_state_.build); } ) ,
+      To.lazy("StatefulBuilder" ,builder:() async  {  await notes_state_StatefulBuilder_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_state_StatefulBuilder_.build); } ) ,
 ]),
-    To("media&assets&file" , children:[
-      To("file_desktop" ,builderAsync:() async  {  await notes_media_assets_file_file_desktop_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_file_desktop_.build); } ) ,
-      To("file_web" ,builderAsync:() async  {  await notes_media_assets_file_file_web_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_file_web_.build); } ) ,
-      To("assets" ,builderAsync:() async  {  await notes_media_assets_file_assets_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_assets_.build); } ) ,
+    To.lazy("media&assets&file" , children:[
+      To.lazy("file_desktop" ,builder:() async  {  await notes_media_assets_file_file_desktop_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_file_desktop_.build); } ) ,
+      To.lazy("file_web" ,builder:() async  {  await notes_media_assets_file_file_web_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_file_web_.build); } ) ,
+      To.lazy("assets" ,builder:() async  {  await notes_media_assets_file_assets_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_media_assets_file_assets_.build); } ) ,
 ]),
-    To("style&theming" , children:[
-      To("material3" ,builderAsync:() async  {  await notes_style_theming_material3_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_style_theming_material3_.build); } ) ,
-      To("Material" ) ,
+    To.lazy("style&theming" , children:[
+      To.lazy("material3" ,builder:() async  {  await notes_style_theming_material3_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_style_theming_material3_.build); } ) ,
+      To.lazy("Material" ) ,
 ]),
-    To("pure_dart" , children:[
-      To("dart3" ,builderAsync:() async  {  await notes_pure_dart_dart3_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_dart3_.build); } ) ,
-      To("async" ,builderAsync:() async  {  await notes_pure_dart_async_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_async_.build); } ) ,
-      To("safe_interface" ,builderAsync:() async  {  await notes_pure_dart_safe_interface_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_safe_interface_.build); } ) ,
-      To("execption" ,builderAsync:() async  {  await notes_pure_dart_execption_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_execption_.build); } ) ,
-      To("serialization_json" ,builderAsync:() async  {  await notes_pure_dart_serialization_json_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_serialization_json_.build); } ) ,
-      To("analyzer" ,builderAsync:() async  {  await notes_pure_dart_analyzer_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_analyzer_.build); } ) ,
+    To.lazy("pure_dart" , children:[
+      To.lazy("dart3" ,builder:() async  {  await notes_pure_dart_dart3_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_dart3_.build); } ) ,
+      To.lazy("async" ,builder:() async  {  await notes_pure_dart_async_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_async_.build); } ) ,
+      To.lazy("safe_interface" ,builder:() async  {  await notes_pure_dart_safe_interface_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_safe_interface_.build); } ) ,
+      To.lazy("execption" ,builder:() async  {  await notes_pure_dart_execption_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_execption_.build); } ) ,
+      To.lazy("serialization_json" ,builder:() async  {  await notes_pure_dart_serialization_json_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_serialization_json_.build); } ) ,
+      To.lazy("analyzer" ,builder:() async  {  await notes_pure_dart_analyzer_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_pure_dart_analyzer_.build); } ) ,
 ]),
-    To("dev" , children:[
-      To("host_mirror" ,builderAsync:() async  {  await notes_dev_host_mirror_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_host_mirror_.build); } ) ,
-      To("macos_config" ,builderAsync:() async  {  await notes_dev_macos_config_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_macos_config_.build); } ) ,
-      To("devtool" ,builderAsync:() async  {  await notes_dev_devtool_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_devtool_.build); } , children:[
-        To("vmservice" ,builderAsync:() async  {  await notes_dev_devtool_vmservice_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_devtool_vmservice_.build); } ) ,
+    To.lazy("dev" , children:[
+      To.lazy("host_mirror" ,builder:() async  {  await notes_dev_host_mirror_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_host_mirror_.build); } ) ,
+      To.lazy("macos_config" ,builder:() async  {  await notes_dev_macos_config_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_macos_config_.build); } ) ,
+      To.lazy("devtool" ,builder:() async  {  await notes_dev_devtool_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_devtool_.build); } , children:[
+        To.lazy("vmservice" ,builder:() async  {  await notes_dev_devtool_vmservice_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_devtool_vmservice_.build); } ) ,
 ]),
-      To("debug" ,builderAsync:() async  {  await notes_dev_debug_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_debug_.build); } ) ,
+      To.lazy("debug" ,builder:() async  {  await notes_dev_debug_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_dev_debug_.build); } ) ,
 ]),
-    To("i18n" ,builderAsync:() async  {  await notes_i18n_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_i18n_.build); } ) ,
-    To("thinking_in_ui" , children:[
-      To("readable_html_vs_dart" ,builderAsync:() async  {  await notes_thinking_in_ui_readable_html_vs_dart_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_thinking_in_ui_readable_html_vs_dart_.build); } ) ,
+    To.lazy("i18n" ,builder:() async  {  await notes_i18n_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_i18n_.build); } ) ,
+    To.lazy("thinking_in_ui" , children:[
+      To.lazy("readable_html_vs_dart" ,builder:() async  {  await notes_thinking_in_ui_readable_html_vs_dart_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_thinking_in_ui_readable_html_vs_dart_.build); } ) ,
 ]),
-    To("x.note_inside" , children:[
-      To("how_note_work" ,builderAsync:() async  {  await notes_x_note_inside_how_note_work_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_how_note_work_.build); } ) ,
-      To("note_api_thinking" ) ,
-      To("mockup_content" ,builderAsync:() async  {  await notes_x_note_inside_mockup_content_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_mockup_content_.build); } ) ,
-      To("1.welcome" ,builderAsync:() async  {  await notes_x_note_inside_welcome_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_welcome_.build); } ) ,
-      To("note_test_self" ,builderAsync:() async  {  await notes_x_note_inside_note_test_self_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_note_test_self_.build); } , children:[
-        To("nobody" ,builderAsync:() async  {  await notes_x_note_inside_note_test_self_nobody_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_note_test_self_nobody_.build); } ) ,
-]),
-]),
-    To("widgets" , children:[
-      To("specific_widgets" , children:[
-        To("input" ,builderAsync:() async  {  await notes_widgets_specific_widgets_input_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_input_.build); } ) ,
-        To("webview" ,builderAsync:() async  {  await notes_widgets_specific_widgets_webview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_webview_.build); } ) ,
-        To("slider" ,builderAsync:() async  {  await notes_widgets_specific_widgets_slider_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_slider_.build); } ) ,
-        To("selectable" ,builderAsync:() async  {  await notes_widgets_specific_widgets_selectable_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_selectable_.build); } ) ,
-        To("button" , children:[
-          To("ButtonStyleButton" ,builderAsync:() async  {  await notes_widgets_specific_widgets_button_ButtonStyleButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_ButtonStyleButton_.build); } ) ,
-          To("FloatingActionButton" ,builderAsync:() async  {  await notes_widgets_specific_widgets_button_FloatingActionButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_FloatingActionButton_.build); } ) ,
-          To("IconButton" ,builderAsync:() async  {  await notes_widgets_specific_widgets_button_IconButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_IconButton_.build); } ) ,
-          To("overview" ,builderAsync:() async  {  await notes_widgets_specific_widgets_button_overview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_overview_.build); } ) ,
-]),
-        To("Divider" ) ,
-        To("text" , children:[
-          To("RichText" ,builderAsync:() async  {  await notes_widgets_specific_widgets_text_RichText_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_text_RichText_.build); } ) ,
-          To("Text" ,builderAsync:() async  {  await notes_widgets_specific_widgets_text_Text_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_text_Text_.build); } ) ,
-]),
-        To("icon" ,builderAsync:() async  {  await notes_widgets_specific_widgets_icon_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_icon_.build); } ) ,
-]),
-      To("container_widgets" , children:[
-        To("drawer" ) ,
-        To("Card" ) ,
-        To("app" ) ,
-        To("dialog" ) ,
-        To("menu" ,builderAsync:() async  {  await notes_widgets_container_widgets_menu_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_menu_.build); } ) ,
-        To("scrollable" , children:[
-          To("Dismissible" ,builderAsync:() async  {  await notes_widgets_container_widgets_scrollable_Dismissible_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_scrollable_Dismissible_.build); } ) ,
-          To("DraggableScrollableSheet" ) ,
-]),
-        To("page_view" ) ,
-        To("bar" ,builderAsync:() async  {  await notes_widgets_container_widgets_bar_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_bar_.build); } ) ,
+    To.lazy("x.note_inside" , children:[
+      To.lazy("how_note_work" ,builder:() async  {  await notes_x_note_inside_how_note_work_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_how_note_work_.build); } ) ,
+      To.lazy("note_api_thinking" ) ,
+      To.lazy("mockup_content" ,builder:() async  {  await notes_x_note_inside_mockup_content_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_mockup_content_.build); } ) ,
+      To.lazy("1.welcome" ,builder:() async  {  await notes_x_note_inside_welcome_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_welcome_.build); } ) ,
+      To.lazy("note_test_self" ,builder:() async  {  await notes_x_note_inside_note_test_self_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_note_test_self_.build); } , children:[
+        To.lazy("nobody" ,builder:() async  {  await notes_x_note_inside_note_test_self_nobody_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_x_note_inside_note_test_self_nobody_.build); } ) ,
 ]),
 ]),
-    To("Improve_app" ,builderAsync:() async  {  await notes_Improve_app_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_.build); } , children:[
-      To("1.overview" ,builderAsync:() async  {  await notes_Improve_app_overview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_overview_.build); } ) ,
-      To("error_handle" ) ,
-      To("web_optimization" ,builderAsync:() async  {  await notes_Improve_app_web_optimization_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_web_optimization_.build); } ) ,
-      To("RepaintBoundary" ,builderAsync:() async  {  await notes_Improve_app_RepaintBoundary_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_RepaintBoundary_.build); } ) ,
-      To("event&listener&lifeycle" ,builderAsync:() async  {  await notes_Improve_app_event_listener_lifeycle_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_event_listener_lifeycle_.build); } ) ,
+    To.lazy("widgets" , children:[
+      To.lazy("specific_widgets" , children:[
+        To.lazy("input" ,builder:() async  {  await notes_widgets_specific_widgets_input_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_input_.build); } ) ,
+        To.lazy("webview" ,builder:() async  {  await notes_widgets_specific_widgets_webview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_webview_.build); } ) ,
+        To.lazy("slider" ,builder:() async  {  await notes_widgets_specific_widgets_slider_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_slider_.build); } ) ,
+        To.lazy("selectable" ,builder:() async  {  await notes_widgets_specific_widgets_selectable_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_selectable_.build); } ) ,
+        To.lazy("button" , children:[
+          To.lazy("ButtonStyleButton" ,builder:() async  {  await notes_widgets_specific_widgets_button_ButtonStyleButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_ButtonStyleButton_.build); } ) ,
+          To.lazy("FloatingActionButton" ,builder:() async  {  await notes_widgets_specific_widgets_button_FloatingActionButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_FloatingActionButton_.build); } ) ,
+          To.lazy("IconButton" ,builder:() async  {  await notes_widgets_specific_widgets_button_IconButton_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_IconButton_.build); } ) ,
+          To.lazy("overview" ,builder:() async  {  await notes_widgets_specific_widgets_button_overview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_button_overview_.build); } ) ,
+]),
+        To.lazy("Divider" ) ,
+        To.lazy("text" , children:[
+          To.lazy("RichText" ,builder:() async  {  await notes_widgets_specific_widgets_text_RichText_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_text_RichText_.build); } ) ,
+          To.lazy("Text" ,builder:() async  {  await notes_widgets_specific_widgets_text_Text_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_text_Text_.build); } ) ,
+]),
+        To.lazy("icon" ,builder:() async  {  await notes_widgets_specific_widgets_icon_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_specific_widgets_icon_.build); } ) ,
+]),
+      To.lazy("container_widgets" , children:[
+        To.lazy("drawer" ) ,
+        To.lazy("Card" ) ,
+        To.lazy("app" ) ,
+        To.lazy("dialog" ) ,
+        To.lazy("menu" ,builder:() async  {  await notes_widgets_container_widgets_menu_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_menu_.build); } ) ,
+        To.lazy("scrollable" , children:[
+          To.lazy("Dismissible" ,builder:() async  {  await notes_widgets_container_widgets_scrollable_Dismissible_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_scrollable_Dismissible_.build); } ) ,
+          To.lazy("DraggableScrollableSheet" ) ,
+]),
+        To.lazy("page_view" ) ,
+        To.lazy("bar" ,builder:() async  {  await notes_widgets_container_widgets_bar_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_widgets_container_widgets_bar_.build); } ) ,
+]),
+]),
+    To.lazy("Improve_app" ,builder:() async  {  await notes_Improve_app_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_.build); } , children:[
+      To.lazy("1.overview" ,builder:() async  {  await notes_Improve_app_overview_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_overview_.build); } ) ,
+      To.lazy("error_handle" ) ,
+      To.lazy("web_optimization" ,builder:() async  {  await notes_Improve_app_web_optimization_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_web_optimization_.build); } ) ,
+      To.lazy("RepaintBoundary" ,builder:() async  {  await notes_Improve_app_RepaintBoundary_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_RepaintBoundary_.build); } ) ,
+      To.lazy("event&listener&lifeycle" ,builder:() async  {  await notes_Improve_app_event_listener_lifeycle_.loadLibrary(); await notes__.loadLibrary();return  notes__.layout(notes_Improve_app_event_listener_lifeycle_.build); } ) ,
 ]),
 ]),
 ]) ;
@@ -182,58 +181,58 @@ var root=To("routes" , children:[
 final Routes routes=Routes();
 
 class Routes{
-  final notes                                                               = root.find("/notes")! ;  
-  final notes_research_research_parameterized_example                       = root.find("/notes/research/research_parameterized_example")! ;  
-  final notes_research_remote_view                                          = root.find("/notes/research/remote_view")! ;  
-  final notes_env_info                                                      = root.find("/notes/env_info")! ;  
-  final notes_layout                                                        = root.find("/notes/layout")! ;  
-  final notes_layout_old_layout                                             = root.find("/notes/layout/old/layout")! ;  
-  final notes_layout_box_layout_constraints                                 = root.find("/notes/layout/box_layout/constraints")! ;  
-  final notes_layout_responsive_design                                      = root.find("/notes/layout/responsive_design")! ;  
-  final notes_navigation                                                    = root.find("/notes/navigation")! ;  
-  final notes_state                                                         = root.find("/notes/state")! ;  
-  final notes_state_vanilla_state                                           = root.find("/notes/state/1.vanilla_state")! ;  
-  final notes_state_StatefulBuilder                                         = root.find("/notes/state/StatefulBuilder")! ;  
-  final notes_media_assets_file_file_desktop                                = root.find("/notes/media&assets&file/file_desktop")! ;  
-  final notes_media_assets_file_file_web                                    = root.find("/notes/media&assets&file/file_web")! ;  
-  final notes_media_assets_file_assets                                      = root.find("/notes/media&assets&file/assets")! ;  
-  final notes_style_theming_material3                                       = root.find("/notes/style&theming/material3")! ;  
-  final notes_pure_dart_dart3                                               = root.find("/notes/pure_dart/dart3")! ;  
-  final notes_pure_dart_async                                               = root.find("/notes/pure_dart/async")! ;  
-  final notes_pure_dart_safe_interface                                      = root.find("/notes/pure_dart/safe_interface")! ;  
-  final notes_pure_dart_execption                                           = root.find("/notes/pure_dart/execption")! ;  
-  final notes_pure_dart_serialization_json                                  = root.find("/notes/pure_dart/serialization_json")! ;  
-  final notes_pure_dart_analyzer                                            = root.find("/notes/pure_dart/analyzer")! ;  
-  final notes_dev_host_mirror                                               = root.find("/notes/dev/host_mirror")! ;  
-  final notes_dev_macos_config                                              = root.find("/notes/dev/macos_config")! ;  
-  final notes_dev_devtool                                                   = root.find("/notes/dev/devtool")! ;  
-  final notes_dev_devtool_vmservice                                         = root.find("/notes/dev/devtool/vmservice")! ;  
-  final notes_dev_debug                                                     = root.find("/notes/dev/debug")! ;  
-  final notes_i18n                                                          = root.find("/notes/i18n")! ;  
-  final notes_thinking_in_ui_readable_html_vs_dart                          = root.find("/notes/thinking_in_ui/readable_html_vs_dart")! ;  
-  final notes_x_note_inside_how_note_work                                   = root.find("/notes/x.note_inside/how_note_work")! ;  
-  final notes_x_note_inside_mockup_content                                  = root.find("/notes/x.note_inside/mockup_content")! ;  
-  final notes_x_note_inside_welcome                                         = root.find("/notes/x.note_inside/1.welcome")! ;  
-  final notes_x_note_inside_note_test_self                                  = root.find("/notes/x.note_inside/note_test_self")! ;  
-  final notes_x_note_inside_note_test_self_nobody                           = root.find("/notes/x.note_inside/note_test_self/nobody")! ;  
-  final notes_widgets_specific_widgets_input                                = root.find("/notes/widgets/specific_widgets/input")! ;  
-  final notes_widgets_specific_widgets_webview                              = root.find("/notes/widgets/specific_widgets/webview")! ;  
-  final notes_widgets_specific_widgets_slider                               = root.find("/notes/widgets/specific_widgets/slider")! ;  
-  final notes_widgets_specific_widgets_selectable                           = root.find("/notes/widgets/specific_widgets/selectable")! ;  
-  final notes_widgets_specific_widgets_button_ButtonStyleButton             = root.find("/notes/widgets/specific_widgets/button/ButtonStyleButton")! ;  
-  final notes_widgets_specific_widgets_button_FloatingActionButton          = root.find("/notes/widgets/specific_widgets/button/FloatingActionButton")! ;  
-  final notes_widgets_specific_widgets_button_IconButton                    = root.find("/notes/widgets/specific_widgets/button/IconButton")! ;  
-  final notes_widgets_specific_widgets_button_overview                      = root.find("/notes/widgets/specific_widgets/button/overview")! ;  
-  final notes_widgets_specific_widgets_text_RichText                        = root.find("/notes/widgets/specific_widgets/text/RichText")! ;  
-  final notes_widgets_specific_widgets_text_Text                            = root.find("/notes/widgets/specific_widgets/text/Text")! ;  
-  final notes_widgets_specific_widgets_icon                                 = root.find("/notes/widgets/specific_widgets/icon")! ;  
-  final notes_widgets_container_widgets_menu                                = root.find("/notes/widgets/container_widgets/menu")! ;  
-  final notes_widgets_container_widgets_scrollable_Dismissible              = root.find("/notes/widgets/container_widgets/scrollable/Dismissible")! ;  
-  final notes_widgets_container_widgets_bar                                 = root.find("/notes/widgets/container_widgets/bar")! ;  
-  final notes_Improve_app                                                   = root.find("/notes/Improve_app")! ;  
-  final notes_Improve_app_overview                                          = root.find("/notes/Improve_app/1.overview")! ;  
-  final notes_Improve_app_web_optimization                                  = root.find("/notes/Improve_app/web_optimization")! ;  
-  final notes_Improve_app_RepaintBoundary                                   = root.find("/notes/Improve_app/RepaintBoundary")! ;  
-  final notes_Improve_app_event_listener_lifeycle                           = root.find("/notes/Improve_app/event&listener&lifeycle")! ;  
+  final notes                                                               = root.find("/notes")! ;
+  final notes_research_research_parameterized_example                       = root.find("/notes/research/research_parameterized_example")! ;
+  final notes_research_remote_view                                          = root.find("/notes/research/remote_view")! ;
+  final notes_env_info                                                      = root.find("/notes/env_info")! ;
+  final notes_layout                                                        = root.find("/notes/layout")! ;
+  final notes_layout_old_layout                                             = root.find("/notes/layout/old/layout")! ;
+  final notes_layout_box_layout_constraints                                 = root.find("/notes/layout/box_layout/constraints")! ;
+  final notes_layout_responsive_design                                      = root.find("/notes/layout/responsive_design")! ;
+  final notes_navigation                                                    = root.find("/notes/navigation")! ;
+  final notes_state                                                         = root.find("/notes/state")! ;
+  final notes_state_vanilla_state                                           = root.find("/notes/state/1.vanilla_state")! ;
+  final notes_state_StatefulBuilder                                         = root.find("/notes/state/StatefulBuilder")! ;
+  final notes_media_assets_file_file_desktop                                = root.find("/notes/media&assets&file/file_desktop")! ;
+  final notes_media_assets_file_file_web                                    = root.find("/notes/media&assets&file/file_web")! ;
+  final notes_media_assets_file_assets                                      = root.find("/notes/media&assets&file/assets")! ;
+  final notes_style_theming_material3                                       = root.find("/notes/style&theming/material3")! ;
+  final notes_pure_dart_dart3                                               = root.find("/notes/pure_dart/dart3")! ;
+  final notes_pure_dart_async                                               = root.find("/notes/pure_dart/async")! ;
+  final notes_pure_dart_safe_interface                                      = root.find("/notes/pure_dart/safe_interface")! ;
+  final notes_pure_dart_execption                                           = root.find("/notes/pure_dart/execption")! ;
+  final notes_pure_dart_serialization_json                                  = root.find("/notes/pure_dart/serialization_json")! ;
+  final notes_pure_dart_analyzer                                            = root.find("/notes/pure_dart/analyzer")! ;
+  final notes_dev_host_mirror                                               = root.find("/notes/dev/host_mirror")! ;
+  final notes_dev_macos_config                                              = root.find("/notes/dev/macos_config")! ;
+  final notes_dev_devtool                                                   = root.find("/notes/dev/devtool")! ;
+  final notes_dev_devtool_vmservice                                         = root.find("/notes/dev/devtool/vmservice")! ;
+  final notes_dev_debug                                                     = root.find("/notes/dev/debug")! ;
+  final notes_i18n                                                          = root.find("/notes/i18n")! ;
+  final notes_thinking_in_ui_readable_html_vs_dart                          = root.find("/notes/thinking_in_ui/readable_html_vs_dart")! ;
+  final notes_x_note_inside_how_note_work                                   = root.find("/notes/x.note_inside/how_note_work")! ;
+  final notes_x_note_inside_mockup_content                                  = root.find("/notes/x.note_inside/mockup_content")! ;
+  final notes_x_note_inside_welcome                                         = root.find("/notes/x.note_inside/1.welcome")! ;
+  final notes_x_note_inside_note_test_self                                  = root.find("/notes/x.note_inside/note_test_self")! ;
+  final notes_x_note_inside_note_test_self_nobody                           = root.find("/notes/x.note_inside/note_test_self/nobody")! ;
+  final notes_widgets_specific_widgets_input                                = root.find("/notes/widgets/specific_widgets/input")! ;
+  final notes_widgets_specific_widgets_webview                              = root.find("/notes/widgets/specific_widgets/webview")! ;
+  final notes_widgets_specific_widgets_slider                               = root.find("/notes/widgets/specific_widgets/slider")! ;
+  final notes_widgets_specific_widgets_selectable                           = root.find("/notes/widgets/specific_widgets/selectable")! ;
+  final notes_widgets_specific_widgets_button_ButtonStyleButton             = root.find("/notes/widgets/specific_widgets/button/ButtonStyleButton")! ;
+  final notes_widgets_specific_widgets_button_FloatingActionButton          = root.find("/notes/widgets/specific_widgets/button/FloatingActionButton")! ;
+  final notes_widgets_specific_widgets_button_IconButton                    = root.find("/notes/widgets/specific_widgets/button/IconButton")! ;
+  final notes_widgets_specific_widgets_button_overview                      = root.find("/notes/widgets/specific_widgets/button/overview")! ;
+  final notes_widgets_specific_widgets_text_RichText                        = root.find("/notes/widgets/specific_widgets/text/RichText")! ;
+  final notes_widgets_specific_widgets_text_Text                            = root.find("/notes/widgets/specific_widgets/text/Text")! ;
+  final notes_widgets_specific_widgets_icon                                 = root.find("/notes/widgets/specific_widgets/icon")! ;
+  final notes_widgets_container_widgets_menu                                = root.find("/notes/widgets/container_widgets/menu")! ;
+  final notes_widgets_container_widgets_scrollable_Dismissible              = root.find("/notes/widgets/container_widgets/scrollable/Dismissible")! ;
+  final notes_widgets_container_widgets_bar                                 = root.find("/notes/widgets/container_widgets/bar")! ;
+  final notes_Improve_app                                                   = root.find("/notes/Improve_app")! ;
+  final notes_Improve_app_overview                                          = root.find("/notes/Improve_app/1.overview")! ;
+  final notes_Improve_app_web_optimization                                  = root.find("/notes/Improve_app/web_optimization")! ;
+  final notes_Improve_app_RepaintBoundary                                   = root.find("/notes/Improve_app/RepaintBoundary")! ;
+  final notes_Improve_app_event_listener_lifeycle                           = root.find("/notes/Improve_app/event&listener&lifeycle")! ;
 }
 

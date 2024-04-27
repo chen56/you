@@ -115,12 +115,12 @@ class Cmd_gen_routes_g_dart extends Command {
     code.Expression? builder=builderExpression(node);
     String builderStr=builder==null?"":builder.accept(code.DartEmitter()).toString().split("\n").join();
 
-    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:$builderStr";
+    String buildArg = !node.page_dart.existsSync() ? "" : ",builder:$builderStr";
     String padding = "".padLeft(node.level, '  ');
     if (node.children.isEmpty) {
-      return '''${padding}To("${node.dir.basename}" $buildArg) ''';
+      return '''${padding}To${async?".lazy":""}("${node.dir.basename}" $buildArg) ''';
     }
-    return '''${padding}To("${node.dir.basename}" $buildArg, children:[
+    return '''${padding}To${async?".lazy":""}("${node.dir.basename}" $buildArg, children:[
 ${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
 ])''';
   }
