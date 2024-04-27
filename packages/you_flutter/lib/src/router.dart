@@ -41,8 +41,8 @@ ref:
  */
 
 typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
-// FIXME 这里api要不要:Future<PageBuilder> Function();
-typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
+typedef LazyPageBuilder = Future<PageBuilder> Function();
+// typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
 class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
@@ -120,9 +120,8 @@ enum RoutePartType {
   dynamicRest;
 
   static RoutePartType? parse(String name) {
-    /// FIXME what??
-    for(var i in values){
-      if(i.name==name){
+    for (var i in values) {
+      if (i.name == name) {
         return i;
       }
     }
@@ -146,7 +145,7 @@ base class To {
 
   final List<To> children;
   final PageBuilder? builder;
-  final PageBuilderAsync? builderAsync;
+  final LazyPageBuilder? builderAsync;
 
   To(
     this.part, {
@@ -320,6 +319,7 @@ ${"  " * level}</Route>''';
     return Uri.parse(templatePath);
   }
 }
+
 // TODO TOUri 设计的还不完善，
 //  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
 //  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
@@ -334,7 +334,6 @@ class ToUri implements Uri {
     required Map<String, String> routeParameters,
   })  : _uri = uri,
         _routeParameters = /*safe copy*/ Map.from(routeParameters);
-
 
   Map<String, String> get routeParameters {
     return UnmodifiableMapView<String, String>(_routeParameters);
@@ -526,8 +525,8 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
     Page<dynamic> buildPage(ToUri location) {
       Widget pageContent = switch (location.to) {
         To(builder: var builder) when builder != null => builder(context, location),
-        To(builderAsync: var builder) when builder != null => FutureBuilder<Widget>(
-            future: builder(context, location),
+        To(builderAsync: var lazyBuilder) when lazyBuilder != null => FutureBuilder<Widget>(
+            future: lazyBuilder().then((builder) => builder(context, location)),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 if (snapshot.hasError) {

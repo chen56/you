@@ -5,21 +5,10 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
-import 'package:glob/glob.dart';
 import 'package:path/path.dart' as path;
-import 'package:you_cli/src/page.dart';
+import 'package:you_cli/src/cli_core.dart';
 
 import 'dart:io' as io;
-import 'package:you_cli/src/yaml.dart';
-
-// ignore: constant_identifier_names
-const String _LIB_ROOT = "lib";
-// ignore: constant_identifier_names
-const String _NOTES_ROOT = "lib/routes/notes";
-// ignore: constant_identifier_names
-const String _PAGES_ROOT = "lib/routes";
-// ignore: non_constant_identifier_names
-final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 
 main(List<String> args) async {
   _log("Platform.script  : ${io.Platform.script}");
@@ -34,34 +23,6 @@ main(List<String> args) async {
   );
 
   await runner.run(args);
-}
-
-class CliSystem {
-  CliSystem({required this.pkgDir})
-      : fs = pkgDir.fileSystem,
-        pubspec = Pubspec.parseFileSync(pkgDir.childFile("pubspec.yaml"))
-      ;
-
-  Directory pkgDir;
-  FileSystem fs;
-  Pubspec pubspec;
-
-  RouteNode get routeRoot=> RouteNode.fromSync(routeDir);
-
-  Directory get routeDir => pkgDir.childDirectory(_PAGES_ROOT);
-
-  Directory get notesRouteDir => pkgDir.childDirectory(_NOTES_ROOT);
-
-  Directory get libDir => pkgDir.childDirectory(_LIB_ROOT);
-
-  Stream<PageLib> routes() {
-    var noteRootDir = pkgDir.childDirectory(_NOTES_ROOT);
-    return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) => PageLib(
-          file: e as File,
-          pkgName: pubspec.name,
-          pkgDir: pkgDir,
-        ));
-  }
 }
 
 // ignore: camel_case_types
@@ -126,25 +87,35 @@ class Cmd_gen_routes_g_dart extends Command {
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
-  String builderExpression(RouteNode node) {
+  code.Expression? builderExpression(RouteNode node) {
     if (!node.page_dart.existsSync()) {
-      return '';
+      return null;
     }
-    String builder = '${node.flatName}_.build';
+    code.Expression builder = code.refer("${node.flatName}_").property("build");
     RouteNode? layout = node.findLayoutSync();
     if (layout != null) {
-      builder = "${layout.flatName}__.layout($builder)";
+      builder = code.refer("${layout.flatName}__").property("layout").call([builder]);
     }
     if (async) {
-      // return '()async{ await ${node.flatName}_.loadLibrary(); await ${node.flatName}__.loadLibrary(); return ${node.flatName}__.layout(${node.flatName}_.build); }';
-      return '(context,print)async=> await ${node.flatName}_.loadLibrary().then((_) => $builder(context,print))';
+      return code.Method((b) => b
+        ..modifier = MethodModifier.async
+        ..body = code.Block.of(
+          [
+            code.refer("${node.flatName}_").property("loadLibrary").call([]).awaited.statement,
+            if(layout != null) code.refer("${layout.flatName}__").property("loadLibrary").call([]).awaited.statement,
+            builder.returned.statement,
+          ],
+        )).closure;
     } else {
       return builder;
     }
   }
 
   String _genRouteTreeCode(RouteNode node) {
-    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:${builderExpression(node)}";
+    code.Expression? builder=builderExpression(node);
+    String builderStr=builder==null?"":builder.accept(code.DartEmitter()).toString().split("\n").join();
+
+    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:$builderStr";
     String padding = "".padLeft(node.level, '  ');
     if (node.children.isEmpty) {
       return '''${padding}To("${node.dir.basename}" $buildArg) ''';
@@ -166,7 +137,7 @@ ${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join(
       throw AssertionError("【--dir $dir】 not exists");
     }
 
-    CliSystem cli = CliSystem(pkgDir: fs.directory(dir));
+    YouCli cli = YouCli(projectDir: fs.directory(dir));
     var rootRoute = RouteNode.fromSync(cli.routeDir);
     Iterable<RouteNode> pageDirs = rootRoute.toList();
 
@@ -244,62 +215,10 @@ $newRoutes
 
 """;
 
-    await cli.pkgDir.childFile("lib/routes.g.dart").writeAsString(allCode);
+    await cli.projectDir.childFile("lib/routes.g.dart").writeAsString(allCode);
     // 暂时不格式化，因为要保持变量名后的padding，对齐变量更好看
     // file.writeAsString(_fmt.format(toCode));
   }
-}
-
-class PageLib {
-  final FileSystem fs;
-  final Directory routesRootDir;
-  final Directory libDir;
-  final String pkgName;
-  final File file;
-  final Directory pkgDir;
-
-  PageLib({
-    required this.file,
-    required this.pkgName,
-    required this.pkgDir,
-  })  : fs = file.fileSystem,
-        libDir = pkgDir.childDirectory(_LIB_ROOT),
-        routesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
-
-  String get noteRoutePath {
-    String result = path.dirname(path.relative(file.path, from: routesRootDir.path));
-    return result == "." ? "/" : path.join("/", result);
-  }
-
-  // String get noteName => path.basenameWithoutExtension(file.path);
-  String get packageImportUri => "package:$pkgName/${path.relative(file.path, from: libDir.path)}";
-
-  String get asset => "${path.relative(file.parent.path, from: pkgDir.path)}/";
-
-  /// note name平整化,可作为变量名：
-  /// lib/routes/1.a/b/page.dart  ---> a_b
-  String get flatName {
-    String dir = noteRoutePath;
-    if (dir == "/") {
-      return "root";
-    }
-    var names = dir.split(path.separator).where((e) => e.isNotEmpty);
-    return names
-        .map((e) => e
-            // ignore: unnecessary_string_escapes
-            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
-            .replaceAll(".", "_")
-            .replaceAll("-", "_")
-            .replaceAll("&", "_")
-            .replaceAll("*", "_")
-            .replaceAll("*", "_")
-            .replaceAll("@", "_"))
-        .join("_");
-  }
-
-  File get noteConfFile => fs.file(file.parent.childFile("page.json"));
-
-  File get noteGenConfFile => fs.file(file.parent.childFile("page.g.json"));
 }
 
 _log(Object? o) {

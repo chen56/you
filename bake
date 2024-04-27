@@ -183,7 +183,7 @@ flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
 flutter_web.gen()      { #_run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
-                         _run root dart run packages/you_cli/bin/cli.dart gen routes.g.dart  --dir notes/flutter_web/ # --async
+                         _run root dart run packages/you_cli/bin/cli.dart gen routes.g.dart  --dir notes/flutter_web/  --async
 }
 flutter_web.dev()      { flutter_web.dev_html ; }
 flutter_web.build()    { flutter_web.build_html ;}

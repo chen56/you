@@ -1,5 +1,30 @@
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
+import 'package:you_cli/src/yaml.dart';
+
+// ignore: non_constant_identifier_names
+// final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
+
+class YouCli {
+  YouCli({required this.projectDir}) : fs = projectDir.fileSystem;
+
+  final Directory projectDir;
+  final FileSystem fs;
+  Pubspec? _pubspec;
+  RouteNode? _rootRoute;
+
+  Directory get routeDir => projectDir.childDirectory("lib/routes");
+
+  Directory get notesRouteDir => projectDir.childDirectory("lib/routes/notes");
+
+  Directory get libDir => projectDir.childDirectory("lib");
+
+  File get pubspecYamlFile => projectDir.childFile("pubspec.yaml");
+
+  Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(pubspecYamlFile);
+
+  RouteNode get rootRoute => _rootRoute ??= RouteNode.fromSync(routeDir);
+}
 
 class RouteNode {
   List<RouteNode> children;
@@ -15,6 +40,9 @@ class RouteNode {
   int get level => isRoot ? 0 : _parent.level + 1;
 
   static RouteNode fromSync(Directory dir) {
+    if (!dir.existsSync()) {
+      return RouteNode(dir: dir, children: []);
+    }
     var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => fromSync(e));
     return RouteNode(dir: dir, children: children.toList());
   }
