@@ -37,7 +37,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 flutter run --device-id chrome --web-renderer canvaskit --release --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/
 
 # build 也有效
-flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ -t lib/pages/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart
+flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ -t lib/routes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart
 ```
 
 

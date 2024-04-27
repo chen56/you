@@ -15,9 +15,9 @@ import 'package:you_cli/src/yaml.dart';
 // ignore: constant_identifier_names
 const String _LIB_ROOT = "lib";
 // ignore: constant_identifier_names
-const String _NOTES_ROOT = "lib/pages/notes";
+const String _NOTES_ROOT = "lib/routes/notes";
 // ignore: constant_identifier_names
-const String _PAGES_ROOT = "lib/pages";
+const String _PAGES_ROOT = "lib/routes";
 // ignore: non_constant_identifier_names
 final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 
@@ -54,7 +54,7 @@ class CliSystem {
 
   Directory get libDir => pkgDir.childDirectory(_LIB_ROOT);
 
-  Stream<PageLib> pages() {
+  Stream<PageLib> routes() {
     var noteRootDir = pkgDir.childDirectory(_NOTES_ROOT);
     return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) => PageLib(
           file: e as File,
@@ -225,7 +225,7 @@ ${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join(
 import 'package:you_flutter/router.dart';
 
 // ###########################################
-// ## pages
+// ## routes
 // ###########################################
 $pageImportsCode
 
@@ -252,7 +252,7 @@ $newRoutes
 
 class PageLib {
   final FileSystem fs;
-  final Directory pagesRootDir;
+  final Directory routesRootDir;
   final Directory libDir;
   final String pkgName;
   final File file;
@@ -264,10 +264,10 @@ class PageLib {
     required this.pkgDir,
   })  : fs = file.fileSystem,
         libDir = pkgDir.childDirectory(_LIB_ROOT),
-        pagesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
+        routesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
 
   String get noteRoutePath {
-    String result = path.dirname(path.relative(file.path, from: pagesRootDir.path));
+    String result = path.dirname(path.relative(file.path, from: routesRootDir.path));
     return result == "." ? "/" : path.join("/", result);
   }
 
@@ -277,7 +277,7 @@ class PageLib {
   String get asset => "${path.relative(file.parent.path, from: pkgDir.path)}/";
 
   /// note name平整化,可作为变量名：
-  /// lib/pages/1.a/b/page.dart  ---> a_b
+  /// lib/routes/1.a/b/page.dart  ---> a_b
   String get flatName {
     String dir = noteRoutePath;
     if (dir == "/") {

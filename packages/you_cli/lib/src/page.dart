@@ -47,7 +47,7 @@ class RouteNode {
   }
 
   /// note name平整化,可作为变量名：
-  /// lib/pages/1.a/b/page.dart  ---> a_b
+  /// lib/routes/1.a/b/page.dart  ---> a_b
   String get flatName {
     String p = routePath;
     if (p == "/") {

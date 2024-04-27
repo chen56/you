@@ -71,7 +71,7 @@ class PubspecEdit {
     for (int i = 0; i < oldAssets.length; i++) {
       var oldAsset = oldAssets[i];
       // manual config, leave it
-      // lib/pages is our Generated
+      // lib/routes is our Generated
       if (!oldAsset.startsWith(toUpdatePath)) {
         continue;
       }
@@ -81,7 +81,7 @@ class PubspecEdit {
         continue;
       }
 
-      // prefix lib/pages is previously Generated ,and now not exists
+      // prefix lib/routes is previously Generated ,and now not exists
       _yamlEditor.remove([..._yamlPathAssets, i - removed]);
       removed++;
     }

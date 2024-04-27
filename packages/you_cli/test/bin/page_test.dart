@@ -10,10 +10,10 @@ void main() {
   group("PageNode", () {
     test('create from directory', () {
       late MemoryFileSystem fs = MemoryFileSystem();
-      fs.directory("/note/lib/pages/notes/page_1").createSync(recursive: true);
-      fs.directory("/note/lib/pages/notes/page_1/page_1_1").createSync(recursive: true);
-      fs.directory("/note/lib/pages/notes/page_1/page_1_2").createSync(recursive: true);
-      var rootPage = RouteNode.fromSync(fs.directory("/note/lib/pages"));
+      fs.directory("/note/lib/routes/notes/page_1").createSync(recursive: true);
+      fs.directory("/note/lib/routes/notes/page_1/page_1_1").createSync(recursive: true);
+      fs.directory("/note/lib/routes/notes/page_1/page_1_2").createSync(recursive: true);
+      var rootPage = RouteNode.fromSync(fs.directory("/note/lib/routes"));
       check(rootPage.toList().map((e) => e.routePath)).deepEquals([
         "/",
         "/notes",
@@ -26,12 +26,14 @@ void main() {
   group("Gen routes.g.dart", () {
     test('create from directory', () {
       late MemoryFileSystem fs = MemoryFileSystem();
+      fs.file("/app/pubspec.yaml")..createSync(recursive: true)..writeAsString("""name: you""");
+
       fs.file("/app/lib/routes/page.dart").createSync(recursive: true);
       fs.file("/app/lib/routes/layout.dart").createSync(recursive: true);
 
       CliSystem cli = CliSystem(pkgDir: fs.directory("/app"));
-      Cmd_gen_routes_g_dart gen=Cmd_gen_routes_g_dart.libMode(fs: fs, async: true, dir: fs.directory("/app/lib/pages"));
-      // gen.builderExpression(dir);
+      Cmd_gen_routes_g_dart gen=Cmd_gen_routes_g_dart.libMode(fs: fs, async: true, dir: fs.directory("/app/lib/routes"));
+      gen.builderExpression(cli.routeRoot);
       //
       // var rootRoute = RouteDir.fromSync(dir);
       // check(rootRoute.toList().map((e) => e.routePath)).deepEquals(["/"]);

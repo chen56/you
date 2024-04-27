@@ -29,10 +29,10 @@ flutter:
       expect(pubspec.assets, ["assets/manual1"]);
 
       // when
-      pubspec.updateAssets(toUpdatePath: "lib/pages/notes/", toUpdate: ["lib/pages/notes/new/"]);
+      pubspec.updateAssets(toUpdatePath: "lib/routes/notes/", toUpdate: ["lib/routes/notes/new/"]);
 
       // then
-      expect(pubspec.assets, ['assets/manual1', 'lib/pages/notes/new/']);
+      expect(pubspec.assets, ['assets/manual1', 'lib/routes/notes/new/']);
     });
 
     test('remove not exists', () async {
@@ -40,17 +40,17 @@ flutter:
 flutter:
   assets:
     - assets/manual1                   # manual config, keep it
-    - lib/pages/notes/rm/              # to remove
+    - lib/routes/notes/rm/              # to remove
 """);
       PubspecEdit pubspec =   PubspecEdit.parseFileSync(file);
       var old = pubspec.assets;
-      expect(old, ["assets/manual1" ,"lib/pages/notes/rm/"]);
+      expect(old, ["assets/manual1" ,"lib/routes/notes/rm/"]);
 
       // when
-      pubspec.updateAssets(toUpdatePath: "lib/pages/notes/", toUpdate: ["lib/pages/notes/new/"]);
+      pubspec.updateAssets(toUpdatePath: "lib/routes/notes/", toUpdate: ["lib/routes/notes/new/"]);
 
       // then
-      expect(pubspec.assets, ['assets/manual1', 'lib/pages/notes/new/']);
+      expect(pubspec.assets, ['assets/manual1', 'lib/routes/notes/new/']);
     });
   });
 }

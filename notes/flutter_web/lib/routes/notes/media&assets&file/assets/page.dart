@@ -8,6 +8,6 @@ void build(BuildContext context, Cell print) async {
 # asset
 
   '''));
-  var jsonAsset = await rootBundle.loadString('lib/pages/note.dart');
+  var jsonAsset = await rootBundle.loadString('lib/routes/note.dart');
   print(jsonAsset);
 }

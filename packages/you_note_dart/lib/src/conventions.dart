@@ -10,10 +10,10 @@ class Conventions {
   Conventions._();
 
   String noteDartAssetPath(String notePath) {
-    return path.join("lib/pages", path.relative(notePath, from: "/"), "page.dart");
+    return path.join("lib/routes", path.relative(notePath, from: "/"), "page.dart");
   }
 
   String noteConfAssetPath(String notePath) {
-    return path.join("lib/pages", path.relative(notePath, from: "/"), "page.json");
+    return path.join("lib/routes", path.relative(notePath, from: "/"), "page.json");
   }
 }
