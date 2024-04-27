@@ -122,7 +122,7 @@ class Cmd_gen_routes_g_dart extends Command {
     }
     return '''${padding}To${async?".lazy":""}("${node.dir.basename}" $buildArg, children:[
 ${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
-])''';
+$padding])''';
   }
 
   // [run] may also return a Future.
