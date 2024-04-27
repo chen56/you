@@ -41,6 +41,7 @@ ref:
  */
 
 typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
+typedef PageLayoutBuilder = Widget Function(BuildContext context, ToUri uri, PageBuilder builder);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 // typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
@@ -132,7 +133,7 @@ enum RoutePartType {
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
-  /// template is a uri path segment template
+  /// part may be a template
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
   ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
@@ -140,17 +141,18 @@ base class To {
   late final String _name;
   late final RoutePartType _type;
 
-  // TODO 可以使之非空，改为root指向自己
   late To _parent = this;
 
   final List<To> children;
-  late PageBuilder? _builder;
+  final PageBuilder? _builder;
+  final PageLayoutBuilder? layout;
 
-  To(
-    this.part, {
-    Widget Function(BuildContext, ToUri)? builder,
+  To(this.part, {
+    PageBuilder? builder,
+    this.layout,
     this.children = const [],
-  })  : _builder = builder,
+  })
+      : _builder = builder,
         assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
     var parsed = _parse(part);
     _name = parsed.$1;
@@ -161,25 +163,32 @@ base class To {
     }
   }
 
-  To.lazy(
-    this.part, {
+  To.lazy(String part, {
     LazyPageBuilder? builder,
-    this.children = const [],
-  }) {
-    _builder = builder == null
-        ? null
-        : (BuildContext context, ToUri uri) => FutureBuilder<Widget>(
-              future: builder().then((b) => b(context, uri)),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  if (snapshot.hasError) {
-                    return Text('page load error($uri): ${snapshot.error} \n${snapshot.stackTrace}');
-                  }
-                  return snapshot.data!;
-                }
-                return const CircularProgressIndicator();
-              },
-            );
+    List<To> children = const [],
+  }) : this(
+    part,
+    builder: _asyncToSync(builder),
+    children: children,
+  );
+
+  static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
+    if (builder == null) {
+      return null;
+    }
+    return (BuildContext context, ToUri uri) =>
+        FutureBuilder<Widget>(
+          future: builder().then((b) => b(context, uri)),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
+                return Text('page load error($uri): ${snapshot.error} \n${snapshot.stackTrace}');
+              }
+              return snapshot.data!;
+            }
+            return const CircularProgressIndicator();
+          },
+        );
   }
 
   bool get isRoot => _parent == this;
@@ -200,6 +209,29 @@ base class To {
 
   int get level => isRoot ? 0 : _parent.level + 1;
 
+  To? findLayoutNode() {
+    return _findLayoutNode(this);
+  }
+    /// To类型完全相同，才认为节点兼容
+  To? _findLayoutNode(To toFind) {
+    if (isRoot) {
+      // 路由To类型不兼容
+      if (runtimeType != toFind.runtimeType) {
+        return null;
+      }
+      // 路由To类型兼容再看是不是有layout
+      return layout == null ? null : this;
+    }
+
+    // 现在是非root, 不兼容就向上找
+    if (runtimeType != toFind.runtimeType) {
+      return _parent._findLayoutNode(toFind);
+    }
+
+    // 没有就继续向上找
+    return layout != null ? this : _parent._findLayoutNode(toFind);
+  }
+
   ToUri _match({
     required Uri uri,
     required List<String> segments,
@@ -216,9 +248,14 @@ base class To {
     }
 
     To? matchChild({required String segment}) {
-      To? matched = children.where((e) => e._type == RoutePartType.static).where((e) => segment == e._name).firstOrNull;
+      To? matched = children
+          .where((e) => e._type == RoutePartType.static)
+          .where((e) => segment == e._name)
+          .firstOrNull;
       if (matched != null) return matched;
-      matched = children.where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest).firstOrNull;
+      matched = children
+          .where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest)
+          .firstOrNull;
       if (matched != null) return matched;
       return null;
     }
@@ -320,7 +357,11 @@ ${"  " * level}</Route>''';
   }
 
   To? find(String templatePath) {
-    return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
+    return _findBySegments(Uri
+        .parse(templatePath)
+        .pathSegments
+        .where((e) => e.isNotEmpty)
+        .toList());
   }
 
   To? _findBySegments(List<String> segments) {
@@ -352,7 +393,8 @@ class ToUri implements Uri {
     required Uri uri,
     required this.to,
     required Map<String, String> routeParameters,
-  })  : _uri = uri,
+  })
+      : _uri = uri,
         _routeParameters = /*safe copy*/ Map.from(routeParameters);
 
   Map<String, String> get routeParameters {
@@ -451,7 +493,17 @@ class ToUri implements Uri {
     Map<String, dynamic>? queryParameters,
     String? fragment,
   }) {
-    return ToUri._(to: to, routeParameters: routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
+    return ToUri._(to: to,
+        routeParameters: routeParameters,
+        uri: _uri.replace(scheme: scheme,
+            userInfo: userInfo,
+            host: host,
+            port: port,
+            path: path,
+            pathSegments: pathSegments,
+            query: query,
+            queryParameters: queryParameters,
+            fragment: fragment));
   }
 
   @override

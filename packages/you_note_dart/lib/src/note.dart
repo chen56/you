@@ -9,9 +9,34 @@ import 'package:you_flutter/state.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:http/http.dart' as http;
+import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
+typedef NoteLayoutBuilder = Widget Function(BuildContext context, ToUri uri, NoteBuilder builder);
+
+base class ToNote extends To {
+  final NoteBuilder? _builder;
+  final NoteLayoutBuilder? _layout;
+
+  ToNote(super.part, NoteBuilder? builder, NoteLayoutBuilder? layout)
+      : _builder = builder,
+        _layout = layout;
+
+  Widget? build(BuildContext context, ToUri uri) {
+    if (_builder == null) {
+      return null;
+    }
+
+    To? find = findLayoutNode();
+    if (find == null) {
+      return NoteLayoutDefault(uri: uri, builder: _builder);
+    }
+    return (find as ToNote)._layout!(context, uri, _builder);
+  }
+
+// ToNote.lazy(super.part) : super.lazy();
+}
 
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path

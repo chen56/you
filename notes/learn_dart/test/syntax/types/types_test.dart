@@ -41,13 +41,11 @@ void main() {
       Symbol? a = #a;
       Symbol? a2 = #a;
       check(a).equals(a2);
-
     });
     test('Object equals', () {
-      check(const Object()==const Object()).equals(true);
-      check(  Object()!=const  Object()).equals(true);
-      check(  Object()!=   Object()).equals(true);
-
+      check(const Object() == const Object()).equals(true);
+      check(Object() != const Object()).equals(true);
+      check(Object() != Object()).equals(true);
     });
   });
   group("Enum", () {
@@ -77,40 +75,51 @@ void main() {
     });
   });
   group("runtimeType 关系？", () {
+    test('type ==', () {
+      // 2s多
+      DoubleLinkedQueue q = DoubleLinkedQueue();
+      check(q.runtimeType == DoubleLinkedQueue).isTrue();
+      check(q.runtimeType != Queue).isTrue();
+    });
+
     test('SpecificTypeFuncInject扩展Function后可在里面加点料，方便mate模型生成代码', () {
       // 2s多
-      for(int i=0;i<1000*1000*1000;i++){
+      for (int i = 0; i < 1000 * 1000 * 1000; i++) {
         // ignore: unused_local_variable
-        var x =[] is ListBase;
+        var x = [] is ListBase;
         // check([] is ListBase).equals(true);
       }
     });
-
   });
   group("Unique", () {
     test(' x', () {
-      Uniquely x = Uniquely(name: "x") ;
-       check(x==x).equals(false);
+      Uniquely x = Uniquely(name: "x");
+      check(x == x).equals(false);
     });
   });
 }
 
 class SegmentedButton$Mate<T> {
   String injectInfo;
+
   SegmentedButton$Mate({this.onSelectionChanged}) : injectInfo = "${onSelectionChanged?.name}";
   void Function<T>(Set<T>)? onSelectionChanged;
 }
 
 extension SpecificTypeFuncInject<T> on void Function<T>(Set<T> selected) {
   static final _name = Expando<String>();
+
   String get name => _name[this] ?? "";
+
   set name(String v) => _name[this] = v;
+
   inject({
     required String func,
   }) {
     _name[this] = func;
   }
 }
+
 class Uniquely {
   final String name;
 
@@ -131,18 +140,23 @@ class Uniquely {
 extension FuncCodeInject on Function {
   static final _from = Expando<String>();
   static final _mode = Expando<InjectMode>();
-  String get from => _from[this] ?? "";
-  InjectMode get mode => _mode[this] ?? InjectMode.embed;
-  set name(String v) => _from[this] = v;
-  inject(
-    /// the Mate field Referenced function name
-    String func, {
-    /// expected inject code mode
-    InjectMode mode = InjectMode.refer,
 
-    /// is copy function context code
-    bool copyContext = true,
-  }) {
+  String get from => _from[this] ?? "";
+
+  InjectMode get mode => _mode[this] ?? InjectMode.embed;
+
+  set name(String v) => _from[this] = v;
+
+  inject(
+
+      /// the Mate field Referenced function name
+      String func, {
+        /// expected inject code mode
+        InjectMode mode = InjectMode.refer,
+
+        /// is copy function context code
+        bool copyContext = true,
+      }) {
     _from[this] = func;
     _mode[this] = mode;
   }
