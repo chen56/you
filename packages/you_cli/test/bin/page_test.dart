@@ -4,14 +4,16 @@ import 'package:file/memory.dart';
 import 'package:test/test.dart';
 import 'package:you_cli/src/page.dart';
 
+import '../../bin/cli.dart';
+
 void main() {
   group("PageNode", () {
     test('create from directory', () {
       late MemoryFileSystem fs = MemoryFileSystem();
-      fs.directory("/note/lib/pages/notes/page_1").create(recursive: true);
-      fs.directory("/note/lib/pages/notes/page_1/page_1_1").create(recursive: true);
-      fs.directory("/note/lib/pages/notes/page_1/page_1_2").create(recursive: true);
-      var rootPage = PageDir.fromSync(fs.directory("/note/lib/pages"));
+      fs.directory("/note/lib/pages/notes/page_1").createSync(recursive: true);
+      fs.directory("/note/lib/pages/notes/page_1/page_1_1").createSync(recursive: true);
+      fs.directory("/note/lib/pages/notes/page_1/page_1_2").createSync(recursive: true);
+      var rootPage = RouteNode.fromSync(fs.directory("/note/lib/pages"));
       check(rootPage.toList().map((e) => e.routePath)).deepEquals([
         "/",
         "/notes",
@@ -19,9 +21,24 @@ void main() {
         "/notes/page_1/page_1_1",
         "/notes/page_1/page_1_2",
       ]);
+    });
+  });
+  group("Gen routes.g.dart", () {
+    test('create from directory', () {
+      late MemoryFileSystem fs = MemoryFileSystem();
+      fs.file("/app/lib/routes/page.dart").createSync(recursive: true);
+      fs.file("/app/lib/routes/layout.dart").createSync(recursive: true);
 
-      // print("111111 ${DartFormatter().format('${genRouteExpression(rootPage).accept(DartEmitter())}')}");
-      // print("222222 ${genRouteString(rootPage)}");
+      CliSystem cli = CliSystem(pkgDir: fs.directory("/app"));
+      Cmd_gen_routes_g_dart gen=Cmd_gen_routes_g_dart.libMode(fs: fs, async: true, dir: fs.directory("/app/lib/pages"));
+      // gen.builderExpression(dir);
+      //
+      // var rootRoute = RouteDir.fromSync(dir);
+      // check(rootRoute.toList().map((e) => e.routePath)).deepEquals(["/"]);
+      //
+      // print("${genRouteExpression(rootRoute).accept(DartEmitter())}");
+      // // print("111111 ${DartFormatter().format('${genRouteExpression(rootRoute).accept(DartEmitter())}')}");
+      // // print("222222 ${genRouteString(rootPage)}");
     });
   });
 }
@@ -35,7 +52,7 @@ void main() {
 //   ]),
 // ]);
 
-Expression genRouteExpression(PageDir rootPage) {
+Expression genRouteExpression(RouteNode rootPage) {
   final $To = refer('To', 'package:you_flutter/router.dart');
   return $To.newInstance([
     literalString(rootPage.dir.basename)
@@ -46,8 +63,8 @@ Expression genRouteExpression(PageDir rootPage) {
   });
 }
 
-String genRouteString(PageDir rootPage) {
-  if(rootPage.children.isEmpty){
+String genRouteString(RouteNode rootPage) {
+  if (rootPage.children.isEmpty) {
     return '''To("${rootPage.dir.basename}", builderAsync: ${rootPage.flatName}.build)''';
   }
   return '''To("${rootPage.dir.basename}", builderAsync: ${rootPage.flatName}.build, children:[

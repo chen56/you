@@ -1,42 +1,46 @@
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 
-class PageDir {
-  List<PageDir> children;
+class RouteNode {
+  List<RouteNode> children;
   Directory dir;
-  late PageDir _parent = this;
+  late RouteNode _parent = this;
 
-  PageDir({required this.dir, required this.children}) {
+  RouteNode({required this.dir, required this.children}) {
     for (var child in children) {
       child._parent = this;
     }
   }
 
-  static PageDir fromSync(Directory dir) {
+  int get level => isRoot ? 0 : _parent.level + 1;
+
+  static RouteNode fromSync(Directory dir) {
     var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => fromSync(e));
-    return PageDir(dir: dir, children: children.toList());
+    return RouteNode(dir: dir, children: children.toList());
   }
 
-  PageDir get root => isRoot ? this : _parent.root;
+  RouteNode get root => isRoot ? this : _parent.root;
 
   bool get isRoot => _parent == this;
 
   // ignore: non_constant_identifier_names
   File get page_dart => dir.childFile("page.dart");
+
   // ignore: non_constant_identifier_names
   File get layout_dart => dir.childFile("layout.dart");
 
-  String pageImportUri(String pkgName,Directory libDir) {
+  String pageImportUri(String pkgName, Directory libDir) {
     var pageDartRelativePath = path.relative(page_dart.path, from: libDir.path);
     return "package:$pkgName/$pageDartRelativePath";
   }
-  String layoutImportUri(String pkgName,Directory libDir) {
+
+  String layoutImportUri(String pkgName, Directory libDir) {
     var pageDartRelativePath = path.relative(layout_dart.path, from: libDir.path);
     return "package:$pkgName/$pageDartRelativePath";
   }
 
   String get routePath {
-    if(isRoot){
+    if (isRoot) {
       return "/";
     }
     return "/${path.relative(dir.path, from: root.dir.path)}";
@@ -52,26 +56,27 @@ class PageDir {
     var names = p.split(path.separator).where((e) => e.isNotEmpty);
     return names
         .map((e) => e
-    // ignore: unnecessary_string_escapes
-        .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
-        .replaceAll(".", "_")
-        .replaceAll("-", "_")
-        .replaceAll("&", "_")
-        .replaceAll("*", "_")
-        .replaceAll("*", "_")
-        .replaceAll("@", "_"))
+            // ignore: unnecessary_string_escapes
+            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
+            .replaceAll(".", "_")
+            .replaceAll("-", "_")
+            .replaceAll("&", "_")
+            .replaceAll("*", "_")
+            .replaceAll("*", "_")
+            .replaceAll("@", "_"))
         .join("_");
   }
-  List<PageDir> toList({
+
+  List<RouteNode> toList({
     bool includeThis = true,
-    bool Function(PageDir path)? where,
-    Comparator<PageDir>? sortBy,
+    bool Function(RouteNode path)? where,
+    Comparator<RouteNode>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<PageDir> sorted = List.from(children);
+    List<RouteNode> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -86,11 +91,11 @@ class PageDir {
     return dir.toString();
   }
 
-  PageDir? findLayoutSync() {
-    if(layout_dart.existsSync()) {
+  RouteNode? findLayoutSync() {
+    if (layout_dart.existsSync()) {
       return this;
     }
-    if(isRoot) {
+    if (isRoot) {
       return null;
     }
     return _parent.findLayoutSync();

@@ -41,6 +41,7 @@ ref:
  */
 
 typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
+// FIXME 这里api要不要:Future<PageBuilder> Function();
 typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
 class NotFoundError extends ArgumentError {

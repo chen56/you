@@ -72,113 +72,112 @@ import 'package:flutter_web/pages/notes/x.note_inside/note_test_self/page.dart' 
 import 'package:flutter_web/pages/notes/layout.dart' as notes__;
 
 
-var root = To("pages", children: [
-  To("notes", builder: notes__.layout(notes_.build), children: [
-    To("research", children: [
-      To("research_parameterized_example", builder: notes__.layout(notes_research_research_parameterized_example_.build)),
-      To("remote_view", builder: notes__.layout(notes_research_remote_view_.build)),
-      To("research_note_bash"),
-    ]),
-    To("env_info", builder: notes__.layout(notes_env_info_.build)),
-    To("layout", builder: notes__.layout(notes_layout_.build), children: [
-      To("old", children: [
-        To("layout", builder: notes__.layout(notes_layout_old_layout_.build)),
-      ]),
-      To("box_layout", children: [
-        To("constraints", builder: notes__.layout(notes_layout_box_layout_constraints_.build)),
-      ]),
-      To("responsive_design", builder: notes__.layout(notes_layout_responsive_design_.build)),
-      To("1.welcome"),
-    ]),
-    To("navigation", builder: notes__.layout(notes_navigation_.build), children: [
-      To("navigator_v1"),
-      To("navigator_v2"),
-    ]),
-    To("state", builder: notes__.layout(notes_state_.build), children: [
-      To("1.vanilla_state", builder: notes__.layout(notes_state_vanilla_state_.build)),
-      To("StatefulBuilder", builder: notes__.layout(notes_state_StatefulBuilder_.build)),
-    ]),
-    To("media&assets&file", children: [
-      To("file_desktop", builder: notes__.layout(notes_media_assets_file_file_desktop_.build)),
-      To("file_web", builder: notes__.layout(notes_media_assets_file_file_web_.build)),
-      To("assets", builder: notes__.layout(notes_media_assets_file_assets_.build)),
-    ]),
-    To("style&theming", children: [
-      To("material3", builder: notes__.layout(notes_style_theming_material3_.build)),
-      To("Material"),
-    ]),
-    To("pure_dart", children: [
-      To("dart3", builder: notes__.layout(notes_pure_dart_dart3_.build)),
-      To("async", builder: notes__.layout(notes_pure_dart_async_.build)),
-      To("safe_interface", builder: notes__.layout(notes_pure_dart_safe_interface_.build)),
-      To("execption", builder: notes__.layout(notes_pure_dart_execption_.build)),
-      To("serialization_json", builder: notes__.layout(notes_pure_dart_serialization_json_.build)),
-      To("analyzer", builder: notes__.layout(notes_pure_dart_analyzer_.build)),
-    ]),
-    To("dev", children: [
-      To("host_mirror", builder: notes__.layout(notes_dev_host_mirror_.build)),
-      To("macos_config", builder: notes__.layout(notes_dev_macos_config_.build)),
-      To("devtool", builder: notes__.layout(notes_dev_devtool_.build), children: [
-        To("vmservice", builder: notes__.layout(notes_dev_devtool_vmservice_.build)),
-      ]),
-      To("debug", builder: notes__.layout(notes_dev_debug_.build)),
-    ]),
-    To("i18n", builder: notes__.layout(notes_i18n_.build)),
-    To("thinking_in_ui", children: [
-      To("readable_html_vs_dart", builder: notes__.layout(notes_thinking_in_ui_readable_html_vs_dart_.build)),
-    ]),
-    To("x.note_inside", children: [
-      To("how_note_work", builder: notes__.layout(notes_x_note_inside_how_note_work_.build)),
-      To("note_api_thinking"),
-      To("mockup_content", builder: notes__.layout(notes_x_note_inside_mockup_content_.build)),
-      To("1.welcome", builder: notes__.layout(notes_x_note_inside_welcome_.build)),
-      To("note_test_self", builder: notes__.layout(notes_x_note_inside_note_test_self_.build), children: [
-        To("nobody", builder: notes__.layout(notes_x_note_inside_note_test_self_nobody_.build)),
-      ]),
-    ]),
-    To("widgets", children: [
-      To("specific_widgets", children: [
-        To("input", builder: notes__.layout(notes_widgets_specific_widgets_input_.build)),
-        To("webview", builder: notes__.layout(notes_widgets_specific_widgets_webview_.build)),
-        To("slider", builder: notes__.layout(notes_widgets_specific_widgets_slider_.build)),
-        To("selectable", builder: notes__.layout(notes_widgets_specific_widgets_selectable_.build)),
-        To("button", children: [
-          To("ButtonStyleButton", builder: notes__.layout(notes_widgets_specific_widgets_button_ButtonStyleButton_.build)),
-          To("FloatingActionButton", builder: notes__.layout(notes_widgets_specific_widgets_button_FloatingActionButton_.build)),
-          To("IconButton", builder: notes__.layout(notes_widgets_specific_widgets_button_IconButton_.build)),
-          To("overview", builder: notes__.layout(notes_widgets_specific_widgets_button_overview_.build)),
-        ]),
-        To("Divider"),
-        To("text", children: [
-          To("RichText", builder: notes__.layout(notes_widgets_specific_widgets_text_RichText_.build)),
-          To("Text", builder: notes__.layout(notes_widgets_specific_widgets_text_Text_.build)),
-        ]),
-        To("icon", builder: notes__.layout(notes_widgets_specific_widgets_icon_.build)),
-      ]),
-      To("container_widgets", children: [
-        To("drawer"),
-        To("Card"),
-        To("app"),
-        To("dialog"),
-        To("menu", builder: notes__.layout(notes_widgets_container_widgets_menu_.build)),
-        To("scrollable", children: [
-          To("Dismissible", builder: notes__.layout(notes_widgets_container_widgets_scrollable_Dismissible_.build)),
-          To("DraggableScrollableSheet"),
-        ]),
-        To("page_view"),
-        To("bar", builder: notes__.layout(notes_widgets_container_widgets_bar_.build)),
-      ]),
-    ]),
-    To("Improve_app", builder: notes__.layout(notes_Improve_app_.build), children: [
-      To("1.overview", builder: notes__.layout(notes_Improve_app_overview_.build)),
-      To("error_handle"),
-      To("web_optimization", builder: notes__.layout(notes_Improve_app_web_optimization_.build)),
-      To("RepaintBoundary", builder: notes__.layout(notes_Improve_app_RepaintBoundary_.build)),
-      To("event&listener&lifeycle", builder: notes__.layout(notes_Improve_app_event_listener_lifeycle_.build)),
-    ]),
-  ]),
-]);
-
+var root=To("pages" , children:[
+  To("notes" ,builder:notes__.layout(notes_.build), children:[
+    To("research" , children:[
+      To("research_parameterized_example" ,builder:notes__.layout(notes_research_research_parameterized_example_.build)) ,
+      To("remote_view" ,builder:notes__.layout(notes_research_remote_view_.build)) ,
+      To("research_note_bash" ) ,
+]),
+    To("env_info" ,builder:notes__.layout(notes_env_info_.build)) ,
+    To("layout" ,builder:notes__.layout(notes_layout_.build), children:[
+      To("old" , children:[
+        To("layout" ,builder:notes__.layout(notes_layout_old_layout_.build)) ,
+]),
+      To("box_layout" , children:[
+        To("constraints" ,builder:notes__.layout(notes_layout_box_layout_constraints_.build)) ,
+]),
+      To("responsive_design" ,builder:notes__.layout(notes_layout_responsive_design_.build)) ,
+      To("1.welcome" ) ,
+]),
+    To("navigation" ,builder:notes__.layout(notes_navigation_.build), children:[
+      To("navigator_v1" ) ,
+      To("navigator_v2" ) ,
+]),
+    To("state" ,builder:notes__.layout(notes_state_.build), children:[
+      To("1.vanilla_state" ,builder:notes__.layout(notes_state_vanilla_state_.build)) ,
+      To("StatefulBuilder" ,builder:notes__.layout(notes_state_StatefulBuilder_.build)) ,
+]),
+    To("media&assets&file" , children:[
+      To("file_desktop" ,builder:notes__.layout(notes_media_assets_file_file_desktop_.build)) ,
+      To("file_web" ,builder:notes__.layout(notes_media_assets_file_file_web_.build)) ,
+      To("assets" ,builder:notes__.layout(notes_media_assets_file_assets_.build)) ,
+]),
+    To("style&theming" , children:[
+      To("material3" ,builder:notes__.layout(notes_style_theming_material3_.build)) ,
+      To("Material" ) ,
+]),
+    To("pure_dart" , children:[
+      To("dart3" ,builder:notes__.layout(notes_pure_dart_dart3_.build)) ,
+      To("async" ,builder:notes__.layout(notes_pure_dart_async_.build)) ,
+      To("safe_interface" ,builder:notes__.layout(notes_pure_dart_safe_interface_.build)) ,
+      To("execption" ,builder:notes__.layout(notes_pure_dart_execption_.build)) ,
+      To("serialization_json" ,builder:notes__.layout(notes_pure_dart_serialization_json_.build)) ,
+      To("analyzer" ,builder:notes__.layout(notes_pure_dart_analyzer_.build)) ,
+]),
+    To("dev" , children:[
+      To("host_mirror" ,builder:notes__.layout(notes_dev_host_mirror_.build)) ,
+      To("macos_config" ,builder:notes__.layout(notes_dev_macos_config_.build)) ,
+      To("devtool" ,builder:notes__.layout(notes_dev_devtool_.build), children:[
+        To("vmservice" ,builder:notes__.layout(notes_dev_devtool_vmservice_.build)) ,
+]),
+      To("debug" ,builder:notes__.layout(notes_dev_debug_.build)) ,
+]),
+    To("i18n" ,builder:notes__.layout(notes_i18n_.build)) ,
+    To("thinking_in_ui" , children:[
+      To("readable_html_vs_dart" ,builder:notes__.layout(notes_thinking_in_ui_readable_html_vs_dart_.build)) ,
+]),
+    To("x.note_inside" , children:[
+      To("how_note_work" ,builder:notes__.layout(notes_x_note_inside_how_note_work_.build)) ,
+      To("note_api_thinking" ) ,
+      To("mockup_content" ,builder:notes__.layout(notes_x_note_inside_mockup_content_.build)) ,
+      To("1.welcome" ,builder:notes__.layout(notes_x_note_inside_welcome_.build)) ,
+      To("note_test_self" ,builder:notes__.layout(notes_x_note_inside_note_test_self_.build), children:[
+        To("nobody" ,builder:notes__.layout(notes_x_note_inside_note_test_self_nobody_.build)) ,
+]),
+]),
+    To("widgets" , children:[
+      To("specific_widgets" , children:[
+        To("input" ,builder:notes__.layout(notes_widgets_specific_widgets_input_.build)) ,
+        To("webview" ,builder:notes__.layout(notes_widgets_specific_widgets_webview_.build)) ,
+        To("slider" ,builder:notes__.layout(notes_widgets_specific_widgets_slider_.build)) ,
+        To("selectable" ,builder:notes__.layout(notes_widgets_specific_widgets_selectable_.build)) ,
+        To("button" , children:[
+          To("ButtonStyleButton" ,builder:notes__.layout(notes_widgets_specific_widgets_button_ButtonStyleButton_.build)) ,
+          To("FloatingActionButton" ,builder:notes__.layout(notes_widgets_specific_widgets_button_FloatingActionButton_.build)) ,
+          To("IconButton" ,builder:notes__.layout(notes_widgets_specific_widgets_button_IconButton_.build)) ,
+          To("overview" ,builder:notes__.layout(notes_widgets_specific_widgets_button_overview_.build)) ,
+]),
+        To("Divider" ) ,
+        To("text" , children:[
+          To("RichText" ,builder:notes__.layout(notes_widgets_specific_widgets_text_RichText_.build)) ,
+          To("Text" ,builder:notes__.layout(notes_widgets_specific_widgets_text_Text_.build)) ,
+]),
+        To("icon" ,builder:notes__.layout(notes_widgets_specific_widgets_icon_.build)) ,
+]),
+      To("container_widgets" , children:[
+        To("drawer" ) ,
+        To("Card" ) ,
+        To("app" ) ,
+        To("dialog" ) ,
+        To("menu" ,builder:notes__.layout(notes_widgets_container_widgets_menu_.build)) ,
+        To("scrollable" , children:[
+          To("Dismissible" ,builder:notes__.layout(notes_widgets_container_widgets_scrollable_Dismissible_.build)) ,
+          To("DraggableScrollableSheet" ) ,
+]),
+        To("page_view" ) ,
+        To("bar" ,builder:notes__.layout(notes_widgets_container_widgets_bar_.build)) ,
+]),
+]),
+    To("Improve_app" ,builder:notes__.layout(notes_Improve_app_.build), children:[
+      To("1.overview" ,builder:notes__.layout(notes_Improve_app_overview_.build)) ,
+      To("error_handle" ) ,
+      To("web_optimization" ,builder:notes__.layout(notes_Improve_app_web_optimization_.build)) ,
+      To("RepaintBoundary" ,builder:notes__.layout(notes_Improve_app_RepaintBoundary_.build)) ,
+      To("event&listener&lifeycle" ,builder:notes__.layout(notes_Improve_app_event_listener_lifeycle_.build)) ,
+]),
+]),
+]) ;
 
 final Routes routes=Routes();
 

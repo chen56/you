@@ -29,7 +29,8 @@ main(List<String> args) async {
   var runner = CommandRunner("note", "you page tools.");
   runner.addCommand(
     Cmd_gen(fs: fs)
-      ..addSubcommand(Cmd_gen_all(fs: fs))..addSubcommand(Cmd_gen_routes_g_dart(fs: fs)),
+      ..addSubcommand(Cmd_gen_all(fs: fs))
+      ..addSubcommand(Cmd_gen_routes_g_dart(fs: fs)),
   );
 
   await runner.run(args);
@@ -38,22 +39,24 @@ main(List<String> args) async {
 class CliSystem {
   CliSystem({required this.pkgDir})
       : fs = pkgDir.fileSystem,
-        pubspec = Pubspec.parseFileSync(pkgDir.childFile("pubspec.yaml"));
+        pubspec = Pubspec.parseFileSync(pkgDir.childFile("pubspec.yaml"))
+      ;
 
   Directory pkgDir;
   FileSystem fs;
   Pubspec pubspec;
 
-  Directory get pagesDir => pkgDir.childDirectory(_PAGES_ROOT);
+  RouteNode get routeRoot=> RouteNode.fromSync(routeDir);
 
-  Directory get notesDir => pkgDir.childDirectory(_NOTES_ROOT);
+  Directory get routeDir => pkgDir.childDirectory(_PAGES_ROOT);
+
+  Directory get notesRouteDir => pkgDir.childDirectory(_NOTES_ROOT);
 
   Directory get libDir => pkgDir.childDirectory(_LIB_ROOT);
 
   Stream<PageLib> pages() {
     var noteRootDir = pkgDir.childDirectory(_NOTES_ROOT);
-    return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) =>
-        PageLib(
+    return _PAGE_GLOB.listFileSystem(fs, root: noteRootDir.path).where((e) => e is File).map((e) => PageLib(
           file: e as File,
           pkgName: pubspec.name,
           pkgDir: pkgDir,
@@ -104,6 +107,8 @@ class Cmd_gen_routes_g_dart extends Command {
 
   Cmd_gen_routes_g_dart.libMode({
     required this.fs,
+    required this.async,
+    required this.dir,
   }) : libMode = true;
 
   bool libMode;
@@ -121,29 +126,31 @@ class Cmd_gen_routes_g_dart extends Command {
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
-  String _builderExpression(PageDir node) {
+  String builderExpression(RouteNode node) {
     if (!node.page_dart.existsSync()) {
       return '';
     }
     String builder = '${node.flatName}_.build';
-    PageDir? layout = node.findLayoutSync();
+    RouteNode? layout = node.findLayoutSync();
     if (layout != null) {
       builder = "${layout.flatName}__.layout($builder)";
     }
     if (async) {
+      // return '()async{ await ${node.flatName}_.loadLibrary(); await ${node.flatName}__.loadLibrary(); return ${node.flatName}__.layout(${node.flatName}_.build); }';
       return '(context,print)async=> await ${node.flatName}_.loadLibrary().then((_) => $builder(context,print))';
     } else {
       return builder;
     }
   }
 
-  String _genRouteTreeCode(PageDir node) {
-    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:${_builderExpression(node)}";
+  String _genRouteTreeCode(RouteNode node) {
+    String buildArg = !node.page_dart.existsSync() ? "" : ",${async ? "builderAsync" : "builder"}:${builderExpression(node)}";
+    String padding = "".padLeft(node.level, '  ');
     if (node.children.isEmpty) {
-      return '''To("${node.dir.basename}" $buildArg)''';
+      return '''${padding}To("${node.dir.basename}" $buildArg) ''';
     }
-    return '''To("${node.dir.basename}" $buildArg, children:[
-${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
+    return '''${padding}To("${node.dir.basename}" $buildArg, children:[
+${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
 ])''';
   }
 
@@ -153,15 +160,15 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
     if (!libMode) {
       String dirOpt = argResults!["dir"];
       dir = fs.directory(path.absolute(dirOpt));
-      if (!dir.existsSync()) {
-        throw AssertionError("【--dir $dir】 not exists");
-      }
       async = argResults!.flag("async");
+    }
+    if (!dir.existsSync()) {
+      throw AssertionError("【--dir $dir】 not exists");
     }
 
     CliSystem cli = CliSystem(pkgDir: fs.directory(dir));
-    var rootRoute = PageDir.fromSync(cli.pagesDir);
-    Iterable<PageDir> pageDirs = rootRoute.toList();
+    var rootRoute = RouteNode.fromSync(cli.routeDir);
+    Iterable<RouteNode> pageDirs = rootRoute.toList();
 
     var nameMaxLen = pageDirs.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
     pageDirs.where((e) => e.page_dart.existsSync()).map((pageDir) {
@@ -175,8 +182,7 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
       return """  final $varWithPadding = root.find("${routeDir.routePath}")! ;  """;
     }).join("\n");
 
-    Library pageImports = Library((b) =>
-    b
+    Library pageImports = Library((b) => b
       ..directives.addAll(
         pageDirs.where((e) => e.page_dart.existsSync()).map((lib) {
           if (async) {
@@ -187,8 +193,7 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
         }),
       ));
     Library layoutImports = Library(
-          (b) =>
-      b
+      (b) => b
         ..directives.addAll(
           pageDirs.where((e) => e.layout_dart.existsSync()).map((lib) {
             if (async) {
@@ -205,7 +210,8 @@ ${node.children.map((e) => _genRouteTreeCode(e)).map((e) => "$e,").join("")}
     String pageImportsCode = fmt.format('${pageImports.accept(dartEmitter)}');
     String layoutImportsCode = fmt.format('${layoutImports.accept(dartEmitter)}');
 
-    String routeConfigCode = fmt.format("var root=${_genRouteTreeCode(rootRoute)} ;");
+    String routeConfigCode = "var root=${_genRouteTreeCode(rootRoute)} ;";
+    // routeConfigCode = fmt.format("var root=${_genRouteTreeCode(rootRoute)} ;");
 
     String allCode = """
 // Generated by https://github.com/chen56/you
@@ -256,8 +262,7 @@ class PageLib {
     required this.file,
     required this.pkgName,
     required this.pkgDir,
-  })
-      : fs = file.fileSystem,
+  })  : fs = file.fileSystem,
         libDir = pkgDir.childDirectory(_LIB_ROOT),
         pagesRootDir = pkgDir.childDirectory(_PAGES_ROOT);
 
@@ -280,9 +285,8 @@ class PageLib {
     }
     var names = dir.split(path.separator).where((e) => e.isNotEmpty);
     return names
-        .map((e) =>
-        e
-        // ignore: unnecessary_string_escapes
+        .map((e) => e
+            // ignore: unnecessary_string_escapes
             .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
             .replaceAll(".", "_")
             .replaceAll("-", "_")
