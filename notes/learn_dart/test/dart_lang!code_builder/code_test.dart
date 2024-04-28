@@ -6,6 +6,8 @@ import 'package:test/test.dart';
 
 void main() {
   group("范型", () {
-    test('list', () {});
+    test('list', () {
+
+    });
   });
 }

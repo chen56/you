@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
@@ -8,40 +10,40 @@ import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 import 'package:you_cli/src/yaml.dart';
 
-// ignore: non_constant_identifier_names
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
-
 class YouCli {
   YouCli({required Directory projectDir})
-      : projectDir = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
+      : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
   static const Reference routeTypeDefault = Reference("To", "package:you_flutter/src/router_core.dart");
 
-  final Directory projectDir;
+  final Directory dir_project;
   final FileSystem fs;
   Pubspec? _pubspec;
   RouteNode? _rootRoute;
   AnalysisSession? _session;
 
-  Directory get routeDir => projectDir.childDirectory("lib/routes");
+  Directory get dir_lib => dir_project.childDirectory("lib");
 
-  Directory get notesRouteDir => projectDir.childDirectory("lib/routes/notes");
+  Directory get dir_routes => dir_project.childDirectory("lib/routes");
 
-  Directory get libDir => projectDir.childDirectory("lib");
+  Directory get dir_notes => dir_project.childDirectory("lib/routes/notes");
 
-  File get pubspecYamlFile => projectDir.childFile("pubspec.yaml");
+  File get file_routes_g_dart => dir_project.childFile("lib/routes.g.dart");
 
-  Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(pubspecYamlFile);
+  File get file_pubspec_yaml => dir_project.childFile("pubspec.yaml");
 
-  RouteNode get rootRoute => _rootRoute ??= RouteNode.fromSync(routeDir);
+  Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
+
+  RouteNode get rootRoute => _rootRoute ??= RouteNode.fromSync(dir_routes);
 
   AnalysisSession get analysisSession {
     if (_session != null) {
       return _session!;
     }
     var collection = AnalysisContextCollection(
-      includedPaths: [libDir.path],
+      includedPaths: [dir_lib.path],
       resourceProvider: PhysicalResourceProvider(),
     );
     return _session = collection.contexts[0].currentSession;
@@ -116,10 +118,8 @@ class RouteNode {
 
   bool get isRoot => _parent == this;
 
-  // ignore: non_constant_identifier_names
   File get page_dart => dir.childFile("page.dart");
 
-  // ignore: non_constant_identifier_names
   File get layout_dart => dir.childFile("layout.dart");
 
   String pageImportUri(String pkgName, Directory libDir) {
