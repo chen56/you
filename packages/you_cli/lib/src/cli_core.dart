@@ -1,3 +1,9 @@
+import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
+import 'package:analyzer/dart/analysis/results.dart';
+import 'package:analyzer/dart/analysis/session.dart';
+import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/file_system/physical_file_system.dart';
+import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 import 'package:you_cli/src/yaml.dart';
@@ -6,12 +12,17 @@ import 'package:you_cli/src/yaml.dart';
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 
 class YouCli {
-  YouCli({required this.projectDir}) : fs = projectDir.fileSystem;
+  YouCli({required Directory projectDir})
+      : projectDir = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
+        fs = projectDir.fileSystem;
+
+  static const Reference routeTypeDefault = Reference("To", "package:you_flutter/src/router_core.dart");
 
   final Directory projectDir;
   final FileSystem fs;
   Pubspec? _pubspec;
   RouteNode? _rootRoute;
+  AnalysisSession? _session;
 
   Directory get routeDir => projectDir.childDirectory("lib/routes");
 
@@ -24,6 +35,60 @@ class YouCli {
   Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(pubspecYamlFile);
 
   RouteNode get rootRoute => _rootRoute ??= RouteNode.fromSync(routeDir);
+
+  AnalysisSession get analysisSession {
+    if (_session != null) {
+      return _session!;
+    }
+    var collection = AnalysisContextCollection(
+      includedPaths: [libDir.path],
+      resourceProvider: PhysicalResourceProvider(),
+    );
+    return _session = collection.contexts[0].currentSession;
+  }
+
+  Future<({FunctionElement? layout, RouteTypeMeta? meta})> analysisLayout(File file) async {
+    var result = await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult;
+    FunctionElement? layoutElement = result.element.definingCompilationUnit.functions.where((e) => e.name == "layout2").firstOrNull;
+    if (layoutElement == null) {
+      return (layout: null, meta: null);
+    }
+    var findMeta = layoutElement.metadata.map((e) => e.computeConstantValue()).where((result) {
+      if (result?.type?.getDisplayString(withNullability: false) != "LayoutMeta") {
+        return false;
+      }
+      return result?.type?.element?.library?.identifier == routeTypeDefault.url;
+    }).firstOrNull;
+    if (findMeta == null) {
+      return (layout: layoutElement, meta: null);
+    }
+
+    var routeTypeElement = findMeta.getField("routeType")?.toTypeValue();
+    if (routeTypeElement == null) {
+      return (layout: layoutElement, meta: RouteTypeMeta(toType: routeTypeDefault));
+    }
+
+    var url = routeTypeElement.element?.library?.identifier;
+    var symbol = routeTypeElement.getDisplayString(withNullability: false);
+
+    if (symbol == "") {
+      return (layout: layoutElement, meta: RouteTypeMeta(toType: routeTypeDefault));
+    }
+
+    return (layout: layoutElement, meta: RouteTypeMeta(toType: refer(symbol, url)));
+  }
+}
+
+class RouteTypeMeta {
+  Reference toType;
+
+  RouteTypeMeta({required this.toType});
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "<RouteTypeMeta> toType:$toType";
+  }
 }
 
 class RouteNode {

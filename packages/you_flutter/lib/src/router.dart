@@ -49,11 +49,6 @@ class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
 }
 
-extension UriExt on Uri {
-  /// Creates a new `Uri` based on this one, but with some parts replaced.
-  Uri join(String child) => replace(pathSegments: ["", ...pathSegments, child]);
-}
-
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
 ///   path base: https://example.com/product/1
 ///   fragment base: https://example.com/base-harf/#/product/1

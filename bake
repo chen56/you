@@ -98,7 +98,7 @@ _run() {
   local pkg=${1:?required project arg,Usage: _run_at_pkg <pkg>}
   shift
   local cmd="${1}"
-  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
+#  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
 
   # 进入工作目录
   local workdir="${_pkgs[$pkg]}"
@@ -183,7 +183,7 @@ flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
 flutter_web.gen()      { #_run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
-                         _run root dart run packages/you_cli/bin/cli.dart gen routes.g.dart  --dir notes/flutter_web/  --async
+                         _run root dart run packages/you_cli/bin/cli.dart gen routes.g.dart  --dir notes/flutter_web/ # --async
 }
 flutter_web.dev()      { flutter_web.dev_html ; }
 flutter_web.build()    { flutter_web.build_html ;}

@@ -200,7 +200,6 @@ class FindCellAdd {
 
 class CodeAnalyzer {
   final _resourceProvider = MemoryResourceProvider();
-  late final AnalysisContextCollection collection;
   late final AnalysisSession session;
   final ({String path, String content}) _defaultInitLib = (
     path: "/lib/note.dart",
@@ -225,7 +224,7 @@ class Cell{
       root: _newFolder(sdkPath),
     );
 
-    collection = AnalysisContextCollection(
+    var collection = AnalysisContextCollection(
       includedPaths: libs.map((e) => e.path).toList(),
       resourceProvider: _resourceProvider,
       sdkPath: sdkPath,
@@ -235,17 +234,17 @@ class Cell{
 
   Future<ResolvedLibraryResult> getResolvedLibrary({required String path, required String content}) async {
     var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
-    return collection.contexts[0].currentSession.getResolvedLibrary(file.path) as ResolvedLibraryResult;
+    return session.getResolvedLibrary(file.path) as ResolvedLibraryResult;
   }
 
   SomeParsedUnitResult getParsedUnit({required String path, required String content}) {
     var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
-    return collection.contexts[0].currentSession.getParsedUnit(file.path);
+    return session.getParsedUnit(file.path);
   }
 
   Future<SomeResolvedUnitResult> getResolvedUnit({required String path, required String content}) {
     var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
-    return collection.contexts[0].currentSession.getResolvedUnit(file.path);
+    return session.getResolvedUnit(file.path);
   }
 
   Folder _newFolder(String path) {

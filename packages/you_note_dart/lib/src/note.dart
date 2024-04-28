@@ -19,9 +19,10 @@ base class ToNote extends To {
   final NoteBuilder? _builder;
   final NoteLayoutBuilder? _layout;
 
-  ToNote(super.part, NoteBuilder? builder, NoteLayoutBuilder? layout)
+  ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
       : _builder = builder,
-        _layout = layout;
+        _layout = layout,
+        super(children: children);
 
   Widget? build(BuildContext context, ToUri uri) {
     if (_builder == null) {

@@ -8,7 +8,7 @@ import 'package:path/path.dart' as path;
 void main() {
   test('analyzer', () {
     var x = analyzer_util.parseFile(
-        path: path.absolute("test/pub_lib_core/analyzer/analyzer_parse_test.dart"),
+        path: path.absolute("test/basic_lib/analyzer/analyzer_parse_test.dart"),
         featureSet: FeatureSet.latestLanguageVersion());
     print(x);
   });
