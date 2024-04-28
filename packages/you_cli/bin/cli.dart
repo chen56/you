@@ -82,6 +82,10 @@ class Cmd_gen_routes_g_dart extends Command {
   final description = "gen routes.g.dart .";
   final FileSystem fs;
 
+  YouCli? _cli;
+
+  YouCli get cli => _cli != null ? _cli! : _cli = YouCli(projectDir: dir);
+
   // example:
   //   - async page:
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
@@ -96,13 +100,14 @@ class Cmd_gen_routes_g_dart extends Command {
     if (layout != null) {
       builder = code.refer("${layout.flatName}__").property("layout").call([builder]);
     }
+
     if (async) {
       return code.Method((b) => b
         ..modifier = MethodModifier.async
         ..body = code.Block.of(
           [
             code.refer("${node.flatName}_").property("loadLibrary").call([]).awaited.statement,
-            if(layout != null) code.refer("${layout.flatName}__").property("loadLibrary").call([]).awaited.statement,
+            if (layout != null) code.refer("${layout.flatName}__").property("loadLibrary").call([]).awaited.statement,
             builder.returned.statement,
           ],
         )).closure;
@@ -112,15 +117,15 @@ class Cmd_gen_routes_g_dart extends Command {
   }
 
   String _genRouteTreeCode(RouteNode node) {
-    code.Expression? builder=builderExpression(node);
-    String builderStr=builder==null?"":builder.accept(code.DartEmitter()).toString().split("\n").join();
+    code.Expression? builder = builderExpression(node);
+    String builderStr = builder == null ? "" : builder.accept(code.DartEmitter()).toString().split("\n").join();
 
     String buildArg = !node.page_dart.existsSync() ? "" : ",builder:$builderStr";
     String padding = "".padLeft(node.level, '  ');
     if (node.children.isEmpty) {
-      return '''${padding}To${async?".lazy":""}("${node.dir.basename}" $buildArg) ''';
+      return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg) ''';
     }
-    return '''${padding}To${async?".lazy":""}("${node.dir.basename}" $buildArg, children:[
+    return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg, children:[
 ${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
 $padding])''';
   }
@@ -137,7 +142,6 @@ $padding])''';
       throw AssertionError("【--dir $dir】 not exists");
     }
 
-    YouCli cli = YouCli(projectDir: fs.directory(dir));
     var rootRoute = RouteNode.fromSync(cli.routeDir);
     Iterable<RouteNode> pageDirs = rootRoute.toList();
 
