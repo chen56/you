@@ -1,4 +1,5 @@
 import 'package:checks/checks.dart';
+import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:test/test.dart';
@@ -10,10 +11,7 @@ void main() {
       FileSystem fs=LocalFileSystem();
       YouCli cli = YouCli(projectDir: fs.directory("../../notes/flutter_web/lib"));
       var result  =await cli.analysisLayout(fs.file("../../notes/flutter_web/lib/routes/notes/layout.dart"));
-      print("sssss $result");
-      check(result.toType!.type.symbol).equals("ToNote");
-
+      check(result.toType!.type).equals(refer("ToNote","package:you_note_dart/note.dart"));
     });
-
   });
 }

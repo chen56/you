@@ -7,24 +7,20 @@ import 'package:you_note_dart/src/note.dart';
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容
 final class NoteLayoutStyle1 extends StatelessWidget {
-  final NoteBuilder builder;
+  final Cell cell;
   final ToUri uri;
 
-  NoteLayoutStyle1({super.key, required this.uri, required this.builder});
+  NoteLayoutStyle1({super.key, required this.uri, required this.cell});
 
   @override
   Widget build(BuildContext context) {
-    // 收集笔记页面内容
-    Cell rootCell = Cell.empty();
-    builder(context, rootCell);
-
     return Scaffold(
       body: SafeArea(
         child: SelectionArea(
           /// Watch是you_flutter的state管理组件， 被其包裹的状态可以被观测刷新(ref: Cell._contents = [].signal())
           child: Watch((context) {
             // contents是收集到调用print(xx)的所有结果
-            var pageContents = rootCell.toList().expand((cell) sync* {
+            var pageContents = cell.toList().expand((cell) sync* {
               for (var content in cell.contents) {
                 yield Align(
                   alignment: Alignment.centerLeft,

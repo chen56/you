@@ -1,21 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 import 'package:you_note_dart/note.dart';
 
 final class NoteLayoutDefault extends StatelessWidget {
-  final NoteBuilder builder;
+  final Cell rootCell;
   final ToUri uri;
 
-  const NoteLayoutDefault({super.key, required this.uri, required this.builder});
+  const NoteLayoutDefault({super.key, required this.uri, required this.rootCell});
 
   @override
   Widget build(BuildContext context) {
-    // collect note page contents(from print(xxx))
-    Cell rootCell = Cell.empty();
-    builder(context, rootCell);
-
     return Scaffold(
       body: SafeArea(
         child: SelectionArea(

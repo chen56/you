@@ -20,13 +20,13 @@ void main() {
       ..writeAsString("""name: app""");
   });
   group("Cmd_gen_routes_g_dart", () {
-    void checkBuilder(String? expected, {required bool async}) {
+    Future<void> checkBuilder(String? expected, {required bool async}) async {
       Cmd_gen_routes_g_dart cmd = Cmd_gen_routes_g_dart.libMode(fs: fs, async: async, dir: fs.directory("/app/lib/routes"));
-      var result = cmd.builderExpression(cli.rootRoute);
+      var result = cmd.builderExpression(await cli.rootRoute);
       if (expected == null) {
         check(result).isNull();
       } else {
-        check(cmd.builderExpression(cli.rootRoute)!.accept(DartEmitter()).toString().split("\n").join()).equals(expected);
+        check(cmd.builderExpression(await cli.rootRoute)!.accept(DartEmitter()).toString().split("\n").join()).equals(expected);
       }
     }
 

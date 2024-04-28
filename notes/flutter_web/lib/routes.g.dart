@@ -6,6 +6,8 @@
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/router.dart';
 import 'package:flutter_web/routes/notes/page.dart' as notes_;
 import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as notes_research_parameterized_;
 import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as notes_research_remote_view_;
@@ -60,111 +62,110 @@ import 'package:flutter_web/routes/notes/Improve_app/web_optimization/page.dart'
 import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' as notes_Improve_app_RepaintBoundary_;
 import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as notes_Improve_app_event_listener_lifeycle_;
 import 'package:flutter_web/routes/notes/layout.dart' as notes__;
-import 'package:you_flutter/router.dart';
 
 var root = To("routes", children: [
-  To("notes", builder: notes__.layout(notes_.build), children: [
-    To("research", children: [
-      To("bash_note"),
-      To("parameterized", builder: notes__.layout(notes_research_parameterized_.build)),
-      To("remote_view", builder: notes__.layout(notes_research_remote_view_.build)),
+  ToNote("notes", layout: notes__.layout, builder: notes_.build, children: [
+    ToNote("research", children: [
+      ToNote("bash_note"),
+      ToNote("parameterized", builder: notes_research_parameterized_.build),
+      ToNote("remote_view", builder: notes_research_remote_view_.build),
     ]),
-    To("env_info", builder: notes__.layout(notes_env_info_.build)),
-    To("layout", builder: notes__.layout(notes_layout_.build), children: [
-      To("old", children: [
-        To("layout", builder: notes__.layout(notes_layout_old_layout_.build)),
+    ToNote("env_info", builder: notes_env_info_.build),
+    ToNote("layout", builder: notes_layout_.build, children: [
+      ToNote("old", children: [
+        ToNote("layout", builder: notes_layout_old_layout_.build),
       ]),
-      To("box_layout", children: [
-        To("constraints", builder: notes__.layout(notes_layout_box_layout_constraints_.build)),
+      ToNote("box_layout", children: [
+        ToNote("constraints", builder: notes_layout_box_layout_constraints_.build),
       ]),
-      To("responsive_design", builder: notes__.layout(notes_layout_responsive_design_.build)),
-      To("1.welcome"),
+      ToNote("responsive_design", builder: notes_layout_responsive_design_.build),
+      ToNote("1.welcome"),
     ]),
-    To("navigation", builder: notes__.layout(notes_navigation_.build), children: [
-      To("navigator_v1"),
-      To("navigator_v2"),
+    ToNote("navigation", builder: notes_navigation_.build, children: [
+      ToNote("navigator_v1"),
+      ToNote("navigator_v2"),
     ]),
-    To("state", builder: notes__.layout(notes_state_.build), children: [
-      To("1.vanilla_state", builder: notes__.layout(notes_state_vanilla_state_.build)),
-      To("StatefulBuilder", builder: notes__.layout(notes_state_StatefulBuilder_.build)),
+    ToNote("state", builder: notes_state_.build, children: [
+      ToNote("1.vanilla_state", builder: notes_state_vanilla_state_.build),
+      ToNote("StatefulBuilder", builder: notes_state_StatefulBuilder_.build),
     ]),
-    To("media&assets&file", children: [
-      To("file_desktop", builder: notes__.layout(notes_media_assets_file_file_desktop_.build)),
-      To("file_web", builder: notes__.layout(notes_media_assets_file_file_web_.build)),
-      To("assets", builder: notes__.layout(notes_media_assets_file_assets_.build)),
+    ToNote("media&assets&file", children: [
+      ToNote("file_desktop", builder: notes_media_assets_file_file_desktop_.build),
+      ToNote("file_web", builder: notes_media_assets_file_file_web_.build),
+      ToNote("assets", builder: notes_media_assets_file_assets_.build),
     ]),
-    To("style&theming", children: [
-      To("material3", builder: notes__.layout(notes_style_theming_material3_.build)),
-      To("Material"),
+    ToNote("style&theming", children: [
+      ToNote("material3", builder: notes_style_theming_material3_.build),
+      ToNote("Material"),
     ]),
-    To("pure_dart", children: [
-      To("dart3", builder: notes__.layout(notes_pure_dart_dart3_.build)),
-      To("async", builder: notes__.layout(notes_pure_dart_async_.build)),
-      To("safe_interface", builder: notes__.layout(notes_pure_dart_safe_interface_.build)),
-      To("execption", builder: notes__.layout(notes_pure_dart_execption_.build)),
-      To("serialization_json", builder: notes__.layout(notes_pure_dart_serialization_json_.build)),
-      To("analyzer", builder: notes__.layout(notes_pure_dart_analyzer_.build)),
+    ToNote("pure_dart", children: [
+      ToNote("dart3", builder: notes_pure_dart_dart3_.build),
+      ToNote("async", builder: notes_pure_dart_async_.build),
+      ToNote("safe_interface", builder: notes_pure_dart_safe_interface_.build),
+      ToNote("execption", builder: notes_pure_dart_execption_.build),
+      ToNote("serialization_json", builder: notes_pure_dart_serialization_json_.build),
+      ToNote("analyzer", builder: notes_pure_dart_analyzer_.build),
     ]),
-    To("dev", children: [
-      To("host_mirror", builder: notes__.layout(notes_dev_host_mirror_.build)),
-      To("macos_config", builder: notes__.layout(notes_dev_macos_config_.build)),
-      To("devtool", builder: notes__.layout(notes_dev_devtool_.build), children: [
-        To("vmservice", builder: notes__.layout(notes_dev_devtool_vmservice_.build)),
+    ToNote("dev", children: [
+      ToNote("host_mirror", builder: notes_dev_host_mirror_.build),
+      ToNote("macos_config", builder: notes_dev_macos_config_.build),
+      ToNote("devtool", builder: notes_dev_devtool_.build, children: [
+        ToNote("vmservice", builder: notes_dev_devtool_vmservice_.build),
       ]),
-      To("debug", builder: notes__.layout(notes_dev_debug_.build)),
+      ToNote("debug", builder: notes_dev_debug_.build),
     ]),
-    To("i18n", builder: notes__.layout(notes_i18n_.build)),
-    To("thinking_in_ui", children: [
-      To("readable_html_vs_dart", builder: notes__.layout(notes_thinking_in_ui_readable_html_vs_dart_.build)),
+    ToNote("i18n", builder: notes_i18n_.build),
+    ToNote("thinking_in_ui", children: [
+      ToNote("readable_html_vs_dart", builder: notes_thinking_in_ui_readable_html_vs_dart_.build),
     ]),
-    To("x.note_inside", children: [
-      To("how_note_work", builder: notes__.layout(notes_x_note_inside_how_note_work_.build)),
-      To("note_api_thinking"),
-      To("mockup_content", builder: notes__.layout(notes_x_note_inside_mockup_content_.build)),
-      To("1.welcome", builder: notes__.layout(notes_x_note_inside_welcome_.build)),
-      To("note_test_self", builder: notes__.layout(notes_x_note_inside_note_test_self_.build), children: [
-        To("nobody", builder: notes__.layout(notes_x_note_inside_note_test_self_nobody_.build)),
+    ToNote("x.note_inside", children: [
+      ToNote("how_note_work", builder: notes_x_note_inside_how_note_work_.build),
+      ToNote("note_api_thinking"),
+      ToNote("mockup_content", builder: notes_x_note_inside_mockup_content_.build),
+      ToNote("1.welcome", builder: notes_x_note_inside_welcome_.build),
+      ToNote("note_test_self", builder: notes_x_note_inside_note_test_self_.build, children: [
+        ToNote("nobody", builder: notes_x_note_inside_note_test_self_nobody_.build),
       ]),
     ]),
-    To("widgets", children: [
-      To("specific_widgets", children: [
-        To("input", builder: notes__.layout(notes_widgets_specific_widgets_input_.build)),
-        To("webview", builder: notes__.layout(notes_widgets_specific_widgets_webview_.build)),
-        To("slider", builder: notes__.layout(notes_widgets_specific_widgets_slider_.build)),
-        To("selectable", builder: notes__.layout(notes_widgets_specific_widgets_selectable_.build)),
-        To("button", children: [
-          To("ButtonStyleButton", builder: notes__.layout(notes_widgets_specific_widgets_button_ButtonStyleButton_.build)),
-          To("FloatingActionButton", builder: notes__.layout(notes_widgets_specific_widgets_button_FloatingActionButton_.build)),
-          To("IconButton", builder: notes__.layout(notes_widgets_specific_widgets_button_IconButton_.build)),
-          To("overview", builder: notes__.layout(notes_widgets_specific_widgets_button_overview_.build)),
+    ToNote("widgets", children: [
+      ToNote("specific_widgets", children: [
+        ToNote("input", builder: notes_widgets_specific_widgets_input_.build),
+        ToNote("webview", builder: notes_widgets_specific_widgets_webview_.build),
+        ToNote("slider", builder: notes_widgets_specific_widgets_slider_.build),
+        ToNote("selectable", builder: notes_widgets_specific_widgets_selectable_.build),
+        ToNote("button", children: [
+          ToNote("ButtonStyleButton", builder: notes_widgets_specific_widgets_button_ButtonStyleButton_.build),
+          ToNote("FloatingActionButton", builder: notes_widgets_specific_widgets_button_FloatingActionButton_.build),
+          ToNote("IconButton", builder: notes_widgets_specific_widgets_button_IconButton_.build),
+          ToNote("overview", builder: notes_widgets_specific_widgets_button_overview_.build),
         ]),
-        To("Divider"),
-        To("text", children: [
-          To("RichText", builder: notes__.layout(notes_widgets_specific_widgets_text_RichText_.build)),
-          To("Text", builder: notes__.layout(notes_widgets_specific_widgets_text_Text_.build)),
+        ToNote("Divider"),
+        ToNote("text", children: [
+          ToNote("RichText", builder: notes_widgets_specific_widgets_text_RichText_.build),
+          ToNote("Text", builder: notes_widgets_specific_widgets_text_Text_.build),
         ]),
-        To("icon", builder: notes__.layout(notes_widgets_specific_widgets_icon_.build)),
+        ToNote("icon", builder: notes_widgets_specific_widgets_icon_.build),
       ]),
-      To("container_widgets", children: [
-        To("drawer"),
-        To("Card"),
-        To("app"),
-        To("dialog"),
-        To("menu", builder: notes__.layout(notes_widgets_container_widgets_menu_.build)),
-        To("scrollable", children: [
-          To("Dismissible", builder: notes__.layout(notes_widgets_container_widgets_scrollable_Dismissible_.build)),
-          To("DraggableScrollableSheet"),
+      ToNote("container_widgets", children: [
+        ToNote("drawer"),
+        ToNote("Card"),
+        ToNote("app"),
+        ToNote("dialog"),
+        ToNote("menu", builder: notes_widgets_container_widgets_menu_.build),
+        ToNote("scrollable", children: [
+          ToNote("Dismissible", builder: notes_widgets_container_widgets_scrollable_Dismissible_.build),
+          ToNote("DraggableScrollableSheet"),
         ]),
-        To("page_view"),
-        To("bar", builder: notes__.layout(notes_widgets_container_widgets_bar_.build)),
+        ToNote("page_view"),
+        ToNote("bar", builder: notes_widgets_container_widgets_bar_.build),
       ]),
     ]),
-    To("Improve_app", builder: notes__.layout(notes_Improve_app_.build), children: [
-      To("1.overview", builder: notes__.layout(notes_Improve_app_overview_.build)),
-      To("error_handle"),
-      To("web_optimization", builder: notes__.layout(notes_Improve_app_web_optimization_.build)),
-      To("RepaintBoundary", builder: notes__.layout(notes_Improve_app_RepaintBoundary_.build)),
-      To("event&listener&lifeycle", builder: notes__.layout(notes_Improve_app_event_listener_lifeycle_.build)),
+    ToNote("Improve_app", builder: notes_Improve_app_.build, children: [
+      ToNote("1.overview", builder: notes_Improve_app_overview_.build),
+      ToNote("error_handle"),
+      ToNote("web_optimization", builder: notes_Improve_app_web_optimization_.build),
+      ToNote("RepaintBoundary", builder: notes_Improve_app_RepaintBoundary_.build),
+      ToNote("event&listener&lifeycle", builder: notes_Improve_app_event_listener_lifeycle_.build),
     ]),
   ]),
 ]);

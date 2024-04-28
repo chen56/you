@@ -91,6 +91,7 @@ class Cmd_gen_routes_g_dart extends Command {
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
+  @Deprecated("已废弃，待完成重构后删除")
   code.Expression? builderExpression(RouteNode node) {
     if (!node.file_page_dart.existsSync()) {
       return null;
@@ -98,7 +99,7 @@ class Cmd_gen_routes_g_dart extends Command {
     code.Expression builder = code.refer("${node.flatName}_").property("build");
     RouteNode? layout = node.findLayoutSync();
     if (layout != null) {
-      builder = code.refer("${layout.flatName}__").property("layout").call([builder]);
+      builder = refer("${layout.flatName}__").property("layout2").call([builder]);
     }
 
     if (async) {
@@ -118,16 +119,17 @@ class Cmd_gen_routes_g_dart extends Command {
 
   // 没用code_builder是因为它会格式化换行，很多换行，很乱。
   Future<String> _genRouteTreeCode(RouteNode node) async {
-    code.Expression? builder = builderExpression(node);
-    String builderStr = builder == null ? "" : builder.accept(code.DartEmitter()).toString().split("\n").join();
-
-    String buildArg = !node.file_page_dart.existsSync() ? "" : ",builder:$builderStr";
+    String buildArg = !node.file_page_dart.existsSync() ? "" : ",builder:${node.flatName}_.build";
+    String layoutArg = !node.file_layout_dart.existsSync() ? "" : ",layout:${node.flatName}__.layout";
     String padding = "".padLeft(node.level, '  ');
+    var toType = node.findToType();
     if (node.children.isEmpty) {
-      return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg) ''';
+      return '''$padding${_allocator.allocate(toType)}${async ? ".lazy" : ""}("${node.dir.basename}" $layoutArg $buildArg) ''';
     }
-    return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg, children:[
-${node.children.map((child) async => await _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
+    List<String> children=await  Future.wait(node.children.map((child) async => await _genRouteTreeCode(child)));
+
+    return '''$padding${_allocator.allocate(toType)}${async ? ".lazy" : ""}("${node.dir.basename}" $layoutArg $buildArg, children:[
+${children.map((e) => "$e,").join("\n")}
 $padding])''';
   }
 
@@ -142,7 +144,7 @@ $padding])''';
       throw AssertionError("【--dir $dir】 not exists");
     }
 
-    var rootRoute = cli.rootRoute;
+    var rootRoute = await cli.rootRoute;
     Iterable<RouteNode> routes = rootRoute.toList();
 
     var nameMaxLen = routes.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
@@ -183,7 +185,6 @@ $padding])''';
             }
           }),
         )
-        ..directives.add(Directive.import("package:you_flutter/router.dart"))
         ..body.add(
           Code("""
 
@@ -200,8 +201,9 @@ $newRoutes
 
     var fmt = DartFormatter(pageWidth: 200);
     var dartEmitter = DartEmitter(allocator: _allocator, orderDirectives: false, useNullSafetySyntax: true);
-    var allCode = fmt.format('${all.accept(dartEmitter)}');
-    _log("gen: ${cli.file_routes_g_dart.path}");
+    var allCode ='${all.accept(dartEmitter)}';
+    _log("gen: ${cli.file_routes_g_dart.path} : $allCode");
+    allCode = fmt.format(allCode);
     await cli.file_routes_g_dart.writeAsString(allCode);
     // 暂时不格式化，因为要保持变量名后的padding，对齐变量更好看
     // file.writeAsString(_fmt.format(toCode));

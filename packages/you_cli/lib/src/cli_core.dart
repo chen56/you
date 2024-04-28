@@ -8,7 +8,6 @@ import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
-import 'package:you_cli/src/urils.dart';
 import 'package:you_cli/src/yaml.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
@@ -17,9 +16,12 @@ class YouCli {
       : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
-  static const ToType toTypeDefault = ToType(type: Reference("To", "package:you_flutter/router.dart"));
+  static const Reference toTypeDefault = Reference("To", "package:you_flutter/router.dart");
   static const String toTypeName = "ToType";
-  static const String layoutFunctionName = "layout2";
+  static const String pageDart = "page.dart";
+  static const String layoutDart = "layout.dart";
+  static const String layoutFunctionName = "layout";
+  static const String pageBuildFunctionName = "build";
   final Directory dir_project;
   final FileSystem fs;
   Pubspec? _pubspec;
@@ -38,17 +40,24 @@ class YouCli {
 
   Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
 
-  RouteNode get rootRoute {
-    RouteNode from(Directory dir) {
+  Future<RouteNode> get rootRoute async {
+    Future<RouteNode> from(Directory dir) async {
       if (!dir.existsSync()) {
         return RouteNode(dir: dir, children: []);
       }
 
-      var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => from(e));
-      return RouteNode(dir: dir, children: children.toList());
+      var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
+      var (layout: layoutFunction, toType: toType) = await analysisLayout(dir.childFile(layoutDart));
+      return RouteNode(
+        dir: dir,
+        pageBuild: await analysisPage(dir.childFile(pageDart)),
+        layoutFunction: layoutFunction,
+        toType: toType,
+        children: children,
+      );
     }
 
-    return _rootRoute ??= from(dir_routes);
+    return _rootRoute ??= await from(dir_routes);
   }
 
   AnalysisSession get analysisSession {
@@ -58,10 +67,12 @@ class YouCli {
     ).contexts[0].currentSession;
   }
 
-  LibraryElement? findRealExportLib<T extends Element>(T toFind,LibraryElement useAt){
-    for(var import in useAt.importedLibraries){
-      for(var c in analyzerUtils.findChildrenByType<T>(import)){
-        if(toFind==c){
+  /// given a internal lib: package:you_flutter/src/router.dart
+  ///     =>  find it's public export : package:you_flutter/router.dart
+  LibraryElement? findPublicExportLib(TypeDefiningElement toFind, LibraryElement useAt) {
+    for (var import in useAt.importedLibraries) {
+      for (var MapEntry(key: _, value: value) in import.exportNamespace.definedNames.entries) {
+        if (toFind == value) {
           return import;
         }
       }
@@ -69,7 +80,11 @@ class YouCli {
     return toFind.library!;
   }
 
-  Future<({FunctionElement? layout, ToType? toType})> analysisLayout(File file) async {
+  Future<({FunctionElement? layout, Reference? toType})> analysisLayout(File file) async {
+    if (!await file.exists()) {
+      return (layout: null, toType: null);
+    }
+
     var layoutLib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
     FunctionElement? layoutFunction = layoutLib.definingCompilationUnit.functions.where((e) => e.name == layoutFunctionName).firstOrNull;
     if (layoutFunction == null) {
@@ -77,18 +92,18 @@ class YouCli {
     }
     var findToTypeAnno = layoutFunction.metadata.map((e) => e.computeConstantValue()).where((e) {
       var t = e?.type;
-      if(t == null){
+      if (t == null) {
         return false;
       }
       if (t.getDisplayString(withNullability: false) != toTypeName) {
         return false;
       }
-      var element=t.element;
-      if(element is! ClassElement){
+      var element = t.element;
+      if (element is! ClassElement) {
         return false;
       }
       // result?.type?.element?.library?.children
-      var publicExportFrom = findRealExportLib(element, layoutLib);
+      var publicExportFrom = findPublicExportLib(element, layoutLib);
       return publicExportFrom?.identifier == toTypeDefault.type.url;
     }).firstOrNull;
     if (findToTypeAnno == null) {
@@ -105,32 +120,30 @@ class YouCli {
       return (layout: layoutFunction, toType: toTypeDefault);
     }
 
-    var publicExportFrom = findRealExportLib(findToTypeAnno.type!.element!, layoutLib);
+    var publicExportFrom = findPublicExportLib(type.element! as TypeDefiningElement, layoutLib);
     var url = publicExportFrom?.identifier;
 
-    return (layout: layoutFunction, toType: ToType(type: refer(symbol, url)));
+    return (layout: layoutFunction, toType: refer(symbol, url));
   }
-}
 
-/// ref: you_flutter: ExtendTo
-class ToType {
-  final Reference type;
-
-  const ToType({required this.type});
-
-  @override
-  String toString() {
-    return "<ToType> type:$type";
+  Future<FunctionElement?> analysisPage(File file) async {
+    if (!await file.exists()) {
+      return null;
+    }
+    var lib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
+    return lib.definingCompilationUnit.functions.where((e) => e.name == pageBuildFunctionName).firstOrNull;
   }
 }
 
 class RouteNode {
   final List<RouteNode> children;
   final Directory dir;
+  final Reference? toType;
+  final FunctionElement? layoutFunction;
+  final FunctionElement? pageBuild;
   late RouteNode _parent = this;
-  ToType? toType;
 
-  RouteNode({required this.dir, this.toType, required this.children}) {
+  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild}) {
     for (var child in children) {
       child._parent = this;
     }
@@ -218,7 +231,7 @@ class RouteNode {
     return _parent.findLayoutSync();
   }
 
-  ToType findToType() {
+  Reference findToType() {
     if (toType != null) {
       return toType!;
     }
