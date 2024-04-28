@@ -8,6 +8,7 @@ import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
+import 'package:you_cli/src/urils.dart';
 import 'package:you_cli/src/yaml.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
@@ -16,8 +17,9 @@ class YouCli {
       : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
-  static const Reference routeTypeDefault = Reference("To", "package:you_flutter/src/router_core.dart");
-
+  static const ToType toTypeDefault = ToType(type: Reference("To", "package:you_flutter/router.dart"));
+  static const String toTypeName = "ToType";
+  static const String layoutFunctionName = "layout2";
   final Directory dir_project;
   final FileSystem fs;
   Pubspec? _pubspec;
@@ -36,69 +38,99 @@ class YouCli {
 
   Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
 
-  RouteNode get rootRoute => _rootRoute ??= RouteNode.fromSync(dir_routes);
+  RouteNode get rootRoute {
+    RouteNode from(Directory dir) {
+      if (!dir.existsSync()) {
+        return RouteNode(dir: dir, children: []);
+      }
 
-  AnalysisSession get analysisSession {
-    if (_session != null) {
-      return _session!;
+      var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => from(e));
+      return RouteNode(dir: dir, children: children.toList());
     }
-    var collection = AnalysisContextCollection(
-      includedPaths: [dir_lib.path],
-      resourceProvider: PhysicalResourceProvider(),
-    );
-    return _session = collection.contexts[0].currentSession;
+
+    return _rootRoute ??= from(dir_routes);
   }
 
-  Future<({FunctionElement? layout, RouteTypeMeta? meta})> analysisLayout(File file) async {
-    var result = await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult;
-    FunctionElement? layoutElement = result.element.definingCompilationUnit.functions.where((e) => e.name == "layout2").firstOrNull;
-    if (layoutElement == null) {
-      return (layout: null, meta: null);
+  AnalysisSession get analysisSession {
+    return _session ??= AnalysisContextCollection(
+      includedPaths: [dir_lib.path],
+      resourceProvider: PhysicalResourceProvider(),
+    ).contexts[0].currentSession;
+  }
+
+  LibraryElement? findRealExportLib<T extends Element>(T toFind,LibraryElement useAt){
+    for(var import in useAt.importedLibraries){
+      for(var c in analyzerUtils.findChildrenByType<T>(import)){
+        if(toFind==c){
+          return import;
+        }
+      }
     }
-    var findMeta = layoutElement.metadata.map((e) => e.computeConstantValue()).where((result) {
-      if (result?.type?.getDisplayString(withNullability: false) != "LayoutMeta") {
+    return toFind.library!;
+  }
+
+  Future<({FunctionElement? layout, ToType? toType})> analysisLayout(File file) async {
+    var layoutLib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
+    FunctionElement? layoutFunction = layoutLib.definingCompilationUnit.functions.where((e) => e.name == layoutFunctionName).firstOrNull;
+    if (layoutFunction == null) {
+      return (layout: null, toType: null);
+    }
+    var findToTypeAnno = layoutFunction.metadata.map((e) => e.computeConstantValue()).where((e) {
+      var t = e?.type;
+      if(t == null){
         return false;
       }
-      return result?.type?.element?.library?.identifier == routeTypeDefault.url;
+      if (t.getDisplayString(withNullability: false) != toTypeName) {
+        return false;
+      }
+      var element=t.element;
+      if(element is! ClassElement){
+        return false;
+      }
+      // result?.type?.element?.library?.children
+      var publicExportFrom = findRealExportLib(element, layoutLib);
+      return publicExportFrom?.identifier == toTypeDefault.type.url;
     }).firstOrNull;
-    if (findMeta == null) {
-      return (layout: layoutElement, meta: null);
+    if (findToTypeAnno == null) {
+      return (layout: layoutFunction, toType: null);
+    }
+    var type = findToTypeAnno.getField("type")?.toTypeValue();
+    if (type == null) {
+      return (layout: layoutFunction, toType: toTypeDefault);
     }
 
-    var routeTypeElement = findMeta.getField("routeType")?.toTypeValue();
-    if (routeTypeElement == null) {
-      return (layout: layoutElement, meta: RouteTypeMeta(toType: routeTypeDefault));
-    }
-
-    var url = routeTypeElement.element?.library?.identifier;
-    var symbol = routeTypeElement.getDisplayString(withNullability: false);
+    var symbol = type.getDisplayString(withNullability: false);
 
     if (symbol == "") {
-      return (layout: layoutElement, meta: RouteTypeMeta(toType: routeTypeDefault));
+      return (layout: layoutFunction, toType: toTypeDefault);
     }
 
-    return (layout: layoutElement, meta: RouteTypeMeta(toType: refer(symbol, url)));
+    var publicExportFrom = findRealExportLib(findToTypeAnno.type!.element!, layoutLib);
+    var url = publicExportFrom?.identifier;
+
+    return (layout: layoutFunction, toType: ToType(type: refer(symbol, url)));
   }
 }
 
-class RouteTypeMeta {
-  Reference toType;
+/// ref: you_flutter: ExtendTo
+class ToType {
+  final Reference type;
 
-  RouteTypeMeta({required this.toType});
+  const ToType({required this.type});
 
   @override
   String toString() {
-    // TODO: implement toString
-    return "<RouteTypeMeta> toType:$toType";
+    return "<ToType> type:$type";
   }
 }
 
 class RouteNode {
-  List<RouteNode> children;
-  Directory dir;
+  final List<RouteNode> children;
+  final Directory dir;
   late RouteNode _parent = this;
+  ToType? toType;
 
-  RouteNode({required this.dir, required this.children}) {
+  RouteNode({required this.dir, this.toType, required this.children}) {
     for (var child in children) {
       child._parent = this;
     }
@@ -106,29 +138,21 @@ class RouteNode {
 
   int get level => isRoot ? 0 : _parent.level + 1;
 
-  static RouteNode fromSync(Directory dir) {
-    if (!dir.existsSync()) {
-      return RouteNode(dir: dir, children: []);
-    }
-    var children = dir.listSync(recursive: false).whereType<Directory>().map((e) => fromSync(e));
-    return RouteNode(dir: dir, children: children.toList());
-  }
-
   RouteNode get root => isRoot ? this : _parent.root;
 
   bool get isRoot => _parent == this;
 
-  File get page_dart => dir.childFile("page.dart");
+  File get file_page_dart => dir.childFile("page.dart");
 
-  File get layout_dart => dir.childFile("layout.dart");
+  File get file_layout_dart => dir.childFile("layout.dart");
 
   String pageImportUri(String pkgName, Directory libDir) {
-    var pageDartRelativePath = path.relative(page_dart.path, from: libDir.path);
+    var pageDartRelativePath = path.relative(file_page_dart.path, from: libDir.path);
     return "package:$pkgName/$pageDartRelativePath";
   }
 
   String layoutImportUri(String pkgName, Directory libDir) {
-    var pageDartRelativePath = path.relative(layout_dart.path, from: libDir.path);
+    var pageDartRelativePath = path.relative(file_layout_dart.path, from: libDir.path);
     return "package:$pkgName/$pageDartRelativePath";
   }
 
@@ -185,12 +209,22 @@ class RouteNode {
   }
 
   RouteNode? findLayoutSync() {
-    if (layout_dart.existsSync()) {
+    if (file_layout_dart.existsSync()) {
       return this;
     }
     if (isRoot) {
       return null;
     }
     return _parent.findLayoutSync();
+  }
+
+  ToType findToType() {
+    if (toType != null) {
+      return toType!;
+    }
+    if (isRoot) {
+      return YouCli.toTypeDefault;
+    }
+    return _parent.findToType();
   }
 }

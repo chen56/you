@@ -1,5 +1,7 @@
-class LayoutMeta {
-  final Type routeType;
+library router;
 
-  const LayoutMeta({this.routeType = Null});
+class ToType {
+  final Type type;
+
+  const ToType({this.type = Null});
 }

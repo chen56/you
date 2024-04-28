@@ -81,7 +81,7 @@ class Cmd_gen_routes_g_dart extends Command {
   @override
   final description = "gen routes.g.dart .";
   final FileSystem fs;
-
+  final Allocator _allocator=Allocator();
   YouCli? _cli;
 
   YouCli get cli => _cli != null ? _cli! : _cli = YouCli(projectDir: dir);
@@ -92,7 +92,7 @@ class Cmd_gen_routes_g_dart extends Command {
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
   code.Expression? builderExpression(RouteNode node) {
-    if (!node.page_dart.existsSync()) {
+    if (!node.file_page_dart.existsSync()) {
       return null;
     }
     code.Expression builder = code.refer("${node.flatName}_").property("build");
@@ -116,21 +116,21 @@ class Cmd_gen_routes_g_dart extends Command {
     }
   }
 
-  String _genRouteTreeCode(RouteNode node) {
+  // 没用code_builder是因为它会格式化换行，很多换行，很乱。
+  Future<String> _genRouteTreeCode(RouteNode node) async {
     code.Expression? builder = builderExpression(node);
     String builderStr = builder == null ? "" : builder.accept(code.DartEmitter()).toString().split("\n").join();
 
-    String buildArg = !node.page_dart.existsSync() ? "" : ",builder:$builderStr";
+    String buildArg = !node.file_page_dart.existsSync() ? "" : ",builder:$builderStr";
     String padding = "".padLeft(node.level, '  ');
     if (node.children.isEmpty) {
       return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg) ''';
     }
     return '''${padding}To${async ? ".lazy" : ""}("${node.dir.basename}" $buildArg, children:[
-${node.children.map((child) => _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
+${node.children.map((child) async => await _genRouteTreeCode(child)).map((e) => "$e,").join("\n")}
 $padding])''';
   }
 
-  // [run] may also return a Future.
   @override
   Future<void> run() async {
     if (!libMode) {
@@ -142,53 +142,17 @@ $padding])''';
       throw AssertionError("【--dir $dir】 not exists");
     }
 
-    var rootRoute = RouteNode.fromSync(cli.dir_routes);
+    var rootRoute = cli.rootRoute;
     Iterable<RouteNode> routes = rootRoute.toList();
 
     var nameMaxLen = routes.map((e) => e.flatName.length).reduce((value, element) => value > element ? value : element);
-    routes.where((e) => e.page_dart.existsSync()).map((pageDir) {
-      var varWithPadding = pageDir.flatName.padRight(nameMaxLen);
-      return """  final $varWithPadding = put("${pageDir.routePath}", (context,print) async => await ${pageDir.flatName}_.loadLibrary().then((value) => ${pageDir.flatName}_.build(context,print)));  """;
-    }).join("\n");
-
-    var newRoutes = routes.where((e) => e.page_dart.existsSync()).map((routeDir) {
+    // 因我们要自己Padding,所以没用code_builder
+    var newRoutes = routes.where((e) => e.file_page_dart.existsSync()).map((routeDir) {
       var varWithPadding = routeDir.flatName.padRight(nameMaxLen);
-      // final NoteRoute dev_devtool = put("/dev/devtool", (context,print) async => await dev_devtool_.loadLibrary().then((value) => dev_devtool_.build(context,print)));
       return """  final $varWithPadding = root.find("${routeDir.routePath}")! ;  """;
     }).join("\n");
 
-    Library pageImports = Library(
-      (b) => b
-        ..directives.addAll(
-          routes.where((e) => e.page_dart.existsSync()).map((lib) {
-            if (async) {
-              return code.Directive.importDeferredAs(lib.pageImportUri(cli.pubspec.name, cli.dir_lib), "${lib.flatName}_");
-            } else {
-              return code.Directive.import(lib.pageImportUri(cli.pubspec.name, cli.dir_lib), as: "${lib.flatName}_");
-            }
-          }),
-        ),
-    );
-    Library layoutImports = Library(
-      (b) => b
-        ..directives.addAll(
-          routes.where((e) => e.layout_dart.existsSync()).map((lib) {
-            if (async) {
-              return code.Directive.importDeferredAs(lib.layoutImportUri(cli.pubspec.name, cli.dir_lib), "${lib.flatName}__");
-            } else {
-              return code.Directive.import(lib.layoutImportUri(cli.pubspec.name, cli.dir_lib), as: "${lib.flatName}__");
-            }
-          }),
-        ),
-    );
-
-    var fmt = DartFormatter(pageWidth: 200);
-    var dartEmitter = DartEmitter(allocator: Allocator(), orderDirectives: false, useNullSafetySyntax: true);
-    String pageImportsCode = fmt.format('${pageImports.accept(dartEmitter)}');
-    String layoutImportsCode = fmt.format('${layoutImports.accept(dartEmitter)}');
-
-    String routeConfigCode = "var root=${_genRouteTreeCode(rootRoute)} ;";
-    // routeConfigCode = fmt.format("var root=${_genRouteTreeCode(rootRoute)} ;");
+    var routeTreeCode=await _genRouteTreeCode(rootRoute);
 
     Library all = Library(
       (b) => b
@@ -202,7 +166,7 @@ $padding])''';
 // ignore_for_file: non_constant_identifier_names
             """
         ..directives.addAll(
-          routes.where((e) => e.page_dart.existsSync()).map((lib) {
+          routes.where((e) => e.file_page_dart.existsSync()).map((lib) {
             if (async) {
               return Directive.importDeferredAs(lib.pageImportUri(cli.pubspec.name, cli.dir_lib), "${lib.flatName}_");
             } else {
@@ -211,7 +175,7 @@ $padding])''';
           }),
         )
         ..directives.addAll(
-          routes.where((e) => e.layout_dart.existsSync()).map((lib) {
+          routes.where((e) => e.file_layout_dart.existsSync()).map((lib) {
             if (async) {
               return Directive.importDeferredAs(lib.layoutImportUri(cli.pubspec.name, cli.dir_lib), "${lib.flatName}__");
             } else {
@@ -223,7 +187,7 @@ $padding])''';
         ..body.add(
           Code("""
 
-$routeConfigCode
+var root=$routeTreeCode ;
 
 final Routes routes=Routes();
 
@@ -234,6 +198,8 @@ $newRoutes
         ),
     );
 
+    var fmt = DartFormatter(pageWidth: 200);
+    var dartEmitter = DartEmitter(allocator: _allocator, orderDirectives: false, useNullSafetySyntax: true);
     var allCode = fmt.format('${all.accept(dartEmitter)}');
     _log("gen: ${cli.file_routes_g_dart.path}");
     await cli.file_routes_g_dart.writeAsString(allCode);
