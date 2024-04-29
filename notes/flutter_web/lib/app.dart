@@ -5,12 +5,13 @@ import 'package:you_flutter/router.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+final routes=Routes();
+
 final YouRouter router = YouRouter(
-  root: root,
-  initial: routes.notes_widgets_specific_widgets_button_overview.toUri(),
+  root: routes.root,
+  initial: routes.routes_root.toUri(),
   navigatorKey: GlobalKey<NavigatorState>(debugLabel: "mainNavigator"),
 );
-
 class App extends StatelessWidget {
   final NoteSystem noteSystem;
   final SharedPreferences sharedPreferences;

@@ -6,224 +6,227 @@
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:you_note_dart/note.dart';
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:you_flutter/router.dart';
-import 'package:flutter_web/routes/notes/page.dart' as notes_;
-import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as notes_research_parameterized_;
-import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as notes_research_remote_view_;
-import 'package:flutter_web/routes/notes/env_info/page.dart' as notes_env_info_;
-import 'package:flutter_web/routes/notes/layout/page.dart' as notes_layout_;
-import 'package:flutter_web/routes/notes/layout/old/layout/page.dart' as notes_layout_old_layout_;
-import 'package:flutter_web/routes/notes/layout/box_layout/constraints/page.dart' as notes_layout_box_layout_constraints_;
-import 'package:flutter_web/routes/notes/layout/responsive_design/page.dart' as notes_layout_responsive_design_;
-import 'package:flutter_web/routes/notes/navigation/page.dart' as notes_navigation_;
-import 'package:flutter_web/routes/notes/state/page.dart' as notes_state_;
-import 'package:flutter_web/routes/notes/state/1.vanilla_state/page.dart' as notes_state_vanilla_state_;
-import 'package:flutter_web/routes/notes/state/StatefulBuilder/page.dart' as notes_state_StatefulBuilder_;
-import 'package:flutter_web/routes/notes/media&assets&file/file_desktop/page.dart' as notes_media_assets_file_file_desktop_;
-import 'package:flutter_web/routes/notes/media&assets&file/file_web/page.dart' as notes_media_assets_file_file_web_;
-import 'package:flutter_web/routes/notes/media&assets&file/assets/page.dart' as notes_media_assets_file_assets_;
-import 'package:flutter_web/routes/notes/style&theming/material3/page.dart' as notes_style_theming_material3_;
-import 'package:flutter_web/routes/notes/pure_dart/dart3/page.dart' as notes_pure_dart_dart3_;
-import 'package:flutter_web/routes/notes/pure_dart/async/page.dart' as notes_pure_dart_async_;
-import 'package:flutter_web/routes/notes/pure_dart/safe_interface/page.dart' as notes_pure_dart_safe_interface_;
-import 'package:flutter_web/routes/notes/pure_dart/execption/page.dart' as notes_pure_dart_execption_;
-import 'package:flutter_web/routes/notes/pure_dart/serialization_json/page.dart' as notes_pure_dart_serialization_json_;
-import 'package:flutter_web/routes/notes/pure_dart/analyzer/page.dart' as notes_pure_dart_analyzer_;
-import 'package:flutter_web/routes/notes/dev/host_mirror/page.dart' as notes_dev_host_mirror_;
-import 'package:flutter_web/routes/notes/dev/macos_config/page.dart' as notes_dev_macos_config_;
-import 'package:flutter_web/routes/notes/dev/devtool/page.dart' as notes_dev_devtool_;
-import 'package:flutter_web/routes/notes/dev/devtool/vmservice/page.dart' as notes_dev_devtool_vmservice_;
-import 'package:flutter_web/routes/notes/dev/debug/page.dart' as notes_dev_debug_;
-import 'package:flutter_web/routes/notes/i18n/page.dart' as notes_i18n_;
-import 'package:flutter_web/routes/notes/thinking_in_ui/readable_html_vs_dart/page.dart' as notes_thinking_in_ui_readable_html_vs_dart_;
-import 'package:flutter_web/routes/notes/x.note_inside/how_note_work/page.dart' as notes_x_note_inside_how_note_work_;
-import 'package:flutter_web/routes/notes/x.note_inside/mockup_content/page.dart' as notes_x_note_inside_mockup_content_;
-import 'package:flutter_web/routes/notes/x.note_inside/1.welcome/page.dart' as notes_x_note_inside_welcome_;
-import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/page.dart' as notes_x_note_inside_note_test_self_;
-import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/nobody/page.dart' as notes_x_note_inside_note_test_self_nobody_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/input/page.dart' as notes_widgets_specific_widgets_input_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/webview/page.dart' as notes_widgets_specific_widgets_webview_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/slider/page.dart' as notes_widgets_specific_widgets_slider_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/selectable/page.dart' as notes_widgets_specific_widgets_selectable_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/ButtonStyleButton/page.dart' as notes_widgets_specific_widgets_button_ButtonStyleButton_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/FloatingActionButton/page.dart' as notes_widgets_specific_widgets_button_FloatingActionButton_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/IconButton/page.dart' as notes_widgets_specific_widgets_button_IconButton_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/overview/page.dart' as notes_widgets_specific_widgets_button_overview_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/RichText/page.dart' as notes_widgets_specific_widgets_text_RichText_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/Text/page.dart' as notes_widgets_specific_widgets_text_Text_;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/icon/page.dart' as notes_widgets_specific_widgets_icon_;
-import 'package:flutter_web/routes/notes/widgets/container_widgets/menu/page.dart' as notes_widgets_container_widgets_menu_;
-import 'package:flutter_web/routes/notes/widgets/container_widgets/scrollable/Dismissible/page.dart' as notes_widgets_container_widgets_scrollable_Dismissible_;
-import 'package:flutter_web/routes/notes/widgets/container_widgets/bar/page.dart' as notes_widgets_container_widgets_bar_;
-import 'package:flutter_web/routes/notes/Improve_app/page.dart' as notes_Improve_app_;
-import 'package:flutter_web/routes/notes/Improve_app/1.overview/page.dart' as notes_Improve_app_overview_;
-import 'package:flutter_web/routes/notes/Improve_app/web_optimization/page.dart' as notes_Improve_app_web_optimization_;
-import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' as notes_Improve_app_RepaintBoundary_;
-import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as notes_Improve_app_event_listener_lifeycle_;
-import 'package:flutter_web/routes/notes/layout.dart' as notes__;
+import 'package:flutter_web/routes/page.dart';
+import 'package:flutter_web/routes/layout.dart';
+import 'package:you_note_dart/note.dart';
+import 'package:flutter_web/routes/notes/page.dart' as _notes_page;
+import 'package:flutter_web/routes/notes/layout.dart' as _notes_layout;
+import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as _parameterized_page;
+import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as _remote_view_page;
+import 'package:flutter_web/routes/notes/env_info/page.dart' as _env_info_page;
+import 'package:flutter_web/routes/notes/layout/page.dart' as _layout_page;
+import 'package:flutter_web/routes/notes/layout/old/layout/page.dart' as _layout_page2;
+import 'package:flutter_web/routes/notes/layout/box_layout/constraints/page.dart' as _constraints_page;
+import 'package:flutter_web/routes/notes/layout/responsive_design/page.dart' as _responsive_design_page;
+import 'package:flutter_web/routes/notes/navigation/page.dart' as _navigation_page;
+import 'package:flutter_web/routes/notes/state/page.dart' as _state_page;
+import 'package:flutter_web/routes/notes/state/1.vanilla_state/page.dart' as _1_vanilla_state_page;
+import 'package:flutter_web/routes/notes/state/StatefulBuilder/page.dart' as _StatefulBuilder_page;
+import 'package:flutter_web/routes/notes/media&assets&file/file_desktop/page.dart' as _file_desktop_page;
+import 'package:flutter_web/routes/notes/media&assets&file/file_web/page.dart' as _file_web_page;
+import 'package:flutter_web/routes/notes/media&assets&file/assets/page.dart' as _assets_page;
+import 'package:flutter_web/routes/notes/style&theming/material3/page.dart' as _material3_page;
+import 'package:flutter_web/routes/notes/pure_dart/dart3/page.dart' as _dart3_page;
+import 'package:flutter_web/routes/notes/pure_dart/async/page.dart' as _async_page;
+import 'package:flutter_web/routes/notes/pure_dart/safe_interface/page.dart' as _safe_interface_page;
+import 'package:flutter_web/routes/notes/pure_dart/execption/page.dart' as _execption_page;
+import 'package:flutter_web/routes/notes/pure_dart/serialization_json/page.dart' as _serialization_json_page;
+import 'package:flutter_web/routes/notes/pure_dart/analyzer/page.dart' as _analyzer_page;
+import 'package:flutter_web/routes/notes/dev/host_mirror/page.dart' as _host_mirror_page;
+import 'package:flutter_web/routes/notes/dev/macos_config/page.dart' as _macos_config_page;
+import 'package:flutter_web/routes/notes/dev/devtool/page.dart' as _devtool_page;
+import 'package:flutter_web/routes/notes/dev/devtool/vmservice/page.dart' as _vmservice_page;
+import 'package:flutter_web/routes/notes/dev/debug/page.dart' as _debug_page;
+import 'package:flutter_web/routes/notes/i18n/page.dart' as _i18n_page;
+import 'package:flutter_web/routes/notes/thinking_in_ui/readable_html_vs_dart/page.dart' as _readable_html_vs_dart_page;
+import 'package:flutter_web/routes/notes/x.note_inside/how_note_work/page.dart' as _how_note_work_page;
+import 'package:flutter_web/routes/notes/x.note_inside/mockup_content/page.dart' as _mockup_content_page;
+import 'package:flutter_web/routes/notes/x.note_inside/1.welcome/page.dart' as _1_welcome_page;
+import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/page.dart' as _note_test_self_page;
+import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/nobody/page.dart' as _nobody_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/input/page.dart' as _input_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/webview/page.dart' as _webview_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/slider/page.dart' as _slider_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/selectable/page.dart' as _selectable_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/ButtonStyleButton/page.dart' as _ButtonStyleButton_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/FloatingActionButton/page.dart' as _FloatingActionButton_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/IconButton/page.dart' as _IconButton_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/overview/page.dart' as _overview_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/RichText/page.dart' as _RichText_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/Text/page.dart' as _Text_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/icon/page.dart' as _icon_page;
+import 'package:flutter_web/routes/notes/widgets/container_widgets/menu/page.dart' as _menu_page;
+import 'package:flutter_web/routes/notes/widgets/container_widgets/scrollable/Dismissible/page.dart' as _Dismissible_page;
+import 'package:flutter_web/routes/notes/widgets/container_widgets/bar/page.dart' as _bar_page;
+import 'package:flutter_web/routes/notes/Improve_app/page.dart' as _Improve_app_page;
+import 'package:flutter_web/routes/notes/Improve_app/1.overview/page.dart' as _1_overview_page;
+import 'package:flutter_web/routes/notes/Improve_app/web_optimization/page.dart' as _web_optimization_page;
+import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' as _RepaintBoundary_page;
+import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as _event_listener_lifeycle_page;
 
-var root = To("routes", children: [
-  ToNote("notes", layout: notes__.layout, builder: notes_.build, children: [
-    ToNote("research", children: [
-      ToNote("bash_note"),
-      ToNote("parameterized", builder: notes_research_parameterized_.build),
-      ToNote("remote_view", builder: notes_research_remote_view_.build),
-    ]),
-    ToNote("env_info", builder: notes_env_info_.build),
-    ToNote("layout", builder: notes_layout_.build, children: [
-      ToNote("old", children: [
-        ToNote("layout", builder: notes_layout_old_layout_.build),
+mixin RoutesMixin {
+  final To root = To('routes', builder: build, layout: layout, children: [
+    ToNote('notes', builder: _notes_page.build, layout: _notes_layout.layout, children: [
+      ToNote('research', children: [
+        ToNote('bash_note'),
+        ToNote('parameterized', builder: _parameterized_page.build),
+        ToNote('remote_view', builder: _remote_view_page.build),
       ]),
-      ToNote("box_layout", children: [
-        ToNote("constraints", builder: notes_layout_box_layout_constraints_.build),
-      ]),
-      ToNote("responsive_design", builder: notes_layout_responsive_design_.build),
-      ToNote("1.welcome"),
-    ]),
-    ToNote("navigation", builder: notes_navigation_.build, children: [
-      ToNote("navigator_v1"),
-      ToNote("navigator_v2"),
-    ]),
-    ToNote("state", builder: notes_state_.build, children: [
-      ToNote("1.vanilla_state", builder: notes_state_vanilla_state_.build),
-      ToNote("StatefulBuilder", builder: notes_state_StatefulBuilder_.build),
-    ]),
-    ToNote("media&assets&file", children: [
-      ToNote("file_desktop", builder: notes_media_assets_file_file_desktop_.build),
-      ToNote("file_web", builder: notes_media_assets_file_file_web_.build),
-      ToNote("assets", builder: notes_media_assets_file_assets_.build),
-    ]),
-    ToNote("style&theming", children: [
-      ToNote("material3", builder: notes_style_theming_material3_.build),
-      ToNote("Material"),
-    ]),
-    ToNote("pure_dart", children: [
-      ToNote("dart3", builder: notes_pure_dart_dart3_.build),
-      ToNote("async", builder: notes_pure_dart_async_.build),
-      ToNote("safe_interface", builder: notes_pure_dart_safe_interface_.build),
-      ToNote("execption", builder: notes_pure_dart_execption_.build),
-      ToNote("serialization_json", builder: notes_pure_dart_serialization_json_.build),
-      ToNote("analyzer", builder: notes_pure_dart_analyzer_.build),
-    ]),
-    ToNote("dev", children: [
-      ToNote("host_mirror", builder: notes_dev_host_mirror_.build),
-      ToNote("macos_config", builder: notes_dev_macos_config_.build),
-      ToNote("devtool", builder: notes_dev_devtool_.build, children: [
-        ToNote("vmservice", builder: notes_dev_devtool_vmservice_.build),
-      ]),
-      ToNote("debug", builder: notes_dev_debug_.build),
-    ]),
-    ToNote("i18n", builder: notes_i18n_.build),
-    ToNote("thinking_in_ui", children: [
-      ToNote("readable_html_vs_dart", builder: notes_thinking_in_ui_readable_html_vs_dart_.build),
-    ]),
-    ToNote("x.note_inside", children: [
-      ToNote("how_note_work", builder: notes_x_note_inside_how_note_work_.build),
-      ToNote("note_api_thinking"),
-      ToNote("mockup_content", builder: notes_x_note_inside_mockup_content_.build),
-      ToNote("1.welcome", builder: notes_x_note_inside_welcome_.build),
-      ToNote("note_test_self", builder: notes_x_note_inside_note_test_self_.build, children: [
-        ToNote("nobody", builder: notes_x_note_inside_note_test_self_nobody_.build),
-      ]),
-    ]),
-    ToNote("widgets", children: [
-      ToNote("specific_widgets", children: [
-        ToNote("input", builder: notes_widgets_specific_widgets_input_.build),
-        ToNote("webview", builder: notes_widgets_specific_widgets_webview_.build),
-        ToNote("slider", builder: notes_widgets_specific_widgets_slider_.build),
-        ToNote("selectable", builder: notes_widgets_specific_widgets_selectable_.build),
-        ToNote("button", children: [
-          ToNote("ButtonStyleButton", builder: notes_widgets_specific_widgets_button_ButtonStyleButton_.build),
-          ToNote("FloatingActionButton", builder: notes_widgets_specific_widgets_button_FloatingActionButton_.build),
-          ToNote("IconButton", builder: notes_widgets_specific_widgets_button_IconButton_.build),
-          ToNote("overview", builder: notes_widgets_specific_widgets_button_overview_.build),
+      ToNote('env_info', builder: _env_info_page.build),
+      ToNote('layout', builder: _layout_page.build, children: [
+        ToNote('old', children: [
+          ToNote('layout', builder: _layout_page2.build),
         ]),
-        ToNote("Divider"),
-        ToNote("text", children: [
-          ToNote("RichText", builder: notes_widgets_specific_widgets_text_RichText_.build),
-          ToNote("Text", builder: notes_widgets_specific_widgets_text_Text_.build),
+        ToNote('box_layout', children: [
+          ToNote('constraints', builder: _constraints_page.build),
         ]),
-        ToNote("icon", builder: notes_widgets_specific_widgets_icon_.build),
+        ToNote('responsive_design', builder: _responsive_design_page.build),
+        ToNote('1.welcome'),
       ]),
-      ToNote("container_widgets", children: [
-        ToNote("drawer"),
-        ToNote("Card"),
-        ToNote("app"),
-        ToNote("dialog"),
-        ToNote("menu", builder: notes_widgets_container_widgets_menu_.build),
-        ToNote("scrollable", children: [
-          ToNote("Dismissible", builder: notes_widgets_container_widgets_scrollable_Dismissible_.build),
-          ToNote("DraggableScrollableSheet"),
+      ToNote('navigation', builder: _navigation_page.build, children: [
+        ToNote('navigator_v1'),
+        ToNote('navigator_v2'),
+      ]),
+      ToNote('state', builder: _state_page.build, children: [
+        ToNote('1.vanilla_state', builder: _1_vanilla_state_page.build),
+        ToNote('StatefulBuilder', builder: _StatefulBuilder_page.build),
+      ]),
+      ToNote('media&assets&file', children: [
+        ToNote('file_desktop', builder: _file_desktop_page.build),
+        ToNote('file_web', builder: _file_web_page.build),
+        ToNote('assets', builder: _assets_page.build),
+      ]),
+      ToNote('style&theming', children: [
+        ToNote('material3', builder: _material3_page.build),
+        ToNote('Material'),
+      ]),
+      ToNote('pure_dart', children: [
+        ToNote('dart3', builder: _dart3_page.build),
+        ToNote('async', builder: _async_page.build),
+        ToNote('safe_interface', builder: _safe_interface_page.build),
+        ToNote('execption', builder: _execption_page.build),
+        ToNote('serialization_json', builder: _serialization_json_page.build),
+        ToNote('analyzer', builder: _analyzer_page.build),
+      ]),
+      ToNote('dev', children: [
+        ToNote('host_mirror', builder: _host_mirror_page.build),
+        ToNote('macos_config', builder: _macos_config_page.build),
+        ToNote('devtool', builder: _devtool_page.build, children: [
+          ToNote('vmservice', builder: _vmservice_page.build),
         ]),
-        ToNote("page_view"),
-        ToNote("bar", builder: notes_widgets_container_widgets_bar_.build),
+        ToNote('debug', builder: _debug_page.build),
+      ]),
+      ToNote('i18n', builder: _i18n_page.build),
+      ToNote('thinking_in_ui', children: [
+        ToNote('readable_html_vs_dart', builder: _readable_html_vs_dart_page.build),
+      ]),
+      ToNote('x.note_inside', children: [
+        ToNote('how_note_work', builder: _how_note_work_page.build),
+        ToNote('note_api_thinking'),
+        ToNote('mockup_content', builder: _mockup_content_page.build),
+        ToNote('1.welcome', builder: _1_welcome_page.build),
+        ToNote('note_test_self', builder: _note_test_self_page.build, children: [
+          ToNote('nobody', builder: _nobody_page.build),
+        ]),
+      ]),
+      ToNote('widgets', children: [
+        ToNote('specific_widgets', children: [
+          ToNote('input', builder: _input_page.build),
+          ToNote('webview', builder: _webview_page.build),
+          ToNote('slider', builder: _slider_page.build),
+          ToNote('selectable', builder: _selectable_page.build),
+          ToNote('button', children: [
+            ToNote('ButtonStyleButton', builder: _ButtonStyleButton_page.build),
+            ToNote('FloatingActionButton', builder: _FloatingActionButton_page.build),
+            ToNote('IconButton', builder: _IconButton_page.build),
+            ToNote('overview', builder: _overview_page.build),
+          ]),
+          ToNote('Divider'),
+          ToNote('text', children: [
+            ToNote('RichText', builder: _RichText_page.build),
+            ToNote('Text', builder: _Text_page.build),
+          ]),
+          ToNote('icon', builder: _icon_page.build),
+        ]),
+        ToNote('container_widgets', children: [
+          ToNote('drawer'),
+          ToNote('Card'),
+          ToNote('app'),
+          ToNote('dialog'),
+          ToNote('menu', builder: _menu_page.build),
+          ToNote('scrollable', children: [
+            ToNote('Dismissible', builder: _Dismissible_page.build),
+            ToNote('DraggableScrollableSheet'),
+          ]),
+          ToNote('page_view'),
+          ToNote('bar', builder: _bar_page.build),
+        ]),
+      ]),
+      ToNote('Improve_app', builder: _Improve_app_page.build, children: [
+        ToNote('1.overview', builder: _1_overview_page.build),
+        ToNote('error_handle'),
+        ToNote('web_optimization', builder: _web_optimization_page.build),
+        ToNote('RepaintBoundary', builder: _RepaintBoundary_page.build),
+        ToNote('event&listener&lifeycle', builder: _event_listener_lifeycle_page.build),
       ]),
     ]),
-    ToNote("Improve_app", builder: notes_Improve_app_.build, children: [
-      ToNote("1.overview", builder: notes_Improve_app_overview_.build),
-      ToNote("error_handle"),
-      ToNote("web_optimization", builder: notes_Improve_app_web_optimization_.build),
-      ToNote("RepaintBoundary", builder: notes_Improve_app_RepaintBoundary_.build),
-      ToNote("event&listener&lifeycle", builder: notes_Improve_app_event_listener_lifeycle_.build),
-    ]),
-  ]),
-]);
-
-final Routes routes = Routes();
-
-class Routes {
-  final notes = root.find("/notes")!;
-  final notes_research_parameterized = root.find("/notes/research/parameterized")!;
-  final notes_research_remote_view = root.find("/notes/research/remote_view")!;
-  final notes_env_info = root.find("/notes/env_info")!;
-  final notes_layout = root.find("/notes/layout")!;
-  final notes_layout_old_layout = root.find("/notes/layout/old/layout")!;
-  final notes_layout_box_layout_constraints = root.find("/notes/layout/box_layout/constraints")!;
-  final notes_layout_responsive_design = root.find("/notes/layout/responsive_design")!;
-  final notes_navigation = root.find("/notes/navigation")!;
-  final notes_state = root.find("/notes/state")!;
-  final notes_state_vanilla_state = root.find("/notes/state/1.vanilla_state")!;
-  final notes_state_StatefulBuilder = root.find("/notes/state/StatefulBuilder")!;
-  final notes_media_assets_file_file_desktop = root.find("/notes/media&assets&file/file_desktop")!;
-  final notes_media_assets_file_file_web = root.find("/notes/media&assets&file/file_web")!;
-  final notes_media_assets_file_assets = root.find("/notes/media&assets&file/assets")!;
-  final notes_style_theming_material3 = root.find("/notes/style&theming/material3")!;
-  final notes_pure_dart_dart3 = root.find("/notes/pure_dart/dart3")!;
-  final notes_pure_dart_async = root.find("/notes/pure_dart/async")!;
-  final notes_pure_dart_safe_interface = root.find("/notes/pure_dart/safe_interface")!;
-  final notes_pure_dart_execption = root.find("/notes/pure_dart/execption")!;
-  final notes_pure_dart_serialization_json = root.find("/notes/pure_dart/serialization_json")!;
-  final notes_pure_dart_analyzer = root.find("/notes/pure_dart/analyzer")!;
-  final notes_dev_host_mirror = root.find("/notes/dev/host_mirror")!;
-  final notes_dev_macos_config = root.find("/notes/dev/macos_config")!;
-  final notes_dev_devtool = root.find("/notes/dev/devtool")!;
-  final notes_dev_devtool_vmservice = root.find("/notes/dev/devtool/vmservice")!;
-  final notes_dev_debug = root.find("/notes/dev/debug")!;
-  final notes_i18n = root.find("/notes/i18n")!;
-  final notes_thinking_in_ui_readable_html_vs_dart = root.find("/notes/thinking_in_ui/readable_html_vs_dart")!;
-  final notes_x_note_inside_how_note_work = root.find("/notes/x.note_inside/how_note_work")!;
-  final notes_x_note_inside_mockup_content = root.find("/notes/x.note_inside/mockup_content")!;
-  final notes_x_note_inside_welcome = root.find("/notes/x.note_inside/1.welcome")!;
-  final notes_x_note_inside_note_test_self = root.find("/notes/x.note_inside/note_test_self")!;
-  final notes_x_note_inside_note_test_self_nobody = root.find("/notes/x.note_inside/note_test_self/nobody")!;
-  final notes_widgets_specific_widgets_input = root.find("/notes/widgets/specific_widgets/input")!;
-  final notes_widgets_specific_widgets_webview = root.find("/notes/widgets/specific_widgets/webview")!;
-  final notes_widgets_specific_widgets_slider = root.find("/notes/widgets/specific_widgets/slider")!;
-  final notes_widgets_specific_widgets_selectable = root.find("/notes/widgets/specific_widgets/selectable")!;
-  final notes_widgets_specific_widgets_button_ButtonStyleButton = root.find("/notes/widgets/specific_widgets/button/ButtonStyleButton")!;
-  final notes_widgets_specific_widgets_button_FloatingActionButton = root.find("/notes/widgets/specific_widgets/button/FloatingActionButton")!;
-  final notes_widgets_specific_widgets_button_IconButton = root.find("/notes/widgets/specific_widgets/button/IconButton")!;
-  final notes_widgets_specific_widgets_button_overview = root.find("/notes/widgets/specific_widgets/button/overview")!;
-  final notes_widgets_specific_widgets_text_RichText = root.find("/notes/widgets/specific_widgets/text/RichText")!;
-  final notes_widgets_specific_widgets_text_Text = root.find("/notes/widgets/specific_widgets/text/Text")!;
-  final notes_widgets_specific_widgets_icon = root.find("/notes/widgets/specific_widgets/icon")!;
-  final notes_widgets_container_widgets_menu = root.find("/notes/widgets/container_widgets/menu")!;
-  final notes_widgets_container_widgets_scrollable_Dismissible = root.find("/notes/widgets/container_widgets/scrollable/Dismissible")!;
-  final notes_widgets_container_widgets_bar = root.find("/notes/widgets/container_widgets/bar")!;
-  final notes_Improve_app = root.find("/notes/Improve_app")!;
-  final notes_Improve_app_overview = root.find("/notes/Improve_app/1.overview")!;
-  final notes_Improve_app_web_optimization = root.find("/notes/Improve_app/web_optimization")!;
-  final notes_Improve_app_RepaintBoundary = root.find("/notes/Improve_app/RepaintBoundary")!;
-  final notes_Improve_app_event_listener_lifeycle = root.find("/notes/Improve_app/event&listener&lifeycle")!;
+  ]);
+  late final To routes_root = root.find('/')!;
+  late final To routes_notes = root.find('/notes')!;
+  late final To routes_notes_research_parameterized = root.find('/notes/research/parameterized')!;
+  late final To routes_notes_research_remote_view = root.find('/notes/research/remote_view')!;
+  late final To routes_notes_env_info = root.find('/notes/env_info')!;
+  late final To routes_notes_layout = root.find('/notes/layout')!;
+  late final To routes_notes_layout_old_layout = root.find('/notes/layout/old/layout')!;
+  late final To routes_notes_layout_box_layout_constraints = root.find('/notes/layout/box_layout/constraints')!;
+  late final To routes_notes_layout_responsive_design = root.find('/notes/layout/responsive_design')!;
+  late final To routes_notes_navigation = root.find('/notes/navigation')!;
+  late final To routes_notes_state = root.find('/notes/state')!;
+  late final To routes_notes_state_vanilla_state = root.find('/notes/state/1.vanilla_state')!;
+  late final To routes_notes_state_StatefulBuilder = root.find('/notes/state/StatefulBuilder')!;
+  late final To routes_notes_media_assets_file_file_desktop = root.find('/notes/media&assets&file/file_desktop')!;
+  late final To routes_notes_media_assets_file_file_web = root.find('/notes/media&assets&file/file_web')!;
+  late final To routes_notes_media_assets_file_assets = root.find('/notes/media&assets&file/assets')!;
+  late final To routes_notes_style_theming_material3 = root.find('/notes/style&theming/material3')!;
+  late final To routes_notes_pure_dart_dart3 = root.find('/notes/pure_dart/dart3')!;
+  late final To routes_notes_pure_dart_async = root.find('/notes/pure_dart/async')!;
+  late final To routes_notes_pure_dart_safe_interface = root.find('/notes/pure_dart/safe_interface')!;
+  late final To routes_notes_pure_dart_execption = root.find('/notes/pure_dart/execption')!;
+  late final To routes_notes_pure_dart_serialization_json = root.find('/notes/pure_dart/serialization_json')!;
+  late final To routes_notes_pure_dart_analyzer = root.find('/notes/pure_dart/analyzer')!;
+  late final To routes_notes_dev_host_mirror = root.find('/notes/dev/host_mirror')!;
+  late final To routes_notes_dev_macos_config = root.find('/notes/dev/macos_config')!;
+  late final To routes_notes_dev_devtool = root.find('/notes/dev/devtool')!;
+  late final To routes_notes_dev_devtool_vmservice = root.find('/notes/dev/devtool/vmservice')!;
+  late final To routes_notes_dev_debug = root.find('/notes/dev/debug')!;
+  late final To routes_notes_i18n = root.find('/notes/i18n')!;
+  late final To routes_notes_thinking_in_ui_readable_html_vs_dart = root.find('/notes/thinking_in_ui/readable_html_vs_dart')!;
+  late final To routes_notes_x_note_inside_how_note_work = root.find('/notes/x.note_inside/how_note_work')!;
+  late final To routes_notes_x_note_inside_mockup_content = root.find('/notes/x.note_inside/mockup_content')!;
+  late final To routes_notes_x_note_inside_welcome = root.find('/notes/x.note_inside/1.welcome')!;
+  late final To routes_notes_x_note_inside_note_test_self = root.find('/notes/x.note_inside/note_test_self')!;
+  late final To routes_notes_x_note_inside_note_test_self_nobody = root.find('/notes/x.note_inside/note_test_self/nobody')!;
+  late final To routes_notes_widgets_specific_widgets_input = root.find('/notes/widgets/specific_widgets/input')!;
+  late final To routes_notes_widgets_specific_widgets_webview = root.find('/notes/widgets/specific_widgets/webview')!;
+  late final To routes_notes_widgets_specific_widgets_slider = root.find('/notes/widgets/specific_widgets/slider')!;
+  late final To routes_notes_widgets_specific_widgets_selectable = root.find('/notes/widgets/specific_widgets/selectable')!;
+  late final To routes_notes_widgets_specific_widgets_button_ButtonStyleButton = root.find('/notes/widgets/specific_widgets/button/ButtonStyleButton')!;
+  late final To routes_notes_widgets_specific_widgets_button_FloatingActionButton = root.find('/notes/widgets/specific_widgets/button/FloatingActionButton')!;
+  late final To routes_notes_widgets_specific_widgets_button_IconButton = root.find('/notes/widgets/specific_widgets/button/IconButton')!;
+  late final To routes_notes_widgets_specific_widgets_button_overview = root.find('/notes/widgets/specific_widgets/button/overview')!;
+  late final To routes_notes_widgets_specific_widgets_text_RichText = root.find('/notes/widgets/specific_widgets/text/RichText')!;
+  late final To routes_notes_widgets_specific_widgets_text_Text = root.find('/notes/widgets/specific_widgets/text/Text')!;
+  late final To routes_notes_widgets_specific_widgets_icon = root.find('/notes/widgets/specific_widgets/icon')!;
+  late final To routes_notes_widgets_container_widgets_menu = root.find('/notes/widgets/container_widgets/menu')!;
+  late final To routes_notes_widgets_container_widgets_scrollable_Dismissible = root.find('/notes/widgets/container_widgets/scrollable/Dismissible')!;
+  late final To routes_notes_widgets_container_widgets_bar = root.find('/notes/widgets/container_widgets/bar')!;
+  late final To routes_notes_Improve_app = root.find('/notes/Improve_app')!;
+  late final To routes_notes_Improve_app_overview = root.find('/notes/Improve_app/1.overview')!;
+  late final To routes_notes_Improve_app_web_optimization = root.find('/notes/Improve_app/web_optimization')!;
+  late final To routes_notes_Improve_app_RepaintBoundary = root.find('/notes/Improve_app/RepaintBoundary')!;
+  late final To routes_notes_Improve_app_event_listener_lifeycle = root.find('/notes/Improve_app/event&listener&lifeycle')!;
 }
+
+class Routes with RoutesMixin {}

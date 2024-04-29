@@ -43,12 +43,13 @@ class YouCli {
   Future<RouteNode> get rootRoute async {
     Future<RouteNode> from(Directory dir) async {
       if (!dir.existsSync()) {
-        return RouteNode(dir: dir, children: []);
+        return RouteNode(cli: this, dir: dir, children: []);
       }
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
       var (layout: layoutFunction, toType: toType) = await analysisLayout(dir.childFile(layoutDart));
       return RouteNode(
+        cli: this,
         dir: dir,
         pageBuild: await analysisPage(dir.childFile(pageDart)),
         layoutFunction: layoutFunction,
@@ -136,6 +137,7 @@ class YouCli {
 }
 
 class RouteNode {
+  final YouCli cli;
   final List<RouteNode> children;
   final Directory dir;
   final Reference? toType;
@@ -143,7 +145,7 @@ class RouteNode {
   final FunctionElement? pageBuild;
   late RouteNode _parent = this;
 
-  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild}) {
+  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
     for (var child in children) {
       child._parent = this;
     }
@@ -159,21 +161,19 @@ class RouteNode {
 
   File get file_layout_dart => dir.childFile("layout.dart");
 
-  String pageImportUri(String pkgName, Directory libDir) {
-    var pageDartRelativePath = path.relative(file_page_dart.path, from: libDir.path);
-    return "package:$pkgName/$pageDartRelativePath";
-  }
-
-  String layoutImportUri(String pkgName, Directory libDir) {
-    var pageDartRelativePath = path.relative(file_layout_dart.path, from: libDir.path);
-    return "package:$pkgName/$pageDartRelativePath";
-  }
-
   String get routePath {
     if (isRoot) {
       return "/";
     }
     return "/${path.relative(dir.path, from: root.dir.path)}";
+  }
+
+  String get pagePackageUrl {
+    return "package:${cli.pubspec.name}/${path.relative(file_page_dart.path, from: cli.dir_lib.path)}";
+  }
+
+  String get layoutPackageUrl {
+    return "package:${cli.pubspec.name}/${path.relative(file_layout_dart.path, from: cli.dir_lib.path)}";
   }
 
   /// note name平整化,可作为变量名：
