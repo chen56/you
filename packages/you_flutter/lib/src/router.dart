@@ -3,7 +3,6 @@ import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as material;
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/layouts/page_layout_default.dart';
@@ -42,8 +41,7 @@ ref:
     发现
     我
  */
-
-typedef PageBuilder = Widget Function(BuildContext context);
+typedef PageBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder bulider);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
@@ -54,7 +52,7 @@ final class NotFoundError extends ArgumentError {
 mixin RouterMixin {
   YouRouter get router;
 
-  To get root => router.root;
+  YouRoute get root => router.root;
 
   @nonVirtual
   ToUri match(Uri uri) {
@@ -106,7 +104,7 @@ final class YouRouter with RouterMixin {
   }
 
   @override
-  final To root;
+  final YouRoute root;
   final GlobalKey<NavigatorState> _navigatorKey;
   late final RouterConfig<Object> _config;
   late final RouterDelegate<Object> _routerDelegate;
@@ -147,18 +145,18 @@ enum RoutePartType {
   }
 }
 
-abstract base class ForBuild {
+abstract base class RouteBuilder {
   final String part;
 
-  ForBuild(this.part);
+  RouteBuilder(this.part);
 
-  To route({List<To> children = const []}) {
-    return To.create(part, forBuild: this, children: children);
+  YouRoute route({List<YouRoute> children = const []}) {
+    return YouRoute.create(part, forBuild: this, children: children);
   }
 
-  Widget buildPage(BuildContext context, ForBuild forPage, ToUri uri);
+  Widget buildPage(BuildContext context, RouteBuilder forPage, ToUri uri);
 
-  Widget buildNotFound(BuildContext context, ForBuild forNotFound, ToUri uri);
+  Widget buildNotFound(BuildContext context, RouteBuilder forNotFound, ToUri uri);
 
   bool get hasPage;
 
@@ -167,7 +165,7 @@ abstract base class ForBuild {
   bool get hasNotFound;
 }
 
-base class ForPage extends ForBuild {
+base class ForPage extends RouteBuilder {
   final PageBuilder? page;
   final PageBuilder? notFound;
   final PageLayoutBuilder? layout;
@@ -196,7 +194,7 @@ base class ForPage extends ForBuild {
 
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
-base class To {
+base class YouRoute {
   /// part may be a template
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
@@ -207,17 +205,17 @@ base class To {
   late final String _name;
   late final RoutePartType _type;
 
-  late To _parent = this;
+  late YouRoute _parent = this;
 
   @nonVirtual
-  final List<To> children;
+  final List<YouRoute> children;
 
   final PageBuilder? _builder;
   final PageLayoutBuilder? _layout;
-  final ForBuild? forBuild;
+  final RouteBuilder? forBuild;
 
   // TODO P1 root Node的part是routes，有问题！
-  To(
+  YouRoute(
     this.part, {
     this.forBuild,
     PageBuilder? builder,
@@ -235,7 +233,7 @@ base class To {
     }
   }
 
-  To.create(this.part, {required this.forBuild, required this.children})
+  YouRoute.create(this.part, {required this.forBuild, required this.children})
       : _builder = null,
         _layout = null;
 
@@ -249,7 +247,7 @@ base class To {
   //         children: children,
   //       );
 
-  To get parent => _parent;
+  YouRoute get parent => _parent;
 
   @mustBeOverridden
   bool get isValid => _builder != null;
@@ -291,7 +289,7 @@ base class To {
   String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
   @nonVirtual
-  List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
+  List<YouRoute> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
 
   /// return Strictly equal ancestors of type
   @nonVirtual
@@ -304,7 +302,7 @@ base class To {
   }
 
   @nonVirtual
-  To get root => isRoot ? this : _parent.root;
+  YouRoute get root => isRoot ? this : _parent.root;
 
   @nonVirtual
   int get level => isRoot ? 0 : _parent.level + 1;
@@ -324,15 +322,15 @@ base class To {
       return ToUri._(uri: uri, to: this, routeParameters: params);
     }
 
-    To? matchChild({required String segment}) {
-      To? matched = children.where((e) => e._type == RoutePartType.static).where((e) => segment == e._name).firstOrNull;
+    YouRoute? matchChild({required String segment}) {
+      YouRoute? matched = children.where((e) => e._type == RoutePartType.static).where((e) => segment == e._name).firstOrNull;
       if (matched != null) return matched;
       matched = children.where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest).firstOrNull;
       if (matched != null) return matched;
       return null;
     }
 
-    To? matchedNext = matchChild(segment: next);
+    YouRoute? matchedNext = matchChild(segment: next);
     if (matchedNext == null) {
       /// FIXME NotFoundError如何处理
       throw NotFoundError(invalidValue: uri);
@@ -369,16 +367,16 @@ base class To {
   /// a.toList(includeThis:true)
   ///          => [/a,/a/1,/a/2]
   @nonVirtual
-  List<To> toList({
+  List<YouRoute> toList({
     bool includeThis = true,
-    bool Function(To path)? where,
-    Comparator<To>? sortBy,
+    bool Function(YouRoute path)? where,
+    Comparator<YouRoute>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<To> sorted = List.from(children);
+    List<YouRoute> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -429,11 +427,11 @@ ${children.map((e) => e._toStringDeep(level: level + 1)).join("\n")}
 ${"  " * level}</Route>''';
   }
 
-  To? find(String templatePath) {
+  YouRoute? find(String templatePath) {
     return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
 
-  To? _findBySegments(List<String> segments) {
+  YouRoute? _findBySegments(List<String> segments) {
     if (segments.isEmpty) return this;
     var [first, ...rest] = segments;
     for (var c in children) {
@@ -457,7 +455,7 @@ ${"  " * level}</Route>''';
       // FIXME NotFoundError如何处理
       throw NotFoundError(invalidValue: uri);
     }
-    final List<To> chain = [this, ...findAncestorsOfSameType<To>()];
+    final List<YouRoute> chain = [this, ...findAncestorsOfSameType<YouRoute>()];
 
     for (var i in chain) {
       if (i._layout != null) return i._layout(context, _builder);
@@ -470,7 +468,7 @@ ${"  " * level}</Route>''';
 //  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
 //  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
 final class ToUri implements Uri {
-  final To to;
+  final YouRoute to;
   final Uri _uri;
   final Map<String, String> _routeParameters;
 

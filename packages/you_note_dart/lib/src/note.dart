@@ -13,7 +13,7 @@ import 'package:http/http.dart' as http;
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
-base class Note extends ForBuild {
+base class Note extends RouteBuilder {
   final NoteBuilder? page;
   final NoteBuilder? notFound;
   final NoteLayoutBuilder? layout;
@@ -196,14 +196,14 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final To root;
+  final YouRoute root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required To root,
+    required YouRoute root,
   }) async {
     return NoteSystem(
       root: root,
