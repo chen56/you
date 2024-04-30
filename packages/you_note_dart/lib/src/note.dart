@@ -13,7 +13,7 @@ import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 // TODO REMOVE typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = Widget Function(BuildContext context, ToUri uri, NoteBuilder builder);
+typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
 base class ToNote extends To {
   final NoteBuilder? _builder;
@@ -46,11 +46,19 @@ base class ToNote extends To {
     if (_builder == null) {
       return null;
     }
-    To? find = findLayoutNode();
-    if (find == null) {
+    NoteLayoutBuilder? foundLayout = _findLayout();
+    if (foundLayout == null) {
       return NoteLayoutDefault(uri: uri, builder: _builder);
     }
-    return (find as ToNote)._layout!(context, uri, _builder);
+    return foundLayout(context, _builder);
+  }
+
+  NoteLayoutBuilder? _findLayout() {
+    if (_layout != null) return _layout;
+    if (isRoot) return null;
+    To? p = parent;
+    if (p is! ToNote) return null;
+    return p._findLayout();
   }
 }
 
@@ -64,7 +72,6 @@ class NoteRoute {
   bool expand = false;
 
   NoteConf? conf;
-
 
   NoteRoute.root()
       : basename = "",

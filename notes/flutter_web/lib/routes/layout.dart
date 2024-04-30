@@ -5,7 +5,6 @@ import 'package:you_flutter/router.dart';
 /// ref: [PageLayoutBuilder]
 Widget layout(BuildContext context, PageBuilder builder) {
   // ignore: unnecessary_type_check
-  assert(layout is PageLayoutBuilder);
   return RootLayout(
     builder: builder,
   );

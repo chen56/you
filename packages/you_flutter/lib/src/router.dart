@@ -41,9 +41,7 @@ ref:
  */
 
 typedef PageBuilder = Widget Function(BuildContext context);
-typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder builder);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
-// typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
 class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
@@ -51,6 +49,8 @@ class NotFoundError extends ArgumentError {
 
 mixin RouterMixin {
   YouRouter get router;
+
+  To get root => router.root;
 
   ToUri match(Uri uri) {
     var root = router.root;
@@ -155,13 +155,11 @@ base class To {
 
   final List<To> children;
   final PageBuilder? _builder;
-  final PageLayoutBuilder? layout;
 
   // TODO P1 root Node的part是routes，有问题！
   To(
     this.part, {
     PageBuilder? builder,
-    this.layout,
     this.children = const [],
   })  : _builder = builder,
         assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
@@ -183,6 +181,8 @@ base class To {
           builder: _asyncToSync(builder),
           children: children,
         );
+
+  To get parent => _parent;
 
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
     if (builder == null) {
@@ -220,30 +220,6 @@ base class To {
   To get root => isRoot ? this : _parent.root;
 
   int get level => isRoot ? 0 : _parent.level + 1;
-
-  To? findLayoutNode() {
-    return _findLayoutNode(this);
-  }
-
-  /// To类型完全相同，才认为节点兼容
-  To? _findLayoutNode(To toFind) {
-    if (isRoot) {
-      // 路由To类型不兼容
-      if (runtimeType != toFind.runtimeType) {
-        return null;
-      }
-      // 路由To类型兼容再看是不是有layout
-      return layout == null ? null : this;
-    }
-
-    // 现在是非root, 不兼容就向上找
-    if (runtimeType != toFind.runtimeType) {
-      return _parent._findLayoutNode(toFind);
-    }
-
-    // 没有就继续向上找
-    return layout != null ? this : _parent._findLayoutNode(toFind);
-  }
 
   ToUri _match({
     required Uri uri,

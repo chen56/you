@@ -8,9 +8,8 @@ import 'package:you_note_dart/src/note.dart';
 /// 左边routes树，右边页面内容
 final class NoteLayoutStyle1 extends StatelessWidget {
   final NoteBuilder builder;
-  final ToUri uri;
 
-  NoteLayoutStyle1({super.key, required this.uri, required this.builder});
+  NoteLayoutStyle1({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ final class NoteLayoutStyle1 extends StatelessWidget {
             return Row(
               children: [
                 // IntrinsicWidth(child: _NoteTreeView(uri)),
-                _NoteTreeView(uri),
+                _NoteTreeView(),
                 Flexible(child: ListView(children: pageContents)),
               ],
             );
@@ -45,15 +44,13 @@ final class NoteLayoutStyle1 extends StatelessWidget {
 }
 
 class _NoteTreeView extends StatelessWidget {
-  final ToUri uri;
-
-  const _NoteTreeView(this.uri);
+  const _NoteTreeView();
 
   @override
   Widget build(BuildContext context) {
     final router = YouRouter.of(context);
 
-    var validRoutes = uri.to.root.toList().where((e) => !e.isLeaf || (e.isValid));
+    var validRoutes = router.root.toList().where((e) => !e.isLeaf || (e.isValid));
     var routeWidgets = validRoutes.map((node) {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);

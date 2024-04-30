@@ -9,7 +9,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:you_flutter/router.dart';
 import 'package:flutter_web/routes/page.dart';
-import 'package:flutter_web/routes/layout.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:flutter_web/routes/notes/page.dart' as _notes_page;
 import 'package:flutter_web/routes/notes/layout.dart' as _notes_layout;
@@ -67,7 +66,7 @@ import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' 
 import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as _event_listener_lifeycle_page;
 
 mixin RoutesMixin {
-  final To root = To('routes', builder: build, layout: layout, children: [
+  final To root = To('routes', builder: build, children: [
     ToNote('notes', builder: _notes_page.build, layout: _notes_layout.layout, children: [
       ToNote('research', children: [
         ToNote('bash_note'),
