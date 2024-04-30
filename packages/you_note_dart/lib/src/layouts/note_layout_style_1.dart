@@ -32,7 +32,7 @@ final class NoteLayoutStyle1 extends StatelessWidget {
             return Row(
               children: [
                 // IntrinsicWidth(child: _NoteTreeView(uri)),
-                const _NoteTreeView(),
+                const _RouteTree(),
                 Flexible(child: ListView(children: pageContents)),
               ],
             );
@@ -43,14 +43,14 @@ final class NoteLayoutStyle1 extends StatelessWidget {
   }
 }
 
-class _NoteTreeView extends StatelessWidget {
-  const _NoteTreeView();
+class _RouteTree extends StatelessWidget {
+  const _RouteTree();
 
   @override
   Widget build(BuildContext context) {
     final router = YouRouter.of(context);
 
-    var validRoutes = router.root.toList().where((e) => !e.isLeaf );
+    var validRoutes = router.root.toList().where((e) => e.isValid || e.isNonLeaf);
     var routeWidgets = validRoutes.map((node) {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
@@ -58,15 +58,18 @@ class _NoteTreeView extends StatelessWidget {
       click() {
         router.to(node.toUri());
       }
+
       return Align(
         alignment: Alignment.centerLeft,
-        child: TextButton(onPressed:   click  , child: Text(title)),
+        child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
       );
     });
     return ConstrainedBox(
         constraints: const BoxConstraints.tightFor(width: 350),
         child: ListView(
-          children: [...routeWidgets],
+          children: [
+            ...routeWidgets,
+          ],
         ));
   }
 }

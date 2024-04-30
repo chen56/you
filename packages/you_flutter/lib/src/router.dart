@@ -46,7 +46,7 @@ typedef PageBuilder = Widget Function(BuildContext context);
 typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder bulider);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
-class NotFoundError extends ArgumentError {
+final class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
 }
 
@@ -55,6 +55,7 @@ mixin RouterMixin {
 
   To get root => router.root;
 
+  @nonVirtual
   ToUri match(Uri uri) {
     var root = router.root;
     assert(uri.path.startsWith("/"));
@@ -64,6 +65,7 @@ mixin RouterMixin {
     return root._match(uri: uri, segments: uri.pathSegments, params: params);
   }
 
+  @nonVirtual
   void to(Uri uri) {
     ToUri to = match(uri);
     var result = router._routerDelegate.setNewRoutePath(to);
@@ -73,7 +75,7 @@ mixin RouterMixin {
   }
 }
 
-class RouteContext with RouterMixin {
+final class RouteContext with RouterMixin {
   RouteContext._(this.router, this.uri);
 
   @override
@@ -85,7 +87,7 @@ class RouteContext with RouterMixin {
 ///   path base: https://example.com/product/1
 ///   fragment base: https://example.com/base-harf/#/product/1
 ///
-class YouRouter with RouterMixin {
+final class YouRouter with RouterMixin {
   YouRouter({
     required this.root,
 
@@ -116,8 +118,8 @@ class YouRouter with RouterMixin {
 
   RouterConfig<Object> config() => _config;
 
-  @visibleForTesting
   @override
+  @visibleForTesting
   YouRouter get router => this;
 }
 
@@ -151,12 +153,15 @@ base class To {
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
   ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
+  @nonVirtual
   final String part;
+
   late final String _name;
   late final RoutePartType _type;
 
   late To _parent = this;
 
+  @nonVirtual
   final List<To> children;
 
   final PageBuilder? _builder;
@@ -214,19 +219,27 @@ base class To {
         );
   }
 
+  @nonVirtual
   bool get isRoot => _parent == this;
 
+  @nonVirtual
   bool get isLeaf => children.isEmpty;
+
+  @nonVirtual
+  bool get isNonLeaf => !isLeaf;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
   //     - [user]     -> uriTemplate: /users/[user]
+  @nonVirtual
   String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
+  @nonVirtual
   List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
 
   /// return Strictly equal ancestors of type
+  @nonVirtual
   Iterable<T> findAncestorsOfSameType<T>() sync* {
     for (var a in ancestors) {
       if (a.runtimeType == runtimeType) {
@@ -235,8 +248,10 @@ base class To {
     }
   }
 
+  @nonVirtual
   To get root => isRoot ? this : _parent.root;
 
+  @nonVirtual
   int get level => isRoot ? 0 : _parent.level + 1;
 
   ToUri _match({
@@ -298,6 +313,7 @@ base class To {
   ///
   /// a.toList(includeThis:true)
   ///          => [/a,/a/1,/a/2]
+  @nonVirtual
   List<To> toList({
     bool includeThis = true,
     bool Function(To path)? where,
@@ -373,12 +389,14 @@ ${"  " * level}</Route>''';
     return null;
   }
 
+  @nonVirtual
   Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
     // TODO 临时实现，需要增加模版参数
     return Uri.parse(templatePath);
   }
 
   @visibleForOverriding
+  @mustBeOverridden
   Widget build(BuildContext context, ToUri uri) {
     if (_builder == null) {
       // FIXME NotFoundError如何处理
@@ -396,7 +414,7 @@ ${"  " * level}</Route>''';
 // TODO TOUri 设计的还不完善，
 //  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
 //  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
-class ToUri implements Uri {
+final class ToUri implements Uri {
   final To to;
   final Uri _uri;
   final Map<String, String> _routeParameters;
@@ -575,7 +593,7 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
   @override
   Future<void> setNewRoutePath(ToUri configuration) {
     // TODO router暂时这样实现，还未确定Layout和route的配合细节
-    // stack.clear();
+    stack.clear();
     stack.add(configuration);
     notifyListeners();
     return SynchronousFuture(null);
