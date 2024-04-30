@@ -3,6 +3,7 @@ import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as material;
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/layouts/page_layout_default.dart';
@@ -146,6 +147,53 @@ enum RoutePartType {
   }
 }
 
+abstract base class ForBuild {
+  final String part;
+
+  ForBuild(this.part);
+
+  To route({List<To> children = const []}) {
+    return To.create(part, forBuild: this, children: children);
+  }
+
+  Widget buildPage(BuildContext context, ForBuild forPage, ToUri uri);
+
+  Widget buildNotFound(BuildContext context, ForBuild forNotFound, ToUri uri);
+
+  bool get hasPage;
+
+  bool get hasLayout;
+
+  bool get hasNotFound;
+}
+
+base class ForPage extends ForBuild {
+  final PageBuilder? page;
+  final PageBuilder? notFound;
+  final PageLayoutBuilder? layout;
+
+  ForPage(super.part, {this.page, this.layout, this.notFound});
+
+  @override
+  Widget buildPage(BuildContext context, covariant ForPage forPage, ToUri uri) {
+    return layout!(context, forPage.page!);
+  }
+
+  @override
+  Widget buildNotFound(BuildContext context, covariant ForPage forNotFound, ToUri uri) {
+    return layout!(context, forNotFound.notFound!);
+  }
+
+  @override
+  bool get hasPage => page != null;
+
+  @override
+  bool get hasLayout => layout != null;
+
+  @override
+  bool get hasNotFound => notFound != null;
+}
+
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
@@ -166,10 +214,12 @@ base class To {
 
   final PageBuilder? _builder;
   final PageLayoutBuilder? _layout;
+  final ForBuild? forBuild;
 
   // TODO P1 root Node的part是routes，有问题！
   To(
     this.part, {
+    this.forBuild,
     PageBuilder? builder,
     PageLayoutBuilder? layout,
     this.children = const [],
@@ -185,21 +235,26 @@ base class To {
     }
   }
 
-  To.lazy(
-    String part, {
-    LazyPageBuilder? builder,
-    List<To> children = const [],
-  }) : this(
-          part,
-          builder: _asyncToSync(builder),
-          children: children,
-        );
+  To.create(this.part, {required this.forBuild, required this.children})
+      : _builder = null,
+        _layout = null;
+
+  // To.lazy(
+  //   String part, {
+  //   LazyPageBuilder? builder,
+  //   List<To> children = const [],
+  // }) : this(
+  //         part,
+  //         builder: _asyncToSync(builder),
+  //         children: children,
+  //       );
 
   To get parent => _parent;
 
   @mustBeOverridden
   bool get isValid => _builder != null;
 
+  // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
     if (builder == null) {
       return null;

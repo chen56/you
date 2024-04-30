@@ -51,7 +51,7 @@ void main() {
       FileSystem fs=LocalFileSystem();
       YouCli cli = YouCli(projectDir: fs.directory("../../notes/flutter_web/lib"));
       var result  =await cli.analysisLayout(fs.file("../../notes/flutter_web/lib/routes/notes/layout.dart"));
-      check(result.toType).equals(refer("ToNote","package:you_note_dart/note.dart"));
+      check(result.forBuildType).equals(refer("ToNote","package:you_note_dart/note.dart"));
     });
   });
 

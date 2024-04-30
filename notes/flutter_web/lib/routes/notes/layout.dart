@@ -4,7 +4,7 @@ import 'package:you_note_dart/note.dart';
 import 'package:you_note_dart/note_layouts.dart';
 
 /// [NoteLayoutBuilder]
-@ToType(type: ToNote)
+@ToType(type: Note)
 Widget layout(BuildContext context, NoteBuilder builder) {
   // ignore: unnecessary_type_check
   assert(layout is NoteLayoutBuilder);

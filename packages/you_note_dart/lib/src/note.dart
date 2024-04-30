@@ -9,37 +9,62 @@ import 'package:you_flutter/state.dart';
 import 'package:you_note_dart/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:http/http.dart' as http;
-import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
-base class ToNote extends To {
-  final NoteBuilder? _builder;
-  final NoteLayoutBuilder? _layout;
+base class Note extends ForBuild {
+  final NoteBuilder? page;
+  final NoteBuilder? notFound;
+  final NoteLayoutBuilder? layout;
 
-  ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
-      : _builder = builder,
-        _layout = layout,
-        super(children: children);
+  Note(super.part, {this.page, this.layout, this.notFound});
 
   @override
-  bool get isValid => _builder!=null;
-
-  @override
-  Widget build(BuildContext context, ToUri uri) {
-    if (_builder == null) {
-      // TODO not found
-      return Text("not found $uri");
-    }
-    List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
-    for (var i in chain) {
-      if (i._layout != null) return i._layout(context, _builder);
-    }
-    return NoteLayoutDefault(uri: uri, builder: _builder);
+  Widget buildPage(BuildContext context, covariant Note forPage, ToUri uri) {
+    return layout!(context, forPage.page!);
   }
 
+  @override
+  Widget buildNotFound(BuildContext context, covariant Note forNotFound, ToUri uri) {
+    return layout!(context, forNotFound.notFound!);
+  }
+
+  @override
+  bool get hasPage => page != null;
+
+  @override
+  bool get hasLayout => layout != null;
+
+  @override
+  bool get hasNotFound => notFound != null;
 }
+//
+// base class ToNote extends To {
+//   final NoteBuilder? _builder;
+//   final NoteLayoutBuilder? _layout;
+//
+//   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
+//       : _builder = builder,
+//         _layout = layout,
+//         super(part,forBuild:this,children: children);
+//
+//   @override
+//   bool get isValid => _builder != null;
+//
+//   @override
+//   Widget build(BuildContext context, ToUri uri) {
+//     if (_builder == null) {
+//       // TODO not found
+//       return Text("not found $uri");
+//     }
+//     List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
+//     for (var i in chain) {
+//       if (i._layout != null) return i._layout(context, _builder);
+//     }
+//     return NoteLayoutDefault(uri: uri, builder: _builder);
+//   }
+// }
 
 @Deprecated("已被you_router取代，待删除")
 class NoteRoute {
@@ -233,7 +258,8 @@ class NoteSystem {
 }
 
 base class Cell {
-  Cell(Function(Cell print) callback, {
+  Cell(
+    Function(Cell print) callback, {
     this.title,
   }) {
     callback(this);
