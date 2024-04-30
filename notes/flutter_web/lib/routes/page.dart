@@ -2,14 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 
-RootPage build(BuildContext context, ToUri uri) {
-  return RootPage(uri: uri);
+RootPage build(BuildContext context) {
+  return const RootPage();
 }
 
 class RootPage extends StatelessWidget {
-  final ToUri uri;
-
-  const RootPage({required this.uri, super.key});
+  const RootPage({super.key});
 
   @override
   Widget build(BuildContext context) {

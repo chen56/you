@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 
 /// ref: [PageLayoutBuilder]
-Widget layout(BuildContext context, ToUri uri, PageBuilder builder) {
+Widget layout(BuildContext context, PageBuilder builder) {
   // ignore: unnecessary_type_check
   assert(layout is PageLayoutBuilder);
   return RootLayout(
-    uri: uri,
     builder: builder,
   );
 }
@@ -15,14 +14,12 @@ Widget layout(BuildContext context, ToUri uri, PageBuilder builder) {
 @immutable
 final class RootLayout extends StatelessWidget {
   final PageBuilder builder;
-  final ToUri uri;
 
-  const RootLayout({super.key, required this.uri, required this.builder});
+  const RootLayout({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context) {
-    var child = builder(context, uri);
-
+    var child = builder(context);
 
     NavigationRailDestination rail({required String title, required IconData icon}) {
       return NavigationRailDestination(

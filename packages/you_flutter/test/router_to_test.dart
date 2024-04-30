@@ -26,7 +26,7 @@ void main() {
     // Tos.root.user("chen56").repository("note").tree.branch("main").file("a/b/c.dart");
     // Tos.user_repository_tree_branch_file(user:"chen56",repository:"note",branch:"main",file:"a/b");
     void match(String path, {required ({String location, Map<String, String> routeParameters}) expected}) {
-      var match = router.match(path);
+      var match = router.match(Uri.parse(path));
       expect(match.to.templatePath, equals(expected.location));
       expect(match.routeParameters, equals(expected.routeParameters));
     }
@@ -93,14 +93,14 @@ void main() {
     );
 
     void match(String path, {required String matched, required Map<String, String> params}) {
-      var match = router.match(path);
+      var match = router.match(Uri.parse(path));
       expect(match.to.templatePath, equals(matched));
       expect(match.routeParameters, equals(params));
     }
 
     void checkNotFound({required String uri}) {
       try {
-        router.match(uri);
+        router.match(Uri.parse(uri));
         fail("Never");
       } catch (e) {
         check(e).isA<NotFoundError>();

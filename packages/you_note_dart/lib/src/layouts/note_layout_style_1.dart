@@ -51,7 +51,7 @@ class _NoteTreeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    YouRouter router = YouRouter.of(context);
+    final router = YouRouter.of(context);
 
     var validRoutes = uri.to.root.toList().where((e) => !e.isLeaf || (e.isValid));
     var routeWidgets = validRoutes.map((node) {

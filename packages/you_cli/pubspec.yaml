@@ -29,7 +29,6 @@ dependencies:
   you_dart: ^0.0.4
 
 dev_dependencies:
-  lints: ^3.0.0
   test:
 
 

@@ -108,9 +108,9 @@ _run() {
   caller_line=$(caller 0 | awk '{print $1}')
 
   if ! _is_cmd "$cmd" ; then
-    echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+    echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
   else
-    echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+    echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
     "$@"
   fi
   # 退出工作目录，不弄脏环境,不需要打印popd执行结果
@@ -123,7 +123,7 @@ _run() {
 ##########################################
 
 
-pkgs()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
+pkgs()        { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
 run()         { for pkg in ${!_pkgs[*]} ; do _run "$pkg" "$@" ;   done         }
 install()     { _run_all install;                                              }
 get()         { _run_all install;                                              }
@@ -132,7 +132,7 @@ upgrade()     { _run_all upgrade;                                              }
 clean()       { _run_all clean;                                                }
 test()        { _run_all test;                                                 }
 gen()         { _run_all gen;                                                  }
-
+dart_fix()    { run dart fix $@;                                               }
 
 # 根项目，主要是bin/辅助工具等
 root.run()               { _run root "$@";                                          }

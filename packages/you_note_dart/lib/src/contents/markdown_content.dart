@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:meta/meta.dart';
 import 'package:you_note_dart/src/contents/outline.dart';
-import 'package:you_note_dart/src/flutter_highlight.dart';
+// import 'package:you_note_dart/src/flutter_highlight.dart';
+// import 'package:flutter_highlight/themes/vs2015.dart';
 
 class MD extends StatelessWidget {
   final String text;
@@ -107,33 +107,27 @@ class _PreBuilder extends MarkdownElementBuilder {
 
   @override
   Widget? visitText(md.Text text, TextStyle? preferredStyle) {
-    var highlight = HighlightView(
-      // The original code to be highlighted
-      text.textContent,
-
-      // Specify language
-      // It is recommended to give it a value for performance
-      language: 'dart',
-
-      // Specify highlight theme
-      // All available themes are listed in `themes` folder
-      theme: vs2015Theme,
-
-      // Specify padding
-      padding: const EdgeInsets.all(12),
-
-      // Specify text style
-      textStyle: const TextStyle(
-        fontFamily: 'My awesome monospace font',
-        fontSize: 16,
-      ),
-    );
-    var noScroll = Row(
-      children: [
-        Expanded(child: highlight),
-      ],
-    );
-
+    // var highlight = HighlightView(
+    //   // The original code to be highlighted
+    //   text.textContent,
+    //
+    //   // Specify language
+    //   // It is recommended to give it a value for performance
+    //   language: 'dart',
+    //
+    //   // Specify highlight theme
+    //   // All available themes are listed in `themes` folder
+    //   theme: vs2015Theme,
+    //
+    //   // Specify padding
+    //   padding: const EdgeInsets.all(12),
+    //
+    //   // Specify text style
+    //   textStyle: const TextStyle(
+    //     fontFamily: 'My awesome monospace font',
+    //     fontSize: 16,
+    //   ),
+    // );
     //目前看，markdown中的code/prd 不滚动是不是更好些，一般内容不会很长
     return Container(
       padding: const EdgeInsets.only(right: 100),

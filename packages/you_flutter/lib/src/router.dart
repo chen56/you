@@ -40,8 +40,8 @@ ref:
     我
  */
 
-typedef PageBuilder = Widget Function(BuildContext context, ToUri uri);
-typedef PageLayoutBuilder = Widget Function(BuildContext context, ToUri uri, PageBuilder builder);
+typedef PageBuilder = Widget Function(BuildContext context);
+typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder builder);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 // typedef PageBuilderAsync = Future<Widget> Function(BuildContext context, ToUri uri);
 
@@ -49,18 +49,48 @@ class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
 }
 
+mixin RouterMixin {
+  YouRouter get router;
+
+  ToUri match(Uri uri) {
+    var root = router.root;
+    assert(uri.path.startsWith("/"));
+    if (uri.path == "/") return ToUri._(uri: uri, to: root, routeParameters: const {});
+
+    Map<String, String> params = {};
+    return root._match(uri: uri, segments: uri.pathSegments, params: params);
+  }
+
+  void to(Uri uri) {
+    ToUri to = match(uri);
+    var result = router._routerDelegate.setNewRoutePath(to);
+    bool completed = false;
+    result.whenComplete(() => completed = true);
+    assert(completed, "bug: internal ensure routerDelegate.setNewRoutePath is sync implement");
+  }
+}
+
+class RouteContext with RouterMixin {
+  RouteContext._(this.router, this.uri);
+
+  @override
+  final YouRouter router;
+  final ToUri uri;
+}
+
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
 ///   path base: https://example.com/product/1
 ///   fragment base: https://example.com/base-harf/#/product/1
 ///
-class YouRouter {
+class YouRouter with RouterMixin {
   YouRouter({
     required this.root,
 
     /// [PlatformRouteInformationProvider.initialRouteInformation]
     required this.initial,
     required GlobalKey<NavigatorState> navigatorKey,
-  }) : _navigatorKey = navigatorKey, assert(root.templatePath == "/") {
+  })  : _navigatorKey = navigatorKey,
+        assert(root.templatePath == "/") {
     _routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: _navigatorKey, router: this));
     _config = RouterConfig<Object>(
       routeInformationProvider: PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
@@ -75,31 +105,16 @@ class YouRouter {
   late final RouterConfig<Object> _config;
   late final RouterDelegate<Object> _routerDelegate;
 
-  static YouRouter of(BuildContext context) {
-    var result = context.findAncestorWidgetOfExactType<_RouterScope>();
+  static RouteContext of(BuildContext context) {
+    var result = context.findAncestorWidgetOfExactType<_RouteScope>();
     assert(result != null, "YouRouter not found, please: MaterialApp.router(routerConfig:YouRouter(...).config())");
-    return result!.router;
+    return RouteContext._(result!.router, result.uri);
   }
-
-  ToUri matchUri(Uri uri) {
-    assert(uri.path.startsWith("/"));
-    if (uri.path == "/") return ToUri._(uri: uri, to: root, routeParameters: const {});
-
-    Map<String, String> params = {};
-    return root._match(uri: uri, segments: uri.pathSegments, params: params);
-  }
-
-  ToUri match(String uri) => matchUri(Uri.parse(uri));
 
   RouterConfig<Object> config() => _config;
 
-  void to(Uri uri) {
-    ToUri to = matchUri(uri);
-    var result = _routerDelegate.setNewRoutePath(to);
-    bool completed = false;
-    result.whenComplete(() => completed = true);
-    assert(completed, "bug: internal ensure routerDelegate.setNewRoutePath is sync implement");
-  }
+  @override
+  YouRouter get router => this;
 }
 
 enum RoutePartType {
@@ -143,12 +158,12 @@ base class To {
   final PageLayoutBuilder? layout;
 
   // TODO P1 root Node的part是routes，有问题！
-  To(this.part, {
+  To(
+    this.part, {
     PageBuilder? builder,
     this.layout,
     this.children = const [],
-  })
-      : _builder = builder,
+  })  : _builder = builder,
         assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
     var parsed = _parse(part);
     _name = parsed.$1;
@@ -159,26 +174,27 @@ base class To {
     }
   }
 
-  To.lazy(String part, {
+  To.lazy(
+    String part, {
     LazyPageBuilder? builder,
     List<To> children = const [],
   }) : this(
-    part,
-    builder: _asyncToSync(builder),
-    children: children,
-  );
+          part,
+          builder: _asyncToSync(builder),
+          children: children,
+        );
 
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
     if (builder == null) {
       return null;
     }
-    return (BuildContext context, ToUri uri) =>
-        FutureBuilder<Widget>(
-          future: builder().then((b) => b(context, uri)),
+    return (BuildContext context) => FutureBuilder<Widget>(
+          future: builder().then((b) => b(context)),
           builder: (context, snapshot) {
+            final router = YouRouter.of(context);
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.hasError) {
-                return Text('page load error($uri): ${snapshot.error} \n${snapshot.stackTrace}');
+                return Text('page load error(${router.uri}): ${snapshot.error} \n${snapshot.stackTrace}');
               }
               return snapshot.data!;
             }
@@ -208,7 +224,8 @@ base class To {
   To? findLayoutNode() {
     return _findLayoutNode(this);
   }
-    /// To类型完全相同，才认为节点兼容
+
+  /// To类型完全相同，才认为节点兼容
   To? _findLayoutNode(To toFind) {
     if (isRoot) {
       // 路由To类型不兼容
@@ -244,14 +261,9 @@ base class To {
     }
 
     To? matchChild({required String segment}) {
-      To? matched = children
-          .where((e) => e._type == RoutePartType.static)
-          .where((e) => segment == e._name)
-          .firstOrNull;
+      To? matched = children.where((e) => e._type == RoutePartType.static).where((e) => segment == e._name).firstOrNull;
       if (matched != null) return matched;
-      matched = children
-          .where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest)
-          .firstOrNull;
+      matched = children.where((e) => e._type == RoutePartType.dynamic || e._type == RoutePartType.dynamicRest).firstOrNull;
       if (matched != null) return matched;
       return null;
     }
@@ -353,11 +365,7 @@ ${"  " * level}</Route>''';
   }
 
   To? find(String templatePath) {
-    return _findBySegments(Uri
-        .parse(templatePath)
-        .pathSegments
-        .where((e) => e.isNotEmpty)
-        .toList());
+    return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
 
   To? _findBySegments(List<String> segments) {
@@ -389,8 +397,7 @@ class ToUri implements Uri {
     required Uri uri,
     required this.to,
     required Map<String, String> routeParameters,
-  })
-      : _uri = uri,
+  })  : _uri = uri,
         _routeParameters = /*safe copy*/ Map.from(routeParameters);
 
   Map<String, String> get routeParameters {
@@ -489,17 +496,7 @@ class ToUri implements Uri {
     Map<String, dynamic>? queryParameters,
     String? fragment,
   }) {
-    return ToUri._(to: to,
-        routeParameters: routeParameters,
-        uri: _uri.replace(scheme: scheme,
-            userInfo: userInfo,
-            host: host,
-            port: port,
-            path: path,
-            pathSegments: pathSegments,
-            query: query,
-            queryParameters: queryParameters,
-            fragment: fragment));
+    return ToUri._(to: to, routeParameters: routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
   }
 
   @override
@@ -520,16 +517,16 @@ class ToUri implements Uri {
 
 /// this class only use for  [router] ,
 /// ref: [YouRouter.of]
-class _RouterScope extends StatelessWidget {
-  const _RouterScope({
+class _RouteScope extends StatelessWidget {
+  const _RouteScope({
     required this.router,
     required this.builder,
-    required this.routerDelegate,
+    required this.uri,
   });
 
   final YouRouter router;
   final WidgetBuilder builder;
-  final _RouterDelegate routerDelegate;
+  final ToUri uri;
 
   @override
   Widget build(BuildContext context) {
@@ -545,7 +542,7 @@ class _RouteInformationParser extends RouteInformationParser<ToUri> {
   // TODO P1 routeInformation.uri 这个在web上是fragments或path base路由，要区分
   @override
   Future<ToUri> parseRouteInformation(RouteInformation routeInformation) {
-    ToUri location = router.matchUri(routeInformation.uri);
+    ToUri location = router.match(routeInformation.uri);
     return SynchronousFuture(location);
   }
 
@@ -596,11 +593,11 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
         throw NotFoundError(invalidValue: uri);
       }
       // 在本router api稳定下来之前，不暴露flutter Page 相关api
-      return MaterialPage(key: ValueKey(uri), child: uri.to._builder!(context, uri));
+      return MaterialPage(key: ValueKey(uri), child: uri.to._builder!(context));
     }
 
-    return _RouterScope(
-      routerDelegate: this,
+    return _RouteScope(
+      uri: stack.first,
       router: router,
       builder: (context) {
         return Navigator(
