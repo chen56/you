@@ -16,7 +16,6 @@ void main() {
   group("Pubspec.putNoteAssets", () {
     setUp(() {
       fs = MemoryFileSystem();
-      print("setup"); //TODO remove
     });
 
     test('add', () async {

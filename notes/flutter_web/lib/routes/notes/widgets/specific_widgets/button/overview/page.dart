@@ -175,14 +175,6 @@ GestureDetector(
 ```
   '''));
 
-  // todo 增加GestureDetector范例
-  // print.sampleMate(GestureDetector(
-  //   // todo default value：这种变量型的是不是可以弄一下  kDefaultTrackpadScrollToScaleFactor
-  //   trackpadScrollToScaleFactor: kDefaultTrackpadScrollToScaleFactor,
-  //   child: const Text("文本变按钮"),
-  //   onTap: () {/**todo UI log，显示到控制台便于一般性的事件展示**/},
-  // ));
-
   print.addCell(title:const Text("--------new cell------"));
   print(const MD(r'''
 ### Ink*组件

@@ -36,7 +36,6 @@ void build(BuildContext context, Cell print) async {
     print.runInCurrentCell((print) {
       onPressed() async {
         var msg = await bomb();
-        // todo 这个print在 async时，会打到最后一个cell
         print(msg);
         // debugPrint("ppp2 ${print.hashCode}");
         // debugPrint("ppp2--- ${print.pen.cells}");
