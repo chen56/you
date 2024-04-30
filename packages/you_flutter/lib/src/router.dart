@@ -3,6 +3,7 @@ import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/layouts/page_layout_default.dart';
 import 'package:you_flutter/src/log.dart';
@@ -79,6 +80,7 @@ class RouteContext with RouterMixin {
   final YouRouter router;
   final ToUri uri;
 }
+
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
 ///   path base: https://example.com/product/1
 ///   fragment base: https://example.com/base-harf/#/product/1
@@ -100,6 +102,7 @@ class YouRouter with RouterMixin {
     );
   }
 
+  @override
   final To root;
   final GlobalKey<NavigatorState> _navigatorKey;
   late final RouterConfig<Object> _config;
@@ -189,6 +192,9 @@ base class To {
 
   To get parent => _parent;
 
+  @mustBeOverridden
+  bool get isValid => _builder != null;
+
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
     if (builder == null) {
       return null;
@@ -223,7 +229,7 @@ base class To {
   /// return Strictly equal ancestors of type
   Iterable<T> findAncestorsOfSameType<T>() sync* {
     for (var a in ancestors) {
-      if (a.runtimeType == this.runtimeType) {
+      if (a.runtimeType == runtimeType) {
         yield a as T;
       }
     }
@@ -378,7 +384,7 @@ ${"  " * level}</Route>''';
       // FIXME NotFoundError如何处理
       throw NotFoundError(invalidValue: uri);
     }
-    final List<To> chain=[this,...findAncestorsOfSameType<To>()];
+    final List<To> chain = [this, ...findAncestorsOfSameType<To>()];
 
     for (var i in chain) {
       if (i._layout != null) return i._layout(context, _builder);

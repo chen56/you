@@ -9,7 +9,7 @@ import 'package:you_note_dart/src/note.dart';
 final class NoteLayoutStyle1 extends StatelessWidget {
   final NoteBuilder builder;
 
-  NoteLayoutStyle1({super.key, required this.builder});
+  const NoteLayoutStyle1({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ final class NoteLayoutStyle1 extends StatelessWidget {
             return Row(
               children: [
                 // IntrinsicWidth(child: _NoteTreeView(uri)),
-                _NoteTreeView(),
+                const _NoteTreeView(),
                 Flexible(child: ListView(children: pageContents)),
               ],
             );
@@ -55,16 +55,16 @@ class _NoteTreeView extends StatelessWidget {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
 
-      var click = () {
+      click() {
         router.to(node.toUri());
-      };
+      }
       return Align(
         alignment: Alignment.centerLeft,
         child: TextButton(onPressed:   click  , child: Text(title)),
       );
     });
     return ConstrainedBox(
-        constraints: BoxConstraints.tightFor(width: 350),
+        constraints: const BoxConstraints.tightFor(width: 350),
         child: ListView(
           children: [...routeWidgets],
         ));

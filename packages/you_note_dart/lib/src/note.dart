@@ -23,6 +23,10 @@ base class ToNote extends To {
         _layout = layout,
         super(children: children);
 
+  @override
+  bool get isValid => _builder!=null;
+
+  @override
   Widget build(BuildContext context, ToUri uri) {
     if (_builder == null) {
       // TODO not found
@@ -34,6 +38,7 @@ base class ToNote extends To {
     }
     return NoteLayoutDefault(uri: uri, builder: _builder);
   }
+
 }
 
 @Deprecated("已被you_router取代，待删除")

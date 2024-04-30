@@ -20,6 +20,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   checks: ^0.3.0
+  flutter_lints: ^3.0.2
+
 
 dependency_overrides:
   #  dart CHANGELOG 3.0.0 2023-05-10

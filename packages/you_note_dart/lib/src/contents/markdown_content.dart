@@ -9,7 +9,7 @@ import 'package:you_note_dart/src/contents/outline.dart';
 class MD extends StatelessWidget {
   final String text;
 
-  const MD(this.text, {Object? debugLabel});
+  const MD(this.text, {super.key, Object? debugLabel});
 
   @override
   Widget build(BuildContext context) {

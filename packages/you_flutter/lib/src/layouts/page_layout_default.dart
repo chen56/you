@@ -5,7 +5,7 @@ class PageLayoutDefault extends StatelessWidget {
   final PageBuilder builder;
   final ToUri uri;
 
-  PageLayoutDefault({required this.builder, required this.uri});
+  const PageLayoutDefault({super.key, required this.builder, required this.uri});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class PageLayoutDefault extends StatelessWidget {
                 rail(title: "文件夹", icon: Icons.folder_outlined),
                 rail(title: "文件夹2", icon: Icons.folder_outlined),
               ]),
-              Drawer(
+              const Drawer(
                 width: 200,
                 child: _RouteTree(),
               ),
@@ -60,16 +60,16 @@ class _RouteTree extends StatelessWidget {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
 
-      var click = () {
+      click() {
         router.to(node.toUri());
-      };
+      }
       return Align(
         alignment: Alignment.centerLeft,
         child: TextButton(onPressed: click, child: Text(title)),
       );
     });
     return ConstrainedBox(
-        constraints: BoxConstraints.tightFor(width: 350),
+        constraints: const BoxConstraints.tightFor(width: 350),
         child: ListView(
           children: [
             ...routeWidgets,

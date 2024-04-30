@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:you_note_dart/src/note.dart';
 
-final _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
+const _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
 
 void main() {
   group("jsSourceMap", () {

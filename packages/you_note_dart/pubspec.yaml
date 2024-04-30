@@ -38,6 +38,7 @@ dependencies:
   # you_*
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
+  flutter_lints: ^3.0.2
 
 #  async: ^2.11.0
 dev_dependencies:

@@ -13,7 +13,7 @@ void main() {
       for (var _ in List.generate(100, (i) => i)) {
         var parseResult = parseString(content: file.readAsStringSync(), featureSet: FeatureSet.latestLanguageVersion());
         var unit = parseResult.unit;
-        unit.visitChildren(GeneralizingAstVisitor());
+        unit.visitChildren(const GeneralizingAstVisitor());
       }
     });
   });
