@@ -14,12 +14,13 @@ cd "$_ROOT_DIR" || exit 200
 source "packages/you_bake/bake.bash"
 
 declare -A _pkgs=(
+    ["root"]="$_ROOT_DIR"
     ["bake"]="$_ROOT_DIR/packages/you_bake"
     ["you_dart"]="$_ROOT_DIR/packages/you_dart"
     ["you_flutter"]="$_ROOT_DIR/packages/you_flutter"
     ["you_note_dart"]="$_ROOT_DIR/packages/you_note_dart"
+    ["you_cli"]="$_ROOT_DIR/packages/you_cli"
     ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
-    ["root"]="$_ROOT_DIR"
     ["flutter_web"]="$_ROOT_DIR/notes/flutter_web"
     ["qwik"]="$_ROOT_DIR/notes/qwik"
     ["shell"]="$_ROOT_DIR/notes/shell"
@@ -97,7 +98,7 @@ _run() {
   local pkg=${1:?required project arg,Usage: _run_at_pkg <pkg>}
   shift
   local cmd="${1}"
-  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
+#  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
 
   # 进入工作目录
   local workdir="${_pkgs[$pkg]}"
@@ -107,9 +108,9 @@ _run() {
   caller_line=$(caller 0 | awk '{print $1}')
 
   if ! _is_cmd "$cmd" ; then
-    echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+    echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
   else
-    echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$workdir$ $*】"
+    echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
     "$@"
   fi
   # 退出工作目录，不弄脏环境,不需要打印popd执行结果
@@ -122,7 +123,7 @@ _run() {
 ##########################################
 
 
-ls()          { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
+pkgs()        { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
 run()         { for pkg in ${!_pkgs[*]} ; do _run "$pkg" "$@" ;   done         }
 install()     { _run_all install;                                              }
 get()         { _run_all install;                                              }
@@ -131,17 +132,11 @@ upgrade()     { _run_all upgrade;                                              }
 clean()       { _run_all clean;                                                }
 test()        { _run_all test;                                                 }
 gen()         { _run_all gen;                                                  }
-
+dart_fix()    { run dart fix $@;                                               }
 
 # 根项目，主要是bin/辅助工具等
 root.run()               { _run root "$@";                                          }
-root.install()           { _run root dart pub get;                                  }
-root.upgrade()           { _run root dart pub upgrade ;                             }
-root.test()              { _run root dart test;                                     }
-root.build()             { _run root dart compile exe bin/notecli.dart ;            }
-root.clean()             { _run root rm -rf build;
-                           _run root rm -rf .dart_tool;                             }
-# bash。bash is1 common scri
+
 bake.run()              { _run bake "$@";                                           }
 bake.test()             { _run bake ./test.bash test;                               }
 
@@ -158,12 +153,15 @@ you_flutter.clean()   { _run you_flutter flutter clean; rm -rf build;          }
 you_flutter.upgrade() { _run you_flutter flutter pub upgrade ;                 }
 you_flutter.test()    { _run you_flutter flutter test;                         }
 
+you_cli.run()         { _run you_cli "$@";                                 }
+you_cli.test()        { _run you_cli dart test;                                 }
 
-you_note_dart.run()     { _run root_note_dart "$@";                                 }
-you_note_dart.install() { _run root_note_dart flutter pub get;                      }
-you_note_dart.clean()   { _run root_note_dart flutter clean; rm -rf build;          }
-you_note_dart.upgrade() { _run root_note_dart flutter pub upgrade ;                 }
-you_note_dart.test()    { _run root_note_dart flutter test;                         }
+
+you_note_dart.run()     { _run you_note_dart "$@";                                 }
+you_note_dart.install() { _run you_note_dart flutter pub get;                      }
+you_note_dart.clean()   { _run you_note_dart flutter clean; rm -rf build;          }
+you_note_dart.upgrade() { _run you_note_dart flutter pub upgrade ;                 }
+you_note_dart.test()    { _run you_note_dart flutter test;                         }
 
 learn_dart.run()        { _run learn_dart "$@";                                     }
 learn_dart.install()    { _run learn_dart dart pub get ;                            }
@@ -184,25 +182,25 @@ flutter_web.install()  { _run flutter_web flutter pub get ;                 }
 flutter_web.clean()    { _run flutter_web flutter clean;
                          rm -rf build;                                             }
 flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()      { dart run bin/notecli.dart gen --dir notes/flutter_web/;   }
-flutter_web.dev()      { flutter_web.dev_macos "$@";                                }
-flutter_web.build()    { flutter_web.build_html "$@" ;                             }
+flutter_web.gen()      { #_run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
+                         _run root dart run packages/you_cli/bin/cli.dart gen routes.g.dart  --dir notes/flutter_web/ # --async
+}
+flutter_web.dev()      { flutter_web.dev_html ; }
+flutter_web.build()    { flutter_web.build_html ;}
 flutter_web.preview()  { flutter_web.build_html;
-                         flutter_web.preview_html_deno;                            }
+                         flutter_web.server_deno;                            }
 
-flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
 flutter_web.dev_html()              { _run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
+flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_macos()           { _run flutter_web flutter build macos --release --tree-shake-icons "$@";  }
 flutter_web.build_wasm()            { _run flutter_web flutter build web   --release --tree-shake-icons --wasm "$@" ;}
-flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm "$@" ; }
 flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
-flutter_web.preview_html_run()      { echo "http://localhost:8080/you/flutter_web";
+flutter_web.server_dhttpd()      { echo "http://localhost:8080/you/flutter_web";
                                       _run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
-flutter_web.preview_html_deno()     { echo "http://localhost:8080/you/flutter_web";
+flutter_web.server_deno()     { echo "http://localhost:8080/you/flutter_web";
                                       _run flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
-flutter_web.preview_wasm()          { echo "http://localhost:8080/you/flutter_web";
-                                      _run flutter_web  dhttpd '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin'; }
 
 
 # github 发布时使用,参考[.github/workflows/*.yaml]
@@ -223,6 +221,25 @@ info() {
   echo "## pkgs"
   ls
   echo
+}
+
+temp(){
+
+  # 指定需要遍历的目录，例如当前目录可以使用 "."
+  directory="notes/flutter_web/lib"
+
+  # 遍历目录中的所有note.dart文件
+  for file in $(find 'notes/flutter_web/lib' -type f -name 'note.json') ; do
+#    echo "xxx $file"
+#      # 检查文件是否存在
+      if [ -f "$file" ]; then
+          # 构建新的文件名，即将note.dart替换为page.dart
+          new_file="${file//note.json/page.json}"
+          # 执行重命名操作
+          git mv "$file" "$new_file"
+          echo "mv $file to $new_file"
+      fi
+  done
 }
 
 bake.go "$@"

@@ -1,0 +1,43 @@
+name: you_cli
+description: you-* project include some flutter common lib ,and study notes.
+version: 0.0.6-dev.1
+homepage: https://github.com/chen56/you
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  meta: ^1.11.0
+  collection: ^1.18.0
+  path: ^1.8.3
+  file: ^7.0.0
+
+  code_builder: ^4.4.0
+  dart_style: ^2.0.0
+  # plugin
+  args: ^2.4.2
+  analyzer: ^6.4.1
+  glob: ^2.1.1
+  watcher: ^1.1.0
+  yaml_edit: ^2.2.0
+  yaml: ^3.1.2
+  checks: ^0.3.0
+
+  # you_*
+  you_note_dart: ^0.0.4
+  you_dart: ^0.0.4
+
+dev_dependencies:
+  test:
+
+
+dependency_overrides:
+  #  dart CHANGELOG 3.0.0 2023-05-10
+  #   - dart pub publish will no longer warn about dependency_overrides.
+  #     Dependency overrides only take effect in the root package of a resolution.
+  #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  you_dart:
+    path: ../you_dart
+  you_note_dart:
+    path: ../you_note_dart

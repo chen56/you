@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/src/content/markdown_content.dart';
-import 'package:you_note_dart/src/content/outline.dart';
+import 'package:you_note_dart/src/contents/markdown_content.dart';
+import 'package:you_note_dart/src/contents/outline.dart';
 import 'package:you_note_dart/src/navigator_v2.dart';
 import 'package:you_note_dart/src/note.dart';
 import 'package:you_note_dart/src/utils_ui.dart';
@@ -10,50 +10,18 @@ import 'package:you_note_dart/src/utils_ui.dart';
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
-class DeferredScreen extends StatelessWidget with Screen {
-  final NoteRoute noteRoute;
-  final NoteSystem noteSystem;
-
-  DeferredScreen({super.key, required this.noteRoute, required this.noteSystem});
-
-  @override
-  Widget build(BuildContext context) {
-    Cell noteRootCell = Cell.empty();
-    return FutureBuilder<void>(
-      future: noteRoute.lazyNoteBuilder!(context, noteRootCell),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Text('note load error(${noteRoute.path}): ${snapshot.error} \n${snapshot.stackTrace}');
-          }
-
-          return LayoutScreen(
-            note: noteRoute,
-            noteSystem: noteSystem,
-            rootCell: noteRootCell,
-          );
-        }
-        return const CircularProgressIndicator();
-      },
-    );
-  }
-
-  @override
-  String get location => noteRoute.path;
-}
-
+@Deprecated("已被新router替代暂时保留，代码还没移植完")
 class LayoutScreen extends StatefulWidget with Screen<void> {
   final NoteSystem noteSystem;
-  final NoteRoute note;
+  final NoteRoute note = NoteRoute.root();
   final Cell rootCell;
-  final NoteRoute rootNote;
+  final NoteRoute rootNote = NoteRoute.root();
 
   LayoutScreen({
     super.key,
     required this.noteSystem,
     required this.rootCell,
-    required this.note,
-  }) : rootNote = noteSystem.root;
+  });
 
   @override
   String get location => note.path;
@@ -100,26 +68,9 @@ class _LayoutScreenState extends State<LayoutScreen> {
     var navigatorTree = _NoteTreeView(widget.rootNote);
 
     var outlineView = _OutlineTreeView(
-      mainContentViewController: controllerV,
+      pageController: controllerV,
       outline: outline,
     );
-
-    // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
-    // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
-    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太懂啊：
-    // var contentListView = ListView(
-    //   scrollDirection: Axis.vertical,
-    //   shrinkWrap: true,
-    //   controller: controller,
-    //   children: [
-    //     ...pen._contents,
-    //     //page下留白，避免被os工具栏遮挡
-    //     const SizedBox(height: 200),
-    //   ],
-    // );
-    // 20230404 chen56
-    // why use SingleChildScrollView+ListBody replace ListView ：
-    // ListView is lazy load, so page not complete, then outline load not complete.
 
     var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
@@ -257,9 +208,9 @@ class _OutlineTreeView extends StatelessWidget {
   final Outline outline;
 
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
-  final ScrollController mainContentViewController;
+  final ScrollController pageController;
 
-  const _OutlineTreeView({required this.outline, required this.mainContentViewController});
+  const _OutlineTreeView({required this.outline, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -281,7 +232,7 @@ class _OutlineTreeView extends StatelessWidget {
         ),
         onPressed: () {
           // 防止异常
-          if (mainContentViewController.hasClients) {
+          if (pageController.hasClients) {
             Scrollable.ensureVisible(node.key.currentContext!);
           }
         },

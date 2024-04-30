@@ -13,7 +13,7 @@ void main() {
       print("hello");
 
       //then
-      check(print.contents, because: "root no contents").deepEquals(["hello"]);
+      check(print.contents).deepEquals(["hello"]);
       check(print.children.isEmpty).isTrue();
     });
 
@@ -42,7 +42,7 @@ void main() {
     });
     test("note Sequential writing style", () async {
       Cell print = Cell.empty(title: "0");
-      var root=print;
+      var root = print;
 
       print("0:content");
       print = print.addCell(title: "1");

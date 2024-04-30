@@ -1,5 +1,6 @@
 library note;
 
-export 'src/note.dart' show Print, Cell, LazyNoteBuilder, NoteSystem, NoteRoute, NoteBuilder;
-export 'src/content/mockup.dart' show MockupWindow;
-export 'src/content/markdown_content.dart' show MD;
+export 'src/note.dart' show ToNote, Cell, NoteBuilder,NoteLayoutBuilder, NoteSystem;
+export 'src/contents/contents.dart' show contents;
+export 'src/contents/mockup.dart' show MockupWindow;
+export 'src/contents/markdown_content.dart' show MD;

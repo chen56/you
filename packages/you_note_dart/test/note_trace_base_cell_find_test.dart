@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:you_note_dart/src/note.dart';
 
-final _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
+const _emptyJsonMap = '{"version":3,"sources":[],"mappings":""}';
 
 void main() {
   group("jsSourceMap", () {
@@ -73,7 +73,7 @@ Exception: my throw
     "sources": [
         "org-dartlang-sdk:///dart-sdk/lib/async/stream.dart",
         "org-dartlang-sdk:///dart-sdk/lib/async/stream_controller.dart",
-        "../../../lib/notes/pure_dart/execption/note.dart",
+        "../../../lib/routes/notes/pure_dart/execption/note.dart",
         "../../../../../packages/you_note_dart/lib/src/note_cell.dart",
         "org-dartlang-sdk:///dart-sdk/lib/_internal/js_runtime/lib/js_array.dart",
         "org-dartlang-sdk:///dart-sdk/lib/internal/iterable.dart",
@@ -633,7 +633,7 @@ Exception: my throw
 }
 """),
       );
-      check(found.callerFrame!.library).endsWith("lib/notes/pure_dart/execption/note.dart");
+      check(found.callerFrame!.library).endsWith("lib/routes/notes/pure_dart/execption/note.dart");
 
       // print("=====>${found.dartTrace}");
     });

@@ -1,6 +1,6 @@
 name: you_flutter
 description: "Flutter framework project, for state , navigator and other flutter development infrastructure ."
-version: 0.0.4
+version: 0.0.6-dev.1
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
@@ -11,11 +11,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  you_dart: ^0.0.4
+  meta: ^1.12.0
+  path: ^1.9.0
+  you_dart: ^0.0.5
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  checks: ^0.3.0
+  flutter_lints: ^3.0.2
+
 
 dependency_overrides:
   #  dart CHANGELOG 3.0.0 2023-05-10

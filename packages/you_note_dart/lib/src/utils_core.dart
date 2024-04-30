@@ -1,8 +1,6 @@
 final Collections collections=Collections();
 
 class Collections{
-
-
   Iterable<(E value, E? next)> combineNext<E>(Iterable<E> values) sync* {
     var list = values.toList();
     for (int i = 0; i < list.length; i++) {
