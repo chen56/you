@@ -25,7 +25,7 @@ class App extends StatelessWidget {
       title: "flutter note",
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent.shade700, brightness: Brightness.light), useMaterial3: true),
       darkTheme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: ColorSeed.m3baseline.color, brightness: Brightness.dark), useMaterial3: true),
-      routerConfig: router.toRouterConfig(),
+      routerConfig: router.config(),
     );
   }
 }

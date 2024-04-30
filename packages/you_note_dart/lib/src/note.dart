@@ -12,8 +12,8 @@ import 'package:http/http.dart' as http;
 import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = Widget Function(BuildContext context, ToUri uri, Cell cell);
+// TODO REMOVE typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
+typedef NoteLayoutBuilder = Widget Function(BuildContext context, ToUri uri, NoteBuilder builder);
 
 base class ToNote extends To {
   final NoteBuilder? _builder;
@@ -22,23 +22,39 @@ base class ToNote extends To {
   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
       : _builder = builder,
         _layout = layout,
-        super(children: children);
+        super(
+            // builder: builder == null
+            //     ? null
+            //     : (context, uri) {
+            //         Cell rootCell = Cell.empty();
+            //         builder(context, rootCell);
+            //         // To? find = findLayoutNode();
+            //         // if (find == null) {
+            //         //   return NoteLayoutDefault(uri: uri, rootCell: rootCell);
+            //         // }
+            //         return Text("");
+            //       },
+            // layout: layout == null
+            //     ? null
+            //     : (context, uri, pageBuilder) {
+            //         var child = pageBuilder(context, uri);
+            //         return layout(context, uri, child);
+            //       },
+            children: children);
 
   Widget? build(BuildContext context, ToUri uri) {
     if (_builder == null) {
       return null;
     }
-    Cell rootCell = Cell.empty();
-    _builder(context, rootCell);
-
     To? find = findLayoutNode();
     if (find == null) {
-      return NoteLayoutDefault(uri: uri, rootCell: rootCell);
+      return NoteLayoutDefault(uri: uri, builder: _builder);
     }
-    return (find as ToNote)._layout!(context, uri, rootCell);
+    return (find as ToNote)._layout!(context, uri, _builder);
   }
 }
 
+@Deprecated("已被you_router取代，待删除")
 class NoteRoute {
   /// A file system term,  that refers to the last part of a path
   /// example: a/b/c , c is basename
@@ -47,24 +63,12 @@ class NoteRoute {
   final NoteRoute? parent;
   bool expand = false;
 
-  @internal
-  LazyNoteBuilder? lazyNoteBuilder;
-
   NoteConf? conf;
 
-  NoteRoute._child({required this.basename, required NoteRoute this.parent});
 
   NoteRoute.root()
       : basename = "",
         parent = null;
-
-  NoteRoute put(String fullPath, LazyNoteBuilder lazyNoteBuilder) {
-    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
-    var path = _ensurePath(p);
-
-    path.lazyNoteBuilder = lazyNoteBuilder;
-    return path;
-  }
 
   void configTree({int extendLevel = 0}) {
     if (extendLevel <= 0) return;
@@ -76,20 +80,6 @@ class NoteRoute {
   }
 
   List<NoteRoute> get children => List.from(_children.values);
-
-  NoteRoute _ensurePath(List<String> nameList) {
-    if (nameList.isEmpty) {
-      return this;
-    }
-    String name = nameList[0];
-    assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
-    var next = _children.putIfAbsent(name, () {
-      var child = NoteRoute._child(basename: name, parent: this);
-      _children[name] = child;
-      return child;
-    });
-    return next._ensurePath(nameList.sublist(1));
-  }
 
   bool get isLeaf => _children.isEmpty;
 

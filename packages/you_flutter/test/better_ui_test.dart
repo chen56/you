@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:you_flutter/src/better_ui.dart';
 
 void main() {
-  group("ToRouter.parse ok", () {
+  group("YouRouter.parse ok", () {
     test('select() 所有档位都覆盖,测一下', () {
       assertScreen(ScreenSize screen) {
         // 用此档位的最小宽度+1，来模仿此屏幕大小

@@ -5,7 +5,7 @@ import 'package:you_flutter/src/router.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  group("ToRouter.parse ok", () {
+  group("YouRouter.parse ok", () {
     var router = YouRouter(
         initial: Uri.parse("/"),
         navigatorKey: GlobalKey(),
@@ -81,7 +81,7 @@ void main() {
       match("/chen56", expected: (location: "/[user]", routeParameters: {"user": "chen56"}));
     });
   });
-  group("ToRouter.parse 404", () {
+  group("YouRouter.parse 404", () {
     var router = YouRouter(
       initial: Uri.parse("/"),
       navigatorKey: GlobalKey(),

@@ -59,25 +59,25 @@ class YouRouter {
 
     /// [PlatformRouteInformationProvider.initialRouteInformation]
     required this.initial,
-    required this.navigatorKey,
-  }) : assert(root.templatePath == "/") {
-    routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: navigatorKey, router: this));
-    config = RouterConfig<Object>(
+    required GlobalKey<NavigatorState> navigatorKey,
+  }) : _navigatorKey = navigatorKey, assert(root.templatePath == "/") {
+    _routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: _navigatorKey, router: this));
+    _config = RouterConfig<Object>(
       routeInformationProvider: PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
-      routerDelegate: routerDelegate,
+      routerDelegate: _routerDelegate,
       routeInformationParser: _RouteInformationParser(router: this),
     );
   }
 
   final To root;
   final Uri initial;
-  final GlobalKey<NavigatorState> navigatorKey;
-  late final RouterConfig<Object> config;
-  late final RouterDelegate<Object> routerDelegate;
+  final GlobalKey<NavigatorState> _navigatorKey;
+  late final RouterConfig<Object> _config;
+  late final RouterDelegate<Object> _routerDelegate;
 
   static YouRouter of(BuildContext context) {
     var result = context.findAncestorWidgetOfExactType<_RouterScope>();
-    assert(result != null, "应把ToRouter配置到您的App中: MaterialApp.router(routerConfig:ToRouter(...))");
+    assert(result != null, "YouRouter not found, please: MaterialApp.router(routerConfig:YouRouter(...).config())");
     return result!.router;
   }
 
@@ -91,14 +91,14 @@ class YouRouter {
 
   ToUri match(String uri) => matchUri(Uri.parse(uri));
 
-  RouterConfig<Object> toRouterConfig() => config;
+  RouterConfig<Object> config() => _config;
 
   void to(Uri uri) {
     ToUri to = matchUri(uri);
-    var result = routerDelegate.setNewRoutePath(to);
+    var result = _routerDelegate.setNewRoutePath(to);
     bool completed = false;
     result.whenComplete(() => completed = true);
-    assert(completed, "确保routerDelegate.setNewRoutePath内部实现是同步的，我们应该用其他方案来做Route结果，异步不好操纵");
+    assert(completed, "bug: internal ensure routerDelegate.setNewRoutePath is sync implement");
   }
 }
 
@@ -606,7 +606,6 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
         return Navigator(
           key: navigatorKey,
           onPopPage: (route, result) {
-            debugPrint("onPopPage> $route");
             if (!route.didPop(result)) {
               return false;
             }
