@@ -12,7 +12,6 @@ import 'package:http/http.dart' as http;
 import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-// TODO REMOVE typedef LazyNoteBuilder = Future<void> Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
 base class ToNote extends To {
@@ -22,43 +21,18 @@ base class ToNote extends To {
   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
       : _builder = builder,
         _layout = layout,
-        super(
-            // builder: builder == null
-            //     ? null
-            //     : (context, uri) {
-            //         Cell rootCell = Cell.empty();
-            //         builder(context, rootCell);
-            //         // To? find = findLayoutNode();
-            //         // if (find == null) {
-            //         //   return NoteLayoutDefault(uri: uri, rootCell: rootCell);
-            //         // }
-            //         return Text("");
-            //       },
-            // layout: layout == null
-            //     ? null
-            //     : (context, uri, pageBuilder) {
-            //         var child = pageBuilder(context, uri);
-            //         return layout(context, uri, child);
-            //       },
-            children: children);
+        super(children: children);
 
-  Widget? build(BuildContext context, ToUri uri) {
+  Widget build(BuildContext context, ToUri uri) {
     if (_builder == null) {
-      return null;
+      // TODO not found
+      return Text("not found $uri");
     }
-    NoteLayoutBuilder? foundLayout = _findLayout();
-    if (foundLayout == null) {
-      return NoteLayoutDefault(uri: uri, builder: _builder);
+    List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
+    for (var i in chain) {
+      if (i._layout != null) return i._layout(context, _builder);
     }
-    return foundLayout(context, _builder);
-  }
-
-  NoteLayoutBuilder? _findLayout() {
-    if (_layout != null) return _layout;
-    if (isRoot) return null;
-    To? p = parent;
-    if (p is! ToNote) return null;
-    return p._findLayout();
+    return NoteLayoutDefault(uri: uri, builder: _builder);
   }
 }
 
@@ -254,8 +228,7 @@ class NoteSystem {
 }
 
 base class Cell {
-  Cell(
-    Function(Cell print) callback, {
+  Cell(Function(Cell print) callback, {
     this.title,
   }) {
     callback(this);

@@ -50,7 +50,7 @@ class _NoteTreeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final router = YouRouter.of(context);
 
-    var validRoutes = router.root.toList().where((e) => !e.isLeaf || (e.isValid));
+    var validRoutes = router.root.toList().where((e) => !e.isLeaf );
     var routeWidgets = validRoutes.map((node) {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
@@ -60,7 +60,7 @@ class _NoteTreeView extends StatelessWidget {
       };
       return Align(
         alignment: Alignment.centerLeft,
-        child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
+        child: TextButton(onPressed:   click  , child: Text(title)),
       );
     });
     return ConstrainedBox(

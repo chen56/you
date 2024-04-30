@@ -11,7 +11,7 @@ import 'package:you_flutter/router.dart';
 import 'package:flutter_web/routes/page.dart';
 import 'package:you_note_dart/note.dart';
 import 'package:flutter_web/routes/notes/page.dart' as _notes_page;
-import 'package:flutter_web/routes/notes/layout.dart' as _notes_layout;
+import 'package:flutter_web/routes/notes/layout.dart';
 import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as _parameterized_page;
 import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as _remote_view_page;
 import 'package:flutter_web/routes/notes/env_info/page.dart' as _env_info_page;
@@ -67,7 +67,7 @@ import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/pag
 
 mixin RoutesMixin {
   final To root = To('routes', builder: build, children: [
-    ToNote('notes', builder: _notes_page.build, layout: _notes_layout.layout, children: [
+    ToNote('notes', builder: _notes_page.build, layout: layout, children: [
       ToNote('research', children: [
         ToNote('bash_note'),
         ToNote('parameterized', builder: _parameterized_page.build),

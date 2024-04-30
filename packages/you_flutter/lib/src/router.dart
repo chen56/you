@@ -4,6 +4,7 @@ import 'dart:collection';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as path_;
+import 'package:you_flutter/src/layouts/page_layout_default.dart';
 import 'package:you_flutter/src/log.dart';
 
 /*
@@ -41,6 +42,7 @@ ref:
  */
 
 typedef PageBuilder = Widget Function(BuildContext context);
+typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder bulider);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
 class NotFoundError extends ArgumentError {
@@ -77,7 +79,6 @@ class RouteContext with RouterMixin {
   final YouRouter router;
   final ToUri uri;
 }
-
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
 ///   path base: https://example.com/product/1
 ///   fragment base: https://example.com/base-harf/#/product/1
@@ -87,7 +88,7 @@ class YouRouter with RouterMixin {
     required this.root,
 
     /// [PlatformRouteInformationProvider.initialRouteInformation]
-    required this.initial,
+    required Uri initial,
     required GlobalKey<NavigatorState> navigatorKey,
   })  : _navigatorKey = navigatorKey,
         assert(root.templatePath == "/") {
@@ -100,7 +101,6 @@ class YouRouter with RouterMixin {
   }
 
   final To root;
-  final Uri initial;
   final GlobalKey<NavigatorState> _navigatorKey;
   late final RouterConfig<Object> _config;
   late final RouterDelegate<Object> _routerDelegate;
@@ -113,6 +113,7 @@ class YouRouter with RouterMixin {
 
   RouterConfig<Object> config() => _config;
 
+  @visibleForTesting
   @override
   YouRouter get router => this;
 }
@@ -154,14 +155,18 @@ base class To {
   late To _parent = this;
 
   final List<To> children;
+
   final PageBuilder? _builder;
+  final PageLayoutBuilder? _layout;
 
   // TODO P1 root Node的part是routes，有问题！
   To(
     this.part, {
     PageBuilder? builder,
+    PageLayoutBuilder? layout,
     this.children = const [],
   })  : _builder = builder,
+        _layout = layout,
         assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
     var parsed = _parse(part);
     _name = parsed.$1;
@@ -207,8 +212,6 @@ base class To {
 
   bool get isLeaf => children.isEmpty;
 
-  bool get isValid => _builder != null;
-
   // 对于page目录树：
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
@@ -216,6 +219,15 @@ base class To {
   String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
   List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
+
+  /// return Strictly equal ancestors of type
+  Iterable<T> findAncestorsOfSameType<T>() sync* {
+    for (var a in ancestors) {
+      if (a.runtimeType == this.runtimeType) {
+        yield a as T;
+      }
+    }
+  }
 
   To get root => isRoot ? this : _parent.root;
 
@@ -358,6 +370,20 @@ ${"  " * level}</Route>''';
   Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
     // TODO 临时实现，需要增加模版参数
     return Uri.parse(templatePath);
+  }
+
+  @visibleForOverriding
+  Widget build(BuildContext context, ToUri uri) {
+    if (_builder == null) {
+      // FIXME NotFoundError如何处理
+      throw NotFoundError(invalidValue: uri);
+    }
+    final List<To> chain=[this,...findAncestorsOfSameType<To>()];
+
+    for (var i in chain) {
+      if (i._layout != null) return i._layout(context, _builder);
+    }
+    return PageLayoutDefault(uri: uri, builder: _builder);
   }
 }
 
@@ -543,7 +569,7 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
   @override
   Future<void> setNewRoutePath(ToUri configuration) {
     // TODO router暂时这样实现，还未确定Layout和route的配合细节
-    stack.clear();
+    // stack.clear();
     stack.add(configuration);
     notifyListeners();
     return SynchronousFuture(null);
@@ -563,15 +589,6 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
 
   @override
   Widget build(BuildContext context) {
-    Page<dynamic> buildPage(ToUri uri) {
-      if (uri.to._builder == null) {
-        // FIXME NotFoundError如何处理
-        throw NotFoundError(invalidValue: uri);
-      }
-      // 在本router api稳定下来之前，不暴露flutter Page 相关api
-      return MaterialPage(key: ValueKey(uri), child: uri.to._builder!(context));
-    }
-
     return _RouteScope(
       uri: stack.first,
       router: router,
@@ -589,7 +606,11 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
             notifyListeners();
             return true;
           },
-          pages: List.from(stack.map((e) => buildPage(e))),
+          pages: List.from(
+            stack.map(
+              (uri) => MaterialPage(key: ValueKey(uri), child: uri.to.build(context, uri)),
+            ),
+          ),
         );
       },
     );
