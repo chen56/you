@@ -36,7 +36,6 @@ dependencies:
   # you_*
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
-  you_note_dart: ^0.0.4
 
 dev_dependencies:
 
@@ -79,7 +78,5 @@ dependency_overrides:
     #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
   you_dart:
     path: ../../packages/you_dart
-  you_note_dart:
-    path: ../../packages/you_note_dart
   you_flutter:
     path: ../../packages/you_flutter

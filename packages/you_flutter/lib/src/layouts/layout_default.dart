@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/src/router.dart';
 
-class PageLayoutDefault extends StatelessWidget {
+class LayoutDefault extends StatelessWidget {
   final PageBuilder builder;
-  final ToUri uri;
+  final RouteUri uri;
 
-  const PageLayoutDefault({super.key, required this.builder, required this.uri});
+  const LayoutDefault({super.key, required this.builder, required this.uri});
 
   @override
   Widget build(BuildContext context) {

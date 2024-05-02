@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:you_dart/src/state.dart';
-import 'package:you_flutter/src/state_widget.dart';
+import 'package:you_flutter/src/state.dart';
 
 main() {
   runApp(MaterialApp(home: Scaffold(body: HelloSingleValue())));

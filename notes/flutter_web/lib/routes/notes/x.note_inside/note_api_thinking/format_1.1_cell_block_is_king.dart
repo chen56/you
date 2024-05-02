@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 /// 单print api，print作为单一全局函数，倒是api简单
 /// 全靠print或CellBlock内部静态收集器来工作，

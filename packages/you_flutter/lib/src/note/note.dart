@@ -6,40 +6,65 @@ import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/note_conf.dart';
-import 'package:you_note_dart/src/conventions.dart';
+import 'package:you_flutter/src/note/note_conf.dart';
+import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
-import 'package:you_note_dart/src/layouts/note_layout_default.dart';
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
-base class ToNote extends To {
-  final NoteBuilder? _builder;
-  final NoteLayoutBuilder? _layout;
+base class ToNote extends RouteBuilder {
+  final NoteBuilder? page;
+  final NoteBuilder? notFound;
+  final NoteLayoutBuilder? layout;
 
-  ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
-      : _builder = builder,
-        _layout = layout,
-        super(children: children);
+  ToNote(super.part, {this.page, this.layout, this.notFound});
 
   @override
-  bool get isValid => _builder!=null;
-
-  @override
-  Widget build(BuildContext context, ToUri uri) {
-    if (_builder == null) {
-      // TODO not found
-      return Text("not found $uri");
-    }
-    List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
-    for (var i in chain) {
-      if (i._layout != null) return i._layout(context, _builder);
-    }
-    return NoteLayoutDefault(uri: uri, builder: _builder);
+  Widget buildPage(BuildContext context, covariant ToNote forPage, RouteUri uri) {
+    return layout!(context, forPage.page!);
   }
 
+  @override
+  Widget buildNotFound(BuildContext context, covariant ToNote forNotFound, RouteUri uri) {
+    return layout!(context, forNotFound.notFound!);
+  }
+
+  @override
+  bool get hasPage => page != null;
+
+  @override
+  bool get hasLayout => layout != null;
+
+  @override
+  bool get hasNotFound => notFound != null;
 }
+//
+// base class ToNote extends To {
+//   final NoteBuilder? _builder;
+//   final NoteLayoutBuilder? _layout;
+//
+//   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
+//       : _builder = builder,
+//         _layout = layout,
+//         super(part,forBuild:this,children: children);
+//
+//   @override
+//   bool get isValid => _builder != null;
+//
+//   @override
+//   Widget build(BuildContext context, ToUri uri) {
+//     if (_builder == null) {
+//       // TODO not found
+//       return Text("not found $uri");
+//     }
+//     List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
+//     for (var i in chain) {
+//       if (i._layout != null) return i._layout(context, _builder);
+//     }
+//     return NoteLayoutDefault(uri: uri, builder: _builder);
+//   }
+// }
 
 @Deprecated("已被you_router取代，待删除")
 class NoteRoute {
@@ -171,21 +196,102 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final To root;
+  final RouteNode root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required To root,
+    required RouteNode root,
   }) async {
     return NoteSystem(
       root: root,
     );
   }
 
-  static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
+}
+
+base class Cell {
+  Cell(
+    Function(Cell print) callback, {
+    this.title,
+  }) {
+    callback(this);
+  }
+
+  Cell.empty({this.title});
+
+  final Object? title;
+  final List<Object?> _contents = [].signal();
+
+  /// open data,can crud
+  final List<Cell> _children = <Cell>[].signal();
+
+  @nonVirtual
+  List<Object?> get contents => List.unmodifiable(_contents);
+
+  List<Cell> get children => List.unmodifiable(_children);
+
+  void call(Object? content) {
+    _contents.add(content);
+  }
+
+  Cell addCell({Object? title}) {
+    return addCellWith(Cell.empty(title: title));
+  }
+
+  /// 可以传入自定义Cell
+  Cell addCellWith(Cell cell) {
+    _children.add(cell);
+    return cell;
+  }
+
+  @internal
+  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
+    try {
+      throw Exception("track caller line");
+    } catch (e, trace) {
+      return _findCallerLine(
+        trace: trace,
+        location: Uri.base,
+        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
+      );
+    }
+  }
+
+  @nonVirtual
+  bool isCellsEmpty() => _children.isEmpty;
+
+  @nonVirtual
+  bool isContentsEmpty() => _contents.isEmpty;
+
+  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  @experimental
+  @nonVirtual
+  void runInCurrentCell(void Function(Cell print) callback, {Widget? title}) {
+    callback(this);
+  }
+
+  static Iterable<Cell> _traverse(Cell node) sync* {
+    yield node;
+    for (var cell in node._children) {
+      yield* _traverse(cell);
+    }
+  }
+
+  @override
+  String toString() {
+    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
+  }
+
+  List<Cell> toList() {
+    return List.from(_traverse(this));
+  }
+
+
+  static Future<({Trace dartTrace, Frame? callerFrame})> _findCallerLine({
     required StackTrace trace,
     required Uri location,
     Future<String> Function(Uri uri)? jsSourceMapLoader,
@@ -229,83 +335,5 @@ class NoteSystem {
     var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
 
     return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
-  }
-}
-
-base class Cell {
-  Cell(Function(Cell print) callback, {
-    this.title,
-  }) {
-    callback(this);
-  }
-
-  Cell.empty({this.title});
-
-  final Object? title;
-  final List<Object?> _contents = [].signal();
-
-  /// open data,can crud
-  final List<Cell> _children = <Cell>[].signal();
-
-  @nonVirtual
-  List<Object?> get contents => List.unmodifiable(_contents);
-
-  List<Cell> get children => List.unmodifiable(_children);
-
-  void call(Object? content) {
-    _contents.add(content);
-  }
-
-  Cell addCell({Object? title}) {
-    return addCellWith(Cell.empty(title: title));
-  }
-
-  /// 可以传入自定义Cell
-  Cell addCellWith(Cell cell) {
-    _children.add(cell);
-    return cell;
-  }
-
-  @internal
-  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
-    try {
-      throw Exception("track caller line");
-    } catch (e, trace) {
-      return NoteSystem.findCallerLine(
-        trace: trace,
-        location: Uri.base,
-        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
-      );
-    }
-  }
-
-  @nonVirtual
-  bool isCellsEmpty() => _children.isEmpty;
-
-  @nonVirtual
-  bool isContentsEmpty() => _contents.isEmpty;
-
-  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
-  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
-  @experimental
-  @nonVirtual
-  void runInCurrentCell(void Function(Cell print) callback, {Widget? title}) {
-    callback(this);
-  }
-
-  static Iterable<Cell> _traverse(Cell node) sync* {
-    yield node;
-    for (var cell in node._children) {
-      yield* _traverse(cell);
-    }
-  }
-
-  @override
-  String toString() {
-    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
-  }
-
-  List<Cell> toList() {
-    return List.from(_traverse(this));
   }
 }

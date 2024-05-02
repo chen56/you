@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 void build(BuildContext context, Cell print) {
 

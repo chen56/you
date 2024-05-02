@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:you_note_dart/src/contents/markdown_content.dart';
+import 'package:you_flutter/src/note/contents/markdown_content.dart';
 
 final Contents contents=Contents._();
 class Contents{

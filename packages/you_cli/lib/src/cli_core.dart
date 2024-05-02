@@ -16,7 +16,8 @@ class YouCli {
       : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
-  static const Reference toTypeDefault = Reference("To", "package:you_flutter/router.dart");
+  static const Reference toType = Reference("To", "package:you_flutter/router.dart");
+  static const Reference forPageType = Reference("ForPage", "package:you_flutter/router.dart");
   static const String toTypeName = "ToType";
   static const String pageDart = "page.dart";
   static const String layoutDart = "layout.dart";
@@ -47,13 +48,13 @@ class YouCli {
       }
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
-      var (layout: layoutFunction, toType: toType) = await analysisLayout(dir.childFile(layoutDart));
+      var (layout: layoutFunction, forBuildType: forBuildType) = await analysisLayout(dir.childFile(layoutDart));
       return RouteNode(
         cli: this,
         dir: dir,
         pageBuild: await analysisPage(dir.childFile(pageDart)),
         layoutFunction: layoutFunction,
-        toType: toType,
+        forBuildType: forBuildType,
         children: children,
       );
     }
@@ -80,15 +81,15 @@ class YouCli {
     return toFind.library!;
   }
 
-  Future<({FunctionElement? layout, Reference? toType})> analysisLayout(File file) async {
+  Future<({FunctionElement? layout, Reference? forBuildType})> analysisLayout(File file) async {
     if (!await file.exists()) {
-      return (layout: null, toType: null);
+      return (layout: null, forBuildType: null);
     }
 
     var layoutLib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
     FunctionElement? layoutFunction = layoutLib.definingCompilationUnit.functions.where((e) => e.name == layoutFunctionName).firstOrNull;
     if (layoutFunction == null) {
-      return (layout: null, toType: null);
+      return (layout: null, forBuildType: null);
     }
     var findToTypeAnno = layoutFunction.metadata.map((e) => e.computeConstantValue()).where((e) {
       var t = e?.type;
@@ -104,26 +105,26 @@ class YouCli {
       }
       // result?.type?.element?.library?.children
       var publicExportFrom = findPublicExportLib(element, layoutLib);
-      return publicExportFrom?.identifier == toTypeDefault.type.url;
+      return publicExportFrom?.identifier == forPageType.type.url;
     }).firstOrNull;
     if (findToTypeAnno == null) {
-      return (layout: layoutFunction, toType: null);
+      return (layout: layoutFunction, forBuildType: null);
     }
     var type = findToTypeAnno.getField("type")?.toTypeValue();
     if (type == null) {
-      return (layout: layoutFunction, toType: toTypeDefault);
+      return (layout: layoutFunction, forBuildType: forPageType);
     }
 
     var symbol = type.getDisplayString(withNullability: false);
 
     if (symbol == "") {
-      return (layout: layoutFunction, toType: toTypeDefault);
+      return (layout: layoutFunction, forBuildType: forPageType);
     }
 
     var publicExportFrom = findPublicExportLib(type.element! as TypeDefiningElement, layoutLib);
     var url = publicExportFrom?.identifier;
 
-    return (layout: layoutFunction, toType: refer(symbol, url));
+    return (layout: layoutFunction, forBuildType: refer(symbol, url));
   }
 
   Future<FunctionElement?> analysisPage(File file) async {
@@ -139,12 +140,12 @@ class RouteNode {
   final YouCli cli;
   final List<RouteNode> children;
   final Directory dir;
-  final Reference? toType;
+  final Reference? forBuildType;
   final FunctionElement? layoutFunction;
   final FunctionElement? pageBuild;
   late RouteNode _parent = this;
 
-  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
+  RouteNode({required this.dir, this.forBuildType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
     for (var child in children) {
       child._parent = this;
     }
@@ -230,13 +231,13 @@ class RouteNode {
     return _parent.findLayoutSync();
   }
 
-  Reference findToType() {
-    if (toType != null) {
-      return toType!;
+  Reference findForBuildType() {
+    if (forBuildType != null) {
+      return forBuildType!;
     }
     if (isRoot) {
-      return YouCli.toTypeDefault;
+      return YouCli.forPageType;
     }
-    return _parent.findToType();
+    return _parent.findForBuildType();
   }
 }

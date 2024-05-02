@@ -1,7 +1,7 @@
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/src/contents/params.dart';
+import 'package:you_flutter/src/note/contents/params.dart';
 
 abstract class BaseValueInputEditor extends BaseValueEditor {
   BaseValueInputEditor(super.param, {required super.editors});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 final class NoteLayoutDefault extends StatelessWidget {
   final NoteBuilder builder;
-  final ToUri uri;
+  final RouteUri uri;
 
   const NoteLayoutDefault({super.key, required this.uri, required this.builder});
 
