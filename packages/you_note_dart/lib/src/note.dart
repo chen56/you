@@ -6,7 +6,7 @@ import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/note_conf.dart';
+import 'package:you_note_dart/src/note_conf.dart';
 import 'package:you_note_dart/src/conventions.dart';
 import 'package:http/http.dart' as http;
 

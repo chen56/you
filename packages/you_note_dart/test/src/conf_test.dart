@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:you_note_dart/note_conf.dart';
+import 'package:you_note_dart/src/note_conf.dart';
 
 void main() {
   group("Space.json", () {
