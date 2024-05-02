@@ -128,7 +128,7 @@ final class YouRouter with RouterMixin {
   YouRouter get router => this;
 }
 
-enum RouteType {
+enum RouteNodeType {
   /// static path : /settings
   static,
 
@@ -141,7 +141,7 @@ enum RouteType {
   ///     /file/a/b/c.txt -> path==a/b/c.txt
   dynamicRest;
 
-  static RouteType? parse(String name) {
+  static RouteNodeType? parse(String name) {
     for (var i in values) {
       if (i.name == name) {
         return i;
@@ -210,7 +210,7 @@ base class RouteNode {
   final String part;
 
   late final String _name;
-  late final RouteType _type;
+  late final RouteNodeType _type;
 
   late RouteNode _parent = this;
 
@@ -315,14 +315,14 @@ base class RouteNode {
 
     // 忽略后缀'/'
     // next=="" 代表最后以 '/' 结尾,当前 segments==[""]
-    if (_type == RouteType.static && next == "") {
+    if (_type == RouteNodeType.static && next == "") {
       return RouteUri._(uri: uri, to: this, routeParameters: params);
     }
 
     RouteNode? matchChild({required String segment}) {
-      RouteNode? matched = children.where((e) => e._type == RouteType.static).where((e) => segment == e._name).firstOrNull;
+      RouteNode? matched = children.where((e) => e._type == RouteNodeType.static).where((e) => segment == e._name).firstOrNull;
       if (matched != null) return matched;
-      matched = children.where((e) => e._type == RouteType.dynamic || e._type == RouteType.dynamicRest).firstOrNull;
+      matched = children.where((e) => e._type == RouteNodeType.dynamic || e._type == RouteNodeType.dynamicRest).firstOrNull;
       if (matched != null) return matched;
       return null;
     }
@@ -333,7 +333,7 @@ base class RouteNode {
       throw NotFoundError(invalidValue: uri);
     }
 
-    if (matchedNext._type == RouteType.dynamicRest) {
+    if (matchedNext._type == RouteNodeType.dynamicRest) {
       // /tree/[...file]
       //     /tree/x/y   --> {"file":"x/y"}
       //     /tree/x/y/  --> {"file":"x/y/"}
@@ -344,7 +344,7 @@ base class RouteNode {
       if (next == "") {
         return RouteUri._(uri: uri, to: this, routeParameters: params);
       }
-      if (matchedNext._type == RouteType.dynamic) {
+      if (matchedNext._type == RouteNodeType.dynamic) {
         params[matchedNext._name] = next;
       }
     }
@@ -387,11 +387,11 @@ base class RouteNode {
   /// parse("user")       -->  (name:"user",type:ToNodeType.normal)
   /// parse("[id]")       -->  (name:"id",  type:ToNodeType.dynamic)
   /// parse("[...path]")  -->  (name:"path",type:ToNodeType.dynamicAll)
-  static (String, RouteType) _parse(String pattern) {
+  static (String, RouteNodeType) _parse(String pattern) {
     assert(pattern.isNotEmpty);
 
     if (pattern[0] != "[" || pattern[pattern.length - 1] != "]") {
-      return (pattern, RouteType.static);
+      return (pattern, RouteNodeType.static);
     }
 
     assert(pattern != "[]");
@@ -402,9 +402,9 @@ base class RouteNode {
     final removeBrackets = pattern.substring(1, pattern.length - 1);
 
     if (removeBrackets.startsWith("...")) {
-      return (removeBrackets.substring(3), RouteType.dynamicRest);
+      return (removeBrackets.substring(3), RouteNodeType.dynamicRest);
     } else {
-      return (removeBrackets, RouteType.dynamic);
+      return (removeBrackets, RouteNodeType.dynamic);
     }
   }
 
