@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/routes.g.dart';
 import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/router.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final routes=Routes();

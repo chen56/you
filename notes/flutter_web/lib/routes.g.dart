@@ -9,7 +9,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:you_flutter/router.dart';
 import 'package:flutter_web/routes/page.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 import 'package:flutter_web/routes/notes/page.dart' as _notes_page;
 import 'package:flutter_web/routes/notes/layout.dart';
 import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as _parameterized_page;

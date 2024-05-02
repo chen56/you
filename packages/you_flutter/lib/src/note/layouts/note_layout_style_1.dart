@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/src/note/contents/contents.dart';
-import 'package:you_note_dart/src/note/note.dart';
+import 'package:you_flutter/src/note/contents/contents.dart';
+import 'package:you_flutter/src/note/note.dart';
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容

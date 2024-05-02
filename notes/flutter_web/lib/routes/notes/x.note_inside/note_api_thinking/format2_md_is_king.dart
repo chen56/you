@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 /// 仔细想，md来做中控，那代码的嵌套block 算啥呢？2种层级树貌似难以理解
 void build(BuildContext context, Function(Object? content) print) {

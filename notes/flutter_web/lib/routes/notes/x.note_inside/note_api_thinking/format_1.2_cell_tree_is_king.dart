@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 /// cell本身作为树存在，而且api让使用者知道，这是树
 /// 这个虽然api稍微比1.1复杂，

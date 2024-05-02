@@ -2,8 +2,7 @@ import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 
-// import 'package:you_note_dart/src/params/mate_note.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 void build(BuildContext context, Cell print) async {
   print.addCell(title:const Text("--------new cell------"));

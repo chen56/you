@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
 void build(BuildContext context, Cell print) {

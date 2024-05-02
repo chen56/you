@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 
 void build(BuildContext context, Cell print) {
   if (kIsWeb) {

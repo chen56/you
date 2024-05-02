@@ -18,7 +18,6 @@ declare -A _pkgs=(
     ["bake"]="$_ROOT_DIR/packages/you_bake"
     ["you_dart"]="$_ROOT_DIR/packages/you_dart"
     ["you_flutter"]="$_ROOT_DIR/packages/you_flutter"
-    ["you_note_dart"]="$_ROOT_DIR/packages/you_note_dart"
     ["you_cli"]="$_ROOT_DIR/packages/you_cli"
     ["learn_dart"]="$_ROOT_DIR/notes/learn_dart"
     ["flutter_web"]="$_ROOT_DIR/notes/flutter_web"
@@ -156,12 +155,6 @@ you_flutter.test()    { _run you_flutter flutter test;                         }
 you_cli.run()         { _run you_cli "$@";                                 }
 you_cli.test()        { _run you_cli dart test;                                 }
 
-
-you_note_dart.run()     { _run you_note_dart "$@";                                 }
-you_note_dart.install() { _run you_note_dart flutter pub get;                      }
-you_note_dart.clean()   { _run you_note_dart flutter clean; rm -rf build;          }
-you_note_dart.upgrade() { _run you_note_dart flutter pub upgrade ;                 }
-you_note_dart.test()    { _run you_note_dart flutter test;                         }
 
 learn_dart.run()        { _run learn_dart "$@";                                     }
 learn_dart.install()    { _run learn_dart dart pub get ;                            }

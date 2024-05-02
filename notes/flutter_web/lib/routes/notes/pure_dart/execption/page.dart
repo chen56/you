@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:stack_trace/stack_trace.dart';
-import 'package:you_note_dart/note.dart';
+import 'package:you_flutter/note.dart';
 import 'package:http/http.dart' as http;
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
