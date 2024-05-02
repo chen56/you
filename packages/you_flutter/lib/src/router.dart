@@ -46,7 +46,7 @@ typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder bu
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
 final class NotFoundError extends ArgumentError {
-  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue, name, message);
+  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
 }
 
 class ToType {
@@ -180,7 +180,7 @@ base class ToPage extends RouteBuilder {
 
   @override
   Widget buildPage(BuildContext context, covariant ToPage forPage, RouteUri uri) {
-    return layout!(context, forPage.page!);
+    return layout == null ? forPage.page!(context) : layout!(context, forPage.page!);
   }
 
   @override
@@ -216,20 +216,14 @@ base class RouteNode {
   @nonVirtual
   final List<RouteNode> children;
 
-  final PageBuilder? _builder;
-  final PageLayoutBuilder? _layout;
   final RouteBuilder? forBuild;
 
   // TODO P1 root Node的part是routes，有问题！
   RouteNode(
     this.part, {
     this.forBuild,
-    PageBuilder? builder,
-    PageLayoutBuilder? layout,
     this.children = const [],
-  })  : _builder = builder,
-        _layout = layout,
-        assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
+  }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
     var parsed = _parse(part);
     _name = parsed.$1;
     _type = parsed.$2;
@@ -239,24 +233,20 @@ base class RouteNode {
     }
   }
 
-  RouteNode.create(this.part, {required this.forBuild, required this.children})
-      : _builder = null,
-        _layout = null;
-
-  // To.lazy(
-  //   String part, {
-  //   LazyPageBuilder? builder,
-  //   List<To> children = const [],
-  // }) : this(
-  //         part,
-  //         builder: _asyncToSync(builder),
-  //         children: children,
-  //       );
+  RouteNode.create(
+    String part, {
+    RouteBuilder? forBuild,
+    List<RouteNode> children = const [],
+  }) : this(
+          part,
+          forBuild: forBuild,
+          children: children,
+        );
 
   RouteNode get parent => _parent;
 
   @mustBeOverridden
-  bool get isValid => _builder != null;
+  bool get isValid => forBuild != null && forBuild!.hasPage;
 
   // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
@@ -457,16 +447,14 @@ ${"  " * level}</Route>''';
   @visibleForOverriding
   @mustBeOverridden
   Widget build(BuildContext context, RouteUri uri) {
-    if (_builder == null) {
-      // FIXME NotFoundError如何处理
-      throw NotFoundError(invalidValue: uri);
-    }
+    assert(forBuild != null);
+
     final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
 
     for (var i in chain) {
-      if (i._layout != null) return i._layout(context, _builder);
+      if (i.forBuild!.hasLayout) return i.forBuild!.buildPage(context, forBuild!, uri);
     }
-    return LayoutDefault(uri: uri, builder: _builder);
+    return forBuild!.buildPage(context, forBuild!, uri);
   }
 }
 

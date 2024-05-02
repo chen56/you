@@ -210,7 +210,88 @@ class NoteSystem {
     );
   }
 
-  static Future<({Trace dartTrace, Frame? callerFrame})> findCallerLine({
+}
+
+base class Cell {
+  Cell(
+    Function(Cell print) callback, {
+    this.title,
+  }) {
+    callback(this);
+  }
+
+  Cell.empty({this.title});
+
+  final Object? title;
+  final List<Object?> _contents = [].signal();
+
+  /// open data,can crud
+  final List<Cell> _children = <Cell>[].signal();
+
+  @nonVirtual
+  List<Object?> get contents => List.unmodifiable(_contents);
+
+  List<Cell> get children => List.unmodifiable(_children);
+
+  void call(Object? content) {
+    _contents.add(content);
+  }
+
+  Cell addCell({Object? title}) {
+    return addCellWith(Cell.empty(title: title));
+  }
+
+  /// 可以传入自定义Cell
+  Cell addCellWith(Cell cell) {
+    _children.add(cell);
+    return cell;
+  }
+
+  @internal
+  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
+    try {
+      throw Exception("track caller line");
+    } catch (e, trace) {
+      return _findCallerLine(
+        trace: trace,
+        location: Uri.base,
+        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
+      );
+    }
+  }
+
+  @nonVirtual
+  bool isCellsEmpty() => _children.isEmpty;
+
+  @nonVirtual
+  bool isContentsEmpty() => _contents.isEmpty;
+
+  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  @experimental
+  @nonVirtual
+  void runInCurrentCell(void Function(Cell print) callback, {Widget? title}) {
+    callback(this);
+  }
+
+  static Iterable<Cell> _traverse(Cell node) sync* {
+    yield node;
+    for (var cell in node._children) {
+      yield* _traverse(cell);
+    }
+  }
+
+  @override
+  String toString() {
+    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
+  }
+
+  List<Cell> toList() {
+    return List.from(_traverse(this));
+  }
+
+
+  static Future<({Trace dartTrace, Frame? callerFrame})> _findCallerLine({
     required StackTrace trace,
     required Uri location,
     Future<String> Function(Uri uri)? jsSourceMapLoader,
@@ -254,84 +335,5 @@ class NoteSystem {
     var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
 
     return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
-  }
-}
-
-base class Cell {
-  Cell(
-    Function(Cell print) callback, {
-    this.title,
-  }) {
-    callback(this);
-  }
-
-  Cell.empty({this.title});
-
-  final Object? title;
-  final List<Object?> _contents = [].signal();
-
-  /// open data,can crud
-  final List<Cell> _children = <Cell>[].signal();
-
-  @nonVirtual
-  List<Object?> get contents => List.unmodifiable(_contents);
-
-  List<Cell> get children => List.unmodifiable(_children);
-
-  void call(Object? content) {
-    _contents.add(content);
-  }
-
-  Cell addCell({Object? title}) {
-    return addCellWith(Cell.empty(title: title));
-  }
-
-  /// 可以传入自定义Cell
-  Cell addCellWith(Cell cell) {
-    _children.add(cell);
-    return cell;
-  }
-
-  @internal
-  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
-    try {
-      throw Exception("track caller line");
-    } catch (e, trace) {
-      return NoteSystem.findCallerLine(
-        trace: trace,
-        location: Uri.base,
-        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
-      );
-    }
-  }
-
-  @nonVirtual
-  bool isCellsEmpty() => _children.isEmpty;
-
-  @nonVirtual
-  bool isContentsEmpty() => _contents.isEmpty;
-
-  /// 注意：只能在NotePage的[_build]函数的最外层调用，不能放在button回调或Timer回调中
-  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
-  @experimental
-  @nonVirtual
-  void runInCurrentCell(void Function(Cell print) callback, {Widget? title}) {
-    callback(this);
-  }
-
-  static Iterable<Cell> _traverse(Cell node) sync* {
-    yield node;
-    for (var cell in node._children) {
-      yield* _traverse(cell);
-    }
-  }
-
-  @override
-  String toString() {
-    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
-  }
-
-  List<Cell> toList() {
-    return List.from(_traverse(this));
   }
 }
