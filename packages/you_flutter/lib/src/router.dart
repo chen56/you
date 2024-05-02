@@ -180,7 +180,8 @@ base class ToPage extends RouteBuilder {
 
   @override
   Widget buildPage(BuildContext context, covariant ToPage forPage, RouteUri uri) {
-    return layout == null ? forPage.page!(context) : layout!(context, forPage.page!);
+    if (layout == null) return LayoutDefault(builder: page!, uri: uri);
+    return layout!(context, forPage.page!);
   }
 
   @override
@@ -451,8 +452,8 @@ ${"  " * level}</Route>''';
 
     final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
 
-    for (var i in chain) {
-      if (i.forBuild!.hasLayout) return i.forBuild!.buildPage(context, forBuild!, uri);
+    for (var node in chain) {
+      if (node.forBuild!.hasLayout) return node.forBuild!.buildPage(context, forBuild!, uri);
     }
     return forBuild!.buildPage(context, forBuild!, uri);
   }
