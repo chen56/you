@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:you_note_dart/src/contents/params.dart';
+import 'package:you_note_dart/src/note/contents/params.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 typedef OnClick = void Function();

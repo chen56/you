@@ -6,27 +6,27 @@ import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:you_note_dart/src/note_conf.dart';
-import 'package:you_note_dart/src/conventions.dart';
+import 'package:you_note_dart/src/note/note_conf.dart';
+import 'package:you_note_dart/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
 
-base class Note extends RouteBuilder {
+base class ToNote extends RouteBuilder {
   final NoteBuilder? page;
   final NoteBuilder? notFound;
   final NoteLayoutBuilder? layout;
 
-  Note(super.part, {this.page, this.layout, this.notFound});
+  ToNote(super.part, {this.page, this.layout, this.notFound});
 
   @override
-  Widget buildPage(BuildContext context, covariant Note forPage, RouteUri uri) {
+  Widget buildPage(BuildContext context, covariant ToNote forPage, RouteUri uri) {
     return layout!(context, forPage.page!);
   }
 
   @override
-  Widget buildNotFound(BuildContext context, covariant Note forNotFound, RouteUri uri) {
+  Widget buildNotFound(BuildContext context, covariant ToNote forNotFound, RouteUri uri) {
     return layout!(context, forNotFound.notFound!);
   }
 

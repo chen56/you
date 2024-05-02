@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:checks/checks.dart';
 import 'package:you_note_dart/note.dart';
-import 'package:you_note_dart/src/note.dart';
+import 'package:you_note_dart/src/note/note.dart';
 
 void main() {
   group("Cell.call", () {

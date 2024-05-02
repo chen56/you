@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:meta/meta.dart';
-import 'package:you_note_dart/src/contents/outline.dart';
-// import 'package:you_note_dart/src/flutter_highlight.dart';
+import 'package:you_note_dart/src/note/contents/outline.dart';
+// import 'package:you_note_dart/src/note/flutter_highlight.dart';
 // import 'package:flutter_highlight/themes/vs2015.dart';
 
 class MD extends StatelessWidget {

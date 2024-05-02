@@ -3,7 +3,7 @@ import 'package:you_flutter/router.dart';
 import 'package:you_note_dart/note.dart';
 
 /// [NoteLayoutBuilder]
-@ToType(type: Note)
+@ToType(type: ToNote)
 Widget layout(BuildContext context, NoteBuilder builder) {
   // ignore: unnecessary_type_check
   assert(layout is NoteLayoutBuilder);

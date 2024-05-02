@@ -4,7 +4,7 @@ import 'dart:core';
 
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:you_note_dart/src/utils_core.dart';
+import 'package:you_note_dart/src/note/utils_core.dart';
 
 void main() {
   group("combineNext", () {

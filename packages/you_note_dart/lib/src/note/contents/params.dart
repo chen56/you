@@ -6,7 +6,7 @@ import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:you_note_dart/src/contents/params_editors.dart';
+import 'package:you_note_dart/src/note/contents/params_editors.dart';
 // ignore: implementation_imports, internal import /src of the same project.
 import 'package:you_dart/src/core.dart';
 

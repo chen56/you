@@ -67,108 +67,108 @@ import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/pag
 
 mixin RoutesMixin {
   final RouteNode root = ToPage('routes', page: build).route(children: [
-    Note('notes', page: _notes_page.build, layout: layout).route(children: [
-      Note('research').route(children: [
-        Note('bash_note').route(),
-        Note('parameterized', page: _parameterized_page.build).route(),
-        Note('remote_view', page: _remote_view_page.build).route(),
+    ToNote('notes', page: _notes_page.build, layout: layout).route(children: [
+      ToNote('research').route(children: [
+        ToNote('bash_note').route(),
+        ToNote('parameterized', page: _parameterized_page.build).route(),
+        ToNote('remote_view', page: _remote_view_page.build).route(),
       ]),
-      Note('env_info', page: _env_info_page.build).route(),
-      Note('layout', page: _layout_page.build).route(children: [
-        Note('old').route(children: [
-          Note('layout', page: _layout_page2.build).route(),
+      ToNote('env_info', page: _env_info_page.build).route(),
+      ToNote('layout', page: _layout_page.build).route(children: [
+        ToNote('old').route(children: [
+          ToNote('layout', page: _layout_page2.build).route(),
         ]),
-        Note('box_layout').route(children: [
-          Note('constraints', page: _constraints_page.build).route(),
+        ToNote('box_layout').route(children: [
+          ToNote('constraints', page: _constraints_page.build).route(),
         ]),
-        Note('responsive_design', page: _responsive_design_page.build).route(),
-        Note('1.welcome').route(),
+        ToNote('responsive_design', page: _responsive_design_page.build).route(),
+        ToNote('1.welcome').route(),
       ]),
-      Note('navigation', page: _navigation_page.build).route(children: [
-        Note('navigator_v1').route(),
-        Note('navigator_v2').route(),
+      ToNote('navigation', page: _navigation_page.build).route(children: [
+        ToNote('navigator_v1').route(),
+        ToNote('navigator_v2').route(),
       ]),
-      Note('state', page: _state_page.build).route(children: [
-        Note('1.vanilla_state', page: _1_vanilla_state_page.build).route(),
-        Note('StatefulBuilder', page: _StatefulBuilder_page.build).route(),
+      ToNote('state', page: _state_page.build).route(children: [
+        ToNote('1.vanilla_state', page: _1_vanilla_state_page.build).route(),
+        ToNote('StatefulBuilder', page: _StatefulBuilder_page.build).route(),
       ]),
-      Note('media&assets&file').route(children: [
-        Note('file_desktop', page: _file_desktop_page.build).route(),
-        Note('file_web', page: _file_web_page.build).route(),
-        Note('assets', page: _assets_page.build).route(),
+      ToNote('media&assets&file').route(children: [
+        ToNote('file_desktop', page: _file_desktop_page.build).route(),
+        ToNote('file_web', page: _file_web_page.build).route(),
+        ToNote('assets', page: _assets_page.build).route(),
       ]),
-      Note('style&theming').route(children: [
-        Note('material3', page: _material3_page.build).route(),
-        Note('Material').route(),
+      ToNote('style&theming').route(children: [
+        ToNote('material3', page: _material3_page.build).route(),
+        ToNote('Material').route(),
       ]),
-      Note('pure_dart').route(children: [
-        Note('dart3', page: _dart3_page.build).route(),
-        Note('async', page: _async_page.build).route(),
-        Note('safe_interface', page: _safe_interface_page.build).route(),
-        Note('execption', page: _execption_page.build).route(),
-        Note('serialization_json', page: _serialization_json_page.build).route(),
-        Note('analyzer', page: _analyzer_page.build).route(),
+      ToNote('pure_dart').route(children: [
+        ToNote('dart3', page: _dart3_page.build).route(),
+        ToNote('async', page: _async_page.build).route(),
+        ToNote('safe_interface', page: _safe_interface_page.build).route(),
+        ToNote('execption', page: _execption_page.build).route(),
+        ToNote('serialization_json', page: _serialization_json_page.build).route(),
+        ToNote('analyzer', page: _analyzer_page.build).route(),
       ]),
-      Note('dev').route(children: [
-        Note('host_mirror', page: _host_mirror_page.build).route(),
-        Note('macos_config', page: _macos_config_page.build).route(),
-        Note('devtool', page: _devtool_page.build).route(children: [
-          Note('vmservice', page: _vmservice_page.build).route(),
+      ToNote('dev').route(children: [
+        ToNote('host_mirror', page: _host_mirror_page.build).route(),
+        ToNote('macos_config', page: _macos_config_page.build).route(),
+        ToNote('devtool', page: _devtool_page.build).route(children: [
+          ToNote('vmservice', page: _vmservice_page.build).route(),
         ]),
-        Note('debug', page: _debug_page.build).route(),
+        ToNote('debug', page: _debug_page.build).route(),
       ]),
-      Note('i18n', page: _i18n_page.build).route(),
-      Note('thinking_in_ui').route(children: [
-        Note('readable_html_vs_dart', page: _readable_html_vs_dart_page.build).route(),
+      ToNote('i18n', page: _i18n_page.build).route(),
+      ToNote('thinking_in_ui').route(children: [
+        ToNote('readable_html_vs_dart', page: _readable_html_vs_dart_page.build).route(),
       ]),
-      Note('x.note_inside').route(children: [
-        Note('how_note_work', page: _how_note_work_page.build).route(),
-        Note('note_api_thinking').route(),
-        Note('mockup_content', page: _mockup_content_page.build).route(),
-        Note('1.welcome', page: _1_welcome_page.build).route(),
-        Note('note_test_self', page: _note_test_self_page.build).route(children: [
-          Note('nobody', page: _nobody_page.build).route(),
+      ToNote('x.note_inside').route(children: [
+        ToNote('how_note_work', page: _how_note_work_page.build).route(),
+        ToNote('note_api_thinking').route(),
+        ToNote('mockup_content', page: _mockup_content_page.build).route(),
+        ToNote('1.welcome', page: _1_welcome_page.build).route(),
+        ToNote('note_test_self', page: _note_test_self_page.build).route(children: [
+          ToNote('nobody', page: _nobody_page.build).route(),
         ]),
       ]),
-      Note('widgets').route(children: [
-        Note('specific_widgets').route(children: [
-          Note('input', page: _input_page.build).route(),
-          Note('webview', page: _webview_page.build).route(),
-          Note('slider', page: _slider_page.build).route(),
-          Note('selectable', page: _selectable_page.build).route(),
-          Note('button').route(children: [
-            Note('ButtonStyleButton', page: _ButtonStyleButton_page.build).route(),
-            Note('FloatingActionButton', page: _FloatingActionButton_page.build).route(),
-            Note('IconButton', page: _IconButton_page.build).route(),
-            Note('overview', page: _overview_page.build).route(),
+      ToNote('widgets').route(children: [
+        ToNote('specific_widgets').route(children: [
+          ToNote('input', page: _input_page.build).route(),
+          ToNote('webview', page: _webview_page.build).route(),
+          ToNote('slider', page: _slider_page.build).route(),
+          ToNote('selectable', page: _selectable_page.build).route(),
+          ToNote('button').route(children: [
+            ToNote('ButtonStyleButton', page: _ButtonStyleButton_page.build).route(),
+            ToNote('FloatingActionButton', page: _FloatingActionButton_page.build).route(),
+            ToNote('IconButton', page: _IconButton_page.build).route(),
+            ToNote('overview', page: _overview_page.build).route(),
           ]),
-          Note('Divider').route(),
-          Note('text').route(children: [
-            Note('RichText', page: _RichText_page.build).route(),
-            Note('Text', page: _Text_page.build).route(),
+          ToNote('Divider').route(),
+          ToNote('text').route(children: [
+            ToNote('RichText', page: _RichText_page.build).route(),
+            ToNote('Text', page: _Text_page.build).route(),
           ]),
-          Note('icon', page: _icon_page.build).route(),
+          ToNote('icon', page: _icon_page.build).route(),
         ]),
-        Note('container_widgets').route(children: [
-          Note('drawer').route(),
-          Note('Card').route(),
-          Note('app').route(),
-          Note('dialog').route(),
-          Note('menu', page: _menu_page.build).route(),
-          Note('scrollable').route(children: [
-            Note('Dismissible', page: _Dismissible_page.build).route(),
-            Note('DraggableScrollableSheet').route(),
+        ToNote('container_widgets').route(children: [
+          ToNote('drawer').route(),
+          ToNote('Card').route(),
+          ToNote('app').route(),
+          ToNote('dialog').route(),
+          ToNote('menu', page: _menu_page.build).route(),
+          ToNote('scrollable').route(children: [
+            ToNote('Dismissible', page: _Dismissible_page.build).route(),
+            ToNote('DraggableScrollableSheet').route(),
           ]),
-          Note('page_view').route(),
-          Note('bar', page: _bar_page.build).route(),
+          ToNote('page_view').route(),
+          ToNote('bar', page: _bar_page.build).route(),
         ]),
       ]),
-      Note('Improve_app', page: _Improve_app_page.build).route(children: [
-        Note('1.overview', page: _1_overview_page.build).route(),
-        Note('error_handle').route(),
-        Note('web_optimization', page: _web_optimization_page.build).route(),
-        Note('RepaintBoundary', page: _RepaintBoundary_page.build).route(),
-        Note('event&listener&lifeycle', page: _event_listener_lifeycle_page.build).route(),
+      ToNote('Improve_app', page: _Improve_app_page.build).route(children: [
+        ToNote('1.overview', page: _1_overview_page.build).route(),
+        ToNote('error_handle').route(),
+        ToNote('web_optimization', page: _web_optimization_page.build).route(),
+        ToNote('RepaintBoundary', page: _RepaintBoundary_page.build).route(),
+        ToNote('event&listener&lifeycle', page: _event_listener_lifeycle_page.build).route(),
       ]),
     ]),
   ]);
