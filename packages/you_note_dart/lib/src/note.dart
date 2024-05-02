@@ -21,12 +21,12 @@ base class Note extends RouteBuilder {
   Note(super.part, {this.page, this.layout, this.notFound});
 
   @override
-  Widget buildPage(BuildContext context, covariant Note forPage, ToUri uri) {
+  Widget buildPage(BuildContext context, covariant Note forPage, RouteUri uri) {
     return layout!(context, forPage.page!);
   }
 
   @override
-  Widget buildNotFound(BuildContext context, covariant Note forNotFound, ToUri uri) {
+  Widget buildNotFound(BuildContext context, covariant Note forNotFound, RouteUri uri) {
     return layout!(context, forNotFound.notFound!);
   }
 
@@ -196,14 +196,14 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final YouRoute root;
+  final RouteNode root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required YouRoute root,
+    required RouteNode root,
   }) async {
     return NoteSystem(
       root: root,

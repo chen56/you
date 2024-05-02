@@ -66,7 +66,7 @@ import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' 
 import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as _event_listener_lifeycle_page;
 
 mixin RoutesMixin {
-  final YouRoute root = ForPage('routes', page: build).route(children: [
+  final RouteNode root = ToPage('routes', page: build).route(children: [
     Note('notes', page: _notes_page.build, layout: layout).route(children: [
       Note('research').route(children: [
         Note('bash_note').route(),
@@ -172,60 +172,60 @@ mixin RoutesMixin {
       ]),
     ]),
   ]);
-  late final YouRoute routes_root = root.find('/')!;
-  late final YouRoute routes_notes = root.find('/notes')!;
-  late final YouRoute routes_notes_research_parameterized = root.find('/notes/research/parameterized')!;
-  late final YouRoute routes_notes_research_remote_view = root.find('/notes/research/remote_view')!;
-  late final YouRoute routes_notes_env_info = root.find('/notes/env_info')!;
-  late final YouRoute routes_notes_layout = root.find('/notes/layout')!;
-  late final YouRoute routes_notes_layout_old_layout = root.find('/notes/layout/old/layout')!;
-  late final YouRoute routes_notes_layout_box_layout_constraints = root.find('/notes/layout/box_layout/constraints')!;
-  late final YouRoute routes_notes_layout_responsive_design = root.find('/notes/layout/responsive_design')!;
-  late final YouRoute routes_notes_navigation = root.find('/notes/navigation')!;
-  late final YouRoute routes_notes_state = root.find('/notes/state')!;
-  late final YouRoute routes_notes_state_vanilla_state = root.find('/notes/state/1.vanilla_state')!;
-  late final YouRoute routes_notes_state_StatefulBuilder = root.find('/notes/state/StatefulBuilder')!;
-  late final YouRoute routes_notes_media_assets_file_file_desktop = root.find('/notes/media&assets&file/file_desktop')!;
-  late final YouRoute routes_notes_media_assets_file_file_web = root.find('/notes/media&assets&file/file_web')!;
-  late final YouRoute routes_notes_media_assets_file_assets = root.find('/notes/media&assets&file/assets')!;
-  late final YouRoute routes_notes_style_theming_material3 = root.find('/notes/style&theming/material3')!;
-  late final YouRoute routes_notes_pure_dart_dart3 = root.find('/notes/pure_dart/dart3')!;
-  late final YouRoute routes_notes_pure_dart_async = root.find('/notes/pure_dart/async')!;
-  late final YouRoute routes_notes_pure_dart_safe_interface = root.find('/notes/pure_dart/safe_interface')!;
-  late final YouRoute routes_notes_pure_dart_execption = root.find('/notes/pure_dart/execption')!;
-  late final YouRoute routes_notes_pure_dart_serialization_json = root.find('/notes/pure_dart/serialization_json')!;
-  late final YouRoute routes_notes_pure_dart_analyzer = root.find('/notes/pure_dart/analyzer')!;
-  late final YouRoute routes_notes_dev_host_mirror = root.find('/notes/dev/host_mirror')!;
-  late final YouRoute routes_notes_dev_macos_config = root.find('/notes/dev/macos_config')!;
-  late final YouRoute routes_notes_dev_devtool = root.find('/notes/dev/devtool')!;
-  late final YouRoute routes_notes_dev_devtool_vmservice = root.find('/notes/dev/devtool/vmservice')!;
-  late final YouRoute routes_notes_dev_debug = root.find('/notes/dev/debug')!;
-  late final YouRoute routes_notes_i18n = root.find('/notes/i18n')!;
-  late final YouRoute routes_notes_thinking_in_ui_readable_html_vs_dart = root.find('/notes/thinking_in_ui/readable_html_vs_dart')!;
-  late final YouRoute routes_notes_x_note_inside_how_note_work = root.find('/notes/x.note_inside/how_note_work')!;
-  late final YouRoute routes_notes_x_note_inside_mockup_content = root.find('/notes/x.note_inside/mockup_content')!;
-  late final YouRoute routes_notes_x_note_inside_welcome = root.find('/notes/x.note_inside/1.welcome')!;
-  late final YouRoute routes_notes_x_note_inside_note_test_self = root.find('/notes/x.note_inside/note_test_self')!;
-  late final YouRoute routes_notes_x_note_inside_note_test_self_nobody = root.find('/notes/x.note_inside/note_test_self/nobody')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_input = root.find('/notes/widgets/specific_widgets/input')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_webview = root.find('/notes/widgets/specific_widgets/webview')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_slider = root.find('/notes/widgets/specific_widgets/slider')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_selectable = root.find('/notes/widgets/specific_widgets/selectable')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_button_ButtonStyleButton = root.find('/notes/widgets/specific_widgets/button/ButtonStyleButton')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_button_FloatingActionButton = root.find('/notes/widgets/specific_widgets/button/FloatingActionButton')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_button_IconButton = root.find('/notes/widgets/specific_widgets/button/IconButton')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_button_overview = root.find('/notes/widgets/specific_widgets/button/overview')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_text_RichText = root.find('/notes/widgets/specific_widgets/text/RichText')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_text_Text = root.find('/notes/widgets/specific_widgets/text/Text')!;
-  late final YouRoute routes_notes_widgets_specific_widgets_icon = root.find('/notes/widgets/specific_widgets/icon')!;
-  late final YouRoute routes_notes_widgets_container_widgets_menu = root.find('/notes/widgets/container_widgets/menu')!;
-  late final YouRoute routes_notes_widgets_container_widgets_scrollable_Dismissible = root.find('/notes/widgets/container_widgets/scrollable/Dismissible')!;
-  late final YouRoute routes_notes_widgets_container_widgets_bar = root.find('/notes/widgets/container_widgets/bar')!;
-  late final YouRoute routes_notes_Improve_app = root.find('/notes/Improve_app')!;
-  late final YouRoute routes_notes_Improve_app_overview = root.find('/notes/Improve_app/1.overview')!;
-  late final YouRoute routes_notes_Improve_app_web_optimization = root.find('/notes/Improve_app/web_optimization')!;
-  late final YouRoute routes_notes_Improve_app_RepaintBoundary = root.find('/notes/Improve_app/RepaintBoundary')!;
-  late final YouRoute routes_notes_Improve_app_event_listener_lifeycle = root.find('/notes/Improve_app/event&listener&lifeycle')!;
+  late final RouteNode routes_root = root.find('/')!;
+  late final RouteNode routes_notes = root.find('/notes')!;
+  late final RouteNode routes_notes_research_parameterized = root.find('/notes/research/parameterized')!;
+  late final RouteNode routes_notes_research_remote_view = root.find('/notes/research/remote_view')!;
+  late final RouteNode routes_notes_env_info = root.find('/notes/env_info')!;
+  late final RouteNode routes_notes_layout = root.find('/notes/layout')!;
+  late final RouteNode routes_notes_layout_old_layout = root.find('/notes/layout/old/layout')!;
+  late final RouteNode routes_notes_layout_box_layout_constraints = root.find('/notes/layout/box_layout/constraints')!;
+  late final RouteNode routes_notes_layout_responsive_design = root.find('/notes/layout/responsive_design')!;
+  late final RouteNode routes_notes_navigation = root.find('/notes/navigation')!;
+  late final RouteNode routes_notes_state = root.find('/notes/state')!;
+  late final RouteNode routes_notes_state_vanilla_state = root.find('/notes/state/1.vanilla_state')!;
+  late final RouteNode routes_notes_state_StatefulBuilder = root.find('/notes/state/StatefulBuilder')!;
+  late final RouteNode routes_notes_media_assets_file_file_desktop = root.find('/notes/media&assets&file/file_desktop')!;
+  late final RouteNode routes_notes_media_assets_file_file_web = root.find('/notes/media&assets&file/file_web')!;
+  late final RouteNode routes_notes_media_assets_file_assets = root.find('/notes/media&assets&file/assets')!;
+  late final RouteNode routes_notes_style_theming_material3 = root.find('/notes/style&theming/material3')!;
+  late final RouteNode routes_notes_pure_dart_dart3 = root.find('/notes/pure_dart/dart3')!;
+  late final RouteNode routes_notes_pure_dart_async = root.find('/notes/pure_dart/async')!;
+  late final RouteNode routes_notes_pure_dart_safe_interface = root.find('/notes/pure_dart/safe_interface')!;
+  late final RouteNode routes_notes_pure_dart_execption = root.find('/notes/pure_dart/execption')!;
+  late final RouteNode routes_notes_pure_dart_serialization_json = root.find('/notes/pure_dart/serialization_json')!;
+  late final RouteNode routes_notes_pure_dart_analyzer = root.find('/notes/pure_dart/analyzer')!;
+  late final RouteNode routes_notes_dev_host_mirror = root.find('/notes/dev/host_mirror')!;
+  late final RouteNode routes_notes_dev_macos_config = root.find('/notes/dev/macos_config')!;
+  late final RouteNode routes_notes_dev_devtool = root.find('/notes/dev/devtool')!;
+  late final RouteNode routes_notes_dev_devtool_vmservice = root.find('/notes/dev/devtool/vmservice')!;
+  late final RouteNode routes_notes_dev_debug = root.find('/notes/dev/debug')!;
+  late final RouteNode routes_notes_i18n = root.find('/notes/i18n')!;
+  late final RouteNode routes_notes_thinking_in_ui_readable_html_vs_dart = root.find('/notes/thinking_in_ui/readable_html_vs_dart')!;
+  late final RouteNode routes_notes_x_note_inside_how_note_work = root.find('/notes/x.note_inside/how_note_work')!;
+  late final RouteNode routes_notes_x_note_inside_mockup_content = root.find('/notes/x.note_inside/mockup_content')!;
+  late final RouteNode routes_notes_x_note_inside_welcome = root.find('/notes/x.note_inside/1.welcome')!;
+  late final RouteNode routes_notes_x_note_inside_note_test_self = root.find('/notes/x.note_inside/note_test_self')!;
+  late final RouteNode routes_notes_x_note_inside_note_test_self_nobody = root.find('/notes/x.note_inside/note_test_self/nobody')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_input = root.find('/notes/widgets/specific_widgets/input')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_webview = root.find('/notes/widgets/specific_widgets/webview')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_slider = root.find('/notes/widgets/specific_widgets/slider')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_selectable = root.find('/notes/widgets/specific_widgets/selectable')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_button_ButtonStyleButton = root.find('/notes/widgets/specific_widgets/button/ButtonStyleButton')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_button_FloatingActionButton = root.find('/notes/widgets/specific_widgets/button/FloatingActionButton')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_button_IconButton = root.find('/notes/widgets/specific_widgets/button/IconButton')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_button_overview = root.find('/notes/widgets/specific_widgets/button/overview')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_text_RichText = root.find('/notes/widgets/specific_widgets/text/RichText')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_text_Text = root.find('/notes/widgets/specific_widgets/text/Text')!;
+  late final RouteNode routes_notes_widgets_specific_widgets_icon = root.find('/notes/widgets/specific_widgets/icon')!;
+  late final RouteNode routes_notes_widgets_container_widgets_menu = root.find('/notes/widgets/container_widgets/menu')!;
+  late final RouteNode routes_notes_widgets_container_widgets_scrollable_Dismissible = root.find('/notes/widgets/container_widgets/scrollable/Dismissible')!;
+  late final RouteNode routes_notes_widgets_container_widgets_bar = root.find('/notes/widgets/container_widgets/bar')!;
+  late final RouteNode routes_notes_Improve_app = root.find('/notes/Improve_app')!;
+  late final RouteNode routes_notes_Improve_app_overview = root.find('/notes/Improve_app/1.overview')!;
+  late final RouteNode routes_notes_Improve_app_web_optimization = root.find('/notes/Improve_app/web_optimization')!;
+  late final RouteNode routes_notes_Improve_app_RepaintBoundary = root.find('/notes/Improve_app/RepaintBoundary')!;
+  late final RouteNode routes_notes_Improve_app_event_listener_lifeycle = root.find('/notes/Improve_app/event&listener&lifeycle')!;
 }
 
 class Routes with RoutesMixin {}

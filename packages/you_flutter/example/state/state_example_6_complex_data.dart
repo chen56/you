@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:you_dart/src/state.dart';
-import 'package:you_flutter/src/state_widget.dart';
+import 'package:you_flutter/src/state.dart';
 
 // StreamBuilder?ø
 main() {

@@ -5,7 +5,7 @@ import 'package:you_note_dart/note.dart';
 
 final class NoteLayoutDefault extends StatelessWidget {
   final NoteBuilder builder;
-  final ToUri uri;
+  final RouteUri uri;
 
   const NoteLayoutDefault({super.key, required this.uri, required this.builder});
 
