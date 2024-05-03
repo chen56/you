@@ -5,66 +5,75 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
+import 'package:you_flutter/src/note/contents/contents.dart';
+import 'package:you_flutter/src/router.dart';
 import 'package:you_flutter/state.dart';
 import 'package:you_flutter/src/note/note_conf.dart';
 import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
+typedef NoteLayoutBuilder = NoteResult Function(BuildContext context, NoteResult child);
 
-base class ToNote extends RouteBuilder {
-  final NoteBuilder? page;
-  final NoteBuilder? notFound;
-  final NoteLayoutBuilder? layout;
+class NoteResult extends ToResult {
+  final Cell cell;
 
-  ToNote(super.part, {this.page, this.layout, this.notFound});
+  NoteResult({required super.widget, required this.cell});
 
   @override
-  Widget buildPage(BuildContext context, covariant ToNote forPage, RouteUri uri) {
-    return layout!(context, forPage.page!);
+  NoteResult warp(Widget next) {
+    return NoteResult(widget: next, cell: cell);
   }
-
-  @override
-  Widget buildNotFound(BuildContext context, covariant ToNote forNotFound, RouteUri uri) {
-    return layout!(context, forNotFound.notFound!);
-  }
-
-  @override
-  bool get hasPage => page != null;
-
-  @override
-  bool get hasLayout => layout != null;
-
-  @override
-  bool get hasNotFound => notFound != null;
 }
-//
-// base class ToNote extends To {
-//   final NoteBuilder? _builder;
-//   final NoteLayoutBuilder? _layout;
-//
-//   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
-//       : _builder = builder,
-//         _layout = layout,
-//         super(part,forBuild:this,children: children);
-//
-//   @override
-//   bool get isValid => _builder != null;
-//
-//   @override
-//   Widget build(BuildContext context, ToUri uri) {
-//     if (_builder == null) {
-//       // TODO not found
-//       return Text("not found $uri");
-//     }
-//     List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
-//     for (var i in chain) {
-//       if (i._layout != null) return i._layout(context, _builder);
-//     }
-//     return NoteLayoutDefault(uri: uri, builder: _builder);
-//   }
-// }
+
+base class ToNote extends To {
+  final NoteBuilder? _page;
+  final NoteBuilder? _notFound;
+  final NoteLayoutBuilder? _layout;
+
+  ToNote(
+    super.part, {
+    NoteBuilder? page,
+    NoteBuilder? notFound,
+    NoteLayoutBuilder? layout,
+    super.children = const [],
+  })  : _layout = layout,
+        _page = page,
+        _notFound = notFound;
+
+  @override
+  NoteResult buildPage(BuildContext context) {
+    return _build(context, _page!);
+  }
+
+  @override
+  NoteResult buildNotFound(BuildContext context) {
+    return _build(context, _notFound!);
+  }
+
+  static NoteResult _build(BuildContext context, NoteBuilder page) {
+    Cell cell = Cell.empty();
+    page.call(context, cell);
+    var content = Column(
+      children: [...cell.contents.map((e) => contents.contentToWidget(e))],
+    );
+    return NoteResult(widget: content, cell: cell);
+  }
+
+  @override
+  NoteResult buildLayout(BuildContext context, covariant NoteResult child) {
+    return _layout!(context, child);
+  }
+
+  @override
+  bool get hasPage => _page != null;
+
+  @override
+  bool get hasNotFound => _notFound != null;
+
+  @override
+  bool get hasLayout => _layout != null;
+}
 
 @Deprecated("已被you_router取代，待删除")
 class NoteRoute {
@@ -196,20 +205,19 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final RouteNode root;
+  final To root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required RouteNode root,
+    required To root,
   }) async {
     return NoteSystem(
       root: root,
     );
   }
-
 }
 
 base class Cell {
@@ -289,7 +297,6 @@ base class Cell {
   List<Cell> toList() {
     return List.from(_traverse(this));
   }
-
 
   static Future<({Trace dartTrace, Frame? callerFrame})> _findCallerLine({
     required StackTrace trace,

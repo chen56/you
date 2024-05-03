@@ -120,18 +120,14 @@ class Cmd_gen_routes_g_dart extends Command {
 
   Expression _genRouteRootExpression(RouteNode node) {
     var builderType = node.findForBuildType();
-    return builderType
-        .newInstance(
-          [literalString(node.dir.basename)],
-          {
-            if (node.file_page_dart.existsSync()) "page": refer("build", node.pagePackageUrl),
-            if (node.file_layout_dart.existsSync()) "layout": refer("layout", node.layoutPackageUrl),
-          },
-        )
-        .property("route")
-        .call([], {
-          if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRouteRootExpression(e))),
-        });
+    return builderType.newInstance(
+      [literalString(node.dir.basename)],
+      {
+        if (node.file_page_dart.existsSync()) "page": refer("build", node.pagePackageUrl),
+        if (node.file_layout_dart.existsSync()) "layout": refer("layout", node.layoutPackageUrl),
+        if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRouteRootExpression(e))),
+      },
+    );
 
     // YouCli.toType.newInstance([
     // ], {

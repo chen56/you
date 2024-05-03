@@ -9,15 +9,15 @@ void main() {
     var router = YouRouter(
         initial: Uri.parse("/"),
         navigatorKey: GlobalKey(),
-        root: RouteNode("/", children: [
-          RouteNode("settings", children: [
-            RouteNode("profile"),
+        root: To("/", children: [
+          To("settings", children: [
+            To("profile"),
           ]),
-          RouteNode("[user]", children: [
-            RouteNode("[repository]", children: [
-              RouteNode("tree", children: [
-                RouteNode("[branch]", children: [
-                  RouteNode("[...file]"),
+          To("[user]", children: [
+            To("[repository]", children: [
+              To("tree", children: [
+                To("[branch]", children: [
+                  To("[...file]"),
                 ]),
               ]),
             ]),
@@ -85,9 +85,9 @@ void main() {
     var router = YouRouter(
       initial: Uri.parse("/"),
       navigatorKey: GlobalKey(),
-      root: RouteNode("/", children: [
-        RouteNode("settings", children: [
-          RouteNode("profile"),
+      root: To("/", children: [
+        To("settings", children: [
+          To("profile"),
         ]),
       ]),
     );
@@ -120,9 +120,9 @@ void main() {
     var router = YouRouter(
       initial: Uri.parse("/"),
       navigatorKey: GlobalKey(),
-      root: RouteNode("/", children: [
-        RouteNode("settings", children: [
-          RouteNode("profile"),
+      root: To("/", children: [
+        To("settings", children: [
+          To("profile"),
         ]),
       ]),
     );
