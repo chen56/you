@@ -62,7 +62,7 @@ base class ToNote extends To {
 
   @override
   NoteResult buildLayout(BuildContext context, covariant NoteResult child) {
-    return _layout == null ? child : _layout(context, child);
+    return _layout!(context, child);
   }
 
   @override
