@@ -26,57 +26,49 @@ class BuildNote extends BuildResult {
   }
 }
 
-base class ToNote extends RouteBuilder {
-  final NoteBuilder? page;
-  final NoteLayoutBuilder? layout;
+base class ToNote extends ToPage {
+  final NoteBuilder? _page;
+  final NoteBuilder? _notFound;
+  final NoteLayoutBuilder? _layout;
 
-  ToNote(super.part, {this.page, this.layout});
+  ToNote(super.part, {NoteBuilder? page, NoteBuilder? notFound, NoteLayoutBuilder? layout})
+      : _layout = layout,
+        _page = page,
+        _notFound = notFound;
 
   @override
-  BuildNote build(BuildContext context) {
+  BuildNote buildPage(BuildContext context) {
+    return _build(context, _page!);
+  }
+
+  @override
+  BuildNote buildNotFound(BuildContext context) {
+    return _build(context, _notFound!);
+  }
+
+  static BuildNote _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
-    page!.call(context, cell);
+    page.call(context, cell);
     var content = Column(
       children: [...cell.contents.map((e) => contents.contentToWidget(e))],
     );
     return BuildNote(widget: content, cell: cell);
   }
 
-  /// downstream results
   @override
-  BuildNote warp(BuildContext context, covariant BuildNote child) {
-    return layout == null ? child : layout!(context, child);
+  BuildNote buildLayout(BuildContext context, covariant BuildNote child) {
+    return _layout == null ? child : _layout(context, child);
   }
 
   @override
-  bool get isEmpty => page == null;
+  bool get hasPage => _page != null;
+
+  @override
+  bool get hasNotFound => _notFound != null;
+
+  @override
+  bool get hasLayout => _layout != null;
 }
-//
-// base class ToNote extends To {
-//   final NoteBuilder? _builder;
-//   final NoteLayoutBuilder? _layout;
-//
-//   ToNote(super.part, {NoteBuilder? builder, NoteLayoutBuilder? layout, List<ToNote> children = const []})
-//       : _builder = builder,
-//         _layout = layout,
-//         super(part,forBuild:this,children: children);
-//
-//   @override
-//   bool get isValid => _builder != null;
-//
-//   @override
-//   Widget build(BuildContext context, ToUri uri) {
-//     if (_builder == null) {
-//       // TODO not found
-//       return Text("not found $uri");
-//     }
-//     List<ToNote> chain = [this, ...findAncestorsOfSameType<ToNote>()];
-//     for (var i in chain) {
-//       if (i._layout != null) return i._layout(context, _builder);
-//     }
-//     return NoteLayoutDefault(uri: uri, builder: _builder);
-//   }
-// }
 
 @Deprecated("已被you_router取代，待删除")
 class NoteRoute {
@@ -224,8 +216,7 @@ class NoteSystem {
 }
 
 base class Cell {
-  Cell(
-    Function(Cell print) callback, {
+  Cell(Function(Cell print) callback, {
     this.title,
   }) {
     callback(this);

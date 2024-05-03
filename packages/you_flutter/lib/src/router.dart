@@ -149,26 +149,26 @@ enum RouteNodeType {
     return null;
   }
 }
-
-abstract base class RouteBuilder {
-  final String part;
-
-  RouteBuilder(this.part);
-
-  RouteNode route({List<RouteNode> children = const []}) {
-    return RouteNode.create(part, forBuild: this, children: children);
-  }
-
-  BuildResult build(BuildContext context);
-
-  /// downstream results
-  BuildResult warp(BuildContext context, BuildResult child);
-
-  @nonVirtual
-  bool get isNotEmpty=>!isEmpty;
-
-  bool get isEmpty;
-}
+//
+// abstract base class RouteBuilder {
+//   final String part;
+//
+//   RouteBuilder(this.part);
+//
+//   RouteNode route({List<RouteNode> children = const []}) {
+//     return RouteNode.create(part, forBuild: this, children: children);
+//   }
+//
+//   BuildResult build(BuildContext context);
+//
+//   /// downstream results
+//   BuildResult warp(BuildContext context, BuildResult child);
+//
+//   @nonVirtual
+//   bool get isNotEmpty=>!isEmpty;
+//
+//   bool get isEmpty;
+// }
 
 class BuildResult {
   final Widget widget;
@@ -180,25 +180,56 @@ class BuildResult {
   }
 }
 
-base class ToPage extends RouteBuilder {
-  final PageBuilder? page;
-  final PageLayoutBuilder? layout;
+base class ToPage {
+  final String part;
+  final PageBuilder? _page;
+  final PageBuilder? _notFound;
+  final PageLayoutBuilder? _layout;
 
-  ToPage(super.part, {this.page, this.layout});
+  ToPage(this.part, {PageBuilder? page, PageBuilder? notFount, PageLayoutBuilder? layout})
+      : _layout = layout,
+        _page = page,
+        _notFound = notFount;
 
-  @override
-  BuildResult build(BuildContext context) {
-    return BuildResult(widget: page!(context));
+  ///  framework invoke this method if [hasPage]
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildPage(BuildContext context) {
+    return _build(context, _page!);
   }
 
-  /// downstream results
-  @override
-  BuildResult warp(BuildContext context, BuildResult child) {
-    return layout == null ? child : layout!(context, child);
+  ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildNotFound(BuildContext context) {
+    return _build(context, _notFound!);
   }
 
-  @override
-  bool get isEmpty => page == null;
+  static BuildResult _build(BuildContext context, PageBuilder page) {
+    return BuildResult(widget: page(context));
+  }
+
+  ///  framework invoke this method if [hasLayout]
+  /// downstream results warp to => new result
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildLayout(BuildContext context, BuildResult child) {
+    return _layout!(context, child);
+  }
+
+  @nonVirtual
+  RouteNode route({List<RouteNode> children = const []}) {
+    return RouteNode.create(part, forBuild: this, children: children);
+  }
+
+  @mustBeOverridden
+  bool get hasPage => _page != null;
+
+  @mustBeOverridden
+  bool get hasNotFound => _notFound != null;
+
+  @mustBeOverridden
+  bool get hasLayout => _layout != null;
 }
 
 /// To == go_router.GoRoute
@@ -219,7 +250,7 @@ base class RouteNode {
   @nonVirtual
   final List<RouteNode> children;
 
-  final RouteBuilder? forBuild;
+  final ToPage? forBuild;
 
   // TODO P1 root Node的part是routes，有问题！
   RouteNode(
@@ -238,7 +269,7 @@ base class RouteNode {
 
   RouteNode.create(
     String part, {
-    RouteBuilder? forBuild,
+    ToPage? forBuild,
     List<RouteNode> children = const [],
   }) : this(
           part,
@@ -249,7 +280,7 @@ base class RouteNode {
   RouteNode get parent => _parent;
 
   @mustBeOverridden
-  bool get isValid => forBuild != null && forBuild!.isNotEmpty;
+  bool get isValid => forBuild != null && forBuild!.hasPage;
 
   // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
@@ -426,6 +457,7 @@ ${children.map((e) => e._toStringDeep(level: level + 1)).join("\n")}
 ${"  " * level}</Route>''';
   }
 
+  @nonVirtual
   RouteNode? find(String templatePath) {
     return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
@@ -452,12 +484,13 @@ ${"  " * level}</Route>''';
   Widget build(BuildContext context, RouteUri uri) {
     assert(forBuild != null);
 
-    BuildResult result = forBuild!.build(context);
+    BuildResult result = forBuild!.buildPage(context);
 
     final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
 
     for (var node in chain) {
-      result = node.forBuild!.warp(context, result);
+      if (!node.forBuild!.hasLayout) continue;
+      result = node.forBuild!.buildLayout(context, result);
     }
     return result.widget;
   }
