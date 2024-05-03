@@ -250,14 +250,21 @@ base class RouteNode {
   @nonVirtual
   final List<RouteNode> children;
 
-  final ToPage? forBuild;
+  final PageBuilder? _page;
+  final PageBuilder? _notFound;
+  final PageLayoutBuilder? _layout;
 
   // TODO P1 root Node的part是routes，有问题！
   RouteNode(
     this.part, {
-    this.forBuild,
+    PageBuilder? page,
+    PageBuilder? notFount,
+    PageLayoutBuilder? layout,
     this.children = const [],
-  }) : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name") {
+  })  : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name"),
+        _layout = layout,
+        _page = page,
+        _notFound = notFount {
     var parsed = _parse(part);
     _name = parsed.$1;
     _type = parsed.$2;
@@ -273,14 +280,10 @@ base class RouteNode {
     List<RouteNode> children = const [],
   }) : this(
           part,
-          forBuild: forBuild,
           children: children,
         );
 
   RouteNode get parent => _parent;
-
-  @mustBeOverridden
-  bool get isValid => forBuild != null && forBuild!.hasPage;
 
   // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
@@ -336,6 +339,41 @@ base class RouteNode {
 
   @nonVirtual
   int get level => isRoot ? 0 : _parent.level + 1;
+
+  ///  framework invoke this method if [hasPage]
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildPage(BuildContext context) {
+    return _build(context, _page!);
+  }
+
+  ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildNotFound(BuildContext context) {
+    return _build(context, _notFound!);
+  }
+
+  static BuildResult _build(BuildContext context, PageBuilder page) {
+    return BuildResult(widget: page(context));
+  }
+
+  ///  framework invoke this method if [hasLayout]
+  /// downstream results warp to => new result
+  @visibleForOverriding
+  @mustBeOverridden
+  BuildResult buildLayout(BuildContext context, BuildResult child) {
+    return _layout!(context, child);
+  }
+
+  @mustBeOverridden
+  bool get hasPage => _page != null;
+
+  @mustBeOverridden
+  bool get hasNotFound => _notFound != null;
+
+  @mustBeOverridden
+  bool get hasLayout => _layout != null;
 
   RouteUri _match({
     required Uri uri,
@@ -479,18 +517,15 @@ ${"  " * level}</Route>''';
     return Uri.parse(templatePath);
   }
 
-  @visibleForOverriding
-  @mustBeOverridden
-  Widget build(BuildContext context, RouteUri uri) {
-    assert(forBuild != null);
-
-    BuildResult result = forBuild!.buildPage(context);
+  @nonVirtual
+  Widget _buildPage(BuildContext context, RouteUri uri) {
+    BuildResult result = buildPage(context);
 
     final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
 
     for (var node in chain) {
-      if (!node.forBuild!.hasLayout) continue;
-      result = node.forBuild!.buildLayout(context, result);
+      if (!node.hasLayout) continue;
+      result = node.buildLayout(context, result);
     }
     return result.widget;
   }
@@ -717,7 +752,7 @@ class _RouterDelegate extends RouterDelegate<RouteUri> with ChangeNotifier, PopN
           },
           pages: List.from(
             stack.map(
-              (uri) => MaterialPage(key: ValueKey(uri), child: uri.to.build(context, uri)),
+              (uri) => MaterialPage(key: ValueKey(uri), child: uri.to._buildPage(context, uri)),
             ),
           ),
         );

@@ -26,13 +26,18 @@ class BuildNote extends BuildResult {
   }
 }
 
-base class ToNote extends ToPage {
+base class ToNote extends RouteNode {
   final NoteBuilder? _page;
   final NoteBuilder? _notFound;
   final NoteLayoutBuilder? _layout;
 
-  ToNote(super.part, {NoteBuilder? page, NoteBuilder? notFound, NoteLayoutBuilder? layout})
-      : _layout = layout,
+  ToNote(
+    super.part, {
+    NoteBuilder? page,
+    NoteBuilder? notFound,
+    NoteLayoutBuilder? layout,
+    super.children = const [],
+  })  : _layout = layout,
         _page = page,
         _notFound = notFound;
 
@@ -216,7 +221,8 @@ class NoteSystem {
 }
 
 base class Cell {
-  Cell(Function(Cell print) callback, {
+  Cell(
+    Function(Cell print) callback, {
     this.title,
   }) {
     callback(this);

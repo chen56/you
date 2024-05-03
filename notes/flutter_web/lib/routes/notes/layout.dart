@@ -55,7 +55,7 @@ class _RouteTree extends StatelessWidget {
   Widget build(BuildContext context) {
     final route = YouRouter.of(context);
 
-    var validRoutes = route.root.toList().where((e) => e.isValid || e.isNonLeaf);
+    var validRoutes = route.root.toList().where((e) => e.hasPage || e.isNonLeaf);
     var routeWidgets = validRoutes.map((node) {
       String title = "▼ ${node.part}";
       title = title.padLeft((node.level * 3) + title.length);
@@ -66,7 +66,7 @@ class _RouteTree extends StatelessWidget {
 
       return Align(
         alignment: Alignment.centerLeft,
-        child: TextButton(onPressed: node.isValid ? click : null, child: Text(title)),
+        child: TextButton(onPressed: node.hasPage ? click : null, child: Text(title)),
       );
     });
     return ConstrainedBox(
