@@ -13,20 +13,20 @@ import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = BuildNote Function(BuildContext context, BuildNote child);
+typedef NoteLayoutBuilder = NoteResult Function(BuildContext context, NoteResult child);
 
-class BuildNote extends BuildResult {
+class NoteResult extends ToResult {
   final Cell cell;
 
-  BuildNote({required super.widget, required this.cell});
+  NoteResult({required super.widget, required this.cell});
 
   @override
-  BuildNote warp(Widget next) {
-    return BuildNote(widget: next, cell: cell);
+  NoteResult warp(Widget next) {
+    return NoteResult(widget: next, cell: cell);
   }
 }
 
-base class ToNote extends RouteNode {
+base class ToNote extends To {
   final NoteBuilder? _page;
   final NoteBuilder? _notFound;
   final NoteLayoutBuilder? _layout;
@@ -42,26 +42,26 @@ base class ToNote extends RouteNode {
         _notFound = notFound;
 
   @override
-  BuildNote buildPage(BuildContext context) {
+  NoteResult buildPage(BuildContext context) {
     return _build(context, _page!);
   }
 
   @override
-  BuildNote buildNotFound(BuildContext context) {
+  NoteResult buildNotFound(BuildContext context) {
     return _build(context, _notFound!);
   }
 
-  static BuildNote _build(BuildContext context, NoteBuilder page) {
+  static NoteResult _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
     var content = Column(
       children: [...cell.contents.map((e) => contents.contentToWidget(e))],
     );
-    return BuildNote(widget: content, cell: cell);
+    return NoteResult(widget: content, cell: cell);
   }
 
   @override
-  BuildNote buildLayout(BuildContext context, covariant BuildNote child) {
+  NoteResult buildLayout(BuildContext context, covariant NoteResult child) {
     return _layout == null ? child : _layout(context, child);
   }
 
@@ -205,14 +205,14 @@ class NoteRoute {
 }
 
 class NoteSystem {
-  final RouteNode root;
+  final To root;
 
   NoteSystem({
     required this.root,
   });
 
   static Future<NoteSystem> load({
-    required RouteNode root,
+    required To root,
   }) async {
     return NoteSystem(
       root: root,

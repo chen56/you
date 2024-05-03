@@ -41,7 +41,7 @@ ref:
     我
  */
 typedef PageBuilder = WidgetBuilder;
-typedef PageLayoutBuilder = BuildResult Function(BuildContext context, BuildResult child);
+typedef PageLayoutBuilder = ToResult Function(BuildContext context, ToResult child);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
 final class NotFoundError extends ArgumentError {
@@ -57,7 +57,7 @@ class ToType {
 mixin RouterMixin {
   YouRouter get router;
 
-  RouteNode get root => router.root;
+  To get root => router.root;
 
   @nonVirtual
   RouteUri match(Uri uri) {
@@ -109,7 +109,7 @@ final class YouRouter with RouterMixin {
   }
 
   @override
-  final RouteNode root;
+  final To root;
   final GlobalKey<NavigatorState> _navigatorKey;
   late final RouterConfig<Object> _config;
   late final RouterDelegate<Object> _routerDelegate;
@@ -170,71 +170,19 @@ enum RouteNodeType {
 //   bool get isEmpty;
 // }
 
-class BuildResult {
+class ToResult {
   final Widget widget;
 
-  BuildResult({required this.widget});
+  ToResult({required this.widget});
 
-  BuildResult warp(Widget next) {
-    return BuildResult(widget: next);
+  ToResult warp(Widget next) {
+    return ToResult(widget: next);
   }
-}
-
-base class ToPage {
-  final String part;
-  final PageBuilder? _page;
-  final PageBuilder? _notFound;
-  final PageLayoutBuilder? _layout;
-
-  ToPage(this.part, {PageBuilder? page, PageBuilder? notFount, PageLayoutBuilder? layout})
-      : _layout = layout,
-        _page = page,
-        _notFound = notFount;
-
-  ///  framework invoke this method if [hasPage]
-  @visibleForOverriding
-  @mustBeOverridden
-  BuildResult buildPage(BuildContext context) {
-    return _build(context, _page!);
-  }
-
-  ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
-  @visibleForOverriding
-  @mustBeOverridden
-  BuildResult buildNotFound(BuildContext context) {
-    return _build(context, _notFound!);
-  }
-
-  static BuildResult _build(BuildContext context, PageBuilder page) {
-    return BuildResult(widget: page(context));
-  }
-
-  ///  framework invoke this method if [hasLayout]
-  /// downstream results warp to => new result
-  @visibleForOverriding
-  @mustBeOverridden
-  BuildResult buildLayout(BuildContext context, BuildResult child) {
-    return _layout!(context, child);
-  }
-
-  @nonVirtual
-  RouteNode route({List<RouteNode> children = const []}) {
-    return RouteNode.create(part, forBuild: this, children: children);
-  }
-
-  @mustBeOverridden
-  bool get hasPage => _page != null;
-
-  @mustBeOverridden
-  bool get hasNotFound => _notFound != null;
-
-  @mustBeOverridden
-  bool get hasLayout => _layout != null;
 }
 
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
-base class RouteNode {
+base class To {
   /// part may be a template
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
@@ -245,17 +193,17 @@ base class RouteNode {
   late final String _name;
   late final RouteNodeType _type;
 
-  late RouteNode _parent = this;
+  late To _parent = this;
 
   @nonVirtual
-  final List<RouteNode> children;
+  final List<To> children;
 
   final PageBuilder? _page;
   final PageBuilder? _notFound;
   final PageLayoutBuilder? _layout;
 
   // TODO P1 root Node的part是routes，有问题！
-  RouteNode(
+  To(
     this.part, {
     PageBuilder? page,
     PageBuilder? notFount,
@@ -274,16 +222,7 @@ base class RouteNode {
     }
   }
 
-  RouteNode.create(
-    String part, {
-    ToPage? forBuild,
-    List<RouteNode> children = const [],
-  }) : this(
-          part,
-          children: children,
-        );
-
-  RouteNode get parent => _parent;
+  To get parent => _parent;
 
   // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
@@ -322,7 +261,7 @@ base class RouteNode {
   String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
   @nonVirtual
-  List<RouteNode> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
+  List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
 
   /// return Strictly equal ancestors of type
   @nonVirtual
@@ -335,7 +274,7 @@ base class RouteNode {
   }
 
   @nonVirtual
-  RouteNode get root => isRoot ? this : _parent.root;
+  To get root => isRoot ? this : _parent.root;
 
   @nonVirtual
   int get level => isRoot ? 0 : _parent.level + 1;
@@ -343,26 +282,26 @@ base class RouteNode {
   ///  framework invoke this method if [hasPage]
   @visibleForOverriding
   @mustBeOverridden
-  BuildResult buildPage(BuildContext context) {
+  ToResult buildPage(BuildContext context) {
     return _build(context, _page!);
   }
 
   ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
   @visibleForOverriding
   @mustBeOverridden
-  BuildResult buildNotFound(BuildContext context) {
+  ToResult buildNotFound(BuildContext context) {
     return _build(context, _notFound!);
   }
 
-  static BuildResult _build(BuildContext context, PageBuilder page) {
-    return BuildResult(widget: page(context));
+  static ToResult _build(BuildContext context, PageBuilder page) {
+    return ToResult(widget: page(context));
   }
 
   ///  framework invoke this method if [hasLayout]
   /// downstream results warp to => new result
   @visibleForOverriding
   @mustBeOverridden
-  BuildResult buildLayout(BuildContext context, BuildResult child) {
+  ToResult buildLayout(BuildContext context, ToResult child) {
     return _layout!(context, child);
   }
 
@@ -390,15 +329,15 @@ base class RouteNode {
       return RouteUri._(uri: uri, to: this, routeParameters: params);
     }
 
-    RouteNode? matchChild({required String segment}) {
-      RouteNode? matched = children.where((e) => e._type == RouteNodeType.static).where((e) => segment == e._name).firstOrNull;
+    To? matchChild({required String segment}) {
+      To? matched = children.where((e) => e._type == RouteNodeType.static).where((e) => segment == e._name).firstOrNull;
       if (matched != null) return matched;
       matched = children.where((e) => e._type == RouteNodeType.dynamic || e._type == RouteNodeType.dynamicRest).firstOrNull;
       if (matched != null) return matched;
       return null;
     }
 
-    RouteNode? matchedNext = matchChild(segment: next);
+    To? matchedNext = matchChild(segment: next);
     if (matchedNext == null) {
       /// FIXME NotFoundError如何处理
       throw NotFoundError(invalidValue: uri);
@@ -435,16 +374,16 @@ base class RouteNode {
   /// a.toList(includeThis:true)
   ///          => [/a,/a/1,/a/2]
   @nonVirtual
-  List<RouteNode> toList({
+  List<To> toList({
     bool includeThis = true,
-    bool Function(RouteNode path)? where,
-    Comparator<RouteNode>? sortBy,
+    bool Function(To path)? where,
+    Comparator<To>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<RouteNode> sorted = List.from(children);
+    List<To> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -496,11 +435,11 @@ ${"  " * level}</Route>''';
   }
 
   @nonVirtual
-  RouteNode? find(String templatePath) {
+  To? find(String templatePath) {
     return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
 
-  RouteNode? _findBySegments(List<String> segments) {
+  To? _findBySegments(List<String> segments) {
     if (segments.isEmpty) return this;
     var [first, ...rest] = segments;
     for (var c in children) {
@@ -519,9 +458,9 @@ ${"  " * level}</Route>''';
 
   @nonVirtual
   Widget _buildPage(BuildContext context, RouteUri uri) {
-    BuildResult result = buildPage(context);
+    ToResult result = buildPage(context);
 
-    final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
+    final List<To> chain = [this, ...findAncestorsOfSameType<To>()];
 
     for (var node in chain) {
       if (!node.hasLayout) continue;
@@ -535,7 +474,7 @@ ${"  " * level}</Route>''';
 //  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
 //  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
 final class RouteUri implements Uri {
-  final RouteNode to;
+  final To to;
   final Uri _uri;
   final Map<String, String> _routeParameters;
 

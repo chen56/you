@@ -16,8 +16,8 @@ class YouCli {
       : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
-  static const Reference toType = Reference("RouteNode", "package:you_flutter/router.dart");
-  static const Reference forPageType = Reference("RouteNode", "package:you_flutter/router.dart");
+  static const Reference toType = Reference("To", "package:you_flutter/router.dart");
+  static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
   static const String toTypeName = "ToType";
   static const String pageDart = "page.dart";
   static const String layoutDart = "layout.dart";

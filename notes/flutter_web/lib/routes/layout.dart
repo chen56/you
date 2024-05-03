@@ -4,14 +4,14 @@ import 'package:you_flutter/router.dart';
 import 'package:you_flutter/note.dart';
 
 /// [NoteLayoutBuilder]
-BuildResult layout(BuildContext context, BuildResult child) {
+ToResult layout(BuildContext context, ToResult child) {
   // ignore: unnecessary_type_check
   assert(layout is PageLayoutBuilder);
   return child.warp(RootLayout(child: child));
 }
 
 class RootLayout extends StatelessWidget {
-  final BuildResult child;
+  final ToResult child;
 
   const RootLayout({super.key, required this.child});
 
