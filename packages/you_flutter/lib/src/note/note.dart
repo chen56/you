@@ -49,10 +49,7 @@ base class ToNote extends RouteBuilder {
   }
 
   @override
-  bool get hasPage => page != null;
-
-  @override
-  bool get hasLayout => layout != null;
+  bool get isEmpty => page == null;
 }
 //
 // base class ToNote extends To {

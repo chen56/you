@@ -11,6 +11,16 @@ BuildNote layout(BuildContext context, BuildNote child) {
   return child.warp(NoteLayout(child: child));
 }
 
+BuildNote body(BuildContext context, NoteBuilder body) {
+  Cell cell = Cell.empty();
+  body(context, cell);
+  return BuildNote(
+    cell: cell,
+    widget: Column(
+      children: [...cell.contents.map((e) => contents.contentToWidget(e))],
+    ),
+  );
+}
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容

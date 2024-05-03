@@ -164,9 +164,10 @@ abstract base class RouteBuilder {
   /// downstream results
   BuildResult warp(BuildContext context, BuildResult child);
 
-  bool get hasPage;
+  @nonVirtual
+  bool get isNotEmpty=>!isEmpty;
 
-  bool get hasLayout;
+  bool get isEmpty;
 }
 
 class BuildResult {
@@ -197,10 +198,7 @@ base class ToPage extends RouteBuilder {
   }
 
   @override
-  bool get hasPage => page != null;
-
-  @override
-  bool get hasLayout => layout != null;
+  bool get isEmpty => page == null;
 }
 
 /// To == go_router.GoRoute
@@ -251,7 +249,7 @@ base class RouteNode {
   RouteNode get parent => _parent;
 
   @mustBeOverridden
-  bool get isValid => forBuild != null && forBuild!.hasPage;
+  bool get isValid => forBuild != null && forBuild!.isNotEmpty;
 
   // ignore: unused_element
   static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
