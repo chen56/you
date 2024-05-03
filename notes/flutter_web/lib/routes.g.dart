@@ -9,9 +9,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:you_flutter/router.dart';
 import 'package:flutter_web/routes/page.dart';
+import 'package:flutter_web/routes/layout.dart';
 import 'package:you_flutter/note.dart';
 import 'package:flutter_web/routes/notes/page.dart' as _notes_page;
-import 'package:flutter_web/routes/notes/layout.dart';
+import 'package:flutter_web/routes/notes/layout.dart' as _notes_layout;
 import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as _parameterized_page;
 import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as _remote_view_page;
 import 'package:flutter_web/routes/notes/env_info/page.dart' as _env_info_page;
@@ -66,8 +67,8 @@ import 'package:flutter_web/routes/notes/Improve_app/RepaintBoundary/page.dart' 
 import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/page.dart' as _event_listener_lifeycle_page;
 
 mixin RoutesMixin {
-  final RouteNode root = ToPage('routes', page: build).route(children: [
-    ToNote('notes', page: _notes_page.build, layout: layout).route(children: [
+  final RouteNode root = ToPage('routes', page: build, layout: layout).route(children: [
+    ToNote('notes', page: _notes_page.build, layout: _notes_layout.layout).route(children: [
       ToNote('research').route(children: [
         ToNote('bash_note').route(),
         ToNote('parameterized', page: _parameterized_page.build).route(),

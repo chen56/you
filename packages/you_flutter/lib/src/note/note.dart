@@ -5,29 +5,47 @@ import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_ma
 import 'package:path/path.dart' as path;
 import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
+import 'package:you_flutter/src/note/contents/contents.dart';
+import 'package:you_flutter/src/router.dart';
 import 'package:you_flutter/state.dart';
 import 'package:you_flutter/src/note/note_conf.dart';
 import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = Widget Function(BuildContext context, NoteBuilder builder);
+typedef NoteLayoutBuilder = BuildNote Function(BuildContext context, BuildNote child);
+
+class BuildNote extends BuildResult {
+  final Cell cell;
+
+  BuildNote({required super.widget, required this.cell});
+
+  @override
+  BuildNote warp(Widget next) {
+    return BuildNote(widget: next, cell: cell);
+  }
+}
 
 base class ToNote extends RouteBuilder {
   final NoteBuilder? page;
-  final NoteBuilder? notFound;
   final NoteLayoutBuilder? layout;
 
-  ToNote(super.part, {this.page, this.layout, this.notFound});
+  ToNote(super.part, {this.page, this.layout});
 
   @override
-  Widget buildPage(BuildContext context, covariant ToNote forPage, RouteUri uri) {
-    return layout!(context, forPage.page!);
+  BuildNote build(BuildContext context) {
+    Cell cell = Cell.empty();
+    page!.call(context, cell);
+    var content = Column(
+      children: [...cell.contents.map((e) => contents.contentToWidget(e))],
+    );
+    return BuildNote(widget: content, cell: cell);
   }
 
+  /// downstream results
   @override
-  Widget buildNotFound(BuildContext context, covariant ToNote forNotFound, RouteUri uri) {
-    return layout!(context, forNotFound.notFound!);
+  BuildNote warp(BuildContext context, covariant BuildNote child) {
+    return layout == null ? child : layout!(context, child);
   }
 
   @override
@@ -35,9 +53,6 @@ base class ToNote extends RouteBuilder {
 
   @override
   bool get hasLayout => layout != null;
-
-  @override
-  bool get hasNotFound => notFound != null;
 }
 //
 // base class ToNote extends To {
@@ -209,7 +224,6 @@ class NoteSystem {
       root: root,
     );
   }
-
 }
 
 base class Cell {
@@ -289,7 +303,6 @@ base class Cell {
   List<Cell> toList() {
     return List.from(_traverse(this));
   }
-
 
   static Future<({Trace dartTrace, Frame? callerFrame})> _findCallerLine({
     required StackTrace trace,

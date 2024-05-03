@@ -15,8 +15,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("user base ${Uri.base}");
-
+    debugPrint("App: Uri.base =  ${Uri.base}");
     return MaterialApp.router(
       title: "flutter note",
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent.shade700, brightness: Brightness.light), useMaterial3: true),

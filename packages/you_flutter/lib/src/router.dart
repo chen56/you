@@ -5,7 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
-import 'package:you_flutter/src/layouts/layout_default.dart';
 import 'package:you_flutter/src/log.dart';
 
 /*
@@ -42,7 +41,7 @@ ref:
     我
  */
 typedef PageBuilder = WidgetBuilder;
-typedef PageLayoutBuilder = Widget Function(BuildContext context, PageBuilder bulider);
+typedef PageLayoutBuilder = BuildResult Function(BuildContext context, BuildResult child);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
 final class NotFoundError extends ArgumentError {
@@ -160,33 +159,41 @@ abstract base class RouteBuilder {
     return RouteNode.create(part, forBuild: this, children: children);
   }
 
-  Widget buildPage(BuildContext context, RouteBuilder forPage, RouteUri uri);
+  BuildResult build(BuildContext context);
 
-  Widget buildNotFound(BuildContext context, RouteBuilder forNotFound, RouteUri uri);
+  /// downstream results
+  BuildResult warp(BuildContext context, BuildResult child);
 
   bool get hasPage;
 
   bool get hasLayout;
+}
 
-  bool get hasNotFound;
+class BuildResult {
+  final Widget widget;
+
+  BuildResult({required this.widget});
+
+  BuildResult warp(Widget next) {
+    return BuildResult(widget: next);
+  }
 }
 
 base class ToPage extends RouteBuilder {
   final PageBuilder? page;
-  final PageBuilder? notFound;
   final PageLayoutBuilder? layout;
 
-  ToPage(super.part, {this.page, this.layout, this.notFound});
+  ToPage(super.part, {this.page, this.layout});
 
   @override
-  Widget buildPage(BuildContext context, covariant ToPage forPage, RouteUri uri) {
-    if (layout == null) return LayoutDefault(builder: page!, uri: uri);
-    return layout!(context, forPage.page!);
+  BuildResult build(BuildContext context) {
+    return BuildResult(widget: page!(context));
   }
 
+  /// downstream results
   @override
-  Widget buildNotFound(BuildContext context, covariant ToPage forNotFound, RouteUri uri) {
-    return layout!(context, forNotFound.notFound!);
+  BuildResult warp(BuildContext context, BuildResult child) {
+    return layout == null ? child : layout!(context, child);
   }
 
   @override
@@ -194,9 +201,6 @@ base class ToPage extends RouteBuilder {
 
   @override
   bool get hasLayout => layout != null;
-
-  @override
-  bool get hasNotFound => notFound != null;
 }
 
 /// To == go_router.GoRoute
@@ -257,10 +261,10 @@ base class RouteNode {
     return (BuildContext context) => FutureBuilder<Widget>(
           future: builder().then((b) => b(context)),
           builder: (context, snapshot) {
-            final router = YouRouter.of(context);
+            final route = YouRouter.of(context);
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.hasError) {
-                return Text('page load error(${router.uri}): ${snapshot.error} \n${snapshot.stackTrace}');
+                return Text('page load error(${route.uri}): ${snapshot.error} \n${snapshot.stackTrace}');
               }
               return snapshot.data!;
             }
@@ -450,12 +454,14 @@ ${"  " * level}</Route>''';
   Widget build(BuildContext context, RouteUri uri) {
     assert(forBuild != null);
 
+    BuildResult result = forBuild!.build(context);
+
     final List<RouteNode> chain = [this, ...findAncestorsOfSameType<RouteNode>()];
 
     for (var node in chain) {
-      if (node.forBuild!.hasLayout) return node.forBuild!.buildPage(context, forBuild!, uri);
+      result = node.forBuild!.warp(context, result);
     }
-    return forBuild!.buildPage(context, forBuild!, uri);
+    return result.widget;
   }
 }
 

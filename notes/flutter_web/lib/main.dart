@@ -10,7 +10,8 @@ void main() async {
     sharedPreferences: await SharedPreferences.getInstance(),
     router: YouRouter(
       root: routes.root,
-      initial: routes.routes_root.toUri(),
+      initial: routes.routes_notes.toUri(),
+      // initial: Uri.base,
       navigatorKey: GlobalKey<NavigatorState>(debugLabel: "mainNavigator"),
     ),
   ));

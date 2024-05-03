@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:you_flutter/router.dart';
 
 RootPage build(BuildContext context) {
+  // ignore: unnecessary_type_check
+  assert(build is PageBuilder);
   return const RootPage();
 }
 
