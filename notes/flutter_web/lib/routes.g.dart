@@ -16,10 +16,7 @@ import 'package:flutter_web/routes/notes/layout.dart' as _notes_layout;
 import 'package:flutter_web/routes/notes/research/parameterized/page.dart' as _parameterized_page;
 import 'package:flutter_web/routes/notes/research/remote_view/page.dart' as _remote_view_page;
 import 'package:flutter_web/routes/notes/env_info/page.dart' as _env_info_page;
-import 'package:flutter_web/routes/notes/layout/page.dart' as _layout_page;
-import 'package:flutter_web/routes/notes/layout/old/layout/page.dart' as _layout_page2;
-import 'package:flutter_web/routes/notes/layout/box_layout/constraints/page.dart' as _constraints_page;
-import 'package:flutter_web/routes/notes/layout/responsive_design/page.dart' as _responsive_design_page;
+import 'package:flutter_web/routes/notes/layout/constraints/page.dart' as _constraints_page;
 import 'package:flutter_web/routes/notes/navigation/page.dart' as _navigation_page;
 import 'package:flutter_web/routes/notes/state/page.dart' as _state_page;
 import 'package:flutter_web/routes/notes/state/1.vanilla_state/page.dart' as _1_vanilla_state_page;
@@ -46,17 +43,7 @@ import 'package:flutter_web/routes/notes/x.note_inside/mockup_content/page.dart'
 import 'package:flutter_web/routes/notes/x.note_inside/1.welcome/page.dart' as _1_welcome_page;
 import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/page.dart' as _note_test_self_page;
 import 'package:flutter_web/routes/notes/x.note_inside/note_test_self/nobody/page.dart' as _nobody_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/input/page.dart' as _input_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/webview/page.dart' as _webview_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/slider/page.dart' as _slider_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/selectable/page.dart' as _selectable_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/ButtonStyleButton/page.dart' as _ButtonStyleButton_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/FloatingActionButton/page.dart' as _FloatingActionButton_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/IconButton/page.dart' as _IconButton_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/overview/page.dart' as _overview_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/RichText/page.dart' as _RichText_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/text/Text/page.dart' as _Text_page;
-import 'package:flutter_web/routes/notes/widgets/specific_widgets/icon/page.dart' as _icon_page;
+import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/page.dart' as _button_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/menu/page.dart' as _menu_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/scrollable/Dismissible/page.dart' as _Dismissible_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/bar/page.dart' as _bar_page;
@@ -75,15 +62,9 @@ mixin RoutesMixin {
         ToNote('remote_view', page: _remote_view_page.build),
       ]),
       ToNote('env_info', page: _env_info_page.build),
-      ToNote('layout', page: _layout_page.build, children: [
-        ToNote('old', children: [
-          ToNote('layout', page: _layout_page2.build),
-        ]),
-        ToNote('box_layout', children: [
-          ToNote('constraints', page: _constraints_page.build),
-        ]),
-        ToNote('responsive_design', page: _responsive_design_page.build),
-        ToNote('1.welcome'),
+      ToNote('layout', children: [
+        ToNote('constraints', page: _constraints_page.build),
+        ToNote('get_size'),
       ]),
       ToNote('navigation', page: _navigation_page.build, children: [
         ToNote('navigator_v1'),
@@ -100,6 +81,7 @@ mixin RoutesMixin {
       ]),
       ToNote('style&theming', children: [
         ToNote('material3', page: _material3_page.build),
+        ToNote('colors'),
         ToNote('Material'),
       ]),
       ToNote('pure_dart', children: [
@@ -110,7 +92,6 @@ mixin RoutesMixin {
         ToNote('serialization_json', page: _serialization_json_page.build),
         ToNote('analyzer', page: _analyzer_page.build),
       ]),
-      ToNote('cheetsheets'),
       ToNote('dev', children: [
         ToNote('host_mirror', page: _host_mirror_page.build),
         ToNote('macos_config', page: _macos_config_page.build),
@@ -134,22 +115,7 @@ mixin RoutesMixin {
       ]),
       ToNote('widgets', children: [
         ToNote('specific_widgets', children: [
-          ToNote('input', page: _input_page.build),
-          ToNote('webview', page: _webview_page.build),
-          ToNote('slider', page: _slider_page.build),
-          ToNote('selectable', page: _selectable_page.build),
-          ToNote('button', children: [
-            ToNote('ButtonStyleButton', page: _ButtonStyleButton_page.build),
-            ToNote('FloatingActionButton', page: _FloatingActionButton_page.build),
-            ToNote('IconButton', page: _IconButton_page.build),
-            ToNote('overview', page: _overview_page.build),
-          ]),
-          ToNote('Divider'),
-          ToNote('text', children: [
-            ToNote('RichText', page: _RichText_page.build),
-            ToNote('Text', page: _Text_page.build),
-          ]),
-          ToNote('icon', page: _icon_page.build),
+          ToNote('button', page: _button_page.build),
         ]),
         ToNote('container_widgets', children: [
           ToNote('drawer'),
@@ -179,10 +145,7 @@ mixin RoutesMixin {
   late final To routes_notes_research_parameterized = root.find('/notes/research/parameterized')!;
   late final To routes_notes_research_remote_view = root.find('/notes/research/remote_view')!;
   late final To routes_notes_env_info = root.find('/notes/env_info')!;
-  late final To routes_notes_layout = root.find('/notes/layout')!;
-  late final To routes_notes_layout_old_layout = root.find('/notes/layout/old/layout')!;
-  late final To routes_notes_layout_box_layout_constraints = root.find('/notes/layout/box_layout/constraints')!;
-  late final To routes_notes_layout_responsive_design = root.find('/notes/layout/responsive_design')!;
+  late final To routes_notes_layout_constraints = root.find('/notes/layout/constraints')!;
   late final To routes_notes_navigation = root.find('/notes/navigation')!;
   late final To routes_notes_state = root.find('/notes/state')!;
   late final To routes_notes_state_vanilla_state = root.find('/notes/state/1.vanilla_state')!;
@@ -209,17 +172,7 @@ mixin RoutesMixin {
   late final To routes_notes_x_note_inside_welcome = root.find('/notes/x.note_inside/1.welcome')!;
   late final To routes_notes_x_note_inside_note_test_self = root.find('/notes/x.note_inside/note_test_self')!;
   late final To routes_notes_x_note_inside_note_test_self_nobody = root.find('/notes/x.note_inside/note_test_self/nobody')!;
-  late final To routes_notes_widgets_specific_widgets_input = root.find('/notes/widgets/specific_widgets/input')!;
-  late final To routes_notes_widgets_specific_widgets_webview = root.find('/notes/widgets/specific_widgets/webview')!;
-  late final To routes_notes_widgets_specific_widgets_slider = root.find('/notes/widgets/specific_widgets/slider')!;
-  late final To routes_notes_widgets_specific_widgets_selectable = root.find('/notes/widgets/specific_widgets/selectable')!;
-  late final To routes_notes_widgets_specific_widgets_button_ButtonStyleButton = root.find('/notes/widgets/specific_widgets/button/ButtonStyleButton')!;
-  late final To routes_notes_widgets_specific_widgets_button_FloatingActionButton = root.find('/notes/widgets/specific_widgets/button/FloatingActionButton')!;
-  late final To routes_notes_widgets_specific_widgets_button_IconButton = root.find('/notes/widgets/specific_widgets/button/IconButton')!;
-  late final To routes_notes_widgets_specific_widgets_button_overview = root.find('/notes/widgets/specific_widgets/button/overview')!;
-  late final To routes_notes_widgets_specific_widgets_text_RichText = root.find('/notes/widgets/specific_widgets/text/RichText')!;
-  late final To routes_notes_widgets_specific_widgets_text_Text = root.find('/notes/widgets/specific_widgets/text/Text')!;
-  late final To routes_notes_widgets_specific_widgets_icon = root.find('/notes/widgets/specific_widgets/icon')!;
+  late final To routes_notes_widgets_specific_widgets_button = root.find('/notes/widgets/specific_widgets/button')!;
   late final To routes_notes_widgets_container_widgets_menu = root.find('/notes/widgets/container_widgets/menu')!;
   late final To routes_notes_widgets_container_widgets_scrollable_Dismissible = root.find('/notes/widgets/container_widgets/scrollable/Dismissible')!;
   late final To routes_notes_widgets_container_widgets_bar = root.find('/notes/widgets/container_widgets/bar')!;

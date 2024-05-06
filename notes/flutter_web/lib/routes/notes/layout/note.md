@@ -182,6 +182,7 @@
   - **ClampingScrollPhysics**: 不允许过度滚动,列表滚动到顶部或底部时会立即停止。
   - **AlwaysScrollableScrollPhysics**: 始终允许滚动,即使列表项的总高度小于列表容器的高度。
   - **NeverScrollableScrollPhysics**: 禁用滚动功能,列表项无法滚动。
+
 ## **自定义Custom**
 
 - **CustomSingleChildLayout**: 实现SingleChildLayoutDelegate自定义子组件的布局。
@@ -210,4 +211,8 @@
 
 - StatefulWidget在最外层会随着屏幕大小变化自动build
 - 自适应尺寸：/flutter/examples/api/lib/widgets/framework/build_owner.0.dart
+
+### 获取尺寸的各种方法
+
+- 组件尺寸：WidgetsBinding.instance.addPostFrameCallback中： (context.findRenderObject() as RenderBox).size
 - 屏幕宽度：`double screenWidth = MediaQuery.of(context).size.width;`

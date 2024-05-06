@@ -1,4 +1,4 @@
-# cheetsheet 纲要
+# cheatsheet 纲要
 
 ## flutter_web纲要计划
 
@@ -138,19 +138,3 @@ material.io对Compoent的定义如下：
 
 - diagnostics.dart
 
-
-## 综合专题计划
-
-### 如何选用合适的布局
-
-### 状态管理的十八般武艺
-
-### Navigation v1 vs v2
-
-### 动画的艺术
-
-### 主题Theme
-
-### 性能之殇
-
-### dev踩坑
