@@ -5,6 +5,7 @@ library;
 import 'package:flutter/widgets.dart';
 
 /// https://m3.material.io/foundations/layout/applying-layout/window-size-classes
+@Deprecated("换成新的better_ui")
 enum WindowClass {
   // phone
   compact,

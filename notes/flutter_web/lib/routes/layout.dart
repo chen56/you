@@ -94,7 +94,8 @@ class _NoteTree extends StatelessWidget {
     final notes = routes.routes_notes
         .toList(
           includeThis: false,
-        ).where((e) => e.isPage || e.isNonLeaf);
+        )
+        .where((e) => e.isPage || e.isNonLeaf);
     routes.routes_notes.expandTree(true, level: 1);
     return Watch((context) {
       var noteList = notes.where((e) => e.isRoot ? true : e.parent.expand).toList();
@@ -125,14 +126,14 @@ class _NoteTree extends StatelessWidget {
       } else {
         node.expand = !node.expand;
       }
-
     }
+
     // 🔹◽️●○◦■□❏✎
     String iconExtend = node.isLeafPage
         ? "❏"
         : node.expand
-        ? "▼"
-        : "︎︎︎▶";
+            ? "▼"
+            : "︎︎︎▶";
 
     String title = "$iconExtend ${node.part}";
     title = title.padLeft((node.level * 2) + title.length);
