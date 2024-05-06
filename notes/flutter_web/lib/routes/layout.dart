@@ -7,7 +7,7 @@ import 'package:you_flutter/state.dart';
 /// [LayoutBuilder]
 Widget layout(BuildContext context, Widget child) {
   // ignore: unnecessary_type_check
-  assert(layout is LayoutBuilder);
+  assert(layout is PageLayoutBuilder);
   return RootLayout(child: child);
 }
 
@@ -61,7 +61,7 @@ class RootLayout extends StatelessWidget {
                       ).expanded$(),
                     );
                   }),
-                  _RouteTree().flexible$(),
+                  _NoteTree().flexible$(),
                   Expanded(child: child),
                 ],
               ).expanded$(),
@@ -82,8 +82,8 @@ class RootLayout extends StatelessWidget {
   }
 }
 
-class _RouteTree extends StatelessWidget {
-  _RouteTree();
+class _NoteTree extends StatelessWidget {
+  _NoteTree();
 
   final Value<bool> includeDraft = false.signal();
 
@@ -91,20 +91,26 @@ class _RouteTree extends StatelessWidget {
   Widget build(BuildContext context) {
     final route = context.route$;
     final colors = Theme.of(context).colorScheme;
-
+    final notes = routes.routes_notes
+        .toList(
+          includeThis: false,
+        )
+        .where((e) => e.isPage || e.isNonLeaf);
+    routes.routes_notes.expandTree(true, level: 1);
     return Watch((context) {
+      var noteList = notes.where((e) => e.isRoot ? true : e.parent.expand).toList();
       return Column(
         children: [
           Container(
             color: colors.surfaceContainer,
             child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () {}),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () {}),
+              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true, level: 1000))),
+              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false, level: 1000))),
               IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
             ]),
           ),
           ListView(
-            children: _notes(route, includeDraft.value).toList(),
+            children: noteList.map((e) => _noteItem(e, route, includeDraft.value)).toList(),
           ).expanded$(),
         ],
       ).constrainedBox$(
@@ -113,20 +119,49 @@ class _RouteTree extends StatelessWidget {
     });
   }
 
-  static Iterable<Widget> _notes(RouteContext route, bool includeDraft) {
-    var notes = routes.routes_notes.toList(includeThis: false).where((e) => e.hasPage || e.isNonLeaf);
-    return notes.map((node) {
-      String title = "▼ ${node.part}";
-      title = title.padLeft((node.level * 3) + title.length);
-
-      click() {
+  static Widget _noteItem(To node, RouteContext route, bool includeDraft) {
+    click() {
+      if (node.isLeafPage) {
         route.to(node.toUri());
+      } else {
+        node.expand = !node.expand;
       }
+    }
 
-      return Align(
-        alignment: Alignment.centerLeft,
-        child: TextButton(onPressed: node.hasPage ? click : null, child: Text(title)),
-      );
-    });
+    // 🔹◽️●○◦■□❏✎
+    String iconExtend = node.isLeafPage
+        ? "❏"
+        : node.expand
+            ? "▼"
+            : "︎︎︎▶";
+
+    String title = "$iconExtend ${node.part}";
+    title = title.padLeft((node.level * 2) + title.length);
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: TextButton(onPressed: click, child: Text(title)),
+    );
+  }
+}
+
+extension _NoteTreeNode on To {
+  static Map<To, bool> expands = <To, bool>{}.signal();
+
+  bool get expand {
+    var result = expands[this];
+    return result ?? false;
+  }
+
+  set expand(bool value) {
+    expands[this] = value;
+  }
+
+  /// 展开层级数
+  void expandTree(bool value, {int level = 0}) {
+    if (level <= 0) return;
+    expand = value;
+    for (var e in children) {
+      e.expandTree(value, level: level - 1);
+    }
   }
 }

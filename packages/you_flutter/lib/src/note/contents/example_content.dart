@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:you_flutter/src/note/contents/params.dart';
-import 'package:you_flutter/src/note/flutter_highlight.dart';
+import 'package:you_flutter/src/note/contents/flutter_highlight.dart';
 import 'package:you_flutter/src/note/note.dart';
 import 'package:code_builder/code_builder.dart' as code;
-import 'package:you_flutter/src/note/utils_ui.dart';
+import 'package:you_flutter/src/utils_ui.dart';
 
 /// 暂时搁置参数需求
 /// this package is dependency by note page

@@ -10,7 +10,7 @@
 
 import 'dart:convert';
 
-import 'package:file/file.dart';
+import 'package:file/file.dart' show File;
 
 // format json
 JsonEncoder _encoder = const JsonEncoder.withIndent('  ');

@@ -1,11 +1,10 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
 
-@internal
+/// log 是基础包，不依赖其他业务代码
+
 Logger logger = Logger();
 
-@internal
 class Logger extends ChangeNotifier {
   final List<String> messages = List.empty(growable: true);
   Element? logView;
@@ -20,7 +19,21 @@ class Logger extends ChangeNotifier {
   }
 }
 
-@internal
+class LogView extends StatelessWidget {
+  final Logger logger;
+
+  const LogView({super.key, required this.logger});
+
+  @override
+  Widget build(BuildContext context) {
+    logger.logView = context as Element;
+    return ListView(children: [
+      const Center(child: Text("--- debug: log ---")),
+      for (var m in logger.messages) ListTile(title: Text(m)),
+    ]);
+  }
+}
+
 class LoggableRouterDelegate<T> implements RouterDelegate<T> {
   final RouterDelegate<T> delegate;
   final Logger logger;
@@ -47,7 +60,9 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   String _configuration(T? configuration) {
     var result = configuration;
-    var str = result is RouteInformation ? "path:${result.uri.path},state:${result.state}" : "$result";
+    var str = result is RouteInformation
+        ? "location:${result.uri},state:${result.state}"
+        : "$result";
     return str;
   }
 
@@ -83,5 +98,23 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   log(Object? msg) {
     logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
+  }
+}
+
+class LayoutLog extends StatelessWidget {
+  final Widget child;
+  final String title;
+
+  const LayoutLog(this.title, {super.key, this.child = const Text("LayoutLog")});
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (kDebugMode) {
+          print("LayoutLog-$title:$constraints");
+        }
+        return child;
+      },
+    );
   }
 }
