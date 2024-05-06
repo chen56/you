@@ -40,9 +40,9 @@ ref:
     发现
     我
  */
-typedef PageBuilder = WidgetBuilder;
+typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
-typedef LazyPageBuilder = Future<PageBuilder> Function();
+typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
 final class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
@@ -168,21 +168,21 @@ base class To {
   @nonVirtual
   final List<To> children;
 
-  final PageBuilder? _page;
-  final PageBuilder? _notFound;
+  final PageBodyBuilder? _page;
+  final PageBodyBuilder? _notFound;
   final PageLayoutBuilder? _layout;
 
   // TODO P1 root Node的part是routes，有问题！
   To(
     this.part, {
-    PageBuilder? page,
-    PageBuilder? notFount,
+    PageBodyBuilder? page,
+    PageBodyBuilder? notFound,
     PageLayoutBuilder? layout,
     this.children = const [],
   })  : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name"),
         _layout = layout,
         _page = page,
-        _notFound = notFount {
+        _notFound = notFound {
     var parsed = _parse(part);
     _name = parsed.$1;
     _type = parsed.$2;
@@ -195,7 +195,7 @@ base class To {
   To get parent => _parent;
 
   // ignore: unused_element
-  static PageBuilder? _asyncToSync(LazyPageBuilder? builder) {
+  static PageBodyBuilder? _asyncToSync(LazyPageBodyBuilder? builder) {
     if (builder == null) {
       return null;
     }
@@ -250,38 +250,29 @@ base class To {
   int get level => isRoot ? 0 : _parent.level + 1;
 
   ///  framework invoke this method if [hasPage]
-  @visibleForOverriding
-  @mustBeOverridden
-  Widget buildBody(BuildContext context) {
+  @nonVirtual
+  Widget _buildBody(BuildContext context) {
     return _build(context, _page!);
   }
 
-  ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
-  @visibleForOverriding
-  @mustBeOverridden
-  Widget buildNotFound(BuildContext context) {
-    return _build(context, _notFound!);
-  }
-
-  static Widget _build(BuildContext context, PageBuilder page) {
+  static Widget _build(BuildContext context, PageBodyBuilder page) {
     return page(context);
   }
 
   ///  framework invoke this method if [hasLayout]
   /// downstream results warp to => new result
-  @visibleForOverriding
-  @mustBeOverridden
-  Widget warpLayout(BuildContext context, Widget child) {
+  @nonVirtual
+  Widget _warpLayout(BuildContext context, Widget child) {
     return _layout!(context, child);
   }
 
-  @mustBeOverridden
+  @nonVirtual
   bool get hasPage => _page != null;
 
-  @mustBeOverridden
+  @nonVirtual
   bool get hasNotFound => _notFound != null;
 
-  @mustBeOverridden
+  @nonVirtual
   bool get hasLayout => _layout != null;
 
   RouteUri _match({
@@ -428,13 +419,13 @@ ${"  " * level}</Route>''';
 
   @nonVirtual
   Widget _buildPage(BuildContext context, RouteUri uri) {
-    var result = buildBody(context);
+    var result = _buildBody(context);
 
     final List<To> chain = [this, ...ancestors];
 
     for (var node in chain) {
       if (!node.hasLayout) continue;
-      result = node.warpLayout(context, result);
+      result = node._warpLayout(context, result);
     }
     return result;
   }

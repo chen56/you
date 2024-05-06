@@ -4,10 +4,10 @@ import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 
-/// [PageLayoutBuilder]
+/// [LayoutBuilder]
 Widget layout(BuildContext context, Widget child) {
   // ignore: unnecessary_type_check
-  assert(layout is PageLayoutBuilder);
+  assert(layout is LayoutBuilder);
   return RootLayout(child: child);
 }
 

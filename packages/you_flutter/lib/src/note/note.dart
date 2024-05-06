@@ -20,49 +20,23 @@ mixin NoteResult on StatelessWidget {
 }
 
 base class ToNote extends To {
-  final NoteBuilder? _page;
-  final NoteBuilder? _notFound;
-  final NoteLayoutBuilder? _layout;
-
   ToNote(
     super.part, {
     NoteBuilder? page,
     NoteBuilder? notFound,
     NoteLayoutBuilder? layout,
     super.children = const [],
-  })  : _layout = layout,
-        _page = page,
-        _notFound = notFound;
-
-  @override
-  NoteResult buildBody(BuildContext context) {
-    return _build(context, _page!);
-  }
-
-  @override
-  NoteResult buildNotFound(BuildContext context) {
-    return _build(context, _notFound!);
-  }
+  }) : super(
+          page: page == null ? null : (context) => _build(context, page),
+          notFound: notFound == null ? null : (context) => _build(context, notFound),
+          layout: layout == null ? null : (context, child) => layout(context, child as NoteResult),
+        );
 
   static NoteResult _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
     return _DefaultNotePage(cell: cell);
   }
-
-  @override
-  NoteResult warpLayout(BuildContext context, covariant NoteResult child) {
-    return _layout!(context, child);
-  }
-
-  @override
-  bool get hasPage => _page != null;
-
-  @override
-  bool get hasNotFound => _notFound != null;
-
-  @override
-  bool get hasLayout => _layout != null;
 }
 
 /// 一个极简的笔记布局范例
