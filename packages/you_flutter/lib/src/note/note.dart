@@ -13,9 +13,9 @@ import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = NoteResult Function(BuildContext context, NoteResult child);
+typedef NoteLayoutBuilder = NoteMixin Function(BuildContext context, NoteMixin child);
 
-mixin NoteResult on StatelessWidget {
+mixin NoteMixin on StatelessWidget {
   Cell get cell;
 }
 
@@ -29,23 +29,23 @@ base class ToNote extends To {
   }) : super(
           page: page == null ? null : (context) => _build(context, page),
           notFound: notFound == null ? null : (context) => _build(context, notFound),
-          layout: layout == null ? null : (context, child) => layout(context, child as NoteResult),
+          layout: layout == null ? null : (context, child) => layout(context, child as NoteMixin),
         );
 
-  static NoteResult _build(BuildContext context, NoteBuilder page) {
+  static NoteMixin _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
-    return _DefaultNotePage(cell: cell);
+    return _DefaultNote(cell: cell);
   }
 }
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容
-final class _DefaultNotePage extends StatelessWidget with NoteResult {
+final class _DefaultNote extends StatelessWidget with NoteMixin {
   @override
   final Cell cell;
 
-  const _DefaultNotePage({required this.cell});
+  const _DefaultNote({required this.cell});
 
   @override
   Widget build(BuildContext context) {
@@ -189,22 +189,6 @@ class NoteRoute {
   String get dartAssetPath => conventions.noteDartAssetPath(path);
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
-}
-
-class NoteSystem {
-  final To root;
-
-  NoteSystem({
-    required this.root,
-  });
-
-  static Future<NoteSystem> load({
-    required To root,
-  }) async {
-    return NoteSystem(
-      root: root,
-    );
-  }
 }
 
 base class Cell {

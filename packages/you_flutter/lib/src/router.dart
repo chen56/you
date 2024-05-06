@@ -127,7 +127,7 @@ final class YouRouter with RouterMixin {
   YouRouter get router => this;
 }
 
-enum RouteNodeType {
+enum ToPartType {
   /// static path : /settings
   static,
 
@@ -140,7 +140,7 @@ enum RouteNodeType {
   ///     /file/a/b/c.txt -> path==a/b/c.txt
   dynamicRest;
 
-  static RouteNodeType? parse(String name) {
+  static ToPartType? parse(String name) {
     for (var i in values) {
       if (i.name == name) {
         return i;
@@ -161,7 +161,7 @@ base class To {
   final String part;
 
   late final String _name;
-  late final RouteNodeType _type;
+  late final ToPartType _type;
 
   late To _parent = this;
 
@@ -286,14 +286,14 @@ base class To {
 
     // 忽略后缀'/'
     // next=="" 代表最后以 '/' 结尾,当前 segments==[""]
-    if (_type == RouteNodeType.static && next == "") {
+    if (_type == ToPartType.static && next == "") {
       return RouteUri._(uri: uri, to: this, routeParameters: params);
     }
 
     To? matchChild({required String segment}) {
-      To? matched = children.where((e) => e._type == RouteNodeType.static).where((e) => segment == e._name).firstOrNull;
+      To? matched = children.where((e) => e._type == ToPartType.static).where((e) => segment == e._name).firstOrNull;
       if (matched != null) return matched;
-      matched = children.where((e) => e._type == RouteNodeType.dynamic || e._type == RouteNodeType.dynamicRest).firstOrNull;
+      matched = children.where((e) => e._type == ToPartType.dynamic || e._type == ToPartType.dynamicRest).firstOrNull;
       if (matched != null) return matched;
       return null;
     }
@@ -304,7 +304,7 @@ base class To {
       throw NotFoundError(invalidValue: uri);
     }
 
-    if (matchedNext._type == RouteNodeType.dynamicRest) {
+    if (matchedNext._type == ToPartType.dynamicRest) {
       // /tree/[...file]
       //     /tree/x/y   --> {"file":"x/y"}
       //     /tree/x/y/  --> {"file":"x/y/"}
@@ -315,7 +315,7 @@ base class To {
       if (next == "") {
         return RouteUri._(uri: uri, to: this, routeParameters: params);
       }
-      if (matchedNext._type == RouteNodeType.dynamic) {
+      if (matchedNext._type == ToPartType.dynamic) {
         params[matchedNext._name] = next;
       }
     }
@@ -358,11 +358,11 @@ base class To {
   /// parse("user")       -->  (name:"user",type:ToNodeType.normal)
   /// parse("[id]")       -->  (name:"id",  type:ToNodeType.dynamic)
   /// parse("[...path]")  -->  (name:"path",type:ToNodeType.dynamicAll)
-  static (String, RouteNodeType) _parse(String pattern) {
+  static (String, ToPartType) _parse(String pattern) {
     assert(pattern.isNotEmpty);
 
     if (pattern[0] != "[" || pattern[pattern.length - 1] != "]") {
-      return (pattern, RouteNodeType.static);
+      return (pattern, ToPartType.static);
     }
 
     assert(pattern != "[]");
@@ -373,9 +373,9 @@ base class To {
     final removeBrackets = pattern.substring(1, pattern.length - 1);
 
     if (removeBrackets.startsWith("...")) {
-      return (removeBrackets.substring(3), RouteNodeType.dynamicRest);
+      return (removeBrackets.substring(3), ToPartType.dynamicRest);
     } else {
-      return (removeBrackets, RouteNodeType.dynamic);
+      return (removeBrackets, ToPartType.dynamic);
     }
   }
 

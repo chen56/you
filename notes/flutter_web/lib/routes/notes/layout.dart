@@ -5,7 +5,7 @@ import 'package:you_flutter/state.dart';
 
 /// [NoteLayoutBuilder]
 @ToType(type: ToNote)
-NoteResult layout(BuildContext context, NoteResult child) {
+NoteMixin layout(BuildContext context, NoteMixin child) {
   // ignore: unnecessary_type_check
   assert(layout is NoteLayoutBuilder);
   return NoteLayout(child: child);
@@ -13,8 +13,8 @@ NoteResult layout(BuildContext context, NoteResult child) {
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容
-final class NoteLayout extends StatelessWidget with NoteResult {
-  final NoteResult child;
+final class NoteLayout extends StatelessWidget with NoteMixin {
+  final NoteMixin child;
 
   const NoteLayout({super.key, required this.child});
 
