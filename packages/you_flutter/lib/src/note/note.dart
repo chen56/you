@@ -23,11 +23,12 @@ base class ToNote extends To {
     NoteBuilder? page,
     NoteBuilder? notFound,
     NoteLayoutBuilder? layout,
-    super.children = const [],
+    List<ToNote> children = const [],
   }) : super(
           page: page == null ? null : (context) => _build(context, page),
           notFound: notFound == null ? null : (context) => _build(context, notFound),
           layout: layout == null ? null : (context, child) => layout(context, child as NoteMixin),
+          children: children,
         );
 
   static NoteMixin _build(BuildContext context, NoteBuilder page) {

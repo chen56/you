@@ -153,25 +153,6 @@ enum ToPartType {
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
-  /// part may be a template
-  /// /[user]/[repository]
-  ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
-  ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
-  @nonVirtual
-  final String part;
-
-  late final String _name;
-  late final ToPartType _type;
-
-  late To _parent = this;
-
-  @nonVirtual
-  final List<To> children;
-
-  final PageBodyBuilder? _page;
-  final PageBodyBuilder? _notFound;
-  final PageLayoutBuilder? _layout;
-
   // TODO P1 root Node的part是routes，有问题！
   To(
     this.part, {
@@ -192,6 +173,26 @@ base class To {
     }
   }
 
+  /// part may be a template
+  /// /[user]/[repository]
+  ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
+  ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
+  @nonVirtual
+  final String part;
+
+  late final String _name;
+  late final ToPartType _type;
+
+  late To _parent = this;
+
+  @nonVirtual
+  final List<To> children;
+
+  final PageBodyBuilder? _page;
+  final PageBodyBuilder? _notFound;
+  final PageLayoutBuilder? _layout;
+
+  @nonVirtual
   To get parent => _parent;
 
   @nonVirtual
