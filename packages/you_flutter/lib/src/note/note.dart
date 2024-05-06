@@ -15,15 +15,8 @@ import 'package:http/http.dart' as http;
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = NoteResult Function(BuildContext context, NoteResult child);
 
-class NoteResult extends ToResult {
-  final Cell cell;
-
-  NoteResult({required super.widget, required this.cell});
-
-  @override
-  NoteResult warp(Widget next) {
-    return NoteResult(widget: next, cell: cell);
-  }
+mixin NoteResult on StatelessWidget {
+  Cell get cell;
 }
 
 base class ToNote extends To {
@@ -42,7 +35,7 @@ base class ToNote extends To {
         _notFound = notFound;
 
   @override
-  NoteResult buildPage(BuildContext context) {
+  NoteResult buildBody(BuildContext context) {
     return _build(context, _page!);
   }
 
@@ -54,11 +47,11 @@ base class ToNote extends To {
   static NoteResult _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
-    return NoteResult(widget: _DefaultNotePage(cell: cell), cell: cell);
+    return _DefaultNotePage(cell: cell);
   }
 
   @override
-  NoteResult buildLayout(BuildContext context, covariant NoteResult child) {
+  NoteResult warpLayout(BuildContext context, covariant NoteResult child) {
     return _layout!(context, child);
   }
 
@@ -74,7 +67,8 @@ base class ToNote extends To {
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容
-final class _DefaultNotePage extends StatelessWidget {
+final class _DefaultNotePage extends StatelessWidget with NoteResult {
+  @override
   final Cell cell;
 
   const _DefaultNotePage({required this.cell});

@@ -41,7 +41,7 @@ ref:
     我
  */
 typedef PageBuilder = WidgetBuilder;
-typedef PageLayoutBuilder = ToResult Function(BuildContext context, ToResult child);
+typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBuilder = Future<PageBuilder> Function();
 
 final class NotFoundError extends ArgumentError {
@@ -149,36 +149,6 @@ enum RouteNodeType {
     return null;
   }
 }
-//
-// abstract base class RouteBuilder {
-//   final String part;
-//
-//   RouteBuilder(this.part);
-//
-//   RouteNode route({List<RouteNode> children = const []}) {
-//     return RouteNode.create(part, forBuild: this, children: children);
-//   }
-//
-//   BuildResult build(BuildContext context);
-//
-//   /// downstream results
-//   BuildResult warp(BuildContext context, BuildResult child);
-//
-//   @nonVirtual
-//   bool get isNotEmpty=>!isEmpty;
-//
-//   bool get isEmpty;
-// }
-
-class ToResult {
-  final Widget widget;
-
-  ToResult({required this.widget});
-
-  ToResult warp(Widget next) {
-    return ToResult(widget: next);
-  }
-}
 
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
@@ -282,26 +252,26 @@ base class To {
   ///  framework invoke this method if [hasPage]
   @visibleForOverriding
   @mustBeOverridden
-  ToResult buildPage(BuildContext context) {
+  Widget buildBody(BuildContext context) {
     return _build(context, _page!);
   }
 
   ///  framework invoke this method if ([hasPage]==false && [hasNotFound]==true)
   @visibleForOverriding
   @mustBeOverridden
-  ToResult buildNotFound(BuildContext context) {
+  Widget buildNotFound(BuildContext context) {
     return _build(context, _notFound!);
   }
 
-  static ToResult _build(BuildContext context, PageBuilder page) {
-    return ToResult(widget: page(context));
+  static Widget _build(BuildContext context, PageBuilder page) {
+    return page(context);
   }
 
   ///  framework invoke this method if [hasLayout]
   /// downstream results warp to => new result
   @visibleForOverriding
   @mustBeOverridden
-  ToResult buildLayout(BuildContext context, ToResult child) {
+  Widget warpLayout(BuildContext context, Widget child) {
     return _layout!(context, child);
   }
 
@@ -458,15 +428,15 @@ ${"  " * level}</Route>''';
 
   @nonVirtual
   Widget _buildPage(BuildContext context, RouteUri uri) {
-    ToResult result = buildPage(context);
+    var result = buildBody(context);
 
     final List<To> chain = [this, ...ancestors];
 
     for (var node in chain) {
       if (!node.hasLayout) continue;
-      result = node.buildLayout(context, result);
+      result = node.warpLayout(context, result);
     }
-    return result.widget;
+    return result;
   }
 }
 
