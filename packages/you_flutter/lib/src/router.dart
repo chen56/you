@@ -194,34 +194,47 @@ base class To {
 
   To get parent => _parent;
 
-  // ignore: unused_element
-  static PageBodyBuilder? _asyncToSync(LazyPageBodyBuilder? builder) {
-    if (builder == null) {
-      return null;
-    }
-    return (BuildContext context) => FutureBuilder<Widget>(
-          future: builder().then((b) => b(context)),
-          builder: (context, snapshot) {
-            final route = YouRouter.of(context);
-            if (snapshot.connectionState == ConnectionState.done) {
-              if (snapshot.hasError) {
-                return Text('page load error(${route.uri}): ${snapshot.error} \n${snapshot.stackTrace}');
-              }
-              return snapshot.data!;
-            }
-            return const CircularProgressIndicator();
-          },
-        );
-  }
-
   @nonVirtual
   bool get isRoot => _parent == this;
 
   @nonVirtual
-  bool get isLeaf => children.isEmpty;
+  bool get isLeaf {
+    return children.isEmpty;
+  }
+
+  bool get isValid {
+    if (isPage) return true;
+    return isChildrenValid;
+  }
+
+  bool get isLeafPage {
+    return isValid && !isChildrenValid;
+  }
+
+  bool get isChildrenValid {
+    for (var c in children) {
+      if (c.isValid) return true;
+    }
+    return false;
+  }
 
   @nonVirtual
   bool get isNonLeaf => !isLeaf;
+
+  @nonVirtual
+  To get root => isRoot ? this : _parent.root;
+
+  @nonVirtual
+  int get level => isRoot ? 0 : _parent.level + 1;
+
+  @nonVirtual
+  bool get isPage => _page != null;
+
+  @nonVirtual
+  bool get hasNotFound => _notFound != null;
+
+  @nonVirtual
+  bool get hasLayout => _layout != null;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /
@@ -244,12 +257,12 @@ base class To {
   }
 
   @nonVirtual
-  To get root => isRoot ? this : _parent.root;
+  Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
+    // TODO 临时实现，需要增加模版参数
+    return Uri.parse(templatePath);
+  }
 
-  @nonVirtual
-  int get level => isRoot ? 0 : _parent.level + 1;
-
-  ///  framework invoke this method if [hasPage]
+  ///  framework invoke this method if [isPage]
   @nonVirtual
   Widget _buildBody(BuildContext context) {
     return _build(context, _page!);
@@ -265,15 +278,6 @@ base class To {
   Widget _warpLayout(BuildContext context, Widget child) {
     return _layout!(context, child);
   }
-
-  @nonVirtual
-  bool get hasPage => _page != null;
-
-  @nonVirtual
-  bool get hasNotFound => _notFound != null;
-
-  @nonVirtual
-  bool get hasLayout => _layout != null;
 
   RouteUri _match({
     required Uri uri,
@@ -379,22 +383,6 @@ base class To {
     }
   }
 
-  @override
-  String toString({bool deep = false}) {
-    if (!deep) return "<Route path='$templatePath' children.length=${children.length} />";
-    return _toStringDeep(level: 0);
-  }
-
-  String _toStringDeep({int level = 0}) {
-    if (children.isEmpty) {
-      return "${"  " * level}<Route path='$templatePath' />";
-    }
-
-    return '''${"  " * level}<Route path='$templatePath' >
-${children.map((e) => e._toStringDeep(level: level + 1)).join("\n")}
-${"  " * level}</Route>''';
-  }
-
   @nonVirtual
   To? find(String templatePath) {
     return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
@@ -411,10 +399,24 @@ ${"  " * level}</Route>''';
     return null;
   }
 
-  @nonVirtual
-  Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
-    // TODO 临时实现，需要增加模版参数
-    return Uri.parse(templatePath);
+  // ignore: unused_element
+  static PageBodyBuilder? _asyncToSync(LazyPageBodyBuilder? builder) {
+    if (builder == null) {
+      return null;
+    }
+    return (BuildContext context) => FutureBuilder<Widget>(
+          future: builder().then((b) => b(context)),
+          builder: (context, snapshot) {
+            final route = YouRouter.of(context);
+            if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
+                return Text('page load error(${route.uri}): ${snapshot.error} \n${snapshot.stackTrace}');
+              }
+              return snapshot.data!;
+            }
+            return const CircularProgressIndicator();
+          },
+        );
   }
 
   @nonVirtual
@@ -428,6 +430,22 @@ ${"  " * level}</Route>''';
       result = node._warpLayout(context, result);
     }
     return result;
+  }
+
+  @override
+  String toString({bool deep = false}) {
+    if (!deep) return "<Route path='$templatePath' children.length=${children.length} />";
+    return _toStringDeep(level: 0);
+  }
+
+  String _toStringDeep({int level = 0}) {
+    if (children.isEmpty) {
+      return "${"  " * level}<Route path='$templatePath' />";
+    }
+
+    return '''${"  " * level}<Route path='$templatePath' >
+${children.map((e) => e._toStringDeep(level: level + 1)).join("\n")}
+${"  " * level}</Route>''';
   }
 }
 
