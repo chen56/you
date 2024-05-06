@@ -44,6 +44,24 @@ typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
+/// page annotation
+class PageMeta {
+  const PageMeta({
+    required this.label,
+    this.publish = false,
+    this.toType = To,
+  });
+
+  /// 每个节点单独设置，子节点不继承
+  final String label;
+
+  /// 每个节点单独设置，子节点不继承
+  final bool publish;
+
+  /// 子节点若未设置此属性，则继承父节点
+  final Type toType;
+}
+
 final class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
 }

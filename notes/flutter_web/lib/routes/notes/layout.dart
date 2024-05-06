@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/note.dart';
-import 'package:you_flutter/state.dart';
 
 /// [NoteLayoutBuilder]
 @ToType(type: ToNote)
@@ -23,15 +22,7 @@ final class NoteLayout extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SelectionArea(
-          child: Watch((context) {
-            return SingleChildScrollView(child: child);
-          }),
-        ),
-      ),
-    );
+    return SingleChildScrollView(child: child);
   }
 }
 
