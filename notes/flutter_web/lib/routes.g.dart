@@ -110,6 +110,7 @@ mixin RoutesMixin {
         ToNote('serialization_json', page: _serialization_json_page.build),
         ToNote('analyzer', page: _analyzer_page.build),
       ]),
+      ToNote('cheetsheets'),
       ToNote('dev', children: [
         ToNote('host_mirror', page: _host_mirror_page.build),
         ToNote('macos_config', page: _macos_config_page.build),

@@ -4,7 +4,7 @@ import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final routes=Routes();
+final routes = Routes();
 
 class App extends StatelessWidget {
   final YouRouter router;
@@ -23,4 +23,10 @@ class App extends StatelessWidget {
       routerConfig: router.config(),
     );
   }
+}
+
+extension ContextExt on BuildContext {
+  DesignTokens get designTokens$ => DesignTokens(this);
+
+  RouteContext get route$ => YouRouter.of(this);
 }

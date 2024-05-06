@@ -159,6 +159,7 @@ extension StyleExtension on Widget {
       child: this,
     );
   }
+
   Widget intrinsicWidth$({double? stepWidth, double? stepHeight}) {
     return IntrinsicWidth(
       stepWidth: stepWidth,
@@ -209,7 +210,6 @@ extension StyleExtension on Widget {
     );
   }
 
-
   /// [minWidth]The minimum width constraint to give the child. Set this to null (the
   /// default) to use the constraint from the parent instead.
   /// [maxWidth]The maximum width constraint to give the child. Set this to null (the
@@ -218,7 +218,7 @@ extension StyleExtension on Widget {
   /// default) to use the constraint from the parent instead.
   /// [maxHeight]The maximum height constraint to give the child. Set this to null (the
   /// default) to use the constraint from the parent instead.
-  Widget overflowBox$({ AlignmentGeometry alignment = Alignment.center,double? minWidth,double? maxWidth, double? minHeight,double? maxHeight,OverflowBoxFit fit = OverflowBoxFit.max}) {
+  Widget overflowBox$({AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, OverflowBoxFit fit = OverflowBoxFit.max}) {
     return OverflowBox(
       fit: fit,
       alignment: alignment,
@@ -375,23 +375,49 @@ enum ScreenSize {
 /// - <https://tr.designtokens.org/format/>
 /// - <https://m3.material.io/foundations/design-tokens/overview>
 /// - <https://daisyui.com/docs/colors/>
-final class DesignTokens {
-  BuildContext context;
-  ColorScheme colors;
+final class DesignTokens with DesignTokensMixin {
+  @override
+  final BuildContext context;
 
-  DesignTokens(this.context) : colors = Theme.of(context).colorScheme;
+  const DesignTokens(this.context);
+}
 
-  ButtonStyle get elevatedButtonPrimary => ElevatedButton.styleFrom(backgroundColor: colors.primaryContainer, foregroundColor: colors.primary);
+base mixin DesignTokensMixin {
+  BuildContext get context;
 
-  ButtonStyle get elevatedButtonSecondary => ElevatedButton.styleFrom(backgroundColor: colors.secondaryContainer, foregroundColor: colors.secondary);
+  ColorScheme get colors => Theme.of(context).colorScheme;
 
-  ButtonStyle get elevatedButtonTertiary => ElevatedButton.styleFrom(backgroundColor: colors.tertiaryContainer, foregroundColor: colors.tertiary);
+  ButtonStyle get elevatedButtonPrimary => ElevatedButton.styleFrom(backgroundColor: colors.primary, foregroundColor: colors.onPrimary);
+
+  ButtonStyle get elevatedButtonSecondary => ElevatedButton.styleFrom(backgroundColor: colors.secondary, foregroundColor: colors.onSecondary);
+
+  ButtonStyle get elevatedButtonTertiary => ElevatedButton.styleFrom(backgroundColor: colors.tertiary, foregroundColor: colors.onTertiary);
+
+  ButtonStyle get elevatedButtonPrimaryContainer => ElevatedButton.styleFrom(backgroundColor: colors.primaryContainer, foregroundColor: colors.onPrimaryContainer);
+
+  ButtonStyle get elevatedButtonSecondaryContainer => ElevatedButton.styleFrom(backgroundColor: colors.secondaryContainer, foregroundColor: colors.onSecondaryContainer);
+
+  ButtonStyle get elevatedButtonTertiaryContainer => ElevatedButton.styleFrom(backgroundColor: colors.tertiaryContainer, foregroundColor: colors.onTertiaryContainer);
+
+  ButtonStyle get elevatedButtonError => ElevatedButton.styleFrom(backgroundColor: colors.error, foregroundColor: colors.onError);
+
+  ButtonStyle get elevatedButtonErrorContainer => ElevatedButton.styleFrom(backgroundColor: colors.errorContainer, foregroundColor: colors.onErrorContainer);
 
   TextStyle get textPrimary => TextStyle(color: colors.onPrimary);
 
   TextStyle get textSecondary => TextStyle(color: colors.onSecondary);
 
-  TextStyle get textTertiary => TextStyle(color: colors.onTertiary);
+  TextStyle get textTertiary => TextStyle(color: colors.onTertiaryContainer);
+
+  TextStyle get textPrimaryContainer => TextStyle(color: colors.onPrimaryContainer);
+
+  TextStyle get textSecondaryContainer => TextStyle(color: colors.onSecondaryContainer);
+
+  TextStyle get textTertiaryContainer => TextStyle(color: colors.onTertiaryContainer);
+
+  TextStyle get textError => TextStyle(color: colors.onError);
+
+  TextStyle get textErrorContainer => TextStyle(color: colors.onErrorContainer);
 }
 
 enum ColorSeed {

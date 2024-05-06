@@ -34,47 +34,10 @@ final class NoteLayout extends StatelessWidget {
                 );
               }
             }).toList();
-            return Row(
-              children: [
-                // IntrinsicWidth(child: _NoteTreeView(uri)),
-                const _RouteTree(),
-                Flexible(child: ListView(children: pageContents)),
-              ],
-            );
+            return ListView(children: pageContents);
           }),
         ),
       ),
     );
-  }
-}
-
-class _RouteTree extends StatelessWidget {
-  const _RouteTree();
-
-  @override
-  Widget build(BuildContext context) {
-    final route = YouRouter.of(context);
-
-    var validRoutes = route.root.toList().where((e) => e.hasPage || e.isNonLeaf);
-    var routeWidgets = validRoutes.map((node) {
-      String title = "▼ ${node.part}";
-      title = title.padLeft((node.level * 3) + title.length);
-
-      click() {
-        route.to(node.toUri());
-      }
-
-      return Align(
-        alignment: Alignment.centerLeft,
-        child: TextButton(onPressed: node.hasPage ? click : null, child: Text(title)),
-      );
-    });
-    return ConstrainedBox(
-        constraints: const BoxConstraints.tightFor(width: 350),
-        child: ListView(
-          children: [
-            ...routeWidgets,
-          ],
-        ));
   }
 }

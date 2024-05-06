@@ -460,7 +460,7 @@ ${"  " * level}</Route>''';
   Widget _buildPage(BuildContext context, RouteUri uri) {
     ToResult result = buildPage(context);
 
-    final List<To> chain = [this, ...findAncestorsOfSameType<To>()];
+    final List<To> chain = [this, ...ancestors];
 
     for (var node in chain) {
       if (!node.hasLayout) continue;
