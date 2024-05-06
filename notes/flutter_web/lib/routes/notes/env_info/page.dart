@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
 import 'package:path/path.dart' as path;
 
-void build(BuildContext context, Cell print) {
+void build(BuildContext context, Cell print)  {
   print(const MD('''
 # Platform和设备信息
 
@@ -18,7 +18,7 @@ void build(BuildContext context, Cell print) {
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print(MD('''
 | name                            | value                                    | comment                                                          |
-|---------------------------------|------------------------------------------|new cell-----------------------------------|
+|---------------------------------|------------------------------------------|--------------------------------------|
 | kIsWeb                          | $kIsWeb                                  | bool.fromEnvironment('dart.library.js_util')                     |
 | kReleaseMode                    | $kReleaseMode                            | bool.fromEnvironment('dart.vm.product')                          |
 | kProfileMode                    | $kProfileMode                            | bool.fromEnvironment('dart.vm.profile')                          |
@@ -30,9 +30,8 @@ void build(BuildContext context, Cell print) {
 | window.physicalSize             | ${window.physicalSize}                   | physical pixel                                                   |
 | window.devicePixelRatio         | ${window.devicePixelRatio}               | physical pixel= logical pixel *  devicePixelRatio                |
 | Uri.base                        | ${Uri.base}                              | web == `window.location.href`                                    |
-
+| Isolate.packageConfig           | 不支持flutter,仅dart sdk                  |                                      |
 '''));
-
 
   print=print.addCell(title:const Text("new cell-----------------"));
   print(const MD('''

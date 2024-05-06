@@ -54,10 +54,7 @@ base class ToNote extends To {
   static NoteResult _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
-    var content = Column(
-      children: [...cell.contents.map((e) => contents.contentToWidget(e))],
-    );
-    return NoteResult(widget: content, cell: cell);
+    return NoteResult(widget: _DefaultNotePage(cell: cell), cell: cell);
   }
 
   @override
@@ -73,6 +70,28 @@ base class ToNote extends To {
 
   @override
   bool get hasLayout => _layout != null;
+}
+
+/// 一个极简的笔记布局范例
+/// 左边routes树，右边页面内容
+final class _DefaultNotePage extends StatelessWidget {
+  final Cell cell;
+
+  const _DefaultNotePage({required this.cell});
+
+  @override
+  Widget build(BuildContext context) {
+    return Watch((context) => Column(
+          children: cell.toList().expand((cell) sync* {
+            for (var content in cell.contents) {
+              yield Align(
+                alignment: Alignment.centerLeft,
+                child: contents.contentToWidget(content),
+              );
+            }
+          }).toList(),
+        ));
+  }
 }
 
 @Deprecated("已被you_router取代，待删除")
@@ -291,7 +310,7 @@ base class Cell {
 
   @override
   String toString() {
-    return "$Cell(title:$title, hash:$hashCode, contents[${_children.length}]:$_children)";
+    return "$Cell(title:$title, hash:$hashCode, contents[${_contents.length}]:$_contents)";
   }
 
   List<Cell> toList() {
