@@ -12,14 +12,12 @@ const Widget _cellSplitBlock = SizedBox(height: 18);
 
 @Deprecated("已被新router替代暂时保留，代码还没移植完")
 class LayoutScreen extends StatefulWidget with Screen<void> {
-  final NoteSystem noteSystem;
   final NoteRoute note = NoteRoute.root();
   final Cell rootCell;
   final NoteRoute rootNote = NoteRoute.root();
 
   LayoutScreen({
     super.key,
-    required this.noteSystem,
     required this.rootCell,
   });
 

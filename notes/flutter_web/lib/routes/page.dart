@@ -3,7 +3,7 @@ import 'package:you_flutter/router.dart';
 
 RootPage build(BuildContext context) {
   // ignore: unnecessary_type_check
-  assert(build is PageBuilder);
+  assert(build is PageBodyBuilder);
   return const RootPage();
 }
 

@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
 import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/router.dart';
-import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
 
-/// [NoteLayoutBuilder]
-ToResult layout(BuildContext context, ToResult child) {
+/// [LayoutBuilder]
+Widget layout(BuildContext context, Widget child) {
   // ignore: unnecessary_type_check
-  assert(layout is PageLayoutBuilder);
-  return child.warp(RootLayout(child: child));
+  assert(layout is LayoutBuilder);
+  return RootLayout(child: child);
 }
 
 class RootLayout extends StatelessWidget {
   RootLayout({super.key, required this.child});
 
-  final ToResult child;
+  final Widget child;
   final Value<int> navigationRail = 0.signal();
 
   @override
@@ -63,7 +62,7 @@ class RootLayout extends StatelessWidget {
                     );
                   }),
                   _RouteTree().flexible$(),
-                  Expanded(child: child.widget),
+                  Expanded(child: child),
                 ],
               ).expanded$(),
             ],
@@ -99,9 +98,9 @@ class _RouteTree extends StatelessWidget {
           Container(
             color: colors.surfaceContainer,
             child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand,size: 24,),iconSize: 24, onPressed: () {}),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress),iconSize: 24, onPressed: () {}),
-              IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined),iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
+              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () {}),
+              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () {}),
+              IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
             ]),
           ),
           ListView(

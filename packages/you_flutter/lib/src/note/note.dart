@@ -13,71 +13,39 @@ import 'package:you_flutter/src/note/conventions.dart';
 import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
-typedef NoteLayoutBuilder = NoteResult Function(BuildContext context, NoteResult child);
+typedef NoteLayoutBuilder = NoteMixin Function(BuildContext context, NoteMixin child);
 
-class NoteResult extends ToResult {
-  final Cell cell;
-
-  NoteResult({required super.widget, required this.cell});
-
-  @override
-  NoteResult warp(Widget next) {
-    return NoteResult(widget: next, cell: cell);
-  }
+mixin NoteMixin on StatelessWidget {
+  Cell get cell;
 }
 
 base class ToNote extends To {
-  final NoteBuilder? _page;
-  final NoteBuilder? _notFound;
-  final NoteLayoutBuilder? _layout;
-
   ToNote(
     super.part, {
     NoteBuilder? page,
     NoteBuilder? notFound,
     NoteLayoutBuilder? layout,
     super.children = const [],
-  })  : _layout = layout,
-        _page = page,
-        _notFound = notFound;
+  }) : super(
+          page: page == null ? null : (context) => _build(context, page),
+          notFound: notFound == null ? null : (context) => _build(context, notFound),
+          layout: layout == null ? null : (context, child) => layout(context, child as NoteMixin),
+        );
 
-  @override
-  NoteResult buildPage(BuildContext context) {
-    return _build(context, _page!);
-  }
-
-  @override
-  NoteResult buildNotFound(BuildContext context) {
-    return _build(context, _notFound!);
-  }
-
-  static NoteResult _build(BuildContext context, NoteBuilder page) {
+  static NoteMixin _build(BuildContext context, NoteBuilder page) {
     Cell cell = Cell.empty();
     page.call(context, cell);
-    return NoteResult(widget: _DefaultNotePage(cell: cell), cell: cell);
+    return _DefaultNote(cell: cell);
   }
-
-  @override
-  NoteResult buildLayout(BuildContext context, covariant NoteResult child) {
-    return _layout!(context, child);
-  }
-
-  @override
-  bool get hasPage => _page != null;
-
-  @override
-  bool get hasNotFound => _notFound != null;
-
-  @override
-  bool get hasLayout => _layout != null;
 }
 
 /// 一个极简的笔记布局范例
 /// 左边routes树，右边页面内容
-final class _DefaultNotePage extends StatelessWidget {
+final class _DefaultNote extends StatelessWidget with NoteMixin {
+  @override
   final Cell cell;
 
-  const _DefaultNotePage({required this.cell});
+  const _DefaultNote({required this.cell});
 
   @override
   Widget build(BuildContext context) {
@@ -221,22 +189,6 @@ class NoteRoute {
   String get dartAssetPath => conventions.noteDartAssetPath(path);
 
   String get confAssetPath => conventions.noteConfAssetPath(path);
-}
-
-class NoteSystem {
-  final To root;
-
-  NoteSystem({
-    required this.root,
-  });
-
-  static Future<NoteSystem> load({
-    required To root,
-  }) async {
-    return NoteSystem(
-      root: root,
-    );
-  }
 }
 
 base class Cell {
