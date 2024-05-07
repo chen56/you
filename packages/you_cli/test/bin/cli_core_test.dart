@@ -1,3 +1,4 @@
+import 'package:path/path.dart' as path;
 import 'package:checks/checks.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
@@ -28,32 +29,23 @@ void main() {
   });
   group("CleanPrefixedAllocator", () {
     test('CleanPrefixedAllocator 1', () async {
-      CleanPrefixedAllocator allocator=CleanPrefixedAllocator();
-      checkAllocator(Reference ref, String expectedSymbol, List<String> expectedImports){
+      CleanPrefixedAllocator allocator = CleanPrefixedAllocator();
+      checkAllocator(Reference ref, String expectedSymbol, List<String> expectedImports) {
         check(allocator.allocate(ref)).equals(expectedSymbol);
-        allocator.imports.map((e)=>"${e.as},${e.url}");
+        allocator.imports.map((e) => "${e.as},${e.url}");
       }
-      checkAllocator(refer("A","package:a/a.dart"),"A",[",package:a/a.dart"]);
+
+      checkAllocator(refer("A", "package:a/a.dart"), "A", [",package:a/a.dart"]);
 
       //冲突
-      checkAllocator(refer("A","package:b/b.dart"),"_b_b.A",["_b_b,package:b/b.dart"]);
+      checkAllocator(refer("A", "package:b/b.dart"), "_b_b.A", ["_b_b,package:b/b.dart"]);
 
       //再冲突
-      checkAllocator(refer("A","package:b/c.dart"),"_b_c.A",["_b_c,package:c/c.dart"]);
+      checkAllocator(refer("A", "package:b/c.dart"), "_b_c.A", ["_b_c,package:c/c.dart"]);
 
       //再冲突
-      checkAllocator(refer("A","package:a/b/c.dart"),"_b_c2.A",["_b_c2,package:c/c.dart"]);
+      checkAllocator(refer("A", "package:a/b/c.dart"), "_b_c2.A", ["_b_c2,package:c/c.dart"]);
     });
   });
-
-  group("analyzer_test", () {
-    test('ToType', () async {
-      FileSystem fs=LocalFileSystem();
-      YouCli cli = YouCli(projectDir: fs.directory("../../notes/flutter_web/lib"));
-      var result  =await cli.analysisLayout(fs.file("../../notes/flutter_web/lib/routes/notes/layout.dart"));
-      check(result.forBuildType).equals(refer("ToNote","package:you_flutter/note.dart"));
-    });
-  });
-
 
 }

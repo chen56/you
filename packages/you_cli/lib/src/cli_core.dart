@@ -3,11 +3,15 @@
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
+import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
+import 'package:you_cli/src/code_analyzer.dart';
 import 'package:you_cli/src/yaml.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
@@ -17,12 +21,14 @@ class YouCli {
         fs = projectDir.fileSystem;
 
   static const Reference toType = Reference("To", "package:you_flutter/router.dart");
+  static const Reference toNoteType = Reference("ToNote", "package:you_flutter/note.dart");
   static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
   static const String toTypeName = "ToType";
   static const String pageDart = "page.dart";
   static const String layoutDart = "layout.dart";
   static const String layoutFunctionName = "layout";
   static const String pageBuildFunctionName = "build";
+  static const String pageMetaName = "PageMeta";
   final Directory dir_project;
   final FileSystem fs;
   Pubspec? _pubspec;
@@ -48,11 +54,11 @@ class YouCli {
       }
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
-      var (layout: layoutFunction, forBuildType: forBuildType) = await analysisLayout(dir.childFile(layoutDart));
+      var (layout: layoutFunction, forBuildType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
       return RouteNode(
         cli: this,
         dir: dir,
-        pageBuild: await analysisPage(dir.childFile(pageDart)),
+        pageBuild: await analyzePage(dir.childFile(pageDart)),
         layoutFunction: layoutFunction,
         forBuildType: forBuildType,
         children: children,
@@ -61,6 +67,7 @@ class YouCli {
 
     return _rootRoute ??= await from(dir_routes);
   }
+
   AnalysisSession get analysisSession {
     return _session ??= AnalysisContextCollection(
       includedPaths: [dir_lib.path],
@@ -68,45 +75,24 @@ class YouCli {
     ).contexts[0].currentSession;
   }
 
-  /// given a internal lib: package:you_flutter/src/router.dart
-  ///     =>  find it's public export : package:you_flutter/router.dart
-  LibraryElement? findPublicExportLib(TypeDefiningElement toFind, LibraryElement useAt) {
-    for (var import in useAt.importedLibraries) {
-      for (var MapEntry(key: _, value: value) in import.exportNamespace.definedNames.entries) {
-        if (toFind == value) {
-          return import;
-        }
-      }
-    }
-    return toFind.library!;
+  Future<GetUnit> getResolvedUnit(File file) async {
+    assert(await file.exists(), "file:${file}");
+    var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
+    return GetUnit(result.unit);
   }
 
-  Future<({FunctionElement? layout, Reference? forBuildType})> analysisLayout(File file) async {
+  Future<({FunctionElement? layout, Reference? forBuildType})> analyzeLayout(File file) async {
     if (!await file.exists()) {
       return (layout: null, forBuildType: null);
     }
 
-    var layoutLib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
-    FunctionElement? layoutFunction = layoutLib.definingCompilationUnit.functions.where((e) => e.name == layoutFunctionName).firstOrNull;
+    GetUnit unit = await getResolvedUnit(file);
+    FunctionElement? layoutFunction = unit.topFunction(layoutFunctionName);
     if (layoutFunction == null) {
       return (layout: null, forBuildType: null);
     }
-    var findToTypeAnno = layoutFunction.metadata.map((e) => e.computeConstantValue()).where((e) {
-      var t = e?.type;
-      if (t == null) {
-        return false;
-      }
-      if (t.getDisplayString(withNullability: false) != toTypeName) {
-        return false;
-      }
-      var element = t.element;
-      if (element is! ClassElement) {
-        return false;
-      }
-      // result?.type?.element?.library?.children
-      var publicExportFrom = findPublicExportLib(element, layoutLib);
-      return publicExportFrom?.identifier == forPageType.type.url;
-    }).firstOrNull;
+    var findToTypeAnno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toTypeName);
+
     if (findToTypeAnno == null) {
       return (layout: layoutFunction, forBuildType: null);
     }
@@ -121,18 +107,53 @@ class YouCli {
       return (layout: layoutFunction, forBuildType: forPageType);
     }
 
-    var publicExportFrom = findPublicExportLib(type.element! as TypeDefiningElement, layoutLib);
+    var publicExportFrom = findPublicExportLib(type, unit.library);
     var url = publicExportFrom?.identifier;
 
     return (layout: layoutFunction, forBuildType: refer(symbol, url));
   }
 
-  Future<FunctionElement?> analysisPage(File file) async {
+  Future<FunctionElement?> analyzePage(File file) async {
     if (!await file.exists()) {
       return null;
     }
-    var lib = (await analysisSession.getResolvedLibrary(path.normalize(path.absolute(file.path))) as ResolvedLibraryResult).element;
-    return lib.definingCompilationUnit.functions.where((e) => e.name == pageBuildFunctionName).firstOrNull;
+    GetUnit unit = await getResolvedUnit(file);
+    return unit.topFunction(pageBuildFunctionName);
+  }
+
+  Future<PageMetaData?> analyzePageAnno(File file) async {
+    if (!await file.exists()) {
+      return null;
+    }
+    GetUnit unit = await getResolvedUnit(file);
+    return PageMetaData.find(unit);
+  }
+}
+
+class PageMetaData {
+  final DartObject dartObject;
+  final GetUnit unit;
+
+  PageMetaData(this.dartObject, this.unit);
+
+  static PageMetaData? find(GetUnit unit) {
+    var anno = unit.annotationOnTopFunction(funcName: "build", annoType: "PageMeta");
+    if (anno == null) return null;
+    return PageMetaData(anno, unit);
+  }
+
+  String get label => dartObject.getField("label")!.toStringValue()!;
+
+  bool get publish => dartObject.getField("publish")!.toBoolValue()!;
+
+  Reference? get toType {
+    var type = dartObject.getField("toType")?.toTypeValue();
+    if (type == null) return null;
+    var symbol = type.getDisplayString(withNullability: false);
+    if (symbol == "") return null;
+    var publicExportFrom = findPublicExportLib(type, unit.library);
+    var url = publicExportFrom?.identifier;
+    return refer(symbol, url);
   }
 }
 

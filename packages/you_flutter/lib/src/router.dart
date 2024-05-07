@@ -4,6 +4,7 @@ import 'dart:collection';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'package:meta/meta_meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/log.dart';
 
@@ -44,7 +45,10 @@ typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
-/// page annotation
+/// annotation to page  [build] function
+@Target({
+  TargetKind.function,
+})
 class PageMeta {
   const PageMeta({
     required this.label,

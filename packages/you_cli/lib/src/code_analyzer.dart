@@ -1,31 +1,77 @@
-import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
-import 'package:analyzer/dart/analysis/results.dart';
-import 'package:analyzer/dart/analysis/session.dart';
-import 'package:analyzer/file_system/physical_file_system.dart';
-import 'package:path/path.dart' as path_;
+import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/dart/constant/value.dart';
+import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/type.dart';
 
-class CodeAnalyzer {
-  final _resourceProvider = PhysicalResourceProvider();
-  late final AnalysisSession session;
+class GetUnit {
+  GetUnit(this.unit);
 
-  CodeAnalyzer() {
-      var collection = AnalysisContextCollection(
-      includedPaths: [""],
-      resourceProvider: _resourceProvider,
-    );
-    session = collection.contexts[0].currentSession;
+  final CompilationUnit unit;
+
+  CompilationUnitElement get declared => unit.declaredElement!;
+
+  LibraryElement get library => declared.library;
+
+  FunctionElement? topFunction(String name) {
+    for (var function in declared.functions) {
+      if (function.name == name) {
+        return function;
+      }
+    }
+    return null;
+  }
+  // FunctionElement? topFunctionAst(String name) {
+  //   for (var function in unit.visitChildren(visitor).functions) {
+  //     if (function.name == name) {
+  //       return function;
+  //     }
+  //   }
+  //   return null;
+  // }
+
+
+
+  DartObject? annotationOnTopFunction({required String funcName, required String annoType, String? annoUrl}) {
+    var func = topFunction(funcName);
+    if (func == null) return null;
+
+    var findToTypeAnno = func.metadata.map((e) => e.computeConstantValue()).where((e) {
+      var t = e?.type;
+      if (t == null) {
+        return false;
+      }
+      if (t.getDisplayString(withNullability: false) != annoType) {
+        return false;
+      }
+      var element = t.element;
+      if (element is! ClassElement) {
+        return false;
+      }
+
+      if (annoUrl == null) return true;
+
+      var publicExportFrom = findPublicExportLib(t, library);
+      return publicExportFrom?.identifier == annoUrl;
+    }).firstOrNull;
+
+    return findToTypeAnno;
   }
 
-  Future<ResolvedLibraryResult> getResolvedLibrary({required String path, required String content}) async {
-    return session.getResolvedLibrary(path) as ResolvedLibraryResult;
+  ClassElement? class_(String name) {
+    final type = library.exportNamespace.get(name);
+    return type is ClassElement ? type : null;
   }
+}
 
-  SomeParsedUnitResult getParsedUnit({required String path, required String content}) {
-    return session.getParsedUnit(path_.absolute(path));
+/// given a internal lib: package:you_flutter/src/router.dart
+///     =>  find it's public export : package:you_flutter/router.dart
+LibraryElement? findPublicExportLib(DartType toFind, LibraryElement useAt) {
+  for (var import in useAt.importedLibraries) {
+    for (var MapEntry(key: _, value: value) in import.exportNamespace.definedNames.entries) {
+      if (toFind.element == value) {
+        return import;
+      }
+    }
   }
-
-  Future<SomeResolvedUnitResult> getResolvedUnit({required String path, required String content}) {
-    return session.getResolvedUnit(path_.absolute(path));
-  }
-
+  return toFind.element!.library;
 }
