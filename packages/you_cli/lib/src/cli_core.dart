@@ -60,12 +60,13 @@ class YouCli {
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
       var (layout: layoutFunction, toType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
-
+      var pageAnno = await analyzePageAnno(dir.childFile(pageDart));
       return RouteNode(
         cli: this,
         dir: dir,
         page: await analyzePage(dir.childFile(pageDart)),
-        layouot: layoutFunction,
+        pageAnno: pageAnno,
+        layout: layoutFunction,
         toType: forBuildType,
         children: children,
       );
@@ -115,26 +116,26 @@ class YouCli {
     return unit.topFunction(pageBuildFunctionName);
   }
 
-  Future<PageMetaObject?> analyzePageAnno(File file) async {
+  Future<PageAnnotation?> analyzePageAnno(File file) async {
     if (!await file.exists()) {
       return null;
     }
     GetUnit unit = await GetUnit.resolve(analysisSession, file);
-    return PageMetaObject.find(unit);
+    return PageAnnotation.find(unit);
   }
 }
 
-class PageMetaObject {
+class PageAnnotation {
   final Annotation annotation;
   final DartObject dartObject;
   final GetUnit unit;
 
-  PageMetaObject(this.annotation, this.dartObject, this.unit);
+  PageAnnotation(this.annotation, this.dartObject, this.unit);
 
-  static PageMetaObject? find(GetUnit unit) {
+  static PageAnnotation? find(GetUnit unit) {
     var anno = unit.annotationOnTopFunction(funcName: "build", annoType: "PageMeta");
     if (anno == null) return null;
-    return PageMetaObject(anno.ast, anno.value, unit);
+    return PageAnnotation(anno.ast, anno.value, unit);
   }
 
   String get label => dartObject.getField("label")!.toStringValue()!;
@@ -159,11 +160,20 @@ class RouteNode {
   final List<RouteNode> children;
   final Directory dir;
   final Reference? toType;
-  final FunctionElement? layouot;
+  final FunctionElement? layout;
   final FunctionElement? page;
   late RouteNode _parent = this;
+  final PageAnnotation? pageAnno;
 
-  RouteNode({required this.dir, this.toType, required this.children, this.layouot, this.page, required this.cli}) {
+  RouteNode({
+    required this.dir,
+    this.toType,
+    required this.children,
+    this.layout,
+    this.page,
+    required this.cli,
+    this.pageAnno,
+  }) {
     for (var child in children) {
       child._parent = this;
     }

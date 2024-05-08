@@ -1,8 +1,5 @@
-import 'package:path/path.dart' as path;
 import 'package:checks/checks.dart';
 import 'package:code_builder/code_builder.dart';
-import 'package:file/file.dart';
-import 'package:file/local.dart';
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
 import 'package:you_cli/src/cli_core.dart';
