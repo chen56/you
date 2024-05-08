@@ -3,7 +3,7 @@ import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+import 'package:meta/meta_meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/log.dart';
 
@@ -44,14 +44,29 @@ typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
-final class NotFoundError extends ArgumentError {
-  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
+/// annotation to page  [build] function
+@Target({
+  TargetKind.function,
+})
+class PageAnnotation {
+  const PageAnnotation({
+    required this.label,
+    this.publish = false,
+    this.toType,
+  });
+
+  /// 每个节点单独设置，子节点不继承
+  final String label;
+
+  /// 每个节点单独设置，子节点不继承
+  final bool publish;
+
+  /// 子节点若未设置此属性，则继承父节点
+  final Type? toType;
 }
 
-class ToType {
-  final Type type;
-
-  const ToType({this.type = Null});
+final class NotFoundError extends ArgumentError {
+  NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
 }
 
 mixin RouterMixin {
@@ -153,6 +168,27 @@ enum ToPartType {
 /// To == go_router.GoRoute
 /// 官方的go_router内部略显复杂，且没有我们想要的layout等功能，所以自定一个简化版的to_router
 base class To {
+  // TODO P1 root Node的part是routes，有问题！
+  To(
+    this.part, {
+    PageBodyBuilder? page,
+    PageBodyBuilder? notFound,
+    PageLayoutBuilder? layout,
+    this.pageAnno,
+    this.children = const [],
+  })  : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name"),
+        _layout = layout,
+        _page = page,
+        _notFound = notFound {
+    var parsed = _parse(part);
+    _name = parsed.$1;
+    _type = parsed.$2;
+
+    for (var route in children) {
+      route._parent = this;
+    }
+  }
+
   /// part may be a template
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
@@ -169,29 +205,11 @@ base class To {
   final List<To> children;
 
   final PageBodyBuilder? _page;
+  final PageAnnotation? pageAnno;
   final PageBodyBuilder? _notFound;
   final PageLayoutBuilder? _layout;
 
-  // TODO P1 root Node的part是routes，有问题！
-  To(
-    this.part, {
-    PageBodyBuilder? page,
-    PageBodyBuilder? notFound,
-    PageLayoutBuilder? layout,
-    this.children = const [],
-  })  : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name"),
-        _layout = layout,
-        _page = page,
-        _notFound = notFound {
-    var parsed = _parse(part);
-    _name = parsed.$1;
-    _type = parsed.$2;
-
-    for (var route in children) {
-      route._parent = this;
-    }
-  }
-
+  @nonVirtual
   To get parent => _parent;
 
   @nonVirtual
@@ -235,6 +253,21 @@ base class To {
 
   @nonVirtual
   bool get hasLayout => _layout != null;
+
+  @nonVirtual
+  bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
+
+  @nonVirtual
+  bool get containsPublishNode {
+    if (isPublish) return true;
+    for (var c in children) {
+      if (c.containsPublishNode) return true;
+    }
+    return false;
+  }
+
+  @nonVirtual
+  String get label => pageAnno == null ? part : pageAnno!.label;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /
