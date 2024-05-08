@@ -13,7 +13,7 @@ void main() {
   group("analyzer_test", () {
     test('ToType', () async {
       var result = await cli.analyzeLayout(fs.file("../../notes/flutter_web/lib/routes/notes/layout.dart"));
-      check(result.forBuildType).equals(refer("ToNote", "package:you_flutter/note.dart"));
+      check(result.toType).equals(refer("ToNote", "package:you_flutter/note.dart"));
     });
     test('page anno', () async {
       var pageMeta=await cli.analyzePageAnno(cli.dir_lib.childFile("routes/notes/page.dart"));

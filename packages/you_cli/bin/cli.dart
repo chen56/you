@@ -16,7 +16,7 @@ main(List<String> args) async {
   _log("Directory.current: ${io.Directory.current}");
   FileSystem fs = const LocalFileSystem();
 
-  var runner = CommandRunner("note", "you page tools.");
+  var runner = CommandRunner("youc", "you flutter cli tools.");
   runner.addCommand(
     Cmd_gen(fs: fs)
       ..addSubcommand(Cmd_gen_all(fs: fs))
@@ -78,7 +78,7 @@ class Cmd_gen_routes_g_dart extends Command {
   late Directory dir;
 
   @override
-  final name = "routes.g.dart";
+  final name = "routes";
   @override
   final description = "gen routes.g.dart .";
   final FileSystem fs;
@@ -92,47 +92,41 @@ class Cmd_gen_routes_g_dart extends Command {
   //     (context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print))
   //   - async layout + page :
   //     notes_layout.layout((context, print) async => await notes_i18n_.loadLibrary().then((_) => notes_i18n_.build(context, print)))
-  @Deprecated("已废弃，待完成重构后删除")
-  Expression? builderExpression(RouteNode node) {
-    if (!node.file_page_dart.existsSync()) {
-      return null;
-    }
-    Expression builder = refer("${node.flatName}_").property("build");
-    RouteNode? layout = node.findLayoutSync();
-    if (layout != null) {
-      builder = refer("${layout.flatName}__").property("layout2").call([builder]);
-    }
+  // Expression? builderExpression(RouteNode node) {
+  //   if (!node.file_page_dart.existsSync()) {
+  //     return null;
+  //   }
+  //   Expression builder = refer("${node.flatName}_").property("build");
+  //   RouteNode? layout = node.findLayoutSync();
+  //   if (layout != null) {
+  //     builder = refer("${layout.flatName}__").property("layout2").call([builder]);
+  //   }
+  //
+  //   if (async) {
+  //     return Method((b) => b
+  //       ..modifier = MethodModifier.async
+  //       ..body = Block.of(
+  //         [
+  //           refer("${node.flatName}_").property("loadLibrary").call([]).awaited.statement,
+  //           if (layout != null) refer("${layout.flatName}__").property("loadLibrary").call([]).awaited.statement,
+  //           builder.returned.statement,
+  //         ],
+  //       )).closure;
+  //   } else {
+  //     return builder;
+  //   }
+  // }
 
-    if (async) {
-      return Method((b) => b
-        ..modifier = MethodModifier.async
-        ..body = Block.of(
-          [
-            refer("${node.flatName}_").property("loadLibrary").call([]).awaited.statement,
-            if (layout != null) refer("${layout.flatName}__").property("loadLibrary").call([]).awaited.statement,
-            builder.returned.statement,
-          ],
-        )).closure;
-    } else {
-      return builder;
-    }
-  }
-
-  Expression _genRouteRootExpression(RouteNode node) {
-    var builderType = node.findForBuildType();
+  Expression _genRootRouteExpression(RouteNode node) {
+    var builderType = node.findToType();
     return builderType.newInstance(
       [literalString(node.dir.basename)],
       {
         if (node.file_page_dart.existsSync()) "page": refer("build", node.pagePackageUrl),
         if (node.file_layout_dart.existsSync()) "layout": refer("layout", node.layoutPackageUrl),
-        if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRouteRootExpression(e))),
+        if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRootRouteExpression(e))),
       },
     );
-
-    // YouCli.toType.newInstance([
-    // ], {
-    //   if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRouteRootExpression(e))),
-    // });
   }
 
   @override
@@ -160,24 +154,6 @@ class Cmd_gen_routes_g_dart extends Command {
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
             """
-        // ..directives.addAll(
-        //   routes.where((e) => e.file_page_dart.existsSync()).map((lib) {
-        //     if (async) {
-        //       return Directive.importDeferredAs(lib.pagePackageUrl, "${lib.flatName}_");
-        //     } else {
-        //       return Directive.import(lib.pagePackageUrl, as: "${lib.flatName}_");
-        //     }
-        //   }),
-        // )
-        // ..directives.addAll(
-        //   routes.where((e) => e.file_layout_dart.existsSync()).map((lib) {
-        //     if (async) {
-        //       return Directive.importDeferredAs(lib.layoutPackageUrl, "${lib.flatName}__");
-        //     } else {
-        //       return Directive.import(lib.layoutPackageUrl, as: "${lib.flatName}__");
-        //     }
-        //   }),
-        // )
         ..body.add(
           Mixin(
             (b) => b
@@ -187,7 +163,7 @@ class Cmd_gen_routes_g_dart extends Command {
                   ..name = "root"
                   ..modifier = FieldModifier.final$
                   ..type = YouCli.toType
-                  ..assignment = _genRouteRootExpression(rootRoute).code),
+                  ..assignment = _genRootRouteExpression(rootRoute).code),
               )
               ..fields.addAll(
                 routes.where((e) => e.file_page_dart.existsSync()).map(

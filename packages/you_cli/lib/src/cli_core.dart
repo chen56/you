@@ -53,13 +53,13 @@ class YouCli {
       }
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
-      var (layout: layoutFunction, forBuildType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
+      var (layout: layoutFunction, toType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
       return RouteNode(
         cli: this,
         dir: dir,
         pageBuild: await analyzePage(dir.childFile(pageDart)),
         layoutFunction: layoutFunction,
-        forBuildType: forBuildType,
+        toType: forBuildType,
         children: children,
       );
     }
@@ -80,37 +80,37 @@ class YouCli {
     return GetUnit(result.unit);
   }
 
-  Future<({FunctionElement? layout, Reference? forBuildType})> analyzeLayout(File file) async {
+  Future<({FunctionElement? layout, Reference? toType})> analyzeLayout(File file) async {
     if (!await file.exists()) {
-      return (layout: null, forBuildType: null);
+      return (layout: null, toType: null);
     }
 
     GetUnit unit = await getResolvedUnit(file);
     FunctionElement? layoutFunction = unit.topFunction(layoutFunctionName);
     if (layoutFunction == null) {
-      return (layout: null, forBuildType: null);
+      return (layout: null, toType: null);
     }
     var anno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toTypeName);
 
     if (anno == null) {
-      return (layout: layoutFunction, forBuildType: null);
+      return (layout: layoutFunction, toType: null);
     }
 
     var type = anno.value.getField("type")?.toTypeValue();
     if (type == null) {
-      return (layout: layoutFunction, forBuildType: forPageType);
+      return (layout: layoutFunction, toType: forPageType);
     }
 
     var symbol = type.getDisplayString(withNullability: false);
 
     if (symbol == "") {
-      return (layout: layoutFunction, forBuildType: forPageType);
+      return (layout: layoutFunction, toType: forPageType);
     }
 
     var publicExportFrom = findPublicExportLib(type, unit.library);
     var url = publicExportFrom?.identifier;
 
-    return (layout: layoutFunction, forBuildType: refer(symbol, url));
+    return (layout: layoutFunction, toType: refer(symbol, url));
   }
 
   Future<FunctionElement?> analyzePage(File file) async {
@@ -164,12 +164,12 @@ class RouteNode {
   final YouCli cli;
   final List<RouteNode> children;
   final Directory dir;
-  final Reference? forBuildType;
+  final Reference? toType;
   final FunctionElement? layoutFunction;
   final FunctionElement? pageBuild;
   late RouteNode _parent = this;
 
-  RouteNode({required this.dir, this.forBuildType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
+  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
     for (var child in children) {
       child._parent = this;
     }
@@ -255,13 +255,13 @@ class RouteNode {
     return _parent.findLayoutSync();
   }
 
-  Reference findForBuildType() {
-    if (forBuildType != null) {
-      return forBuildType!;
+  Reference findToType() {
+    if (toType != null) {
+      return toType!;
     }
     if (isRoot) {
       return YouCli.forPageType;
     }
-    return _parent.findForBuildType();
+    return _parent.findToType();
   }
 }
