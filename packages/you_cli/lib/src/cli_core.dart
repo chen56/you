@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
-import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/constant/value.dart';
@@ -10,7 +9,7 @@ import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
-import 'package:you_cli/src/code_analyzer.dart';
+import 'package:you_cli/src/analyzer.dart';
 import 'package:you_cli/src/yaml.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
@@ -46,6 +45,13 @@ class YouCli {
 
   Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
 
+  AnalysisSession get analysisSession {
+    return _session ??= AnalysisContextCollection(
+      includedPaths: [dir_lib.path],
+      resourceProvider: PhysicalResourceProvider(),
+    ).contexts[0].currentSession;
+  }
+
   Future<RouteNode> get rootRoute async {
     Future<RouteNode> from(Directory dir) async {
       if (!dir.existsSync()) {
@@ -54,11 +60,12 @@ class YouCli {
 
       var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
       var (layout: layoutFunction, toType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
+
       return RouteNode(
         cli: this,
         dir: dir,
-        pageBuild: await analyzePage(dir.childFile(pageDart)),
-        layoutFunction: layoutFunction,
+        page: await analyzePage(dir.childFile(pageDart)),
+        layouot: layoutFunction,
         toType: forBuildType,
         children: children,
       );
@@ -67,25 +74,12 @@ class YouCli {
     return _rootRoute ??= await from(dir_routes);
   }
 
-  AnalysisSession get analysisSession {
-    return _session ??= AnalysisContextCollection(
-      includedPaths: [dir_lib.path],
-      resourceProvider: PhysicalResourceProvider(),
-    ).contexts[0].currentSession;
-  }
-
-  Future<GetUnit> getResolvedUnit(File file) async {
-    assert(await file.exists(), "file:${file}");
-    var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
-    return GetUnit(result.unit);
-  }
-
   Future<({FunctionElement? layout, Reference? toType})> analyzeLayout(File file) async {
     if (!await file.exists()) {
       return (layout: null, toType: null);
     }
 
-    GetUnit unit = await getResolvedUnit(file);
+    GetUnit unit = await GetUnit.resolve(analysisSession, file);
     FunctionElement? layoutFunction = unit.topFunction(layoutFunctionName);
     if (layoutFunction == null) {
       return (layout: null, toType: null);
@@ -117,30 +111,30 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    GetUnit unit = await getResolvedUnit(file);
+    GetUnit unit = await GetUnit.resolve(analysisSession, file);
     return unit.topFunction(pageBuildFunctionName);
   }
 
-  Future<PageMetaData?> analyzePageAnno(File file) async {
+  Future<PageMetaObject?> analyzePageAnno(File file) async {
     if (!await file.exists()) {
       return null;
     }
-    GetUnit unit = await getResolvedUnit(file);
-    return PageMetaData.find(unit);
+    GetUnit unit = await GetUnit.resolve(analysisSession, file);
+    return PageMetaObject.find(unit);
   }
 }
 
-class PageMetaData {
+class PageMetaObject {
   final Annotation annotation;
   final DartObject dartObject;
   final GetUnit unit;
 
-  PageMetaData(this.annotation, this.dartObject, this.unit);
+  PageMetaObject(this.annotation, this.dartObject, this.unit);
 
-  static PageMetaData? find(GetUnit unit) {
+  static PageMetaObject? find(GetUnit unit) {
     var anno = unit.annotationOnTopFunction(funcName: "build", annoType: "PageMeta");
     if (anno == null) return null;
-    return PageMetaData(anno.ast, anno.value, unit);
+    return PageMetaObject(anno.ast, anno.value, unit);
   }
 
   String get label => dartObject.getField("label")!.toStringValue()!;
@@ -165,11 +159,11 @@ class RouteNode {
   final List<RouteNode> children;
   final Directory dir;
   final Reference? toType;
-  final FunctionElement? layoutFunction;
-  final FunctionElement? pageBuild;
+  final FunctionElement? layouot;
+  final FunctionElement? page;
   late RouteNode _parent = this;
 
-  RouteNode({required this.dir, this.toType, required this.children, this.layoutFunction, this.pageBuild, required this.cli}) {
+  RouteNode({required this.dir, this.toType, required this.children, this.layouot, this.page, required this.cli}) {
     for (var child in children) {
       child._parent = this;
     }

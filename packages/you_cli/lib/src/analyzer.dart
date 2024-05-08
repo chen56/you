@@ -1,10 +1,22 @@
+/// 本包与应用逻辑无关的common analyzer逻辑
+///
+import 'package:analyzer/dart/analysis/results.dart';
+import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
+import 'package:file/file.dart';
+import 'package:path/path.dart' as path;
 
 class GetUnit {
   GetUnit(this.unit);
+
+  static Future<GetUnit> resolve(AnalysisSession analysisSession, File file) async {
+    assert(await file.exists(), "file:${file}");
+    var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
+    return GetUnit(result.unit);
+  }
 
   final CompilationUnit unit;
 
@@ -21,7 +33,7 @@ class GetUnit {
     return null;
   }
 
-  ({ElementAnnotation element, Annotation ast, DartObject value})? annotationOnTopFunction({required String funcName, required String annoType, String? annoUrl}) {
+  ({FunctionElement func, ElementAnnotation element, Annotation ast, DartObject value})? annotationOnTopFunction({required String funcName, required String annoType, String? annoUrl}) {
     var func = topFunction(funcName);
     if (func == null) return null;
 
@@ -42,7 +54,7 @@ class GetUnit {
 
       Iterable<Annotation> annotations = _findAstNodeByType<Annotation>(unit);
       var annotationAst = annotations.where((e) => e.elementAnnotation == meta).first;
-      return (element: meta, ast:annotationAst, value:value);
+      return (func: func, element: meta, ast: annotationAst, value: value);
     }
 
     return null;

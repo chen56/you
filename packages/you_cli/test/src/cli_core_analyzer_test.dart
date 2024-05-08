@@ -8,7 +8,6 @@ import 'package:you_cli/src/cli_core.dart';
 void main() {
   FileSystem fs = LocalFileSystem();
   YouCli cli = YouCli(projectDir: fs.directory("../../notes/flutter_web"));
-  File notePage = fs.file("../../notes/flutter_web/lib/routes/notes/page.dart");
 
   group("analyzer_test", () {
     test('ToType', () async {
@@ -16,22 +15,11 @@ void main() {
       check(result.toType).equals(refer("ToNote", "package:you_flutter/note.dart"));
     });
     test('page anno', () async {
-      var pageMeta=await cli.analyzePageAnno(cli.dir_lib.childFile("routes/notes/page.dart"));
+      var pageMeta = await cli.analyzePageAnno(cli.dir_lib.childFile("routes/notes/page.dart"));
       check(pageMeta!.label).equals("笔记");
       check(pageMeta.publish).equals(false);
       check(pageMeta.toType).equals(YouCli.toNoteType);
       check(pageMeta.toSource).equals('@PageMeta(label: "笔记", toType: ToNote)');
-    });
-  });
-  group("AnalyzedUnit element", () {
-    test('class_', () async {
-      var result = await cli.getResolvedUnit(fs.file("lib/src/cli_core.dart"));
-      check(result.class_("YouCli")!.displayName).equals("YouCli");
-    });
-    test('annotation', () async {
-      var result = await cli.getResolvedUnit(notePage);
-      var pageMeta=result.annotationOnTopFunction(funcName: "build", annoType: "PageMeta")!;
-      check(pageMeta.ast.toSource()).equals('@PageMeta(label: "笔记", toType: ToNote)');
     });
   });
 }
