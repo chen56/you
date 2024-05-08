@@ -3,7 +3,6 @@ import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 import 'package:meta/meta_meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/log.dart';
@@ -53,7 +52,7 @@ class PageAnnotation {
   const PageAnnotation({
     required this.label,
     this.publish = false,
-    this.toType ,
+    this.toType,
   });
 
   /// 每个节点单独设置，子节点不继承
@@ -68,12 +67,6 @@ class PageAnnotation {
 
 final class NotFoundError extends ArgumentError {
   NotFoundError({required Uri invalidValue, String name = "uri", String message = "Not Found"}) : super.value(invalidValue.toString(), name, message);
-}
-
-class ToType {
-  final Type type;
-
-  const ToType({this.type = Null});
 }
 
 mixin RouterMixin {
@@ -181,6 +174,7 @@ base class To {
     PageBodyBuilder? page,
     PageBodyBuilder? notFound,
     PageLayoutBuilder? layout,
+    this.pageAnno,
     this.children = const [],
   })  : assert(part == "/" || !part.contains("/"), "part:'$part' should be '/' or legal directory name"),
         _layout = layout,
@@ -211,6 +205,7 @@ base class To {
   final List<To> children;
 
   final PageBodyBuilder? _page;
+  final PageAnnotation? pageAnno;
   final PageBodyBuilder? _notFound;
   final PageLayoutBuilder? _layout;
 
@@ -258,6 +253,21 @@ base class To {
 
   @nonVirtual
   bool get hasLayout => _layout != null;
+
+  @nonVirtual
+  bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
+
+  @nonVirtual
+  bool get containsPublishNode {
+    if (isPublish) return true;
+    for (var c in children) {
+      if (c.containsPublishNode) return true;
+    }
+    return false;
+  }
+
+  @nonVirtual
+  String get label => pageAnno == null ? part : pageAnno!.label;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /

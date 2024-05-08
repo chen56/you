@@ -91,14 +91,15 @@ class _NoteTree extends StatelessWidget {
   Widget build(BuildContext context) {
     final route = context.route$;
     final colors = Theme.of(context).colorScheme;
-    final notes = routes.routes_notes
-        .toList(
-          includeThis: false,
-        )
-        .where((e) => e.isPage || e.isNonLeaf);
-    routes.routes_notes.expandTree(true, level: 1);
+    routes.routes_root.expandTree(true, level: 2);
     return Watch((context) {
-      var noteList = notes.where((e) => e.isRoot ? true : e.parent.expand).toList();
+      final notes = routes.routes_notes
+          .toList(
+            includeThis: false,
+            where: (e) => e.parent.expand && (includeDraft.value || e.containsPublishNode),
+          )
+          .toList();
+
       return Column(
         children: [
           Container(
@@ -110,7 +111,7 @@ class _NoteTree extends StatelessWidget {
             ]),
           ),
           ListView(
-            children: noteList.map((e) => _noteItem(e, route, includeDraft.value)).toList(),
+            children: notes.map((e) => _noteItem(e, route, includeDraft.value)).toList(),
           ).expanded$(),
         ],
       ).constrainedBox$(
@@ -137,9 +138,13 @@ class _NoteTree extends StatelessWidget {
 
     String title = "$iconExtend ${node.part}";
     title = title.padLeft((node.level * 2) + title.length);
+    String publishLabel = "";
+    if (node.isLeafPage) {
+      publishLabel = node.isPublish ? "(已发布)" : "(草稿)";
+    }
     return Align(
       alignment: Alignment.centerLeft,
-      child: TextButton(onPressed: click, child: Text(title)),
+      child: TextButton(onPressed: click, child: Text('$title$publishLabel')),
     );
   }
 }
@@ -157,9 +162,9 @@ extension _NoteTreeNode on To {
   }
 
   /// 展开层级数
-  void expandTree(bool value, {int level = 0}) {
-    if (level <= 0) return;
+  void expandTree(bool value, {int level = 1}) {
     expand = value;
+    if (level <= 1) return;
     for (var e in children) {
       e.expandTree(value, level: level - 1);
     }

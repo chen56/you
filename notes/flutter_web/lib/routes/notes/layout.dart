@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:you_flutter/router.dart';
 import 'package:you_flutter/note.dart';
 
 /// [NoteLayoutBuilder]
-@ToType(type: ToNote)
 NoteMixin build(BuildContext context, NoteMixin child) {
   // ignore: unnecessary_type_check
   assert(build is NoteLayoutBuilder);

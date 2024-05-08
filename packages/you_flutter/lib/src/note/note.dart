@@ -21,6 +21,7 @@ base class ToNote extends To {
   ToNote(
     super.part, {
     NoteBuilder? page,
+    super.pageAnno,
     NoteBuilder? notFound,
     NoteLayoutBuilder? layout,
     List<ToNote> children = const [],

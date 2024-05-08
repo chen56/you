@@ -27,7 +27,7 @@ dependencies:
   code_builder: ^4.4.0
   file: ^7.0.0
   shared_preferences: ^2.2.2
-  meta: ^1.11.0
+  meta: ^1.12.0
   stack_trace: ^1.11.1
   source_map_stack_trace: ^2.1.1
   http: ^1.2.1

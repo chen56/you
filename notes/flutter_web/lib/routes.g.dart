@@ -55,7 +55,7 @@ import 'package:flutter_web/routes/notes/Improve_app/event&listener&lifeycle/pag
 
 mixin RoutesMixin {
   final To root = To('routes', page: build, layout: _routes_layout.build, children: [
-    ToNote('notes', page: _notes_page.build, layout: _notes_layout.build, children: [
+    ToNote('notes', page: _notes_page.build, pageAnno: _Pages.notes, layout: _notes_layout.build, children: [
       ToNote('research', children: [
         ToNote('bash_note'),
         ToNote('parameterized', page: _parameterized_page.build),
@@ -115,7 +115,7 @@ mixin RoutesMixin {
       ]),
       ToNote('widgets', children: [
         ToNote('specific_widgets', children: [
-          ToNote('button', page: _button_page.build),
+          ToNote('button', page: _button_page.build, pageAnno: _Pages.notes_widgets_specific_widgets_button),
         ]),
         ToNote('container_widgets', children: [
           ToNote('drawer'),
@@ -184,3 +184,8 @@ mixin RoutesMixin {
 }
 
 class Routes with RoutesMixin {}
+
+class _Pages {
+  static const notes = PageAnnotation(label: "笔记", toType: ToNote);
+  static const notes_widgets_specific_widgets_button = PageAnnotation(label: "按钮", publish: true);
+}
