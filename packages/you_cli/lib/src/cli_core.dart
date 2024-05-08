@@ -21,12 +21,8 @@ class YouCli {
   static const Reference toType = Reference("To", "package:you_flutter/router.dart");
   static const Reference toNoteType = Reference("ToNote", "package:you_flutter/note.dart");
   static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
-  static const String toTypeName = "ToType";
-  static const String pageDart = "page.dart";
-  static const String layoutDart = "layout.dart";
   static const String layoutFunctionName = "layout";
-  static const String pageBuildFunctionName = "build";
-  static const String pageMetaName = "PageMeta";
+  static const String pageFunctionName = "build";
   final Directory dir_project;
   final FileSystem fs;
   Pubspec? _pubspec;
@@ -52,28 +48,7 @@ class YouCli {
     ).contexts[0].currentSession;
   }
 
-  Future<RouteNode> get rootRoute async {
-    Future<RouteNode> from(Directory dir) async {
-      if (!dir.existsSync()) {
-        return RouteNode(cli: this, dir: dir, children: []);
-      }
-
-      var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(e)));
-      var (layout: layoutFunction, toType: forBuildType) = await analyzeLayout(dir.childFile(layoutDart));
-      var pageAnno = await analyzePageAnno(dir.childFile(pageDart));
-      return RouteNode(
-        cli: this,
-        dir: dir,
-        page: await analyzePage(dir.childFile(pageDart)),
-        pageAnno: pageAnno,
-        layout: layoutFunction,
-        toType: forBuildType,
-        children: children,
-      );
-    }
-
-    return _rootRoute ??= await from(dir_routes);
-  }
+  Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, dir_routes);
 
   Future<({FunctionElement? layout, Reference? toType})> analyzeLayout(File file) async {
     if (!await file.exists()) {
@@ -85,7 +60,7 @@ class YouCli {
     if (layoutFunction == null) {
       return (layout: null, toType: null);
     }
-    var anno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toTypeName);
+    var anno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toType.symbol!);
 
     if (anno == null) {
       return (layout: layoutFunction, toType: null);
@@ -113,7 +88,7 @@ class YouCli {
       return null;
     }
     GetUnit unit = await GetUnit.resolve(analysisSession, file);
-    return unit.topFunction(pageBuildFunctionName);
+    return unit.topFunction(pageFunctionName);
   }
 
   Future<PageAnnotation?> analyzePageAnno(File file) async {
@@ -133,7 +108,7 @@ class PageAnnotation {
   PageAnnotation(this.annotation, this.dartObject, this.unit);
 
   static PageAnnotation? find(GetUnit unit) {
-    var anno = unit.annotationOnTopFunction(funcName: "build", annoType: "PageMeta");
+    var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: "PageMeta");
     if (anno == null) return null;
     return PageAnnotation(anno.ast, anno.value, unit);
   }
@@ -156,15 +131,6 @@ class PageAnnotation {
 }
 
 class RouteNode {
-  final YouCli cli;
-  final List<RouteNode> children;
-  final Directory dir;
-  final Reference? toType;
-  final FunctionElement? layout;
-  final FunctionElement? page;
-  late RouteNode _parent = this;
-  final PageAnnotation? pageAnno;
-
   RouteNode({
     required this.dir,
     this.toType,
@@ -177,6 +143,36 @@ class RouteNode {
     for (var child in children) {
       child._parent = this;
     }
+  }
+
+  static const String pageDart = "page.dart";
+  static const String layoutDart = "layout.dart";
+
+  final YouCli cli;
+  final List<RouteNode> children;
+  final Directory dir;
+  final Reference? toType;
+  final FunctionElement? layout;
+  final FunctionElement? page;
+  late RouteNode _parent = this;
+  final PageAnnotation? pageAnno;
+
+  static Future<RouteNode> from(YouCli cli, Directory dir) async {
+    if (!dir.existsSync()) {
+      return RouteNode(cli: cli, dir: dir, children: []);
+    }
+
+    var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(cli, e)));
+    var (layout: layoutFunction, toType: forBuildType) = await cli.analyzeLayout(dir.childFile(layoutDart));
+    return RouteNode(
+      cli: cli,
+      dir: dir,
+      page: await cli.analyzePage(dir.childFile(pageDart)),
+      pageAnno: await cli.analyzePageAnno(dir.childFile(pageDart)),
+      layout: layoutFunction,
+      toType: forBuildType,
+      children: children,
+    );
   }
 
   int get level => isRoot ? 0 : _parent.level + 1;
