@@ -20,41 +20,40 @@ class GetUnit {
     }
     return null;
   }
-  // FunctionElement? topFunctionAst(String name) {
-  //   for (var function in unit.visitChildren(visitor).functions) {
-  //     if (function.name == name) {
-  //       return function;
-  //     }
-  //   }
-  //   return null;
-  // }
 
-
-
-  DartObject? annotationOnTopFunction({required String funcName, required String annoType, String? annoUrl}) {
+  ({ElementAnnotation element, Annotation ast, DartObject value})? annotationOnTopFunction({required String funcName, required String annoType, String? annoUrl}) {
     var func = topFunction(funcName);
     if (func == null) return null;
 
-    var findToTypeAnno = func.metadata.map((e) => e.computeConstantValue()).where((e) {
-      var t = e?.type;
-      if (t == null) {
-        return false;
-      }
-      if (t.getDisplayString(withNullability: false) != annoType) {
-        return false;
-      }
-      var element = t.element;
-      if (element is! ClassElement) {
-        return false;
+    for (var meta in func.metadata) {
+      var value = meta.computeConstantValue();
+
+      assert(value != null);
+
+      var t = value!.type;
+      if (t == null) continue;
+
+      if (t.getDisplayString(withNullability: false) != annoType) continue;
+
+      if (annoUrl != null) {
+        var publicExportFrom = findPublicExportLib(t, library);
+        if (publicExportFrom?.identifier == annoUrl) continue;
       }
 
-      if (annoUrl == null) return true;
+      Iterable<Annotation> annotations = _findAstNodeByType<Annotation>(unit);
+      var annotationAst = annotations.where((e) => e.elementAnnotation == meta).first;
+      return (element: meta, ast:annotationAst, value:value);
+    }
 
-      var publicExportFrom = findPublicExportLib(t, library);
-      return publicExportFrom?.identifier == annoUrl;
-    }).firstOrNull;
+    return null;
+  }
 
-    return findToTypeAnno;
+  static Iterable<FIND> _findAstNodeByType<FIND>(AstNode node) sync* {
+    if (node is FIND) yield node as FIND;
+    for (var i in node.childEntities) {
+      if (i is! AstNode) continue;
+      yield* _findAstNodeByType(i);
+    }
   }
 
   ClassElement? class_(String name) {

@@ -6,7 +6,6 @@ import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
@@ -91,12 +90,13 @@ class YouCli {
     if (layoutFunction == null) {
       return (layout: null, forBuildType: null);
     }
-    var findToTypeAnno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toTypeName);
+    var anno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toTypeName);
 
-    if (findToTypeAnno == null) {
+    if (anno == null) {
       return (layout: layoutFunction, forBuildType: null);
     }
-    var type = findToTypeAnno.getField("type")?.toTypeValue();
+
+    var type = anno.value.getField("type")?.toTypeValue();
     if (type == null) {
       return (layout: layoutFunction, forBuildType: forPageType);
     }
@@ -131,15 +131,16 @@ class YouCli {
 }
 
 class PageMetaData {
+  final Annotation annotation;
   final DartObject dartObject;
   final GetUnit unit;
 
-  PageMetaData(this.dartObject, this.unit);
+  PageMetaData(this.annotation, this.dartObject, this.unit);
 
   static PageMetaData? find(GetUnit unit) {
     var anno = unit.annotationOnTopFunction(funcName: "build", annoType: "PageMeta");
     if (anno == null) return null;
-    return PageMetaData(anno, unit);
+    return PageMetaData(anno.ast, anno.value, unit);
   }
 
   String get label => dartObject.getField("label")!.toStringValue()!;
@@ -155,6 +156,8 @@ class PageMetaData {
     var url = publicExportFrom?.identifier;
     return refer(symbol, url);
   }
+
+  String get toSource => annotation.toSource();
 }
 
 class RouteNode {

@@ -1,12 +1,9 @@
-import 'package:path/path.dart' as path;
 import 'package:checks/checks.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
-import 'package:file/memory.dart';
 import 'package:test/test.dart';
 import 'package:you_cli/src/cli_core.dart';
-import 'package:you_cli/src/code_builder_ext.dart';
 
 void main() {
   FileSystem fs = LocalFileSystem();
@@ -23,9 +20,10 @@ void main() {
       check(pageMeta!.label).equals("笔记");
       check(pageMeta.publish).equals(false);
       check(pageMeta.toType).equals(YouCli.toNoteType);
+      check(pageMeta.toSource).equals('@PageMeta(label: "笔记", toType: ToNote)');
     });
   });
-  group("AnalyzedUnit", () {
+  group("AnalyzedUnit element", () {
     test('class_', () async {
       var result = await cli.getResolvedUnit(fs.file("lib/src/cli_core.dart"));
       check(result.class_("YouCli")!.displayName).equals("YouCli");
@@ -33,9 +31,7 @@ void main() {
     test('annotation', () async {
       var result = await cli.getResolvedUnit(notePage);
       var pageMeta=result.annotationOnTopFunction(funcName: "build", annoType: "PageMeta")!;
-      check(pageMeta.type!.getDisplayString(withNullability: true)).equals("PageMeta");
-      check(pageMeta.getField("label")?.toStringValue()).equals("笔记");
-      check(pageMeta.getField("toType")?.toTypeValue()!.getDisplayString(withNullability: true)).equals("ToNote");
+      check(pageMeta.ast.toSource()).equals('@PageMeta(label: "笔记", toType: ToNote)');
     });
   });
 }

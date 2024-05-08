@@ -2,7 +2,7 @@
 
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
-import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:test/test.dart';
 import 'package:path/path.dart' as path;
@@ -15,19 +15,18 @@ void main() {
       includedPaths: [f],
       resourceProvider: PhysicalResourceProvider(),
     ).contexts[0].currentSession;
-    var resolved = await session.getResolvedLibrary(f) as ResolvedLibraryResult;
-    // resolved.element.visitChildren(XXX());
-    findAll(resolved.element).toList().forEach((e)=>print("ssss $e"));
+    var result =await session.getResolvedUnit(f) as ResolvedUnitResult;
+    var findAnnotations=forAst<Annotation>(result.unit).toList();
+    print(findAnnotations.map((e)=>"${e.runtimeType} $e \n").join("\n"));
   });
 }
 
-Iterable<Element> findAll(Element element, {bool Function(Element element)? where}) sync* {
-  if (where != null && where(element) == false) {
-    return ;
-  }
-  yield element;
-  for(var child in element.children){
-    yield* findAll(child,where:where);
+Iterable<FIND> forAst<FIND>(AstNode node)sync* {
+  // print("ast ${node.runtimeType}: $FIND");
+
+  if(node is FIND) yield node as FIND;
+  for (var i in node.childEntities) {
+    if (i is! AstNode) continue;
+    yield* forAst(i);
   }
 }
-
