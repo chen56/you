@@ -21,7 +21,7 @@ class YouCli {
   static const Reference toType = Reference("To", "package:you_flutter/router.dart");
   static const Reference toNoteType = Reference("ToNote", "package:you_flutter/note.dart");
   static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
-  static const String layoutFunctionName = "layout";
+  static const String layoutFunctionName = "build";
   static const String pageFunctionName = "build";
   final Directory dir_project;
   final FileSystem fs;
@@ -50,37 +50,13 @@ class YouCli {
 
   Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, dir_routes);
 
-  Future<({FunctionElement? layout, Reference? toType})> analyzeLayout(File file) async {
+  Future<FunctionElement?> analyzeLayout(File file) async {
     if (!await file.exists()) {
-      return (layout: null, toType: null);
+      return null;
     }
 
     GetUnit unit = await GetUnit.resolve(analysisSession, file);
-    FunctionElement? layoutFunction = unit.topFunction(layoutFunctionName);
-    if (layoutFunction == null) {
-      return (layout: null, toType: null);
-    }
-    var anno = unit.annotationOnTopFunction(funcName: layoutFunctionName, annoType: toType.symbol!);
-
-    if (anno == null) {
-      return (layout: layoutFunction, toType: null);
-    }
-
-    var type = anno.value.getField("type")?.toTypeValue();
-    if (type == null) {
-      return (layout: layoutFunction, toType: forPageType);
-    }
-
-    var symbol = type.getDisplayString(withNullability: false);
-
-    if (symbol == "") {
-      return (layout: layoutFunction, toType: forPageType);
-    }
-
-    var publicExportFrom = findPublicExportLib(type, unit.library);
-    var url = publicExportFrom?.identifier;
-
-    return (layout: layoutFunction, toType: refer(symbol, url));
+    return unit.topFunction(layoutFunctionName);
   }
 
   Future<FunctionElement?> analyzePage(File file) async {
@@ -133,7 +109,6 @@ class PageAnnotation {
 class RouteNode {
   RouteNode({
     required this.dir,
-    this.toType,
     required this.children,
     this.layout,
     this.page,
@@ -151,7 +126,6 @@ class RouteNode {
   final YouCli cli;
   final List<RouteNode> children;
   final Directory dir;
-  final Reference? toType;
   final FunctionElement? layout;
   final FunctionElement? page;
   late RouteNode _parent = this;
@@ -163,14 +137,13 @@ class RouteNode {
     }
 
     var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(cli, e)));
-    var (layout: layoutFunction, toType: forBuildType) = await cli.analyzeLayout(dir.childFile(layoutDart));
+    var layoutFunction = await cli.analyzeLayout(dir.childFile(layoutDart));
     return RouteNode(
       cli: cli,
       dir: dir,
       page: await cli.analyzePage(dir.childFile(pageDart)),
       pageAnno: await cli.analyzePageAnno(dir.childFile(pageDart)),
       layout: layoutFunction,
-      toType: forBuildType,
       children: children,
     );
   }
@@ -256,8 +229,8 @@ class RouteNode {
   }
 
   Reference findToType() {
-    if (toType != null) {
-      return toType!;
+    if (pageAnno?.toType != null) {
+      return pageAnno!.toType!;
     }
     if (isRoot) {
       return YouCli.forPageType;

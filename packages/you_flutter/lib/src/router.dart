@@ -53,7 +53,7 @@ class PageMeta {
   const PageMeta({
     required this.label,
     this.publish = false,
-    this.toType = To,
+    this.toType ,
   });
 
   /// 每个节点单独设置，子节点不继承
@@ -63,7 +63,7 @@ class PageMeta {
   final bool publish;
 
   /// 子节点若未设置此属性，则继承父节点
-  final Type toType;
+  final Type? toType;
 }
 
 final class NotFoundError extends ArgumentError {

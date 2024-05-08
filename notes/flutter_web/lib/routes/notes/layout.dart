@@ -4,9 +4,9 @@ import 'package:you_flutter/note.dart';
 
 /// [NoteLayoutBuilder]
 @ToType(type: ToNote)
-NoteMixin layout(BuildContext context, NoteMixin child) {
+NoteMixin build(BuildContext context, NoteMixin child) {
   // ignore: unnecessary_type_check
-  assert(layout is NoteLayoutBuilder);
+  assert(build is NoteLayoutBuilder);
   return NoteRootLayout(child: child);
 }
 

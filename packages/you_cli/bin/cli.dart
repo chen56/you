@@ -122,8 +122,8 @@ class Cmd_gen_routes_g_dart extends Command {
     return builderType.newInstance(
       [literalString(node.dir.basename)],
       {
-        if (node.file_page_dart.existsSync()) "page": refer("build", node.pagePackageUrl),
-        if (node.file_layout_dart.existsSync()) "layout": refer("layout", node.layoutPackageUrl),
+        if (node.file_page_dart.existsSync()) "page": refer(YouCli.pageFunctionName, node.pagePackageUrl),
+        if (node.file_layout_dart.existsSync()) "layout": refer(YouCli.layoutFunctionName, node.layoutPackageUrl),
         if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRootRouteExpression(e))),
       },
     );

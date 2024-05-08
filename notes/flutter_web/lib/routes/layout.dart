@@ -5,9 +5,9 @@ import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 
 /// [LayoutBuilder]
-Widget layout(BuildContext context, Widget child) {
+Widget build(BuildContext context, Widget child) {
   // ignore: unnecessary_type_check
-  assert(layout is PageLayoutBuilder);
+  assert(build is PageLayoutBuilder);
   return RootLayout(child: child);
 }
 

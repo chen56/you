@@ -1,5 +1,4 @@
 import 'package:checks/checks.dart';
-import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:test/test.dart';
@@ -12,7 +11,7 @@ void main() {
   group("analyzer_test", () {
     test('ToType', () async {
       var result = await cli.analyzeLayout(fs.file("../../notes/flutter_web/lib/routes/notes/layout.dart"));
-      check(result.toType).equals(refer("ToNote", "package:you_flutter/note.dart"));
+      check(result!.displayName).equals("build");
     });
     test('page anno', () async {
       var pageMeta = await cli.analyzePageAnno(cli.dir_lib.childFile("routes/notes/page.dart"));
