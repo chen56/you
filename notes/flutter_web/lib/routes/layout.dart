@@ -105,8 +105,8 @@ class _NoteTree extends StatelessWidget {
           Container(
             color: colors.surfaceContainer,
             child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true, level: 1000))),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false, level: 1000))),
+              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
+              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
               IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
             ]),
           ),
@@ -162,11 +162,19 @@ extension _NoteTreeNode on To {
   }
 
   /// 展开层级数
-  void expandTree(bool value, {int level = 1}) {
+  /// level < 0 ,expand all levels
+  void expandTree(bool value, {int level = -1}) {
+    if (level == 0) return;
+
+    var nextLevel = level - 1;
     expand = value;
-    if (level <= 1) return;
+
+    if (nextLevel == 0) {
+      return;
+    }
+
     for (var e in children) {
-      e.expandTree(value, level: level - 1);
+      e.expandTree(value, level: nextLevel);
     }
   }
 }

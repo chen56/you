@@ -1,7 +1,6 @@
 
 // markdown 的结构轮廓，主要用来显示TOC
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 
 @internal
@@ -103,7 +102,7 @@ class OutlineTreeView extends StatelessWidget {
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
   final ScrollController pageController;
 
-  const OutlineTreeView({required this.outline, required this.pageController});
+  const OutlineTreeView({super.key, required this.outline, required this.pageController});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 /// 本包与应用逻辑无关的common analyzer逻辑
-///
+library;
+
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/ast/ast.dart';
@@ -13,7 +14,7 @@ class GetUnit {
   GetUnit(this.unit);
 
   static Future<GetUnit> resolve(AnalysisSession analysisSession, File file) async {
-    assert(await file.exists(), "file:${file}");
+    assert(await file.exists(), "file:$file");
     var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
     return GetUnit(result.unit);
   }

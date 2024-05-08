@@ -3,6 +3,7 @@
 //  - This file should be version controlled and should not be manually edited
 //
 // ignore_for_file: prefer_function_declarations_over_variables
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
 
