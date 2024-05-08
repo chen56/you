@@ -49,8 +49,8 @@ typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 @Target({
   TargetKind.function,
 })
-class PageMeta {
-  const PageMeta({
+class PageAnnotation {
+  const PageAnnotation({
     required this.label,
     this.publish = false,
     this.toType ,

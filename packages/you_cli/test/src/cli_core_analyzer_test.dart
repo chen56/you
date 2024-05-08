@@ -18,7 +18,7 @@ void main() {
       check(pageMeta!.label).equals("笔记");
       check(pageMeta.publish).equals(false);
       check(pageMeta.toType).equals(YouCli.toNoteType);
-      check(pageMeta.toSource).equals('@PageMeta(label: "笔记", toType: ToNote)');
+      check(pageMeta.toSource).equals('@PageAnnotation(label: "笔记", toType: ToNote)');
     });
   });
 }

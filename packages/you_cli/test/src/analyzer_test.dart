@@ -16,8 +16,8 @@ void main() {
     });
     test('annotation', () async {
       var result = await GetUnit.resolve(cli.analysisSession, notePage);
-      var pageMeta = result.annotationOnTopFunction(funcName: "build", annoType: "PageMeta")!;
-      check(pageMeta.ast.toSource()).equals('@PageMeta(label: "笔记", toType: ToNote)');
+      var pageMeta = result.annotationOnTopFunction(funcName: "build", annoType: "PageAnnotation")!;
+      check(pageMeta.ast.toSource()).equals('@PageAnnotation(label: "笔记", toType: ToNote)');
     });
   });
 }

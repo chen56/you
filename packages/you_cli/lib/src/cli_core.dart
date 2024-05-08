@@ -77,6 +77,7 @@ class YouCli {
 }
 
 class PageAnnotation {
+  static const String annoName = "PageAnnotation";
   final Annotation annotation;
   final DartObject dartObject;
   final GetUnit unit;
@@ -84,7 +85,7 @@ class PageAnnotation {
   PageAnnotation(this.annotation, this.dartObject, this.unit);
 
   static PageAnnotation? find(GetUnit unit) {
-    var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: "PageMeta");
+    var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: annoName);
     if (anno == null) return null;
     return PageAnnotation(anno.ast, anno.value, unit);
   }
