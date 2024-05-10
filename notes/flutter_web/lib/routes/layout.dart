@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
 import 'package:you_flutter/better_ui.dart';
+import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 
@@ -11,10 +12,18 @@ Widget build(BuildContext context, Widget child) {
   return RootLayout(child: child);
 }
 
-class RootLayout extends StatelessWidget {
-  RootLayout({super.key, required this.child});
+class RootLayout extends StatefulWidget {
+  const RootLayout({super.key, required this.child});
 
   final Widget child;
+
+  @override
+  State<StatefulWidget> createState() {
+    return RootLayoutState();
+  }
+}
+
+class RootLayoutState extends State<RootLayout> {
   final Value<int> navigationRail = 0.signal();
 
   @override
@@ -31,39 +40,39 @@ class RootLayout extends StatelessWidget {
 
     return Scaffold(
       primary: true,
-      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.onInverseSurface, backgroundColor: tokens.colors.inverseSurface),
+      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed),
       body: SafeArea(
         child: SelectionArea(
-          child: Column(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Watch((context) {
-                    return NavigationRail(
-                      backgroundColor: tokens.colors.surfaceContainer,
-                      useIndicator: true,
-                      extended: false,
-                      onDestinationSelected: (index) => navigationRail.value = index,
-                      minWidth: 24,
-                      minExtendedWidth: 24,
-                      selectedIndex: navigationRail.value,
-                      groupAlignment: -1,
-                      labelType: NavigationRailLabelType.all,
-                      destinations: <NavigationRailDestination>[
-                        rail(title: "导航", icon: Icons.folder_outlined),
-                        rail(title: "主题", icon: Icons.color_lens_outlined),
-                      ],
-                      trailing: Column(
-                        children: [
-                          const Spacer(flex: 1),
-                          IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline)),
-                        ],
-                      ).expanded$(),
-                    );
-                  }),
-                  _NoteTree().flexible$(),
-                  Expanded(child: child),
-                ],
+              Watch((context) {
+                return NavigationRail(
+                  backgroundColor: tokens.colors.surfaceContainer,
+                  useIndicator: true,
+                  extended: false,
+                  onDestinationSelected: (index) => navigationRail.value = index,
+                  minWidth: 24,
+                  minExtendedWidth: 24,
+                  selectedIndex: navigationRail.value,
+                  groupAlignment: -1,
+                  labelType: NavigationRailLabelType.all,
+                  destinations: <NavigationRailDestination>[
+                    rail(title: "导航", icon: Icons.folder_outlined),
+                    rail(title: "主题", icon: Icons.color_lens_outlined),
+                  ],
+                  trailing: Column(
+                    children: [
+                      const Spacer(flex: 1),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline)),
+                    ],
+                  ).expanded$(),
+                );
+              }),
+              const _NoteTree().flexible$(),
+              SingleChildScrollView(
+                // children: [widget.child.align$(alignment: Alignment.topLeft)],
+                child:widget.child,
               ).expanded$(),
             ],
           ),
@@ -82,9 +91,16 @@ class RootLayout extends StatelessWidget {
   }
 }
 
-class _NoteTree extends StatelessWidget {
-  _NoteTree();
+class _NoteTree extends StatefulWidget {
+  const _NoteTree();
 
+  @override
+  State<StatefulWidget> createState() {
+    return _NoteTreeState();
+  }
+}
+
+class _NoteTreeState extends State<_NoteTree> {
   final Value<bool> includeDraft = false.signal();
 
   @override
@@ -93,20 +109,17 @@ class _NoteTree extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     routes.routes_root.expandTree(true, level: 2);
     return Watch((context) {
-      final notes = routes.routes_notes
-          .toList(
-            includeThis: false,
-            where: (e) => e.parent.expand && (includeDraft.value || e.containsPublishNode),
-          )
-          .toList();
+      final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
+        return e.parent.expand && (includeDraft.value || e.containsPublishNode);
+      });
 
       return Column(
         children: [
           Container(
             color: colors.surfaceContainer,
             child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true, level: 1000))),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false, level: 1000))),
+              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
+              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
               IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
             ]),
           ),
@@ -120,7 +133,7 @@ class _NoteTree extends StatelessWidget {
     });
   }
 
-  static Widget _noteItem(To node, RouteContext route, bool includeDraft) {
+  static Widget _noteItem(ToNote node, RouteContext route, bool includeDraft) {
     click() {
       if (node.isLeafPage) {
         route.to(node.toUri());
@@ -136,7 +149,7 @@ class _NoteTree extends StatelessWidget {
             ? "▼"
             : "︎︎︎▶";
 
-    String title = "$iconExtend ${node.part}";
+    String title = "$iconExtend ${node.label}";
     title = title.padLeft((node.level * 2) + title.length);
     String publishLabel = "";
     if (node.isLeafPage) {
@@ -162,11 +175,19 @@ extension _NoteTreeNode on To {
   }
 
   /// 展开层级数
-  void expandTree(bool value, {int level = 1}) {
+  /// level < 0 ,expand all levels
+  void expandTree(bool value, {int level = -1}) {
+    if (level == 0) return;
+
+    var nextLevel = level - 1;
     expand = value;
-    if (level <= 1) return;
+
+    if (nextLevel == 0) {
+      return;
+    }
+
     for (var e in children) {
-      e.expandTree(value, level: level - 1);
+      e.expandTree(value, level: nextLevel);
     }
   }
 }

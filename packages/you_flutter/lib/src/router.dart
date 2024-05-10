@@ -44,22 +44,14 @@ typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
-/// annotation to page  [build] function
+/// annotation to Page [build] function
 @Target({
   TargetKind.function,
 })
 class PageAnnotation {
   const PageAnnotation({
-    required this.label,
-    this.publish = false,
     this.toType,
   });
-
-  /// 每个节点单独设置，子节点不继承
-  final String label;
-
-  /// 每个节点单独设置，子节点不继承
-  final bool publish;
 
   /// 子节点若未设置此属性，则继承父节点
   final Type? toType;
@@ -75,10 +67,10 @@ mixin RouterMixin {
   To get root => router.root;
 
   @nonVirtual
-  RouteUri match(Uri uri) {
+  ToUri match(Uri uri) {
     var root = router.root;
     assert(uri.path.startsWith("/"));
-    if (uri.path == "/") return RouteUri._(uri: uri, to: root, routeParameters: const {});
+    if (uri.path == "/") return ToUri._(uri: uri, to: root, routeParameters: const {});
 
     Map<String, String> params = {};
     return root._match(uri: uri, segments: uri.pathSegments, params: params);
@@ -86,7 +78,7 @@ mixin RouterMixin {
 
   @nonVirtual
   void to(Uri uri) {
-    RouteUri to = match(uri);
+    ToUri to = match(uri);
     var result = router._routerDelegate.setNewRoutePath(to);
     bool completed = false;
     result.whenComplete(() => completed = true);
@@ -95,11 +87,18 @@ mixin RouterMixin {
 }
 
 final class RouteContext with RouterMixin {
-  RouteContext._(this.router, this.uri);
+  RouteContext._(this._scope);
+
+  final _RouteScope _scope;
 
   @override
-  final YouRouter router;
-  final RouteUri uri;
+  YouRouter get router => _scope.delegate.router;
+
+  /// current page location
+  ToUri get uri => _scope.uri;
+
+  /// current page stack locations
+  Set<ToUri> get stack => _scope.delegate.stack;
 }
 
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
@@ -132,7 +131,7 @@ final class YouRouter with RouterMixin {
   static RouteContext of(BuildContext context) {
     var result = context.findAncestorWidgetOfExactType<_RouteScope>();
     assert(result != null, "YouRouter not found, please: MaterialApp.router(routerConfig:YouRouter(...).config())");
-    return RouteContext._(result!.router, result.uri);
+    return RouteContext._(result!);
   }
 
   RouterConfig<Object> config() => _config;
@@ -201,7 +200,6 @@ base class To {
 
   late To _parent = this;
 
-  @nonVirtual
   final List<To> children;
 
   final PageBodyBuilder? _page;
@@ -254,21 +252,6 @@ base class To {
   @nonVirtual
   bool get hasLayout => _layout != null;
 
-  @nonVirtual
-  bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
-
-  @nonVirtual
-  bool get containsPublishNode {
-    if (isPublish) return true;
-    for (var c in children) {
-      if (c.containsPublishNode) return true;
-    }
-    return false;
-  }
-
-  @nonVirtual
-  String get label => pageAnno == null ? part : pageAnno!.label;
-
   // 对于page目录树：
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
@@ -312,7 +295,7 @@ base class To {
     return _layout!(context, child);
   }
 
-  RouteUri _match({
+  ToUri _match({
     required Uri uri,
     required List<String> segments,
     required Map<String, String> params,
@@ -324,7 +307,7 @@ base class To {
     // 忽略后缀'/'
     // next=="" 代表最后以 '/' 结尾,当前 segments==[""]
     if (_type == ToPartType.static && next == "") {
-      return RouteUri._(uri: uri, to: this, routeParameters: params);
+      return ToUri._(uri: uri, to: this, routeParameters: params);
     }
 
     To? matchChild({required String segment}) {
@@ -347,10 +330,10 @@ base class To {
       //     /tree/x/y/  --> {"file":"x/y/"}
       // dynamicAll param must be last
       params[matchedNext._name] = segments.join("/");
-      return RouteUri._(uri: uri, to: matchedNext, routeParameters: params);
+      return ToUri._(uri: uri, to: matchedNext, routeParameters: params);
     } else {
       if (next == "") {
-        return RouteUri._(uri: uri, to: this, routeParameters: params);
+        return ToUri._(uri: uri, to: this, routeParameters: params);
       }
       if (matchedNext._type == ToPartType.dynamic) {
         params[matchedNext._name] = next;
@@ -358,7 +341,7 @@ base class To {
     }
 
     if (rest.isEmpty) {
-      return RouteUri._(uri: uri, to: matchedNext, routeParameters: params);
+      return ToUri._(uri: uri, to: matchedNext, routeParameters: params);
     }
 
     return matchedNext._match(uri: uri, segments: rest, params: params);
@@ -453,9 +436,8 @@ base class To {
   }
 
   @nonVirtual
-  Widget _buildPage(BuildContext context, RouteUri uri) {
+  Widget _buildPage(BuildContext context, ToUri uri) {
     var result = _buildBody(context);
-
     final List<To> chain = [this, ...ancestors];
 
     for (var node in chain) {
@@ -485,12 +467,12 @@ ${"  " * level}</Route>''';
 // TODO TOUri 设计的还不完善，
 //  - 没有处理removeFragment、replace等更新操作，没有在path变化时更新_routeParameters
 //  - 桌面和web的Uri是不一样的，web上有域名，且有fragment和path base路由2种情况，未明确处理
-final class RouteUri implements Uri {
+final class ToUri implements Uri {
   final To to;
   final Uri _uri;
   final Map<String, String> _routeParameters;
 
-  RouteUri._({
+  ToUri._({
     required Uri uri,
     required this.to,
     required Map<String, String> routeParameters,
@@ -507,7 +489,7 @@ final class RouteUri implements Uri {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    return other is RouteUri && _uri == other;
+    return other is ToUri && _uri == other;
   }
 
   @override
@@ -579,10 +561,10 @@ final class RouteUri implements Uri {
   Map<String, List<String>> get queryParametersAll => _uri.queryParametersAll;
 
   @override
-  Uri removeFragment() => RouteUri._(uri: _uri.removeFragment(), to: to, routeParameters: routeParameters);
+  Uri removeFragment() => ToUri._(uri: _uri.removeFragment(), to: to, routeParameters: routeParameters);
 
   @override
-  RouteUri replace({
+  ToUri replace({
     String? scheme,
     String? userInfo,
     String? host,
@@ -593,14 +575,14 @@ final class RouteUri implements Uri {
     Map<String, dynamic>? queryParameters,
     String? fragment,
   }) {
-    return RouteUri._(to: to, routeParameters: routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
+    return ToUri._(to: to, routeParameters: routeParameters, uri: _uri.replace(scheme: scheme, userInfo: userInfo, host: host, port: port, path: path, pathSegments: pathSegments, query: query, queryParameters: queryParameters, fragment: fragment));
   }
 
   @override
-  RouteUri resolve(String reference) => RouteUri._(uri: _uri.resolve(reference), to: to, routeParameters: routeParameters);
+  ToUri resolve(String reference) => ToUri._(uri: _uri.resolve(reference), to: to, routeParameters: routeParameters);
 
   @override
-  RouteUri resolveUri(Uri reference) => RouteUri._(uri: _uri.resolveUri(reference), to: to, routeParameters: routeParameters);
+  ToUri resolveUri(Uri reference) => ToUri._(uri: _uri.resolveUri(reference), to: to, routeParameters: routeParameters);
 
   @override
   String get scheme => _uri.scheme;
@@ -612,46 +594,27 @@ final class RouteUri implements Uri {
   String get userInfo => _uri.userInfo;
 }
 
-/// this class only use for  [router] ,
-/// ref: [YouRouter.of]
-class _RouteScope extends StatelessWidget {
-  const _RouteScope({
-    required this.router,
-    required this.builder,
-    required this.uri,
-  });
-
-  final YouRouter router;
-  final WidgetBuilder builder;
-  final RouteUri uri;
-
-  @override
-  Widget build(BuildContext context) {
-    return builder(context);
-  }
-}
-
-class _RouteInformationParser extends RouteInformationParser<RouteUri> {
+class _RouteInformationParser extends RouteInformationParser<ToUri> {
   final YouRouter router;
 
   _RouteInformationParser({required this.router});
 
   // TODO P1 routeInformation.uri 这个在web上是fragments或path base路由，要区分
   @override
-  Future<RouteUri> parseRouteInformation(RouteInformation routeInformation) {
-    RouteUri location = router.match(routeInformation.uri);
+  Future<ToUri> parseRouteInformation(RouteInformation routeInformation) {
+    ToUri location = router.match(routeInformation.uri);
     return SynchronousFuture(location);
   }
 
   @override
-  RouteInformation? restoreRouteInformation(RouteUri configuration) {
+  RouteInformation? restoreRouteInformation(ToUri configuration) {
     return RouteInformation(uri: configuration._uri);
   }
 }
 
-class _RouterDelegate extends RouterDelegate<RouteUri> with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteUri> {
+class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavigatorRouterDelegateMixin<ToUri> {
   final YouRouter router;
-  final Set<RouteUri> stack;
+  final Set<ToUri> stack = {};
 
   @override
   final GlobalKey<NavigatorState> navigatorKey;
@@ -659,55 +622,72 @@ class _RouterDelegate extends RouterDelegate<RouteUri> with ChangeNotifier, PopN
   _RouterDelegate({
     required this.router,
     required this.navigatorKey,
-  }) : stack = {};
+  });
 
   @override
-  Future<void> setNewRoutePath(RouteUri configuration) {
-    // TODO router暂时这样实现，还未确定Layout和route的配合细节
+  Future<void> setNewRoutePath(ToUri configuration) {
+    // router暂时这样实现,满足目前desktop 和web的需求
     stack.clear();
     stack.add(configuration);
+    // current，we don t need notify listeners
     notifyListeners();
     return SynchronousFuture(null);
   }
 
   @override
-  Future<void> setRestoredRoutePath(RouteUri configuration) {
-    var result = setNewRoutePath(configuration);
+  Future<void> setInitialRoutePath(ToUri configuration) {
+    final result = setNewRoutePath(configuration);
     notifyListeners();
     return result;
   }
 
   @override
-  RouteUri? get currentConfiguration {
+  Future<void> setRestoredRoutePath(ToUri configuration) {
+    final result = setNewRoutePath(configuration);
+    notifyListeners();
+    return result;
+  }
+
+  @override
+  ToUri? get currentConfiguration {
     return stack.isEmpty ? null : stack.last;
   }
 
   @override
   Widget build(BuildContext context) {
-    return _RouteScope(
-      uri: stack.first,
-      router: router,
-      builder: (context) {
-        return Navigator(
-          key: navigatorKey,
-          onPopPage: (route, result) {
-            if (!route.didPop(result)) {
-              return false;
-            }
-            if (stack.isEmpty) {
-              return true;
-            }
-            stack.remove(stack.last);
-            notifyListeners();
-            return true;
-          },
-          pages: List.from(
-            stack.map(
-              (uri) => MaterialPage(key: ValueKey(uri), child: uri.to._buildPage(context, uri)),
-            ),
-          ),
-        );
+    return Navigator(
+      key: navigatorKey,
+      onPopPage: (route, result) {
+        if (!route.didPop(result)) {
+          return false;
+        }
+        if (stack.isEmpty) {
+          return true;
+        }
+        stack.remove(stack.last);
+        notifyListeners();
+        return true;
       },
+      pages: stack
+          .map((uri) => MaterialPage(
+                child: _RouteScope(this, uri, (context) => uri.to._buildPage(context, uri)),
+              ))
+          .toList(),
     );
+  }
+}
+
+/// this class only use for  [router] ,
+/// ref: [YouRouter.of]
+class _RouteScope extends StatelessWidget {
+  const _RouteScope(this.delegate, this.uri, this.builder);
+
+  final _RouterDelegate delegate;
+  final ToUri uri;
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return builder(context);
   }
 }

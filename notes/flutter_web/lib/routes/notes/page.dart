@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:you_flutter/note.dart';
-import 'package:you_flutter/router.dart';
 
-@PageAnnotation(label: "笔记", toType: ToNote)
+@NoteAnnotation(label: "笔记")
 void build(BuildContext context, Cell print) {
   print(const MD(r'''
 # home

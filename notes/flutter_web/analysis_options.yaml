@@ -37,4 +37,5 @@ analyzer:
     - macros
 #     - class-modifiers
   errors:
+    avoid_function_literals_in_foreach_calls: ignore
     deprecated_member_use: false

@@ -4,16 +4,15 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
-import 'package:path/path.dart' as path;
 
-void build(BuildContext context, Cell print)  {
+void build(BuildContext context, Cell print) {
   print(const MD('''
 # Platform和设备信息
 
 ## 平台参数
   '''));
 
-  print=print.addCell(title:const Text("new cell-----------------"));
+  print = print.addCell(title: const Text("new cell-----------------"));
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print(MD('''
@@ -33,38 +32,12 @@ void build(BuildContext context, Cell print)  {
 | Isolate.packageConfig           | 不支持flutter,仅dart sdk                  |                                      |
 '''));
 
-  print=print.addCell(title:const Text("new cell-----------------"));
-  print(const MD('''
-## path
-
-path很有意思
-
-- web版会变为url
-- macos版正常普通目录名
-
-  '''));
-
-
-  print=print.addCell(title:const Text("new cell-----------------"));
-  print(path.absolute("a/b.dart"));
-
-  print=print.addCell(title:const Text("new cell-----------------"));
-  print(const MD('''
-## environment(web不可用)
-
-  '''));
-
-  print=print.addCell(title:const Text("new cell-----------------"));
-  if (kIsWeb) {
-    print("web版无法使用环境变量,会报错：Unsupported operation: Platform._environment");
-  } else {
+  if (!kIsWeb) {
+    print = print.addCell(title: const Text("new cell-----------------"));
     Map<String, String> env = Platform.environment;
     print(Table(
       border: TableBorder.all(),
-      children: env.entries
-          .map((e) => TableRow(
-              children: [Text(e.key), Text(e.value)]))
-          .toList(),
+      children: env.entries.map((e) => TableRow(children: [Text(e.key), Text(e.value)])).toList(),
     ));
   }
 }

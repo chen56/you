@@ -20,7 +20,7 @@ final class NoteRootLayout extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(child: child);
+    return child;
   }
 }
 

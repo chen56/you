@@ -1,8 +1,5 @@
-import 'package:checks/checks.dart';
-import 'package:code_builder/code_builder.dart';
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
-import 'package:you_cli/src/cli_core.dart';
 
 void main() {
   late MemoryFileSystem fs;

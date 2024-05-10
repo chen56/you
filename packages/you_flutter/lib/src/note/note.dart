@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
+import 'package:meta/meta_meta.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
 import 'package:path/path.dart' as path;
@@ -13,6 +14,23 @@ import 'package:http/http.dart' as http;
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = NoteMixin Function(BuildContext context, NoteMixin child);
 
+/// annotation to Note  [build] function
+@Target({
+  TargetKind.function,
+})
+class NoteAnnotation extends PageAnnotation {
+  const NoteAnnotation({required this.label, this.publish = false})
+      : super(
+          toType: ToNote,
+        );
+
+  /// 每个节点单独设置，子节点不继承
+  final String label;
+
+  /// 每个节点单独设置，子节点不继承
+  final bool publish;
+}
+
 mixin NoteMixin on StatelessWidget {
   Cell get cell;
 }
@@ -21,12 +39,13 @@ base class ToNote extends To {
   ToNote(
     super.part, {
     NoteBuilder? page,
-    super.pageAnno,
+    NoteAnnotation? pageAnno,
     NoteBuilder? notFound,
     NoteLayoutBuilder? layout,
     List<ToNote> children = const [],
   }) : super(
           page: page == null ? null : (context) => _build(context, page),
+          pageAnno: pageAnno,
           notFound: notFound == null ? null : (context) => _build(context, notFound),
           layout: layout == null ? null : (context, child) => layout(context, child as NoteMixin),
           children: children,
@@ -37,10 +56,30 @@ base class ToNote extends To {
     page.call(context, cell);
     return _DefaultNote(cell: cell);
   }
+
+  @override
+  List<ToNote> get children => super.children.cast<ToNote>();
+
+  @override
+  NoteAnnotation? get pageAnno => super.pageAnno == null ? null : super.pageAnno as NoteAnnotation;
+
+  @nonVirtual
+  bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
+
+  @nonVirtual
+  String get label => pageAnno == null ? part : pageAnno!.label;
+
+  @nonVirtual
+  bool get containsPublishNode {
+    if (isPublish) return true;
+    for (var c in children) {
+      if (c.containsPublishNode) return true;
+    }
+    return false;
+  }
 }
 
-/// 一个极简的笔记布局范例
-/// 左边routes树，右边页面内容
+/// 一个极简的笔记缺省布局，应自己提供layout覆盖
 final class _DefaultNote extends StatelessWidget with NoteMixin {
   @override
   final Cell cell;
@@ -49,16 +88,17 @@ final class _DefaultNote extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Watch((context) => Column(
-          children: cell.toList().expand((cell) sync* {
-            for (var content in cell.contents) {
-              yield Align(
-                alignment: Alignment.centerLeft,
-                child: contents.contentToWidget(content),
-              );
-            }
-          }).toList(),
-        ));
+    return Watch((context) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: cell.toList().expand((cell) sync* {
+          for (var content in cell.contents) {
+            yield contents.contentToWidget(content);
+          }
+        }).toList(),
+      );
+    });
   }
 }
 

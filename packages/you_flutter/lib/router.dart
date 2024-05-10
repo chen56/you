@@ -1,3 +1,6 @@
+@experimental
 library you_router;
 
-export 'package:you_flutter/src/router.dart' show YouRouter, PageAnnotation, RouteContext, To, ToType, RouteUri, PageBodyBuilder, LazyPageBodyBuilder, PageLayoutBuilder;
+import 'package:meta/meta.dart';
+
+export 'package:you_flutter/src/router.dart' show YouRouter, PageAnnotation, RouteContext, To, ToUri, PageBodyBuilder, LazyPageBodyBuilder, PageLayoutBuilder;

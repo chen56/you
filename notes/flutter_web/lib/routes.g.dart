@@ -3,6 +3,7 @@
 //  - This file should be version controlled and should not be manually edited
 //
 // ignore_for_file: prefer_function_declarations_over_variables
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: library_prefixes
 // ignore_for_file: non_constant_identifier_names
 
@@ -186,6 +187,6 @@ mixin RoutesMixin {
 class Routes with RoutesMixin {}
 
 class _Pages {
-  static const notes = PageAnnotation(label: "笔记", toType: ToNote);
-  static const notes_widgets_specific_widgets_button = PageAnnotation(label: "按钮", publish: true);
+  static const notes = NoteAnnotation(label: "笔记");
+  static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: true);
 }
