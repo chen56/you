@@ -1,4 +1,7 @@
+@experimental
 library note;
+
+import 'package:meta/meta.dart';
 
 export 'src/note/note.dart' show ToNote, NoteAnnotation, NoteBuilder, NoteLayoutBuilder, NoteMixin, Cell;
 

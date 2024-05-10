@@ -79,8 +79,7 @@ base class ToNote extends To {
   }
 }
 
-/// 一个极简的笔记布局范例
-/// 左边routes树，右边页面内容
+/// 一个极简的笔记缺省布局，应自己提供layout覆盖
 final class _DefaultNote extends StatelessWidget with NoteMixin {
   @override
   final Cell cell;
@@ -89,16 +88,17 @@ final class _DefaultNote extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Watch((context) => Column(
-          children: cell.toList().expand((cell) sync* {
-            for (var content in cell.contents) {
-              yield Align(
-                alignment: Alignment.centerLeft,
-                child: contents.contentToWidget(content),
-              );
-            }
-          }).toList(),
-        ));
+    return Watch((context) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: cell.toList().expand((cell) sync* {
+          for (var content in cell.contents) {
+            yield contents.contentToWidget(content);
+          }
+        }).toList(),
+      );
+    });
   }
 }
 

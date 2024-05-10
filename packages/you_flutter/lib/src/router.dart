@@ -87,11 +87,18 @@ mixin RouterMixin {
 }
 
 final class RouteContext with RouterMixin {
-  RouteContext._(this.router, this.uri);
+  RouteContext._(this._scope);
+
+  final _RouteScope _scope;
 
   @override
-  final YouRouter router;
-  final ToUri uri;
+  YouRouter get router => _scope.delegate.router;
+
+  /// current page location
+  ToUri get uri => _scope.uri;
+
+  /// current page stack locations
+  Set<ToUri> get stack => _scope.delegate.stack;
 }
 
 /// TODO P1 应针对2种flutter 支持的route模式进行适配：
@@ -124,7 +131,7 @@ final class YouRouter with RouterMixin {
   static RouteContext of(BuildContext context) {
     var result = context.findAncestorWidgetOfExactType<_RouteScope>();
     assert(result != null, "YouRouter not found, please: MaterialApp.router(routerConfig:YouRouter(...).config())");
-    return RouteContext._(result!.router, result.uri);
+    return RouteContext._(result!);
   }
 
   RouterConfig<Object> config() => _config;
@@ -587,25 +594,6 @@ final class ToUri implements Uri {
   String get userInfo => _uri.userInfo;
 }
 
-/// this class only use for  [router] ,
-/// ref: [YouRouter.of]
-class _RouteScope extends StatelessWidget {
-  const _RouteScope({
-    required this.router,
-    required this.builder,
-    required this.uri,
-  });
-
-  final YouRouter router;
-  final WidgetBuilder builder;
-  final ToUri uri;
-
-  @override
-  Widget build(BuildContext context) {
-    return builder(context);
-  }
-}
-
 class _RouteInformationParser extends RouteInformationParser<ToUri> {
   final YouRouter router;
 
@@ -626,7 +614,7 @@ class _RouteInformationParser extends RouteInformationParser<ToUri> {
 
 class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavigatorRouterDelegateMixin<ToUri> {
   final YouRouter router;
-  final Set<ToUri> stack;
+  final Set<ToUri> stack = {};
 
   @override
   final GlobalKey<NavigatorState> navigatorKey;
@@ -634,20 +622,28 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
   _RouterDelegate({
     required this.router,
     required this.navigatorKey,
-  }) : stack = {};
+  });
 
   @override
   Future<void> setNewRoutePath(ToUri configuration) {
-    // TODO router暂时这样实现，还未确定Layout和route的配合细节
+    // router暂时这样实现,满足目前desktop 和web的需求
     stack.clear();
     stack.add(configuration);
+    // current，we don t need notify listeners
     notifyListeners();
     return SynchronousFuture(null);
   }
 
   @override
+  Future<void> setInitialRoutePath(ToUri configuration) {
+    final result = setNewRoutePath(configuration);
+    notifyListeners();
+    return result;
+  }
+
+  @override
   Future<void> setRestoredRoutePath(ToUri configuration) {
-    var result = setNewRoutePath(configuration);
+    final result = setNewRoutePath(configuration);
     notifyListeners();
     return result;
   }
@@ -659,30 +655,39 @@ class _RouterDelegate extends RouterDelegate<ToUri> with ChangeNotifier, PopNavi
 
   @override
   Widget build(BuildContext context) {
-    return _RouteScope(
-      uri: stack.first,
-      router: router,
-      builder: (context) {
-        return Navigator(
-          key: navigatorKey,
-          onPopPage: (route, result) {
-            if (!route.didPop(result)) {
-              return false;
-            }
-            if (stack.isEmpty) {
-              return true;
-            }
-            stack.remove(stack.last);
-            notifyListeners();
-            return true;
-          },
-          pages: List.from(
-            stack.map(
-              (uri) => MaterialPage(key: ValueKey(uri), child: uri.to._buildPage(context, uri)),
-            ),
-          ),
-        );
+    return Navigator(
+      key: navigatorKey,
+      onPopPage: (route, result) {
+        if (!route.didPop(result)) {
+          return false;
+        }
+        if (stack.isEmpty) {
+          return true;
+        }
+        stack.remove(stack.last);
+        notifyListeners();
+        return true;
       },
+      pages: stack
+          .map((uri) => MaterialPage(
+                child: _RouteScope(this, uri, (context) => uri.to._buildPage(context, uri)),
+              ))
+          .toList(),
     );
+  }
+}
+
+/// this class only use for  [router] ,
+/// ref: [YouRouter.of]
+class _RouteScope extends StatelessWidget {
+  const _RouteScope(this.delegate, this.uri, this.builder);
+
+  final _RouterDelegate delegate;
+  final ToUri uri;
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return builder(context);
   }
 }

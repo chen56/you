@@ -12,10 +12,18 @@ Widget build(BuildContext context, Widget child) {
   return RootLayout(child: child);
 }
 
-class RootLayout extends StatelessWidget {
-  RootLayout({super.key, required this.child});
+class RootLayout extends StatefulWidget {
+  const RootLayout({super.key, required this.child});
 
   final Widget child;
+
+  @override
+  State<StatefulWidget> createState() {
+    return RootLayoutState();
+  }
+}
+
+class RootLayoutState extends State<RootLayout> {
   final Value<int> navigationRail = 0.signal();
 
   @override
@@ -35,36 +43,36 @@ class RootLayout extends StatelessWidget {
       appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed),
       body: SafeArea(
         child: SelectionArea(
-          child: Column(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Watch((context) {
-                    return NavigationRail(
-                      backgroundColor: tokens.colors.surfaceContainer,
-                      useIndicator: true,
-                      extended: false,
-                      onDestinationSelected: (index) => navigationRail.value = index,
-                      minWidth: 24,
-                      minExtendedWidth: 24,
-                      selectedIndex: navigationRail.value,
-                      groupAlignment: -1,
-                      labelType: NavigationRailLabelType.all,
-                      destinations: <NavigationRailDestination>[
-                        rail(title: "导航", icon: Icons.folder_outlined),
-                        rail(title: "主题", icon: Icons.color_lens_outlined),
-                      ],
-                      trailing: Column(
-                        children: [
-                          const Spacer(flex: 1),
-                          IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline)),
-                        ],
-                      ).expanded$(),
-                    );
-                  }),
-                  _NoteTree().flexible$(),
-                  Expanded(child: child),
-                ],
+              Watch((context) {
+                return NavigationRail(
+                  backgroundColor: tokens.colors.surfaceContainer,
+                  useIndicator: true,
+                  extended: false,
+                  onDestinationSelected: (index) => navigationRail.value = index,
+                  minWidth: 24,
+                  minExtendedWidth: 24,
+                  selectedIndex: navigationRail.value,
+                  groupAlignment: -1,
+                  labelType: NavigationRailLabelType.all,
+                  destinations: <NavigationRailDestination>[
+                    rail(title: "导航", icon: Icons.folder_outlined),
+                    rail(title: "主题", icon: Icons.color_lens_outlined),
+                  ],
+                  trailing: Column(
+                    children: [
+                      const Spacer(flex: 1),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline)),
+                    ],
+                  ).expanded$(),
+                );
+              }),
+              const _NoteTree().flexible$(),
+              SingleChildScrollView(
+                // children: [widget.child.align$(alignment: Alignment.topLeft)],
+                child:widget.child,
               ).expanded$(),
             ],
           ),
@@ -83,9 +91,16 @@ class RootLayout extends StatelessWidget {
   }
 }
 
-class _NoteTree extends StatelessWidget {
-  _NoteTree();
+class _NoteTree extends StatefulWidget {
+  const _NoteTree();
 
+  @override
+  State<StatefulWidget> createState() {
+    return _NoteTreeState();
+  }
+}
+
+class _NoteTreeState extends State<_NoteTree> {
   final Value<bool> includeDraft = false.signal();
 
   @override
