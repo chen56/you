@@ -44,22 +44,14 @@ typedef PageBodyBuilder = WidgetBuilder;
 typedef PageLayoutBuilder = Widget Function(BuildContext context, Widget child);
 typedef LazyPageBodyBuilder = Future<PageBodyBuilder> Function();
 
-/// annotation to page  [build] function
+/// annotation to Page [build] function
 @Target({
   TargetKind.function,
 })
 class PageAnnotation {
   const PageAnnotation({
-    required this.label,
-    this.publish = false,
     this.toType,
   });
-
-  /// 每个节点单独设置，子节点不继承
-  final String label;
-
-  /// 每个节点单独设置，子节点不继承
-  final bool publish;
 
   /// 子节点若未设置此属性，则继承父节点
   final Type? toType;
@@ -201,7 +193,6 @@ base class To {
 
   late To _parent = this;
 
-  @nonVirtual
   final List<To> children;
 
   final PageBodyBuilder? _page;
@@ -253,21 +244,6 @@ base class To {
 
   @nonVirtual
   bool get hasLayout => _layout != null;
-
-  @nonVirtual
-  bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
-
-  @nonVirtual
-  bool get containsPublishNode {
-    if (isPublish) return true;
-    for (var c in children) {
-      if (c.containsPublishNode) return true;
-    }
-    return false;
-  }
-
-  @nonVirtual
-  String get label => pageAnno == null ? part : pageAnno!.label;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /

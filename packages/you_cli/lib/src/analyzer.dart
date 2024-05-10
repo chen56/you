@@ -7,16 +7,17 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
+import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 
-class GetUnit {
-  GetUnit(this.unit);
+class UnitAnalyzer {
+  UnitAnalyzer(this.unit);
 
-  static Future<GetUnit> resolve(AnalysisSession analysisSession, File file) async {
+  static Future<UnitAnalyzer> resolve(AnalysisSession analysisSession, File file) async {
     assert(await file.exists(), "file:$file");
     var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
-    return GetUnit(result.unit);
+    return UnitAnalyzer(result.unit);
   }
 
   final CompilationUnit unit;
@@ -46,10 +47,11 @@ class GetUnit {
       var t = value!.type;
       if (t == null) continue;
 
-      if (t.getDisplayString(withNullability: false) != annoType) continue;
-
+      if (t is! InterfaceType) continue;
+      var findAnnoType = [t, ...t.allSupertypes].where((e) => e.getDisplayString(withNullability: true) == annoType).firstOrNull;
+      if (findAnnoType == null) continue;
       if (annoUrl != null) {
-        var publicExportFrom = findPublicExportLib(t, library);
+        var publicExportFrom = findPublicExportLib(findAnnoType, library);
         if (publicExportFrom?.identifier == annoUrl) continue;
       }
 
@@ -73,6 +75,42 @@ class GetUnit {
     final type = library.exportNamespace.get(name);
     return type is ClassElement ? type : null;
   }
+}
+
+class AnnotationAnalyzer {
+  AnnotationAnalyzer(this.annotation, this.dartObject, this.unit);
+
+  // ignore: constant_identifier_names
+  static const String SUPERCLASS_FIELD = "(super)";
+
+  final Annotation annotation;
+  final DartObject dartObject;
+  final UnitAnalyzer unit;
+
+  DartObject? getField(String name) {
+    return _getField(dartObject, name);
+  }
+
+  /// dartObject.getField只能拿到当前对象的字段，而父类型字段都放在[SUPERCLASS_FIELD]里
+  static DartObject? _getField(DartObject dartObject, String name) {
+    var field = dartObject.getField(name);
+    if (field != null) return field;
+
+    DartObject? superObject = dartObject.getField(SUPERCLASS_FIELD);
+    if (superObject == null) return null;
+    return _getField(superObject, name);
+  }
+
+  Reference? getFieldTypeAsRef(String name) {
+    var type = getField(name)?.toTypeValue();
+    if (type == null) return null;
+    var symbol = type.getDisplayString(withNullability: false);
+    if (symbol == "") return null;
+    var publicExportFrom = findPublicExportLib(type, unit.library);
+    var url = publicExportFrom?.identifier;
+    return refer(symbol, url);
+  }
+
 }
 
 /// given a internal lib: package:you_flutter/src/router.dart

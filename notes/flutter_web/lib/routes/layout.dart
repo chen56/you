@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
 import 'package:you_flutter/better_ui.dart';
+import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
 
@@ -31,7 +32,7 @@ class RootLayout extends StatelessWidget {
 
     return Scaffold(
       primary: true,
-      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.onInverseSurface, backgroundColor: tokens.colors.inverseSurface),
+      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed),
       body: SafeArea(
         child: SelectionArea(
           child: Column(
@@ -93,12 +94,9 @@ class _NoteTree extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     routes.routes_root.expandTree(true, level: 2);
     return Watch((context) {
-      final notes = routes.routes_notes
-          .toList(
-            includeThis: false,
-            where: (e) => e.parent.expand && (includeDraft.value || e.containsPublishNode),
-          )
-          .toList();
+      final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
+        return e.parent.expand && (includeDraft.value || e.containsPublishNode);
+      });
 
       return Column(
         children: [
@@ -120,7 +118,7 @@ class _NoteTree extends StatelessWidget {
     });
   }
 
-  static Widget _noteItem(To node, RouteContext route, bool includeDraft) {
+  static Widget _noteItem(ToNote node, RouteContext route, bool includeDraft) {
     click() {
       if (node.isLeafPage) {
         route.to(node.toUri());
@@ -136,7 +134,7 @@ class _NoteTree extends StatelessWidget {
             ? "▼"
             : "︎︎︎▶";
 
-    String title = "$iconExtend ${node.part}";
+    String title = "$iconExtend ${node.label}";
     title = title.padLeft((node.level * 2) + title.length);
     String publishLabel = "";
     if (node.isLeafPage) {

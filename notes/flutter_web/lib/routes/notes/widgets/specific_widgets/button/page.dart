@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
-import 'package:you_flutter/router.dart';
 
-@PageAnnotation(label: "按钮", publish: true)
+@NoteAnnotation(label: "按钮", publish: true)
 void build(BuildContext context, Cell print) {
   print.addCell(title: const Text("--------new cell------"));
   print(const MD(r'''

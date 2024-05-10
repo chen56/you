@@ -2,8 +2,6 @@
 
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/session.dart';
-import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
@@ -55,7 +53,7 @@ class YouCli {
       return null;
     }
 
-    GetUnit unit = await GetUnit.resolve(analysisSession, file);
+    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
     return unit.topFunction(layoutFunctionName);
   }
 
@@ -63,45 +61,34 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    GetUnit unit = await GetUnit.resolve(analysisSession, file);
+    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
     return unit.topFunction(pageFunctionName);
   }
 
-  Future<PageAnnotation?> analyzePageAnno(File file) async {
+  Future<PageAnnotationAnalyzer?> analyzePageAnno(File file) async {
     if (!await file.exists()) {
       return null;
     }
-    GetUnit unit = await GetUnit.resolve(analysisSession, file);
-    return PageAnnotation.find(unit);
+    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
+    return PageAnnotationAnalyzer.find(unit);
   }
 }
 
-class PageAnnotation {
+class PageAnnotationAnalyzer extends AnnotationAnalyzer {
   static const String annoName = "PageAnnotation";
-  final Annotation annotation;
-  final DartObject dartObject;
-  final GetUnit unit;
 
-  PageAnnotation(this.annotation, this.dartObject, this.unit);
+  PageAnnotationAnalyzer(super.annotation, super.dartObject, super.unit);
 
-  static PageAnnotation? find(GetUnit unit) {
+  static PageAnnotationAnalyzer? find(UnitAnalyzer unit) {
     var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: annoName);
     if (anno == null) return null;
-    return PageAnnotation(anno.ast, anno.value, unit);
+    return PageAnnotationAnalyzer(anno.ast, anno.value, unit);
   }
 
-  String get label => dartObject.getField("label")!.toStringValue()!;
-
-  bool get publish => dartObject.getField("publish")!.toBoolValue()!;
+  String get label => getField("label")!.toStringValue()!;
 
   Reference? get toType {
-    var type = dartObject.getField("toType")?.toTypeValue();
-    if (type == null) return null;
-    var symbol = type.getDisplayString(withNullability: false);
-    if (symbol == "") return null;
-    var publicExportFrom = findPublicExportLib(type, unit.library);
-    var url = publicExportFrom?.identifier;
-    return refer(symbol, url);
+    return getFieldTypeAsRef("toType");
   }
 
   String get toSource => annotation.toSource();
@@ -130,7 +117,7 @@ class RouteNode {
   final FunctionElement? layout;
   final FunctionElement? page;
   late RouteNode _parent = this;
-  final PageAnnotation? pageAnno;
+  final PageAnnotationAnalyzer? pageAnno;
 
   static Future<RouteNode> from(YouCli cli, Directory dir) async {
     if (!dir.existsSync()) {

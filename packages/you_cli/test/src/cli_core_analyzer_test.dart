@@ -16,9 +16,8 @@ void main() {
     test('page anno', () async {
       var pageMeta = await cli.analyzePageAnno(cli.dir_lib.childFile("routes/notes/page.dart"));
       check(pageMeta!.label).equals("笔记");
-      check(pageMeta.publish).equals(false);
       check(pageMeta.toType).equals(YouCli.toNoteType);
-      check(pageMeta.toSource).equals('@PageAnnotation(label: "笔记", toType: ToNote)');
+      check(pageMeta.toSource).equals('@NoteAnnotation(label: "笔记")');
     });
   });
 }

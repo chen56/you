@@ -187,6 +187,6 @@ mixin RoutesMixin {
 class Routes with RoutesMixin {}
 
 class _Pages {
-  static const notes = PageAnnotation(label: "笔记", toType: ToNote);
-  static const notes_widgets_specific_widgets_button = PageAnnotation(label: "按钮", publish: true);
+  static const notes = NoteAnnotation(label: "笔记");
+  static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: true);
 }

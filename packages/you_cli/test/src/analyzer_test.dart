@@ -11,13 +11,13 @@ void main() {
   File notePage = fs.file("../../notes/flutter_web/lib/routes/notes/page.dart");
   group("AnalyzedUnit element", () {
     test('class_', () async {
-      var result = await GetUnit.resolve(cli.analysisSession, fs.file("lib/src/cli_core.dart"));
+      var result = await UnitAnalyzer.resolve(cli.analysisSession, fs.file("lib/src/cli_core.dart"));
       check(result.class_("YouCli")!.displayName).equals("YouCli");
     });
     test('annotation', () async {
-      var result = await GetUnit.resolve(cli.analysisSession, notePage);
+      var result = await UnitAnalyzer.resolve(cli.analysisSession, notePage);
       var pageMeta = result.annotationOnTopFunction(funcName: "build", annoType: "PageAnnotation")!;
-      check(pageMeta.ast.toSource()).equals('@PageAnnotation(label: "笔记", toType: ToNote)');
+      check(pageMeta.ast.toSource()).equals('@NoteAnnotation(label: "笔记")');
     });
   });
 }
