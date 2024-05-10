@@ -1,6 +1,6 @@
 library note;
 
-export 'src/note/note.dart' show ToNote, NoteAnnotation, Cell, NoteBuilder, NoteMixin, NoteLayoutBuilder;
+export 'src/note/note.dart' show ToNote, NoteAnnotation, NoteBuilder, NoteLayoutBuilder, NoteMixin, Cell;
 
 export 'src/note/contents/contents.dart' show contents, Contents;
 export 'src/note/contents/mockup.dart' show MockupWindow;
