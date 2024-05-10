@@ -431,7 +431,6 @@ base class To {
   @nonVirtual
   Widget _buildPage(BuildContext context, ToUri uri) {
     var result = _buildBody(context);
-
     final List<To> chain = [this, ...ancestors];
 
     for (var node in chain) {
