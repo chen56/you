@@ -4,6 +4,7 @@ import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 /// [LayoutBuilder]
 Widget build(BuildContext context, Widget child) {
@@ -40,7 +41,13 @@ class RootLayoutState extends State<RootLayout> {
 
     return Scaffold(
       primary: true,
-      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed),
+      appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed, actions: [
+        TextButton.icon(
+          onPressed: () => _launchUrl(Uri.parse("https://github.com/chen56/you")),
+          icon: const Icon(Icons.link),
+          label: const Text('github'),
+        ),
+      ]),
       body: SafeArea(
         child: SelectionArea(
           child: Row(
@@ -72,7 +79,7 @@ class RootLayoutState extends State<RootLayout> {
               const _NoteTree().flexible$(),
               SingleChildScrollView(
                 // children: [widget.child.align$(alignment: Alignment.topLeft)],
-                child:widget.child,
+                child: widget.child,
               ).expanded$(),
             ],
           ),
@@ -189,5 +196,11 @@ extension _NoteTreeNode on To {
     for (var e in children) {
       e.expandTree(value, level: nextLevel);
     }
+  }
+}
+
+Future<void> _launchUrl(Uri url) async {
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch $url');
   }
 }

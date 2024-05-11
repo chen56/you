@@ -36,6 +36,7 @@ dependencies:
   # you_*
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
+  url_launcher: ^6.2.6
 
 dev_dependencies:
 
