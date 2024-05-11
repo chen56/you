@@ -110,7 +110,7 @@ class _NoteTreeState extends State<_NoteTree> {
     routes.routes_root.expandTree(true, level: 2);
     return Watch((context) {
       final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
-        return e.parent.expand && (includeDraft.value || e.containsPublishNode);
+        return e.containsPage() && e.parent.expand && (includeDraft.value || e.containsPublishNode(includeThis: true));
       });
 
       return Column(

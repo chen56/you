@@ -192,7 +192,6 @@ base class To {
   /// /[user]/[repository]
   ///    - /dart-lang/sdk    => {"user":"dart-lang","repository":"sdk"}
   ///    - /flutter/flutter  => {"user":"flutter","repository":"flutter"}
-  @nonVirtual
   final String part;
 
   late final String _name;
@@ -207,63 +206,43 @@ base class To {
   final PageBodyBuilder? _notFound;
   final PageLayoutBuilder? _layout;
 
-  @nonVirtual
   To get parent => _parent;
 
-  @nonVirtual
   bool get isRoot => _parent == this;
 
-  @nonVirtual
-  bool get isLeaf {
-    return children.isEmpty;
-  }
-
-  bool get isValid {
-    if (isPage) return true;
-    return isChildrenValid;
-  }
-
   bool get isLeafPage {
-    return isValid && !isChildrenValid;
+    return hasPage && !containsPage(includeThis: false);
   }
 
-  bool get isChildrenValid {
+  bool containsPage({bool includeThis = true}) {
+    if (includeThis) {
+      if (hasPage) return true;
+    }
     for (var c in children) {
-      if (c.isValid) return true;
+      if (c.containsPage()) return true;
     }
     return false;
   }
 
-  @nonVirtual
-  bool get isNonLeaf => !isLeaf;
-
-  @nonVirtual
   To get root => isRoot ? this : _parent.root;
 
-  @nonVirtual
   int get level => isRoot ? 0 : _parent.level + 1;
 
-  @nonVirtual
-  bool get isPage => _page != null;
+  bool get hasPage => _page != null;
 
-  @nonVirtual
   bool get hasNotFound => _notFound != null;
 
-  @nonVirtual
   bool get hasLayout => _layout != null;
 
   // 对于page目录树：
   // - /              -> uriTemplate: /
   //   - users        -> uriTemplate: /users
   //     - [user]     -> uriTemplate: /users/[user]
-  @nonVirtual
   String get templatePath => isRoot ? "/" : path_.join(_parent.templatePath, part);
 
-  @nonVirtual
   List<To> get ancestors => isRoot ? [] : [_parent, ..._parent.ancestors];
 
   /// return Strictly equal ancestors of type
-  @nonVirtual
   Iterable<T> findAncestorsOfSameType<T>() sync* {
     for (var a in ancestors) {
       if (a.runtimeType == runtimeType) {
@@ -272,14 +251,12 @@ base class To {
     }
   }
 
-  @nonVirtual
   Uri toUri({Map<String, String> routeParameters = const {}, Map<String, List<String>> queryParameters = const {}}) {
     // TODO 临时实现，需要增加模版参数
     return Uri.parse(templatePath);
   }
 
-  ///  framework invoke this method if [isPage]
-  @nonVirtual
+  ///  framework invoke this method if [hasPage]
   Widget _buildBody(BuildContext context) {
     return _build(context, _page!);
   }
@@ -290,7 +267,6 @@ base class To {
 
   ///  framework invoke this method if [hasLayout]
   /// downstream results warp to => new result
-  @nonVirtual
   Widget _warpLayout(BuildContext context, Widget child) {
     return _layout!(context, child);
   }
@@ -354,7 +330,6 @@ base class To {
   ///
   /// a.toList(includeThis:true)
   ///          => [/a,/a/1,/a/2]
-  @nonVirtual
   List<To> toList({
     bool includeThis = true,
     bool Function(To path)? where,
@@ -399,7 +374,6 @@ base class To {
     }
   }
 
-  @nonVirtual
   To? find(String templatePath) {
     return _findBySegments(Uri.parse(templatePath).pathSegments.where((e) => e.isNotEmpty).toList());
   }
@@ -435,7 +409,6 @@ base class To {
         );
   }
 
-  @nonVirtual
   Widget _buildPage(BuildContext context, ToUri uri) {
     var result = _buildBody(context);
     final List<To> chain = [this, ...ancestors];

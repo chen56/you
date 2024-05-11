@@ -136,6 +136,8 @@ class RouteNode {
     );
   }
 
+  get hasPage => page != null;
+
   int get level => isRoot ? 0 : _parent.level + 1;
 
   RouteNode get root => isRoot ? this : _parent.root;

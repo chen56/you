@@ -123,7 +123,7 @@ class Cmd_gen_routes_g_dart extends Command {
       [literalString(node.dir.basename)],
       {
         if (node.file_page_dart.existsSync()) "page": refer(YouCli.pageFunctionName, node.pagePackageUrl),
-        if (node.pageAnno!=null) "pageAnno": refer("_Pages").property(node.flatName),
+        if (node.pageAnno != null) "pageAnno": refer("_Pages").property(node.flatName),
         if (node.file_layout_dart.existsSync()) "layout": refer(YouCli.layoutFunctionName, node.layoutPackageUrl),
         if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRootRouteExpression(e))),
       },
@@ -171,9 +171,9 @@ class Cmd_gen_routes_g_dart extends Command {
                     (routeDir) => Field((f) => f
                       ..modifier = FieldModifier.final$
                       ..late = true
-                      ..type = YouCli.toType
+                      ..type = routeDir.findToType()
                       ..name = "routes_${routeDir.flatName}"
-                      ..assignment = refer("root.find").call([literalString(routeDir.routePath)]).nullChecked.code),
+                      ..assignment = refer("root.find").call([literalString(routeDir.routePath)]).nullChecked.asA(routeDir.findToType()).code),
                   ),
             ),
         ),
@@ -191,8 +191,8 @@ class Cmd_gen_routes_g_dart extends Command {
               rootRoute.toList(includeThis: true).where((e) => e.pageAnno != null).map((e) {
                 return Field((b) => b
                   ..name = e.flatName
-                  ..static=true
-                  ..modifier=FieldModifier.constant
+                  ..static = true
+                  ..modifier = FieldModifier.constant
                   ..assignment = Code(e.pageAnno!.toSource.substring(1) /*跳过第一个@字符:@PageAnnotation(label: "笔记", toType: ToNote)*/));
               }),
             ),

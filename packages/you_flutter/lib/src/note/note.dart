@@ -70,10 +70,12 @@ base class ToNote extends To {
   String get label => pageAnno == null ? part : pageAnno!.label;
 
   @nonVirtual
-  bool get containsPublishNode {
-    if (isPublish) return true;
+  bool containsPublishNode({bool includeThis = true}) {
+    if(includeThis){
+      if (isPublish) return true;
+    }
     for (var c in children) {
-      if (c.containsPublishNode) return true;
+      if (c.containsPublishNode()) return true;
     }
     return false;
   }
