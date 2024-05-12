@@ -185,11 +185,11 @@ flutter_web.preview()  { flutter_web.build_html;
 
 flutter_web.dev_html()              { _run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
 flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
-flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
+flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html       --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
+flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm     --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit  --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_wasm()            { _run flutter_web flutter build web   --release --tree-shake-icons --wasm                    --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
 flutter_web.build_macos()           { _run flutter_web flutter build macos --release --tree-shake-icons "$@";  }
-flutter_web.build_wasm()            { _run flutter_web flutter build web   --release --tree-shake-icons --wasm "$@" ;}
-flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm "$@" ; }
-flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit "$@" ; }
 flutter_web.server_dhttpd()      { echo "http://localhost:8080/you/flutter_web";
                                       _run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
 flutter_web.server_deno()     { echo "http://localhost:8080/you/flutter_web";

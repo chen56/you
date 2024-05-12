@@ -1,7 +1,8 @@
 name: you_flutter_internal
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "you_* internal package."
+version: 0.0.6-dev.1
+homepage: https://github.com/chen56/you
+repository: https://github.com/chen56/you
 
 environment:
   sdk: '>=3.5.0-147.0.dev <4.0.0'
