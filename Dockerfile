@@ -1,4 +1,4 @@
-FROM fischerscode/flutter:3.22.0-31.0.pre.20 as ci
+FROM fischerscode/flutter:3.22.0-0.2.pre as ci
 
 ARG test=off
 
