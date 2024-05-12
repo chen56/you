@@ -4,9 +4,9 @@ import 'package:you_flutter/note.dart';
 @NoteAnnotation(label: "笔记")
 void build(BuildContext context, Cell print) {
   print(const MD(r'''
-# home
+# flutter 笔记
 
-本页面应该是不暴露的 ,但现在并未做任何限制，通过 / 可以看到
+可选择左侧笔记阅读
 
   '''));
 }
