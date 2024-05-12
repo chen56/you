@@ -100,7 +100,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
               IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
               IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
               IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.visibility_off), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => widget.view.value = ""),
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
             ]),
           ),
           const Divider(),
@@ -211,7 +211,7 @@ class _ThemeViewState extends State<_ThemeView> {
           Container(
             color: colors.surfaceContainer,
             child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.visibility_off), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => widget.view.value = ""),
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
             ]),
           ),
           const Divider(),
