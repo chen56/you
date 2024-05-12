@@ -109,7 +109,7 @@ class OutlineTreeView extends StatelessWidget {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
-        style: ButtonStyle(padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
+        style: TextButton.styleFrom().copyWith(padding: WidgetStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

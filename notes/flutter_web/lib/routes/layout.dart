@@ -25,13 +25,10 @@ class RootLayout extends StatefulWidget {
 }
 
 class RootLayoutState extends State<RootLayout> {
-  final Value<int> navigationRail = 0.signal();
-
   @override
   Widget build(BuildContext context) {
     final route = context.route$;
     final colors = Theme.of(context).colorScheme;
-
     return Scaffold(
       primary: true,
       appBar: AppBar(toolbarHeight: 38, title: Text("location: ${route.uri}"), foregroundColor: colors.primaryFixed, backgroundColor: colors.onPrimaryFixed, actions: [
@@ -81,43 +78,16 @@ class _NoteTreeView extends StatefulWidget {
 
 class _NoteTreeViewState extends State<_NoteTreeView> {
   final Value<bool> includeDraft = false.signal();
+  final Value<To?> selected = (null as To?).signal();
 
-  @override
-  Widget build(BuildContext context) {
-    final route = context.route$;
+  static Widget _noteItem(BuildContext context, Value<To?> selected, ToNote node, RouteContext route, bool includeDraft) {
     final colors = Theme.of(context).colorScheme;
-    routes.routes_root.expandTree(true, level: 2);
-    return Watch((context) {
-      final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
-        return e.containsPage() && e.parent.expand && (includeDraft.value || e.containsPublishNode(includeThis: true));
-      });
-//great for ide like layouts
-      return Column(
-        children: [
-          Container(
-            color: colors.surfaceContainer,
-            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
-              IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
-            ]),
-          ),
-          const Divider(),
-          ListView(
-            children: notes.map((e) => _noteItem(e, route, includeDraft.value)).toList(),
-          ).expanded$(),
-        ],
-      ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
-      );
-    });
-  }
+    final rootNoteLevel = routes.routes_notes.level + 1;
 
-  static Widget _noteItem(ToNote node, RouteContext route, bool includeDraft) {
     click() {
       if (node.isLeafPage) {
         route.to(node.toUri());
+        selected.value = node;
       } else {
         node.expand = !node.expand;
       }
@@ -131,15 +101,55 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
             : "︎︎︎▶";
 
     String title = "$iconExtend ${node.label}";
-    title = title.padLeft((node.level * 2) + title.length);
+    title = title.padLeft(((node.level - rootNoteLevel) * 2) + title.length);
     String publishLabel = "";
     if (node.isLeafPage) {
       publishLabel = node.isPublish ? "(已发布)" : "(草稿)";
     }
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: TextButton(onPressed: click, child: Text('$title$publishLabel')),
+    return ListTile(
+      title: Text('$title$publishLabel'),
+      minTileHeight: 36,
+      minVerticalPadding: 6,
+      minLeadingWidth: 0,
+      selected: selected.value == node,
+      selectedTileColor: colors.surfaceContainerHighest,
+      onTap: click,
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    routes.routes_root.expandTree(true, level: 2);
+    return Watch((context) {
+      final route = context.route$;
+      final colors = Theme.of(context).colorScheme;
+
+      final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
+        return e.containsPage() && e.parent.expand && (includeDraft.value || e.containsPublishNode(includeThis: true));
+      });
+      return Column(
+        children: [
+          Container(
+            color: colors.surfaceContainerHighest,
+            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
+              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
+              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
+              IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
+            ]),
+          ),
+          const Divider(height: 1),
+          Material(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [...notes.map((e) => _noteItem(context, selected, e, route, includeDraft.value)).toList()],
+            ),
+          ).expanded$(),
+        ],
+      ).constrainedBox$(
+        constraints: const BoxConstraints.tightFor(width: 350),
+      );
+    });
   }
 }
 
@@ -185,42 +195,6 @@ class ViewBar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return ViewBarState();
-  }
-}
-
-class _ThemeView extends StatefulWidget {
-  const _ThemeView({required this.view});
-
-  final Value<String> view;
-
-  @override
-  State<StatefulWidget> createState() {
-    return _ThemeViewState();
-  }
-}
-
-class _ThemeViewState extends State<_ThemeView> {
-  final Value<bool> includeDraft = false.signal();
-
-  @override
-  Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-    return Watch((context) {
-      return Column(
-        children: [
-          Container(
-            color: colors.surfaceContainer,
-            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
-            ]),
-          ),
-          const Divider(),
-
-        ],
-      ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
-      );
-    });
   }
 }
 
@@ -270,15 +244,51 @@ class ViewBarState extends State<ViewBar> {
                   ).flexible$(),
                 ],
               ),
-              const VerticalDivider(),
+              const VerticalDivider(width: 1),
               Watch((context) {
                 return _NoteTreeView(view: view).offstage$(offstage: view.value != "note_tree_view");
               }),
               Watch((context) {
                 return _ThemeView(view: view).offstage$(offstage: view.value != "theme_view");
               }),
+              const VerticalDivider(width: 1),
             ],
           ));
+    });
+  }
+}
+
+class _ThemeView extends StatefulWidget {
+  const _ThemeView({required this.view});
+
+  final Value<String> view;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _ThemeViewState();
+  }
+}
+
+class _ThemeViewState extends State<_ThemeView> {
+  final Value<bool> includeDraft = false.signal();
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return Watch((context) {
+      return Column(
+        children: [
+          Container(
+            color: colors.surfaceContainer,
+            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
+            ]),
+          ),
+          const Divider(),
+        ],
+      ).constrainedBox$(
+        constraints: const BoxConstraints.tightFor(width: 350),
+      );
     });
   }
 }
