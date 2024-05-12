@@ -222,7 +222,28 @@
 
 ## 高级特性复杂布局
 
-- **AppBar**
+- **各类Bar**
+  - **AppBar** 水平bar，一般放在`Scaffold.appBar`
+  - **BottomAppBar**:水平bar 一般放在`Scaffold.bottomNavigationBar`
+  - **~~BottomNavigationBar~~**：水平bar，不建议使用，被`NavigationBar`替换
+  - **NavigationBar** 水平bar，一般放在[Scaffold.bottomNavigationBar], 但按flutter的调性，当然是哪都能放. Material 3 Navigation Bar component. replacing BottomNavigationBar.
+    - 【场景】NavigationBar 的主要用途类似TabBar，加上`NavigationBar.onDestinationSelected`的事件，就能用页面的概念在不同页面间切换
+  - **NavigationRail** 垂直bar，The navigation rail is meant for layouts with wide viewports, such as a desktop web or tablet landscape layout. For smaller layouts, like mobile portrait, a BottomNavigationBar should be used instead
+  - **TabBar** 水平Bar，Tab栏的切换组件。一般放在[Scaffold.appBar.bottom]之类的地方
+    - 【原理】
+      - 要求：要么外面套个DefaultTabController，要么外面套个要么设置[TabBar.controller]，TabController主要是为了协调Tab和TabView的切换关系，如果两者都不提供，会报错：No TabController for TabBar
+      - TabBar.secondary：for a secondary tab bar.
+  - **OverflowBar**
+    - 【场景】Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排。
+  - **MenuBar**
+  - **PlatformMenuBar**
+  - **NavigationToolbar** is a layout helper to position 3 widgets or groups of widgets along a horizontal axis，正常应该使用带主题的Material AppBar or the iOS CupertinoNavigationBar
+  - **SnackBar**
+    - 【原理】ScaffoldMessenger.of(context).showSnackBar()
+  - **TextSelectionToolbar**
+  - **Sliver相关**
+    - **SliverAppBar** 水平Bar，动画、可收缩的Bar
+    - **FlexibleSpaceBar**
 - **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
 - **GridView** 网格布局，可以创建类似表格或卡片列表的效果，支持横向或纵向滚动。
 - **ListView&ListBody**:可在 ListView 的头部或尾部使用 ListBody 来渲染一些固定的内容,这样可以充分利用两者的优势。

@@ -231,6 +231,26 @@ extension StyleExtension on Widget {
     return Align(alignment: alignment, widthFactor: widthFactor, heightFactor: heightFactor, child: this);
   }
 
+  Widget visibility$({bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false, Widget replacement = const SizedBox.shrink()}) {
+    return Visibility(
+      replacement: replacement,
+      visible: visible,
+      maintainState: maintainState,
+      maintainAnimation: maintainAnimation,
+      maintainSize: maintainSize,
+      maintainSemantics: maintainSemantics,
+      maintainInteractivity: maintainInteractivity,
+      child: this,
+    );
+  }
+
+  Widget offstage$({bool offstage = true}) {
+    return Offstage(
+      offstage: offstage,
+      child: this,
+    );
+  }
+
   /// Warp a [Align]
   Widget singleChildScrollView$({Axis scrollDirection = Axis.vertical}) {
     return SingleChildScrollView(scrollDirection: scrollDirection, child: this);

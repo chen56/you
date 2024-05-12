@@ -30,14 +30,7 @@ class RootLayoutState extends State<RootLayout> {
   @override
   Widget build(BuildContext context) {
     final route = context.route$;
-    final tokens = context.designTokens$;
     final colors = Theme.of(context).colorScheme;
-    NavigationRailDestination rail({required String title, required IconData icon}) {
-      return NavigationRailDestination(
-        icon: Tooltip(message: title, child: Icon(icon)),
-        label: Text(title),
-      );
-    }
 
     return Scaffold(
       primary: true,
@@ -53,30 +46,7 @@ class RootLayoutState extends State<RootLayout> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Watch((context) {
-                return NavigationRail(
-                  backgroundColor: tokens.colors.surfaceContainer,
-                  useIndicator: true,
-                  extended: false,
-                  onDestinationSelected: (index) => navigationRail.value = index,
-                  minWidth: 24,
-                  minExtendedWidth: 24,
-                  selectedIndex: navigationRail.value,
-                  groupAlignment: -1,
-                  labelType: NavigationRailLabelType.all,
-                  destinations: <NavigationRailDestination>[
-                    rail(title: "导航", icon: Icons.folder_outlined),
-                    rail(title: "主题", icon: Icons.color_lens_outlined),
-                  ],
-                  trailing: Column(
-                    children: [
-                      const Spacer(flex: 1),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline)),
-                    ],
-                  ).expanded$(),
-                );
-              }),
-              const _NoteTree().flexible$(),
+              const ViewBar(),
               SingleChildScrollView(
                 // children: [widget.child.align$(alignment: Alignment.topLeft)],
                 child: widget.child,
@@ -98,16 +68,18 @@ class RootLayoutState extends State<RootLayout> {
   }
 }
 
-class _NoteTree extends StatefulWidget {
-  const _NoteTree();
+class _NoteTreeView extends StatefulWidget {
+  const _NoteTreeView({required this.view});
+
+  final Value<String> view;
 
   @override
   State<StatefulWidget> createState() {
-    return _NoteTreeState();
+    return _NoteTreeViewState();
   }
 }
 
-class _NoteTreeState extends State<_NoteTree> {
+class _NoteTreeViewState extends State<_NoteTreeView> {
   final Value<bool> includeDraft = false.signal();
 
   @override
@@ -119,7 +91,7 @@ class _NoteTreeState extends State<_NoteTree> {
       final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
         return e.containsPage() && e.parent.expand && (includeDraft.value || e.containsPublishNode(includeThis: true));
       });
-
+//great for ide like layouts
       return Column(
         children: [
           Container(
@@ -128,8 +100,10 @@ class _NoteTreeState extends State<_NoteTree> {
               IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
               IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
               IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.visibility_off), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => widget.view.value = ""),
             ]),
           ),
+          const Divider(),
           ListView(
             children: notes.map((e) => _noteItem(e, route, includeDraft.value)).toList(),
           ).expanded$(),
@@ -202,5 +176,109 @@ extension _NoteTreeNode on To {
 Future<void> _launchUrl(Uri url) async {
   if (!await launchUrl(url)) {
     throw Exception('Could not launch $url');
+  }
+}
+
+class ViewBar extends StatefulWidget {
+  const ViewBar({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return ViewBarState();
+  }
+}
+
+class _ThemeView extends StatefulWidget {
+  const _ThemeView({required this.view});
+
+  final Value<String> view;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _ThemeViewState();
+  }
+}
+
+class _ThemeViewState extends State<_ThemeView> {
+  final Value<bool> includeDraft = false.signal();
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return Watch((context) {
+      return Column(
+        children: [
+          Container(
+            color: colors.surfaceContainer,
+            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
+              IconButton(tooltip: "Hidden", icon: const Icon(Icons.visibility_off), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => widget.view.value = ""),
+            ]),
+          ),
+          const Divider(),
+
+        ],
+      ).constrainedBox$(
+        constraints: const BoxConstraints.tightFor(width: 350),
+      );
+    });
+  }
+}
+
+class ViewBarState extends State<ViewBar> {
+  final Value<String> view = "note_tree_view".signal();
+
+  @override
+  Widget build(BuildContext context) {
+    var colors = Theme.of(context).colorScheme;
+    return Watch((context) {
+      return Container(
+          color: colors.surfaceContainer,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IntrinsicHeight(
+                    child: Column(
+                      children: [
+                        IconButton(
+                            icon: const Icon(Icons.folder_outlined),
+                            isSelected: view.value == "note_tree_view",
+                            selectedIcon: const Icon(Icons.folder_rounded),
+                            onPressed: () {
+                              view.value = view.value == "note_tree_view" ? "" : "note_tree_view";
+                            }),
+                        const Text("导航"),
+                      ],
+                    ),
+                  ).flexible$(),
+                  IntrinsicHeight(
+                    child: Column(
+                      children: [
+                        IconButton(
+                            icon: const Icon(Icons.color_lens_outlined),
+                            isSelected: view.value == "theme_view",
+                            selectedIcon: const Icon(Icons.color_lens_rounded),
+                            onPressed: () {
+                              view.value = view.value == "theme_view" ? "" : "theme_view";
+                            }),
+                        const Text("主题"),
+                      ],
+                    ),
+                  ).flexible$(),
+                ],
+              ),
+              const VerticalDivider(),
+              Watch((context) {
+                return _NoteTreeView(view: view).offstage$(offstage: view.value != "note_tree_view");
+              }),
+              Watch((context) {
+                return _ThemeView(view: view).offstage$(offstage: view.value != "theme_view");
+              }),
+            ],
+          ));
+    });
   }
 }
