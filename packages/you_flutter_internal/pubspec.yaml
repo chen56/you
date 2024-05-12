@@ -5,8 +5,8 @@ homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
 environment:
-  sdk: '>=3.5.0-147.0.dev <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=3.19.0"
 
 dependencies:
   flutter:
