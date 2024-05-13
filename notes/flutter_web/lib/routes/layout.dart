@@ -147,7 +147,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
           ).expanded$(),
         ],
       ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
+        constraints: const BoxConstraints.tightFor(width: 280),
       );
     });
   }
@@ -275,20 +275,87 @@ class _ThemeViewState extends State<_ThemeView> {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
-    return Watch((context) {
-      return Column(
-        children: [
-          Container(
-            color: colors.surfaceContainer,
-            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
-            ]),
-          ),
-          const Divider(),
-        ],
-      ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
-      );
-    });
+
+    List<Color> getChildrenColors(MaterialColor e) {
+      return [
+        e.shade50,
+        e.shade100,
+        e.shade200,
+        e.shade300,
+        e.shade400,
+        e.shade500,
+        e.shade600,
+        e.shade700,
+        e.shade800,
+        e.shade900,
+      ];
+    }
+
+    return Column(
+      children: [
+        Container(
+          color: colors.surfaceContainer,
+          child: OverflowBar(alignment: MainAxisAlignment.end, children: [
+            IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
+          ]),
+        ),
+        const Divider(),
+        const SizedBox(height: 20,),
+
+        const Text("Theme mode"),
+        Card(
+          child: Watch((context) {
+            final app = App.of(context);
+            return SegmentedButton<ThemeMode>(
+              segments: const <ButtonSegment<ThemeMode>>[
+                ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.light_mode_outlined)),
+                ButtonSegment<ThemeMode>(value: ThemeMode.system, label: Text('Sys'), icon: Icon(Icons.brightness_auto_outlined)),
+                ButtonSegment<ThemeMode>(value: ThemeMode.dark, label: Text('Dark'), icon: Icon(Icons.dark_mode_outlined)),
+              ],
+              selected: <ThemeMode>{app.themeMode.value},
+              onSelectionChanged: (Set<ThemeMode> newSelection) {
+                app.themeMode.value = newSelection.first;
+              },
+            );
+          }),
+        ),
+        const SizedBox(height: 20,),
+        const Text("Theme color seed"),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ...Colors.primaries.map((e) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: getChildrenColors(e).map((color) => ColorBlock(color: color)).toList(),
+              );
+            }),
+          ],
+        ).paddingAll$(10),
+      ],
+    ).constrainedBox$(
+      constraints: const BoxConstraints.tightFor(width: 280),
+    );
+  }
+}
+
+// color block
+class ColorBlock extends StatelessWidget {
+  final Color color;
+
+  const ColorBlock({super.key, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    final app = App.of(context);
+    Widget colorWidget = Container(width: 20, height: 20, color: color);
+    return InkWell(
+      onTap: () {
+        app.seedColor.value = color;
+      },
+      child: Watch((context) {
+        return app.seedColor.value == color ? colorWidget.borderAll$() : colorWidget;
+      }),
+    );
   }
 }

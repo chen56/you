@@ -115,7 +115,7 @@ final class YouRouter with RouterMixin {
   })  : _navigatorKey = navigatorKey,
         assert(root.templatePath == "/") {
     _routerDelegate = LoggableRouterDelegate(logger: logger, delegate: _RouterDelegate(navigatorKey: _navigatorKey, router: this));
-    _config = RouterConfig<Object>(
+    config = RouterConfig<Object>(
       routeInformationProvider: PlatformRouteInformationProvider(initialRouteInformation: RouteInformation(uri: initial)),
       routerDelegate: _routerDelegate,
       routeInformationParser: _RouteInformationParser(router: this),
@@ -125,7 +125,7 @@ final class YouRouter with RouterMixin {
   @override
   final To root;
   final GlobalKey<NavigatorState> _navigatorKey;
-  late final RouterConfig<Object> _config;
+  late final RouterConfig<Object> config;
   late final RouterDelegate<Object> _routerDelegate;
 
   static RouteContext of(BuildContext context) {
@@ -134,7 +134,6 @@ final class YouRouter with RouterMixin {
     return RouteContext._(result!);
   }
 
-  RouterConfig<Object> config() => _config;
 
   @override
   @visibleForTesting
