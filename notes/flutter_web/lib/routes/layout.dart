@@ -119,7 +119,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 
   @override
   Widget build(BuildContext context) {
-    routes.routes_root.expandTree(true, level: 2);
+    routes.routes_root.expandTree(true);
     return Watch((context) {
       final route = context.route$;
       final colors = Theme.of(context).colorScheme;
@@ -301,7 +301,6 @@ class _ThemeViewState extends State<_ThemeView> {
           ]),
         ),
         const Divider(),
-
         const SizedBox(
           height: 20,
         ),
@@ -342,7 +341,6 @@ class _ThemeViewState extends State<_ThemeView> {
               route.to(routes.routes_notes_style_theming_colors.toUri());
             },
             child: const Text("open Material 3 color roles page")),
-
       ],
     ).constrainedBox$(
       constraints: const BoxConstraints.tightFor(width: 280),
