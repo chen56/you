@@ -25,6 +25,7 @@ class App extends StatefulWidget {
 
 class AppState extends State<App> {
   final Value<ThemeMode> themeMode = ThemeMode.system.signal();
+  final Value<Color> seedColor = ColorSeed.m3baseline.color.signal();
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +34,8 @@ class AppState extends State<App> {
       return MaterialApp.router(
         title: "flutter note",
         themeMode: themeMode.value,
-        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent.shade700, brightness: Brightness.light), useMaterial3: true),
-        darkTheme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: ColorSeed.m3baseline.color, brightness: Brightness.dark), useMaterial3: true),
+        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: seedColor.value, brightness: Brightness.light), useMaterial3: true),
+        darkTheme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: seedColor.value, brightness: Brightness.dark), useMaterial3: true),
         routerConfig: widget.router.config,
       );
     });
