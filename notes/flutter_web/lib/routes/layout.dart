@@ -147,7 +147,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
           ).expanded$(),
         ],
       ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
+        constraints: const BoxConstraints.tightFor(width: 280),
       );
     });
   }
@@ -276,6 +276,7 @@ class _ThemeViewState extends State<_ThemeView> {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return Watch((context) {
+      final app = App.of(context);
       return Column(
         children: [
           Container(
@@ -285,9 +286,20 @@ class _ThemeViewState extends State<_ThemeView> {
             ]),
           ),
           const Divider(),
+          SegmentedButton<ThemeMode>(
+            segments: const <ButtonSegment<ThemeMode>>[
+              ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.light_mode_outlined)),
+              ButtonSegment<ThemeMode>(value: ThemeMode.system, label: Text('Sys'), icon: Icon(Icons.brightness_auto_outlined)),
+              ButtonSegment<ThemeMode>(value: ThemeMode.dark, label: Text('Dark'), icon: Icon(Icons.dark_mode_outlined)),
+            ],
+            selected: <ThemeMode>{app.themeMode.value},
+            onSelectionChanged: (Set<ThemeMode> newSelection) {
+              app.themeMode.value = newSelection.first;
+            },
+          ),
         ],
       ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 350),
+        constraints: const BoxConstraints.tightFor(width: 280),
       );
     });
   }
