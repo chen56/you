@@ -93,6 +93,11 @@ final class BetterUI {
 
 extension StyleExtension on Widget {
   /// Warp a [Padding]
+  Widget marginAll$(double value) {
+    return Container(margin: EdgeInsets.all(value), child: this);
+  }
+
+  /// Warp a [Padding]
   Widget padding$(EdgeInsetsGeometry padding) => Padding(padding: padding, child: this);
 
   /// Warp a [Padding]

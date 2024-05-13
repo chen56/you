@@ -25,6 +25,7 @@ dependencies:
   source_map_stack_trace: ^2.1.1
   source_maps: ^0.10.12
   stack_trace: ^1.11.1
+  url_launcher: ^6.2.6
   you_dart: ^0.0.5
 
 

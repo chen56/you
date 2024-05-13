@@ -25,7 +25,7 @@ import 'package:flutter_web/routes/notes/state/StatefulBuilder/page.dart' as _St
 import 'package:flutter_web/routes/notes/media&assets&file/file_desktop/page.dart' as _file_desktop_page;
 import 'package:flutter_web/routes/notes/media&assets&file/file_web/page.dart' as _file_web_page;
 import 'package:flutter_web/routes/notes/media&assets&file/assets/page.dart' as _assets_page;
-import 'package:flutter_web/routes/notes/style&theming/material3/page.dart' as _material3_page;
+import 'package:flutter_web/routes/notes/style&theming/colors/page.dart' as _colors_page;
 import 'package:flutter_web/routes/notes/pure_dart/dart3/page.dart' as _dart3_page;
 import 'package:flutter_web/routes/notes/pure_dart/async/page.dart' as _async_page;
 import 'package:flutter_web/routes/notes/pure_dart/safe_interface/page.dart' as _safe_interface_page;
@@ -81,9 +81,7 @@ mixin RoutesMixin {
         ToNote('assets', page: _assets_page.build),
       ]),
       ToNote('style&theming', children: [
-        ToNote('material3', page: _material3_page.build),
-        ToNote('colors'),
-        ToNote('Material'),
+        ToNote('colors', page: _colors_page.build, pageAnno: _Pages.notes_style_theming_colors),
       ]),
       ToNote('pure_dart', children: [
         ToNote('dart3', page: _dart3_page.build),
@@ -154,7 +152,7 @@ mixin RoutesMixin {
   late final ToNote routes_notes_media_assets_file_file_desktop = (root.find('/notes/media&assets&file/file_desktop')! as ToNote);
   late final ToNote routes_notes_media_assets_file_file_web = (root.find('/notes/media&assets&file/file_web')! as ToNote);
   late final ToNote routes_notes_media_assets_file_assets = (root.find('/notes/media&assets&file/assets')! as ToNote);
-  late final ToNote routes_notes_style_theming_material3 = (root.find('/notes/style&theming/material3')! as ToNote);
+  late final ToNote routes_notes_style_theming_colors = (root.find('/notes/style&theming/colors')! as ToNote);
   late final ToNote routes_notes_pure_dart_dart3 = (root.find('/notes/pure_dart/dart3')! as ToNote);
   late final ToNote routes_notes_pure_dart_async = (root.find('/notes/pure_dart/async')! as ToNote);
   late final ToNote routes_notes_pure_dart_safe_interface = (root.find('/notes/pure_dart/safe_interface')! as ToNote);
@@ -188,5 +186,6 @@ class Routes with RoutesMixin {}
 
 class _Pages {
   static const notes = NoteAnnotation(label: "笔记");
+  static const notes_style_theming_colors = NoteAnnotation(label: "Color roles", publish: true);
   static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: true);
 }

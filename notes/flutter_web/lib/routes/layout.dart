@@ -4,7 +4,7 @@ import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 /// [LayoutBuilder]
 Widget build(BuildContext context, Widget child) {
@@ -184,7 +184,7 @@ extension _NoteTreeNode on To {
 }
 
 Future<void> _launchUrl(Uri url) async {
-  if (!await launchUrl(url)) {
+  if (!await url_launcher.launchUrl(url)) {
     throw Exception('Could not launch $url');
   }
 }
@@ -274,6 +274,7 @@ class _ThemeViewState extends State<_ThemeView> {
 
   @override
   Widget build(BuildContext context) {
+    final route = YouRouter.of(context);
     final colors = Theme.of(context).colorScheme;
 
     List<Color> getChildrenColors(MaterialColor e) {
@@ -300,8 +301,10 @@ class _ThemeViewState extends State<_ThemeView> {
           ]),
         ),
         const Divider(),
-        const SizedBox(height: 20,),
 
+        const SizedBox(
+          height: 20,
+        ),
         const Text("Theme mode"),
         Card(
           child: Watch((context) {
@@ -319,7 +322,9 @@ class _ThemeViewState extends State<_ThemeView> {
             );
           }),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const Text("Theme color seed"),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -332,6 +337,12 @@ class _ThemeViewState extends State<_ThemeView> {
             }),
           ],
         ).paddingAll$(10),
+        FilledButton(
+            onPressed: () {
+              route.to(routes.routes_notes_style_theming_colors.toUri());
+            },
+            child: const Text("open Material 3 color roles page")),
+
       ],
     ).constrainedBox$(
       constraints: const BoxConstraints.tightFor(width: 280),
