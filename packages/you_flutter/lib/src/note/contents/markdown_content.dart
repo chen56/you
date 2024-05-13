@@ -3,8 +3,10 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:meta/meta.dart';
 import 'package:you_flutter/src/note/contents/outline.dart';
+
 // import 'package:you_flutter/src/note/flutter_highlight.dart';
 // import 'package:flutter_highlight/themes/vs2015.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 class MD extends StatelessWidget {
   final String text;
@@ -36,7 +38,10 @@ class MarkdownContent extends StatelessWidget {
       // 得研究下controller层层嵌套要怎么用
       // controller: controller,
       shrinkWrap: true,
-
+      onTapLink: (String text, String? href, String title)async {
+        if (href == null) return;
+        await url_launcher.launchUrl(Uri.parse(href));
+      },
       builders: <String, MarkdownElementBuilder>{
         'h1': headerBuilder,
         'h2': headerBuilder,
