@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
 import 'package:you_flutter/better_ui.dart';
 
+@experimental
 class MaterialColorRoles extends StatelessWidget {
   const MaterialColorRoles({super.key});
-
+  //可视性
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -28,6 +30,66 @@ class MaterialColorRoles extends StatelessWidget {
 
     return Column(
       children: [
+        Row(children: [
+          Column(
+            children: [
+              _BackgroundBlock(label: "primary", color: colorScheme.primary, onColors: [
+                _ForegroundBlock(label: "onPrimary", color: colorScheme.onPrimary),
+              ]),
+              _BackgroundBlock(label: "secondary", color: colorScheme.secondary, onColors: [
+                _ForegroundBlock(label: "onSecondary", color: colorScheme.onSecondary),
+              ]),
+              _BackgroundBlock(label: "tertiary", color: colorScheme.tertiary, onColors: [
+                _ForegroundBlock(label: "onTertiary", color: colorScheme.onTertiary),
+              ]),
+            ],
+          ),
+          Column(
+            children: [
+              _BackgroundBlock(label: "primaryContainer", color: colorScheme.primaryContainer, onColors: [
+                _ForegroundBlock(label: "onPrimaryContainer", color: colorScheme.onPrimaryContainer),
+              ]),
+              _BackgroundBlock(label: "secondaryContainer", color: colorScheme.secondaryContainer, onColors: [
+                _ForegroundBlock(label: "onSecondaryContainer", color: colorScheme.onSecondaryContainer),
+              ]),
+              _BackgroundBlock(label: "tertiaryContainer", color: colorScheme.tertiaryContainer, onColors: [
+                _ForegroundBlock(label: "onTertiaryContainer", color: colorScheme.onTertiaryContainer),
+              ]),
+            ],
+          ),
+          Column(
+            children: [
+              _BackgroundBlock(label: "primaryFixed", color: colorScheme.primaryFixed, onColors: [
+                _ForegroundBlock(label: "onPrimaryFixed", color: colorScheme.onPrimaryFixed),
+              ]),
+              _BackgroundBlock(label: "secondaryFixed", color: colorScheme.secondaryFixed, onColors: [
+                _ForegroundBlock(label: "onSecondaryFixed", color: colorScheme.onSecondaryFixed),
+              ]),
+              _BackgroundBlock(label: "tertiaryFixed", color: colorScheme.tertiaryFixed, onColors: [
+                _ForegroundBlock(label: "onTertiaryFixed", color: colorScheme.onTertiaryFixed),
+              ]),
+            ],
+          ),
+
+          Column(
+            children: [
+              _BackgroundBlock(label: "primaryFixedDim", color: colorScheme.primaryFixedDim, onColors: [
+                _ForegroundBlock(label: "onPrimaryFixed", color: colorScheme.onPrimaryFixed),
+                _ForegroundBlock(label: "onPrimaryFixedVariant", color: colorScheme.onPrimaryFixedVariant),
+              ]),
+              _BackgroundBlock(label: "secondaryFixedDim", color: colorScheme.secondaryFixedDim, onColors: [
+                _ForegroundBlock(label: "onSecondaryFixed", color: colorScheme.onSecondaryFixed),
+                _ForegroundBlock(label: "onSecondaryFixedVariant", color: colorScheme.onSecondaryFixedVariant),
+              ]),
+              _BackgroundBlock(label: "tertiaryFixedDim", color: colorScheme.tertiaryFixedDim, onColors: [
+                _ForegroundBlock(label: "onTertiaryFixed", color: colorScheme.onTertiaryFixed),
+                _ForegroundBlock(label: "onTertiaryFixedVariant", color: colorScheme.onTertiaryFixedVariant),
+              ]),
+            ],
+          ),
+        ],),
+
+        const Divider(),
         Wrap(
           children: [
             _BackgroundBlock(label: "primary", color: colorScheme.primary, onColors: [
