@@ -4,15 +4,14 @@ import 'package:you_flutter_internal/you_flutter_internal.dart';
 
 @NoteAnnotation(label: "Color roles", publish: true)
 void build(BuildContext context, Cell print) {
-  print(const MD(r'''
-# Color roles
+//   print(const MD(r'''
+// # Color roles
+//
+// ref
+//
+// - <https://m3.material.io/styles/color/roles>
+//
+//   '''));
 
-ref
-
-- <https://m3.material.io/styles/color/roles>
-
-  '''));
-
-  print(const MaterialColorRoles());
-
+  print(MaterialColorRoles());
 }

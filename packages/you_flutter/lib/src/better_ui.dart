@@ -96,6 +96,9 @@ extension StyleExtension on Widget {
   Widget marginAll$(double value) {
     return Container(margin: EdgeInsets.all(value), child: this);
   }
+  Widget margin$(EdgeInsets margin) {
+    return Container(margin: margin, child: this);
+  }
 
   /// Warp a [Padding]
   Widget padding$(EdgeInsetsGeometry padding) => Padding(padding: padding, child: this);
