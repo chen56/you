@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/state.dart';
@@ -158,7 +156,7 @@ class MaterialColorRoles extends StatelessWidget {
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          Text("其他可放到surface上的color roles (en:other color roles , can put on surface)", style: Theme.of(context).textTheme.headlineLarge),
+          Text("其他可放到surface上的color roles (en:Others can be placed on Surface)", style: Theme.of(context).textTheme.headlineLarge),
           FilterChip(
             label: const Row(
               mainAxisAlignment: MainAxisAlignment.start,
