@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  you_flutter: ^0.0.5
 
 dev_dependencies:
   flutter_test:
@@ -53,3 +54,13 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
+
+dependency_overrides:
+  #  dart CHANGELOG 3.0.0 2023-05-10
+  #   - dart pub publish will no longer warn about dependency_overrides.
+  #     Dependency overrides only take effect in the root package of a resolution.
+  #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  you_dart:
+    path: ../you_dart
+  you_flutter:
+    path: ../you_flutter

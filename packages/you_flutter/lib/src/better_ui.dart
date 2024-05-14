@@ -172,6 +172,11 @@ extension StyleExtension on Widget {
       child: this,
     );
   }
+  Widget intrinsicHeight$() {
+    return IntrinsicHeight(
+      child: this,
+    );
+  }
 
   /// [width]If non-null, requires the child to have exactly this width.
   /// [height]If non-null, requires the child to have exactly this height.

@@ -26,8 +26,10 @@ dependencies:
   source_maps: ^0.10.12
   stack_trace: ^1.11.1
   url_launcher: ^6.2.6
-  you_dart: ^0.0.5
 
+
+  # you_*
+  you_dart: ^0.0.5
 
 dev_dependencies:
   flutter_test:
@@ -43,3 +45,4 @@ dependency_overrides:
   #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
   you_dart:
     path: ../you_dart
+
