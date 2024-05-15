@@ -10,7 +10,6 @@ import 'package:analyzer/file_system/memory_file_system.dart';
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
-import 'package:you_flutter/src/utils_core.dart';
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 

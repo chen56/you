@@ -4,6 +4,7 @@ import 'package:meta/meta.dart';
 
 Types types = Types();
 Strings strings = Strings();
+final Collections collections=Collections();
 
 
 @experimental
@@ -116,4 +117,20 @@ class Strings {
       throw Exception("$e, string $this");
     }
   }
+}
+
+
+
+class Collections{
+  Iterable<(E value, E? next)> combineNext<E>(Iterable<E> values) sync* {
+    var list = values.toList();
+    for (int i = 0; i < list.length; i++) {
+      if (i + 1 < list.length) {
+        yield (list[i], list[i + 1]);
+      } else {
+        yield (list[i], null);
+      }
+    }
+  }
+
 }
