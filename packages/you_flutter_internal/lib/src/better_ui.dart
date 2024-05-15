@@ -92,6 +92,40 @@ final class BetterUI {
           child: child,
         ));
   }
+
+
+}
+
+Size measureWidget(Widget widget) {
+  final PipelineOwner pipelineOwner = PipelineOwner();
+  final _MeasurementView rootView = pipelineOwner.rootNode = _MeasurementView();
+  final BuildOwner buildOwner = BuildOwner(focusManager: FocusManager());
+  final RenderObjectToWidgetElement<RenderBox> element = RenderObjectToWidgetAdapter<RenderBox>(
+    container: rootView,
+    debugShortDescription: '[root]',
+    child: widget,
+  ).attachToRenderTree(buildOwner);
+  try {
+    rootView.scheduleInitialLayout();
+    pipelineOwner.flushLayout();
+    return rootView.size;
+  } finally {
+    // Clean up.
+    element.update(RenderObjectToWidgetAdapter<RenderBox>(container: rootView));
+    buildOwner.finalizeTree();
+  }
+}
+
+class _MeasurementView extends RenderBox with RenderObjectWithChildMixin<RenderBox> {
+  @override
+  void performLayout() {
+    assert(child != null);
+    child!.layout(const BoxConstraints(), parentUsesSize: true);
+    size = child!.size;
+  }
+
+  @override
+  void debugAssertDoesMeetConstraints() => true;
 }
 
 extension StyleExtension on Widget {

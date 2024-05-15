@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:meta/meta.dart';
 import 'package:you_flutter_internal/better_ui.dart';
 import 'package:you_flutter/state.dart';
@@ -17,26 +16,31 @@ class MaterialColorRoles extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final colors = _Colors(colorScheme: colorScheme);
 
-    Size maxSizeOfOnSurfaces = Size.zero;
-    for (var c in colors.onSurfaces) {
-      final Size size = measureWidget(Directionality(
-        textDirection: TextDirection.ltr,
-        child: _OnBlock(color: c),
-      ));
-      if (size.width > maxSizeOfOnSurfaces.width) {
-        maxSizeOfOnSurfaces = size;
+    Size maxSizeOfOnSurfaces = () {
+      _ColorData max = colors.onSurfaces.first;
+      for (var c in colors.onSurfaces) {
+        if (c.label.length > max.label.length) {
+          max = c;
+        }
       }
-    }
-    Size maxSizeOfbackgroundColor = Size.zero;
-    for (var c in colors.backgroundColors) {
-      final Size size = measureWidget(Directionality(
+      return measureWidget(Directionality(
         textDirection: TextDirection.ltr,
-        child: Text(c.label),
+        child: _OnBlock(color: max),
       ));
-      if (size.width > maxSizeOfbackgroundColor.width) {
-        maxSizeOfbackgroundColor = size;
+    }();
+
+    Size maxSizeOfBackgroundColor = () {
+      String maxLabel = "";
+      for (var c in colors.backgroundColors) {
+        if (c.label.length > maxLabel.length) {
+          maxLabel = c.label;
+        }
       }
-    }
+      return measureWidget(Directionality(
+        textDirection: TextDirection.ltr,
+        child: Text(maxLabel),
+      ));
+    }();
 
     Widget chipCanPutOnColor(_ColorData color) {
       return FilterChip(
@@ -60,7 +64,7 @@ class MaterialColorRoles extends StatelessWidget {
     }
 
     _BackgroundBlock _backgroundBlock({required Color color, required String label, List<_ColorData> onColors = const []}) {
-      return _BackgroundBlock(label: label, color: color, backgroundColorLabelWidth: maxSizeOfbackgroundColor.width, onColorWidth: maxSizeOfOnSurfaces.width, onColors: onColors);
+      return _BackgroundBlock(label: label, color: color, backgroundColorLabelWidth: maxSizeOfBackgroundColor.width, onColorWidth: maxSizeOfOnSurfaces.width, onColors: onColors);
     }
 
     var result = Watch((context) {
@@ -617,10 +621,13 @@ class _BackgroundBlock extends StatelessWidget {
             children: [
               Container(
                   alignment: Alignment.centerLeft,
-                  width: backgroundColorLabelWidth + widthBuffer+24,
+                  width: backgroundColorLabelWidth + widthBuffer + 24,
                   child: Row(
                     children: [
-                      Icon(Icons.flip_to_back_sharp,color: onColors[0].color,),
+                      Icon(
+                        Icons.flip_to_back_sharp,
+                        color: onColors[0].color,
+                      ),
                       Text(label, style: TextStyle(color: onColors[0].color)),
                     ],
                   )),
@@ -654,36 +661,4 @@ class _OnBlock extends StatelessWidget {
       ],
     ).borderAll$(color: color.color).paddingAll$(2);
   }
-}
-
-Size measureWidget(Widget widget) {
-  final PipelineOwner pipelineOwner = PipelineOwner();
-  final MeasurementView rootView = pipelineOwner.rootNode = MeasurementView();
-  final BuildOwner buildOwner = BuildOwner(focusManager: FocusManager());
-  final RenderObjectToWidgetElement<RenderBox> element = RenderObjectToWidgetAdapter<RenderBox>(
-    container: rootView,
-    debugShortDescription: '[root]',
-    child: widget,
-  ).attachToRenderTree(buildOwner);
-  try {
-    rootView.scheduleInitialLayout();
-    pipelineOwner.flushLayout();
-    return rootView.size;
-  } finally {
-    // Clean up.
-    element.update(RenderObjectToWidgetAdapter<RenderBox>(container: rootView));
-    buildOwner.finalizeTree();
-  }
-}
-
-class MeasurementView extends RenderBox with RenderObjectWithChildMixin<RenderBox> {
-  @override
-  void performLayout() {
-    assert(child != null);
-    child!.layout(const BoxConstraints(), parentUsesSize: true);
-    size = child!.size;
-  }
-
-  @override
-  void debugAssertDoesMeetConstraints() => true;
 }
