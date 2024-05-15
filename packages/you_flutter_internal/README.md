@@ -1,21 +1,8 @@
-# you_flutter
+# you_flutter_internal
 
 A package that facilitates for dart/flutter applications.
 
 ## Features
 
-## Features
-
-- [you_dart](https://pub.dev/packages/you_dart):
-  - you-data[dart]: JSON automation assistance library, No-code generated.
-- [you_flutter](https://pub.dev/packages/you_flutter):
-  - you-state[flutter]: signal base flutter state management,base on you-data, No-code generated.
-  - you-router[flutter]: easier to use navigator framework based on flutter navigator v2.
-  - you-note[flutter]
-    - a flutter note framework.
-    - and some flutter learn examples.
-- [you_cli](https://pub.dev/packages/you_cli):
-
-## Getting started
-
-ref: https://github.com/chen56/notes/flutter_web
+- you_* 相关app内部的一些公共lib
+- 也是you_flutter的孵化器

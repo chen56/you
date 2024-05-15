@@ -9,6 +9,7 @@ environment:
   flutter: '>=3.22.0'
 
 dependencies:
+  checks: ^0.3.0
   flutter:
     sdk: flutter
   meta: ^1.12.0
