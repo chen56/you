@@ -1,17 +1,18 @@
 name: you_dart
 description: "dart lib, for data basic tools such as json、yaml serialization ."
-version: 0.0.6-dev.1
+version: 0.0.6-dev.2
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
 environment:
-  sdk: ^3.3.0
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 # Add regular dependencies here.
 dependencies:
   flutter:
     sdk: flutter
-  meta: ^1.11.0
+  meta: ^1.12.0
   collection: ^1.18.0
 
 dev_dependencies:

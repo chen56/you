@@ -1,12 +1,12 @@
 name: you_flutter
 description: "Flutter framework project, for state , navigator and other flutter development infrastructure ."
-version: 0.0.6-dev.1
+version: 0.0.6-dev.2
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
-  flutter: ">=3.19.0"
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 dependencies:
   analyzer: ^6.4.1

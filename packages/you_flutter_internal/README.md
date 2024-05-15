@@ -1,39 +1,21 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# you_flutter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A package that facilitates for dart/flutter applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Features
+
+- [you_dart](https://pub.dev/packages/you_dart):
+  - you-data[dart]: JSON automation assistance library, No-code generated.
+- [you_flutter](https://pub.dev/packages/you_flutter):
+  - you-state[flutter]: signal base flutter state management,base on you-data, No-code generated.
+  - you-router[flutter]: easier to use navigator framework based on flutter navigator v2.
+  - you-note[flutter]
+    - a flutter note framework.
+    - and some flutter learn examples.
+- [you_cli](https://pub.dev/packages/you_cli):
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+ref: https://github.com/chen56/notes/flutter_web

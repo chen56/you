@@ -1,18 +1,18 @@
 name: you_flutter_internal
 description: "you_* internal package."
-version: 0.0.6-dev.1
+version: 0.0.6-dev.2
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
-  flutter: ">=3.19.0"
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 dependencies:
   flutter:
     sdk: flutter
   meta: ^1.12.0
-  you_flutter: ^0.0.6-dev.1
+  you_flutter: ^0.0.6-dev.2
 
 dev_dependencies:
   flutter_test:
