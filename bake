@@ -131,6 +131,7 @@ upgrade()     { _run_all upgrade;                                              }
 clean()       { _run_all clean;                                                }
 test()        { _run_all test;                                                 }
 gen()         { _run_all gen;                                                  }
+publish()     { _run_all publish;                                               }
 dart_fix()    { run dart fix $@;                                               }
 
 # 根项目，主要是bin/辅助工具等

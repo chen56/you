@@ -37,7 +37,7 @@ dependencies:
   source_maps: ^0.10.12
 
   # you_*
-  _you_dart_internal: ^0.0.6-dev.2
+  _you_dart_internal: ^0.0.6-dev.3
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
 
