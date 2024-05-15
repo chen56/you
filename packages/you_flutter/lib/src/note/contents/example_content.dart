@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
+import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/src/note/contents/params.dart';
 import 'package:you_flutter/src/note/contents/flutter_highlight.dart';
 import 'package:you_flutter/src/note/note.dart';
 import 'package:code_builder/code_builder.dart' as code;
-import 'package:you_flutter/src/utils_ui.dart';
 
 /// 暂时搁置参数需求
 /// this package is dependency by note page
@@ -40,6 +40,7 @@ typedef SampleCodeBuilder = String Function(Cell cell, ObjectParam param, Editor
 class SampleTemplate {
   String name;
   SampleCodeBuilder codeBuilder;
+
   SampleTemplate({required this.name, required this.codeBuilder});
 
   // ignore: prefer_function_declarations_over_variables
@@ -105,7 +106,6 @@ class SampleTemplate {
   /// cell代码被转换后作为范例代码
   /// The cell code is transformed as sample code
   static String _cleanCellCode(Cell cell, ObjectParam rootParam) {
-
     // TODO 130 remove
     // // var sources = cell.source.specialSources.where((e) => _eraseCodeTypes.contains(e.codeType)).toList();
     // //
@@ -123,7 +123,7 @@ class SampleTemplate {
   }
 }
 
-class ExampleWidget extends StatelessWidget   {
+class ExampleWidget extends StatelessWidget {
   final ObjectParam rootParam;
   final String title;
   final ExampleContent content;
@@ -143,34 +143,36 @@ class ExampleWidget extends StatelessWidget   {
     required Widget codeView,
     required ExampleContent content,
   }) {
-    WindowClass win = WindowClass.of(context);
-
-    // screen large enough
-    if (win == WindowClass.expanded) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (content.isShowCode) Expanded(child: codeView),
-          if (content.isShowParamEditor) Expanded(child: paramView),
-        ],
-      );
-    }
-
-    // screen large not enough
-    var codeViewFillWidth = LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        return SizedBox(width: constraints.maxWidth, child: codeView);
+    var screenBuilder = ScreenSize.match(
+      context,
+      min: (context) {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (content.isShowCode) Expanded(child: codeView),
+            if (content.isShowParamEditor) Expanded(child: paramView),
+          ],
+        );
+      },
+      lg: (context) {
+        // screen large not enough
+        var codeViewFillWidth = LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            return SizedBox(width: constraints.maxWidth, child: codeView);
+          },
+        );
+        return Column(
+          // mainAxisAlignment: MainAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (content.isShowCode) codeViewFillWidth,
+            if (content.isShowParamEditor) paramView,
+          ],
+        );
       },
     );
-    return Column(
-      // mainAxisAlignment: MainAxisAlignment.start,
-      // crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (content.isShowCode) codeViewFillWidth,
-        if (content.isShowParamEditor) paramView,
-      ],
-    );
+    return screenBuilder(context);
   }
 
   Widget buildParamRow(BuildContext context, Param param) {

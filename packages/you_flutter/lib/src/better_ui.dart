@@ -1,5 +1,4 @@
 @experimental
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -92,8 +91,6 @@ final class BetterUI {
           child: child,
         ));
   }
-
-
 }
 
 Size measureWidget(Widget widget) {
@@ -133,6 +130,7 @@ extension StyleExtension on Widget {
   Widget marginAll$(double value) {
     return Container(margin: EdgeInsets.all(value), child: this);
   }
+
   Widget margin$(EdgeInsets margin) {
     return Container(margin: margin, child: this);
   }
@@ -212,6 +210,7 @@ extension StyleExtension on Widget {
       child: this,
     );
   }
+
   Widget intrinsicHeight$() {
     return IntrinsicHeight(
       child: this,
@@ -400,7 +399,7 @@ enum ScreenSize {
   ///   - 如果screen==1024或1279, 卡在lg档，因为1024<=screen<1280
   ///   - 如果screen==1280或1535, 卡在lx档，因为1280<=screen<1536
   ///   - 如果screen==1536及以上, 卡在xxl档，因为1536<=screen<infinity
-  static ScreenSize byScreen(double screenWidth) {
+  static ScreenSize ofWidth(double screenWidth) {
     var current = ScreenSize.min;
     for (var breakpoint in values) {
       if (screenWidth >= breakpoint.minWidth) {
@@ -412,14 +411,18 @@ enum ScreenSize {
     return ScreenSize.xxl;
   }
 
-  static T best<T>(BuildContext context, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
-    return bestWithWidth(MediaQuery.of(context).size.width, min: min, sm: sm, md: md, lg: lg, xl: xl, xxl: xxl);
+  static ScreenSize of(BuildContext context) {
+    return ofWidth(MediaQuery.of(context).size.width);
+  }
+
+  static T match<T>(BuildContext context, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
+    return matchWidth(MediaQuery.of(context).size.width, min: min, sm: sm, md: md, lg: lg, xl: xl, xxl: xxl);
   }
 
   /// 为一个宽度的屏幕选择其相应的样式,概念和tailwindcss相似
-  /// 屏幕宽度落在哪档的计算参考[byScreen]
-  static T bestWithWidth<T>(double screenWidth, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
-    ScreenSize now = byScreen(screenWidth);
+  /// 屏幕宽度落在哪档的计算参考[ofWidth]
+  static T matchWidth<T>(double screenWidth, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
+    ScreenSize now = ofWidth(screenWidth);
     List<(ScreenSize, T?)> options = [
       (ScreenSize.xxl, xxl),
       (ScreenSize.xl, xl),
