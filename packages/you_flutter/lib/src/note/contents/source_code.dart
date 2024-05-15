@@ -11,7 +11,7 @@ import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
 import 'package:you_flutter/src/utils_core.dart';
 // ignore: implementation_imports, internal import /src of the same project
-import 'package:you_dart/src/core.dart';
+import 'package:_you_dart_internal/core.dart';
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 

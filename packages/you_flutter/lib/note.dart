@@ -8,3 +8,5 @@ export 'src/note/note.dart' show ToNote, NoteAnnotation, NoteBuilder, NoteLayout
 export 'src/note/contents/contents.dart' show contents, Contents;
 export 'src/note/contents/mockup.dart' show MockupWindow;
 export 'src/note/contents/markdown_content.dart' show MD;
+
+export 'src/note/visualization/material_colors.dart' show MaterialColorRoles;

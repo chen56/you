@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
-import 'package:_you_flutter/visualization.dart';
 
 @NoteAnnotation(label: "Color roles", publish: true)
 void build(BuildContext context, Cell print) {

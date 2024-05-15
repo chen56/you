@@ -139,13 +139,13 @@ root.run()               { _run root "$@";                                      
 bake.run()              { _run bake "$@";                                           }
 bake.test()             { _run bake ./test.bash test;                               }
 
-_you_dart.run()     { _run _you_dart "$@";                                 }
-_you_dart.install() { _run _you_dart flutter pub get;                      }
-_you_dart.clean()   { _run _you_dart flutter clean; rm -rf build;          }
-_you_dart.upgrade() { _run _you_dart flutter pub outdated ;
-                      _run _you_dart flutter pub upgrade ;                 }
-_you_dart.test()    { _run _you_dart flutter test;                         }
-_you_dart.publish() { _run _you_dart flutter pub publish;                  }
+_you_dart_internal.run()     { _run _you_dart_internal "$@";                                 }
+_you_dart_internal.install() { _run _you_dart_internal flutter pub get;                      }
+_you_dart_internal.clean()   { _run _you_dart_internal flutter clean; rm -rf build;          }
+_you_dart_internal.upgrade() { _run _you_dart_internal flutter pub outdated ;
+                      _run _you_dart_internal flutter pub upgrade ;                 }
+_you_dart_internal.test()    { _run _you_dart_internal flutter test;                         }
+_you_dart_internal.publish() { _run _you_dart_internal flutter pub publish;                  }
 
 you_dart.run()     { _run you_dart "$@";                                 }
 you_dart.install() { _run you_dart flutter pub get;                      }
@@ -162,16 +162,6 @@ you_flutter.upgrade() { _run you_flutter flutter pub outdated ;
                         _run you_flutter flutter pub upgrade ;                 }
 you_flutter.test()    { _run you_flutter flutter test;                         }
 you_flutter.publish() { _run you_flutter flutter pub publish;                  }
-
-
-_you_flutter.run()     { _run _you_flutter "$@";                                 }
-_you_flutter.install() { _run _you_flutter flutter pub get;                      }
-_you_flutter.clean()   { _run _you_flutter flutter clean; rm -rf build;          }
-_you_flutter.upgrade() { _run _you_flutter flutter pub outdated ;
-                                 _run _you_flutter flutter pub upgrade ;                 }
-_you_flutter.test()    { _run _you_flutter flutter test;                         }
-_you_flutter.publish() { _run _you_flutter flutter pub publish;               }
-
 
 you_cli.run()     { _run you_cli "$@";                                 }
 you_cli.test()    { _run you_cli dart test;                                 }

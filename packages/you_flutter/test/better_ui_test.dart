@@ -1,6 +1,6 @@
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:_you_flutter/better_ui.dart';
+import 'package:you_flutter/src/better_ui.dart';
 
 void main() {
   group("YouRouter.parse ok", () {

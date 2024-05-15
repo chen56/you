@@ -1,4 +1,4 @@
-name: _you_dart
+name: _you_dart_internal
 description: "internal dart lib."
 version: 0.0.6-dev.2
 homepage: https://github.com/chen56/you
@@ -9,8 +9,9 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
-  # path: ^1.8.0
+  meta: ^1.12.0
 
 dev_dependencies:
-  lints: ^3.0.0
+  lints: ^4.0.0
   test: ^1.24.0
+  checks: ^0.3.0

@@ -1,6 +1,6 @@
+import 'package:_you_dart_internal/core.dart';
 import 'package:checks/checks.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:you_dart/src/core.dart';
+import 'package:test/test.dart';
 
 void main() {
   group("types.isType", () {

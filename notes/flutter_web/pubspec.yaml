@@ -37,9 +37,9 @@ dependencies:
   source_maps: ^0.10.12
 
   # you_*
+  _you_dart_internal: ^0.0.6-dev.2
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
-  _you_flutter: ^0.0.6-dev.2
 
 
 dev_dependencies:
@@ -81,9 +81,9 @@ dependency_overrides:
     #   - dart pub publish will no longer warn about dependency_overrides.
     #     Dependency overrides only take effect in the root package of a resolution.
     #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  _you_dart_internal:
+    path: ../../packages/_you_dart_internal
   you_dart:
     path: ../../packages/you_dart
   you_flutter:
     path: ../../packages/you_flutter
-  _you_flutter:
-    path: ../../packages/_you_flutter
