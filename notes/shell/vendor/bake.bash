@@ -9,7 +9,7 @@ _bake_version=v0.3.20240327
 
 # v0.2.20230528 - It can run normally on macos
 # bake == (bash)ake == 去Make的bash tool
-# 
+#
 # https://github.com/chen56/bake
 #
 # bake 是个简单的命令行工具，以替代Makefile的子命令功能
@@ -57,7 +57,7 @@ _bake_version=v0.3.20240327
 #      需要设置设一个简单的规则：只有叶子命令才能正常执行，这样非叶子命令就不需要有参数
 #   2. 当前 无法判断错误options：./bake --no_this_opt ,同上
 #   3. 类似flutter run [no-]pub 反向选项
-# 
+#
 
 
 # check bake dependencies
@@ -68,8 +68,8 @@ if ((BASH_VERSINFO[0] < 4 || (\
     brew install bash # mac"
   exit 1
 fi
-# On Mac OS, readlink -f doesn't work, so use.bake._real_path get the real path of the file
-bake._real_path() (
+# On Mac OS, readlink -f doesn't work, so use.bake.__real_path get the real path of the file
+bake.__real_path() (
   cd "$(dirname "$1")"
   file="$PWD/$(basename "$1")"
   while [[ -L "$file" ]]; do
@@ -81,15 +81,15 @@ bake._real_path() (
 )
 
 # bake context
-BAKE_PATH="$(bake._real_path "${BASH_SOURCE[0]}")"
+BAKE_PATH="$(bake.__real_path "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}" # set workdir
 declare debug=false
 declare help=false
 
-bake._on_error() {
-  bake._error "ERROR - trapped an error: ↑ , trace: ↓"
+bake.__on_error() {
+  bake.__error "ERROR - trapped an error: ↑ , trace: ↓"
   local i=0
   local stackInfo
   while true; do
@@ -103,46 +103,46 @@ bake._on_error() {
 
     # 打印出可读性强的信息:
     #    => ./note/bake:38 -> bake.build
-    printf "%s\n" "$(bake._real_path $file):$no -> $func" >&2
+    printf "%s\n" "$(bake.__real_path $file):$no -> $func" >&2
 
     i=$((i + 1))
   done
 }
 # Add the error catch first
 #https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-trap
-trap "bake._on_error" ERR
+trap "bake.__on_error" ERR
 
 
 # replace $HOME with "~"
-# Usage: bake._pwd
+# Usage: bake.__pwd
 # Examples: 当前目录如果是"/Users/chen/git/note/"
 #     转成更简单易读的 => "~/git/note/"
-bake._pwd() { echo "${PWD/#$HOME/\~}" ; }
+bake.__pwd() { echo "${PWD/#$HOME/\~}" ; }
 
 # 报错后终止程序，类似于其他语言的throw Excpetion
 # 因set -o errexit 后，程序将在return 1 时退出，
-# 退出前被‘trap bake._on_error ERR’捕获并显示错误堆栈
-# Usage: bake._throw <ERROR_MESSAGE>
-bake._throw(){
-  bake._error "$@"
-  # set -o errexit 后，程序将退出，退出前被trap bake._on_error Err捕获并显示错误堆栈
+# 退出前被‘trap bake.__on_error ERR’捕获并显示错误堆栈
+# Usage: bake.__throw <ERROR_MESSAGE>
+bake.__throw(){
+  bake.__error "$@"
+  # set -o errexit 后，程序将退出，退出前被trap bake.__on_error Err捕获并显示错误堆栈
   return 1
 }
-bake._error() {
-  bake._log "$@"
+bake.__error() {
+  bake.__log "$@"
 }
-bake._info() {
-  bake._log "$@"
+bake.__info() {
+  bake.__log "$@"
 }
-bake._debug() {
+bake.__debug() {
   if [[ "${debug}" != true ]]; then return 0; fi
-  bake._log "$@"
+  bake.__log "$@"
 }
-# Usage: bake._log DEBUG "错误消息"
-bake._log(){
+# Usage: bake.__log DEBUG "错误消息"
+bake.__log(){
   local level;
   level=$1
-  echo -e "$level $(date "+%F %T") $(bake._pwd)\$ ${FUNCNAME[1]}() : $*" >&2
+  echo -e "$level $(date "+%F %T") $(bake.__pwd)\$ ${FUNCNAME[1]}() : $*" >&2
 }
 
 
@@ -165,15 +165,15 @@ TYPE_CMD="type:cmd"
 # bake common function
 ##########################################
 
-# Usage: bake._str_cutLeft <str> <left>
-# bake._path_dirname a/b/c  a/b    => c
-bake._str_cutLeft() { printf "${1#$2}"; }
+# Usage: bake.__str_cutLeft <str> <left>
+# bake.__path_dirname a/b/c  a/b    => c
+bake.__str_cutLeft() { printf "${1#$2}"; }
 
 # 分割字符串
-# Usage: bake._str_split <str> [delimiter:default /]
-# Example: bake._str_split "a/b/c" "/"
+# Usage: bake.__str_split <str> [delimiter:default /]
+# Example: bake.__str_split "a/b/c" "/"
 #  => $'a\nb\nc'    # 会把字符串分割为以换行符间隔的字符串
-bake._str_split() {
+bake.__str_split() {
   #${delimiter:-DEFAULT}  unset 或null 都给默认值
   # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
   local str="$1"
@@ -190,49 +190,49 @@ bake._str_split() {
   printf '%s\n' "${arr[@]}"
 }
 
-# Usage: bake._str_revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
-bake._str_revertLines() {
+# Usage: bake.__str_revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
+bake.__str_revertLines() {
   # cat xxx | tail -r; # macos bsd only, not work on linux
   # so use sed
   sed '1!G;h;$!d' # sed magic
 }
 
-# Usage: bake._path_dirname <str> [delimiter:default /]
+# Usage: bake.__path_dirname <str> [delimiter:default /]
 # similar command dirname, but
 #     dirname root is ".", only work with "/"
-#     bake._path_dirname root is "" , can set delimiter
-# bake._path_dirname a.b.c .    => a.b
-bake._path_dirname() {
+#     bake.__path_dirname root is "" , can set delimiter
+# bake.__path_dirname a.b.c .    => a.b
+bake.__path_dirname() {
   local pathLikeStr="$1" delimiter="${2:-/}"
   if [[ "$pathLikeStr" != *"$delimiter"* ]]; then
     return
   fi
   printf '%s' "${pathLikeStr%$delimiter*}"
 }
-# Usage: bake._path_first <str> [delimiter:default /]
-# bake._path_first a.b.c .    => a
-bake._path_first() {
+# Usage: bake.__path_first <str> [delimiter:default /]
+# bake.__path_first a.b.c .    => a
+bake.__path_first() {
   local pathLikeStr="$1" delimiter="${2:-/}"
-  # if /a/b/c , call :bake._path_first a/b/c /
+  # if /a/b/c , call :bake.__path_first a/b/c /
   if [[ "$pathLikeStr" == "$delimiter"* ]]; then
     local removeDelim
-    removeDelim=$(bake._str_cutLeft "$pathLikeStr" "$delimiter")
-    printf "$delimiter$(bake._path_first "$removeDelim" "$delimiter")"
+    removeDelim=$(bake.__str_cutLeft "$pathLikeStr" "$delimiter")
+    printf "$delimiter$(bake.__path_first "$removeDelim" "$delimiter")"
   else # a/b/c
     printf "${pathLikeStr%%$delimiter*}"
   fi
 }
 # similar command basename
-# Usage: bake._path_basename <str> [delimiter:default /]
-bake._path_basename() {
+# Usage: bake.__path_basename <str> [delimiter:default /]
+bake.__path_basename() {
   local pathLikeStr="$1" delimiter="${2:-/}"
   # ${1##*/}  => ## left remove until last "/"
   printf "${pathLikeStr##*$delimiter}"
 }
 
-# Usage: bake._data_children <dataPath>
+# Usage: bake.__data_children <dataPath>
 #   return <dataPath> children name
-bake._data_children() {
+bake.__data_children() {
   local path="$1"
   # ${!_bake_data[@]}: get all array keys
   local key
@@ -241,22 +241,22 @@ bake._data_children() {
     if [[ "$key" == "$path"* ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
       # remove prefix : key:build/opts/dir/type/x leftPathToBeCut:build/opts => dir/type/x
-      local child=$(bake._str_cutLeft "$key" "$path/")
+      local child=$(bake.__str_cutLeft "$key" "$path/")
       # remove suffix:  dir/type/x => dir
-      child=$(bake._path_first "$child" "/")
+      child=$(bake.__path_first "$child" "/")
       printf '%s\n' "$child"
     fi
   done | sort -u
 }
 
-bake._cmd_childrenNameMaxLength() {
+bake.__cmd_childrenNameMaxLength() {
   local cmd="$1" maxLengthOfCmd=0
-  for child in $(bake._cmd_children "$cmd"); do
+  for child in $(bake.__cmd_children "$cmd"); do
     if ((${#child} > maxLengthOfCmd)); then maxLengthOfCmd=${#child}; fi
   done
   printf "$maxLengthOfCmd"
 }
-bake._cmd_children() (
+bake.__cmd_children() (
   local path="$1"
   if [[ "$path" == root ]]; then
     path=""
@@ -268,38 +268,38 @@ bake._cmd_children() (
     if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "root" ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
       # remove prefix : key:a.b.c leftPathToBeCut:a => b.c
-      child=$(bake._str_cutLeft "$key" "$path.")
+      child=$(bake.__str_cutLeft "$key" "$path.")
       # remove suffix:  b.c => c
-      child=$(bake._path_first "$child" ".")
+      child=$(bake.__path_first "$child" ".")
       printf '%s\n' "$child"
     fi
   done | sort -u
 )
 
-# Usage: bake._cmd_up_chain <cmd>
-# sample: bake._cmd_up_chain a.b      => "a.b", "a", "root"
-bake._cmd_up_chain() {
+# Usage: bake.__cmd_up_chain <cmd>
+# sample: bake.__cmd_up_chain a.b      => "a.b", "a", "root"
+bake.__cmd_up_chain() {
   local path="${1:-root}"
   local up="$path"
   while [[ "$up" != "" ]]; do
     printf '%s\n' "$up"
-    up=$(bake._path_dirname "$up" ".")
+    up=$(bake.__path_dirname "$up" ".")
   done
   if [[ "$path" != "root" ]]; then printf "root\n"; fi
 }
-# Usage: bake._cmd_down_chain <cmd>
-# reverse of bake._cmd_up_chain
-bake._cmd_down_chain() {
-  bake._cmd_up_chain "$1" | bake._str_revertLines
+# Usage: bake.__cmd_down_chain <cmd>
+# reverse of bake.__cmd_up_chain
+bake.__cmd_down_chain() {
+  bake.__cmd_up_chain "$1" | bake.__str_revertLines
 }
 
-# Usage: bake._opt_cmd_chain_opts <cmd>
-# Examples: bake._opt_cmd_chain_opts bake.info
+# Usage: bake.__opt_cmd_chain_opts <cmd>
+# Examples: bake.__opt_cmd_chain_opts bake.info
 # return optionDataPath list
-bake._opt_cmd_chain_opts() {
+bake.__opt_cmd_chain_opts() {
   local cmd=$1
   local upCmds
-  readarray -t upCmds <<<"$(bake._cmd_up_chain "$cmd")"
+  readarray -t upCmds <<<"$(bake.__cmd_up_chain "$cmd")"
 
   local key
   for key in "${!_bake_data[@]}"; do
@@ -315,7 +315,7 @@ bake._opt_cmd_chain_opts() {
 
 # only use by bake.opt,
 # because "bake.opt" is meta function, use this func to add self
-bake._opt_internal_add() {
+bake.__opt_internal_add() {
   local cmd="$1" opt="$2" type="$3" required="$4" default="$5" abbr="$6" desc="$7"
   _bake_data["$cmd/opts/$opt"]="type:opt"
   _bake_data["$cmd/opts/$opt/name"]="$opt"
@@ -327,9 +327,9 @@ bake._opt_internal_add() {
 }
 
 
-# Usage: bake._cmd_register
+# Usage: bake.__cmd_register
 # ensure all cmd register
-bake._cmd_register() {
+bake.__cmd_register() {
   local functionName
 
   while IFS=$'\n' read -r functionName; do
@@ -338,7 +338,7 @@ bake._cmd_register() {
       return 1
     fi
     local upCmd
-    for upCmd in $(bake._cmd_up_chain "$functionName"); do
+    for upCmd in $(bake.__cmd_up_chain "$functionName"); do
       # if upCmd is a function , set upCmd value to data path
       if compgen -A function | grep -q "^$upCmd$"; then
         _bake_cmds["$upCmd"]="$upCmd"
@@ -356,13 +356,13 @@ bake._cmd_register() {
 }
 
 # 显示一条命令的帮助
-# Usage: bake._show_cmd_help <CMD>
-# Examples: bake._show_cmd_help deploy #显示deploy的帮助:
-bake._show_cmd_help() {
+# Usage: bake.__show_cmd_help <CMD>
+# Examples: bake.__show_cmd_help deploy #显示deploy的帮助:
+bake.__show_cmd_help() {
   local cmd="$1"
 
   if [[ "$cmd" == "" ]]; then
-    bake._throw "bake._show_cmd_help need a arg: bake._show_cmd_help [cmd]"
+    bake.__throw "bake.__show_cmd_help need a arg: bake.__show_cmd_help [cmd]"
   fi
 
   shift
@@ -372,9 +372,9 @@ bake._show_cmd_help() {
   echo
 
   if [[ "$cmd" == "root" ]] ;then
-      echo "Running:【: $(bake._pwd)/$BAKE_FILE $@】"
+      echo "Running:【: $(bake.__pwd)/$BAKE_FILE $@】"
   else
-      echo "Running:【$(bake._pwd)/$BAKE_FILE $cmd $@】"
+      echo "Running:【$(bake.__pwd)/$BAKE_FILE $cmd $@】"
   fi
 
   echo
@@ -382,8 +382,8 @@ bake._show_cmd_help() {
   echo
 
   echo "Available Options:"
-  for optPath in $(bake._opt_cmd_chain_opts "$cmd"); do
-    local opt=$(bake._path_basename "$optPath")
+  for optPath in $(bake.__opt_cmd_chain_opts "$cmd"); do
+    local opt=$(bake.__path_basename "$optPath")
     local name=${_bake_data["$optPath/name"]}
     local type=${_bake_data["$optPath/type"]}
     local required=${_bake_data["$optPath/required"]}
@@ -406,9 +406,9 @@ bake._show_cmd_help() {
   echo "
 Available Commands:"
   local maxLengthOfCmd
-  maxLengthOfCmd="$(bake._cmd_childrenNameMaxLength "$cmd")"
+  maxLengthOfCmd="$(bake.__cmd_childrenNameMaxLength "$cmd")"
 
-  for subCmd in $(bake._cmd_children "$cmd"); do
+  for subCmd in $(bake.__cmd_children "$cmd"); do
 
     # only show public cmd if not verbose
     # '_'起头的命令和'bake'命令，只有debug模式才打印出来
@@ -441,13 +441,13 @@ Available Commands:"
 #   default: 缺省值, 未指定参数时，使用此值
 #   desc: 参数帮助，将显示在‘./bake build -h’命令帮助里
 # 参考[bake.parse]
-bake._opt_internal_add bake.opt "cmd"      "string" "true"  ""      ""      "cmd name"
-bake._opt_internal_add bake.opt "name"     "string" "true"  ""      ""      "option name"
-bake._opt_internal_add bake.opt "type"     "string" "true"  ""      ""      "option type [bool|string|list]"
-bake._opt_internal_add bake.opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
-bake._opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "option abbr"
-bake._opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
-bake._opt_internal_add bake.opt "desc"  "string" "false" ""      ""      "option desc"
+bake.__opt_internal_add bake.opt "cmd"      "string" "true"  ""      ""      "cmd name"
+bake.__opt_internal_add bake.opt "name"     "string" "true"  ""      ""      "option name"
+bake.__opt_internal_add bake.opt "type"     "string" "true"  ""      ""      "option type [bool|string|list]"
+bake.__opt_internal_add bake.opt "required" "bool"   "false" "false" "false" "option required [true|false],default[false]"
+bake.__opt_internal_add bake.opt "abbr"     "string" "false" ""      ""      "option abbr"
+bake.__opt_internal_add bake.opt "default"  "string" "false" ""      ""      "option abbr"
+bake.__opt_internal_add bake.opt "desc"  "string" "false" ""      ""      "option desc"
 bake.opt() {
   eval "$(bake.parse ""${FUNCNAME[0]}"" "$@")"
   if [[ "$name" == "" ]]; then
@@ -459,7 +459,7 @@ bake.opt() {
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list" ]]; then
     echo "error: option [--type] must in [bool|string|list] " >&2 && return 1
   fi
-  bake._opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$desc"
+  bake.__opt_internal_add "$cmd" "$name" "$type" "${required:-false}" "$default" "$abbr" "$desc"
 }
 
 # bake.opt  (public api)
@@ -491,7 +491,7 @@ bake.opt() {
 bake.parse() {
   local cmd="${1}"
   if [[ "$cmd" == "" ]]; then
-    bake._throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default root> [arg1] [arg2]" ;
+    bake.__throw "bake.parse函数需提供cmd参数, Usage: bake.parse <cmd:default root> [arg1] [arg2]" ;
   fi
 
   shift; # shift cmd arg, left is options
@@ -501,9 +501,9 @@ bake.parse() {
   declare -A allOptOnCmdChain
   # collect opt from command chain : root>pub>pub.get
   #   root option first , priority low -> priority high:
-  for optPath in $(bake._opt_cmd_chain_opts "$cmd" | bake._str_revertLines); do
+  for optPath in $(bake.__opt_cmd_chain_opts "$cmd" | bake.__str_revertLines); do
     local opt
-    opt=$(bake._path_basename "$optPath")
+    opt=$(bake.__path_basename "$optPath")
     local abbr
     abbr=${_bake_data["$optPath/abbr"]}
     allOptOnCmdChain["--$opt"]="${optPath}"
@@ -524,7 +524,7 @@ bake.parse() {
     if [[ "${optPath}" == "" ]]; then break; fi
 
     # _opt_value_ prefix : avoid conflicts in the current context
-    optVars["$optPath"]="_opt_value_$(bake._path_basename "$optPath")"
+    optVars["$optPath"]="_opt_value_$(bake.__path_basename "$optPath")"
     declare "${optVars["$optPath"]}"
     # reference to the current dynamic  opt variable
     declare -n currentOptValue=${optVars["$optPath"]}
@@ -630,7 +630,7 @@ EOF
 bake.go() {
   # init register all cmd
 
-  bake._cmd_register
+  bake.__cmd_register
 
   # parse cmd :
   #   ./bake pub get -v -b
@@ -649,17 +649,17 @@ bake.go() {
   eval "$(bake.parse "$cmd" "$@")"
 
   if [[ "$help" == "true" ]]; then
-    bake._show_cmd_help "$cmd" "$@"
+    bake.__show_cmd_help "$cmd" "$@"
     return 0
   fi
 
   #  if fileExist then show help
   if ! declare -F "$cmd" | grep "$cmd" &>/dev/null  2>&1; then
     if [[ "${_bake_cmds["$cmd"]}" == "PARENT_CMD_NOT_FUNC" ]]; then
-      bake._show_cmd_help "$cmd" "$@"
+      bake.__show_cmd_help "$cmd" "$@"
       return 0
     fi
-    bake._throw "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
+    bake.__throw "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
   fi
 
   $cmd "$@"
@@ -672,7 +672,7 @@ bake.opt --cmd root --name "debug"   --abbr d --type bool   --default false  --d
 # BASH_SOURCE > 1 , means bake import from other script, it is lib mode
 # lib mod is not load app function, so we need to stop here
 if ((${#BASH_SOURCE[@]} > 1)); then
-  bake._debug "【${BAKE_FILE}】 call by other script【$(printf " ▶︎ %s" "${BASH_SOURCE[@]}")】, lib mode on, not load below app script" >&2
+  bake.__debug "【${BAKE_FILE}】 call by other script【$(printf " ▶︎ %s" "${BASH_SOURCE[@]}")】, lib mode on, not load below app script" >&2
 fi
 
 # bake内部版本(public api)

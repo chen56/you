@@ -12,9 +12,9 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 ########################################################
 
 
-bake._real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
+bake.__real_path() {  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}" ; }
 
-TEST_PATH="$(bake._real_path "${BASH_SOURCE[0]}")"
+TEST_PATH="$(bake.__real_path "${BASH_SOURCE[0]}")"
 TEST_DIR="$(dirname "$TEST_PATH")"
 TEST_FILE="$(basename "$TEST_PATH")"
 
@@ -116,7 +116,7 @@ bake.str_unescape() {
 # TODO 模仿http错误
 # 报错后终止程序，类似于其他语言的_throw Excpetion
 # 因set -o errexit 后，程序将在return 1 时退出，
-# 退出前被‘trap bake._on_error ERR’捕获并显示错误堆栈
+# 退出前被‘trap bake.__on_error ERR’捕获并显示错误堆栈
 # Usage: _throw <http_error_code> <ERROR_MESSAGE>
 _shell_code_to_http_code(){ return $(($1 + 200)) ; }
 _http_code_to_shell_code(){ return $(($1 - 200)) ; }
@@ -130,7 +130,7 @@ _todo_throw(){
   fi
   shift
   echo "$running_info"
-  # set -o errexit 后，程序将退出，退出前被trap bake._on_error Err捕获并显示错误堆栈
+  # set -o errexit 后，程序将退出，退出前被trap bake.__on_error Err捕获并显示错误堆栈
   return "$(_http_code_to_shell_code "$http_code")"
 }
 
@@ -397,68 +397,68 @@ tests.assert_sample(){
 }
 
 tests.path_dirname(){
-  assert "$(bake._path_dirname a/b/c '/')" @is "a/b"
-  assert "$(bake._path_dirname a     '/')" @is ""
-  assert "$(bake._path_dirname ""    '/')" @is ""
+  assert "$(bake.__path_dirname a/b/c '/')" @is "a/b"
+  assert "$(bake.__path_dirname a     '/')" @is ""
+  assert "$(bake.__path_dirname ""    '/')" @is ""
 
   # abstract path
-  assert "$(bake._path_dirname /a/b/c '/')" @is "/a/b"
-  assert "$(bake._path_dirname /a     '/')" @is ""
-  assert "$(bake._path_dirname /      '/')" @is ""
+  assert "$(bake.__path_dirname /a/b/c '/')" @is "/a/b"
+  assert "$(bake.__path_dirname /a     '/')" @is ""
+  assert "$(bake.__path_dirname /      '/')" @is ""
 }
 tests.path_first(){
-  assert "$(bake._path_first a/b/c  '/')" @is "a"
-  assert "$(bake._path_first a      '/')" @is "a"
-  assert "$(bake._path_first ''     '/')" @is ""
+  assert "$(bake.__path_first a/b/c  '/')" @is "a"
+  assert "$(bake.__path_first a      '/')" @is "a"
+  assert "$(bake.__path_first ''     '/')" @is ""
 
-  assert "$(bake._path_first /a/b/c '/')" @is "/a"
+  assert "$(bake.__path_first /a/b/c '/')" @is "/a"
 }
 
 tests.path_basename(){
-  assert "$(bake._path_basename a/b/c '/')" @is "c"
-  assert "$(bake._path_basename a     '/')" @is "a"
-  assert "$(bake._path_basename ""    '/')" @is ""
+  assert "$(bake.__path_basename a/b/c '/')" @is "c"
+  assert "$(bake.__path_basename a     '/')" @is "a"
+  assert "$(bake.__path_basename ""    '/')" @is ""
 
   # abstract path
-  assert "$(bake._path_basename "/a"  '/')" @is "a"
-  assert "$(bake._path_basename "/"  '/')"  @is ""
+  assert "$(bake.__path_basename "/a"  '/')" @is "a"
+  assert "$(bake.__path_basename "/"  '/')"  @is ""
 }
 
 tests.str_cutLeft(){
-  assert "$(bake._str_cutLeft a/b/c 'a/b/')" @is "c"
-  assert "$(bake._str_cutLeft a/b/c '')" @is "a/b/c"
+  assert "$(bake.__str_cutLeft a/b/c 'a/b/')" @is "c"
+  assert "$(bake.__str_cutLeft a/b/c '')" @is "a/b/c"
 
-  assert "$(bake._str_cutLeft /a/b/c '/')" @is "a/b/c"
+  assert "$(bake.__str_cutLeft /a/b/c '/')" @is "a/b/c"
 
-  assert "$(bake._str_cutLeft a/b/c 'notStart')" @is "a/b/c"
-  assert "$(bake._str_cutLeft a/b/c '/')"        @is "a/b/c"
+  assert "$(bake.__str_cutLeft a/b/c 'notStart')" @is "a/b/c"
+  assert "$(bake.__str_cutLeft a/b/c '/')"        @is "a/b/c"
 }
 
 
 tests.cmd_up_chain(){
-  assert "$(bake._cmd_up_chain a.b)" @is "a.b
+  assert "$(bake.__cmd_up_chain a.b)" @is "a.b
 a
 root"
-  assert "$(bake._cmd_up_chain 'root')" @is "root"
-  assert "$(bake._cmd_up_chain '')" @is "root"
+  assert "$(bake.__cmd_up_chain 'root')" @is "root"
+  assert "$(bake.__cmd_up_chain '')" @is "root"
 }
 
 tests.cmd_children(){
-  assert "$(bake._cmd_children test)" @is ""
-  assert "$(bake._cmd_children tests)" @contains "cmd_children"
+  assert "$(bake.__cmd_children test)" @is ""
+  assert "$(bake.__cmd_children tests)" @contains "cmd_children"
 }
 
 tests.str_split(){
-  assert "$(bake._str_split "a/b" '/')"  @is "a
+  assert "$(bake.__str_split "a/b" '/')"  @is "a
 b"
-  assert "$(bake._str_split "a/b/" '/')" @is "a
+  assert "$(bake.__str_split "a/b/" '/')" @is "a
 b"
 
   # abstract path
-  assert "$(bake._str_split "/a/b" '/')"  @is "
+  assert "$(bake.__str_split "/a/b" '/')"  @is "
 a
 b"
-  assert "$(bake._str_split "/a/b/" '/')" @is "
+  assert "$(bake.__str_split "/a/b/" '/')" @is "
 a
 b"
 
@@ -467,36 +467,36 @@ b"
   # 包含破坏性特殊字符
   #  $'string' 形式的字符序列被视为一种特殊类型的单引号。序列扩展为字符串，字符串中的反斜杠转义字符按照 ANSI C 标准指定进行替换。
   # https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting
-  assert "$(bake._str_split $'a\nb/c'  "/" )"  @is "a
+  assert "$(bake.__str_split $'a\nb/c'  "/" )"  @is "a
 b
 c"
-  assert "$(bake._str_split $'a\n/b' "/" )"  @is "a
+  assert "$(bake.__str_split $'a\n/b' "/" )"  @is "a
 
 b"
 
   # default delimiter
-  assert "$(bake._str_split "a/b"  )"  @is "a
+  assert "$(bake.__str_split "a/b"  )"  @is "a
 b"
 
   # other delimiter
-  assert "$(bake._str_split "a.b" '.')"  @is "a
+  assert "$(bake.__str_split "a.b" '.')"  @is "a
 b"
 }
 
 tests.cmd_register(){
-  bake._cmd_register
+  bake.__cmd_register
   assert "$(bake.info | grep tests.cmd_register)" \
     @contains "tests.cmd_register"
 }
 
 tests.opt_cmd_chain_opts(){
-  assert "$(bake._opts "root")" @is \
+  assert "$(bake.__opts "root")" @is \
 "root/opts/debug
 root/opts/help
 root/opts/interactive"
 
   # "include parent option"
-  assert "$(bake._opts "bake.opt")" @is \
+  assert "$(bake.__opts "bake.opt")" @is \
 "bake.opt/opts/cmd
 bake.opt/opts/default
 bake.opt/opts/desc
@@ -510,7 +510,7 @@ root/opts/interactive"
 }
 
 
-# TODO bake._cmd_children 命令可以改造为既可以输出全称也可以输出短名，还可以设置depth展示层级
+# TODO bake.__cmd_children 命令可以改造为既可以输出全称也可以输出短名，还可以设置depth展示层级
 # 查找出所有"tests."开头的函数并执行
 # 这种测试有点麻烦，不如bake.test
 function test(){
