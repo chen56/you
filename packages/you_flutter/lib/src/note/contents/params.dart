@@ -7,7 +7,6 @@ import 'package:dart_style/dart_style.dart' show DartFormatter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:you_flutter/src/note/contents/params_editors.dart';
-// ignore: implementation_imports, FIXME internal import /src of the same project.
 import 'package:_you_dart_internal/core.dart';
 
 final defaultEmitter = code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
