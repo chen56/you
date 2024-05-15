@@ -1,6 +1,9 @@
+@experimental
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:meta/meta.dart';
 
 typedef _WidgetWarp = Widget Function(Widget child);
 
@@ -408,13 +411,16 @@ enum ScreenSize {
 /// - <https://tr.designtokens.org/format/>
 /// - <https://m3.material.io/foundations/design-tokens/overview>
 /// - <https://daisyui.com/docs/colors/>
+@experimental
 final class DesignTokens with DesignTokensMixin {
   @override
   final BuildContext context;
 
-  const DesignTokens(this.context);
+  const DesignTokens._(this.context);
+  const DesignTokens.of(this.context);
 }
 
+@experimental
 base mixin DesignTokensMixin {
   BuildContext get context;
 

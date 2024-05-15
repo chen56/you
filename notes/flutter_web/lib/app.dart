@@ -43,7 +43,7 @@ class AppState extends State<App> {
 }
 
 extension ContextExt on BuildContext {
-  DesignTokens get designTokens$ => DesignTokens(this);
+  DesignTokens get designTokens$ => DesignTokens.of(this);
 
   RouteContext get route$ => YouRouter.of(this);
 }
