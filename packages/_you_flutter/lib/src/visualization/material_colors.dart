@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:you_flutter_internal/better_ui.dart';
+import 'package:_you_flutter/better_ui.dart';
 import 'package:you_flutter/state.dart';
 
 @experimental

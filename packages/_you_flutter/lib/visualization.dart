@@ -1,3 +1,3 @@
-library you_flutter_internal;
+library _you_flutter;
 
 export 'src/visualization/material_colors.dart' show MaterialColorRoles;

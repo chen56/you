@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
-import 'package:you_flutter_internal/better_ui.dart';
+import 'package:_you_flutter/better_ui.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';

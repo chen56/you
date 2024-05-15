@@ -164,13 +164,13 @@ you_flutter.test()    { _run you_flutter flutter test;                         }
 you_flutter.publish() { _run you_flutter flutter pub publish;                  }
 
 
-you_flutter_internal.run()     { _run you_flutter_internal "$@";                                 }
-you_flutter_internal.install() { _run you_flutter_internal flutter pub get;                      }
-you_flutter_internal.clean()   { _run you_flutter_internal flutter clean; rm -rf build;          }
-you_flutter_internal.upgrade() { _run you_flutter_internal flutter pub outdated ;
-                                 _run you_flutter_internal flutter pub upgrade ;                 }
-you_flutter_internal.test()    { _run you_flutter_internal flutter test;                         }
-you_flutter_internal.publish() { _run you_flutter_internal flutter pub publish;               }
+_you_flutter.run()     { _run _you_flutter "$@";                                 }
+_you_flutter.install() { _run _you_flutter flutter pub get;                      }
+_you_flutter.clean()   { _run _you_flutter flutter clean; rm -rf build;          }
+_you_flutter.upgrade() { _run _you_flutter flutter pub outdated ;
+                                 _run _you_flutter flutter pub upgrade ;                 }
+_you_flutter.test()    { _run _you_flutter flutter test;                         }
+_you_flutter.publish() { _run _you_flutter flutter pub publish;               }
 
 
 you_cli.run()     { _run you_cli "$@";                                 }

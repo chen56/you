@@ -39,7 +39,7 @@ dependencies:
   # you_*
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
-  you_flutter_internal: ^0.0.6-dev.2
+  _you_flutter: ^0.0.6-dev.2
 
 
 dev_dependencies:
@@ -85,5 +85,5 @@ dependency_overrides:
     path: ../../packages/you_dart
   you_flutter:
     path: ../../packages/you_flutter
-  you_flutter_internal:
-    path: ../../packages/you_flutter_internal
+  _you_flutter:
+    path: ../../packages/_you_flutter

@@ -1,4 +1,4 @@
-# you_flutter_internal
+# _you_flutter
 
 A package that facilitates for dart/flutter applications.
 
