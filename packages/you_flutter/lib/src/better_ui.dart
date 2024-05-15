@@ -416,7 +416,6 @@ final class DesignTokens with DesignTokensMixin {
   @override
   final BuildContext context;
 
-  const DesignTokens._(this.context);
   const DesignTokens.of(this.context);
 }
 
