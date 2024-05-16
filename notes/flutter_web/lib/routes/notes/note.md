@@ -130,9 +130,9 @@
 - 组件尺寸：WidgetsBinding.instance.addPostFrameCallback中： (context.findRenderObject() as RenderBox).size
 - 屏幕宽度：`double screenWidth = MediaQuery.of(context).size.width;`
 
-## 专用组件
+## 展示性组件
 
-### 高级容器
+### 高级模版容器
 
 - App
   - **WidgetsApp**
@@ -148,53 +148,53 @@
   - NavigationDrawer 可导航
 - BottomSheet
 
-### 装饰器-增强
+### 装饰器
 
-- **简介**: 装饰器指外观样式或特性增强
-- **BoxDecoration**:指定颜色、背景图片、边框`BoxBorder`
-- **PhysicalModel**:用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
-  - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
-  - 与 Container 结合 BoxShadow 使用相比，PhysicalModel 更简洁，直接通过 elevation 参数就能实现阴影效果。
-  - 与 ClipRRect 或 ClipOval 结合使用时，PhysicalModel 可以同时提供剪辑和物理外观效果，但直接设置 borderRadius 可以简化代码。
-- **RepaintBoundary**:
-- **SafeArea**:SafeArea组件用于确保其子组件避开屏幕边缘的不安全区域，如手机的刘海屏、摄像头孔位或底部的虚拟按键区域，确保内容布局在可视且不受遮挡的安全区域内。
-- **Material特效**
-  - **Material**
-  - **InkResponse**
-    - **InkWell**
-- **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
+- 增强
+  - **简介**: 装饰器指外观样式或特性增强
+  - **BoxDecoration**:指定颜色、背景图片、边框`BoxBorder`
+  - **PhysicalModel**:用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
+    - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
+    - 与 Container 结合 BoxShadow 使用相比，PhysicalModel 更简洁，直接通过 elevation 参数就能实现阴影效果。
+    - 与 ClipRRect 或 ClipOval 结合使用时，PhysicalModel 可以同时提供剪辑和物理外观效果，但直接设置 borderRadius 可以简化代码。
+  - **RepaintBoundary**:
+  - **SafeArea**:SafeArea组件用于确保其子组件避开屏幕边缘的不安全区域，如手机的刘海屏、摄像头孔位或底部的虚拟按键区域，确保内容布局在可视且不受遮挡的安全区域内。
+  - **Material特效**
+    - **Material**
+    - **InkResponse**
+      - **InkWell**
+  - **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
 
-### 装饰器-隐藏&可见性
-
-- **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
-- **Offstage**:用于控制其子Widget是否参与布局和绘制过程，也是用来控制子Widget是否可见的，但与 Visibility 不同，当子Widget被标记为 offstage: true 时，它不仅不可见，而且不会占用任何布局空间。这意味着，使用 Offstage 隐藏的Widget就像从未添加到树中一样，对于性能优化很有帮助，特别是隐藏复杂或者大量Widget时。
-  - 【原理】
-    - offstage: 一个布尔型属性，默认值为false。当设置为true时，表示子Widget将不会被布局或绘制，即该子Widget会被“隐藏”起来，但仍然保持在Widget树中，保持状态并且继续接收生命周期方法调用（如build）。当设置为false时，子Widget则正常参与布局和绘制，可见于屏幕上。
-    - performLayout: 另一个布尔型属性，默认与offstage属性值相同。这个属性控制是否执行子Widget的布局过程，即使offstage为true时，也可以通过设置performLayout为false来完全跳过布局步骤，这在某些性能敏感场景下可能有帮助。
-  - 【场景】
-    - 动画切换: 当需要在两个Widget之间进行切换显示时，可以使用Offstage配合AnimatedCrossFade或其他动画Widget，避免不必要的重建和初始化，提高性能。
-    - 条件渲染: 类似于 Visibility Widget，但更适用于那些需要保持状态不变或避免重建成本较高的Widget。例如，在分页组件中，可以利用Offstage隐藏当前未显示的页面内容，同时保持它们的状态。
-    - 预加载: 如果你希望预先加载一些复杂的Widget但初始时不显示它们，可以使用Offstage将其“隐藏”，这样当需要显示时能迅速切换，提升用户体验。
-    - 性能优化: 对于昂贵的渲染操作（如大量数据的列表），可以在滚动到可视区域外时使用Offstage隐藏它们，减少不必要的计算和渲染负担。
-  - **SliverOffstage**: the sliver version of `Offstage` widget。
-- **Visibility** Visibility Widget 允许你根据条件控制其子Widget的可见性，并且提供了是否保留子Widget所占空间的选项。api doc上说：which can hide a child more efficiently (albeit less subtly).
-  -【原理】
-  - if (!maintainSize&&maintainState)时内部包一个Offstage，即等同于Offstage
-  - visible bool属性，为 true 时，子Widget会被正常渲染；设为 false 时，子Widget会被隐藏。
-  - maintainState bool属性，当设为 true（默认值）时，即使Widget不可见，其状态也会被维护；设为 false 则会销毁Widget的状态。
-  - replaceWith 属性可以指定一个Widget来替换隐藏时的内容。
-  - 【场景】当你需要动态地显示或隐藏界面元素，同时可能需要保留隐藏元素所占布局空间时。在实现加载更多、错误提示等动态UI变化时，可以在数据加载失败时显示错误提示，而保留原本列表的空间布局。
-- **其他相关手段**
-  - **Expanded & Flexible**: 这两个Widget在布局组件提及，用于在Row、Column等Flex布局中分配空间。通过调整它们的flex属性或使用Expanded的flex属性为0，可以在不同屏幕尺寸或条件下改变Widget所占空间，间接影响“视觉上的重要性”或是否“实质上可见”。
-  - **Stack & Positioned**: 可以通过调整Positioned的位置属性将子Widget移出屏幕可视范围，或者堆叠顺序（z-index）来控制覆盖关系，间接达到隐藏或显示的效果。
-  - **SizedBox.shrink**: 可以用于替代某个Widget并将其大小“缩小”至零，从而在视觉上隐藏，但注意它仍然会参与布局过程。
-  - **CustomSingleChildLayout/CustomMultiChildLayout**：通过自定义布局逻辑，可以更加灵活地控制子Widget的布局和可见性，比如在特定条件下改变子Widget的位置使其超出视口范围。
-  - **TickerMode** 可控制其子树内的动画ticker是否启用。ticker是Flutter中驱动动画的核心机制。api doc: which can be used to disable animations in a subtree.
+- 隐藏&可见性
+  - **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
+  - **Offstage**:用于控制其子Widget是否参与布局和绘制过程，也是用来控制子Widget是否可见的，但与 Visibility 不同，当子Widget被标记为 offstage: true 时，它不仅不可见，而且不会占用任何布局空间。这意味着，使用 Offstage 隐藏的Widget就像从未添加到树中一样，对于性能优化很有帮助，特别是隐藏复杂或者大量Widget时。
     - 【原理】
-      - enabled 属性，你可以决定子树内的动画是否应该运行。当 enabled 为 false 时，所有依赖于Ticker的动画（如AnimationController）都会暂停。
+      - offstage: 一个布尔型属性，默认值为false。当设置为true时，表示子Widget将不会被布局或绘制，即该子Widget会被“隐藏”起来，但仍然保持在Widget树中，保持状态并且继续接收生命周期方法调用（如build）。当设置为false时，子Widget则正常参与布局和绘制，可见于屏幕上。
+      - performLayout: 另一个布尔型属性，默认与offstage属性值相同。这个属性控制是否执行子Widget的布局过程，即使offstage为true时，也可以通过设置performLayout为false来完全跳过布局步骤，这在某些性能敏感场景下可能有帮助。
     - 【场景】
-      - 当应用进入后台或者某个页面不需要动画效果以节省资源时，可以通过 TickerMode 禁用该页面的动画ticker。
-      - 在复杂的布局或长列表中，为了优化性能，可以对非可视区域的动画使用 TickerMode 禁用ticker，以减少不必要的计算和渲染负担。
+      - 动画切换: 当需要在两个Widget之间进行切换显示时，可以使用Offstage配合AnimatedCrossFade或其他动画Widget，避免不必要的重建和初始化，提高性能。
+      - 条件渲染: 类似于 Visibility Widget，但更适用于那些需要保持状态不变或避免重建成本较高的Widget。例如，在分页组件中，可以利用Offstage隐藏当前未显示的页面内容，同时保持它们的状态。
+      - 预加载: 如果你希望预先加载一些复杂的Widget但初始时不显示它们，可以使用Offstage将其“隐藏”，这样当需要显示时能迅速切换，提升用户体验。
+      - 性能优化: 对于昂贵的渲染操作（如大量数据的列表），可以在滚动到可视区域外时使用Offstage隐藏它们，减少不必要的计算和渲染负担。
+    - **SliverOffstage**: the sliver version of `Offstage` widget。
+  - **Visibility** Visibility Widget 允许你根据条件控制其子Widget的可见性，并且提供了是否保留子Widget所占空间的选项。api doc上说：which can hide a child more efficiently (albeit less subtly).
+    -【原理】
+    - if (!maintainSize&&maintainState)时内部包一个Offstage，即等同于Offstage
+    - visible bool属性，为 true 时，子Widget会被正常渲染；设为 false 时，子Widget会被隐藏。
+    - maintainState bool属性，当设为 true（默认值）时，即使Widget不可见，其状态也会被维护；设为 false 则会销毁Widget的状态。
+    - replaceWith 属性可以指定一个Widget来替换隐藏时的内容。
+    - 【场景】当你需要动态地显示或隐藏界面元素，同时可能需要保留隐藏元素所占布局空间时。在实现加载更多、错误提示等动态UI变化时，可以在数据加载失败时显示错误提示，而保留原本列表的空间布局。
+  - **其他相关手段**
+    - **Expanded & Flexible**: 这两个Widget在布局组件提及，用于在Row、Column等Flex布局中分配空间。通过调整它们的flex属性或使用Expanded的flex属性为0，可以在不同屏幕尺寸或条件下改变Widget所占空间，间接影响“视觉上的重要性”或是否“实质上可见”。
+    - **Stack & Positioned**: 可以通过调整Positioned的位置属性将子Widget移出屏幕可视范围，或者堆叠顺序（z-index）来控制覆盖关系，间接达到隐藏或显示的效果。
+    - **SizedBox.shrink**: 可以用于替代某个Widget并将其大小“缩小”至零，从而在视觉上隐藏，但注意它仍然会参与布局过程。
+    - **CustomSingleChildLayout/CustomMultiChildLayout**：通过自定义布局逻辑，可以更加灵活地控制子Widget的布局和可见性，比如在特定条件下改变子Widget的位置使其超出视口范围。
+    - **TickerMode** 可控制其子树内的动画ticker是否启用。ticker是Flutter中驱动动画的核心机制。api doc: which can be used to disable animations in a subtree.
+      - 【原理】
+        - enabled 属性，你可以决定子树内的动画是否应该运行。当 enabled 为 false 时，所有依赖于Ticker的动画（如AnimationController）都会暂停。
+      - 【场景】
+        - 当应用进入后台或者某个页面不需要动画效果以节省资源时，可以通过 TickerMode 禁用该页面的动画ticker。
+        - 在复杂的布局或长列表中，为了优化性能，可以对非可视区域的动画使用 TickerMode 禁用ticker，以减少不必要的计算和渲染负担。
 
 ### 导航与页面
 
@@ -240,12 +240,8 @@
 - **Placeholder**:常用于占位，在加载数据或资源尚未准备就绪时显示临时内容。它可以作为一个视觉提示，提醒用户该位置的内容随后会被填充。它不具有自适应尺寸的功能，但可以设置默认尺寸，并且常与异步数据加载结合使用，确保即使在真实内容加载前也有良好的用户体验。
 - **Spacer**:已在`Flex`中提到，主要用于分配布局中的空白空间。通常用于`Row`、`Column`或`Flex`布局中，作为填充空间的占位符。当希望某个方向上的剩余空间被均匀分配时，可以放置一个或多个`Spacer`。它没有自身的尺寸，而是根据`Flex`布局规则来决定占用的空间大小。
 
-### adaptive-responsive
 
-- **参考** <https://docs.flutter.dev/ui/adaptive-responsive>
-- OrientationBuilder 根据屏幕方向更新界面
-
-### 图标&图片&文件资源
+### 图标&图片
 
 - **Icon** 图标
 - Image
@@ -346,20 +342,28 @@
   - **AlwaysScrollableScrollPhysics**: 始终允许滚动,即使列表项的总高度小于列表容器的高度。
   - **NeverScrollableScrollPhysics**: 禁用滚动功能,列表项无法滚动。
 
+## 专题
+
+### adaptive-responsive
+
+- **参考** <https://docs.flutter.dev/ui/adaptive-responsive>
+- OrientationBuilder 根据屏幕方向更新界面
 
 ### state 相关
 
 - ValueListenableBuilder
 
-## Style&Theme
+### Style&Theme
 
-## 国际化
+- **MediaQuery**
 
-## 调试和诊断
+### 国际化
+
+### 调试和诊断
 
 - diagnostics.dart
 
-## 错误处理
+### 错误处理
 
 - **ErrorWidget.builder** : [examples/api/lib/widgets/framework/error_widget.0.dart](https://github.com/flutter/flutter/blob/3.19.6/examples/api/lib/widgets/framework/error_widget.0.dart)
 

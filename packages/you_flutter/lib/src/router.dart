@@ -134,7 +134,6 @@ final class YouRouter with RouterMixin {
     return RouteContext._(result!);
   }
 
-
   @override
   @visibleForTesting
   YouRouter get router => this;
@@ -204,6 +203,8 @@ base class To {
   final PageAnnotation? pageAnno;
   final PageBodyBuilder? _notFound;
   final PageLayoutBuilder? _layout;
+
+  String get label => part;
 
   To get parent => _parent;
 
@@ -341,6 +342,12 @@ base class To {
     List<To> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
+    } else {
+      sorted.sort((a, b) {
+        if (a.isLeafPage == b.isLeafPage) return a.label.compareTo(b.label);
+        if (!a.isLeafPage && b.isLeafPage) return -1;
+        return 1;
+      });
     }
 
     var flatChildren = sorted.expand((child) {

@@ -39,28 +39,16 @@ class _NoteTreeViewState extends State<NoteTreeView> {
     }
 
     // 🔹◽️●○◦■□❏✎
-    // String iconExtend = node.isLeafPage
-    //     ? "❏"
-    //     : node.expand
-    //         ? "▼"
-    //         : "︎︎︎▶";
-
-    String title = node.label;
+    String iconExtend = node.isLeafPage
+        ? "❏"
+        : node.expand
+            ? "▼"
+            : "︎︎︎▶";
+    String title = "$iconExtend ${node.label}";
     title = title.padLeft(((node.level - rootNoteLevel) * 2) + title.length);
-    // String publishLabel = "";
-    // if (node.isLeafPage) {
-    //   publishLabel = node.isPublish ? "(已发布)" : "(草稿)";
-    // }
     return ListTile(
       title: Text(title),
-      leading: node.isLeafPage
-          ? node.isPublish
-              ? const Icon(Icons.visibility, size: 20)
-              : const Icon(Icons.visibility_off, size: 20)
-          : node.expand
-              ? const Icon(Icons.expand_less, size: 20)
-              : const Icon(Icons.expand_more, size: 20),
-      contentPadding: EdgeInsets.only(left: ((node.level - rootNoteLevel) * 24)),
+      contentPadding: const EdgeInsets.only(left: 8),
       horizontalTitleGap: 8,
       minTileHeight: 36,
       minVerticalPadding: 6,
