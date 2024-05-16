@@ -86,7 +86,7 @@ __run_all() {
     return 100;
   fi
   for pkg in "${!_pkgs[@]}"; do
-    if _is_cmd "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
+    if __is_cmd "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
   done
 }
 
@@ -106,7 +106,7 @@ __run() {
   local caller_line;
   caller_line=$(caller 0 | awk '{print $1}')
 
-  if ! _is_cmd "$cmd" ; then
+  if ! __is_cmd "$cmd" ; then
     echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
   else
     echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"

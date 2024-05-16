@@ -10,8 +10,10 @@
 
 ## 布局
 
-### 基础布局
+### 基础布局组件
 
+
+- ref: <https://docs.flutter.dev/ui/widgets/layout>
 - **AspectRatio**:此组件强制其子组件保持特定的宽高比，确保内容在不同屏幕尺寸下都能保持一致的比例关系。
 - **Container**: 虽然本身不是一个布局组件，但它提供了装饰、边距、填充等功能，结合其子组件可以实现复杂的布局效果。
 - **ConstrainedBox**:
@@ -50,56 +52,33 @@
 - **Wrap**:Wrap组件用于包装多个子组件，当一行空间不足时自动换行，常见于创建标签列表、商品陈列等。
 - **PreferredSizeWidget** 为 Widget 设置一个固定的首选尺寸，这包括宽度和高度。被指定的尺寸作为该 Widget 在布局过程中的首选尺寸，即使其内部内容或外部约束可能暗示着不同的尺寸。
   -  【场景】AppBar之类需要固定宽高时。
-
-### 高级特性复杂布局
-
-- **各类Bar**
-  - **AppBar** 水平bar，一般放在`Scaffold.appBar`
-  - **BottomAppBar**:水平bar 一般放在`Scaffold.bottomNavigationBar`
-  - **~~BottomNavigationBar~~**：水平bar，不建议使用，被`NavigationBar`替换
-  - **NavigationBar** 水平bar，一般放在[Scaffold.bottomNavigationBar], 但按flutter的调性，当然是哪都能放. Material 3 Navigation Bar component. replacing BottomNavigationBar.
-    - 【场景】NavigationBar 的主要用途类似TabBar，加上`NavigationBar.onDestinationSelected`的事件，就能用页面的概念在不同页面间切换
-  - **NavigationRail** 垂直bar，The navigation rail is meant for layouts with wide viewports, such as a desktop web or tablet landscape layout. For smaller layouts, like mobile portrait, a BottomNavigationBar should be used instead
-  - **TabBar** 水平Bar，Tab栏的切换组件。一般放在[Scaffold.appBar.bottom]之类的地方
-    - 【原理】
-      - 要求：要么外面套个DefaultTabController，要么外面套个要么设置[TabBar.controller]，TabController主要是为了协调Tab和TabView的切换关系，如果两者都不提供，会报错：No TabController for TabBar
-      - TabBar.secondary：for a secondary tab bar.
-  - **OverflowBar**
-    - 【场景】Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排。
-  - **MenuBar**
-  - **PlatformMenuBar**
-  - **NavigationToolbar** is a layout helper to position 3 widgets or groups of widgets along a horizontal axis，正常应该使用带主题的Material AppBar or the iOS CupertinoNavigationBar
-  - **SnackBar**
-    - 【原理】ScaffoldMessenger.of(context).showSnackBar()
-  - **TextSelectionToolbar**
-  - **Sliver相关Bar**
-    - **SliverAppBar** 水平Bar，动画、可收缩的Bar
-    - **FlexibleSpaceBar**
-- **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
 - **GridView** 网格布局，可以创建类似表格或卡片列表的效果，支持横向或纵向滚动。
-- **ListView&ListBody**:可在 ListView 的头部或尾部使用 ListBody 来渲染一些固定的内容,这样可以充分利用两者的优势。
+- **Table**:表格布局，可以灵活定义行和列的数量及内容。
+  - **DataTable**: Table的增强版，为表格提供了更丰富的样式和交互功能，适合展示具有表头、索引列和操作列的数据。
+- **Stack**:Stack允许子组件堆叠展示，支持定位（alignment）和z轴排序（index），可以用于制作悬浮按钮、叠加图片、标签页指示器等效果。
+  - **Positioned**: 在Stack中结合Positioned使用，可以更精确地控制子组件在Stack中的绝对位置。
+  - **IndexedStack**: 内部包了个Stack，允许在一组子组件中切换显示，类似TabView效果，通过索引值控制显示指定子组件。
+    - 【场景】适合于页面数量相对较少且需要快速切换、同时保持页面状态（比如滚动位置）的场景，它不包含任何动画效果，页面切换是瞬间完成的。
+    - 【原理】IndexedStack是一个能够记住其子Widget状态的Stack。当你改变索引时，它不会销毁和重建未显示的子Widget，而是简单地改变可见性，从而保留之前页面的状态。
+- **列表**:可在 ListView 的头部或尾部使用 ListBody 来渲染一些固定的内容,这样可以充分利用两者的优势。
   - **ListBody**: 列表容器，不支持滚动、懒加载等高级特性。
     - 【原理】通过 Flex 布局算法来决定子 Widget 的位置。它只负责布局,不提供滚动功能。
     - 【场景】适用于列表项数量较少、不需要滚动功能的场景,比如简单的菜单列表。
   - **ListView**: 列表容器，还支持滚动、懒加载、头尾部件等丰富的功能。
     - 【原理】内部使用 Sliver 技术来实现滚动效果。它不仅提供列表布局,还支持滚动、懒加载等功能。
     - 【场景】适用于需要处理大量列表项、支持滚动和懒加载的场景,比如新闻列表、电商列表等。
-- **Scaffold**:Scaffold是Material Design风格应用的基础布局组件，包含了app bar、body、bottomNavigationBar、drawer等常见布局元素，有助于快速构建标准的Material应用界面。
-- **Table**:表格布局，可以灵活定义行和列的数量及内容。
-  - **DataTable**: Table的增强版，为表格提供了更丰富的样式和交互功能，适合展示具有表头、索引列和操作列的数据。
-- **堆叠&可切换**
-  - **PageView**:用于实现滑动页面效果。
-    - 【场景】幻灯片、相册浏览、引导页、广告轮播、仪表盘切换
-  - **Stack**:Stack允许子组件堆叠展示，支持定位（alignment）和z轴排序（index），可以用于制作悬浮按钮、叠加图片、标签页指示器等效果。
-    - **Positioned**: 在Stack中结合Positioned使用，可以更精确地控制子组件在Stack中的绝对位置。
-    - **IndexedStack**: 内部包了个Stack，允许在一组子组件中切换显示，类似TabView效果，通过索引值控制显示指定子组件。
-      - 【场景】适合于页面数量相对较少且需要快速切换、同时保持页面状态（比如滚动位置）的场景，它不包含任何动画效果，页面切换是瞬间完成的。
-      - 【原理】IndexedStack是一个能够记住其子Widget状态的Stack。当你改变索引时，它不会销毁和重建未显示的子Widget，而是简单地改变可见性，从而保留之前页面的状态。
-  - **TabView**: 是一个用于实现带标签页导航的Widget，常与TabBar配合使用，提供平滑的页面切换动画。提供了丰富的自定义选项，比如页面切换动画、指示器样式等。
-    - 【原理】当用户在不同的tab之间切换时，TabView默认会销毁离开的页面并重建进入的页面，这意味着页面状态不会被保留（除非额外采取措施，比如使用AutomaticKeepAliveClientMixin）。
-    - 【场景】更适用于有多个固定分类内容展示的场景，比如应用的主页有新闻、视频、我的等几个固定的tab。
+- **旋转**
+  - **RotatedBox**
+  - **Transform**:提供对子组件的旋转、缩放和平移变换功能，在特定布局场景中也有应用。
+- **Padding**:Padding组件用于在子组件周围添加内边距，可以在不影响子组件本身尺寸的前提下调整其在父容器中的位置。
 
-### 自定义布局
+### Sliver系列布局
+
+- **介绍**
+  - 如 `SliverAppBar`、`SliverList`、`SliverGrid` 等，专为`CustomScrollView`设计，用于高效实现滚动视图布局。
+- **ShrinkWrappingViewport**:类似于ListView，但它的大小可以根据其子组件的大小进行收缩，而不是根据父容器的大小进行填充。
+
+### 自定义相关
 
 - **CustomSingleChildLayout**: 实现SingleChildLayoutDelegate自定义子组件的布局。
 - **CustomMultiChildLayout**:  实现MultiChildLayoutDelegate自定义子组件的布局。
@@ -109,14 +88,6 @@
 - **已提及的其他可自定义的组件**
   - CustomClipper
   - CustomScrollView
-
-### Sliver系列布局
-
-- **介绍**
-  - 如 `SliverAppBar`、`SliverList`、`SliverGrid` 等，专为`CustomScrollView`设计，用于高效实现滚动视图布局。
-- **ShrinkWrappingViewport**:类似于ListView，但它的大小可以根据其子组件的大小进行收缩，而不是根据父容器的大小进行填充。
-
-
 
 ### 溢出处理
 
@@ -159,32 +130,28 @@
 - 组件尺寸：WidgetsBinding.instance.addPostFrameCallback中： (context.findRenderObject() as RenderBox).size
 - 屏幕宽度：`double screenWidth = MediaQuery.of(context).size.width;`
 
-## 放其他组件的容器
+## 专用组件
 
-- **布局相关组件** : 见布局章节，各类Bar、Scaffold、Table等等
+### 高级容器
+
 - App
+  - **WidgetsApp**
+  - **MaterialApp**
 - Dialogs: Dialog, AlertDialog
-- 各类Menu
-  - MenuBar
-  - DropdownMenu
+- **Scaffold**:Scaffold是Material Design风格应用的基础布局模版，包含了app bar、body、bottomNavigationBar、drawer等常见元素，有助于快速构建标准的Material应用界面。
+- 可展开容器
+  - ExpansionPanelList
+  - ExpansionTile
+- Stepper
 - Drawer 抽屉
   - Drawer 不导航
   - NavigationDrawer 可导航
 - BottomSheet
-- 可展开容器
-  - ExpansionPanelList
-  - ExpansionTile
-- 通用容器：通用容器、万金油，无特定位置限制，放哪都不嫌，放啥都可以，和其他组件是拼凑组合关系，用以包含内容、数据、输入、动作、导航等其他组件
-  - Stepper
-  - Sliver系列
-
-## 专用组件
 
 ### 装饰器-增强
 
 - **简介**: 装饰器指外观样式或特性增强
 - **BoxDecoration**:指定颜色、背景图片、边框`BoxBorder`
-- **Padding**:Padding组件用于在子组件周围添加内边距，可以在不影响子组件本身尺寸的前提下调整其在父容器中的位置。
 - **PhysicalModel**:用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
   - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
   - 与 Container 结合 BoxShadow 使用相比，PhysicalModel 更简洁，直接通过 elevation 参数就能实现阴影效果。
@@ -195,6 +162,7 @@
   - **Material**
   - **InkResponse**
     - **InkWell**
+- **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
 
 ### 装饰器-隐藏&可见性
 
@@ -217,7 +185,7 @@
   - replaceWith 属性可以指定一个Widget来替换隐藏时的内容。
   - 【场景】当你需要动态地显示或隐藏界面元素，同时可能需要保留隐藏元素所占布局空间时。在实现加载更多、错误提示等动态UI变化时，可以在数据加载失败时显示错误提示，而保留原本列表的空间布局。
 - **其他相关手段**
-  - **Expanded & Flexible**: 这两个Widget用于在Row、Column等Flex布局中分配空间。通过调整它们的flex属性或使用Expanded的flex属性为0，可以在不同屏幕尺寸或条件下改变Widget所占空间，间接影响“视觉上的重要性”或是否“实质上可见”。
+  - **Expanded & Flexible**: 这两个Widget在布局组件提及，用于在Row、Column等Flex布局中分配空间。通过调整它们的flex属性或使用Expanded的flex属性为0，可以在不同屏幕尺寸或条件下改变Widget所占空间，间接影响“视觉上的重要性”或是否“实质上可见”。
   - **Stack & Positioned**: 可以通过调整Positioned的位置属性将子Widget移出屏幕可视范围，或者堆叠顺序（z-index）来控制覆盖关系，间接达到隐藏或显示的效果。
   - **SizedBox.shrink**: 可以用于替代某个Widget并将其大小“缩小”至零，从而在视觉上隐藏，但注意它仍然会参与布局过程。
   - **CustomSingleChildLayout/CustomMultiChildLayout**：通过自定义布局逻辑，可以更加灵活地控制子Widget的布局和可见性，比如在特定条件下改变子Widget的位置使其超出视口范围。
@@ -228,7 +196,41 @@
       - 当应用进入后台或者某个页面不需要动画效果以节省资源时，可以通过 TickerMode 禁用该页面的动画ticker。
       - 在复杂的布局或长列表中，为了优化性能，可以对非可视区域的动画使用 TickerMode 禁用ticker，以减少不必要的计算和渲染负担。
 
-### 填充留白
+### 导航与页面
+
+- **Menu类**
+  - **MenuBar**
+  - **DropdownMenu**
+- **Bar类**
+  - **AppBar** 水平bar，一般放在`Scaffold.appBar`
+  - **BottomAppBar**:水平bar 一般放在`Scaffold.bottomNavigationBar`
+  - **~~BottomNavigationBar~~**：水平bar，不建议使用，被`NavigationBar`替换
+  - **NavigationBar** 水平bar，一般放在[Scaffold.bottomNavigationBar], 但按flutter的调性，当然是哪都能放. Material 3 Navigation Bar component. replacing BottomNavigationBar.
+    - 【场景】NavigationBar 的主要用途类似TabBar，加上`NavigationBar.onDestinationSelected`的事件，就能用页面的概念在不同页面间切换
+  - **NavigationRail** 垂直bar，The navigation rail is meant for layouts with wide viewports, such as a desktop web or tablet landscape layout. For smaller layouts, like mobile portrait, a BottomNavigationBar should be used instead
+  - **TabBar** 水平Bar，Tab栏的切换组件。一般放在[Scaffold.appBar.bottom]之类的地方
+    - 【原理】
+      - 要求：要么外面套个DefaultTabController，要么外面套个要么设置[TabBar.controller]，TabController主要是为了协调Tab和TabView的切换关系，如果两者都不提供，会报错：No TabController for TabBar
+      - TabBar.secondary：for a secondary tab bar.
+  - **OverflowBar**
+    - 【场景】Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排。
+  - **MenuBar**
+  - **PlatformMenuBar**
+  - **NavigationToolbar** is a layout helper to position 3 widgets or groups of widgets along a horizontal axis，正常应该使用带主题的Material AppBar or the iOS CupertinoNavigationBar
+  - **SnackBar**
+    - 【原理】ScaffoldMessenger.of(context).showSnackBar()
+  - **TextSelectionToolbar**
+  - **Sliver相关Bar**
+    - **SliverAppBar** 水平Bar，动画、可收缩的Bar
+    - **FlexibleSpaceBar**
+- **堆叠&可切换**
+  - **PageView**:用于实现滑动页面效果。
+    - 【场景】幻灯片、相册浏览、引导页、广告轮播、仪表盘切换
+  - **TabView**: 是一个用于实现带标签页导航的Widget，常与TabBar配合使用，提供平滑的页面切换动画。提供了丰富的自定义选项，比如页面切换动画、指示器样式等。
+    - 【原理】当用户在不同的tab之间切换时，TabView默认会销毁离开的页面并重建进入的页面，这意味着页面状态不会被保留（除非额外采取措施，比如使用AutomaticKeepAliveClientMixin）。
+    - 【场景】更适用于有多个固定分类内容展示的场景，比如应用的主页有新闻、视频、我的等几个固定的tab。
+
+### 分割填充留白
 
 - **分割线**
   - **Divider** 水平分割线
@@ -344,12 +346,8 @@
   - **AlwaysScrollableScrollPhysics**: 始终允许滚动,即使列表项的总高度小于列表容器的高度。
   - **NeverScrollableScrollPhysics**: 禁用滚动功能,列表项无法滚动。
 
-### 旋转
 
-- **RotatedBox**
-- **Transform**:提供对子组件的旋转、缩放和平移变换功能，在特定布局场景中也有应用。
-
-## state 相关
+### state 相关
 
 - ValueListenableBuilder
 
