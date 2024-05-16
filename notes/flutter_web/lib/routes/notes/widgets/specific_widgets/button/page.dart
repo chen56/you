@@ -54,35 +54,37 @@ the Material Design overview types and how they should be used in designs.
   print.addCell(title: const Text("--------new cell------"));
   int id = 0;
 
-  print(Row(
-    children: [
-      FloatingActionButton(
-        onPressed: () {},
-        heroTag: "overview.FloatingActionButton${id++}",
-        tooltip: "FloatingActionButton",
-        child: const Text("缺省构造器"),
-      ),
-      FloatingActionButton.small(
-        // isExtended: false,
-        onPressed: () {},
-        heroTag: "overview.FloatingActionButton${id++}",
-        child: const Text("small"),
-      ),
-      FloatingActionButton.large(
-        // isExtended: false,
-        onPressed: () {},
-        heroTag: "overview.FloatingActionButton${id++}",
-        child: const Text("large"),
-      ),
-      FloatingActionButton.extended(
-        // isExtended: false,
-        onPressed: () {},
-        label: const Text('extended'),
-        icon: const Icon(Icons.thumb_up),
-        heroTag: "overview.FloatingActionButton${id++}",
-      ),
-    ],
-  ));
+  print(
+    Row(
+      children: [
+        FloatingActionButton(
+          onPressed: () {},
+          heroTag: "overview.FloatingActionButton${id++}",
+          tooltip: "FloatingActionButton",
+          child: const Text("缺省构造器"),
+        ),
+        FloatingActionButton.small(
+          // isExtended: false,
+          onPressed: () {},
+          heroTag: "overview.FloatingActionButton${id++}",
+          child: const Text("small"),
+        ),
+        FloatingActionButton.large(
+          // isExtended: false,
+          onPressed: () {},
+          heroTag: "overview.FloatingActionButton${id++}",
+          child: const Text("large"),
+        ),
+        FloatingActionButton.extended(
+          // isExtended: false,
+          onPressed: () {},
+          label: const Text('extended'),
+          icon: const Icon(Icons.thumb_up),
+          heroTag: "overview.FloatingActionButton${id++}",
+        ),
+      ],
+    ),
+  );
 
   print.addCell(title: const Text("--------new cell------"));
   print(const MD(r'''

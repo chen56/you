@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/note.dart';
 
 @NoteAnnotation(label: "Widgets cheatsheets", publish: true)
 void build(BuildContext context, Cell print) {
-  Widget card() {
+  Widget cardCell() {
     var colors = Theme.of(context).colorScheme;
     return Wrap(
       children: [
@@ -46,7 +45,7 @@ void build(BuildContext context, Cell print) {
     );
   }
 
-  Widget container() {
+  Widget containerCell() {
     var colors = Theme.of(context).colorScheme;
     return Wrap(
       children: [
@@ -72,34 +71,184 @@ void build(BuildContext context, Cell print) {
     );
   }
 
+  Widget buttonStyleButtonCell() {
+    return Wrap(
+      children: [
+        IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
+              FilledButton(onPressed: () {}, child: const Text('FilledButton')),
+              FilledButton.tonal(onPressed: () {}, child: const Text('FilledButton.tonal')),
+              OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
+              TextButton(onPressed: () {}, child: const Text('TextButton')),
+            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
+          ),
+        ),
+        IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              ElevatedButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon')),
+              FilledButton.icon(onPressed: () {}, label: const Text('Add Icon'), icon: const Icon(Icons.image)),
+              FilledButton.tonalIcon(onPressed: () {}, label: const Text('Add Icon'), icon: const Icon(Icons.image)),
+              OutlinedButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon')),
+              TextButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon'))
+            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
+          ),
+        ),
+        IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const ElevatedButton(onPressed: null, child: Text("ElevatedButton")),
+              const FilledButton(onPressed: null, child: Text('FilledButton')),
+              const FilledButton.tonal(onPressed: null, child: Text('FilledButton.tonal')),
+              const OutlinedButton(onPressed: null, child: Text('OutlinedButton')),
+              const TextButton(onPressed: null, child: Text('TextButton')),
+            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget floatingActionButtonCell() {
+    return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
+      children: [
+        FloatingActionButton(
+          onPressed: () {},
+          tooltip: "FloatingActionButton()",
+          child: const Text("default"),
+        ),
+        FloatingActionButton.small(
+          // isExtended: false,
+          onPressed: () {},
+          tooltip: "FloatingActionButton.small()",
+          child: const Text("small"),
+        ),
+        FloatingActionButton.large(
+          // isExtended: false,
+          onPressed: () {},
+          tooltip: "FloatingActionButton.large()",
+          child: const Text("large"),
+        ),
+        FloatingActionButton.extended(
+          // isExtended: false,
+          onPressed: () {},
+          tooltip: "FloatingActionButton.extended()",
+          label: const Text('extended'),
+          icon: const Icon(Icons.thumb_up),
+        ),
+      ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
+    );
+  }
+
+  Widget iconButtonCell() {
+    bool standardSelected = false;
+    bool filledSelected = false;
+    bool outlinedSelected = false;
+    bool tonalSelected = false;
+    return StatefulBuilder(builder: (context, setState) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              const Text("IconButton()"),
+              IconButton(
+                isSelected: standardSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: () => setState(() => standardSelected = !standardSelected),
+              ),
+              IconButton(
+                isSelected: standardSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: null,
+              ),
+            ],
+          ),
+          Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              const Text("IconButton.filled()"),
+              IconButton.filled(
+                isSelected: filledSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: () {
+                  setState(() => filledSelected = !filledSelected);
+                },
+              ),
+              IconButton.filled(
+                isSelected: filledSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: null,
+              ),
+            ],
+          ),
+          Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: <Widget>[
+              const Text("IconButton.filledTonal()"),
+              IconButton.filledTonal(
+                isSelected: tonalSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: () {
+                  setState(() => tonalSelected = !tonalSelected);
+                },
+              ),
+              IconButton.filledTonal(
+                isSelected: tonalSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: null,
+              ),
+            ],
+          ),
+          Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: <Widget>[
+              const Text("IconButton.outlined()"),
+              IconButton.outlined(
+                isSelected: outlinedSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: () {
+                  setState(() => outlinedSelected = !outlinedSelected);
+                },
+              ),
+              IconButton.outlined(
+                isSelected: outlinedSelected,
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                onPressed: null,
+              ),
+            ],
+          ),
+        ],
+      );
+    });
+  }
+
   var x = Column(
     children: [
       Level1MasonryLayout(
         title: "xxx",
-        cellWidth: 300,
+        cellWidth: 500,
         children: [
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-        ],
-      ),
-      Level1GridLayout(
-        title: "xxx",
-        cellWidth: 300,
-        children: [
-          CellView(title: "Card阿斯顿发", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
-          CellView(title: "Card", child: card()),
-          CellView(title: "Container", child: container()),
+          CellView(title: "Card", child: cardCell()),
+          CellView(title: "Container", child: containerCell()),
+          CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell()),
+          CellView(title: "FloatingActionButton", child: floatingActionButtonCell()),
+          CellView(title: "IconButton", child: iconButtonCell()),
         ],
       ),
     ],
@@ -133,7 +282,6 @@ class CellView extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.all(12),
-            width: 350,
             child: child,
           ),
         ],
