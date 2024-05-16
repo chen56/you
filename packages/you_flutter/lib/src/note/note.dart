@@ -71,7 +71,7 @@ base class ToNote extends To {
 
   @nonVirtual
   bool containsPublishNode({bool includeThis = true}) {
-    if(includeThis){
+    if (includeThis) {
       if (isPublish) return true;
     }
     for (var c in children) {

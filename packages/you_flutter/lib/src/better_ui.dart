@@ -259,6 +259,15 @@ extension StyleExtension on Widget {
     );
   }
 
+  Widget fractionallySizedBox$({double? widthFactor, double? heightFactor, Alignment alignment = Alignment.center}) {
+    return FractionallySizedBox(
+      alignment: alignment,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
+      child: this,
+    );
+  }
+
   /// [minWidth]The minimum width constraint to give the child. Set this to null (the
   /// default) to use the constraint from the parent instead.
   /// [maxWidth]The maximum width constraint to give the child. Set this to null (the
@@ -330,7 +339,8 @@ extension StyleExtension on Widget {
     }
 
     return LayoutBuilder(builder: (context, constraints) {
-      debugPrint("\$debugLayoutBuilder: this:$runtimeType, constraints:$constraints, this:$this");
+      var screenWidth = MediaQuery.of(context).size.width;
+      debugPrint("\$debugLayoutBuilder: screenWidth:$screenWidth, this:$runtimeType, constraints:$constraints, this:$this");
       return this;
     });
   }

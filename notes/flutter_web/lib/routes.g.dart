@@ -46,6 +46,7 @@ import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/page.da
 import 'package:flutter_web/routes/notes/widgets/container_widgets/menu/page.dart' as _menu_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/scrollable/Dismissible/page.dart' as _Dismissible_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/bar/page.dart' as _bar_page;
+import 'package:flutter_web/routes/notes/widgets/index/page.dart' as _index_page;
 import 'package:flutter_web/routes/notes/Improve_app/page.dart' as _Improve_app_page;
 import 'package:flutter_web/routes/notes/Improve_app/env_info/page.dart' as _env_info_page;
 import 'package:flutter_web/routes/notes/Improve_app/1.overview/page.dart' as _1_overview_page;
@@ -127,6 +128,7 @@ mixin RoutesMixin {
           ToNote('page_view'),
           ToNote('bar', page: _bar_page.build),
         ]),
+        ToNote('index', page: _index_page.build, pageAnno: _Pages.notes_widgets_index),
       ]),
       ToNote('Improve_app', page: _Improve_app_page.build, pageAnno: _Pages.notes_Improve_app, children: [
         ToNote('env_info', page: _env_info_page.build),
@@ -173,6 +175,7 @@ mixin RoutesMixin {
   late final ToNote routes_notes_widgets_container_widgets_menu = (root.find('/notes/widgets/container_widgets/menu')! as ToNote);
   late final ToNote routes_notes_widgets_container_widgets_scrollable_Dismissible = (root.find('/notes/widgets/container_widgets/scrollable/Dismissible')! as ToNote);
   late final ToNote routes_notes_widgets_container_widgets_bar = (root.find('/notes/widgets/container_widgets/bar')! as ToNote);
+  late final ToNote routes_notes_widgets_index = (root.find('/notes/widgets/index')! as ToNote);
   late final ToNote routes_notes_Improve_app = (root.find('/notes/Improve_app')! as ToNote);
   late final ToNote routes_notes_Improve_app_env_info = (root.find('/notes/Improve_app/env_info')! as ToNote);
   late final ToNote routes_notes_Improve_app_overview = (root.find('/notes/Improve_app/1.overview')! as ToNote);
@@ -188,5 +191,6 @@ class _Pages {
   static const notes = NoteAnnotation(label: "笔记");
   static const notes_material3_color_roles = NoteAnnotation(label: "Color roles", publish: true);
   static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: true);
+  static const notes_widgets_index = NoteAnnotation(label: "Widgets cheatsheets", publish: true);
   static const notes_Improve_app = NoteAnnotation(label: "完善应用的技术");
 }

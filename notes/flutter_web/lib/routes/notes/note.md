@@ -1,4 +1,4 @@
-# flutter 大纲
+# flutter速查
 
 >  **📣Tip:**
 > Components are interactive building blocks for creating a user interface.
@@ -163,7 +163,8 @@
     - **Material**
     - **InkResponse**
       - **InkWell**
-  - **Card**:Card组件虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
+  - **Card**: 虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
+    - 【原理】内部包了个`Material`
 
 - 隐藏&可见性
   - **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
