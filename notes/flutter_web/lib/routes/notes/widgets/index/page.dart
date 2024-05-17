@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:you_flutter/note.dart';
+import 'package:you_flutter/state.dart';
 
 @NoteAnnotation(label: "Widgets cheatsheets", publish: true)
 void build(BuildContext context, Cell print) {
@@ -238,17 +239,72 @@ void build(BuildContext context, Cell print) {
     });
   }
 
+  Widget segmentButtonCell(BuildContext context) {
+    Value<ThemeMode> themeMode = ThemeMode.system.signal();
+    Set<TargetPlatform> targetPlatforms = <TargetPlatform>{TargetPlatform.macOS, TargetPlatform.linux}.signal();
+
+    return Watch((context) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SegmentedButton<ThemeMode>(
+            multiSelectionEnabled: false,
+            segments: const <ButtonSegment<ThemeMode>>[
+              ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.sunny)),
+              ButtonSegment<ThemeMode>(value: ThemeMode.system, label: Text('System'), icon: Icon(Icons.brightness_auto)),
+              ButtonSegment<ThemeMode>(value: ThemeMode.dark, label: Text('Dark'), icon: Icon(Icons.dark_mode)),
+            ],
+            selected: <ThemeMode>{themeMode.value},
+            onSelectionChanged: (newSelection) {
+              themeMode.value = newSelection.first;
+            },
+          ),
+          const SizedBox(height: 10),
+          SegmentedButton<TargetPlatform>(
+            segments: const <ButtonSegment<TargetPlatform>>[
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.android, label: Text('android')),
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.fuchsia, label: Text('fuchsia')),
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.iOS, label: Text('iOS')),
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.linux, label: Text('linux')),
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.macOS, label: Text('macOS')),
+              ButtonSegment<TargetPlatform>(value: TargetPlatform.windows, label: Text('windows')),
+            ],
+            selected: targetPlatforms,
+            onSelectionChanged: (newSelection) {
+              targetPlatforms.clear();
+              targetPlatforms.addAll(newSelection);
+            },
+            multiSelectionEnabled: true,
+          ),
+        ],
+      );
+    });
+  }
+
   var all = Column(
     children: [
       Level1MasonryLayout(
-        title: "xxx",
+        title: "button&input&form",
         cellWidth: 500,
         children: [
-          CellView(title: "Card", child: cardCell(context)),
-          CellView(title: "Container", child: containerCell(context)),
           CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell(context)),
           CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
           CellView(title: "IconButton", child: iconButtonCell(context)),
+          CellView(title: "segmentButton", child: segmentButtonCell(context)),
+        ],
+      ),
+      Level1MasonryLayout(
+        title: "布局,Layout",
+        cellWidth: 500,
+        children: [
+          CellView(title: "Container", child: containerCell(context)),
+        ],
+      ),
+      Level1MasonryLayout(
+        title: "装饰器,Decorator",
+        cellWidth: 500,
+        children: [
+          CellView(title: "Card", child: cardCell(context)),
         ],
       ),
     ],
