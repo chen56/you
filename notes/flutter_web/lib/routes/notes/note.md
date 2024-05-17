@@ -78,7 +78,7 @@
   - 如 `SliverAppBar`、`SliverList`、`SliverGrid` 等，专为`CustomScrollView`设计，用于高效实现滚动视图布局。
 - **ShrinkWrappingViewport**:类似于ListView，但它的大小可以根据其子组件的大小进行收缩，而不是根据父容器的大小进行填充。
 
-### 自定义相关
+### 自定义布局
 
 - **CustomSingleChildLayout**: 实现SingleChildLayoutDelegate自定义子组件的布局。
 - **CustomMultiChildLayout**:  实现MultiChildLayoutDelegate自定义子组件的布局。
@@ -218,9 +218,6 @@
   - **MenuBar**
   - **PlatformMenuBar**
   - **NavigationToolbar** is a layout helper to position 3 widgets or groups of widgets along a horizontal axis，正常应该使用带主题的Material AppBar or the iOS CupertinoNavigationBar
-  - **SnackBar**
-    - 【原理】ScaffoldMessenger.of(context).showSnackBar()
-  - **TextSelectionToolbar**
   - **Sliver相关Bar**
     - **SliverAppBar** 水平Bar，动画、可收缩的Bar
     - **FlexibleSpaceBar**
@@ -283,7 +280,8 @@
 
 - **Text**
   - **Text.rich**
-- RichText
+  - RichText
+- **TextSelectionToolbar**
 - Markdown
 - SelectionArea 可选择界面一整个区域的文本
 - DefaultTextStyle
@@ -292,6 +290,8 @@
   - LinearProgressIndicator
 - Badges [api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
 - **Tooltip**
+- **SnackBar**
+  - 【原理】ScaffoldMessenger.of(context).showSnackBar()
 
 ### 滚动scrolling
 
