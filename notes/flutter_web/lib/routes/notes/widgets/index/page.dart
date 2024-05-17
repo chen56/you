@@ -301,6 +301,167 @@ void build(BuildContext context, Cell print) {
     );
   }
 
+  Widget progressIndicatorCell(BuildContext context) {
+    final selected = false.signal();
+    return Watch(
+      (context) {
+        return Row(
+          children: [
+            IconButton(
+              isSelected: selected.value,
+              selectedIcon: const Icon(Icons.pause),
+              icon: const Icon(Icons.play_arrow),
+              onPressed: () {
+                selected.value = !selected.value;
+              },
+            ),
+            CircularProgressIndicator(value: selected.value ? null : 0.9),
+            Expanded(
+              child: LinearProgressIndicator(value: selected.value ? null : 0.9),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget progressIndicator2Cell(BuildContext context) {
+    final selected = false.signal();
+    return Watch(
+      (context) {
+        return Column(
+          children: [
+            const Text("RefreshIndicator 下拉刷新(Pull down to refresh)"),
+            SizedBox(
+              height: 200,
+              child: RefreshIndicator(
+                onRefresh: () async {
+                  selected.value = true;
+                  await Future.delayed(const Duration(seconds: 3)); // mock delay
+                  selected.value = false;
+                },
+                child: ListView.builder(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: 5, // 示例数据数量
+                  itemBuilder: (context, index) {
+                    return ListTile(title: Text('Item ${index + 1}/5'));
+                  },
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget snackBarCell(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        final snackBar = SnackBar(
+          behavior: SnackBarBehavior.floating,
+          // width: 800.0,
+
+          content: const Text('SnackBar'),
+          action: SnackBarAction(
+            label: 'Close',
+            onPressed: () {},
+          ),
+        );
+
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      },
+      child: const Text(
+        'SnackBar',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  Widget bottomSheetCell(BuildContext context) {
+    Value<PersistentBottomSheetController?> bottomSheetController = (null as PersistentBottomSheetController?).signal();
+
+    final bar = NavigationBar(
+      selectedIndex: 0,
+      destinations: [
+        NavigationDestination(icon: Badge.count(count: 1000, child: const Icon(Icons.mail_outlined)), label: 'Mail'),
+        const NavigationDestination(icon: Badge(label: Text('10'), child: Icon(Icons.chat_bubble_outline)), label: 'Chat'),
+        const NavigationDestination(icon: Badge(child: Icon(Icons.group_outlined)), label: 'Rooms'),
+        NavigationDestination(icon: Badge.count(count: 3, child: const Icon(Icons.videocam_outlined)), label: 'Meet'),
+      ],
+    );
+    return Watch((context) {
+      return Wrap(
+        alignment: WrapAlignment.spaceEvenly,
+        children: [
+          TextButton(
+            child: const Text('modal bottom sheet'),
+            onPressed: () {
+              showModalBottomSheet<void>(showDragHandle: true, context: context, builder: (context) => bar);
+            },
+          ),
+          TextButton(
+            child: Text(bottomSheetController.value == null ? 'open bottom sheet' : 'close bottom sheet'),
+            onPressed: () {
+              if (bottomSheetController.value != null) {
+                bottomSheetController.value?.close();
+                bottomSheetController.value = null;
+                return;
+              }
+              bottomSheetController.value = showBottomSheet(context: context, builder: (context) => bar);
+            },
+          ),
+        ],
+      );
+    });
+  }
+
+  Widget dialogCell() {
+    return Builder(builder: (context) {
+      return Wrap(
+        alignment: WrapAlignment.spaceEvenly,
+        children: [
+          TextButton(
+            child: const Text('dialog'),
+            onPressed: () {
+              showDialog<void>(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('''AlertDialog'''),
+                  content: const Text('''
+A Material Design alert dialog.
+An alert dialog (also known as a basic dialog) informs the user about
+situations that require acknowledgment. An alert dialog has an optional
+title and an optional list of actions. The title is displayed above the
+content and the actions are displayed below the content.'''),
+                  actions: <Widget>[
+                    FilledButton(child: const Text('Ok'), onPressed: () => Navigator.of(context).pop()),
+                  ],
+                ),
+              );
+            },
+          ),
+          TextButton(
+            child: const Text('Dialog.fullscreen'),
+            onPressed: () {
+              showDialog<void>(
+                context: context,
+                builder: (context) => Dialog.fullscreen(
+                  child: AppBar(
+                    title: const Text('Dialog.fullscreen'),
+                    centerTitle: false,
+                    leading: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
+                  ),
+                ),
+              );
+            },
+          ),
+        ],
+      );
+    });
+  }
+
   var all = Column(
     children: [
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
@@ -311,6 +472,11 @@ void build(BuildContext context, Cell print) {
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 400, children: [
         CellView(title: "Badge", child: badgesCell(context)),
+        CellView(title: "ProgressIndicator", child: progressIndicatorCell(context)),
+        CellView(title: "ProgressIndicator2", child: progressIndicator2Cell(context)),
+        CellView(title: "SnackBar", child: snackBarCell(context)),
+        CellView(title: "bottomSheet", child: bottomSheetCell(context)),
+        CellView(title: "dialog", child: dialogCell()),
       ]),
       //
       Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
@@ -334,19 +500,24 @@ class CellView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
+    var textStyle = Theme.of(context).textTheme;
     return Container(
       decoration: BoxDecoration(color: colors.surfaceContainer, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
       child: Column(
         children: [
-          AppBar(
-            toolbarHeight: 36,
-            elevation: 1,
-            backgroundColor: colors.surfaceContainer,
-            title: Text(title),
-            actions: <Widget>[
-              IconButton(icon: const Icon(Icons.code), onPressed: () {}),
-              IconButton(icon: const Icon(Icons.fullscreen), onPressed: () {}),
-            ],
+          Container(
+            height: 36,
+            color: colors.surfaceContainerHigh,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                const SizedBox(width: 10),
+                Text(title, style: textStyle.titleMedium),
+                const Spacer(),
+                IconButton(icon: const Icon(size: 24, Icons.code), onPressed: () {}),
+                IconButton(icon: const Icon(size: 24, Icons.fullscreen), onPressed: () {}),
+              ],
+            ),
           ),
           Container(
             padding: const EdgeInsets.all(12),
