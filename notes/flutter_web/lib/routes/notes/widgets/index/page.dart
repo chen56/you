@@ -4,7 +4,7 @@ import 'package:you_flutter/note.dart';
 
 @NoteAnnotation(label: "Widgets cheatsheets", publish: true)
 void build(BuildContext context, Cell print) {
-  Widget cardCell() {
+  Widget cardCell(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
     return Wrap(
       children: [
@@ -45,7 +45,7 @@ void build(BuildContext context, Cell print) {
     );
   }
 
-  Widget containerCell() {
+  Widget containerCell(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
     return Wrap(
       children: [
@@ -71,7 +71,7 @@ void build(BuildContext context, Cell print) {
     );
   }
 
-  Widget buttonStyleButtonCell() {
+  Widget buttonStyleButtonCell(BuildContext context) {
     return Wrap(
       children: [
         IntrinsicWidth(
@@ -114,7 +114,7 @@ void build(BuildContext context, Cell print) {
     );
   }
 
-  Widget floatingActionButtonCell() {
+  Widget floatingActionButtonCell(BuildContext context) {
     return Wrap(
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
@@ -146,7 +146,7 @@ void build(BuildContext context, Cell print) {
     );
   }
 
-  Widget iconButtonCell() {
+  Widget iconButtonCell(BuildContext context) {
     bool standardSelected = false;
     bool filledSelected = false;
     bool outlinedSelected = false;
@@ -238,23 +238,23 @@ void build(BuildContext context, Cell print) {
     });
   }
 
-  var x = Column(
+  var all = Column(
     children: [
       Level1MasonryLayout(
         title: "xxx",
         cellWidth: 500,
         children: [
-          CellView(title: "Card", child: cardCell()),
-          CellView(title: "Container", child: containerCell()),
-          CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell()),
-          CellView(title: "FloatingActionButton", child: floatingActionButtonCell()),
-          CellView(title: "IconButton", child: iconButtonCell()),
+          CellView(title: "Card", child: cardCell(context)),
+          CellView(title: "Container", child: containerCell(context)),
+          CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell(context)),
+          CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
+          CellView(title: "IconButton", child: iconButtonCell(context)),
         ],
       ),
     ],
   );
 
-  print(x);
+  print(all);
 }
 
 class CellView extends StatelessWidget {
