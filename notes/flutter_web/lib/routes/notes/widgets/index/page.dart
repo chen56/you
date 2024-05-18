@@ -587,15 +587,18 @@ content and the actions are displayed below the content.'''),
     return Watch((context) {
       return SizedBox(
         width: 500,
-        height: 500,
+        height: 300,
         child: Scaffold(
+          appBar: AppBar(
+            actions: [
+              Builder(builder: (context) {
+                return TextButton.icon(label: const Text("openEndDrawer"), icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
+              }),
+              const Spacer(),
+            ],
+          ),
           body: drawer(),
           endDrawer: drawer(),
-          bottomNavigationBar: BottomAppBar(
-            child: Builder(builder: (context) {
-              return IconButton(tooltip: 'openDrawer', icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
-            }),
-          ),
         ),
       );
     });
