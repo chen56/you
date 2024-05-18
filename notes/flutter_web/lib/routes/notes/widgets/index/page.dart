@@ -565,6 +565,42 @@ content and the actions are displayed below the content.'''),
     });
   }
 
+  Widget navigationDrawerCell() {
+    final selected = 0.signal();
+
+    Widget drawer() {
+      return NavigationDrawer(
+        tilePadding: EdgeInsets.zero,
+        onDestinationSelected: (selectedIndex) {
+          selected.value = selectedIndex;
+        },
+        selectedIndex: selected.value,
+        children: const <Widget>[
+          NavigationDrawerDestination(label: Text('Inbox'), icon: Icon(Icons.inbox_outlined), selectedIcon: Icon(Icons.inbox)),
+          NavigationDrawerDestination(label: Text('Outbox'), icon: Icon(Icons.send_outlined), selectedIcon: Icon(Icons.send)),
+          NavigationDrawerDestination(label: Text('Favorites'), icon: Icon(Icons.favorite_outline), selectedIcon: Icon(Icons.favorite)),
+          NavigationDrawerDestination(label: Text('Trash'), icon: Icon(Icons.delete_outline), selectedIcon: Icon(Icons.delete)),
+        ],
+      );
+    }
+
+    return Watch((context) {
+      return SizedBox(
+        width: 500,
+        height: 500,
+        child: Scaffold(
+          body: drawer(),
+          endDrawer: drawer(),
+          bottomNavigationBar: BottomAppBar(
+            child: Builder(builder: (context) {
+              return IconButton(tooltip: 'openDrawer', icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
+            }),
+          ),
+        ),
+      );
+    });
+  }
+
   var all = Column(
     children: [
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
@@ -594,9 +630,10 @@ content and the actions are displayed below the content.'''),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
         CellView(title: "Card", child: cardCell(context)),
       ]),
-      Level1MasonryLayout(title: "导航与页面", cellWidth: 300, children: [
+      Level1MasonryLayout(title: "导航与页面", cellWidth: 400, children: [
         CellView(title: "BottomAppBar", child: bottomAppBarCell()),
         CellView(title: "NavigationBar", child: navigationBarCell()),
+        CellView(title: "NavigationDrawer", child: navigationDrawerCell()),
       ])
     ],
   );
