@@ -18,18 +18,18 @@ class HelloSingleValue extends StatelessWidget {
       children: [
         Text("Builder、StatefulBuilder的观测限制", style: Theme.of(context).textTheme.titleLarge),
         const Divider(),
-        Watch((context) => Text("✅正常观测:${counter()},Watch下普通组件 ok")),
-        Watch((context) => Builder(builder: (context) {
+        Watch(builder:(context) => Text("✅正常观测:${counter()},Watch下普通组件 ok")),
+        Watch(builder:(context) => Builder(builder: (context) {
               return Text("✅正常观测:${counter()}, callback直接嵌套一层Builder、StatefulBuilder ok");
             })),
-        Watch((context) => Builder(builder: (context) {
+        Watch(builder:(context) => Builder(builder: (context) {
               return Builder(builder: (context) {
                 return Text("✅正常观测:${counter()}, callback直接嵌套多层Builder、StatefulBuilder ok");
               });
             })),
 
         /// 包裹在Column等容器后的Builder，Watch无法洞察
-        Watch((context) => Column(
+        Watch(builder:(context) => Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Builder(builder: (context) {
@@ -38,7 +38,7 @@ class HelloSingleValue extends StatelessWidget {
                     children: [
                       const Text("🟡callback 间接嵌套Builder、StatefulBuilder"),
                       Text("      💔无法观测:${counter()}"),
-                      Watch((context) => Text("      ✅恢复正常:${counter()}, 需重新Watch")),
+                      Watch(builder:(context) => Text("      ✅恢复正常:${counter()}, 需重新Watch")),
                     ],
                   );
                 })

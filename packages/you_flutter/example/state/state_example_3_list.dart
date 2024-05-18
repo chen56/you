@@ -25,7 +25,7 @@ class HelloStore extends StatelessWidget {
           child: Text("list.add(list.length+1)     ||| watch outer buildTimes:${buildTimes++}"),
         ),
         const Divider(),
-        Watch((context) {
+        Watch(builder:(context) {
           return Column(
             children: [
               Text("list.length:${list.length}  ||| watch inner BuildTimes:${watchBuildTimes++}"),

@@ -89,7 +89,7 @@ extension ValueExtension<T> on T {
 ///   state_store.dart.theme.value="light";
 ///   class SomeWidget{
 ///     build(Context){
-///       return Watch((context)=>Text("current theme: ${state_store.dart.theme.value}"));
+///       return Watch(builder:(context)=>Text("current theme: ${state_store.dart.theme.value}"));
 ///     }
 ///    }
 ///

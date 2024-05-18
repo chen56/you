@@ -67,7 +67,7 @@ class MaterialColorRoles extends StatelessWidget {
       return _BackgroundBlock(label: label, color: color, backgroundColorLabelWidth: maxSizeOfBackgroundColor.width, onColorWidth: maxSizeOfOnSurfaces.width, onColors: onColors);
     }
 
-    var result = Watch((context) {
+    var result = Watch(builder:(context) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -86,7 +86,7 @@ class ViewBarState extends State<ViewBar> {
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
-    return Watch((context) {
+    return Watch(builder:(context) {
       return Container(
           color: colors.surfaceContainer,
           child: Row(
@@ -127,13 +127,13 @@ class ViewBarState extends State<ViewBar> {
                 ],
               ),
               const VerticalDivider(width: 1),
-              Watch((context) {
+              Watch(builder:(context) {
                 return NoteTreeView(
                   view: view,
                   noteRoot: routes.routes_notes,
                 ).offstage$(offstage: view.value != "note_tree_view");
               }),
-              Watch((context) {
+              Watch(builder:(context) {
                 final app = App.of(context);
                 final route = YouRouter.of(context);
 
@@ -146,7 +146,7 @@ class ViewBarState extends State<ViewBar> {
                   ),
                 ]).offstage$(offstage: view.value != "theme_view");
               }),
-              // Watch((context) {
+              // Watch(builder:(context) {
               //   return _ThemeView(view: view).offstage$(offstage: view.value != "theme_view");
               // }),
               const VerticalDivider(width: 1),

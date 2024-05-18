@@ -75,10 +75,10 @@ class HelloStore extends StatelessWidget {
     return Column(
       children: [
         Text("GAME", style: theme.textTheme.headlineLarge),
-        Watch((context) => Text(store.win())),
+        Watch(builder:(context) => Text(store.win())),
         ElevatedButton(onPressed: () => store.play(), child: const Text("【【【【【play!!!】】】】】")),
         const Divider(),
-        Watch((context) {
+        Watch(builder:(context) {
           return Column(children: [
             const Text("Lookers"),
             for (var player in store.players)

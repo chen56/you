@@ -7,9 +7,9 @@ import 'package:you_dart/state.dart';
 /// Watch用来build 观测state变化的。
 final class Watch extends StatefulWidget {
   final WidgetBuilder builder;
+  final VoidCallback? onDispose;
 
-  // FIXME builder -> named parameter
-  const Watch(this.builder, {super.key});
+  const Watch({super.key, required this.builder, this.onDispose});
 
   @override
   State<StatefulWidget> createState() {
@@ -32,6 +32,10 @@ final class _WatchState extends State<Watch> {
     }
     _signalConnections.clear();
 
+    if (widget.onDispose != null) {
+      widget.onDispose!();
+    }
+
     super.dispose();
   }
 
@@ -39,7 +43,7 @@ final class _WatchState extends State<Watch> {
   // 并递归的看下一层是不是也是Builder、StatefulBuilder
   Widget _recursionHijackBuilder(Widget widget) {
     if (widget is Builder) {
-      return Watch((context) {
+      return Watch(builder: (context) {
         return _recursionHijackBuilder(widget.builder(context));
       });
     }
@@ -47,7 +51,7 @@ final class _WatchState extends State<Watch> {
       return StatefulBuilder(
           key: widget.key,
           builder: (context, setState) {
-            return Watch((context) {
+            return Watch(builder: (context) {
               return _recursionHijackBuilder(widget.builder(context, setState));
             });
           });

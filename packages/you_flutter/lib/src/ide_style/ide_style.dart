@@ -60,7 +60,7 @@ class _ThemeViewState extends State<ThemeView> {
         ),
         const Text("Theme mode"),
         Card(
-          child: Watch((context) {
+          child: Watch(builder:(context) {
             return SegmentedButton<ThemeMode>(
               segments: const <ButtonSegment<ThemeMode>>[
                 ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.light_mode_outlined)),
@@ -111,7 +111,7 @@ class ColorBlock extends StatelessWidget {
       onTap: () {
         seedColor.value = color;
       },
-      child: Watch((context) {
+      child: Watch(builder:(context) {
         return seedColor.value == color ? colorWidget.borderAll$() : colorWidget;
       }),
     );

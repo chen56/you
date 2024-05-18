@@ -90,7 +90,7 @@ final class _DefaultNote extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Watch((context) {
+    return Watch(builder:(context) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

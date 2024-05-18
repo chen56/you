@@ -245,7 +245,7 @@ void build(BuildContext context, Cell print) {
     Value<ThemeMode> themeMode = ThemeMode.system.signal();
     Set<TargetPlatform> targetPlatforms = <TargetPlatform>{TargetPlatform.macOS, TargetPlatform.linux}.signal();
 
-    return Watch((context) {
+    return Watch(builder: (context) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -305,32 +305,30 @@ void build(BuildContext context, Cell print) {
 
   Widget progressIndicatorCell(BuildContext context) {
     final selected = false.signal();
-    return Watch(
-      (context) {
-        return Row(
-          children: [
-            IconButton(
-              isSelected: selected.value,
-              selectedIcon: const Icon(Icons.pause),
-              icon: const Icon(Icons.play_arrow),
-              onPressed: () {
-                selected.value = !selected.value;
-              },
-            ),
-            CircularProgressIndicator(value: selected.value ? null : 0.9),
-            Expanded(
-              child: LinearProgressIndicator(value: selected.value ? null : 0.9),
-            ),
-          ],
-        );
-      },
-    );
+    return Watch(builder: (context) {
+      return Row(
+        children: [
+          IconButton(
+            isSelected: selected.value,
+            selectedIcon: const Icon(Icons.pause),
+            icon: const Icon(Icons.play_arrow),
+            onPressed: () {
+              selected.value = !selected.value;
+            },
+          ),
+          CircularProgressIndicator(value: selected.value ? null : 0.9),
+          Expanded(
+            child: LinearProgressIndicator(value: selected.value ? null : 0.9),
+          ),
+        ],
+      );
+    });
   }
 
   Widget progressIndicator2Cell(BuildContext context) {
     final selected = false.signal();
     return Watch(
-      (context) {
+      builder: (context) {
         return Column(
           children: [
             const Text("RefreshIndicator 下拉刷新(Pull down to refresh)"),
@@ -393,7 +391,7 @@ void build(BuildContext context, Cell print) {
         NavigationDestination(icon: Badge.count(count: 3, child: const Icon(Icons.videocam_outlined)), label: 'Meet'),
       ],
     );
-    return Watch((context) {
+    return Watch(builder: (context) {
       return Wrap(
         alignment: WrapAlignment.spaceEvenly,
         children: [
@@ -551,7 +549,7 @@ content and the actions are displayed below the content.'''),
         page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
       ),
     ];
-    return Watch((context) {
+    return Watch(builder: (context) {
       return SizedBox(
         width: double.infinity,
         height: 200,
@@ -585,7 +583,7 @@ content and the actions are displayed below the content.'''),
       );
     }
 
-    return Watch((context) {
+    return Watch(builder: (context) {
       return SizedBox(
         width: 500,
         height: 300,
@@ -617,7 +615,7 @@ content and the actions are displayed below the content.'''),
         page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
       ),
     ];
-    return Watch((context) {
+    return Watch(builder: (context) {
       return SizedBox(
         width: double.infinity,
         height: 300,
@@ -785,7 +783,6 @@ content and the actions are displayed below the content.'''),
       "美 Beautiful"
     ];
     List<String> searchHistory = <String>[].signal();
-
     Iterable<Widget> getSuggests(SearchController controller, StateSetter setState) {
       List<({String suggest, String type})> suggests = [];
       if (controller.text.isNotEmpty) {
@@ -793,9 +790,9 @@ content and the actions are displayed below the content.'''),
       } else {
         final random = Random();
         int randomSuggestStart = random.nextInt(searchWords.length - 5);
-        var sandomSuggests = searchWords.sublist(randomSuggestStart, randomSuggestStart + 5);
+        var randomSuggests = searchWords.sublist(randomSuggestStart, randomSuggestStart + 5);
         suggests.addAll(searchHistory.map((e) => (suggest: e, type: "history")));
-        suggests.addAll(sandomSuggests.map((e) => (suggest: e, type: "suggest")));
+        suggests.addAll(randomSuggests.map((e) => (suggest: e, type: "suggest")));
       }
 
       return suggests.map((item) => ListTile(
@@ -824,19 +821,21 @@ content and the actions are displayed below the content.'''),
           ));
     }
 
-    return StatefulBuilder(builder: (context, setState) {
-      return Column(
-        children: [
-          SearchAnchor.bar(
-            barHintText: 'Search colors',
-            onSubmitted: (text) {
-              debugPrint("onSubmitted $text, should : controller.closeView");
-            },
-            suggestionsBuilder: (context, controller) => getSuggests(controller, setState),
-          )
-        ],
-      );
-    });
+    return StatefulBuilder(
+      builder: (context, setState) {
+        return Column(
+          children: [
+            SearchAnchor.bar(
+              barHintText: 'Search colors',
+              onSubmitted: (text) {
+                debugPrint("onSubmitted $text, should : controller.closeView");
+              },
+              suggestionsBuilder: (context, controller) => getSuggests(controller, setState),
+            )
+          ],
+        );
+      },
+    );
   }
 
   var all = Column(

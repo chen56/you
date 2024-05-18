@@ -25,7 +25,7 @@ class HelloStore extends StatelessWidget {
           child: Text("map put     ||| watch outer buildTimes:${buildTimes++}"),
         ),
         const Divider(),
-        Watch((context) {
+        Watch(builder:(context) {
           return Column(
             children: [
               Text("map.length:${map.length}  ||| watch inner BuildTimes:${watchBuildTimes++}"),

@@ -73,7 +73,7 @@
 //     var pageBody = SingleChildScrollView(
 //       scrollDirection: Axis.vertical,
 //       controller: controllerV,
-//       child: Watch((context) {
+//       child: Watch(builder:(context) {
 //         return ListBody(
 //           children: [
 //             ...widget.rootCell.toList().where((e) => !e.isContentsEmpty()).map((cell) => _NoteCellView(cell, outline: outline)),
@@ -295,7 +295,7 @@
 //     //   // Specify text style
 //     // );
 //
-//     var cellView = Watch(
+//     var cellView = Watch(builder:
 //       (context) {
 //         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
 //         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之

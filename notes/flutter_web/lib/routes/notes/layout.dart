@@ -59,7 +59,7 @@ final class NoteRootLayout extends StatelessWidget with NoteMixin {
 //     //   // Specify text style
 //     // );
 //
-//     var cellView = Watch(
+//     var cellView = Watch(builder:
 //           (context) {
 //         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
 //         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之

@@ -30,7 +30,7 @@ class AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     debugPrint("App: Uri.base: ${Uri.base}");
-    return Watch((context) {
+    return Watch(builder:(context) {
       return MaterialApp.router(
         title: "flutter note",
         themeMode: themeMode.value,

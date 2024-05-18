@@ -62,7 +62,7 @@ class _NoteTreeViewState extends State<NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     noteRoot.expandTree(true);
-    return Watch((context) {
+    return Watch(builder:(context) {
       final route = YouRouter.of(context);
 
       final colors = Theme.of(context).colorScheme;
