@@ -462,8 +462,119 @@ content and the actions are displayed below the content.'''),
     });
   }
 
+  Widget dividerCell() {
+    return const Column(
+      children: [
+        SizedBox(
+          child: Column(
+            children: [
+              Text('Divider'),
+              Divider(),
+              Text('Divider'),
+            ],
+          ),
+        ),
+        SizedBox(
+            height: 100,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('VerticalDivider'),
+                VerticalDivider(),
+                Text('VerticalDivider'),
+              ],
+            )),
+      ],
+    );
+  }
+
+  Widget spacerCell() {
+    return const Column(
+      children: [
+        Row(
+          children: [
+            Text('Row left'),
+            Spacer(),
+            Text('Row right'),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget placeholderCell() {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Placeholder(fallbackWidth: 100, fallbackHeight: 100),
+        Placeholder(
+          fallbackWidth: 100,
+          fallbackHeight: 100,
+          child: SizedBox(width: 100, height: 100, child: Text("带child的")),
+        ),
+      ],
+    );
+  }
+
+  Widget bottomAppBarCell() {
+    return SizedBox(
+      width: 300,
+      height: 200,
+      child: Scaffold(
+        body: const Placeholder(),
+        floatingActionButton: FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            children: <Widget>[
+              IconButton(tooltip: 'Open navigation menu', icon: const Icon(Icons.menu), onPressed: () {}),
+              const Spacer(),
+              IconButton(tooltip: 'Search', icon: const Icon(Icons.search), onPressed: () {}),
+              IconButton(tooltip: 'Favorite', icon: const Icon(Icons.favorite), onPressed: () {}),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget navigationBarCell() {
+    final selected = 0.signal();
+    List<(NavigationDestination, Widget)> destinations = [
+      (
+        const NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
+        Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
+      ),
+      (
+        const NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
+        Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
+      ),
+    ];
+    return Watch((context) {
+      return SizedBox(
+        width: 300,
+        height: 200,
+        child: Scaffold(
+          body: destinations[selected.value].$2,
+          bottomNavigationBar: NavigationBar(
+            onDestinationSelected: (newSelection) => selected.value = newSelection,
+            selectedIndex: selected.value,
+            destinations: destinations.map((e) => e.$1).toList(),
+          ),
+        ),
+      );
+    });
+  }
+
   var all = Column(
     children: [
+      Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
+        CellView(title: "Divider", child: dividerCell()),
+        CellView(title: "Spacer", child: spacerCell()),
+        CellView(title: "Placeholder", child: placeholderCell()),
+      ]),
+      Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
+        CellView(title: "Container", child: containerCell(context)),
+      ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
         CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell(context)),
         CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
@@ -474,17 +585,19 @@ content and the actions are displayed below the content.'''),
         CellView(title: "Badge", child: badgesCell(context)),
         CellView(title: "ProgressIndicator", child: progressIndicatorCell(context)),
         CellView(title: "ProgressIndicator2", child: progressIndicator2Cell(context)),
-        CellView(title: "SnackBar", child: snackBarCell(context)),
-        CellView(title: "bottomSheet", child: bottomSheetCell(context)),
-        CellView(title: "dialog", child: dialogCell()),
       ]),
-      //
-      Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
-        CellView(title: "Container", child: containerCell(context)),
+      Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
+        CellView(title: "SnackBar", child: snackBarCell(context)),
+        CellView(title: "dialog", child: dialogCell()),
+        CellView(title: "bottomSheet", child: bottomSheetCell(context)),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
         CellView(title: "Card", child: cardCell(context)),
       ]),
+      Level1MasonryLayout(title: "导航与页面", cellWidth: 300, children: [
+        CellView(title: "BottomAppBar", child: bottomAppBarCell()),
+        CellView(title: "NavigationBar", child: navigationBarCell()),
+      ])
     ],
   );
 
@@ -494,14 +607,21 @@ content and the actions are displayed below the content.'''),
 class CellView extends StatelessWidget {
   final String title;
   final Widget child;
+  final BoxConstraints? constraints;
 
-  const CellView({super.key, required this.title, required this.child});
+  const CellView({
+    super.key,
+    required this.title,
+    this.constraints,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
     var textStyle = Theme.of(context).textTheme;
     return Container(
+      constraints: constraints,
       decoration: BoxDecoration(color: colors.surfaceContainer, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
       child: Column(
         children: [
