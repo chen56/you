@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart' as painting;
+import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/note.dart';
 
 void build(BuildContext context, Cell print) {
@@ -169,6 +170,29 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
   print(
     Row(
       children: [
+        NavigationRail(
+          // minWidth: 10,
+          minExtendedWidth: 50,
+          // extended: true,
+          selectedIndex: 0,
+          groupAlignment: 1,
+          onDestinationSelected: (_) {},
+          labelType: NavigationRailLabelType.all,
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.access_time),
+            tooltip: "NavigationRail.leading",
+          ),
+          trailing: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.exit_to_app),
+            tooltip: "NavigationRail.trailing",
+          ),
+          destinations: const <NavigationRailDestination>[
+            NavigationRailDestination(icon: Icon(Icons.sanitizer), label: Text('First')),
+            NavigationRailDestination(icon: Icon(Icons.accessible), label: Text('Second')),
+          ],
+        ).intrinsicWidth$(),
         SizedBox(
           height: 300,
           child: NavigationRail(
@@ -193,7 +217,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
               NavigationRailDestination(icon: Icon(Icons.sanitizer), label: Text('First')),
               NavigationRailDestination(icon: Icon(Icons.accessible), label: Text('Second')),
             ],
-          ),
+          ).intrinsicWidth$(),
         ),
         Expanded(
             child: Container(
