@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:you_flutter/note.dart';
@@ -639,6 +641,204 @@ content and the actions are displayed below the content.'''),
     });
   }
 
+  Widget tabBarCell() {
+    List<({Tab tab, Widget page})> tabs = [
+      (
+        tab: const Tab(icon: Icon(Icons.cloud_outlined), iconMargin: EdgeInsets.all(10)),
+        page: const Center(child: Text("It's cloudy here")),
+      ),
+      (
+        tab: const Tab(icon: Icon(Icons.beach_access_sharp), iconMargin: EdgeInsets.all(10)),
+        page: const Center(child: Text("It's rainy here")),
+      ),
+      (
+        tab: const Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: EdgeInsets.all(10)),
+        page: const Center(child: Text("It's sunny here")),
+      ),
+    ];
+
+    return DefaultTabController(
+      initialIndex: 1,
+      length: tabs.length,
+      child: Column(
+        children: [
+          TabBar(tabs: tabs.map((e) => e.tab).toList()),
+          SizedBox(
+            height: 100,
+            child: TabBarView(children: tabs.map((e) => e.page).toList()),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget menuCell() {
+    return Builder(builder: (BuildContext context) {
+      return MenuAnchor(
+        builder: (context, controller, child) {
+          return FilledButton.tonal(
+            onPressed: () {
+              if (controller.isOpen) {
+                controller.close();
+              } else {
+                controller.open();
+              }
+            },
+            child: const Text('Show menu'),
+          );
+        },
+        menuChildren: [
+          MenuItemButton(
+            leadingIcon: const Icon(Icons.people_alt_outlined),
+            child: const Text('Item 1'),
+            onPressed: () {},
+          ),
+          MenuItemButton(
+            leadingIcon: const Icon(Icons.remove_red_eye_outlined),
+            child: const Text('Item 2'),
+            onPressed: () {},
+          ),
+          MenuItemButton(
+            leadingIcon: const Icon(Icons.refresh),
+            onPressed: () {},
+            child: const Text('Item 3'),
+          ),
+        ],
+      );
+    });
+  }
+
+  Widget searchCell() {
+    List<String> searchWords = [
+      "中国 China",
+      "你好 Hello",
+      "世界 World",
+      "谢谢 Thanks",
+      "不 No",
+      "是 Yes",
+      "对不起 Sorry",
+      "没关系 It's okay",
+      "再见 Goodbye",
+      "爱 Love",
+      "喜欢 Like",
+      "朋友 Friend",
+      "家庭 Family",
+      "工作 Work",
+      "学习 Study",
+      "音乐 Music",
+      "电影 Film",
+      "书籍 Book",
+      "食物 Food",
+      "水 Water",
+      "太阳 Sun",
+      "月亮 Moon",
+      "星星 Star",
+      "红色 Red",
+      "蓝色 Blue",
+      "绿色 Green",
+      "黄色 Yellow",
+      "黑色 Black",
+      "白色 White",
+      "快乐 Happy",
+      "悲伤 Sad",
+      "生气 Angry",
+      "惊讶 Surprised",
+      "思考 Think",
+      "梦想 Dream",
+      "希望 Hope",
+      "和平 Peace",
+      "美丽 Beautiful",
+      "伟大 Great",
+      "小 Small",
+      "大 Big",
+      "快 Fast",
+      "慢 Slow",
+      "热 Hot",
+      "冷 Cold",
+      "年轻 Young",
+      "老 Old",
+      "男人 Man",
+      "女人 Woman",
+      "孩子 Child",
+      "动物 Animal",
+      "自然 Nature",
+      "城市 City",
+      "国家 Country",
+      "地球 Earth",
+      "生活 Life",
+      "旅行 Travel",
+      "运动 Sport",
+      "科技 Technology",
+      "互联网 Internet",
+      "游戏 Game",
+      "健康 Health",
+      "自由 Freedom",
+      "真相 Truth",
+      "艺术 Art",
+      "历史 History",
+      "未来 Future",
+      "过去 Past",
+      "现在 Present",
+      "勇敢 Brave",
+      "真 Truthful",
+      "善 Good",
+      "美 Beautiful"
+    ];
+    List<String> searchHistory = <String>[].signal();
+
+    Iterable<Widget> getSuggests(SearchController controller, StateSetter setState) {
+      List<({String suggest, String type})> suggests = [];
+      if (controller.text.isNotEmpty) {
+        suggests = searchWords.where((e) => e.contains(controller.text)).map((e) => (suggest: e, type: "search")).toList();
+      } else {
+        final random = Random();
+        int randomSuggestStart = random.nextInt(searchWords.length - 5);
+        var sandomSuggests = searchWords.sublist(randomSuggestStart, randomSuggestStart + 5);
+        suggests.addAll(searchHistory.map((e) => (suggest: e, type: "history")));
+        suggests.addAll(sandomSuggests.map((e) => (suggest: e, type: "suggest")));
+      }
+
+      return suggests.map((item) => ListTile(
+            leading: const Icon(Icons.history),
+            title: Text(item.suggest),
+            subtitle: Text(item.type),
+            trailing: IconButton(
+                icon: const Icon(Icons.call_missed),
+                onPressed: () {
+                  controller.text = item.suggest;
+                  controller.selection = TextSelection.collapsed(offset: controller.text.length);
+                  controller.closeView(item.suggest);
+                }),
+            onTap: () {
+              setState(() {
+                controller.closeView(item.suggest);
+                if (searchHistory.length >= 5) {
+                  searchHistory.removeLast();
+                }
+                searchHistory.insert(0, item.suggest);
+                var set = searchHistory.toSet();
+                searchHistory.clear();
+                searchHistory.addAll(set);
+              });
+            },
+          ));
+    }
+
+    return StatefulBuilder(builder: (context, setState) {
+      return Column(
+        children: [
+          SearchAnchor.bar(
+            barHintText: 'Search colors',
+            onSubmitted: (text) {
+              debugPrint("onSubmitted $text, should : controller.closeView");
+            },
+            suggestionsBuilder: (context, controller) => getSuggests(controller, setState),
+          )
+        ],
+      );
+    });
+  }
+
   var all = Column(
     children: [
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
@@ -654,6 +854,7 @@ content and the actions are displayed below the content.'''),
         CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
         CellView(title: "IconButton", child: iconButtonCell(context)),
         CellView(title: "segmentButton", child: segmentButtonCell(context)),
+        CellView(title: "SearchAnchor", child: searchCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 400, children: [
         CellView(title: "Badge", child: badgesCell(context)),
@@ -673,6 +874,8 @@ content and the actions are displayed below the content.'''),
         CellView(title: "NavigationBar", child: navigationBarCell()),
         CellView(title: "NavigationDrawer", child: navigationDrawerCell()),
         CellView(title: "NavigationRail", child: navigationRailCell()),
+        CellView(title: "TabBar", child: tabBarCell()),
+        CellView(title: "MenuCell", child: menuCell()),
       ])
     ],
   );

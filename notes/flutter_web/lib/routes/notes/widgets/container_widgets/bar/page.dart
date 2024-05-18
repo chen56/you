@@ -54,28 +54,26 @@ b
 
   print = print.addCell(title: const Text("new cell-----------------"));
   print(
-    Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          children: <Widget>[
-            IconButton(
-              tooltip: 'Open navigation menu',
-              icon: const Icon(Icons.menu),
-              onPressed: () {},
-            ),
-            const Spacer(),
-            IconButton(
-              tooltip: 'Search',
-              icon: const Icon(Icons.search),
-              onPressed: () {},
-            ),
-            IconButton(
-              tooltip: 'Favorite',
-              icon: const Icon(Icons.favorite),
-              onPressed: () {},
-            ),
-          ],
-        ),
+    BottomAppBar(
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            tooltip: 'Open navigation menu',
+            icon: const Icon(Icons.menu),
+            onPressed: () {},
+          ),
+          const Spacer(),
+          IconButton(
+            tooltip: 'Search',
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            tooltip: 'Favorite',
+            icon: const Icon(Icons.favorite),
+            onPressed: () {},
+          ),
+        ],
       ),
     ),
   );
@@ -170,29 +168,6 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
   print(
     Row(
       children: [
-        NavigationRail(
-          // minWidth: 10,
-          minExtendedWidth: 50,
-          // extended: true,
-          selectedIndex: 0,
-          groupAlignment: 1,
-          onDestinationSelected: (_) {},
-          labelType: NavigationRailLabelType.all,
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.access_time),
-            tooltip: "NavigationRail.leading",
-          ),
-          trailing: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.exit_to_app),
-            tooltip: "NavigationRail.trailing",
-          ),
-          destinations: const <NavigationRailDestination>[
-            NavigationRailDestination(icon: Icon(Icons.sanitizer), label: Text('First')),
-            NavigationRailDestination(icon: Icon(Icons.accessible), label: Text('Second')),
-          ],
-        ).intrinsicWidth$(),
         SizedBox(
           height: 300,
           child: NavigationRail(
