@@ -778,41 +778,38 @@ content and the actions are displayed below the content.'''),
       "过去 Past",
       "现在 Present",
       "勇敢 Brave",
-      "真 Truthful",
-      "善 Good",
-      "美 Beautiful"
     ];
     List<String> searchHistory = <String>[].signal();
+    final random = Random();
     Iterable<Widget> getSuggests(SearchController controller, StateSetter setState) {
-      List<({String suggest, String type})> suggests = [];
+      List<({String value, String type, IconData typeIcon})> suggests = [];
       if (controller.text.isNotEmpty) {
-        suggests = searchWords.where((e) => e.contains(controller.text)).map((e) => (suggest: e, type: "search")).toList();
+        suggests = searchWords.where((e) => e.contains(controller.text)).map((e) => (value: e, type: "search", typeIcon: Icons.search)).toList();
       } else {
-        final random = Random();
         int randomSuggestStart = random.nextInt(searchWords.length - 5);
         var randomSuggests = searchWords.sublist(randomSuggestStart, randomSuggestStart + 5);
-        suggests.addAll(searchHistory.map((e) => (suggest: e, type: "history")));
-        suggests.addAll(randomSuggests.map((e) => (suggest: e, type: "suggest")));
+        suggests.addAll(searchHistory.map((e) => (value: e, type: "history", typeIcon: Icons.history)));
+        suggests.addAll(randomSuggests.map((e) => (value: e, type: "suggest", typeIcon: Icons.recommend_outlined)));
       }
 
       return suggests.map((item) => ListTile(
-            leading: const Icon(Icons.history),
-            title: Text(item.suggest),
+            leading: Icon(item.typeIcon),
+            title: Text(item.value),
             subtitle: Text(item.type),
             trailing: IconButton(
                 icon: const Icon(Icons.call_missed),
                 onPressed: () {
-                  controller.text = item.suggest;
+                  controller.text = item.value;
                   controller.selection = TextSelection.collapsed(offset: controller.text.length);
-                  controller.closeView(item.suggest);
+                  controller.closeView(item.value);
                 }),
             onTap: () {
               setState(() {
-                controller.closeView(item.suggest);
+                controller.closeView(item.value);
                 if (searchHistory.length >= 5) {
                   searchHistory.removeLast();
                 }
-                searchHistory.insert(0, item.suggest);
+                searchHistory.insert(0, item.value);
                 var set = searchHistory.toSet();
                 searchHistory.clear();
                 searchHistory.addAll(set);
@@ -826,7 +823,7 @@ content and the actions are displayed below the content.'''),
         return Column(
           children: [
             SearchAnchor.bar(
-              barHintText: 'Search colors',
+              barHintText: 'Search words',
               onSubmitted: (text) {
                 debugPrint("onSubmitted $text, should : controller.closeView");
               },
