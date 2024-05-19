@@ -43,11 +43,9 @@ class RootLayoutState extends State<RootLayout> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ViewBar(),
-              SingleChildScrollView(
-                // children: [widget.child.align$(alignment: Alignment.topLeft)],
-                child: widget.child,
-              ).expanded$(),
+              const ViewBar().debugLayoutBuilder$(),
+              // widget.child内部自己包滚动条，根layout不管
+              Expanded(child: widget.child),
             ],
           ),
         ),
@@ -86,7 +84,7 @@ class ViewBarState extends State<ViewBar> {
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
-    return Watch(builder:(context) {
+    return Watch(builder: (context) {
       return Container(
           color: colors.surfaceContainer,
           child: Row(
@@ -127,13 +125,13 @@ class ViewBarState extends State<ViewBar> {
                 ],
               ),
               const VerticalDivider(width: 1),
-              Watch(builder:(context) {
+              Watch(builder: (context) {
                 return NoteTreeView(
                   view: view,
                   noteRoot: routes.routes_notes,
                 ).offstage$(offstage: view.value != "note_tree_view");
               }),
-              Watch(builder:(context) {
+              Watch(builder: (context) {
                 final app = App.of(context);
                 final route = YouRouter.of(context);
 

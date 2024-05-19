@@ -8,7 +8,9 @@ import 'package:you_flutter/state.dart';
 @NoteAnnotation(label: "Widgets cheatsheets", publish: true)
 void build(BuildContext context, Cell print) {
   Widget cardCell(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
+    var colors = Theme
+        .of(context)
+        .colorScheme;
     return Wrap(
       children: [
         Card(
@@ -49,7 +51,9 @@ void build(BuildContext context, Cell print) {
   }
 
   Widget containerCell(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
+    var colors = Theme
+        .of(context)
+        .colorScheme;
     return Wrap(
       children: [
         Container(
@@ -69,7 +73,7 @@ void build(BuildContext context, Cell print) {
               borderRadius: BorderRadius.circular(4.0),
             ),
             child: const Text("模仿Card\nImitate Card") // Your widget here
-            )
+        )
       ],
     );
   }
@@ -427,18 +431,19 @@ void build(BuildContext context, Cell print) {
             onPressed: () {
               showDialog<void>(
                 context: context,
-                builder: (context) => AlertDialog(
-                  title: const Text('''AlertDialog'''),
-                  content: const Text('''
+                builder: (context) =>
+                    AlertDialog(
+                      title: const Text('''AlertDialog'''),
+                      content: const Text('''
 A Material Design alert dialog.
 An alert dialog (also known as a basic dialog) informs the user about
 situations that require acknowledgment. An alert dialog has an optional
 title and an optional list of actions. The title is displayed above the
 content and the actions are displayed below the content.'''),
-                  actions: <Widget>[
-                    FilledButton(child: const Text('Ok'), onPressed: () => Navigator.of(context).pop()),
-                  ],
-                ),
+                      actions: <Widget>[
+                        FilledButton(child: const Text('Ok'), onPressed: () => Navigator.of(context).pop()),
+                      ],
+                    ),
               );
             },
           ),
@@ -447,13 +452,14 @@ content and the actions are displayed below the content.'''),
             onPressed: () {
               showDialog<void>(
                 context: context,
-                builder: (context) => Dialog.fullscreen(
-                  child: AppBar(
-                    title: const Text('Dialog.fullscreen'),
-                    centerTitle: false,
-                    leading: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
-                  ),
-                ),
+                builder: (context) =>
+                    Dialog.fullscreen(
+                      child: AppBar(
+                        title: const Text('Dialog.fullscreen'),
+                        centerTitle: false,
+                        leading: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
+                      ),
+                    ),
               );
             },
           ),
@@ -541,12 +547,12 @@ content and the actions are displayed below the content.'''),
     final selected = 0.signal();
     List<({NavigationDestination destination, Widget page})> destinations = [
       (
-        destination: const NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
+      destination: const NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
+      page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
       ),
       (
-        destination: const NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
+      destination: const NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
+      page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
       ),
     ];
     return Watch(builder: (context) {
@@ -607,12 +613,12 @@ content and the actions are displayed below the content.'''),
     final selected = 0.signal();
     List<({NavigationRailDestination distination, Widget page})> destinations = [
       (
-        distination: const NavigationRailDestination(icon: Icon(Icons.explore), label: Text('Explore')),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
+      distination: const NavigationRailDestination(icon: Icon(Icons.explore), label: Text('Explore')),
+      page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
       ),
       (
-        distination: const NavigationRailDestination(icon: Icon(Icons.commute), label: Text('Commute')),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
+      distination: const NavigationRailDestination(icon: Icon(Icons.commute), label: Text('Commute')),
+      page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
       ),
     ];
     return Watch(builder: (context) {
@@ -642,16 +648,16 @@ content and the actions are displayed below the content.'''),
   Widget tabBarCell() {
     List<({Tab tab, Widget page})> tabs = [
       (
-        tab: const Tab(icon: Icon(Icons.cloud_outlined), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's cloudy here")),
+      tab: const Tab(icon: Icon(Icons.cloud_outlined), iconMargin: EdgeInsets.all(10)),
+      page: const Center(child: Text("It's cloudy here")),
       ),
       (
-        tab: const Tab(icon: Icon(Icons.beach_access_sharp), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's rainy here")),
+      tab: const Tab(icon: Icon(Icons.beach_access_sharp), iconMargin: EdgeInsets.all(10)),
+      page: const Center(child: Text("It's rainy here")),
       ),
       (
-        tab: const Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's sunny here")),
+      tab: const Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: EdgeInsets.all(10)),
+      page: const Center(child: Text("It's sunny here")),
       ),
     ];
 
@@ -792,7 +798,8 @@ content and the actions are displayed below the content.'''),
         suggests.addAll(randomSuggests.map((e) => (value: e, type: "suggest", typeIcon: Icons.recommend_outlined)));
       }
 
-      return suggests.map((item) => ListTile(
+      return suggests.map((item) =>
+          ListTile(
             leading: Icon(item.typeIcon),
             title: Text(item.value),
             subtitle: Text(item.type),
@@ -835,68 +842,93 @@ content and the actions are displayed below the content.'''),
     );
   }
 
+  Widget appBarCell() {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black26,
+        actions: [
+          Builder(builder: (context) {
+            return IconButton.outlined(icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
+          }),
+          // const Spacer(),
+        ],
+      ),
+      // body: const Text("body"),
+    );
+  }
+
   var all = Column(
-    children: [
+      children: [
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
-        CellView(title: "Divider", child: dividerCell()),
-        CellView(title: "Spacer", child: spacerCell()),
-        CellView(title: "Placeholder", child: placeholderCell()),
-      ]),
-      Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
-        CellView(title: "Container", child: containerCell(context)),
-      ]),
-      Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
-        CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell(context)),
-        CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
-        CellView(title: "IconButton", child: iconButtonCell(context)),
-        CellView(title: "segmentButton", child: segmentButtonCell(context)),
-        CellView(title: "SearchAnchor", child: searchCell()),
-      ]),
-      Level1MasonryLayout(title: "button&input&form", cellWidth: 400, children: [
-        CellView(title: "Badge", child: badgesCell(context)),
-        CellView(title: "ProgressIndicator", child: progressIndicatorCell(context)),
-        CellView(title: "ProgressIndicator2", child: progressIndicator2Cell(context)),
-      ]),
-      Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
-        CellView(title: "SnackBar", child: snackBarCell(context)),
-        CellView(title: "dialog", child: dialogCell()),
-        CellView(title: "bottomSheet", child: bottomSheetCell(context)),
-      ]),
-      Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
-        CellView(title: "Card", child: cardCell(context)),
-      ]),
-      Level1MasonryLayout(title: "导航与页面", cellWidth: 400, children: [
-        CellView(title: "BottomAppBar", child: bottomAppBarCell()),
-        CellView(title: "NavigationBar", child: navigationBarCell()),
-        CellView(title: "NavigationDrawer", child: navigationDrawerCell()),
-        CellView(title: "NavigationRail", child: navigationRailCell()),
-        CellView(title: "TabBar", child: tabBarCell()),
-        CellView(title: "MenuCell", child: menuCell()),
-      ])
-    ],
+    CellView(title: "Divider", child: dividerCell()),
+    CellView(title: "Spacer", child: spacerCell()),
+    CellView(title: "Placeholder", child: placeholderCell()),
+  ]),
+      Level1MasonryLayout
+  (title: "布局,Layout", cellWidth: 500, children: [
+    CellView(title: "Container", child: containerCell(context)),
+  ])
+  ,
+  Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
+  CellView(title: "ButtonStyleButton", child: buttonStyleButtonCell(context)),
+  CellView(title: "FloatingActionButton", child: floatingActionButtonCell(context)),
+  CellView(title: "IconButton", child: iconButtonCell(context)),
+  CellView(title: "segmentButton", child: segmentButtonCell(context)),
+  CellView(title: "SearchAnchor", child: searchCell()),
+  ]),
+  Level1MasonryLayout(title: "button&input&form", cellWidth: 400, children: [
+  CellView(title: "Badge", child: badgesCell(context)),
+  CellView(title: "ProgressIndicator", child: progressIndicatorCell(context)),
+  CellView(title: "ProgressIndicator2", child: progressIndicator2Cell(context)),
+  ]),
+  Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
+  CellView(title: "SnackBar", child: snackBarCell(context)),
+  CellView(title: "dialog", child: dialogCell()),
+  CellView(title: "bottomSheet", child: bottomSheetCell(context)),
+  ]),
+  Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
+  CellView(title: "Card", child: cardCell(context)),
+  ]),
+  Level1MasonryLayout(title: "导航与页面", cellWidth: 400, children: [
+  CellView(title: "BottomAppBar", child: bottomAppBarCell()),
+  CellView(title: "NavigationBar", child: navigationBarCell()),
+  CellView(title: "NavigationDrawer", child: navigationDrawerCell()),
+  CellView(title: "NavigationRail", child: navigationRailCell()),
+  CellView(title: "TabBar", child: tabBarCell()),
+  CellView(title: "MenuCell", child: menuCell()),
+  CellView(title: "AppBar",height: 100, child: appBarCell()),
+  ]),
+  ],
   );
 
   print(all);
-}
+  }
 
 class CellView extends StatelessWidget {
   final String title;
   final Widget child;
+  final double? width;
+  final double? height;
   final BoxConstraints? constraints;
 
   const CellView({
     super.key,
     required this.title,
+    this.width,
+    this.height,
     this.constraints,
     required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    var textStyle = Theme.of(context).textTheme;
+    var colors = Theme
+        .of(context)
+        .colorScheme;
+    var textStyle = Theme
+        .of(context)
+        .textTheme;
     return Container(
-      constraints: constraints,
       decoration: BoxDecoration(color: colors.surfaceContainer, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
       child: Column(
         children: [
@@ -915,6 +947,9 @@ class CellView extends StatelessWidget {
             ),
           ),
           Container(
+            width: width,
+            height: height,
+            constraints: constraints,
             padding: const EdgeInsets.all(12),
             child: child,
           ),
@@ -933,8 +968,12 @@ class Level1GridLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    var textTheme = Theme.of(context).textTheme;
+    var colors = Theme
+        .of(context)
+        .colorScheme;
+    var textTheme = Theme
+        .of(context)
+        .textTheme;
 
     return LayoutBuilder(builder: (context, constraints) {
       var crossAxisCount = cellWidth == null ? 1 : (constraints.maxWidth / cellWidth!).toInt();
@@ -980,11 +1019,20 @@ class Level1MasonryLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    var textTheme = Theme.of(context).textTheme;
+    var colors = Theme
+        .of(context)
+        .colorScheme;
+    var textTheme = Theme
+        .of(context)
+        .textTheme;
 
     return LayoutBuilder(builder: (context, constraints) {
-      var crossAxisCount = cellWidth == null ? 1 : (constraints.maxWidth / cellWidth!).toInt();
+      var crossAxisCount = 1;
+      if (cellWidth != null) {
+        if (constraints.maxWidth.isFinite && cellWidth!.isFinite) {
+          crossAxisCount = (constraints.maxWidth / cellWidth!).toInt();
+        }
+      }
       crossAxisCount = crossAxisCount <= 1 ? 1 : crossAxisCount;
       return Column(
         children: [

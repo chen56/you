@@ -81,7 +81,9 @@ base class ToNote extends To {
   }
 }
 
-/// 一个极简的笔记缺省布局，应自己提供layout覆盖
+/// 极简的笔记缺省布局，当[ToNote]链上没有配置任何[ToNote.layout]时，
+/// 此Widget作为page传递到更高层的 [To.layout]
+/// 应用程序应该提供自己的layout,重新解析cell并覆盖之
 final class _DefaultNote extends StatelessWidget with NoteMixin {
   @override
   final Cell cell;
