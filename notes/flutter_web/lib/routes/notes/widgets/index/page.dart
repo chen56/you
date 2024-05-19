@@ -17,6 +17,17 @@ void build(BuildContext context, Cell print) {
 
   var all = Column(
     children: [
+      Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
+        CellView(title: "BottomAppBar", child: navigationAndPage.bottomAppBarCell()),
+        CellView(title: "NavigationBar", child: navigationAndPage.navigationBarCell()),
+        CellView(title: "NavigationDrawer", child: navigationAndPage.navigationDrawerCell()),
+        CellView(title: "NavigationRail", child: navigationAndPage.navigationRailCell()),
+        CellView(title: "TabBar", child: navigationAndPage.tabBarCell()),
+        CellView(title: "MenuCell", child: navigationAndPage.menuCell()),
+        CellView(title: "AppBar", height: 150, child: navigationAndPage.appBarCell()),
+        CellView(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBarCell()),
+      ]),
+
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
         CellView(title: "Divider", child: spacerAndDivider.dividerCell()),
         CellView(title: "Spacer", child: spacerAndDivider.spacerCell()),
@@ -46,16 +57,6 @@ void build(BuildContext context, Cell print) {
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
         CellView(title: "Card", child: decorator.cardCell(context)),
-      ]),
-      Level1MasonryLayout(title: "导航与页面", cellWidth: 400, children: [
-        CellView(title: "BottomAppBar", child: navigationAndPage.bottomAppBarCell()),
-        CellView(title: "NavigationBar", child: navigationAndPage.navigationBarCell()),
-        CellView(title: "NavigationDrawer", child: navigationAndPage.navigationDrawerCell()),
-        CellView(title: "NavigationRail", child: navigationAndPage.navigationRailCell()),
-        CellView(title: "TabBar", child: navigationAndPage.tabBarCell()),
-        CellView(title: "MenuCell", child: navigationAndPage.menuCell()),
-        CellView(title: "AppBar", height: 150, child: navigationAndPage.appBarCell()),
-        CellView(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBarCell()),
       ]),
     ],
   );
@@ -831,7 +832,6 @@ class NavigationAndPage {
               Builder(builder: (context) {
                 return TextButton.icon(label: const Text("openEndDrawer"), icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
               }),
-              const Spacer(),
             ],
           ),
           body: drawer(),
@@ -969,7 +969,7 @@ class NavigationAndPage {
         slivers: <Widget>[
           SliverAppBar(
             pinned: pinned.value,
-            expandedHeight: 80.0,
+            expandedHeight: 180.0,
             actions: [
               Row(children: [const Text('pinned'), Switch(onChanged: (newValue) => pinned.value = newValue, value: pinned.value)]),
             ],
