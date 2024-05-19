@@ -43,8 +43,10 @@ void build(BuildContext context, Cell print) {
         CellView(title: "segmentButton", child: buttonAndInput.segmentButtonCell(context)),
         CellView(title: "Checkbox", child: buttonAndInput.checkboxCell()),
         CellView(title: "CheckboxListTile", child: buttonAndInput.checkboxListTileCell()),
+        CellView(title: "Chip", child: buttonAndInput.chip()),
+        CellView(title: "FilterChip", child: buttonAndInput.filterChip()),
       ]),
-      Level1MasonryLayout(title: "text&info&tip", cellWidth: 400, children: [
+      Level1MasonryLayout(title: "text&info&tip", cellWidth: 300, children: [
         CellView(title: "Badge", child: textAndInfoAndTip.badgesCell(context)),
         CellView(title: "ProgressIndicator", child: textAndInfoAndTip.progressIndicatorCell(context)),
         CellView(title: "ProgressIndicator2", child: textAndInfoAndTip.progressIndicator2Cell(context)),
@@ -442,6 +444,64 @@ class ButtonAndInput {
       },
     );
   }
+
+  Widget chip() {
+    final Set<TargetPlatform> targets = Set.of(TargetPlatform.values).signal();
+
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Wrap(
+              children: [
+                for (var target in targets)
+                  Chip(
+                    avatar: CircleAvatar(child: Text(target.name[0])),
+                    label: Text(target.name),
+                    onDeleted: () => targets.remove(target),
+                  )
+              ],
+            ),
+            FilledButton(
+                onPressed: () {
+                  targets.clear();
+                  targets.addAll(TargetPlatform.values);
+                },
+                child: const Text("Reset")),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget filterChip() {
+    final Set<String> selected = <String>{}.signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Wrap(
+              children: [
+                for (var t in TargetPlatform.values)
+                  FilterChip(
+                    label: Text(t.name),
+                    selected: selected.contains(t.name),
+                    onSelected: (bool value) {
+                      if (value) {
+                        selected.add(t.name);
+                      } else {
+                        selected.remove(t.name);
+                      }
+                    },
+                  )
+              ],
+            ),
+            FilledButton(onPressed: () => selected.clear(), child: const Text("Reset")),
+          ],
+        );
+      },
+    );
+  }
 }
 
 class LayoutCore {
@@ -535,6 +595,7 @@ class TextAndInfoAndTip {
         CircleAvatar(child: Text('C')),
         CircleAvatar(child: Icon(Icons.account_box)),
         CircleAvatar(backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/2039742')),
+        CircleAvatar(backgroundImage: NetworkImage('https://img2.baidu.com/it/u=3784833129,896943374&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500')),
       ],
     );
   }
