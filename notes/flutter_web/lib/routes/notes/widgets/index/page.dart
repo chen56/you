@@ -27,7 +27,6 @@ void build(BuildContext context, Cell print) {
         CellView(title: "AppBar", height: 150, child: navigationAndPage.appBarCell()),
         CellView(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBarCell()),
       ]),
-
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
         CellView(title: "Divider", child: spacerAndDivider.dividerCell()),
         CellView(title: "Spacer", child: spacerAndDivider.spacerCell()),
@@ -49,6 +48,7 @@ void build(BuildContext context, Cell print) {
         CellView(title: "Badge", child: textAndInfoAndTip.badgesCell(context)),
         CellView(title: "ProgressIndicator", child: textAndInfoAndTip.progressIndicatorCell(context)),
         CellView(title: "ProgressIndicator2", child: textAndInfoAndTip.progressIndicator2Cell(context)),
+        CellView(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar(context)),
       ]),
       Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
         CellView(title: "SnackBar", child: advancedTemplateContainer.snackBarCell(context)),
@@ -529,6 +529,16 @@ class SpacerAndDivider {
 }
 
 class TextAndInfoAndTip {
+  Widget circleAvatar(BuildContext context) {
+    return const Row(
+      children: [
+        CircleAvatar(child: Text('C')),
+        CircleAvatar(child: Icon(Icons.account_box)),
+        CircleAvatar(backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/2039742')),
+      ],
+    );
+  }
+
   Widget badgesCell(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
