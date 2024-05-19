@@ -836,18 +836,22 @@ content and the actions are displayed below the content.'''),
   }
 
   Widget appBarCell() {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black26,
-        actions: [
-          Builder(builder: (context) {
-            return IconButton.outlined(icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
-          }),
-          // const Spacer(),
-        ],
-      ),
-      // body: const Text("body"),
-    );
+    return Builder(builder: (context) {
+      final colors = Theme.of(context).colorScheme;
+      return Scaffold(
+        appBar: AppBar(
+          backgroundColor: colors.surfaceContainerHighest,
+          actions: [
+            IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+            const Spacer(),
+            IconButton(icon: const Icon(Icons.minimize), onPressed: () {}),
+            IconButton(icon: const Icon(Icons.filter_alt_off), onPressed: () {}),
+            // const Spacer(),
+          ],
+        ),
+        body: const Text("Hello\nWorld"),
+      );
+    });
   }
 
   var all = Column(
@@ -887,7 +891,7 @@ content and the actions are displayed below the content.'''),
         CellView(title: "NavigationRail", child: navigationRailCell()),
         CellView(title: "TabBar", child: tabBarCell()),
         CellView(title: "MenuCell", child: menuCell()),
-        CellView(title: "AppBar", height: 100, child: appBarCell()),
+        CellView(title: "AppBar", height: 150, child: appBarCell()),
       ]),
     ],
   );
@@ -916,7 +920,7 @@ class CellView extends StatelessWidget {
     var colors = Theme.of(context).colorScheme;
     var textStyle = Theme.of(context).textTheme;
     return Container(
-      decoration: BoxDecoration(color: colors.surfaceContainer, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
+      decoration: BoxDecoration(color: colors.surfaceContainerLow, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
       child: Column(
         children: [
           Container(
@@ -937,6 +941,8 @@ class CellView extends StatelessWidget {
             width: width,
             height: height,
             constraints: constraints,
+            // color: colors.surface,
+
             padding: const EdgeInsets.all(12),
             child: child,
           ),
