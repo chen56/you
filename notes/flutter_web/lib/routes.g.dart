@@ -36,7 +36,7 @@ import 'package:flutter_web/routes/notes/dev/devtool/page.dart' as _devtool_page
 import 'package:flutter_web/routes/notes/dev/devtool/vmservice/page.dart' as _vmservice_page;
 import 'package:flutter_web/routes/notes/dev/debug/page.dart' as _debug_page;
 import 'package:flutter_web/routes/notes/cheatsheets/color_roles/page.dart' as _color_roles_page;
-import 'package:flutter_web/routes/notes/cheatsheets/index/page.dart' as _index_page;
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/page.dart' as _widgets_page;
 import 'package:flutter_web/routes/notes/thinking_in_ui/readable_html_vs_dart/page.dart' as _readable_html_vs_dart_page;
 import 'package:flutter_web/routes/notes/x.note_inside/how_note_work/page.dart' as _how_note_work_page;
 import 'package:flutter_web/routes/notes/x.note_inside/mockup_content/page.dart' as _mockup_content_page;
@@ -99,7 +99,7 @@ mixin RoutesMixin {
       ]),
       ToNote('cheatsheets', children: [
         ToNote('color_roles', page: _color_roles_page.build, pageAnno: _Pages.notes_cheatsheets_color_roles),
-        ToNote('index', page: _index_page.build, pageAnno: _Pages.notes_cheatsheets_index),
+        ToNote('widgets', page: _widgets_page.build, pageAnno: _Pages.notes_cheatsheets_widgets),
       ]),
       ToNote('thinking_in_ui', children: [
         ToNote('readable_html_vs_dart', page: _readable_html_vs_dart_page.build),
@@ -166,7 +166,7 @@ mixin RoutesMixin {
   late final ToNote routes_notes_dev_devtool_vmservice = (root.find('/notes/dev/devtool/vmservice')! as ToNote);
   late final ToNote routes_notes_dev_debug = (root.find('/notes/dev/debug')! as ToNote);
   late final ToNote routes_notes_cheatsheets_color_roles = (root.find('/notes/cheatsheets/color_roles')! as ToNote);
-  late final ToNote routes_notes_cheatsheets_index = (root.find('/notes/cheatsheets/index')! as ToNote);
+  late final ToNote routes_notes_cheatsheets_widgets = (root.find('/notes/cheatsheets/widgets')! as ToNote);
   late final ToNote routes_notes_thinking_in_ui_readable_html_vs_dart = (root.find('/notes/thinking_in_ui/readable_html_vs_dart')! as ToNote);
   late final ToNote routes_notes_x_note_inside_how_note_work = (root.find('/notes/x.note_inside/how_note_work')! as ToNote);
   late final ToNote routes_notes_x_note_inside_mockup_content = (root.find('/notes/x.note_inside/mockup_content')! as ToNote);
@@ -191,7 +191,7 @@ class Routes with RoutesMixin {}
 class _Pages {
   static const notes = NoteAnnotation(label: "笔记");
   static const notes_cheatsheets_color_roles = NoteAnnotation(label: "Color roles", publish: true);
-  static const notes_cheatsheets_index = NoteAnnotation(label: "Widgets cheatsheets", publish: true);
+  static const notes_cheatsheets_widgets = NoteAnnotation(label: "Widgets", publish: true);
   static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: false);
   static const notes_Improve_app = NoteAnnotation(label: "完善应用的技术");
 }

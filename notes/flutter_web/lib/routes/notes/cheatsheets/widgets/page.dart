@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_web/views/cell_view.dart';
+import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
 
