@@ -19,19 +19,19 @@ void build(BuildContext context, Cell print) {
   var all = Column(
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
-        CellView(title: "BottomAppBar", child: navigationAndPage.bottomAppBarCell()),
-        CellView(title: "NavigationBar", child: navigationAndPage.navigationBarCell()),
-        CellView(title: "NavigationDrawer", child: navigationAndPage.navigationDrawerCell()),
-        CellView(title: "NavigationRail", child: navigationAndPage.navigationRailCell()),
-        CellView(title: "TabBar", child: navigationAndPage.tabBarCell()),
-        CellView(title: "MenuCell", child: navigationAndPage.menuCell()),
-        CellView(title: "AppBar", height: 150, child: navigationAndPage.appBarCell()),
-        CellView(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBarCell()),
+        CellView(title: "BottomAppBar", child: navigationAndPage.bottomAppBar()),
+        CellView(title: "NavigationBar", child: navigationAndPage.navigationBar()),
+        CellView(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
+        CellView(title: "NavigationRail", child: navigationAndPage.navigationRail()),
+        CellView(title: "TabBar", child: navigationAndPage.tabBar()),
+        CellView(title: "MenuCell", child: navigationAndPage.menu()),
+        CellView(title: "AppBar", height: 150, child: navigationAndPage.appBar()),
+        CellView(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBar()),
       ]),
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
-        CellView(title: "Divider", child: spacerAndDivider.dividerCell()),
-        CellView(title: "Spacer", child: spacerAndDivider.spacerCell()),
-        CellView(title: "Placeholder", child: spacerAndDivider.placeholderCell()),
+        CellView(title: "Divider", child: spacerAndDivider.divider()),
+        CellView(title: "Spacer", child: spacerAndDivider.spacer()),
+        CellView(title: "Placeholder", child: spacerAndDivider.placeholder()),
       ]),
       Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
         CellView(title: "Container", child: layoutCore.containerCell(context)),
@@ -40,10 +40,10 @@ void build(BuildContext context, Cell print) {
         CellView(title: "ButtonStyleButton", child: buttonAndInput.buttonStyleButtonCell(context)),
         CellView(title: "FloatingActionButton", child: buttonAndInput.floatingActionButtonCell(context)),
         CellView(title: "IconButton", child: buttonAndInput.iconButtonCell(context)),
-        CellView(title: "SearchAnchor", child: buttonAndInput.searchCell()),
+        CellView(title: "SearchAnchor", child: buttonAndInput.search()),
         CellView(title: "segmentButton", child: buttonAndInput.segmentButtonCell(context)),
-        CellView(title: "Checkbox", child: buttonAndInput.checkboxCell()),
-        CellView(title: "CheckboxListTile", child: buttonAndInput.checkboxListTileCell()),
+        CellView(title: "Checkbox", child: buttonAndInput.checkbox()),
+        CellView(title: "CheckboxListTile", child: buttonAndInput.checkboxListTile()),
         CellView(title: "Chip", child: buttonAndInput.chip()),
         CellView(title: "ActionChip", child: buttonAndInput.actionChip()),
         CellView(title: "ChoiceChip", child: buttonAndInput.choiceChip()),
@@ -66,7 +66,7 @@ void build(BuildContext context, Cell print) {
       ]),
       Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
         CellView(title: "SnackBar", child: advancedTemplateContainer.snackBarCell(context)),
-        CellView(title: "dialog", child: advancedTemplateContainer.dialogCell()),
+        CellView(title: "dialog", child: advancedTemplateContainer.dialog()),
         CellView(title: "bottomSheet", child: advancedTemplateContainer.bottomSheetCell(context)),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
@@ -288,7 +288,7 @@ class ButtonAndInput {
     });
   }
 
-  Widget searchCell() {
+  Widget search() {
     List<String> searchWords = [
       "中国 China",
       "你好 Hello",
@@ -417,7 +417,7 @@ class ButtonAndInput {
     );
   }
 
-  Widget checkboxListTileCell() {
+  Widget checkboxListTile() {
     final Value<bool?> checkboxListTile1 = (null as bool?).signal();
     final Value<bool> checkboxListTile2 = false.signal();
     return Watch(
@@ -432,7 +432,7 @@ class ButtonAndInput {
     );
   }
 
-  Widget checkboxCell() {
+  Widget checkbox() {
     final Value<bool?> checkbox1 = (null as bool?).signal();
     final Value<bool> checkbox2 = false.signal();
     return Watch(
@@ -858,7 +858,7 @@ class LayoutCore {
 }
 
 class SpacerAndDivider {
-  Widget dividerCell() {
+  Widget divider() {
     return const Column(
       children: [
         SizedBox(
@@ -884,7 +884,7 @@ class SpacerAndDivider {
     );
   }
 
-  Widget spacerCell() {
+  Widget spacer() {
     return const Column(
       children: [
         Row(
@@ -898,7 +898,7 @@ class SpacerAndDivider {
     );
   }
 
-  Widget placeholderCell() {
+  Widget placeholder() {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -1061,7 +1061,7 @@ class AdvancedTemplateContainer {
     });
   }
 
-  Widget dialogCell() {
+  Widget dialog() {
     return Builder(builder: (context) {
       return Wrap(
         alignment: WrapAlignment.spaceEvenly,
@@ -1151,7 +1151,7 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget bottomAppBarCell() {
+  Widget bottomAppBar() {
     return SizedBox(
       width: double.infinity,
       height: 200,
@@ -1172,7 +1172,7 @@ class NavigationAndPage {
     );
   }
 
-  Widget navigationBarCell() {
+  Widget navigationBar() {
     final selected = 0.signal();
     List<({NavigationDestination destination, Widget page})> destinations = [
       (
@@ -1200,7 +1200,7 @@ class NavigationAndPage {
     });
   }
 
-  Widget navigationDrawerCell() {
+  Widget navigationDrawer() {
     final selected = 0.signal();
 
     Widget drawer() {
@@ -1237,7 +1237,7 @@ class NavigationAndPage {
     });
   }
 
-  Widget navigationRailCell() {
+  Widget navigationRail() {
     final selected = 0.signal();
     List<({NavigationRailDestination distination, Widget page})> destinations = [
       (
@@ -1273,7 +1273,7 @@ class NavigationAndPage {
     });
   }
 
-  Widget tabBarCell() {
+  Widget tabBar() {
     List<({Tab tab, Widget page})> tabs = [
       (
         tab: const Tab(icon: Icon(Icons.cloud_outlined), iconMargin: EdgeInsets.all(10)),
@@ -1304,7 +1304,7 @@ class NavigationAndPage {
     );
   }
 
-  Widget menuCell() {
+  Widget menu() {
     return Builder(builder: (BuildContext context) {
       return MenuAnchor(
         builder: (context, controller, child) {
@@ -1340,7 +1340,7 @@ class NavigationAndPage {
     });
   }
 
-  Widget appBarCell() {
+  Widget appBar() {
     return Builder(builder: (context) {
       final colors = Theme.of(context).colorScheme;
       return Scaffold(
@@ -1358,7 +1358,7 @@ class NavigationAndPage {
     });
   }
 
-  Widget sliverAppBarCell() {
+  Widget sliverAppBar() {
     var pinned = true.signal();
     return Watch(builder: (context) {
       return CustomScrollView(
