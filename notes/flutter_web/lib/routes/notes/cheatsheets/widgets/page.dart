@@ -6,7 +6,7 @@ import 'package:flutter_web/views/cell_view.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
 
-@NoteAnnotation(label: "Widgets cheatsheets", publish: true)
+@NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
   SpacerAndDivider spacerAndDivider = SpacerAndDivider();
   LayoutCore layoutCore = LayoutCore();
