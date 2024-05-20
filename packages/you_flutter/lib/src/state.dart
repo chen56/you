@@ -8,8 +8,14 @@ import 'package:you_dart/state.dart';
 final class Watch extends StatefulWidget {
   final WidgetBuilder builder;
   final VoidCallback? onDispose;
+  final Listenable? watchListenable;
 
-  const Watch({super.key, required this.builder, this.onDispose});
+  const Watch({
+    super.key,
+    this.watchListenable,
+    this.onDispose,
+    required this.builder,
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -20,6 +26,16 @@ final class Watch extends StatefulWidget {
 final class _WatchState extends State<Watch> {
   final Map<Signal, SignalSubscription> _signalConnections = HashMap();
 
+  void _listener() {
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    widget.watchListenable?.addListener(_listener);
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -27,6 +43,8 @@ final class _WatchState extends State<Watch> {
 
   @override
   void dispose() {
+    widget.watchListenable?.removeListener(_listener);
+
     for (var conn in _signalConnections.values) {
       conn.cancel();
     }

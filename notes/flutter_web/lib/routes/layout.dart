@@ -43,7 +43,7 @@ class RootLayoutState extends State<RootLayout> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ViewBar().debugLayoutBuilder$(),
+              const ViewBar(),
               // widget.child内部自己包滚动条，根layout不管
               Expanded(child: widget.child),
             ],

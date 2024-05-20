@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_web/views/cell_view.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -44,7 +45,18 @@ void build(BuildContext context, Cell print) {
         CellView(title: "Checkbox", child: buttonAndInput.checkboxCell()),
         CellView(title: "CheckboxListTile", child: buttonAndInput.checkboxListTileCell()),
         CellView(title: "Chip", child: buttonAndInput.chip()),
+        CellView(title: "ActionChip", child: buttonAndInput.actionChip()),
+        CellView(title: "ChoiceChip", child: buttonAndInput.choiceChip()),
         CellView(title: "FilterChip", child: buttonAndInput.filterChip()),
+        CellView(title: "InputChip", child: buttonAndInput.inputChip()),
+        CellView(title: "datePicker", child: buttonAndInput.datePicker()),
+        CellView(title: "dateRangePicker", child: buttonAndInput.dateRangePicker()),
+        CellView(title: "timePicker", child: buttonAndInput.timePicker()),
+        CellView(title: "DropdownMenu", child: buttonAndInput.dropdownMenu()),
+        CellView(title: "Radio", child: buttonAndInput.radio()),
+        CellView(title: "Slider", child: buttonAndInput.slider()),
+        CellView(title: "Switch", child: buttonAndInput.switchs()),
+        CellView(title: "TextField", child: buttonAndInput.textField()),
       ]),
       Level1MasonryLayout(title: "text&info&tip", cellWidth: 300, children: [
         CellView(title: "Badge", child: textAndInfoAndTip.badgesCell(context)),
@@ -448,30 +460,41 @@ class ButtonAndInput {
   Widget chip() {
     final Set<TargetPlatform> targets = Set.of(TargetPlatform.values).signal();
 
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Wrap(
-              children: [
-                for (var target in targets)
-                  Chip(
-                    avatar: CircleAvatar(child: Text(target.name[0])),
-                    label: Text(target.name),
-                    onDeleted: () => targets.remove(target),
-                  )
-              ],
-            ),
-            FilledButton(
-                onPressed: () {
-                  targets.clear();
-                  targets.addAll(TargetPlatform.values);
-                },
-                child: const Text("Reset")),
+    return Watch(builder: (context) {
+      return Column(children: <Widget>[
+        Wrap(
+          children: [
+            for (var target in targets)
+              Chip(
+                avatar: CircleAvatar(child: Text(target.name[0])),
+                label: Text(target.name),
+                onDeleted: () => targets.remove(target),
+              )
           ],
-        );
-      },
-    );
+        ),
+        FilledButton(
+            onPressed: () {
+              targets.clear();
+              targets.addAll(TargetPlatform.values);
+            },
+            child: const Text("Reset")),
+      ]);
+    });
+  }
+
+  Widget actionChip() {
+    final Value<bool> favorite = false.signal();
+    return Watch(builder: (context) {
+      return Column(children: <Widget>[
+        Wrap(children: [
+          ActionChip(
+            avatar: Icon(favorite.value ? Icons.favorite : Icons.favorite_border),
+            label: const Text("favorite"),
+            onPressed: () => favorite.value = !favorite.value,
+          ),
+        ]),
+      ]);
+    });
   }
 
   Widget filterChip() {
@@ -497,6 +520,308 @@ class ButtonAndInput {
               ],
             ),
             FilledButton(onPressed: () => selected.clear(), child: const Text("Reset")),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget choiceChip() {
+    final Value<TargetPlatform?> selected = (null as TargetPlatform?).signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Wrap(
+              children: [
+                for (var t in TargetPlatform.values)
+                  ChoiceChip(
+                      label: Text(t.name),
+                      selected: selected.value == t,
+                      onSelected: (bool value) {
+                        selected.value = value ? t : null;
+                      }),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget inputChip() {
+    final TextEditingController controller = TextEditingController();
+    final List<String> tags = <String>[].signal();
+
+    return Watch(
+      watchListenable: controller,
+      onDispose: () {
+        controller.dispose();
+      },
+      builder: (context) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextField(
+              controller: controller,
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.add),
+                hintText: 'Write a tag, enter to add',
+              ),
+              onSubmitted: (_) {
+                if (controller.text.isNotEmpty) {
+                  if (!tags.contains(controller.text)) {
+                    tags.add(controller.text);
+                  }
+                  controller.clear(); // 清空TextField
+                }
+              },
+            ),
+            Wrap(
+              spacing: 8.0,
+              children: tags.map((tag) {
+                return InputChip(
+                  avatar: const Icon(Icons.tag),
+                  label: Text(tag),
+                  onDeleted: () => tags.remove(tag),
+                  deleteIcon: const Icon(Icons.cancel),
+                );
+              }).toList(),
+            )
+          ],
+        );
+      },
+    );
+  }
+
+  Widget datePicker() {
+    final Value<DateTime?> date = (null as DateTime?).signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Text("date: ${date.value}"),
+            CalendarDatePicker(
+              initialDate: DateTime.now(),
+              firstDate: DateTime(DateTime.now().year - 1),
+              lastDate: DateTime(DateTime.now().year + 1),
+              onDateChanged: (value) => date.value = value,
+            ),
+            TextButton.icon(
+              onPressed: () async {
+                DateTime? selected = await showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(DateTime.now().year - 1),
+                  lastDate: DateTime(DateTime.now().year + 1),
+                );
+                date.value = selected;
+              },
+              icon: const Icon(Icons.calendar_month),
+              label: const Text('showDatePicker dialog'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget dateRangePicker() {
+    final Value<DateTimeRange?> dateRange = (null as DateTimeRange?).signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Text("date: ${dateRange.value}"),
+            TextButton.icon(
+              onPressed: () async {
+                DateTimeRange? selected = await showDateRangePicker(
+                  context: context,
+                  firstDate: DateTime(DateTime.now().year - 1),
+                  lastDate: DateTime(DateTime.now().year + 1),
+                );
+                dateRange.value = selected;
+              },
+              icon: const Icon(Icons.date_range),
+              label: const Text('showDateRangePicker dialog'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget timePicker() {
+    final Value<TimeOfDay?> time = (null as TimeOfDay?).signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Text("date: ${time.value}"),
+            TextButton.icon(
+              onPressed: () async {
+                TimeOfDay? selected = await showTimePicker(
+                  context: context,
+                  initialTime: TimeOfDay.now(),
+                );
+                time.value = selected;
+              },
+              icon: const Icon(Icons.timer_outlined),
+              label: const Text('showTimePicker dialog'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget dropdownMenu() {
+    return Column(
+      children: [
+        Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
+          const Text("enableFilter: true "),
+          DropdownMenu<TargetPlatform>(
+            label: const Text('platform'),
+            enableFilter: true,
+            onSelected: (value) {},
+            dropdownMenuEntries: TargetPlatform.values.map((e) {
+              return DropdownMenuEntry<TargetPlatform>(value: e, label: e.name);
+            }).toList(),
+          )
+        ]),
+        Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
+          const Text("enableFilter: false"),
+          DropdownMenu<TargetPlatform>(
+            label: const Text('platform'),
+            enableFilter: false,
+            onSelected: (value) {},
+            dropdownMenuEntries: TargetPlatform.values.map((e) {
+              return DropdownMenuEntry<TargetPlatform>(value: e, label: e.name);
+            }).toList(),
+          ),
+        ]),
+      ],
+    );
+  }
+
+  Widget radio() {
+    List<TargetPlatform> targets = List.of([TargetPlatform.linux, TargetPlatform.windows, TargetPlatform.macOS]);
+    final Value<TargetPlatform?> radioListTile = (null as TargetPlatform?).signal();
+    final Value<TargetPlatform?> radio = (null as TargetPlatform?).signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Wrap(
+              children: [
+                const Text("RadioListTile:"),
+                for (var t in targets)
+                  RadioListTile<TargetPlatform>(
+                    title: Text(t.name),
+                    value: t,
+                    groupValue: radioListTile.value,
+                    toggleable: true,
+                    onChanged: (value) => radioListTile.value = value,
+                  ),
+                const Text("Radio:"),
+                for (var t in targets)
+                  ListTile(
+                    title: Text(t.name),
+                    leading: Radio<TargetPlatform>(
+                      value: t,
+                      groupValue: radio.value,
+                      onChanged: (value) => radio.value = value,
+                    ),
+                  ),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget slider() {
+    final Value<double> slider1 = 0.0.signal();
+    final Value<double> slider2 = 0.0.signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          children: <Widget>[
+            Slider(
+              max: 100,
+              value: slider1.value,
+              onChanged: (value) {
+                slider1.value = value;
+              },
+            ),
+            Text(slider1.value.toStringAsFixed(2)),
+            Slider(
+              max: 100,
+              divisions: 5,
+              secondaryTrackValue: 42,
+              value: slider2.value,
+              label: slider2.value.toString(),
+              onChanged: (value) {
+                slider2.value = value;
+              },
+            ),
+            Text("${slider2.value}"),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget switchs() {
+    final Value<bool> switch1 = false.signal();
+    final Value<bool> switchListTile1 = false.signal();
+    return Watch(
+      builder: (context) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            const Text("Switch"),
+            Switch(value: switch1.value, onChanged: (value) => switch1.value = value),
+            Switch(value: switch1.value, onChanged: null),
+            const Divider(),
+            const Text("SwitchListTile"),
+            SwitchListTile(title: const Text("enable"), value: switchListTile1.value, onChanged: (value) => switchListTile1.value = value),
+            SwitchListTile(title: const Text("disable"), value: switchListTile1.value, onChanged: null),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget textField() {
+    return Watch(
+      builder: (context) {
+        return const Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Password'),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              maxLength: 10,
+              maxLengthEnforcement: MaxLengthEnforcement.none,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: '手机号/Phone',
+                errorText: '手机号不能为空/phone should not empty',
+              ),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'disable ',
+                enabled: false,
+              ),
+            ),
           ],
         );
       },
