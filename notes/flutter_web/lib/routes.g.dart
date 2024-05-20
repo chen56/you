@@ -24,7 +24,6 @@ import 'package:flutter_web/routes/notes/state/StatefulBuilder/page.dart' as _St
 import 'package:flutter_web/routes/notes/media&assets&file/file_desktop/page.dart' as _file_desktop_page;
 import 'package:flutter_web/routes/notes/media&assets&file/file_web/page.dart' as _file_web_page;
 import 'package:flutter_web/routes/notes/media&assets&file/assets/page.dart' as _assets_page;
-import 'package:flutter_web/routes/notes/material3/color_roles/page.dart' as _color_roles_page;
 import 'package:flutter_web/routes/notes/pure_dart/dart3/page.dart' as _dart3_page;
 import 'package:flutter_web/routes/notes/pure_dart/async/page.dart' as _async_page;
 import 'package:flutter_web/routes/notes/pure_dart/safe_interface/page.dart' as _safe_interface_page;
@@ -36,6 +35,8 @@ import 'package:flutter_web/routes/notes/dev/macos_config/page.dart' as _macos_c
 import 'package:flutter_web/routes/notes/dev/devtool/page.dart' as _devtool_page;
 import 'package:flutter_web/routes/notes/dev/devtool/vmservice/page.dart' as _vmservice_page;
 import 'package:flutter_web/routes/notes/dev/debug/page.dart' as _debug_page;
+import 'package:flutter_web/routes/notes/cheatsheets/color_roles/page.dart' as _color_roles_page;
+import 'package:flutter_web/routes/notes/cheatsheets/index/page.dart' as _index_page;
 import 'package:flutter_web/routes/notes/thinking_in_ui/readable_html_vs_dart/page.dart' as _readable_html_vs_dart_page;
 import 'package:flutter_web/routes/notes/x.note_inside/how_note_work/page.dart' as _how_note_work_page;
 import 'package:flutter_web/routes/notes/x.note_inside/mockup_content/page.dart' as _mockup_content_page;
@@ -46,7 +47,6 @@ import 'package:flutter_web/routes/notes/widgets/specific_widgets/button/page.da
 import 'package:flutter_web/routes/notes/widgets/container_widgets/menu/page.dart' as _menu_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/scrollable/Dismissible/page.dart' as _Dismissible_page;
 import 'package:flutter_web/routes/notes/widgets/container_widgets/bar/page.dart' as _bar_page;
-import 'package:flutter_web/routes/notes/widgets/index/page.dart' as _index_page;
 import 'package:flutter_web/routes/notes/Improve_app/page.dart' as _Improve_app_page;
 import 'package:flutter_web/routes/notes/Improve_app/env_info/page.dart' as _env_info_page;
 import 'package:flutter_web/routes/notes/Improve_app/1.overview/page.dart' as _1_overview_page;
@@ -80,9 +80,7 @@ mixin RoutesMixin {
         ToNote('file_web', page: _file_web_page.build),
         ToNote('assets', page: _assets_page.build),
       ]),
-      ToNote('material3', children: [
-        ToNote('color_roles', page: _color_roles_page.build, pageAnno: _Pages.notes_material3_color_roles),
-      ]),
+      ToNote('material3'),
       ToNote('pure_dart', children: [
         ToNote('dart3', page: _dart3_page.build),
         ToNote('async', page: _async_page.build),
@@ -98,6 +96,10 @@ mixin RoutesMixin {
           ToNote('vmservice', page: _vmservice_page.build),
         ]),
         ToNote('debug', page: _debug_page.build),
+      ]),
+      ToNote('cheatsheets', children: [
+        ToNote('color_roles', page: _color_roles_page.build, pageAnno: _Pages.notes_cheatsheets_color_roles),
+        ToNote('index', page: _index_page.build, pageAnno: _Pages.notes_cheatsheets_index),
       ]),
       ToNote('thinking_in_ui', children: [
         ToNote('readable_html_vs_dart', page: _readable_html_vs_dart_page.build),
@@ -128,7 +130,6 @@ mixin RoutesMixin {
           ToNote('page_view'),
           ToNote('bar', page: _bar_page.build),
         ]),
-        ToNote('index', page: _index_page.build, pageAnno: _Pages.notes_widgets_index),
       ]),
       ToNote('Improve_app', page: _Improve_app_page.build, pageAnno: _Pages.notes_Improve_app, children: [
         ToNote('env_info', page: _env_info_page.build),
@@ -153,7 +154,6 @@ mixin RoutesMixin {
   late final ToNote routes_notes_media_assets_file_file_desktop = (root.find('/notes/media&assets&file/file_desktop')! as ToNote);
   late final ToNote routes_notes_media_assets_file_file_web = (root.find('/notes/media&assets&file/file_web')! as ToNote);
   late final ToNote routes_notes_media_assets_file_assets = (root.find('/notes/media&assets&file/assets')! as ToNote);
-  late final ToNote routes_notes_material3_color_roles = (root.find('/notes/material3/color_roles')! as ToNote);
   late final ToNote routes_notes_pure_dart_dart3 = (root.find('/notes/pure_dart/dart3')! as ToNote);
   late final ToNote routes_notes_pure_dart_async = (root.find('/notes/pure_dart/async')! as ToNote);
   late final ToNote routes_notes_pure_dart_safe_interface = (root.find('/notes/pure_dart/safe_interface')! as ToNote);
@@ -165,6 +165,8 @@ mixin RoutesMixin {
   late final ToNote routes_notes_dev_devtool = (root.find('/notes/dev/devtool')! as ToNote);
   late final ToNote routes_notes_dev_devtool_vmservice = (root.find('/notes/dev/devtool/vmservice')! as ToNote);
   late final ToNote routes_notes_dev_debug = (root.find('/notes/dev/debug')! as ToNote);
+  late final ToNote routes_notes_cheatsheets_color_roles = (root.find('/notes/cheatsheets/color_roles')! as ToNote);
+  late final ToNote routes_notes_cheatsheets_index = (root.find('/notes/cheatsheets/index')! as ToNote);
   late final ToNote routes_notes_thinking_in_ui_readable_html_vs_dart = (root.find('/notes/thinking_in_ui/readable_html_vs_dart')! as ToNote);
   late final ToNote routes_notes_x_note_inside_how_note_work = (root.find('/notes/x.note_inside/how_note_work')! as ToNote);
   late final ToNote routes_notes_x_note_inside_mockup_content = (root.find('/notes/x.note_inside/mockup_content')! as ToNote);
@@ -175,7 +177,6 @@ mixin RoutesMixin {
   late final ToNote routes_notes_widgets_container_widgets_menu = (root.find('/notes/widgets/container_widgets/menu')! as ToNote);
   late final ToNote routes_notes_widgets_container_widgets_scrollable_Dismissible = (root.find('/notes/widgets/container_widgets/scrollable/Dismissible')! as ToNote);
   late final ToNote routes_notes_widgets_container_widgets_bar = (root.find('/notes/widgets/container_widgets/bar')! as ToNote);
-  late final ToNote routes_notes_widgets_index = (root.find('/notes/widgets/index')! as ToNote);
   late final ToNote routes_notes_Improve_app = (root.find('/notes/Improve_app')! as ToNote);
   late final ToNote routes_notes_Improve_app_env_info = (root.find('/notes/Improve_app/env_info')! as ToNote);
   late final ToNote routes_notes_Improve_app_overview = (root.find('/notes/Improve_app/1.overview')! as ToNote);
@@ -189,8 +190,8 @@ class Routes with RoutesMixin {}
 
 class _Pages {
   static const notes = NoteAnnotation(label: "笔记");
-  static const notes_material3_color_roles = NoteAnnotation(label: "Color roles", publish: true);
-  static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: true);
-  static const notes_widgets_index = NoteAnnotation(label: "Widgets cheatsheets", publish: true);
+  static const notes_cheatsheets_color_roles = NoteAnnotation(label: "Color roles", publish: true);
+  static const notes_cheatsheets_index = NoteAnnotation(label: "Widgets cheatsheets", publish: true);
+  static const notes_widgets_specific_widgets_button = NoteAnnotation(label: "按钮", publish: false);
   static const notes_Improve_app = NoteAnnotation(label: "完善应用的技术");
 }

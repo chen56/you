@@ -138,7 +138,7 @@ class ViewBarState extends State<ViewBar> {
                 return ThemeView(view: view, themeMode: app.themeMode, seedColor: app.seedColor, extWidgets: [
                   FilledButton(
                     onPressed: () {
-                      route.to(routes.routes_notes_material3_color_roles.toUri());
+                      route.to(routes.routes_notes_cheatsheets_color_roles.toUri());
                     },
                     child: const Text("open Material 3 color roles page"),
                   ),

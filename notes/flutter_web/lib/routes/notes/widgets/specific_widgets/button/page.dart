@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
 
-@NoteAnnotation(label: "按钮", publish: true)
+@NoteAnnotation(label: "按钮", publish: false)
 void build(BuildContext context, Cell print) {
   print.addCell(title: const Text("--------new cell------"));
   print(const MD(r'''
