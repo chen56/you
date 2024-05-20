@@ -51,7 +51,7 @@ class MaterialColorRoles extends StatelessWidget {
             const SizedBox(width: 2),
             Text(color.label),
           ],
-        ).intrinsicWidth$(stepWidth: 200),
+        ).intrinsicWidth$(stepWidth: 220),
         selected: selectedPutOnSurface.contains(color),
         onSelected: (bool selected) {
           if (selected) {
@@ -63,7 +63,7 @@ class MaterialColorRoles extends StatelessWidget {
       );
     }
 
-    _BackgroundBlock _backgroundBlock({required Color color, required String label, List<_ColorData> onColors = const []}) {
+    _BackgroundBlock backgroundBlock({required Color color, required String label, List<_ColorData> onColors = const []}) {
       return _BackgroundBlock(label: label, color: color, backgroundColorLabelWidth: maxSizeOfBackgroundColor.width, onColorWidth: maxSizeOfOnSurfaces.width, onColors: onColors);
     }
 
@@ -71,91 +71,91 @@ class MaterialColorRoles extends StatelessWidget {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _backgroundBlock(label: "primary", color: colorScheme.primary, onColors: [
+          backgroundBlock(label: "primary", color: colorScheme.primary, onColors: [
             _ColorData(label: "onPrimary", color: colorScheme.onPrimary),
           ]),
-          _backgroundBlock(label: "secondary", color: colorScheme.secondary, onColors: [
+          backgroundBlock(label: "secondary", color: colorScheme.secondary, onColors: [
             _ColorData(label: "onSecondary", color: colorScheme.onSecondary),
           ]),
-          _backgroundBlock(label: "tertiary", color: colorScheme.tertiary, onColors: [
+          backgroundBlock(label: "tertiary", color: colorScheme.tertiary, onColors: [
             _ColorData(label: "onTertiary", color: colorScheme.onTertiary),
           ]),
-          _backgroundBlock(label: "primaryContainer", color: colorScheme.primaryContainer, onColors: [
+          backgroundBlock(label: "primaryContainer", color: colorScheme.primaryContainer, onColors: [
             _ColorData(label: "onPrimaryContainer", color: colorScheme.onPrimaryContainer),
           ]),
-          _backgroundBlock(label: "secondaryContainer", color: colorScheme.secondaryContainer, onColors: [
+          backgroundBlock(label: "secondaryContainer", color: colorScheme.secondaryContainer, onColors: [
             _ColorData(label: "onSecondaryContainer", color: colorScheme.onSecondaryContainer),
           ]),
-          _backgroundBlock(label: "tertiaryContainer", color: colorScheme.tertiaryContainer, onColors: [
+          backgroundBlock(label: "tertiaryContainer", color: colorScheme.tertiaryContainer, onColors: [
             _ColorData(label: "onTertiaryContainer", color: colorScheme.onTertiaryContainer),
           ]),
-          _backgroundBlock(label: "primaryFixed", color: colorScheme.primaryFixed, onColors: [
+          backgroundBlock(label: "primaryFixed", color: colorScheme.primaryFixed, onColors: [
             _ColorData(label: "onPrimaryFixed", color: colorScheme.onPrimaryFixed),
           ]),
-          _backgroundBlock(label: "secondaryFixed", color: colorScheme.secondaryFixed, onColors: [
+          backgroundBlock(label: "secondaryFixed", color: colorScheme.secondaryFixed, onColors: [
             _ColorData(label: "onSecondaryFixed", color: colorScheme.onSecondaryFixed),
           ]),
-          _backgroundBlock(label: "tertiaryFixed", color: colorScheme.tertiaryFixed, onColors: [
+          backgroundBlock(label: "tertiaryFixed", color: colorScheme.tertiaryFixed, onColors: [
             _ColorData(label: "onTertiaryFixed", color: colorScheme.onTertiaryFixed),
           ]),
-          _backgroundBlock(label: "primaryFixedDim", color: colorScheme.primaryFixedDim, onColors: [
+          backgroundBlock(label: "primaryFixedDim", color: colorScheme.primaryFixedDim, onColors: [
             _ColorData(label: "onPrimaryFixed", color: colorScheme.onPrimaryFixed),
             _ColorData(label: "onPrimaryFixedVariant", color: colorScheme.onPrimaryFixedVariant),
           ]),
-          _backgroundBlock(label: "secondaryFixedDim", color: colorScheme.secondaryFixedDim, onColors: [
+          backgroundBlock(label: "secondaryFixedDim", color: colorScheme.secondaryFixedDim, onColors: [
             _ColorData(label: "onSecondaryFixed", color: colorScheme.onSecondaryFixed),
             _ColorData(label: "onSecondaryFixedVariant", color: colorScheme.onSecondaryFixedVariant),
           ]),
-          _backgroundBlock(label: "tertiaryFixedDim", color: colorScheme.tertiaryFixedDim, onColors: [
+          backgroundBlock(label: "tertiaryFixedDim", color: colorScheme.tertiaryFixedDim, onColors: [
             _ColorData(label: "onTertiaryFixed", color: colorScheme.onTertiaryFixed),
             _ColorData(label: "onTertiaryFixedVariant", color: colorScheme.onTertiaryFixedVariant),
           ]),
-          _backgroundBlock(label: "error", color: colorScheme.error, onColors: [
+          backgroundBlock(label: "error", color: colorScheme.error, onColors: [
             _ColorData(label: "onError", color: colorScheme.onError),
           ]),
-          _backgroundBlock(label: "errorContainer", color: colorScheme.errorContainer, onColors: [
+          backgroundBlock(label: "errorContainer", color: colorScheme.errorContainer, onColors: [
             _ColorData(label: "onError", color: colorScheme.onErrorContainer),
           ]),
-          _backgroundBlock(label: "inverseSurface", color: colorScheme.inverseSurface, onColors: [
+          backgroundBlock(label: "inverseSurface", color: colorScheme.inverseSurface, onColors: [
             _ColorData(label: "onInverseSurface", color: colorScheme.onInverseSurface),
             _ColorData(label: "inversePrimary", color: colorScheme.inversePrimary),
           ]),
-          _backgroundBlock(label: "surface", color: colorScheme.surface, onColors: [
+          backgroundBlock(label: "surface", color: colorScheme.surface, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceBright", color: colorScheme.surfaceBright, onColors: [
+          backgroundBlock(label: "surfaceBright", color: colorScheme.surfaceBright, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceDim", color: colorScheme.surfaceDim, onColors: [
+          backgroundBlock(label: "surfaceDim", color: colorScheme.surfaceDim, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceContainerHighest", color: colorScheme.surfaceContainerHighest, onColors: [
+          backgroundBlock(label: "surfaceContainerHighest", color: colorScheme.surfaceContainerHighest, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceContainerHigh", color: colorScheme.surfaceContainerHigh, onColors: [
+          backgroundBlock(label: "surfaceContainerHigh", color: colorScheme.surfaceContainerHigh, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceContainer", color: colorScheme.surfaceContainer, onColors: [
+          backgroundBlock(label: "surfaceContainer", color: colorScheme.surfaceContainer, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceContainerLow", color: colorScheme.surfaceContainerLow, onColors: [
+          backgroundBlock(label: "surfaceContainerLow", color: colorScheme.surfaceContainerLow, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
           ]),
-          _backgroundBlock(label: "surfaceContainerLowest", color: colorScheme.surfaceContainerLowest, onColors: [
+          backgroundBlock(label: "surfaceContainerLowest", color: colorScheme.surfaceContainerLowest, onColors: [
             _ColorData(label: "onSurface", color: colorScheme.onSurface),
             _ColorData(label: "onSurfaceVariant", color: colorScheme.onSurfaceVariant),
             ...selectedPutOnSurface,
@@ -431,7 +431,7 @@ class _BackgroundBlock extends StatelessWidget {
   final Color color;
   final List<_ColorData> onColors;
   final String label;
-  static const double widthBuffer = 10;
+  static const double widthBuffer = 36;
 
   @override
   Widget build(BuildContext context) {
@@ -446,7 +446,7 @@ class _BackgroundBlock extends StatelessWidget {
             children: [
               Container(
                   alignment: Alignment.centerLeft,
-                  width: backgroundColorLabelWidth + widthBuffer + 24,
+                  width: backgroundColorLabelWidth + widthBuffer,
                   child: Row(
                     children: [
                       Icon(
