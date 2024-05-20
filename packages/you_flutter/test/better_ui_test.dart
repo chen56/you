@@ -8,9 +8,9 @@ void main() {
       assertScreen(ScreenSize screen) {
         // 用此档位的最小宽度+1，来模仿此屏幕大小
         var screenWidth = screen.minWidth + 1;
-        check(ScreenSize.byScreen(screenWidth)).equals(screen);
+        check(ScreenSize.ofWidth(screenWidth)).equals(screen);
         check(
-          ScreenSize.bestWithWidth(screenWidth, min: "min", sm:"sm",md: "md", lg: "lg", xl: "xl", xxl: "xxl"),
+          ScreenSize.matchWidth(screenWidth, min: "min", sm:"sm",md: "md", lg: "lg", xl: "xl", xxl: "xxl"),
           because: "假设当前屏幕宽度$screenWidth，在${screen.name}档， 应该用相应档位的style",
         ).equals(screen.name);
       }
@@ -23,14 +23,14 @@ void main() {
       // 用此档位的最小宽度+1，来模仿此屏幕大小
       screen(String screen)   => ScreenSize.byName(screen).minWidth + 1;
 
-      check(ScreenSize.bestWithWidth(screen("sm"), min: "min",sm:"sm",)).equals("sm");
-      check(ScreenSize.bestWithWidth(screen("sm"), min: "min")).equals("min");
-      check(ScreenSize.bestWithWidth(screen("md"), min: "min",sm:"sm")).equals("sm");
-      check(ScreenSize.bestWithWidth(screen("md"), min: "min",sm:"md")).equals("md");
+      check(ScreenSize.matchWidth(screen("sm"), min: "min",sm:"sm",)).equals("sm");
+      check(ScreenSize.matchWidth(screen("sm"), min: "min")).equals("min");
+      check(ScreenSize.matchWidth(screen("md"), min: "min",sm:"sm")).equals("sm");
+      check(ScreenSize.matchWidth(screen("md"), min: "min",sm:"md")).equals("md");
     });
 
     test('current', () {
-     var byScreen=  ScreenSize.byScreen;
+     var byScreen=  ScreenSize.ofWidth;
 
       check(byScreen(ScreenSize.sm.minWidth - 1)).equals(ScreenSize.min);
       check(byScreen(ScreenSize.sm.minWidth)).equals(ScreenSize.sm);

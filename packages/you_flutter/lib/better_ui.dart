@@ -1,5 +1,4 @@
 @experimental
-library you_better_ui;
 
 import 'package:meta/meta.dart';
 

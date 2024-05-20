@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:you_dart/src/state.dart';
-import 'package:you_flutter/src/state.dart';
+import 'package:you_flutter/state.dart';
 
 // StreamBuilder?ø
 main() {
@@ -76,10 +75,10 @@ class HelloStore extends StatelessWidget {
     return Column(
       children: [
         Text("GAME", style: theme.textTheme.headlineLarge),
-        Watch((context) => Text(store.win())),
+        Watch(builder:(context) => Text(store.win())),
         ElevatedButton(onPressed: () => store.play(), child: const Text("【【【【【play!!!】】】】】")),
         const Divider(),
-        Watch((context) {
+        Watch(builder:(context) {
           return Column(children: [
             const Text("Lookers"),
             for (var player in store.players)

@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:meta/meta.dart';
-import 'package:you_dart/src/core.dart';
+import 'package:_you_dart_internal/core.dart';
 
 _defaultOnSignalDoNothing(Signal signal) {}
 
@@ -89,7 +89,7 @@ extension ValueExtension<T> on T {
 ///   state_store.dart.theme.value="light";
 ///   class SomeWidget{
 ///     build(Context){
-///       return Watch((context)=>Text("current theme: ${state_store.dart.theme.value}"));
+///       return Watch(builder:(context)=>Text("current theme: ${state_store.dart.theme.value}"));
 ///     }
 ///    }
 ///

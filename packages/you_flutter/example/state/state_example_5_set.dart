@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:you_dart/src/state.dart';
-import 'package:you_flutter/src/state.dart';
+import 'package:you_flutter/state.dart';
 
 // StreamBuilder?ø
 main() {
@@ -26,7 +25,7 @@ class HelloStore extends StatelessWidget {
           child: Text("set.add(set.length+1)     ||| watch outer buildTimes:${buildTimes++}"),
         ),
         const Divider(),
-        Watch((context) {
+        Watch(builder:(context) {
           return Column(
             children: [
               Text("set.length:${set.length}  ||| watch inner BuildTimes:${watchBuildTimes++}"),

@@ -14,6 +14,7 @@ A package that facilitates for dart/flutter applications.
   - you-note[flutter]
     - a flutter note framework.
     - and some flutter learn examples.
+- [you_cli](https://pub.dev/packages/you_cli):
 
 ## Getting started
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
 import 'package:you_flutter/better_ui.dart';
-import 'package:you_flutter/note.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/state.dart';
+import 'package:you_flutter/ide_style.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 /// [LayoutBuilder]
@@ -44,10 +44,8 @@ class RootLayoutState extends State<RootLayout> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const ViewBar(),
-              SingleChildScrollView(
-                // children: [widget.child.align$(alignment: Alignment.topLeft)],
-                child: widget.child,
-              ).expanded$(),
+              // widget.child内部自己包滚动条，根layout不管
+              Expanded(child: widget.child),
             ],
           ),
         ),
@@ -62,124 +60,6 @@ class RootLayoutState extends State<RootLayout> {
         ),
       ),
     );
-  }
-}
-
-class _NoteTreeView extends StatefulWidget {
-  const _NoteTreeView({required this.view});
-
-  final Value<String> view;
-
-  @override
-  State<StatefulWidget> createState() {
-    return _NoteTreeViewState();
-  }
-}
-
-class _NoteTreeViewState extends State<_NoteTreeView> {
-  final Value<bool> includeDraft = false.signal();
-  final Value<To?> selected = (null as To?).signal();
-
-  static Widget _noteItem(BuildContext context, Value<To?> selected, ToNote node, RouteContext route, bool includeDraft) {
-    final colors = Theme.of(context).colorScheme;
-    final rootNoteLevel = routes.routes_notes.level + 1;
-
-    click() {
-      if (node.isLeafPage) {
-        route.to(node.toUri());
-        selected.value = node;
-      } else {
-        node.expand = !node.expand;
-      }
-    }
-
-    // 🔹◽️●○◦■□❏✎
-    String iconExtend = node.isLeafPage
-        ? "❏"
-        : node.expand
-            ? "▼"
-            : "︎︎︎▶";
-
-    String title = "$iconExtend ${node.label}";
-    title = title.padLeft(((node.level - rootNoteLevel) * 2) + title.length);
-    String publishLabel = "";
-    if (node.isLeafPage) {
-      publishLabel = node.isPublish ? "(已发布)" : "(草稿)";
-    }
-    return ListTile(
-      title: Text('$title$publishLabel'),
-      minTileHeight: 36,
-      minVerticalPadding: 6,
-      minLeadingWidth: 0,
-      selected: selected.value == node,
-      selectedTileColor: colors.surfaceContainerHighest,
-      onTap: click,
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    routes.routes_root.expandTree(true, level: 2);
-    return Watch((context) {
-      final route = context.route$;
-      final colors = Theme.of(context).colorScheme;
-
-      final notes = routes.routes_notes.toList(includeThis: false).cast<ToNote>().where((e) {
-        return e.containsPage() && e.parent.expand && (includeDraft.value || e.containsPublishNode(includeThis: true));
-      });
-      return Column(
-        children: [
-          Container(
-            color: colors.surfaceContainerHighest,
-            child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-              IconButton(tooltip: "Expand all", icon: const Icon(Icons.expand, size: 24), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(true))),
-              IconButton(tooltip: "Collapse all", icon: const Icon(Icons.compress), iconSize: 24, onPressed: () => notes.forEach((i) => i.expandTree(false))),
-              IconButton(tooltip: "Include draft", icon: const Icon(Icons.drafts_outlined), iconSize: 24, selectedIcon: const Icon(Icons.drafts), isSelected: includeDraft.value, onPressed: () => includeDraft.value = !includeDraft.value),
-              IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
-            ]),
-          ),
-          const Divider(height: 1),
-          Material(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [...notes.map((e) => _noteItem(context, selected, e, route, includeDraft.value)).toList()],
-            ),
-          ).expanded$(),
-        ],
-      ).constrainedBox$(
-        constraints: const BoxConstraints.tightFor(width: 280),
-      );
-    });
-  }
-}
-
-extension _NoteTreeNode on To {
-  static Map<To, bool> expands = <To, bool>{}.signal();
-
-  bool get expand {
-    var result = expands[this];
-    return result ?? false;
-  }
-
-  set expand(bool value) {
-    expands[this] = value;
-  }
-
-  /// 展开层级数
-  /// level < 0 ,expand all levels
-  void expandTree(bool value, {int level = -1}) {
-    if (level == 0) return;
-
-    var nextLevel = level - 1;
-    expand = value;
-
-    if (nextLevel == 0) {
-      return;
-    }
-
-    for (var e in children) {
-      e.expandTree(value, level: nextLevel);
-    }
   }
 }
 
@@ -204,7 +84,7 @@ class ViewBarState extends State<ViewBar> {
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
-    return Watch((context) {
+    return Watch(builder: (context) {
       return Container(
           color: colors.surfaceContainer,
           child: Row(
@@ -245,128 +125,31 @@ class ViewBarState extends State<ViewBar> {
                 ],
               ),
               const VerticalDivider(width: 1),
-              Watch((context) {
-                return _NoteTreeView(view: view).offstage$(offstage: view.value != "note_tree_view");
+              Watch(builder: (context) {
+                return NoteTreeView(
+                  view: view,
+                  noteRoot: routes.routes_notes,
+                ).offstage$(offstage: view.value != "note_tree_view");
               }),
-              Watch((context) {
-                return _ThemeView(view: view).offstage$(offstage: view.value != "theme_view");
+              Watch(builder: (context) {
+                final app = App.of(context);
+                final route = YouRouter.of(context);
+
+                return ThemeView(view: view, themeMode: app.themeMode, seedColor: app.seedColor, extWidgets: [
+                  FilledButton(
+                    onPressed: () {
+                      route.to(routes.routes_notes_cheatsheets_color_roles.toUri());
+                    },
+                    child: const Text("open Material 3 color roles page"),
+                  ),
+                ]).offstage$(offstage: view.value != "theme_view");
               }),
+              // Watch(builder:(context) {
+              //   return _ThemeView(view: view).offstage$(offstage: view.value != "theme_view");
+              // }),
               const VerticalDivider(width: 1),
             ],
           ));
     });
-  }
-}
-
-class _ThemeView extends StatefulWidget {
-  const _ThemeView({required this.view});
-
-  final Value<String> view;
-
-  @override
-  State<StatefulWidget> createState() {
-    return _ThemeViewState();
-  }
-}
-
-class _ThemeViewState extends State<_ThemeView> {
-  final Value<bool> includeDraft = false.signal();
-
-  @override
-  Widget build(BuildContext context) {
-    final route = YouRouter.of(context);
-    final colors = Theme.of(context).colorScheme;
-
-    List<Color> getChildrenColors(MaterialColor e) {
-      return [
-        e.shade50,
-        e.shade100,
-        e.shade200,
-        e.shade300,
-        e.shade400,
-        e.shade500,
-        e.shade600,
-        e.shade700,
-        e.shade800,
-        e.shade900,
-      ];
-    }
-
-    return Column(
-      children: [
-        Container(
-          color: colors.surfaceContainer,
-          child: OverflowBar(alignment: MainAxisAlignment.end, children: [
-            IconButton(tooltip: "Hidden", icon: const Icon(Icons.horizontal_rule), iconSize: 24, onPressed: () => widget.view.value = ""),
-          ]),
-        ),
-        const Divider(),
-
-        const SizedBox(
-          height: 20,
-        ),
-        const Text("Theme mode"),
-        Card(
-          child: Watch((context) {
-            final app = App.of(context);
-            return SegmentedButton<ThemeMode>(
-              segments: const <ButtonSegment<ThemeMode>>[
-                ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.light_mode_outlined)),
-                ButtonSegment<ThemeMode>(value: ThemeMode.system, label: Text('Sys'), icon: Icon(Icons.brightness_auto_outlined)),
-                ButtonSegment<ThemeMode>(value: ThemeMode.dark, label: Text('Dark'), icon: Icon(Icons.dark_mode_outlined)),
-              ],
-              selected: <ThemeMode>{app.themeMode.value},
-              onSelectionChanged: (Set<ThemeMode> newSelection) {
-                app.themeMode.value = newSelection.first;
-              },
-            );
-          }),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const Text("Theme color seed"),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ...Colors.primaries.map((e) {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: getChildrenColors(e).map((color) => ColorBlock(color: color)).toList(),
-              );
-            }),
-          ],
-        ).paddingAll$(10),
-        FilledButton(
-            onPressed: () {
-              route.to(routes.routes_notes_style_theming_colors.toUri());
-            },
-            child: const Text("open Material 3 color roles page")),
-
-      ],
-    ).constrainedBox$(
-      constraints: const BoxConstraints.tightFor(width: 280),
-    );
-  }
-}
-
-// color block
-class ColorBlock extends StatelessWidget {
-  final Color color;
-
-  const ColorBlock({super.key, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    final app = App.of(context);
-    Widget colorWidget = Container(width: 20, height: 20, color: color);
-    return InkWell(
-      onTap: () {
-        app.seedColor.value = color;
-      },
-      child: Watch((context) {
-        return app.seedColor.value == color ? colorWidget.borderAll$() : colorWidget;
-      }),
-    );
   }
 }

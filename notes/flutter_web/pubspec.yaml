@@ -8,7 +8,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 
 dependencies:
@@ -20,6 +21,8 @@ dependencies:
 
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
+
+  url_launcher: ^6.2.6
 
   analyzer: ^6.4.1
 
@@ -34,9 +37,11 @@ dependencies:
   source_maps: ^0.10.12
 
   # you_*
+  _you_dart_internal: ^0.0.6-dev.3
   you_dart: ^0.0.4
   you_flutter: ^0.0.4
-  url_launcher: ^6.2.6
+  flutter_staggered_grid_view: ^0.7.0
+
 
 dev_dependencies:
 
@@ -77,6 +82,8 @@ dependency_overrides:
     #   - dart pub publish will no longer warn about dependency_overrides.
     #     Dependency overrides only take effect in the root package of a resolution.
     #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  _you_dart_internal:
+    path: ../../packages/_you_dart_internal
   you_dart:
     path: ../../packages/you_dart
   you_flutter:

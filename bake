@@ -67,34 +67,34 @@ EOF
 ##########################################
 #  公共函数区，初始化语句和变量只放脚本头尾
 ##########################################
-_is_cmd() {
+__is_cmd() {
   command -v "$1" >/dev/null 2>&1
 }
 
 
 # 在所有项目上运行某命令
-# Usage:    _run_all_pkgs <sub cmd>
-# Example:  _run_all_pkgs clean
+# Usage:    __run_all <sub cmd>
+# Example:  __run_all clean
 #     run =>  note.clean
 #             mate.clean
 #             flutter_web.clean
 #             ...
-_run_all() {
+__run_all() {
   local subcmd="$1"
   if [[ "$subcmd" == "" ]] ; then
-    echo "缺subcmd参数 Usage:_run_all <sub cmd>";
+    echo "缺subcmd参数 Usage:__run_all <sub cmd>";
     return 100;
   fi
   for pkg in "${!_pkgs[@]}"; do
-    if _is_cmd "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
+    if __is_cmd "$pkg.$subcmd" ; then "$pkg.$subcmd" ; fi
   done
 }
 
 # 先cd到项目目录，再print上下文信息，最后执行
-# Usage:   _run <pkg> <some cmd>
-# Example: _run flutter_web pwd
-_run() {
-  local pkg=${1:?required project arg,Usage: _run_at_pkg <pkg>}
+# Usage:   __run <pkg> <some cmd>
+# Example: __run flutter_web pwd
+__run() {
+  local pkg=${1:?required project arg,Usage: __run <pkg>}
   shift
   local cmd="${1}"
 #  [[ "$cmd" != "" ]]  # 如果有cmd，去掉第1个cmd,剩余的是它的参数，如果没有，就类似于在控制台上打了个会车一样任他去吧
@@ -106,7 +106,7 @@ _run() {
   local caller_line;
   caller_line=$(caller 0 | awk '{print $1}')
 
-  if ! _is_cmd "$cmd" ; then
+  if ! __is_cmd "$cmd" ; then
     echo "$_ROOT_BAKE_PATH:$caller_line ⚪️ ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
   else
     echo "$_ROOT_BAKE_PATH:$caller_line 🔵 ▶︎${FUNCNAME[1]}() ▶︎【$PWD$ $*】"
@@ -122,46 +122,64 @@ _run() {
 ##########################################
 
 
-pkgs()        { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done; }
-run()         { for pkg in ${!_pkgs[*]} ; do _run "$pkg" "$@" ;   done         }
-install()     { _run_all install;                                              }
-get()         { _run_all install;                                              }
-build()       { _run_all build;                                                }
-upgrade()     { _run_all upgrade;                                              }
-clean()       { _run_all clean;                                                }
-test()        { _run_all test;                                                 }
-gen()         { _run_all gen;                                                  }
-dart_fix()    { run dart fix $@;                                               }
+pkgs()     { for pkg in ${!_pkgs[*]} ; do echo "$pkg:${_pkgs[$pkg]}"; done;  }
+run()      { for pkg in ${!_pkgs[*]} ; do __run "$pkg" "$@" ;   done         }
+install()  { __run_all install;                                              }
+get()      { __run_all install;                                              }
+build()    { __run_all build;                                                }
+upgrade()  { __run_all upgrade;                                              }
+clean()    { __run_all clean;                                                }
+test()     { __run_all test;                                                 }
+gen()      { __run_all gen;                                                  }
+publish()  { __run_all publish;                                              }
+dart_fix() { run dart fix $@;                                                }
 
 # 根项目，主要是bin/辅助工具等
-root.run()               { _run root "$@";                                          }
+root.run()              { __run root "$@";                                          }
 
-bake.run()              { _run bake "$@";                                           }
-bake.test()             { _run bake ./test.bash test;                               }
+bake.run()              { __run bake "$@";                                          }
+bake.test()             { __run bake ./test.bash test;                              }
+
+_you_dart_internal.run()     { __run _you_dart_internal "$@";                                 }
+_you_dart_internal.install() { __run _you_dart_internal flutter pub get;                      }
+_you_dart_internal.clean()   { __run _you_dart_internal flutter clean; rm -rf build;          }
+_you_dart_internal.upgrade() { __run _you_dart_internal flutter pub outdated ;
+                               __run _you_dart_internal flutter pub upgrade ;                 }
+_you_dart_internal.test()    { __run _you_dart_internal flutter test;                         }
+_you_dart_internal.publish() { __run _you_dart_internal flutter pub publish;                  }
+
+you_dart.run()     { __run you_dart "$@";                                 }
+you_dart.install() { __run you_dart flutter pub get;                      }
+you_dart.clean()   { __run you_dart flutter clean; rm -rf build;          }
+you_dart.upgrade() { __run you_dart flutter pub outdated ;
+                     __run you_dart flutter pub upgrade ;                 }
+you_dart.test()    { __run you_dart flutter test;                         }
+you_dart.publish() { __run you_dart flutter pub publish;                  }
+
+you_flutter.run()     { __run you_flutter "$@";                                 }
+you_flutter.install() { __run you_flutter flutter pub get;                      }
+you_flutter.clean()   { __run you_flutter flutter clean; rm -rf build;          }
+you_flutter.upgrade() { __run you_flutter flutter pub outdated ;
+                        __run you_flutter flutter pub upgrade ;                 }
+you_flutter.test()    { __run you_flutter flutter test;                         }
+you_flutter.publish() { __run you_flutter flutter pub publish;                  }
+
+you_cli.run()         { __run you_cli "$@";                                     }
+you_cli.test()        { __run you_cli dart test;                                }
+you_cli.install()     { __run you_cli flutter pub get;                          }
+you_cli.clean()       { __run you_cli flutter clean; rm -rf build;              }
+you_cli.upgrade()     { __run you_cli flutter pub outdated ;
+                        __run you_cli flutter pub upgrade ;                     }
+you_cli.publish()     { __run you_cli flutter pub publish;                      }
 
 
-you_dart.run()     { _run you_dart "$@";                                 }
-you_dart.install() { _run you_dart flutter pub get;                      }
-you_dart.clean()   { _run you_dart flutter clean; rm -rf build;          }
-you_dart.upgrade() { _run you_dart flutter pub upgrade ;                 }
-you_dart.test()    { _run you_dart flutter test;                         }
-
-you_flutter.run()     { _run you_flutter "$@";                                 }
-you_flutter.install() { _run you_flutter flutter pub get;                      }
-you_flutter.clean()   { _run you_flutter flutter clean; rm -rf build;          }
-you_flutter.upgrade() { _run you_flutter flutter pub upgrade ;                 }
-you_flutter.test()    { _run you_flutter flutter test;                         }
-
-you_cli.run()         { _run you_cli "$@";                                 }
-you_cli.test()        { _run you_cli dart test;                                 }
-
-
-learn_dart.run()        { _run learn_dart "$@";                                     }
-learn_dart.install()    { _run learn_dart dart pub get ;                            }
-learn_dart.clean()      { _run learn_dart rm -rf
-                          _run learn_dart rm -rf .dart_tool;                        }
-learn_dart.upgrade()    { _run learn_dart dart pub upgrade ;                        }
-learn_dart.study()      { _run learn_dart dart test;                                }
+learn_dart.run()        { __run learn_dart "$@";                                     }
+learn_dart.install()    { __run learn_dart dart pub get ;                            }
+learn_dart.clean()      { __run learn_dart rm -rf
+                          __run learn_dart rm -rf .dart_tool;                        }
+learn_dart.upgrade()    { __run learn_dart flutter pub outdated ;
+                          __run learn_dart dart pub upgrade ;                        }
+learn_dart.study()      { __run learn_dart dart test;                                }
 # skwasm无法运行
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
   #   	npx http-server ./flutter_web/build/web --port 8000
@@ -170,41 +188,42 @@ learn_dart.study()      { _run learn_dart dart test;                            
 # install:
 # - flutter pub global activate dhttpd
 # - deno
-flutter_web.run()      { _run flutter_web "$@"  ;                           }
-flutter_web.install()  { _run flutter_web flutter pub get ;                 }
-flutter_web.clean()    { _run flutter_web flutter clean;
-                         rm -rf build;                                             }
-flutter_web.upgrade()  { _run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()      { #_run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
-                         _run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ # --async
+flutter_web.run()      { __run flutter_web "$@"  ;                           }
+flutter_web.install()  { __run flutter_web flutter pub get ;                 }
+flutter_web.clean()    { __run flutter_web flutter clean;
+                         rm -rf build;                                       }
+flutter_web.upgrade()  { __run flutter_web flutter pub outdated ;
+                         __run flutter_web flutter pub upgrade ;             }
+flutter_web.gen()      { #__run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
+                         __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ # --async
 }
-flutter_web.dev()      { flutter_web.dev_html ; }
-flutter_web.build()    { flutter_web.build_html ;}
+flutter_web.dev()      { flutter_web.dev_html ;                              }
+flutter_web.build()    { flutter_web.build_html ;                            }
 flutter_web.preview()  { flutter_web.build_html;
                          flutter_web.server_deno;                            }
 
-flutter_web.dev_html()              { _run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
-flutter_web.dev_macos()             { _run flutter_web flutter run --device-id macos "$@"; }
-flutter_web.build_html()            { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html       --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
-flutter_web.build_web_skwasm()      { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm     --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
-flutter_web.build_web_canvaskit()   { _run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit  --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
-flutter_web.build_wasm()            { _run flutter_web flutter build web   --release --tree-shake-icons --wasm                    --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ;}
-flutter_web.build_macos()           { _run flutter_web flutter build macos --release --tree-shake-icons "$@";  }
-flutter_web.server_dhttpd()      { echo "http://localhost:8080/you/flutter_web";
-                                      _run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
-flutter_web.server_deno()     { echo "http://localhost:8080/you/flutter_web";
-                                      _run flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
+flutter_web.dev_html()              { __run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
+flutter_web.dev_macos()             { __run flutter_web flutter run --device-id macos "$@"; }
+flutter_web.build_html()            { __run flutter_web flutter build web   --release --tree-shake-icons --web-renderer html       --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_web_skwasm()      { __run flutter_web flutter build web   --release --tree-shake-icons --web-renderer skwasm     --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_web_canvaskit()   { __run flutter_web flutter build web   --release --tree-shake-icons --web-renderer canvaskit  --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_wasm()            { __run flutter_web flutter build web   --release --tree-shake-icons --wasm                    --source-maps --output build/web/you/flutter_web --base-href "/you/flutter_web/" --no-web-resources-cdn "$@" ; }
+flutter_web.build_macos()           { __run flutter_web flutter build macos --release --tree-shake-icons "$@";  }
+flutter_web.server_dhttpd()         { echo "http://localhost:8080/you/flutter_web";
+                                      __run flutter_web dhttpd --path ./build/web --port 8080 '--headers=Cross-Origin-Embedder-Policy=credentialless;Cross-Origin-Opener-Policy=same-origin';  }
+flutter_web.server_deno()           { echo "http://localhost:8080/you/flutter_web";
+                                      __run flutter_web deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8080 -g --brotli; }
 
 
 # github 发布时使用,参考[.github/workflows/*.yaml]
-docker.build() {   _run root docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
-                   _run root mkdir -p build;
-                   _run root sh -c "docker run --rm --workdir /usr/share/nginx/html/ chen56/you tar cf - ./ | ( cd build; tar xf -)";    }
-docker.preview() { _run root echo "note preview http://localhost:8888/you/flutter_web";
-                   _run root docker run --rm --name you -p 8888:80 -u root:root chen56/you;                                                 }
-docker.debug()   { _run root docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
-docker.exec()    { _run root docker exec -it --workdir /usr/share/nginx/html/you/ you bash ;                                                }
-docker.push()    { _run root docker image push chen56/you:latest ;                                                                          }
+docker.build()   { __run root docker build --progress plain --build-arg test=on --tag chen56/you:latest . ;
+                   __run root mkdir -p build;
+                   __run root sh -c "docker run --rm --workdir /usr/share/nginx/html/ chen56/you tar cf - ./ | ( cd build; tar xf -)";       }
+docker.preview() { __run root echo "note preview http://localhost:8888/you/flutter_web";
+                   __run root docker run --rm --name you -p 8888:80 -u root:root chen56/you;                                                 }
+docker.debug()   { __run root docker run -v "$PWD:/home/flutter/you" --workdir /home/flutter/you --rm -it fischerscode/flutter:3.19.0 bash ; }
+docker.exec()    { __run root docker exec -it --workdir /usr/share/nginx/html/you/ you bash ;                                                }
+docker.push()    { __run root docker image push chen56/you:latest ;                                                                          }
 
 
 info() {

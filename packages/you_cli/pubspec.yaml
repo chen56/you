@@ -1,11 +1,11 @@
 name: you_cli
 description: you-* project include some flutter common lib ,and study notes.
-version: 0.0.6-dev.1
+version: 0.0.6-dev.3
 homepage: https://github.com/chen56/you
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 dependencies:
   meta: ^1.11.0
@@ -25,7 +25,7 @@ dependencies:
   checks: ^0.3.0
 
   # you_*
-  you_dart: ^0.0.4
+  you_dart: ^0.0.6-dev.3
 
 dev_dependencies:
   lints: ^3.0.0
@@ -38,3 +38,5 @@ dependency_overrides:
   #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
   you_dart:
     path: ../you_dart
+  _you_dart_internal:
+    path: ../_you_dart_internal

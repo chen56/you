@@ -1,20 +1,20 @@
 name: you_flutter
 description: "Flutter framework project, for state , navigator and other flutter development infrastructure ."
-version: 0.0.6-dev.1
+version: 0.0.6-dev.3
 homepage: https://github.com/chen56/you
 repository: https://github.com/chen56/you
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
-  flutter: ">=3.19.0"
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 dependencies:
+  flutter:
+    sdk: flutter
   analyzer: ^6.4.1
   code_builder: ^4.10.0
   dart_style: ^2.3.6
   file: ^7.0.0
-  flutter:
-    sdk: flutter
   flutter_highlight: ^0.7.0
   flutter_markdown: ^0.7.1
   highlight: ^0.7.0
@@ -26,8 +26,11 @@ dependencies:
   source_maps: ^0.10.12
   stack_trace: ^1.11.1
   url_launcher: ^6.2.6
-  you_dart: ^0.0.5
 
+
+  # you_*
+  you_dart: ^0.0.6-dev.3
+  _you_dart_internal: ^0.0.6-dev.3
 
 dev_dependencies:
   flutter_test:
@@ -41,5 +44,8 @@ dependency_overrides:
   #   - dart pub publish will no longer warn about dependency_overrides.
   #     Dependency overrides only take effect in the root package of a resolution.
   #   - ref: https://github.com/dart-lang/sdk/blob/main/CHANGELOG.md
+  _you_dart_internal:
+    path: ../_you_dart_internal
   you_dart:
     path: ../you_dart
+

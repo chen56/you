@@ -7,9 +7,15 @@ import 'package:you_dart/state.dart';
 /// Watch用来build 观测state变化的。
 final class Watch extends StatefulWidget {
   final WidgetBuilder builder;
+  final VoidCallback? onDispose;
+  final Listenable? watchListenable;
 
-  // FIXME builder -> named parameter
-  const Watch(this.builder, {super.key});
+  const Watch({
+    super.key,
+    this.watchListenable,
+    this.onDispose,
+    required this.builder,
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -20,6 +26,16 @@ final class Watch extends StatefulWidget {
 final class _WatchState extends State<Watch> {
   final Map<Signal, SignalSubscription> _signalConnections = HashMap();
 
+  void _listener() {
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    widget.watchListenable?.addListener(_listener);
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -27,10 +43,16 @@ final class _WatchState extends State<Watch> {
 
   @override
   void dispose() {
+    widget.watchListenable?.removeListener(_listener);
+
     for (var conn in _signalConnections.values) {
       conn.cancel();
     }
     _signalConnections.clear();
+
+    if (widget.onDispose != null) {
+      widget.onDispose!();
+    }
 
     super.dispose();
   }
@@ -39,7 +61,7 @@ final class _WatchState extends State<Watch> {
   // 并递归的看下一层是不是也是Builder、StatefulBuilder
   Widget _recursionHijackBuilder(Widget widget) {
     if (widget is Builder) {
-      return Watch((context) {
+      return Watch(builder: (context) {
         return _recursionHijackBuilder(widget.builder(context));
       });
     }
@@ -47,7 +69,7 @@ final class _WatchState extends State<Watch> {
       return StatefulBuilder(
           key: widget.key,
           builder: (context, setState) {
-            return Watch((context) {
+            return Watch(builder: (context) {
               return _recursionHijackBuilder(widget.builder(context, setState));
             });
           });

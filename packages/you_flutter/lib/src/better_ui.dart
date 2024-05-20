@@ -1,6 +1,8 @@
+@experimental
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:meta/meta.dart';
 
 typedef _WidgetWarp = Widget Function(Widget child);
 
@@ -91,10 +93,46 @@ final class BetterUI {
   }
 }
 
+Size measureWidget(Widget widget) {
+  final PipelineOwner pipelineOwner = PipelineOwner();
+  final _MeasurementView rootView = pipelineOwner.rootNode = _MeasurementView();
+  final BuildOwner buildOwner = BuildOwner(focusManager: FocusManager());
+  final RenderObjectToWidgetElement<RenderBox> element = RenderObjectToWidgetAdapter<RenderBox>(
+    container: rootView,
+    debugShortDescription: '[root]',
+    child: widget,
+  ).attachToRenderTree(buildOwner);
+  try {
+    rootView.scheduleInitialLayout();
+    pipelineOwner.flushLayout();
+    return rootView.size;
+  } finally {
+    // Clean up.
+    element.update(RenderObjectToWidgetAdapter<RenderBox>(container: rootView));
+    buildOwner.finalizeTree();
+  }
+}
+
+class _MeasurementView extends RenderBox with RenderObjectWithChildMixin<RenderBox> {
+  @override
+  void performLayout() {
+    assert(child != null);
+    child!.layout(const BoxConstraints(), parentUsesSize: true);
+    size = child!.size;
+  }
+
+  @override
+  void debugAssertDoesMeetConstraints() => true;
+}
+
 extension StyleExtension on Widget {
   /// Warp a [Padding]
   Widget marginAll$(double value) {
     return Container(margin: EdgeInsets.all(value), child: this);
+  }
+
+  Widget margin$(EdgeInsets margin) {
+    return Container(margin: margin, child: this);
   }
 
   /// Warp a [Padding]
@@ -173,6 +211,12 @@ extension StyleExtension on Widget {
     );
   }
 
+  Widget intrinsicHeight$() {
+    return IntrinsicHeight(
+      child: this,
+    );
+  }
+
   /// [width]If non-null, requires the child to have exactly this width.
   /// [height]If non-null, requires the child to have exactly this height.
   Widget sizedBox$({double? width, double? height}) {
@@ -211,6 +255,15 @@ extension StyleExtension on Widget {
       fit: fit,
       alignment: alignment,
       clipBehavior: clipBehavior,
+      child: this,
+    );
+  }
+
+  Widget fractionallySizedBox$({double? widthFactor, double? heightFactor, Alignment alignment = Alignment.center}) {
+    return FractionallySizedBox(
+      alignment: alignment,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
       child: this,
     );
   }
@@ -286,7 +339,8 @@ extension StyleExtension on Widget {
     }
 
     return LayoutBuilder(builder: (context, constraints) {
-      debugPrint("\$debugLayoutBuilder: this:$runtimeType, constraints:$constraints, this:$this");
+      var screenWidth = MediaQuery.of(context).size.width;
+      debugPrint("\$debugLayoutBuilder: screenWidth:$screenWidth, this:$runtimeType, constraints:$constraints, this:$this");
       return this;
     });
   }
@@ -355,7 +409,7 @@ enum ScreenSize {
   ///   - 如果screen==1024或1279, 卡在lg档，因为1024<=screen<1280
   ///   - 如果screen==1280或1535, 卡在lx档，因为1280<=screen<1536
   ///   - 如果screen==1536及以上, 卡在xxl档，因为1536<=screen<infinity
-  static ScreenSize byScreen(double screenWidth) {
+  static ScreenSize ofWidth(double screenWidth) {
     var current = ScreenSize.min;
     for (var breakpoint in values) {
       if (screenWidth >= breakpoint.minWidth) {
@@ -367,14 +421,18 @@ enum ScreenSize {
     return ScreenSize.xxl;
   }
 
-  static T best<T>(BuildContext context, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
-    return bestWithWidth(MediaQuery.of(context).size.width, min: min, sm: sm, md: md, lg: lg, xl: xl, xxl: xxl);
+  static ScreenSize of(BuildContext context) {
+    return ofWidth(MediaQuery.of(context).size.width);
+  }
+
+  static T match<T>(BuildContext context, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
+    return matchWidth(MediaQuery.of(context).size.width, min: min, sm: sm, md: md, lg: lg, xl: xl, xxl: xxl);
   }
 
   /// 为一个宽度的屏幕选择其相应的样式,概念和tailwindcss相似
-  /// 屏幕宽度落在哪档的计算参考[byScreen]
-  static T bestWithWidth<T>(double screenWidth, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
-    ScreenSize now = byScreen(screenWidth);
+  /// 屏幕宽度落在哪档的计算参考[ofWidth]
+  static T matchWidth<T>(double screenWidth, {required T min, T? sm, T? md, T? lg, T? xl, T? xxl}) {
+    ScreenSize now = ofWidth(screenWidth);
     List<(ScreenSize, T?)> options = [
       (ScreenSize.xxl, xxl),
       (ScreenSize.xl, xl),
@@ -400,13 +458,15 @@ enum ScreenSize {
 /// - <https://tr.designtokens.org/format/>
 /// - <https://m3.material.io/foundations/design-tokens/overview>
 /// - <https://daisyui.com/docs/colors/>
+@experimental
 final class DesignTokens with DesignTokensMixin {
   @override
   final BuildContext context;
 
-  const DesignTokens(this.context);
+  const DesignTokens.of(this.context);
 }
 
+@experimental
 base mixin DesignTokensMixin {
   BuildContext get context;
 

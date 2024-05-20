@@ -1,3 +1,4 @@
+import 'package:_you_dart_internal/core.dart';
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
@@ -9,9 +10,6 @@ import 'package:analyzer/file_system/memory_file_system.dart';
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
-import 'package:you_flutter/src/utils_core.dart';
-// ignore: implementation_imports, internal import /src of the same project
-import 'package:you_dart/src/core.dart';
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 

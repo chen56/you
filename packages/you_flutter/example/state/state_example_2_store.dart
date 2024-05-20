@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:you_dart/src/state.dart';
-import 'package:you_flutter/src/state.dart';
+import 'package:you_flutter/state.dart';
 
 /// just a normal class
 class Store {
@@ -31,20 +30,20 @@ class HelloStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Watch((context) => Text("store.dice1.value:${store.dice1()}")),
+        Watch(builder:(context) => Text("store.dice1.value:${store.dice1()}")),
         ElevatedButton(
           onPressed: () => store.dice1.value=(Random().nextInt(6)+1),
           child: const Text("store.dice1.value=Random()"),
         ),
         const Divider(),
-        Watch((context) => Text("store.dice2():${store.dice2()}")),
+        Watch(builder:(context) => Text("store.dice2():${store.dice2()}")),
         ElevatedButton(
           onPressed: () => store.dice2.value=Random().nextInt(6)+1,
           child: const Text("store.dice2.value=Random()"),
         ),
         const Divider(),
         const Divider(),
-        Watch((context) => Text("computeSum():${store.computeSum()}")),
+        Watch(builder:(context) => Text("computeSum():${store.computeSum()}")),
       ],
     );
   }

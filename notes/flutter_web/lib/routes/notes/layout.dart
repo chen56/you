@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:you_flutter/note.dart';
+import 'package:you_flutter/state.dart';
 
 /// [NoteLayoutBuilder]
 NoteMixin build(BuildContext context, NoteMixin child) {
@@ -20,7 +21,19 @@ final class NoteRootLayout extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return child;
+    // 在根note layout里重新解析cell，覆盖ToNote缺省实现
+    var cells = cell.toList().expand((cell) sync* {
+      for (var content in cell.contents) {
+        yield contents.contentToWidget(content);
+      }
+    }).toList();
+
+    /// note page 最外层只有下面包装
+    return Watch(builder: (context) {
+      return ListView(
+        children: cells,
+      );
+    });
   }
 }
 
@@ -59,7 +72,7 @@ final class NoteRootLayout extends StatelessWidget with NoteMixin {
 //     //   // Specify text style
 //     // );
 //
-//     var cellView = Watch(
+//     var cellView = Watch(builder:
 //           (context) {
 //         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
 //         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之

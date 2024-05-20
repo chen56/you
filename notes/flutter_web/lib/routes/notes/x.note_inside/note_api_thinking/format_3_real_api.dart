@@ -9,7 +9,9 @@ import 'package:you_flutter/note.dart';
 ///   - 可信度也较高（Trace总觉得有点不太靠谱，收集定位 source code 也就行了），
 ///   - 甚至可以作为通用架构来做note外的开发
 void build(BuildContext context, Cell print) {
-  print.addCellWith(Cell(title: Text("ssss"), (print) {
-    print("ss");
-  }));
+  print.addCellWith(
+    Cell(title: Text("ssss"), (print) {
+      print("ss");
+    }),
+  );
 }
