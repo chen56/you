@@ -8,7 +8,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 import 'package:you_cli/src/analyzer.dart';
-import 'package:you_cli/src/pubspec.dart';
+import 'package:_you_dart_internal/src/pubspec.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 class YouCli {
@@ -37,7 +37,7 @@ class YouCli {
 
   File get file_pubspec_yaml => dir_project.childFile("pubspec.yaml");
 
-  Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
+  Pubspec get pubspec => _pubspec ??= Pubspec.parse(file_pubspec_yaml.readAsStringSync());
 
   AnalysisSession get analysisSession {
     return _session ??= AnalysisContextCollection(
