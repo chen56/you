@@ -8,7 +8,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 import 'package:you_cli/src/analyzer.dart';
-import 'package:you_cli/src/yaml.dart';
+import 'package:you_cli/src/pubspec.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 class YouCli {

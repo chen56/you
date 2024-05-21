@@ -1,7 +1,7 @@
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
 import 'package:test/test.dart';
-import 'package:you_cli/src/yaml.dart';
+import 'package:you_cli/src/pubspec.dart';
 
 
 void main() {

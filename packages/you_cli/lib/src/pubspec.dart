@@ -20,7 +20,7 @@ class Pubspec {
 
   static Pubspec parseString(String content) {
     YamlMap document = loadYaml(content);
-    return Pubspec._(document);
+     return Pubspec._(document);
   }
 
   String get name => document["name"] as String;
