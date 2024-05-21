@@ -202,9 +202,9 @@ class Cmd_gen_routes_g_dart extends Command {
     var fmt = DartFormatter(pageWidth: 200);
     var dartEmitter = DartEmitterForCli(allocator: _allocator, orderDirectives: false, useNullSafetySyntax: true);
     var allCode = '${all.accept(dartEmitter)}';
-    _log("gen: ${cli.file_routes_g_dart.path} : $allCode");
+    _log("gen: ${cli.path_routes_g_dart.path} : $allCode");
     allCode = fmt.format(allCode);
-    await cli.file_routes_g_dart.writeAsString(allCode);
+    await cli.path_routes_g_dart.writeAsString(allCode);
     // 暂时不格式化，因为要保持变量名后的padding，对齐变量更好看
     // file.writeAsString(_fmt.format(toCode));
   }

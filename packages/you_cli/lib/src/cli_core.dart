@@ -13,7 +13,7 @@ import 'package:_you_dart_internal/src/pubspec.dart';
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 class YouCli {
   YouCli({required Directory projectDir})
-      : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
+      : path_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
   static const Reference toType = Reference("To", "package:you_flutter/router.dart");
@@ -21,32 +21,32 @@ class YouCli {
   static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
   static const String layoutFunctionName = "build";
   static const String pageFunctionName = "build";
-  final Directory dir_project;
+  final Directory path_project;
   final FileSystem fs;
   Pubspec? _pubspec;
   RouteNode? _rootRoute;
   AnalysisSession? _session;
 
-  Directory get dir_lib => dir_project.childDirectory("lib");
+  Directory get path_lib => path_project.childDirectory("lib");
 
-  Directory get dir_routes => dir_project.childDirectory("lib/routes");
+  Directory get path_routes => path_project.childDirectory("lib/routes");
 
-  Directory get dir_notes => dir_project.childDirectory("lib/routes/notes");
+  Directory get path_notes => path_project.childDirectory("lib/routes/notes");
 
-  File get file_routes_g_dart => dir_project.childFile("lib/routes.g.dart");
+  File get path_routes_g_dart => path_project.childFile("lib/routes.g.dart");
 
-  File get file_pubspec_yaml => dir_project.childFile("pubspec.yaml");
+  File get path_pubspec_yaml => path_project.childFile("pubspec.yaml");
 
-  Pubspec get pubspec => _pubspec ??= Pubspec.parse(file_pubspec_yaml.readAsStringSync());
+  Pubspec get pubspec => _pubspec ??= Pubspec.parse(path_pubspec_yaml.readAsStringSync());
 
   AnalysisSession get analysisSession {
     return _session ??= AnalysisContextCollection(
-      includedPaths: [dir_lib.path],
+      includedPaths: [path_lib.path],
       resourceProvider: PhysicalResourceProvider(),
     ).contexts[0].currentSession;
   }
 
-  Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, dir_routes);
+  Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, path_routes);
 
   Future<FunctionElement?> analyzeLayout(File file) async {
     if (!await file.exists()) {
@@ -156,11 +156,11 @@ class RouteNode {
   }
 
   String get pagePackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_page_dart.path, from: cli.dir_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(file_page_dart.path, from: cli.path_lib.path)}";
   }
 
   String get layoutPackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_layout_dart.path, from: cli.dir_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(file_layout_dart.path, from: cli.path_lib.path)}";
   }
 
   /// note name平整化,可作为变量名：
