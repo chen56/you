@@ -144,9 +144,9 @@ class RouteNode {
 
   bool get isRoot => _parent == this;
 
-  File get file_page_dart => dir.childFile("page.dart");
+  File get path_page_dart => dir.childFile("page.dart");
 
-  File get file_layout_dart => dir.childFile("layout.dart");
+  File get path_layout_dart => dir.childFile("layout.dart");
 
   String get routePath {
     if (isRoot) {
@@ -156,11 +156,11 @@ class RouteNode {
   }
 
   String get pagePackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_page_dart.path, from: cli.path_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(path_page_dart.path, from: cli.path_lib.path)}";
   }
 
   String get layoutPackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_layout_dart.path, from: cli.path_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(path_layout_dart.path, from: cli.path_lib.path)}";
   }
 
   /// note name平整化,可作为变量名：
@@ -209,7 +209,7 @@ class RouteNode {
   }
 
   RouteNode? findLayoutSync() {
-    if (file_layout_dart.existsSync()) {
+    if (path_layout_dart.existsSync()) {
       return this;
     }
     if (isRoot) {

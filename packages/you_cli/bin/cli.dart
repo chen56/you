@@ -17,10 +17,12 @@ main(List<String> args) async {
   FileSystem fs = const LocalFileSystem();
 
   var runner = CommandRunner("youc", "you flutter cli tools.");
+
   runner.addCommand(
     Cmd_gen(fs: fs)
       ..addSubcommand(Cmd_gen_all(fs: fs))
-      ..addSubcommand(Cmd_gen_routes_g_dart(fs: fs)),
+      ..addSubcommand(Cmd_gen_routes_g_dart(fs: fs))
+      ..addSubcommand(Cmd_gen_assets(fs: fs)),
   );
 
   await runner.run(args);
@@ -122,9 +124,9 @@ class Cmd_gen_routes_g_dart extends Command {
     return builderType.newInstance(
       [literalString(node.dir.basename)],
       {
-        if (node.file_page_dart.existsSync()) "page": refer(YouCli.pageFunctionName, node.pagePackageUrl),
+        if (node.path_page_dart.existsSync()) "page": refer(YouCli.pageFunctionName, node.pagePackageUrl),
         if (node.pageAnno != null) "pageAnno": refer("_Pages").property(node.flatName),
-        if (node.file_layout_dart.existsSync()) "layout": refer(YouCli.layoutFunctionName, node.layoutPackageUrl),
+        if (node.path_layout_dart.existsSync()) "layout": refer(YouCli.layoutFunctionName, node.layoutPackageUrl),
         if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRootRouteExpression(e))),
       },
     );
@@ -167,7 +169,7 @@ class Cmd_gen_routes_g_dart extends Command {
                 ..assignment = _genRootRouteExpression(rootRoute).code),
             )
             ..fields.addAll(
-              routes.where((e) => e.file_page_dart.existsSync()).map(
+              routes.where((e) => e.path_page_dart.existsSync()).map(
                     (routeDir) => Field((f) => f
                       ..modifier = FieldModifier.final$
                       ..late = true
@@ -210,7 +212,46 @@ class Cmd_gen_routes_g_dart extends Command {
   }
 }
 
+// ignore: camel_case_types
+class Cmd_gen_assets extends Command {
+  Cmd_gen_assets({required this.fs}) : libMode = false {
+    argParser.addOption("dir", mandatory: true, help: "要生成的flutter note项目根目录");
+  }
+
+  Cmd_gen_assets.libMode({
+    required this.fs,
+    required this.dir,
+  }) : libMode = true;
+
+  bool libMode;
+  late Directory dir;
+
+  @override
+  final name = "routes";
+  @override
+  final description = "gen assets";
+  final FileSystem fs;
+  YouCli? _cli;
+
+  YouCli get cli => _cli != null ? _cli! : _cli = YouCli(projectDir: dir);
+
+  @override
+  Future<void> run() async {
+    if (!libMode) {
+      String dirOpt = argResults!["dir"];
+      dir = fs.directory(path.absolute(dirOpt));
+    }
+    if (!dir.existsSync()) {
+      throw AssertionError("【--dir $dir】 not exists");
+    }
+
+    var rootRoute = await cli.rootRoute;
+    Iterable<RouteNode> routes = rootRoute.toList();
+    routes.toList().map((e) => e.dir);
+  }
+}
+
 _log(Object? o) {
   // ignore: avoid_print
-  print("${DateTime.now()} - $o");
+  print("you_cli - ${DateTime.now()} - $o");
 }
