@@ -155,6 +155,10 @@ class RouteNode {
     return "/${path.relative(dir.path, from: root.dir.path)}";
   }
 
+  String get assetPath{
+    return "lib/routes$routePath/";
+  }
+
   String get pagePackageUrl {
     return "package:${cli.pubspec.name}/${path.relative(path_page_dart.path, from: cli.path_lib.path)}";
   }

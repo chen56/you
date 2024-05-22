@@ -13,19 +13,30 @@ class Pubspec {
   }
 
   String get name {
-    return _yamlEditor.parseAt(["name"],orElse: ()=>YamlScalar.wrap("")).value;
+    return _yamlEditor.parseAt(["name"], orElse: () => YamlScalar.wrap("")).value;
   }
 
   set name(String newName) {
     _yamlEditor.update(["name"], newName);
   }
 
-  List<String> get assets {
-    return (_yamlEditor.parseAt(["flutter", "assets"]) as List).map((e) => e.toString()).toList();
+  YamlMap get flutterNode {
+    var empty = wrapAsYamlNode({}, collectionStyle: CollectionStyle.BLOCK);
+    var result = _yamlEditor.parseAt(["flutter"], orElse: () => empty) as YamlMap;
+    if (empty == result) {
+      _yamlEditor.update(["flutter"], empty);
+    }
+    return result;
   }
 
-  Set<String> get assetsSet {
-    return (_yamlEditor.parseAt(["flutter", "assets"]) as List).map((e) => e.toString()).toSet();
+  List<String> get assets {
+    flutterNode; //ensure init
+    var empty = wrapAsYamlNode([], collectionStyle: CollectionStyle.BLOCK);
+    YamlList assetsNode = _yamlEditor.parseAt(["flutter", "assets"], orElse: () => empty) as YamlList;
+    if (empty == assetsNode) {
+      _yamlEditor.update(["flutter", "assets"], empty);
+    }
+    return assetsNode.map((e) => e.toString()).toList();
   }
 
   void assetsUpdate(List<String> newAssets) {
@@ -36,11 +47,15 @@ class Pubspec {
       }
     }
 
-    for (var e in newAssets) {
-      if (!olds.contains(e)) {
-        _yamlEditor.appendToList(["flutter", "assets"], e);
-      }
-    }
+    var result = Set.of(assets);
+    result.addAll(newAssets);
+    _yamlEditor.update(["flutter", "assets"], result.map((e) => wrapAsYamlNode(e, collectionStyle: CollectionStyle.BLOCK)).toList());
+
+    // for (var e in newAssets) {
+    //   if (!olds.contains(e)) {
+    //     _yamlEditor.appendToList(["flutter", "assets"], wrapAsYamlNode(e,collectionStyle: CollectionStyle.BLOCK));
+    //   }
+    // }
   }
 
   String toYamlString() {

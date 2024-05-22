@@ -4,6 +4,25 @@ import 'package:_you_dart_internal/src/pubspec.dart';
 
 void main() {
   group("Pubspec.assets", () {
+    test('assets not exists', () async {
+      String content = """
+name: app
+""";
+      Pubspec pubspec = Pubspec.parse(content);
+
+      // when
+      var assets = List.of(pubspec.assets);
+      assets.add("lib/routes/notes/4/");
+      pubspec.assetsUpdate(assets);
+
+      // then
+      // dart的yaml实现貌似很弱，BLOCK和FLOW风格控制不住
+      check(pubspec.toYamlString()).equals("""
+flutter: {assets: [lib/routes/notes/4/]}
+name: app
+""");
+    });
+
     test('update', () async {
       String content = """
 flutter:

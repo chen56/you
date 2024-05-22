@@ -227,7 +227,7 @@ class Cmd_gen_assets extends Command {
   late Directory dir;
 
   @override
-  final name = "routes";
+  final name = "assets";
   @override
   final description = "gen assets";
   final FileSystem fs;
@@ -248,6 +248,11 @@ class Cmd_gen_assets extends Command {
     var rootRoute = await cli.rootRoute;
     Iterable<RouteNode> routes = rootRoute.toList();
     routes.toList().map((e) => e.dir);
+    List<String> assets = cli.pubspec.assets;
+    assets.removeWhere((e) => e.startsWith("lib/routes/notes"));
+    assets.addAll((await cli.rootRoute).toList().map((e) => e.assetPath));
+    cli.pubspec.assetsUpdate(assets);
+    cli.path_pubspec_yaml.writeAsString(cli.pubspec.toYamlString());
   }
 }
 

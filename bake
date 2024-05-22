@@ -188,19 +188,18 @@ learn_dart.study()      { __run learn_dart dart test;                           
 # install:
 # - flutter pub global activate dhttpd
 # - deno
-flutter_web.run()      { __run flutter_web "$@"  ;                           }
-flutter_web.install()  { __run flutter_web flutter pub get ;                 }
-flutter_web.clean()    { __run flutter_web flutter clean;
-                         rm -rf build;                                       }
-flutter_web.upgrade()  { __run flutter_web flutter pub outdated ;
-                         __run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()      { #__run root dart run packages/you_cli/bin/cli.dart gen all --dir notes/flutter_web/;
-                         __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ # --async
-}
-flutter_web.dev()      { flutter_web.dev_html ;                              }
-flutter_web.build()    { flutter_web.build_html ;                            }
-flutter_web.preview()  { flutter_web.build_html;
-                         flutter_web.server_deno;                            }
+flutter_web.run()         { __run flutter_web "$@"  ;                           }
+flutter_web.install()     { __run flutter_web flutter pub get ;                 }
+flutter_web.clean()       { __run flutter_web flutter clean;
+                            rm -rf build;                                       }
+flutter_web.upgrade()     { __run flutter_web flutter pub outdated ;
+                            __run flutter_web flutter pub upgrade ;             }
+flutter_web.gen()         { __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ ; }
+flutter_web.gen_assets()  { __run root dart run packages/you_cli/bin/cli.dart gen assets  --dir notes/flutter_web/ ; }
+flutter_web.dev()         { flutter_web.dev_html ;                              }
+flutter_web.build()       { flutter_web.build_html ;                            }
+flutter_web.preview()     { flutter_web.build_html;
+                            flutter_web.server_deno;                            }
 
 flutter_web.dev_html()              { __run flutter_web flutter run --web-port 8888 --web-renderer html --device-id chrome "$@"; }
 flutter_web.dev_macos()             { __run flutter_web flutter run --device-id macos "$@"; }
