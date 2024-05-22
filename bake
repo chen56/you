@@ -194,8 +194,9 @@ flutter_web.clean()       { __run flutter_web flutter clean;
                             rm -rf build;                                       }
 flutter_web.upgrade()     { __run flutter_web flutter pub outdated ;
                             __run flutter_web flutter pub upgrade ;             }
-flutter_web.gen()         { __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ ; }
-flutter_web.gen_assets()  { __run root dart run packages/you_cli/bin/cli.dart gen assets  --dir notes/flutter_web/ ; }
+flutter_web.gen.all()     { __run root dart run packages/you_cli/bin/cli.dart gen all     --dir notes/flutter_web/ ; }
+flutter_web.gen.assets()  { __run root dart run packages/you_cli/bin/cli.dart gen assets  --dir notes/flutter_web/ ; }
+flutter_web.gen.routes()  { __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ ; }
 flutter_web.dev()         { flutter_web.dev_html ;                              }
 flutter_web.build()       { flutter_web.build_html ;                            }
 flutter_web.preview()     { flutter_web.build_html;

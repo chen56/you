@@ -35,9 +35,29 @@ class YouCli {
 
   File get path_routes_g_dart => path_project.childFile("lib/routes.g.dart");
 
+  File get path_assets_g_dart => path_project.childFile("lib/assets.g.dart");
+
   File get path_pubspec_yaml => path_project.childFile("pubspec.yaml");
 
   Pubspec get pubspec => _pubspec ??= Pubspec.parse(path_pubspec_yaml.readAsStringSync());
+
+  static String pathToFlat(String path$) {
+    if (path$ == "/") {
+      return "root";
+    }
+    var names = path$.split(path.separator).where((e) => e.isNotEmpty);
+    return names
+        .map((e) => e
+            // ignore: unnecessary_string_escapes
+            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
+            .replaceAll(".", "_")
+            .replaceAll("-", "_")
+            .replaceAll("&", "_")
+            .replaceAll("*", "_")
+            .replaceAll("*", "_")
+            .replaceAll("@", "_"))
+        .join("_");
+  }
 
   AnalysisSession get analysisSession {
     return _session ??= AnalysisContextCollection(
@@ -155,7 +175,10 @@ class RouteNode {
     return "/${path.relative(dir.path, from: root.dir.path)}";
   }
 
-  String get assetPath{
+  String get assetPath {
+    if(isRoot){
+      return "lib/routes/";
+    }
     return "lib/routes$routePath/";
   }
 
@@ -169,24 +192,7 @@ class RouteNode {
 
   /// note name平整化,可作为变量名：
   /// lib/routes/1.a/b/page.dart  ---> a_b
-  String get flatName {
-    String p = routePath;
-    if (p == "/") {
-      return "root";
-    }
-    var names = p.split(path.separator).where((e) => e.isNotEmpty);
-    return names
-        .map((e) => e
-            // ignore: unnecessary_string_escapes
-            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
-            .replaceAll(".", "_")
-            .replaceAll("-", "_")
-            .replaceAll("&", "_")
-            .replaceAll("*", "_")
-            .replaceAll("*", "_")
-            .replaceAll("@", "_"))
-        .join("_");
-  }
+  String get flatName => YouCli.pathToFlat(routePath);
 
   List<RouteNode> toList({
     bool includeThis = true,

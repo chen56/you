@@ -136,6 +136,7 @@ flutter:
     - lib/routes/notes/Improve_app/RepaintBoundary/
     - lib/routes/notes/Improve_app/event&listener&lifeycle/
     - lib/routes/notes/Improve_app/i18n/
+    - lib/routes/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
