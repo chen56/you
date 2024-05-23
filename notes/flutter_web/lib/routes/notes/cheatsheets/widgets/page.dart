@@ -34,14 +34,14 @@ void build(BuildContext context, Cell print) {
         CellView(title: "Placeholder", child: spacerAndDivider.placeholder()),
       ]),
       Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
-        CellView(title: "Container", child: layoutCore.containerCell(context)),
+        CellView(title: "Container", child: layoutCore.containerCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
-        CellView(title: "ButtonStyleButton", child: buttonAndInput.buttonStyleButtonCell(context)),
-        CellView(title: "FloatingActionButton", child: buttonAndInput.floatingActionButtonCell(context)),
-        CellView(title: "IconButton", child: buttonAndInput.iconButtonCell(context)),
+        CellView(title: "ButtonStyleButton", child: buttonAndInput.buttonStyleButtonCell()),
+        CellView(title: "FloatingActionButton", child: buttonAndInput.floatingActionButtonCell()),
+        CellView(title: "IconButton", child: buttonAndInput.iconButtonCell()),
         CellView(title: "SearchAnchor", child: buttonAndInput.search()),
-        CellView(title: "segmentButton", child: buttonAndInput.segmentButtonCell(context)),
+        CellView(title: "segmentButton", child: buttonAndInput.segmentButtonCell()),
         CellView(title: "Checkbox", child: buttonAndInput.checkbox()),
         CellView(title: "CheckboxListTile", child: buttonAndInput.checkboxListTile()),
         CellView(title: "Chip", child: buttonAndInput.chip()),
@@ -59,18 +59,18 @@ void build(BuildContext context, Cell print) {
         CellView(title: "TextField", child: buttonAndInput.textField()),
       ]),
       Level1MasonryLayout(title: "text&info&tip", cellWidth: 300, children: [
-        CellView(title: "Badge", child: textAndInfoAndTip.badgesCell(context)),
-        CellView(title: "ProgressIndicator", child: textAndInfoAndTip.progressIndicatorCell(context)),
-        CellView(title: "ProgressIndicator2", child: textAndInfoAndTip.progressIndicator2Cell(context)),
-        CellView(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar(context)),
+        CellView(title: "Badge", child: textAndInfoAndTip.badgesCell()),
+        CellView(title: "ProgressIndicator", child: textAndInfoAndTip.progressIndicatorCell()),
+        CellView(title: "ProgressIndicator2", child: textAndInfoAndTip.progressIndicator2Cell()),
+        CellView(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar()),
       ]),
       Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
-        CellView(title: "SnackBar", child: advancedTemplateContainer.snackBarCell(context)),
+        CellView(title: "SnackBar", child: advancedTemplateContainer.snackBarCell()),
         CellView(title: "dialog", child: advancedTemplateContainer.dialog()),
-        CellView(title: "bottomSheet", child: advancedTemplateContainer.bottomSheetCell(context)),
+        CellView(title: "bottomSheet", child: advancedTemplateContainer.bottomSheetCell()),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
-        CellView(title: "Card", child: decorator.cardCell(context)),
+        CellView(title: "Card", child: decorator.cardCell()),
       ]),
     ],
   );
@@ -79,7 +79,7 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget buttonStyleButtonCell(BuildContext context) {
+  Widget buttonStyleButtonCell() {
     return Wrap(
       children: [
         IntrinsicWidth(
@@ -122,7 +122,7 @@ class ButtonAndInput {
     );
   }
 
-  Widget floatingActionButtonCell(BuildContext context) {
+  Widget floatingActionButtonCell() {
     return Wrap(
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
@@ -154,7 +154,7 @@ class ButtonAndInput {
     );
   }
 
-  Widget iconButtonCell(BuildContext context) {
+  Widget iconButtonCell() {
     bool standardSelected = false;
     bool filledSelected = false;
     bool outlinedSelected = false;
@@ -246,7 +246,7 @@ class ButtonAndInput {
     });
   }
 
-  Widget segmentButtonCell(BuildContext context) {
+  Widget segmentButtonCell() {
     Value<ThemeMode> themeMode = ThemeMode.system.signal();
     Set<TargetPlatform> targetPlatforms = <TargetPlatform>{TargetPlatform.macOS, TargetPlatform.linux}.signal();
 
@@ -830,200 +830,167 @@ class ButtonAndInput {
 }
 
 class LayoutCore {
-  Widget containerCell(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    return Wrap(
-      children: [
+  Widget containerCell() {
+    return Builder(builder: (context) {
+      var colors = Theme.of(context).colorScheme;
+      return Wrap(children: [
         Container(
             width: 100,
             height: 100,
             alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: colors.surface,
-              boxShadow: [
-                BoxShadow(
-                  color: colors.shadow.withOpacity(0.2), // 阴影颜色
-                  spreadRadius: 2, // 阴影扩散范围
-                  blurRadius: 2, // 阴影模糊程度
-                  offset: const Offset(2, 1), // 阴影偏移量，水平和垂直方向
-                ),
-              ],
-              borderRadius: BorderRadius.circular(4.0),
-            ),
-            child: const Text("模仿Card\nImitate Card") // Your widget here
-            )
-      ],
-    );
+            decoration: BoxDecoration(color: colors.surface, borderRadius: BorderRadius.circular(4.0), boxShadow: [
+              BoxShadow(color: colors.shadow.withOpacity(0.2), spreadRadius: 2, blurRadius: 2, offset: const Offset(2, 1)),
+            ]),
+            child: const Text("模仿Card\nImitate Card"))
+      ]);
+    });
   }
 }
 
 class SpacerAndDivider {
   Widget divider() {
-    return const Column(
-      children: [
-        SizedBox(
-          child: Column(
-            children: [
-              Text('Divider'),
-              Divider(),
-              Text('Divider'),
-            ],
-          ),
-        ),
-        SizedBox(
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('VerticalDivider'),
-                VerticalDivider(),
-                Text('VerticalDivider'),
-              ],
-            )),
-      ],
-    );
+    return const Column(children: [
+      SizedBox(
+        child: Column(children: [
+          Text('Divider'),
+          Divider(),
+          Text('Divider'),
+        ]),
+      ),
+      SizedBox(
+        height: 100,
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text('VerticalDivider'),
+          VerticalDivider(),
+          Text('VerticalDivider'),
+        ]),
+      )
+    ]);
   }
 
   Widget spacer() {
-    return const Column(
-      children: [
-        Row(
-          children: [
-            Text('Row left'),
-            Spacer(),
-            Text('Row right'),
-          ],
-        ),
-      ],
-    );
+    return const Column(children: [
+      Row(children: [
+        Text('Row left'),
+        Spacer(),
+        Text('Row right'),
+      ]),
+    ]);
   }
 
   Widget placeholder() {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Placeholder(fallbackWidth: 100, fallbackHeight: 100),
-        Placeholder(
-          fallbackWidth: 100,
-          fallbackHeight: 100,
-          child: SizedBox(width: 100, height: 100, child: Text("带child的")),
-        ),
-      ],
-    );
+    return const Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+      Placeholder(fallbackWidth: 100, fallbackHeight: 100),
+      Placeholder(
+        fallbackWidth: 100,
+        fallbackHeight: 100,
+        child: SizedBox(width: 100, height: 100, child: Text("带child的")),
+      ),
+    ]);
   }
 }
 
 class TextAndInfoAndTip {
-  Widget circleAvatar(BuildContext context) {
-    return const Row(
-      children: [
-        CircleAvatar(child: Text('C')),
-        CircleAvatar(child: Icon(Icons.account_box)),
-        CircleAvatar(backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/2039742')),
-        CircleAvatar(backgroundImage: NetworkImage('https://img2.baidu.com/it/u=3784833129,896943374&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500')),
-      ],
-    );
+  Widget circleAvatar() {
+    return const Row(children: [
+      CircleAvatar(child: Text('C')),
+      CircleAvatar(child: Icon(Icons.account_box)),
+      CircleAvatar(backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/2039742')),
+      CircleAvatar(backgroundImage: NetworkImage('https://img2.baidu.com/it/u=3784833129,896943374&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500')),
+    ]);
   }
 
-  Widget badgesCell(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Badge.count(count: 1000, child: const Icon(Icons.mail_outlined)),
-        const Badge(child: Icon(Icons.sms_failed_outlined)),
-        Badge.count(count: 23, child: ElevatedButton(onPressed: () {}, child: const Text("Button"))),
-        const Badge(
-          label: Text("2000 ¥"),
-          alignment: AlignmentDirectional.bottomCenter,
-          child: Card(
-            elevation: 4,
-            color: Colors.green,
-            child: Padding(padding: EdgeInsets.all(20), child: Text('Card')),
-          ),
+  Widget badgesCell() {
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+      Badge.count(count: 1000, child: const Icon(Icons.mail_outlined)),
+      const Badge(child: Icon(Icons.sms_failed_outlined)),
+      Badge.count(count: 23, child: ElevatedButton(onPressed: () {}, child: const Text("Button"))),
+      const Badge(
+        label: Text("2000 ¥"),
+        alignment: AlignmentDirectional.bottomCenter,
+        child: Card(
+          elevation: 4,
+          color: Colors.green,
+          child: Padding(padding: EdgeInsets.all(20), child: Text('Card')),
         ),
-      ],
-    );
+      ),
+    ]);
   }
 
-  Widget progressIndicatorCell(BuildContext context) {
+  Widget progressIndicatorCell() {
     final selected = false.signal();
     return Watch(builder: (context) {
-      return Row(
-        children: [
-          IconButton(
-            isSelected: selected.value,
-            selectedIcon: const Icon(Icons.pause),
-            icon: const Icon(Icons.play_arrow),
-            onPressed: () {
-              selected.value = !selected.value;
-            },
-          ),
-          CircularProgressIndicator(value: selected.value ? null : 0.9),
-          Expanded(
-            child: LinearProgressIndicator(value: selected.value ? null : 0.9),
-          ),
-        ],
-      );
+      return Row(children: [
+        IconButton(
+          isSelected: selected.value,
+          selectedIcon: const Icon(Icons.pause),
+          icon: const Icon(Icons.play_arrow),
+          onPressed: () {
+            selected.value = !selected.value;
+          },
+        ),
+        CircularProgressIndicator(value: selected.value ? null : 0.9),
+        Expanded(
+          child: LinearProgressIndicator(value: selected.value ? null : 0.9),
+        ),
+      ]);
     });
   }
 
-  Widget progressIndicator2Cell(BuildContext context) {
+  Widget progressIndicator2Cell() {
     final selected = false.signal();
     return Watch(
       builder: (context) {
-        return Column(
-          children: [
-            const Text("RefreshIndicator 下拉刷新(Pull down to refresh)"),
-            SizedBox(
-              height: 200,
-              child: RefreshIndicator(
-                onRefresh: () async {
-                  selected.value = true;
-                  await Future.delayed(const Duration(seconds: 3)); // mock delay
-                  selected.value = false;
+        return Column(children: [
+          const Text("RefreshIndicator 下拉刷新(Pull down to refresh)"),
+          SizedBox(
+            height: 200,
+            child: RefreshIndicator(
+              onRefresh: () async {
+                selected.value = true;
+                await Future.delayed(const Duration(seconds: 3)); // mock delay
+                selected.value = false;
+              },
+              child: ListView.builder(
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: 5, // 示例数据数量
+                itemBuilder: (context, index) {
+                  return ListTile(title: Text('Item ${index + 1}/5'));
                 },
-                child: ListView.builder(
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  itemCount: 5, // 示例数据数量
-                  itemBuilder: (context, index) {
-                    return ListTile(title: Text('Item ${index + 1}/5'));
-                  },
-                ),
               ),
             ),
-          ],
-        );
+          ),
+        ]);
       },
     );
   }
 }
 
 class AdvancedTemplateContainer {
-  Widget snackBarCell(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        final snackBar = SnackBar(
-          behavior: SnackBarBehavior.floating,
-          // width: 800.0,
+  Widget snackBarCell() {
+    return Builder(
+        builder: (context) => TextButton(
+              onPressed: () {
+                final snackBar = SnackBar(
+                  behavior: SnackBarBehavior.floating,
+                  content: const Text('SnackBar'),
+                  action: SnackBarAction(
+                    label: 'Close',
+                    onPressed: () {},
+                  ),
+                );
 
-          content: const Text('SnackBar'),
-          action: SnackBarAction(
-            label: 'Close',
-            onPressed: () {},
-          ),
-        );
-
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      },
-      child: const Text(
-        'SnackBar',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-    );
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              child: const Text(
+                'SnackBar',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ));
   }
 
-  Widget bottomSheetCell(BuildContext context) {
+  Widget bottomSheetCell() {
     Value<PersistentBottomSheetController?> bottomSheetController = (null as PersistentBottomSheetController?).signal();
 
     final bar = NavigationBar(
@@ -1108,45 +1075,47 @@ content and the actions are displayed below the content.'''),
 }
 
 class Decorator {
-  Widget cardCell(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    return Wrap(
-      children: [
-        Card(
-          elevation: 4,
-          child: Container(
-            width: 80,
-            height: 80,
-            alignment: Alignment.center,
-            padding: const EdgeInsets.fromLTRB(10, 5, 5, 10),
-            child: const Text('Elevated'),
+  Widget cardCell() {
+    return Builder(builder: (context) {
+      var colors = Theme.of(context).colorScheme;
+      return Wrap(
+        children: [
+          Card(
+            elevation: 4,
+            child: Container(
+              width: 80,
+              height: 80,
+              alignment: Alignment.center,
+              padding: const EdgeInsets.fromLTRB(10, 5, 5, 10),
+              child: const Text('Elevated'),
+            ),
           ),
-        ),
-        Card(
-          elevation: 0,
-          color: colors.surfaceDim,
-          child: Container(
-            width: 80,
-            height: 80,
-            alignment: Alignment.center,
-            child: const Text('Filled'),
+          Card(
+            elevation: 0,
+            color: colors.surfaceDim,
+            child: Container(
+              width: 80,
+              height: 80,
+              alignment: Alignment.center,
+              child: const Text('Filled'),
+            ),
           ),
-        ),
-        Card(
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: colors.outlineVariant),
-            borderRadius: const BorderRadius.all(Radius.circular(12)),
+          Card(
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: colors.outlineVariant),
+              borderRadius: const BorderRadius.all(Radius.circular(12)),
+            ),
+            child: Container(
+              width: 80,
+              height: 80,
+              alignment: Alignment.center,
+              child: const Text('Border'),
+            ),
           ),
-          child: Container(
-            width: 80,
-            height: 80,
-            alignment: Alignment.center,
-            child: const Text('Border'),
-          ),
-        ),
-      ],
-    );
+        ],
+      );
+    });
   }
 }
 
@@ -1159,14 +1128,12 @@ class NavigationAndPage {
         body: const Placeholder(),
         floatingActionButton: FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
         bottomNavigationBar: BottomAppBar(
-          child: Row(
-            children: <Widget>[
-              IconButton(tooltip: 'Open navigation menu', icon: const Icon(Icons.menu), onPressed: () {}),
-              const Spacer(),
-              IconButton(tooltip: 'Search', icon: const Icon(Icons.search), onPressed: () {}),
-              IconButton(tooltip: 'Favorite', icon: const Icon(Icons.favorite), onPressed: () {}),
-            ],
-          ),
+          child: Row(children: <Widget>[
+            IconButton(tooltip: 'Open navigation menu', icon: const Icon(Icons.menu), onPressed: () {}),
+            const Spacer(),
+            IconButton(tooltip: 'Search', icon: const Icon(Icons.search), onPressed: () {}),
+            IconButton(tooltip: 'Favorite', icon: const Icon(Icons.favorite), onPressed: () {}),
+          ]),
         ),
       ),
     );
@@ -1223,13 +1190,11 @@ class NavigationAndPage {
         width: 500,
         height: 300,
         child: Scaffold(
-          appBar: AppBar(
-            actions: [
-              Builder(builder: (context) {
-                return TextButton.icon(label: const Text("openEndDrawer"), icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
-              }),
-            ],
-          ),
+          appBar: AppBar(actions: [
+            Builder(builder: (context) {
+              return TextButton.icon(label: const Text("openEndDrawer"), icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
+            }),
+          ]),
           body: drawer(),
           endDrawer: drawer(),
         ),
@@ -1292,15 +1257,13 @@ class NavigationAndPage {
     return DefaultTabController(
       initialIndex: 1,
       length: tabs.length,
-      child: Column(
-        children: [
-          TabBar(tabs: tabs.map((e) => e.tab).toList()),
-          SizedBox(
-            height: 100,
-            child: TabBarView(children: tabs.map((e) => e.page).toList()),
-          )
-        ],
-      ),
+      child: Column(children: [
+        TabBar(tabs: tabs.map((e) => e.tab).toList()),
+        SizedBox(
+          height: 100,
+          child: TabBarView(children: tabs.map((e) => e.page).toList()),
+        )
+      ]),
     );
   }
 
@@ -1320,21 +1283,9 @@ class NavigationAndPage {
           );
         },
         menuChildren: [
-          MenuItemButton(
-            leadingIcon: const Icon(Icons.people_alt_outlined),
-            child: const Text('Item 1'),
-            onPressed: () {},
-          ),
-          MenuItemButton(
-            leadingIcon: const Icon(Icons.remove_red_eye_outlined),
-            child: const Text('Item 2'),
-            onPressed: () {},
-          ),
-          MenuItemButton(
-            leadingIcon: const Icon(Icons.refresh),
-            onPressed: () {},
-            child: const Text('Item 3'),
-          ),
+          MenuItemButton(leadingIcon: const Icon(Icons.people_alt_outlined), child: const Text('Item 1'), onPressed: () {}),
+          MenuItemButton(leadingIcon: const Icon(Icons.remove_red_eye_outlined), child: const Text('Item 2'), onPressed: () {}),
+          MenuItemButton(leadingIcon: const Icon(Icons.refresh), child: const Text('Item 3'), onPressed: () {}),
         ],
       );
     });
@@ -1344,15 +1295,10 @@ class NavigationAndPage {
     return Builder(builder: (context) {
       final colors = Theme.of(context).colorScheme;
       return Scaffold(
-        appBar: AppBar(
-          backgroundColor: colors.surfaceContainerHighest,
-          leading: const BackButton(),
-          actions: [
-            IconButton(icon: const Icon(Icons.minimize), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.filter_alt_off), onPressed: () {}),
-            // const Spacer(),
-          ],
-        ),
+        appBar: AppBar(backgroundColor: colors.surfaceContainerHighest, leading: const BackButton(), actions: [
+          IconButton(icon: const Icon(Icons.minimize), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.filter_alt_off), onPressed: () {}),
+        ]),
         body: const Text("Hello\nWorld"),
       );
     });
@@ -1369,13 +1315,9 @@ class NavigationAndPage {
             actions: [
               Row(children: [const Text('pinned'), Switch(onChanged: (newValue) => pinned.value = newValue, value: pinned.value)]),
             ],
-            flexibleSpace: const FlexibleSpaceBar(
-              background: FlutterLogo(),
-            ),
+            flexibleSpace: const FlexibleSpaceBar(background: FlutterLogo()),
           ),
-          const SliverToBoxAdapter(
-            child: Text('Try Scroll to see effect.'),
-          ),
+          const SliverToBoxAdapter(child: Text('Try Scroll to see effect.')),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {

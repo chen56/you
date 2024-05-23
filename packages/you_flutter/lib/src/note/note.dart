@@ -213,8 +213,12 @@ class CellView extends StatelessWidget {
                     icon: const Icon(size: 24, Icons.code),
                     onPressed: () async {
                       var callerParsed = await caller.tryParse(route.uri);
+
                       if (context.mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("caller; ${callerParsed.callerFrame}")));
+                        var s = ScaffoldMessenger.of(context);
+                        String codePath = path.normalize("lib/routes/${route.uri.path}/page.dart");
+                        String code = await DefaultAssetBundle.of(context).loadString(codePath);
+                        s.showSnackBar(SnackBar(content: Text("caller; ${callerParsed.callerFrame}: code:$code")));
                       }
                     }),
                 IconButton(icon: const Icon(size: 24, Icons.fullscreen), onPressed: () {}),
