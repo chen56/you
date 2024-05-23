@@ -8,26 +8,31 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/memory_file_system.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
-import 'package:path/path.dart' as path_;
+
 // ignore: implementation_imports, there is no other way i don t want to copy it .
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
+import 'package:meta/meta.dart';
+import 'package:path/path.dart' as path_;
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 
-class SourceCode {
+
+
+/// SourceCode : dart file
+///   - List<CodeBlock> manyBlocks; // block cut by Print.xxx
+@internal
+class SourceCodeTemp {
   final String content;
   final FunctionDeclaration? buildFunction;
   final List<({int lineNo, String content, int offset, int end})> lines;
   final List<(_AddCell element, _AddCell? next)> cellBlocks;
 
-  SourceCode._(this.content, this.buildFunction, this.cellBlocks) : lines = _lines(content).toList();
+  SourceCodeTemp._(this.content, this.buildFunction, this.cellBlocks) : lines = _lines(content).toList();
 
-  factory SourceCode.parse(String content) {
+  static SourceCodeTemp parse(String content) {
     final result = parseString(content: content, throwIfDiagnostics: true, featureSet: FeatureSet.latestLanguageVersion());
     assert(result.errors.isEmpty, "parse code error: ${result.errors}");
-    _CodeVisitor visitor = _CodeVisitor();
+    _CodeVisitorTemp visitor = _CodeVisitorTemp();
 
     var unit = result.unit;
     unit.visitChildren(visitor);
@@ -52,13 +57,62 @@ class SourceCode {
     }
     var addCellWithNextList = collections.combineNext(addCells);
 
-    return SourceCode._(content, visitor.buildFunction, addCellWithNextList.toList());
+    return SourceCodeTemp._(content, visitor.buildFunction, addCellWithNextList.toList());
   }
 
   //暂时无用，use case要改
   String findCellCodeByLineNo(int lineNo) {
     assert(lineNo <= lines.length);
 
+    AstNode? findDirectSon(Block baba, AstNode node) {
+      AstNode? parent = node.parent;
+      if (parent == null) {
+        return null;
+      }
+
+      if (parent == baba) {
+        return node;
+      } else {
+        return findDirectSon(baba, parent);
+      }
+    }
+
+    if (cellBlocks.isEmpty) {
+      if (buildFunction == null) {
+        return "";
+      } else {
+        var body = buildFunction!.functionExpression.body;
+        var result = content.substring(body.beginToken.end, body.endToken.offset);
+        return _trimBlankLine(result);
+      }
+    }
+
+    for (var addCellWithNext in cellBlocks) {
+      var (current, next) = addCellWithNext;
+      int beginLine = _offsetToLineNo(current.invocation.offset);
+      int endLine = _offsetToLineNo(current.invocation.end);
+      if (!(beginLine <= lineNo && lineNo <= endLine)) {
+        continue;
+      }
+      // 最后一个，就直接返回到父block结束位置
+      if (next == null) {
+        // 调用表达式addCell可能嵌套在某语句内，需要找到是block亲儿子的那条根语句。
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.end, current.belongTo.endToken.offset);
+        return _trimBlankLine(result);
+      }
+      // 查找下一个addCell与自己共同属于父块的那个语句
+      var brother = findDirectSon(current.belongTo, next.invocation);
+      if (brother == null) {
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.end, current.belongTo.endToken.offset);
+        return _trimBlankLine(result);
+      } else {
+        var directSon = findDirectSon(current.belongTo, current.invocation);
+        var result = content.substring(directSon!.endToken.end, brother.offset);
+        return _trimBlankLine(result);
+      }
+    }
     return "";
   }
 
@@ -92,11 +146,12 @@ class SourceCode {
   }
 }
 
-class _CodeVisitor extends GeneralizingAstVisitor {
+
+class _CodeVisitorTemp extends GeneralizingAstVisitor {
   FunctionDeclaration? buildFunction;
   List<MethodInvocation> cellBlocks = [];
 
-  _CodeVisitor();
+  _CodeVisitorTemp();
 
   @override
   visitFunctionDeclaration(FunctionDeclaration node) {
@@ -108,28 +163,27 @@ class _CodeVisitor extends GeneralizingAstVisitor {
 
   @override
   visitMethodInvocation(MethodInvocation node) {
-    if (<String>{"CellView"}.contains(node.methodName.name)) {
+    if (<String>{"addCell", "addCellWith"}.contains(node.methodName.name)) {
       cellBlocks.add(node);
     }
     return super.visitMethodInvocation(node);
   }
-  @override
-  visitExpression(Expression node) {
-    debugPrint("visitExpression : ${node.runtimeType}  ${node.staticType} $node");
-    return super.visitExpression(node);
-  }
+
+// @override
+// visitNode(AstNode node) {
+//   print("ssssss node:${node.runtimeType}: ${node.toSource()}");
+//   return super.visitNode(node);
+// }
 }
-
-
 
 /// 实验mock sdk 看能否用element模式而不是ast，未成功暂放
 @internal
-class CodeAnalyzer {
+class CodeAnalyzerTemp {
   final _resourceProvider = MemoryResourceProvider();
   late final AnalysisSession session;
   final ({String path, String content}) _defaultInitLib = (
-  path: "/lib/note.dart",
-  content: """
+    path: "/lib/note.dart",
+    content: """
 class Cell{
   void call(Object? content) {}
   Cell addCell() => Cell();
@@ -138,7 +192,7 @@ class Cell{
   """
   );
 
-  CodeAnalyzer() {
+  CodeAnalyzerTemp() {
     var libs = [_defaultInitLib];
     for (var lib in libs) {
       _newFile(lib.path, lib.content);

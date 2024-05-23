@@ -19,7 +19,7 @@ void build(BuildContext context, Cell print) {
   var all = Column(
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
-        CellView(title: "BottomAppBar", child: navigationAndPage.bottomAppBar()),
+        CellView(title: "BottomAppBar", builder: navigationAndPage.bottomAppBar, child: navigationAndPage.bottomAppBar(context)),
         CellView(title: "NavigationBar", child: navigationAndPage.navigationBar()),
         CellView(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
         CellView(title: "NavigationRail", child: navigationAndPage.navigationRail()),
@@ -1120,7 +1120,7 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget bottomAppBar() {
+  Widget bottomAppBar(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: 200,

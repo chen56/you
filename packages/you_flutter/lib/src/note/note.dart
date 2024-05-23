@@ -177,6 +177,7 @@ base class Cell {
 class CellView extends StatelessWidget {
   final String title;
   final Widget child;
+  final WidgetBuilder? builder;
   final double? width;
   final double? height;
   final BoxConstraints? constraints;
@@ -188,6 +189,7 @@ class CellView extends StatelessWidget {
     this.width,
     this.height,
     this.constraints,
+    this.builder,
     required this.child,
   }) : caller = CellCaller.track(); //
 
@@ -216,8 +218,8 @@ class CellView extends StatelessWidget {
 
                       if (context.mounted) {
                         var s = ScaffoldMessenger.of(context);
-                        String codePath = path.normalize("lib/routes/${route.uri.path}/page.dart");
-                        String code = await DefaultAssetBundle.of(context).loadString(codePath);
+                        String assetPath = path.normalize("lib/routes/${route.uri.path}/page.dart");
+                        String code = await DefaultAssetBundle.of(context).loadString(assetPath);
                         s.showSnackBar(SnackBar(content: Text("caller; ${callerParsed.callerFrame}: code:$code")));
                       }
                     }),

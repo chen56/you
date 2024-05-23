@@ -130,7 +130,7 @@ build()    { __run_all build;                                                }
 upgrade()  { __run_all upgrade;                                              }
 clean()    { __run_all clean;                                                }
 test()     { __run_all test;                                                 }
-gen()      { __run_all gen;                                                  }
+gen()      { __run_all gen.all;                                                  }
 publish()  { __run_all publish;                                              }
 dart_fix() { run dart fix $@;                                                }
 
