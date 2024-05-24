@@ -48,7 +48,7 @@ class CompilationUnitReader {
       if (t == null) continue;
 
       if (t is! InterfaceType) continue;
-      var findAnnoType = [t, ...t.allSupertypes].where((e) => e.getDisplayString(withNullability: true) == annoType).firstOrNull;
+      var findAnnoType = [t, ...t.allSupertypes].where((e) => e.getDisplayString() == annoType).firstOrNull;
       if (findAnnoType == null) continue;
       if (annoUrl != null) {
         var publicExportFrom = findPublicExportLib(findAnnoType, library);
@@ -104,7 +104,7 @@ class AnnotationReader {
   Reference? getFieldTypeAsRef(String name) {
     var type = getField(name)?.toTypeValue();
     if (type == null) return null;
-    var symbol = type.getDisplayString(withNullability: false);
+    var symbol = type.getDisplayString();
     if (symbol == "") return null;
     var publicExportFrom = findPublicExportLib(type, unit.library);
     var url = publicExportFrom?.identifier;
