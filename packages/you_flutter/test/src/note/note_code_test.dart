@@ -1,9 +1,9 @@
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:you_flutter/src/note/note.dart';
+import 'package:you_flutter/src/note/source_code.dart';
 
 void main() {
-  group("caller", () {
+  group("sourcecode", () {
     test('findCaller', () async {
       var trace = StackTrace.fromString("""
 package:you_flutter/src/note/note.dart 250:7                         CellCaller.caller
@@ -22,6 +22,52 @@ package:flutter/src/widgets/framework.dart 5487:15                   ComponentEl
       """);
       var caller = await CellCaller.parseCallerInternal(originTrace: trace, location: Uri.parse("/notes/cheatsheets/widgets"));
       check(caller.callerFrame.toString()).equals("package:flutter_web/routes/notes/cheatsheets/widgets/page.dart 10:9 in build");
+    });
+  });
+
+  group("caller", () {
+    test('findCaller', () async {
+      var content = """
+import 'package:flutter/widgets.dart';
+import 'package:you_flutter/note.dart';
+
+void build(BuildContext context, Cell print) {
+  TextExamples texts = TextExamples();
+  CellView(title: "texts.hello", builder: texts.hello);
+}
+
+class TextExamples {
+  Widget hello(BuildContext context) {
+    return Text("bar");
+  }
+}
+""";
+
+      SourceCode s = SourceCode.parse(content);
+      check(s.line(6)).equals('''  CellView(title: "texts.hello", builder: texts.hello);''');
+      check(s.line(11)).equals('''    return Text("bar");''');
+    });
+  });
+
+  group("CodeAnalyzer", () {
+    test('resolve', () async {
+      MemoryCodeAnalyzer analyzer = MemoryCodeAnalyzer();
+      var resolveUnitResult = await analyzer.getResolvedUnit(path: "/pkg/lib/routes/notes/page.dart", content: '''
+import 'package:flutter/widgets.dart';
+import 'package:you_flutter/note.dart';
+
+void build(BuildContext context, Cell print) {
+  TextExamples texts = TextExamples();
+  CellView(title: "texts.hello", builder: texts.hello);
+}
+
+class TextExamples {
+  Widget hello(BuildContext context) {
+    return Text("bar");
+  }
+}
+''');
+      check(resolveUnitResult);
     });
   });
 }

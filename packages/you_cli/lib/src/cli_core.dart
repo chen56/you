@@ -7,7 +7,7 @@ import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
-import 'package:you_cli/src/analyzer.dart';
+import 'package:_you_dart_internal/analyzer.dart';
 import 'package:_you_dart_internal/src/pubspec.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
@@ -73,7 +73,7 @@ class YouCli {
       return null;
     }
 
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
     return unit.topFunction(layoutFunctionName);
   }
 
@@ -81,37 +81,39 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
     return unit.topFunction(pageFunctionName);
   }
 
-  Future<PageAnnotationAnalyzer?> analyzePageAnno(File file) async {
+  Future<PageAnnotation?> analyzePageAnno(File file) async {
     if (!await file.exists()) {
       return null;
     }
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
-    return PageAnnotationAnalyzer.find(unit);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
+    return PageAnnotation.find(unit);
   }
 }
 
-class PageAnnotationAnalyzer extends AnnotationAnalyzer {
+class PageAnnotation {
   static const String annoName = "PageAnnotation";
 
-  PageAnnotationAnalyzer(super.annotation, super.dartObject, super.unit);
+  PageAnnotation(this.anno);
 
-  static PageAnnotationAnalyzer? find(UnitAnalyzer unit) {
+  AnnotationReader anno;
+
+  static PageAnnotation? find(CompilationUnitReader unit) {
     var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: annoName);
     if (anno == null) return null;
-    return PageAnnotationAnalyzer(anno.ast, anno.value, unit);
+    return PageAnnotation(AnnotationReader(anno.ast, anno.value, unit));
   }
 
-  String get label => getField("label")!.toStringValue()!;
+  String get label => anno.getField("label")!.toStringValue()!;
 
   Reference? get toType {
-    return getFieldTypeAsRef("toType");
+    return anno.getFieldTypeAsRef("toType");
   }
 
-  String get toSource => annotation.toSource();
+  String get toSource => anno.annotation.toSource();
 }
 
 class RouteNode {
@@ -137,7 +139,7 @@ class RouteNode {
   final FunctionElement? layout;
   final FunctionElement? page;
   late RouteNode _parent = this;
-  final PageAnnotationAnalyzer? pageAnno;
+  final PageAnnotation? pageAnno;
 
   static Future<RouteNode> from(YouCli cli, Directory dir) async {
     if (!dir.existsSync()) {

@@ -1,4 +1,4 @@
-import 'package:_you_dart_internal/core.dart';
+import 'package:_you_dart_internal/utils.dart';
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/analysis/results.dart';

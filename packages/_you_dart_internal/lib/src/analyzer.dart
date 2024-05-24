@@ -11,13 +11,13 @@ import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
 
-class UnitAnalyzer {
-  UnitAnalyzer(this.unit);
+class CompilationUnitReader {
+  CompilationUnitReader(this.unit);
 
-  static Future<UnitAnalyzer> resolve(AnalysisSession analysisSession, File file) async {
+  static Future<CompilationUnitReader> resolve(AnalysisSession analysisSession, File file) async {
     assert(await file.exists(), "file:$file");
     var result = (await analysisSession.getResolvedUnit(path.normalize(path.absolute(file.path))) as ResolvedUnitResult);
-    return UnitAnalyzer(result.unit);
+    return CompilationUnitReader(result.unit);
   }
 
   final CompilationUnit unit;
@@ -77,15 +77,15 @@ class UnitAnalyzer {
   }
 }
 
-class AnnotationAnalyzer {
-  AnnotationAnalyzer(this.annotation, this.dartObject, this.unit);
+class AnnotationReader {
+  AnnotationReader(this.annotation, this.dartObject, this.unit);
 
   // ignore: constant_identifier_names
   static const String SUPERCLASS_FIELD = "(super)";
 
   final Annotation annotation;
   final DartObject dartObject;
-  final UnitAnalyzer unit;
+  final CompilationUnitReader unit;
 
   DartObject? getField(String name) {
     return _getField(dartObject, name);

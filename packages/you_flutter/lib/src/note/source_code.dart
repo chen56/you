@@ -1,4 +1,4 @@
-import 'package:_you_dart_internal/core.dart';
+import 'package:_you_dart_internal/utils.dart';
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/analysis/results.dart';
@@ -8,11 +8,17 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/memory_file_system.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path_;
+
 // ignore: implementation_imports, there is no other way i don t want to copy it .
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
+import 'package:source_map_stack_trace/source_map_stack_trace.dart';
+import 'package:stack_trace/stack_trace.dart';
+import 'package:path/path.dart' as path;
+import 'package:source_maps/source_maps.dart' as source_map;
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 
@@ -113,6 +119,7 @@ class _CodeVisitor extends GeneralizingAstVisitor {
     }
     return super.visitMethodInvocation(node);
   }
+
   @override
   visitExpression(Expression node) {
     debugPrint("visitExpression : ${node.runtimeType}  ${node.staticType} $node");
@@ -120,16 +127,15 @@ class _CodeVisitor extends GeneralizingAstVisitor {
   }
 }
 
-
-
 /// 实验mock sdk 看能否用element模式而不是ast，未成功暂放
 @internal
-class CodeAnalyzer {
-  final _resourceProvider = MemoryResourceProvider();
+class MemoryCodeAnalyzer {
+  @visibleForTesting
+  final resourceProvider = MemoryResourceProvider();
   late final AnalysisSession session;
   final ({String path, String content}) _defaultInitLib = (
-  path: "/lib/note.dart",
-  content: """
+    path: "/pkg/lib/note.dart",
+    content: """
 class Cell{
   void call(Object? content) {}
   Cell addCell() => Cell();
@@ -138,48 +144,150 @@ class Cell{
   """
   );
 
-  CodeAnalyzer() {
+  MemoryCodeAnalyzer() {
     var libs = [_defaultInitLib];
     for (var lib in libs) {
       _newFile(lib.path, lib.content);
     }
+    _newFile("/pkg/pubspec.yaml", '''
+name: mock_lib
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+''');
 
     String sdkPath = '/sdk';
     createMockSdk(
-      resourceProvider: _resourceProvider,
+      resourceProvider: resourceProvider,
       root: _newFolder(sdkPath),
     );
 
     var collection = AnalysisContextCollection(
       includedPaths: libs.map((e) => e.path).toList(),
-      resourceProvider: _resourceProvider,
+      resourceProvider: resourceProvider,
       sdkPath: sdkPath,
     );
     session = collection.contexts[0].currentSession;
   }
 
   Future<ResolvedLibraryResult> getResolvedLibrary({required String path, required String content}) async {
-    var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
+    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
     return session.getResolvedLibrary(file.path) as ResolvedLibraryResult;
   }
 
   SomeParsedUnitResult getParsedUnit({required String path, required String content}) {
-    var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
+    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
     return session.getParsedUnit(file.path);
   }
 
-  Future<SomeResolvedUnitResult> getResolvedUnit({required String path, required String content}) {
-    var file = _newFile(_resourceProvider.convertPath(path_.absolute(path)), content);
-    return session.getResolvedUnit(file.path);
+  /// 测试页即简单的测试：500次 7s
+  Future<SomeResolvedUnitResult> getResolvedUnit({required String path, required String content}) async {
+    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
+    var result= await session.getResolvedUnit(file.path);
+    return result as ResolvedUnitResult;
+  }
+
+  static Iterable<Resource> toList(Resource resource) sync* {
+    if (resource is File) {
+      yield resource;
+    }
+    if (resource is Folder) {
+      for (var x in resource.getChildren()) {
+        yield* toList(x);
+      }
+    }
   }
 
   Folder _newFolder(String path) {
-    String convertedPath = _resourceProvider.convertPath(path);
-    return _resourceProvider.getFolder(convertedPath)..create();
+    String convertedPath = resourceProvider.convertPath(path);
+    return resourceProvider.getFolder(convertedPath)..create();
   }
 
   File _newFile(String path, String content) {
-    String convertedPath = _resourceProvider.convertPath(path);
-    return _resourceProvider.getFile(convertedPath)..writeAsStringSync(content);
+    String convertedPath = resourceProvider.convertPath(path);
+    return resourceProvider.getFile(convertedPath)..writeAsStringSync(content);
+  }
+}
+
+class CellCallerResult {
+  final StackTrace originTrace;
+  final StackTrace dartTrace;
+  final Frame callerFrame;
+
+  CellCallerResult({required this.originTrace, required this.dartTrace, required this.callerFrame});
+}
+
+class CellCaller {
+  late final StackTrace originTrace;
+  CellCallerResult? _result;
+
+  CellCaller.track() {
+    try {
+      throw Exception("track caller line");
+    } catch (e, trace) {
+      originTrace = trace;
+    }
+  }
+
+  @internal
+  Future<CellCallerResult> tryParse(Uri location) async {
+    if (_result != null) return _result!;
+    return parseCallerInternal(
+      originTrace: originTrace,
+      location: location,
+      jsSourceMapLoader: kIsWeb && !kDebugMode ? (uri) async => (await http.get(uri)).body : null,
+    );
+  }
+
+  @visibleForTesting
+  static Future<CellCallerResult> parseCallerInternal({
+    required StackTrace originTrace,
+    required Uri location,
+    Future<String> Function(Uri uri)? jsSourceMapLoader,
+  }) async {
+    Frame? findCallerLineInDartTrace(StackTrace stackTrace, Uri location) {
+      var trace = Trace.from(stackTrace);
+      // 找到堆栈中连续出现的本页面中最后一个Frame，就是哪一行实际触发了异常
+      String expected = path.normalize("${location.path}/page.dart");
+      Frame? found;
+      for (var frame in trace.frames) {
+        if (frame.uri.path.endsWith(expected)) {
+          // 找到后别急
+          found = frame;
+        } else {
+          //上一次如果是找到的，就是他，堆栈中连续出现的本页面中最后一个Frame
+          if (found != null) {
+            return found;
+          }
+        }
+      }
+      return found;
+    }
+
+    Future<Trace> jsTraceToDartTrace(StackTrace jsTrace) async {
+      Uri getJsMapUriFromJsTrace(StackTrace trace) {
+        var parsed = Trace.from(trace);
+        for (var frame in parsed.frames) {
+          // 如果遇到解析不了的行(可能发生在测试中或其他情况)
+          if (frame.line == null || frame.uri.path == "unparsed") {
+            continue;
+          }
+          if (path.basename(frame.uri.path) != "main.dart.js") {
+            return frame.uri.replace(path: "${frame.uri.path}.map");
+          }
+        }
+        throw AssertionError("current only support deferred import page, that uri looks like: http://localhost:8080/you/flutter_web/main.dart.js_24.part.js, but your stack: $trace  ");
+      }
+
+      Uri jsMapUri = getJsMapUriFromJsTrace(originTrace);
+      String sourceMap = await jsSourceMapLoader!(jsMapUri);
+      var dartTrace = mapStackTrace(source_map.parse(sourceMap), jsTrace);
+      return Trace.from(dartTrace);
+    }
+
+    // `jsSourceMapLoader != null` means: `kIsWeb && !kDebugMode`
+    var dartTrace = jsSourceMapLoader != null ? await jsTraceToDartTrace(originTrace) : Trace.from(originTrace);
+    return CellCallerResult(originTrace: originTrace, dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location)!);
   }
 }
