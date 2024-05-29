@@ -72,7 +72,7 @@ class YouCli {
       return null;
     }
 
-    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
     return unit.topFunction(layoutFunctionName);
   }
 
@@ -80,7 +80,7 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
     return unit.topFunction(pageFunctionName);
   }
 
@@ -88,7 +88,7 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
     return PageAnnotation.find(unit);
   }
 }

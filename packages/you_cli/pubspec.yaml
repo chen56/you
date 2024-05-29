@@ -26,6 +26,7 @@ dependencies:
 
   # you_*
   you_dart: ^0.0.6-dev.3
+  _you_dart_internal: ^0.0.6-dev.3
 dev_dependencies:
   lints: ^3.0.0
   test:

@@ -1,20 +1,12 @@
 import 'package:_you_dart_internal/utils.dart';
-import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/features.dart';
-import 'package:analyzer/dart/analysis/results.dart';
-import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
-import 'package:analyzer/file_system/file_system.dart';
-import 'package:analyzer/file_system/memory_file_system.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
-import 'package:path/path.dart' as path_;
 
-// ignore: implementation_imports, there is no other way i don t want to copy it .
-import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 import 'package:source_map_stack_trace/source_map_stack_trace.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:path/path.dart' as path;
@@ -124,89 +116,6 @@ class _CodeVisitor extends GeneralizingAstVisitor {
   visitExpression(Expression node) {
     debugPrint("visitExpression : ${node.runtimeType}  ${node.staticType} $node");
     return super.visitExpression(node);
-  }
-}
-
-/// 实验mock sdk 看能否用element模式而不是ast，未成功暂放
-@internal
-class MemoryCodeAnalyzer {
-  @visibleForTesting
-  final resourceProvider = MemoryResourceProvider();
-  late final AnalysisSession session;
-  final ({String path, String content}) _defaultInitLib = (
-    path: "/pkg/lib/note.dart",
-    content: """
-class Cell{
-  void call(Object? content) {}
-  Cell addCell() => Cell();
-  Cell addCellWith() => Cell();
-}
-  """
-  );
-
-  MemoryCodeAnalyzer() {
-    var libs = [_defaultInitLib];
-    for (var lib in libs) {
-      _newFile(lib.path, lib.content);
-    }
-    _newFile("/pkg/pubspec.yaml", '''
-name: mock_lib
-version: 0.1.0
-
-environment:
-  sdk: '>=3.4.0 <4.0.0'
-''');
-
-    String sdkPath = '/sdk';
-    createMockSdk(
-      resourceProvider: resourceProvider,
-      root: _newFolder(sdkPath),
-    );
-
-    var collection = AnalysisContextCollection(
-      includedPaths: libs.map((e) => e.path).toList(),
-      resourceProvider: resourceProvider,
-      sdkPath: sdkPath,
-    );
-    session = collection.contexts[0].currentSession;
-  }
-
-  Future<ResolvedLibraryResult> getResolvedLibrary({required String path, required String content}) async {
-    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
-    return session.getResolvedLibrary(file.path) as ResolvedLibraryResult;
-  }
-
-  SomeParsedUnitResult getParsedUnit({required String path, required String content}) {
-    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
-    return session.getParsedUnit(file.path);
-  }
-
-  /// 测试页即简单的测试：500次 7s
-  Future<SomeResolvedUnitResult> getResolvedUnit({required String path, required String content}) async {
-    var file = _newFile(resourceProvider.convertPath(path_.absolute(path)), content);
-    var result= await session.getResolvedUnit(file.path);
-    return result as ResolvedUnitResult;
-  }
-
-  static Iterable<Resource> toList(Resource resource) sync* {
-    if (resource is File) {
-      yield resource;
-    }
-    if (resource is Folder) {
-      for (var x in resource.getChildren()) {
-        yield* toList(x);
-      }
-    }
-  }
-
-  Folder _newFolder(String path) {
-    String convertedPath = resourceProvider.convertPath(path);
-    return resourceProvider.getFolder(convertedPath)..create();
-  }
-
-  File _newFile(String path, String content) {
-    String convertedPath = resourceProvider.convertPath(path);
-    return resourceProvider.getFile(convertedPath)..writeAsStringSync(content);
   }
 }
 
