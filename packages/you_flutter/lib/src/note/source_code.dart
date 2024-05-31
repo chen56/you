@@ -1,16 +1,25 @@
+import 'package:_you_dart_internal/analyzer.dart';
 import 'package:_you_dart_internal/utils.dart';
+import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/features.dart';
+import 'package:analyzer/dart/analysis/results.dart';
+import 'package:analyzer/dart/analysis/session.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
+import 'package:analyzer/file_system/file_system.dart';
+import 'package:analyzer/file_system/memory_file_system.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
 import 'package:source_map_stack_trace/source_map_stack_trace.dart';
 import 'package:stack_trace/stack_trace.dart';
-import 'package:path/path.dart' as path;
+import 'package:path/path.dart' as path_;
 import 'package:source_maps/source_maps.dart' as source_map;
+
+// ignore: implementation_imports, there is no other way i don t want to copy it .
+import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 
@@ -158,7 +167,7 @@ class CellCaller {
     Frame? findCallerLineInDartTrace(StackTrace stackTrace, Uri location) {
       var trace = Trace.from(stackTrace);
       // 找到堆栈中连续出现的本页面中最后一个Frame，就是哪一行实际触发了异常
-      String expected = path.normalize("${location.path}/page.dart");
+      String expected = path_.normalize("${location.path}/page.dart");
       Frame? found;
       for (var frame in trace.frames) {
         if (frame.uri.path.endsWith(expected)) {
@@ -182,7 +191,7 @@ class CellCaller {
           if (frame.line == null || frame.uri.path == "unparsed") {
             continue;
           }
-          if (path.basename(frame.uri.path) != "main.dart.js") {
+          if (path_.basename(frame.uri.path) != "main.dart.js") {
             return frame.uri.replace(path: "${frame.uri.path}.map");
           }
         }
@@ -198,5 +207,72 @@ class CellCaller {
     // `jsSourceMapLoader != null` means: `kIsWeb && !kDebugMode`
     var dartTrace = jsSourceMapLoader != null ? await jsTraceToDartTrace(originTrace) : Trace.from(originTrace);
     return CellCallerResult(originTrace: originTrace, dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location)!);
+  }
+}
+
+/// 内存dart sdk, 用于解析要求不高的场景
+@internal
+class NoteAnalyzer {
+  NoteAnalyzer()
+      : resourceProvider = MemoryResourceProvider(
+            context: path_.Context(
+          style: path_.Style.posix,
+          current: "/stub",
+        )) {
+    _ensureFile("/stub/pubspec.yaml", '''
+name: stub
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+''');
+
+    File initLibFile = _ensureFile("/stub/lib/__init__.dart", """
+var v="first file use by create AnalysisSession";
+""");
+
+    String sdkPath = '/sdk';
+    createMockSdk(
+      resourceProvider: this.resourceProvider,
+      root: _ensureFolder(sdkPath),
+    );
+
+    var collection = AnalysisContextCollection(
+      includedPaths: [initLibFile.path],
+      resourceProvider: this.resourceProvider,
+      sdkPath: sdkPath,
+    );
+    session = collection.contexts[0].currentSession;
+  }
+
+  final MemoryResourceProvider resourceProvider;
+
+  late final AnalysisSession session;
+
+  /// 测试页即简单的测试：500次 7s
+  Future<CompilationUnitReader> getResolvedLibrary(String file) async {
+    var result = (await session.getResolvedUnit(path_.normalize(path_.absolute(file))) as ResolvedUnitResult);
+    return CompilationUnitReader(result.unit);
+  }
+
+  // static Iterable<file_system.Resource> toList(file_system.Resource resource) sync* {
+  //   if (resource is file_system.File) {
+  //     yield resource;
+  //   }
+  //   if (resource is file_system.Folder) {
+  //     for (var x in resource.getChildren()) {
+  //       yield* toList(x);
+  //     }
+  //   }
+  // }
+
+  Folder _ensureFolder(String path) {
+    String convertedPath = resourceProvider.convertPath(path);
+    return resourceProvider.getFolder(convertedPath)..create();
+  }
+
+  File _ensureFile(String path, String content) {
+    String convertedPath = resourceProvider.convertPath(path);
+    return resourceProvider.getFile(convertedPath)..writeAsStringSync(content);
   }
 }

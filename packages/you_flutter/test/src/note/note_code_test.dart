@@ -1,4 +1,3 @@
-import 'package:_you_dart_internal/analyzer.dart';
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:you_flutter/src/note/source_code.dart';
@@ -52,8 +51,8 @@ class TextExamples {
 
   group("CodeAnalyzer", () {
     test('resolve', () async {
-      MemoryFsAnalyzer analyzer = MemoryFsAnalyzer();
-      var r = await analyzer.getResolvedLibrary(path: "/pkg/lib/routes/notes/page.dart", content: '''
+      NoteAnalyzer analyzer = NoteAnalyzer();
+      analyzer.resourceProvider.getFile("/stub/lib/routes/notes/page.dart").writeAsStringSync('''
 import 'package:flutter/widgets.dart';
 import 'package:you_flutter/note.dart';
 
@@ -68,6 +67,7 @@ class TextExamples {
   }
 }
 ''');
+      var r = await analyzer.getResolvedLibrary("/stub/lib/routes/notes/page.dart");
       check(r.unit).isNotNull();
     });
   });
