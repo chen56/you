@@ -217,41 +217,72 @@ class NoteAnalyzer {
       : resourceProvider = MemoryResourceProvider(
             context: path_.Context(
           style: path_.Style.posix,
-          current: "/stub",
+          current: "/",
         )) {
-    _ensureFile("/stub/pubspec.yaml", '''
-name: stub
+    projectDir = resourceProvider.getFolder("/app");
+    projectDir.getChildAssumingFile("pubspec.yaml").writeAsStringSync('''
+name: stub_app
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  you_flutter: ^0.1.0
+
+dependency_overrides:
+  you_flutter:
+    path: ../you_flutter
+''');
+
+    File stubLib = projectDir.getChildAssumingFile("lib/__stub__.dart")..writeAsStringSync('''
+var v="stub file use by create AnalysisSession";
+''');
+
+    resourceProvider.getFile("/you_flutter/pubspec.yaml").writeAsStringSync('''
+name: you_flutter
 version: 0.1.0
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
 ''');
+    resourceProvider.getFile("/you_flutter/lib/note.dart").writeAsStringSync('''
+import 'package:flutter/material.dart';
 
-    File initLibFile = _ensureFile("/stub/lib/__init__.dart", """
-var v="first file use by create AnalysisSession";
-""");
+typedef WidgetBuilder = Widget Function(BuildContext context);
+
+class CellView extends StatelessWidget {
+  final String title;
+  final WidgetBuilder? builder;
+
+  CellView({
+    required this.title,
+    this.builder,
+  });
+''');
 
     String sdkPath = '/sdk';
     createMockSdk(
-      resourceProvider: this.resourceProvider,
+      resourceProvider: resourceProvider,
       root: _ensureFolder(sdkPath),
     );
 
     var collection = AnalysisContextCollection(
-      includedPaths: [initLibFile.path],
-      resourceProvider: this.resourceProvider,
+      includedPaths: [stubLib.path],
+      resourceProvider: resourceProvider,
       sdkPath: sdkPath,
     );
     session = collection.contexts[0].currentSession;
   }
 
   final MemoryResourceProvider resourceProvider;
-
+  late final Folder projectDir;
   late final AnalysisSession session;
 
   /// 测试页即简单的测试：500次 7s
   Future<CompilationUnitReader> getResolvedLibrary(String file) async {
     var result = (await session.getResolvedUnit(path_.normalize(path_.absolute(file))) as ResolvedUnitResult);
+    // debugPrint("ignore getResolvedLibrary result.errors:${result.errors}");
     return CompilationUnitReader(result.unit);
   }
 

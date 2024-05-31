@@ -52,13 +52,14 @@ class TextExamples {
   group("CodeAnalyzer", () {
     test('resolve', () async {
       NoteAnalyzer analyzer = NoteAnalyzer();
-      analyzer.resourceProvider.getFile("/stub/lib/routes/notes/page.dart").writeAsStringSync('''
+      analyzer.resourceProvider.getFile("/app/lib/routes/notes/page.dart").writeAsStringSync('''
 import 'package:flutter/widgets.dart';
 import 'package:you_flutter/note.dart';
 
 void build(BuildContext context, Cell print) {
   TextExamples texts = TextExamples();
   CellView(title: "texts.hello", builder: texts.hello);
+  CellView(title: "texts.hello", child: TextExamples());
 }
 
 class TextExamples {
@@ -67,7 +68,7 @@ class TextExamples {
   }
 }
 ''');
-      var r = await analyzer.getResolvedLibrary("/stub/lib/routes/notes/page.dart");
+      var r = await analyzer.getResolvedLibrary("/app/lib/routes/notes/page.dart");
       check(r.unit).isNotNull();
     });
   });

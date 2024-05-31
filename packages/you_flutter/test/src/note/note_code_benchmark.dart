@@ -5,7 +5,7 @@ void main() {
   group("CodeAnalyzer", () {
     test('resolve', () async {
       NoteAnalyzer analyzer = NoteAnalyzer();
-      analyzer.resourceProvider.getFile("/stub/lib/routes/notes/page.dart").writeAsStringSync('''
+      analyzer.resourceProvider.getFile("/app/lib/routes/notes/page.dart").writeAsStringSync('''
 import 'package:flutter/widgets.dart';
 import 'package:you_flutter/note.dart';
 
@@ -21,7 +21,7 @@ class TextExamples {
 }
 ''');
       for (int i = 0; i < 500; i++) {
-        var resolveUnitResult = await analyzer.getResolvedLibrary("/stub/lib/routes/notes/page.dart");
+        var resolveUnitResult = await analyzer.getResolvedLibrary("/app/lib/routes/notes/page.dart");
 
         resolveUnitResult;
         // debugPrint("$resolveUnitResult");
