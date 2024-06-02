@@ -1,3 +1,4 @@
+import 'package:analyzer/dart/ast/ast.dart';
 import 'package:checks/checks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:you_flutter/src/note/source_code.dart';
@@ -55,10 +56,12 @@ class TextExamples {
       analyzer.resourceProvider.getFile("/app/lib/routes/notes/page.dart").writeAsStringSync('''
 import 'package:flutter/widgets.dart';
 import 'package:you_flutter/note.dart';
+import 'package:app/routes/notes/_example.dart';
 
 void build(BuildContext context, Cell print) {
   TextExamples texts = TextExamples();
   CellView(title: "texts.hello", builder: texts.hello);
+  CellView(title: "texts.hello", child: texts.hello());
   CellView(title: "texts.hello", child: TextExamples());
 }
 
@@ -68,8 +71,44 @@ class TextExamples {
   }
 }
 ''');
+      analyzer.resourceProvider.getFile("/app/lib/routes/notes/_example.dart").writeAsStringSync('''
+import 'package:flutter/widgets.dart';
+
+class TextExamples extends StatelessWidget {
+  Widget hello(BuildContext context) {
+    return Text("bar");
+  }
+}
+''');
       var r = await analyzer.getResolvedLibrary("/app/lib/routes/notes/page.dart");
       check(r.unit).isNotNull();
+    });
+
+    test('resolve_class_in_file', () async {
+      NoteAnalyzer analyzer = NoteAnalyzer();
+      analyzer.resourceProvider.getFile("/app/lib/routes/notes/page.dart").writeAsStringSync('''
+import 'package:flutter/widgets.dart';
+import 'package:you_flutter/note.dart';
+import '_example.dart';
+
+void build(BuildContext context, Cell print) {
+  print(CellView(title: "texts.hello", child: TextExample()));
+}
+''');
+      analyzer.resourceProvider.getFile("/app/lib/routes/notes/_example.dart").writeAsStringSync('''
+import 'package:flutter/widgets.dart';
+
+class TextExample extends StatelessWidget {
+  Widget hello(BuildContext context) {
+    return Text("bar");
+  }
+}
+''');
+      var r = await analyzer.getResolvedLibrary("/app/lib/routes/notes/page.dart");
+      check(r.unit).isNotNull();
+      var build = r.unit.declarations.first as FunctionDeclaration;
+      var body = build.functionExpression.body as BlockFunctionBody;
+      var st =  body.block.statements.first ;
     });
   });
 }

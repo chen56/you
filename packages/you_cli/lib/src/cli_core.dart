@@ -145,7 +145,11 @@ class RouteNode {
       return RouteNode(cli: cli, dir: dir, children: []);
     }
 
-    var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(cli, e)));
+    var children = await Future.wait(dir
+        .listSync(recursive: false)
+        //
+        .whereType<Directory>()
+        .map((e) async => await from(cli, e)));
     var layoutFunction = await cli.analyzeLayout(dir.childFile(layoutDart));
     return RouteNode(
       cli: cli,
@@ -177,7 +181,7 @@ class RouteNode {
   }
 
   String get assetPath {
-    if(isRoot){
+    if (isRoot) {
       return "lib/routes/";
     }
     return "lib/routes$routePath/";

@@ -53,7 +53,6 @@ mixin AssetsMixin {
   final String lib_routes_notes_pure_dart_dart3_simple_interface_class_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/dart3/simple_interface_class.dart';
   final String lib_routes_notes_pure_dart_async_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/async/page.dart';
   final String lib_routes_notes_pure_dart_safe_interface_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/safe_interface/page.dart';
-  final String lib_routes_notes_pure_dart_execption_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/execption/page.dart';
   final String lib_routes_notes_pure_dart_serialization_json_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/serialization_json/page.dart';
   final String lib_routes_notes_pure_dart_analyzer_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/analyzer/page.dart';
   final String lib_routes_notes_pure_dart_analyzer_analyzer_element_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/analyzer/analyzer_element.dart';
@@ -116,6 +115,9 @@ mixin AssetsMixin {
   final String lib_routes_notes_Improve_app_RepaintBoundary_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/Improve_app/RepaintBoundary/page.dart';
   final String lib_routes_notes_Improve_app_event_listener_lifeycle_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/Improve_app/event&listener&lifeycle/page.dart';
   final String lib_routes_notes_Improve_app_i18n_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/Improve_app/i18n/page.dart';
+  final String lib_routes_notes_pure_dart_exception_page_dart = '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/pure_dart/exception/page.dart';
+  final String lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart =
+      '/Users/chen/git/chen56/you/notes/flutter_web/lib/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart';
 }
 
 class Assets with AssetsMixin {}

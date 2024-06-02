@@ -170,7 +170,7 @@ base class Cell {
   }
 }
 
-class CellView extends StatelessWidget {
+class FlutterExample extends StatelessWidget {
   final String title;
   final Widget child;
   final WidgetBuilder? builder;
@@ -179,7 +179,7 @@ class CellView extends StatelessWidget {
   final BoxConstraints? constraints;
   final CellCaller caller;
 
-  CellView({
+  FlutterExample({
     super.key,
     required this.title,
     this.width,

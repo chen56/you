@@ -28,8 +28,8 @@ import 'package:flutter_web/routes/notes/media&assets&file/assets/page.dart' as 
 import 'package:flutter_web/routes/notes/pure_dart/dart3/page.dart' as _dart3_page;
 import 'package:flutter_web/routes/notes/pure_dart/async/page.dart' as _async_page;
 import 'package:flutter_web/routes/notes/pure_dart/safe_interface/page.dart' as _safe_interface_page;
-import 'package:flutter_web/routes/notes/pure_dart/execption/page.dart' as _execption_page;
 import 'package:flutter_web/routes/notes/pure_dart/serialization_json/page.dart' as _serialization_json_page;
+import 'package:flutter_web/routes/notes/pure_dart/exception/page.dart' as _exception_page;
 import 'package:flutter_web/routes/notes/pure_dart/analyzer/page.dart' as _analyzer_page;
 import 'package:flutter_web/routes/notes/dev/host_mirror/page.dart' as _host_mirror_page;
 import 'package:flutter_web/routes/notes/dev/macos_config/page.dart' as _macos_config_page;
@@ -86,8 +86,8 @@ mixin RoutesMixin {
         ToNote('dart3', page: _dart3_page.build),
         ToNote('async', page: _async_page.build),
         ToNote('safe_interface', page: _safe_interface_page.build),
-        ToNote('execption', page: _execption_page.build),
         ToNote('serialization_json', page: _serialization_json_page.build),
+        ToNote('exception', page: _exception_page.build),
         ToNote('analyzer', page: _analyzer_page.build),
       ]),
       ToNote('dev', children: [
@@ -100,7 +100,9 @@ mixin RoutesMixin {
       ]),
       ToNote('cheatsheets', children: [
         ToNote('color_roles', page: _color_roles_page.build, pageAnno: _Pages.notes_cheatsheets_color_roles),
-        ToNote('widgets', page: _widgets_page.build, pageAnno: _Pages.notes_cheatsheets_widgets),
+        ToNote('widgets', page: _widgets_page.build, pageAnno: _Pages.notes_cheatsheets_widgets, children: [
+          ToNote('_examples'),
+        ]),
       ]),
       ToNote('thinking_in_ui', children: [
         ToNote('readable_html_vs_dart', page: _readable_html_vs_dart_page.build),
@@ -158,8 +160,8 @@ mixin RoutesMixin {
   late final ToNote routes_notes_pure_dart_dart3 = (root.find('/notes/pure_dart/dart3')! as ToNote);
   late final ToNote routes_notes_pure_dart_async = (root.find('/notes/pure_dart/async')! as ToNote);
   late final ToNote routes_notes_pure_dart_safe_interface = (root.find('/notes/pure_dart/safe_interface')! as ToNote);
-  late final ToNote routes_notes_pure_dart_execption = (root.find('/notes/pure_dart/execption')! as ToNote);
   late final ToNote routes_notes_pure_dart_serialization_json = (root.find('/notes/pure_dart/serialization_json')! as ToNote);
+  late final ToNote routes_notes_pure_dart_exception = (root.find('/notes/pure_dart/exception')! as ToNote);
   late final ToNote routes_notes_pure_dart_analyzer = (root.find('/notes/pure_dart/analyzer')! as ToNote);
   late final ToNote routes_notes_dev_host_mirror = (root.find('/notes/dev/host_mirror')! as ToNote);
   late final ToNote routes_notes_dev_macos_config = (root.find('/notes/dev/macos_config')! as ToNote);

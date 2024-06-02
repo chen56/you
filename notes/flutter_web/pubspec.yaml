@@ -93,7 +93,6 @@ flutter:
     - lib/routes/notes/pure_dart/dart3/
     - lib/routes/notes/pure_dart/async/
     - lib/routes/notes/pure_dart/safe_interface/
-    - lib/routes/notes/pure_dart/execption/
     - lib/routes/notes/pure_dart/serialization_json/
     - lib/routes/notes/pure_dart/analyzer/
     - lib/routes/notes/dev/
@@ -136,6 +135,8 @@ flutter:
     - lib/routes/notes/Improve_app/RepaintBoundary/
     - lib/routes/notes/Improve_app/event&listener&lifeycle/
     - lib/routes/notes/Improve_app/i18n/
+    - lib/routes/notes/pure_dart/exception/
+    - lib/routes/notes/cheatsheets/widgets/_examples/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
