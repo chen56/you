@@ -100,9 +100,7 @@ mixin RoutesMixin {
       ]),
       ToNote('cheatsheets', children: [
         ToNote('color_roles', page: _color_roles_page.build, pageAnno: _Pages.notes_cheatsheets_color_roles),
-        ToNote('widgets', page: _widgets_page.build, pageAnno: _Pages.notes_cheatsheets_widgets, children: [
-          ToNote('_examples'),
-        ]),
+        ToNote('widgets', page: _widgets_page.build, pageAnno: _Pages.notes_cheatsheets_widgets, children: []),
       ]),
       ToNote('thinking_in_ui', children: [
         ToNote('readable_html_vs_dart', page: _readable_html_vs_dart_page.build),

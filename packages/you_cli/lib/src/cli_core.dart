@@ -23,7 +23,7 @@ class YouCli {
   final Directory path_project;
   final FileSystem fs;
   Pubspec? _pubspec;
-  RouteNode? _rootRoute;
+  RouteDir? _rootRoute;
   AnalysisSession? _session;
 
   Directory get path_lib => path_project.childDirectory("lib");
@@ -65,7 +65,7 @@ class YouCli {
     ).contexts[0].currentSession;
   }
 
-  Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, path_routes);
+  Future<RouteDir> get rootRoute async => _rootRoute ??= await RouteDir.from(this, path_routes);
 
   Future<FunctionElement?> analyzeLayout(File file) async {
     if (!await file.exists()) {
@@ -115,8 +115,8 @@ class PageAnnotation {
   String get toSource => anno.annotation.toSource();
 }
 
-class RouteNode {
-  RouteNode({
+class RouteDir {
+  RouteDir({
     required this.dir,
     required this.children,
     this.layout,
@@ -133,16 +133,16 @@ class RouteNode {
   static const String layoutDart = "layout.dart";
 
   final YouCli cli;
-  final List<RouteNode> children;
+  final List<RouteDir> children;
   final Directory dir;
   final FunctionElement? layout;
   final FunctionElement? page;
-  late RouteNode _parent = this;
+  late RouteDir _parent = this;
   final PageAnnotation? pageAnno;
 
-  static Future<RouteNode> from(YouCli cli, Directory dir) async {
+  static Future<RouteDir> from(YouCli cli, Directory dir) async {
     if (!dir.existsSync()) {
-      return RouteNode(cli: cli, dir: dir, children: []);
+      return RouteDir(cli: cli, dir: dir, children: []);
     }
 
     var children = await Future.wait(dir
@@ -151,7 +151,7 @@ class RouteNode {
         .whereType<Directory>()
         .map((e) async => await from(cli, e)));
     var layoutFunction = await cli.analyzeLayout(dir.childFile(layoutDart));
-    return RouteNode(
+    return RouteDir(
       cli: cli,
       dir: dir,
       page: await cli.analyzePage(dir.childFile(pageDart)),
@@ -161,11 +161,13 @@ class RouteNode {
     );
   }
 
+  bool get isRoute => !dir.basename.startsWith("_");
+
   get hasPage => page != null;
 
   int get level => isRoot ? 0 : _parent.level + 1;
 
-  RouteNode get root => isRoot ? this : _parent.root;
+  RouteDir get root => isRoot ? this : _parent.root;
 
   bool get isRoot => _parent == this;
 
@@ -199,16 +201,16 @@ class RouteNode {
   /// lib/routes/1.a/b/page.dart  ---> a_b
   String get flatName => YouCli.pathToFlat(routePath);
 
-  List<RouteNode> toList({
+  List<RouteDir> toList({
     bool includeThis = true,
-    bool Function(RouteNode path)? where,
-    Comparator<RouteNode>? sortBy,
+    bool Function(RouteDir path)? where,
+    Comparator<RouteDir>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<RouteNode> sorted = List.from(children);
+    List<RouteDir> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -223,7 +225,7 @@ class RouteNode {
     return dir.toString();
   }
 
-  RouteNode? findLayoutSync() {
+  RouteDir? findLayoutSync() {
     if (path_layout_dart.existsSync()) {
       return this;
     }

@@ -140,7 +140,7 @@ class Cmd_gen_routes_g_dart extends Command {
   //   }
   // }
 
-  Expression _genRootRouteExpression(RouteNode node) {
+  Expression _genRootRouteExpression(RouteDir node) {
     var builderType = node.findToType();
     return builderType.newInstance(
       [literalString(node.dir.basename)],
@@ -148,7 +148,7 @@ class Cmd_gen_routes_g_dart extends Command {
         if (node.path_page_dart.existsSync()) "page": refer(YouCli.pageFunctionName, node.pagePackageUrl),
         if (node.pageAnno != null) "pageAnno": refer("_Pages").property(node.flatName),
         if (node.path_layout_dart.existsSync()) "layout": refer(YouCli.layoutFunctionName, node.layoutPackageUrl),
-        if (node.children.isNotEmpty) "children": literalList(node.children.map((e) => _genRootRouteExpression(e))),
+        if (node.children.isNotEmpty) "children": literalList(node.children.where((e)=>e.isRoute).map((e) => _genRootRouteExpression(e))),
       },
     );
   }
@@ -164,7 +164,7 @@ class Cmd_gen_routes_g_dart extends Command {
     }
 
     var rootRoute = await cli.rootRoute;
-    Iterable<RouteNode> routes = rootRoute.toList();
+    Iterable<RouteDir> routes = rootRoute.toList();
 
     Library all = Library((b) => b
       ..generatedByComment = """
