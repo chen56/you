@@ -1,5 +1,5 @@
 @experimental
-library note;
+library ;
 
 import 'package:meta/meta.dart';
 

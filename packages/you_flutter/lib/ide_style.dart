@@ -1,5 +1,5 @@
 @experimental
-library ide_style;
+library ;
 
 import 'package:meta/meta.dart';
 

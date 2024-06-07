@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/assets.g.dart';
 import 'package:flutter_web/routes.g.dart';
 import 'package:you_flutter/better_ui.dart';
 import 'package:you_flutter/router.dart';
@@ -6,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:you_flutter/state.dart';
 
 final routes = Routes();
-
+final assets = Assets();
 class App extends StatefulWidget {
   final YouRouter router;
   final SharedPreferences sharedPreferences;

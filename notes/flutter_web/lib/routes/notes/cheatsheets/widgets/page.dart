@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
@@ -38,7 +39,7 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Container", child: layoutCore.containerCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
-        FlutterExample(title: "ButtonStyleButton", child: const Input_ButtonStyleButtonExample()),
+        FlutterExample(title: "ButtonStyleButton",source:assets.lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
         FlutterExample(title: "FloatingActionButton", child: buttonAndInput.floatingActionButtonCell()),
         FlutterExample(title: "IconButton", child: buttonAndInput.iconButtonCell()),
         FlutterExample(title: "SearchAnchor", child: buttonAndInput.search()),

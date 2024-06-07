@@ -1,4 +1,3 @@
-
 import 'package:code_builder/code_builder.dart';
 import 'package:path/path.dart' as path;
 import 'package:you_cli/src/urils.dart';
@@ -7,7 +6,7 @@ import 'package:you_cli/src/urils.dart';
 class CleanPrefixedAllocator implements Allocator {
   final _importWithSymbols = <String, Set<String>>{};
   final _importsUrlAndAs = <String, String?>{};
-  final _asKeys = <String,int>{};
+  final _asKeys = <String, int>{};
 
   @override
   String allocate(Reference reference) {
@@ -34,14 +33,14 @@ class CleanPrefixedAllocator implements Allocator {
         String as = _importsUrlAndAs.putIfAbsent(url, () {
           Uri uri = Uri.parse(url);
           String filename = path.basename(uri.path).replaceFirst(".dart", "");
-          var dirname=path.basename(path.dirname(uri.path));
+          var dirname = path.basename(path.dirname(uri.path));
           var as = paths.pathPartToVar("_${dirname}_$filename");
-          int times = _asKeys.putIfAbsent(as, ()=>0);
-          if(times==0){
-            _asKeys[as]=++times;
+          int times = _asKeys.putIfAbsent(as, () => 0);
+          if (times == 0) {
+            _asKeys[as] = ++times;
             return as;
-          }else{
-            _asKeys[as]=++times;
+          } else {
+            _asKeys[as] = ++times;
             return "$as$times";
           }
         })!;
@@ -58,7 +57,7 @@ class CleanPrefixedAllocator implements Allocator {
   @override
   Iterable<Directive> get imports => _importsUrlAndAs.keys.map(
         (u) => Directive.import(u, as: _importsUrlAndAs[u]),
-  );
+      );
 }
 
 /// copy from code_builder source code
@@ -70,7 +69,11 @@ class CleanPrefixedAllocator implements Allocator {
 class DartEmitterForCli extends DartEmitter {
   bool _withInConstExpression = false;
 
-  DartEmitterForCli({super.allocator, super.orderDirectives, super.useNullSafetySyntax});
+  DartEmitterForCli({Allocator? allocator, super.orderDirectives})
+      : super(
+          allocator: allocator ?? Allocator.simplePrefixing(),
+          useNullSafetySyntax: true,
+        );
 
   @override
   StringSink visitInvokeExpression(InvokeExpression expression, [StringSink? output]) {
@@ -113,9 +116,9 @@ class DartEmitterForCli extends DartEmitter {
 
   @override
   StringSink visitLiteralListExpression(
-      LiteralListExpression expression, [
-        StringSink? output,
-      ]) {
+    LiteralListExpression expression, [
+    StringSink? output,
+  ]) {
     final out = output ??= StringBuffer();
 
     return _writeConstExpression(output, expression.isConst, () {
@@ -130,12 +133,14 @@ class DartEmitterForCli extends DartEmitter {
       });
       // ***【you_cli】: only change this code:***
       // old: if (expression.values.length > 1) {
-      /*new*/  if (expression.values.isNotEmpty) {
+      /*new*/
+      if (expression.values.isNotEmpty) {
         out.write(', ');
       }
       return out..write(']');
     });
   }
+
   void _acceptLiteral(Object? literalOrSpec, StringSink output) {
     if (literalOrSpec is Spec) {
       literalOrSpec.accept(this, output);
@@ -257,9 +262,9 @@ class DartEmitterForCli extends DartEmitter {
   /// are already within a constant expression.
   @override
   void startConstCode(
-      bool isConst,
-      Null Function() visit,
-      ) {
+    bool isConst,
+    Null Function() visit,
+  ) {
     final previousConstContext = _withInConstExpression;
     if (isConst) {
       _withInConstExpression = true;
@@ -273,10 +278,10 @@ class DartEmitterForCli extends DartEmitter {
   /// is `true` and the invocation is not nested under other invocations where
   /// [isConst] is true.
   StringSink _writeConstExpression(
-      StringSink sink,
-      bool isConst,
-      StringSink Function() visitExpression,
-      ) {
+    StringSink sink,
+    bool isConst,
+    StringSink Function() visitExpression,
+  ) {
     final previousConstContext = _withInConstExpression;
     if (isConst) {
       if (!_withInConstExpression) {
@@ -292,18 +297,17 @@ class DartEmitterForCli extends DartEmitter {
   }
 }
 
-
 /// Helper method improving on [StringSink.writeAll].
 ///
 /// For every `Spec` in [elements], executing [visit].
 ///
 /// If [elements] is at least 2 elements, inserts [separator] delimiting them.
 StringSink visitAll<T>(
-    Iterable<T> elements,
-    StringSink output,
-    void Function(T) visit, [
-      String separator = ', ',
-    ]) {
+  Iterable<T> elements,
+  StringSink output,
+  void Function(T) visit, [
+  String separator = ', ',
+]) {
   // Basically, this whole method is an improvement on
   //   output.writeAll(specs.map((s) => s.accept(visitor));
   //

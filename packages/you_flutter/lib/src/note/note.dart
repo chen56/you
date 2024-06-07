@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:meta/meta_meta.dart';
 import 'package:path/path.dart' as path;
+import 'package:you_flutter/asset.dart';
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/src/note/contents/contents.dart';
 import 'package:you_flutter/src/note/source_code.dart';
@@ -178,6 +179,7 @@ class FlutterExample extends StatelessWidget {
   final double? height;
   final BoxConstraints? constraints;
   final CellCaller caller;
+  final Asset? source;
 
   FlutterExample({
     super.key,
@@ -187,6 +189,7 @@ class FlutterExample extends StatelessWidget {
     this.constraints,
     this.builder,
     required this.child,
+    this.source,
   }) : caller = CellCaller.track(); //
 
   @override
@@ -209,6 +212,7 @@ class FlutterExample extends StatelessWidget {
                 const Spacer(),
                 IconButton(
                     icon: const Icon(size: 24, Icons.code),
+                    tooltip:"open source",
                     onPressed: () async {
                       var callerParsed = await caller.tryParse(route.uri);
 
