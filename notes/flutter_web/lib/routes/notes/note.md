@@ -126,9 +126,11 @@
 ### 获取尺寸的方法
 
 - StatefulWidget在最外层会随着屏幕大小变化自动build
-- 自适应尺寸：/flutter/examples/api/lib/widgets/framework/build_owner.0.dart
+- 自适应尺寸：`flutter/examples/api/lib/widgets/framework/build_owner.0.dart`
 - 组件尺寸：WidgetsBinding.instance.addPostFrameCallback中： (context.findRenderObject() as RenderBox).size
 - 屏幕宽度：`double screenWidth = MediaQuery.of(context).size.width;`
+- 监听屏幕尺寸变化，listen : `WidgetsBindingObserver.didChangeMetrics`
+
 
 ## 展示性组件
 
