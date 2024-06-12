@@ -6,6 +6,7 @@ import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -24,7 +25,7 @@ void build(BuildContext context, Cell print) {
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
         FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart, child: const Navigation_BottomAppBar()),
-        FlutterExample(title: "NavigationBar", child: navigationAndPage.navigationBar()),
+        FlutterExample(title: "NavigationBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart, child: Navigation_NavigationBar()),
         FlutterExample(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
         FlutterExample(title: "NavigationRail", child: navigationAndPage.navigationRail()),
         FlutterExample(title: "TabBar", child: navigationAndPage.tabBar()),
@@ -1049,34 +1050,6 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget navigationBar() {
-    final selected = 0.signal();
-    List<({NavigationDestination destination, Widget page})> destinations = [
-      (
-        destination: const NavigationDestination(icon: Icon(Icons.explore), label: 'Explore'),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
-      ),
-      (
-        destination: const NavigationDestination(icon: Icon(Icons.commute), label: 'Commute'),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
-      ),
-    ];
-    return Watch(builder: (context) {
-      return SizedBox(
-        width: double.infinity,
-        height: 200,
-        child: Scaffold(
-          body: destinations[selected.value].page,
-          bottomNavigationBar: NavigationBar(
-            onDestinationSelected: (newSelection) => selected.value = newSelection,
-            selectedIndex: selected.value,
-            destinations: destinations.map((e) => e.destination).toList(),
-          ),
-        ),
-      );
-    });
-  }
-
   Widget navigationDrawer() {
     final selected = 0.signal();
 
