@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_BottomAppBarExample.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_floatingActionButtonCell.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
@@ -22,7 +23,7 @@ void build(BuildContext context, Cell print) {
   var all = Column(
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
-        FlutterExample(title: "BottomAppBar", child: navigationAndPage.bottomAppBar(context)),
+        FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_BottomAppBarExample_dart, child: const Input_BottomAppBarExample()),
         FlutterExample(title: "NavigationBar", child: navigationAndPage.navigationBar()),
         FlutterExample(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
         FlutterExample(title: "NavigationRail", child: navigationAndPage.navigationRail()),
@@ -1048,25 +1049,6 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget bottomAppBar(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 200,
-      child: Scaffold(
-        body: const Placeholder(),
-        floatingActionButton: FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
-        bottomNavigationBar: BottomAppBar(
-          child: Row(children: <Widget>[
-            IconButton(tooltip: 'Open navigation menu', icon: const Icon(Icons.menu), onPressed: () {}),
-            const Spacer(),
-            IconButton(tooltip: 'Search', icon: const Icon(Icons.search), onPressed: () {}),
-            IconButton(tooltip: 'Favorite', icon: const Icon(Icons.favorite), onPressed: () {}),
-          ]),
-        ),
-      ),
-    );
-  }
-
   Widget navigationBar() {
     final selected = 0.signal();
     List<({NavigationDestination destination, Widget page})> destinations = [
