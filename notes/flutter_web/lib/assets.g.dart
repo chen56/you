@@ -100,6 +100,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_Improve_app_i18n_page_dart = Asset('lib/routes/notes/Improve_app/i18n/page.dart');
   final Asset lib_routes_notes_pure_dart_exception_page_dart = Asset('lib/routes/notes/pure_dart/exception/page.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_input_floatingActionButtonCell_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/input_floatingActionButtonCell.dart');
 }
 
 class Assets with AssetsMixin {}

@@ -32,14 +32,14 @@ class HighlightView extends StatelessWidget {
   final TextStyle? textStyle;
 
   HighlightView(
-      String input, {
-        super.key,
-        this.language,
-        this.theme = const {},
-        this.padding,
-        this.textStyle,
-        int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
-      }) : source = input.replaceAll('\t', ' ' * tabSize);
+    String input, {
+    super.key,
+    this.language,
+    this.theme = const {},
+    this.padding,
+    this.textStyle,
+    int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
+  }) : source = input.replaceAll('\t', ' ' * tabSize);
 
   List<TextSpan> _convert(List<Node> nodes) {
     List<TextSpan> spans = [];
@@ -49,9 +49,7 @@ class HighlightView extends StatelessWidget {
     // ignore: no_leading_underscores_for_local_identifiers
     _traverse(Node node) {
       if (node.value != null) {
-        currentSpans.add(node.className == null
-            ? TextSpan(text: node.value)
-            : TextSpan(text: node.value, style: theme[node.className!]));
+        currentSpans.add(node.className == null ? TextSpan(text: node.value) : TextSpan(text: node.value, style: theme[node.className!]));
       } else if (node.children != null) {
         List<TextSpan> tmp = [];
         currentSpans.add(TextSpan(children: tmp, style: theme[node.className!]));
@@ -96,10 +94,10 @@ class HighlightView extends StatelessWidget {
     return Container(
       color: theme[_rootKey]?.backgroundColor ?? _defaultBackgroundColor,
       padding: padding,
+      // update:RichText->SelectableText ,  SelectableText不兼容SelectionArea
       // origin: https://github.com/git-touch/highlight.dart/blob/v0.7.0/flutter_highlight/lib/flutter_highlight.dart
       // child: RichText(
       //   text: TextSpan(
-      // TODO SelectableText不兼容SelectionArea
       child: SelectableText.rich(
         TextSpan(
           style: _textStyle,

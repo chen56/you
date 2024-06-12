@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_floatingActionButtonCell.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -39,8 +40,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Container", child: layoutCore.containerCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
-        FlutterExample(title: "ButtonStyleButton",source:assets.lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
-        FlutterExample(title: "FloatingActionButton", child: buttonAndInput.floatingActionButtonCell()),
+        FlutterExample(title: "ButtonStyleButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
+        FlutterExample(title: "FloatingActionButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_input_floatingActionButtonCell_dart, child: const Input_FloatingActionButtonCell()),
         FlutterExample(title: "IconButton", child: buttonAndInput.iconButtonCell()),
         FlutterExample(title: "SearchAnchor", child: buttonAndInput.search()),
         FlutterExample(title: "segmentButton", child: buttonAndInput.segmentButtonCell()),
@@ -81,81 +82,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget buttonStyleButtonCell() {
-    return Wrap(
-      children: [
-        IntrinsicWidth(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
-              FilledButton(onPressed: () {}, child: const Text('FilledButton')),
-              FilledButton.tonal(onPressed: () {}, child: const Text('FilledButton.tonal')),
-              OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
-              TextButton(onPressed: () {}, child: const Text('TextButton')),
-            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
-          ),
-        ),
-        IntrinsicWidth(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              ElevatedButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon')),
-              FilledButton.icon(onPressed: () {}, label: const Text('Add Icon'), icon: const Icon(Icons.image)),
-              FilledButton.tonalIcon(onPressed: () {}, label: const Text('Add Icon'), icon: const Icon(Icons.image)),
-              OutlinedButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon')),
-              TextButton.icon(onPressed: () {}, icon: const Icon(Icons.image), label: const Text('Add Icon'))
-            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
-          ),
-        ),
-        IntrinsicWidth(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const ElevatedButton(onPressed: null, child: Text("ElevatedButton")),
-              const FilledButton(onPressed: null, child: Text('FilledButton')),
-              const FilledButton.tonal(onPressed: null, child: Text('FilledButton.tonal')),
-              const OutlinedButton(onPressed: null, child: Text('OutlinedButton')),
-              const TextButton(onPressed: null, child: Text('TextButton')),
-            ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget floatingActionButtonCell() {
-    return Wrap(
-      crossAxisAlignment: WrapCrossAlignment.center,
-      children: [
-        FloatingActionButton(
-          onPressed: () {},
-          tooltip: "FloatingActionButton()",
-          child: const Text("default"),
-        ),
-        FloatingActionButton.small(
-          // isExtended: false,
-          onPressed: () {},
-          tooltip: "FloatingActionButton.small()",
-          child: const Text("small"),
-        ),
-        FloatingActionButton.large(
-          // isExtended: false,
-          onPressed: () {},
-          tooltip: "FloatingActionButton.large()",
-          child: const Text("large"),
-        ),
-        FloatingActionButton.extended(
-          // isExtended: false,
-          onPressed: () {},
-          tooltip: "FloatingActionButton.extended()",
-          label: const Text('extended'),
-          icon: const Icon(Icons.thumb_up),
-        ),
-      ].map((e) => Padding(padding: const EdgeInsets.all(2), child: e)).toList(),
-    );
-  }
-
   Widget iconButtonCell() {
     bool standardSelected = false;
     bool filledSelected = false;
