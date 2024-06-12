@@ -7,6 +7,7 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_But
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -26,7 +27,7 @@ void build(BuildContext context, Cell print) {
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
         FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart, child: const Navigation_BottomAppBar()),
         FlutterExample(title: "NavigationBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart, child: Navigation_NavigationBar()),
-        FlutterExample(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
+        FlutterExample(title: "NavigationDrawer", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart, child: Navigation_NavigationDrawer()),
         FlutterExample(title: "NavigationRail", child: navigationAndPage.navigationRail()),
         FlutterExample(title: "TabBar", child: navigationAndPage.tabBar()),
         FlutterExample(title: "MenuCell", child: navigationAndPage.menu()),
@@ -1050,41 +1051,6 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget navigationDrawer() {
-    final selected = 0.signal();
-
-    Widget drawer() {
-      return NavigationDrawer(
-        onDestinationSelected: (selectedIndex) {
-          selected.value = selectedIndex;
-        },
-        selectedIndex: selected.value,
-        children: const <Widget>[
-          NavigationDrawerDestination(label: Text('Inbox'), icon: Icon(Icons.inbox_outlined), selectedIcon: Icon(Icons.inbox)),
-          NavigationDrawerDestination(label: Text('Outbox'), icon: Icon(Icons.send_outlined), selectedIcon: Icon(Icons.send)),
-          NavigationDrawerDestination(label: Text('Favorites'), icon: Icon(Icons.favorite_outline), selectedIcon: Icon(Icons.favorite)),
-          NavigationDrawerDestination(label: Text('Trash'), icon: Icon(Icons.delete_outline), selectedIcon: Icon(Icons.delete)),
-        ],
-      );
-    }
-
-    return Watch(builder: (context) {
-      return SizedBox(
-        width: 500,
-        height: 300,
-        child: Scaffold(
-          appBar: AppBar(actions: [
-            Builder(builder: (context) {
-              return TextButton.icon(label: const Text("openEndDrawer"), icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer());
-            }),
-          ]),
-          body: drawer(),
-          endDrawer: drawer(),
-        ),
-      );
-    });
-  }
-
   Widget navigationRail() {
     final selected = 0.signal();
     List<({NavigationRailDestination distination, Widget page})> destinations = [
