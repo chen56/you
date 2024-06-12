@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_syntax_view/flutter_syntax_view.dart';
 import 'package:you_flutter/asset.dart';
-import 'package:you_flutter/src/note/contents/flutter_highlight.dart';
 import 'package:you_flutter/state.dart';
 
 class FlutterExample extends StatefulWidget {
   final String title;
   final Widget child;
-  final WidgetBuilder? builder;
   final double? width;
   final double? height;
   final BoxConstraints? constraints;
   final Asset? source;
 
-  FlutterExample({
+  const FlutterExample({
     super.key,
     required this.title,
     this.width,
     this.height,
     this.constraints,
-    this.builder,
     required this.child,
     this.source,
-  }); //
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -79,38 +75,16 @@ class FlutterExampleState extends State<FlutterExample> {
               padding: const EdgeInsets.all(12),
               child: widget.child,
             ),
-            // if (showCode.value)
-            // Container(
-            //   width: widget.width,
-            //   height: widget.height,
-            //   constraints: widget.constraints,
-            //   padding: const EdgeInsets.all(12),
-            //   child: Text(code.value == null ? "loading" : code.value!),
-            // ),
             if (showCode.value)
               SyntaxView(
-                  code: code.value == null ? "// loading" : code.value!,
-                  // Code text
-                  syntax: Syntax.DART,
-                  // Language
-                  syntaxTheme: SyntaxTheme.vscodeDark(),
-                  // Theme
-                  fontSize: 12.0,
-                  // Font size
-                  withZoom: true,
-                  // Enable/Disable zoom icon controls
-                  withLinesCount: true,
-                  // Enable/Disable line number
-                  expanded: false,
-                  // Enable/Disable container expansion
-                  selectable: true // Enable/Disable code text selection
-                  ),
-            if (showCode.value)
-              HighlightView(
-                code.value == null ? "// loading" : code.value!,
-                language: 'dart',
-                theme: atelierForestLightTheme,
-                padding: const EdgeInsets.all(0),
+                code: code.value == null ? "// loading" : code.value!,
+                syntax: Syntax.DART,
+                syntaxTheme: SyntaxTheme.vscodeDark(),
+                fontSize: 12.0,
+                withZoom: true,
+                withLinesCount: false,
+                expanded: false,
+                selectable: true,
               ),
           ],
         ),
