@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
-import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_BottomAppBarExample.dart';
-import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_buttonStyleButton.dart';
-import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/input_floatingActionButtonCell.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -23,7 +23,7 @@ void build(BuildContext context, Cell print) {
   var all = Column(
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
-        FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_BottomAppBarExample_dart, child: const Input_BottomAppBarExample()),
+        FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart, child: const Navigation_BottomAppBar()),
         FlutterExample(title: "NavigationBar", child: navigationAndPage.navigationBar()),
         FlutterExample(title: "NavigationDrawer", child: navigationAndPage.navigationDrawer()),
         FlutterExample(title: "NavigationRail", child: navigationAndPage.navigationRail()),
@@ -41,8 +41,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Container", child: layoutCore.containerCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
-        FlutterExample(title: "ButtonStyleButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_input_buttonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
-        FlutterExample(title: "FloatingActionButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_input_floatingActionButtonCell_dart, child: const Input_FloatingActionButtonCell()),
+        FlutterExample(title: "ButtonStyleButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_ButtonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
+        FlutterExample(title: "FloatingActionButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_FloatingActionButton_dart, child: const Input_FloatingActionButton()),
         FlutterExample(title: "IconButton", child: buttonAndInput.iconButtonCell()),
         FlutterExample(title: "SearchAnchor", child: buttonAndInput.search()),
         FlutterExample(title: "segmentButton", child: buttonAndInput.segmentButtonCell()),

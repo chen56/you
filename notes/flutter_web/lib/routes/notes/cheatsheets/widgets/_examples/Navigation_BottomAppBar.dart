@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const MaterialApp(home: Scaffold(body: Input_BottomAppBarExample())));
+  runApp(const MaterialApp(home: Scaffold(body: Navigation_BottomAppBar())));
 }
 
 // ignore: camel_case_types
-class Input_BottomAppBarExample extends StatelessWidget {
-  const Input_BottomAppBarExample({super.key});
+class Navigation_BottomAppBar extends StatelessWidget {
+  const Navigation_BottomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
