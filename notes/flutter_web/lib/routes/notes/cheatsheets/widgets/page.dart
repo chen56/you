@@ -8,6 +8,7 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_Flo
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -28,7 +29,7 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart, child: const Navigation_BottomAppBar()),
         FlutterExample(title: "NavigationBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart, child: Navigation_NavigationBar()),
         FlutterExample(title: "NavigationDrawer", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart, child: Navigation_NavigationDrawer()),
-        FlutterExample(title: "NavigationRail", child: navigationAndPage.navigationRail()),
+        FlutterExample(title: "NavigationRail",source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationRail_dart,  child: Navigation_NavigationRail()),
         FlutterExample(title: "TabBar", child: navigationAndPage.tabBar()),
         FlutterExample(title: "MenuCell", child: navigationAndPage.menu()),
         FlutterExample(title: "AppBar", height: 150, child: navigationAndPage.appBar()),
@@ -1051,41 +1052,6 @@ class Decorator {
 }
 
 class NavigationAndPage {
-  Widget navigationRail() {
-    final selected = 0.signal();
-    List<({NavigationRailDestination distination, Widget page})> destinations = [
-      (
-        distination: const NavigationRailDestination(icon: Icon(Icons.explore), label: Text('Explore')),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.blue.shade100, child: const Text("Explore")),
-      ),
-      (
-        distination: const NavigationRailDestination(icon: Icon(Icons.commute), label: Text('Commute')),
-        page: Container(width: double.infinity, height: double.infinity, color: Colors.green.shade100, child: const Text("Commute")),
-      ),
-    ];
-    return Watch(builder: (context) {
-      return SizedBox(
-        width: double.infinity,
-        height: 300,
-        child: Scaffold(
-          body: Row(
-            children: [
-              NavigationRail(
-                selectedIndex: selected.value,
-                groupAlignment: 1,
-                onDestinationSelected: (newSelection) => selected.value = newSelection,
-                labelType: NavigationRailLabelType.all,
-                leading: IconButton(onPressed: () {}, icon: const Icon(Icons.access_time), tooltip: "NavigationRail.leading"),
-                trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.exit_to_app), tooltip: "NavigationRail.trailing"),
-                destinations: destinations.map((e) => e.distination).toList(),
-              ),
-              Expanded(child: destinations[selected.value].page),
-            ],
-          ),
-        ),
-      );
-    });
-  }
 
   Widget tabBar() {
     List<({Tab tab, Widget page})> tabs = [
