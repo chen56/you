@@ -13,13 +13,15 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigatio
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Divider.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Spacer.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
 
 @NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
-  SpacerAndDivider spacerAndDivider = SpacerAndDivider();
   LayoutCore layoutCore = LayoutCore();
   ButtonAndInput buttonAndInput = ButtonAndInput();
   TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
@@ -36,12 +38,12 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "TabBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_TabBar_dart, child: const Navigation_TabBar()),
         FlutterExample(title: "MenuCell", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_Menu_dart, child: const Navigation_Menu()),
         FlutterExample(title: "AppBar", height: 150, source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart, child: Navigation_AppBar()),
-        FlutterExample(title: "SliverAppBar",height: 200, source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart, child: Navigation_SliverAppBar()),
+        FlutterExample(title: "SliverAppBar", height: 200, source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart, child: Navigation_SliverAppBar()),
       ]),
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
-        FlutterExample(title: "Divider", child: spacerAndDivider.divider()),
-        FlutterExample(title: "Spacer", child: spacerAndDivider.spacer()),
-        FlutterExample(title: "Placeholder", child: spacerAndDivider.placeholder()),
+        FlutterExample(title: "Divider", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Spacer_Divider_dart, child: const Spacer_Divider()),
+        FlutterExample(title: "Spacer", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Spacer_Spacer_dart, child: const Spacer_Spacer()),
+        FlutterExample(title: "Placeholder", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart, child: const Spacer_Placeholder()),
       ]),
       Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
         FlutterExample(title: "Container", child: layoutCore.containerCell()),
@@ -779,49 +781,6 @@ class LayoutCore {
             child: const Text("模仿Card\nImitate Card"))
       ]);
     });
-  }
-}
-
-class SpacerAndDivider {
-  Widget divider() {
-    return const Column(children: [
-      SizedBox(
-        child: Column(children: [
-          Text('Divider'),
-          Divider(),
-          Text('Divider'),
-        ]),
-      ),
-      SizedBox(
-        height: 100,
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('VerticalDivider'),
-          VerticalDivider(),
-          Text('VerticalDivider'),
-        ]),
-      )
-    ]);
-  }
-
-  Widget spacer() {
-    return const Column(children: [
-      Row(children: [
-        Text('Row left'),
-        Spacer(),
-        Text('Row right'),
-      ]),
-    ]);
-  }
-
-  Widget placeholder() {
-    return const Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-      Placeholder(fallbackWidth: 100, fallbackHeight: 100),
-      Placeholder(
-        fallbackWidth: 100,
-        fallbackHeight: 100,
-        child: SizedBox(width: 100, height: 100, child: Text("带child的")),
-      ),
-    ]);
   }
 }
 
