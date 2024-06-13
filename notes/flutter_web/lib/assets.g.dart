@@ -105,7 +105,10 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_TabBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_SearchAnchor_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_SearchAnchor.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_IconButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_IconButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_LayoutCore_ContainerCell_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_ButtonStyleButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart');

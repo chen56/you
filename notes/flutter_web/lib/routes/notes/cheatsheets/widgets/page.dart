@@ -1,10 +1,10 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_IconButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
@@ -51,8 +51,8 @@ void build(BuildContext context, Cell print) {
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
         FlutterExample(title: "ButtonStyleButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_ButtonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
         FlutterExample(title: "FloatingActionButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_FloatingActionButton_dart, child: const Input_FloatingActionButton()),
-        FlutterExample(title: "IconButton", child: buttonAndInput.iconButtonCell()),
-        FlutterExample(title: "SearchAnchor", child: buttonAndInput.search()),
+        FlutterExample(title: "IconButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_IconButton_dart, child: const Input_IconButton()),
+        FlutterExample(title: "SearchAnchor", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_SearchAnchor_dart, child: const Input_SearchAnchor()),
         FlutterExample(title: "segmentButton", child: buttonAndInput.segmentButtonCell()),
         FlutterExample(title: "Checkbox", child: buttonAndInput.checkbox()),
         FlutterExample(title: "CheckboxListTile", child: buttonAndInput.checkboxListTile()),
@@ -91,98 +91,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget iconButtonCell() {
-    bool standardSelected = false;
-    bool filledSelected = false;
-    bool outlinedSelected = false;
-    bool tonalSelected = false;
-    return StatefulBuilder(builder: (context, setState) {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: [
-              const Text("IconButton()"),
-              IconButton(
-                isSelected: standardSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: () => setState(() => standardSelected = !standardSelected),
-              ),
-              IconButton(
-                isSelected: standardSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: null,
-              ),
-            ],
-          ),
-          Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: [
-              const Text("IconButton.filled()"),
-              IconButton.filled(
-                isSelected: filledSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: () {
-                  setState(() => filledSelected = !filledSelected);
-                },
-              ),
-              IconButton.filled(
-                isSelected: filledSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: null,
-              ),
-            ],
-          ),
-          Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: <Widget>[
-              const Text("IconButton.filledTonal()"),
-              IconButton.filledTonal(
-                isSelected: tonalSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: () {
-                  setState(() => tonalSelected = !tonalSelected);
-                },
-              ),
-              IconButton.filledTonal(
-                isSelected: tonalSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: null,
-              ),
-            ],
-          ),
-          Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: <Widget>[
-              const Text("IconButton.outlined()"),
-              IconButton.outlined(
-                isSelected: outlinedSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: () {
-                  setState(() => outlinedSelected = !outlinedSelected);
-                },
-              ),
-              IconButton.outlined(
-                isSelected: outlinedSelected,
-                icon: const Icon(Icons.settings_outlined),
-                selectedIcon: const Icon(Icons.settings),
-                onPressed: null,
-              ),
-            ],
-          ),
-        ],
-      );
-    });
-  }
-
   Widget segmentButtonCell() {
     Value<ThemeMode> themeMode = ThemeMode.system.signal();
     Set<TargetPlatform> targetPlatforms = <TargetPlatform>{TargetPlatform.macOS, TargetPlatform.linux}.signal();
@@ -223,135 +131,6 @@ class ButtonAndInput {
         ],
       );
     });
-  }
-
-  Widget search() {
-    List<String> searchWords = [
-      "中国 China",
-      "你好 Hello",
-      "世界 World",
-      "谢谢 Thanks",
-      "不 No",
-      "是 Yes",
-      "对不起 Sorry",
-      "没关系 It's okay",
-      "再见 Goodbye",
-      "爱 Love",
-      "喜欢 Like",
-      "朋友 Friend",
-      "家庭 Family",
-      "工作 Work",
-      "学习 Study",
-      "音乐 Music",
-      "电影 Film",
-      "书籍 Book",
-      "食物 Food",
-      "水 Water",
-      "太阳 Sun",
-      "月亮 Moon",
-      "星星 Star",
-      "红色 Red",
-      "蓝色 Blue",
-      "绿色 Green",
-      "黄色 Yellow",
-      "黑色 Black",
-      "白色 White",
-      "快乐 Happy",
-      "悲伤 Sad",
-      "生气 Angry",
-      "惊讶 Surprised",
-      "思考 Think",
-      "梦想 Dream",
-      "希望 Hope",
-      "和平 Peace",
-      "美丽 Beautiful",
-      "伟大 Great",
-      "小 Small",
-      "大 Big",
-      "快 Fast",
-      "慢 Slow",
-      "热 Hot",
-      "冷 Cold",
-      "年轻 Young",
-      "老 Old",
-      "男人 Man",
-      "女人 Woman",
-      "孩子 Child",
-      "动物 Animal",
-      "自然 Nature",
-      "城市 City",
-      "国家 Country",
-      "地球 Earth",
-      "生活 Life",
-      "旅行 Travel",
-      "运动 Sport",
-      "科技 Technology",
-      "互联网 Internet",
-      "游戏 Game",
-      "健康 Health",
-      "自由 Freedom",
-      "真相 Truth",
-      "艺术 Art",
-      "历史 History",
-      "未来 Future",
-      "过去 Past",
-      "现在 Present",
-      "勇敢 Brave",
-    ];
-    List<String> searchHistory = <String>[].signal();
-    final random = Random();
-    Iterable<Widget> getSuggests(SearchController controller, StateSetter setState) {
-      List<({String value, String type, IconData typeIcon})> suggests = [];
-      if (controller.text.isNotEmpty) {
-        suggests = searchWords.where((e) => e.contains(controller.text)).map((e) => (value: e, type: "search", typeIcon: Icons.search)).toList();
-      } else {
-        int randomSuggestStart = random.nextInt(searchWords.length - 5);
-        var randomSuggests = searchWords.sublist(randomSuggestStart, randomSuggestStart + 5);
-        suggests.addAll(searchHistory.map((e) => (value: e, type: "history", typeIcon: Icons.history)));
-        suggests.addAll(randomSuggests.map((e) => (value: e, type: "suggest", typeIcon: Icons.recommend_outlined)));
-      }
-
-      return suggests.map((item) => ListTile(
-            leading: Icon(item.typeIcon),
-            title: Text(item.value),
-            subtitle: Text(item.type),
-            trailing: IconButton(
-                icon: const Icon(Icons.call_missed),
-                onPressed: () {
-                  controller.text = item.value;
-                  controller.selection = TextSelection.collapsed(offset: controller.text.length);
-                  controller.closeView(item.value);
-                }),
-            onTap: () {
-              setState(() {
-                controller.closeView(item.value);
-                if (searchHistory.length >= 5) {
-                  searchHistory.removeLast();
-                }
-                searchHistory.insert(0, item.value);
-                var set = searchHistory.toSet();
-                searchHistory.clear();
-                searchHistory.addAll(set);
-              });
-            },
-          ));
-    }
-
-    return StatefulBuilder(
-      builder: (context, setState) {
-        return Column(
-          children: [
-            SearchAnchor.bar(
-              barHintText: 'Search words',
-              onSubmitted: (text) {
-                debugPrint("onSubmitted $text, should : controller.closeView");
-              },
-              suggestionsBuilder: (context, controller) => getSuggests(controller, setState),
-            )
-          ],
-        );
-      },
-    );
   }
 
   Widget checkboxListTile() {
