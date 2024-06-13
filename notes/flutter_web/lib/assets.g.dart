@@ -99,21 +99,23 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_Improve_app_event_listener_lifeycle_page_dart = Asset('lib/routes/notes/Improve_app/event&listener&lifeycle/page.dart');
   final Asset lib_routes_notes_Improve_app_i18n_page_dart = Asset('lib/routes/notes/Improve_app/i18n/page.dart');
   final Asset lib_routes_notes_pure_dart_exception_page_dart = Asset('lib/routes/notes/pure_dart/exception/page.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_ButtonStyleButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_Menu_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_Menu.dart');
-  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_FloatingActionButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_TabBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart');
-  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_SearchAnchor_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_SearchAnchor.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart');
-  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_IconButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_IconButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_LayoutCore_ContainerCell_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart');
-  final Asset lib_routes_notes_cheatsheets_widgets__examples_Input_ButtonStyleButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_SearchAnchor_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FloatingActionButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Spacer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Spacer.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationRail_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_SegmentButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_IconButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Divider_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Divider.dart');
 }
 

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
@@ -53,8 +55,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "FloatingActionButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_FloatingActionButton_dart, child: const Form_FloatingActionButton()),
         FlutterExample(title: "IconButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_IconButton_dart, child: const Form_IconButton()),
         FlutterExample(title: "SearchAnchor", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_SearchAnchor_dart, child: const Form_SearchAnchor()),
-        FlutterExample(title: "segmentButton", child: buttonAndInput.segmentButtonCell()),
-        FlutterExample(title: "Checkbox", child: buttonAndInput.checkbox()),
+        FlutterExample(title: "SegmentButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_SegmentButton_dart, child: const Form_SegmentButton()),
+        FlutterExample(title: "Checkbox", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart, child: const Form_Checkbox()),
         FlutterExample(title: "CheckboxListTile", child: buttonAndInput.checkboxListTile()),
         FlutterExample(title: "Chip", child: buttonAndInput.chip()),
         FlutterExample(title: "ActionChip", child: buttonAndInput.actionChip()),
@@ -91,47 +93,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget segmentButtonCell() {
-    Value<ThemeMode> themeMode = ThemeMode.system.signal();
-    Set<TargetPlatform> targetPlatforms = <TargetPlatform>{TargetPlatform.macOS, TargetPlatform.linux}.signal();
-
-    return Watch(builder: (context) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SegmentedButton<ThemeMode>(
-            multiSelectionEnabled: false,
-            segments: const <ButtonSegment<ThemeMode>>[
-              ButtonSegment<ThemeMode>(value: ThemeMode.light, label: Text('Light'), icon: Icon(Icons.sunny)),
-              ButtonSegment<ThemeMode>(value: ThemeMode.system, label: Text('System'), icon: Icon(Icons.brightness_auto)),
-              ButtonSegment<ThemeMode>(value: ThemeMode.dark, label: Text('Dark'), icon: Icon(Icons.dark_mode)),
-            ],
-            selected: <ThemeMode>{themeMode.value},
-            onSelectionChanged: (newSelection) {
-              themeMode.value = newSelection.first;
-            },
-          ),
-          const SizedBox(height: 10),
-          SegmentedButton<TargetPlatform>(
-            segments: const <ButtonSegment<TargetPlatform>>[
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.android, label: Text('android')),
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.fuchsia, label: Text('fuchsia')),
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.iOS, label: Text('iOS')),
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.linux, label: Text('linux')),
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.macOS, label: Text('macOS')),
-              ButtonSegment<TargetPlatform>(value: TargetPlatform.windows, label: Text('windows')),
-            ],
-            selected: targetPlatforms,
-            onSelectionChanged: (newSelection) {
-              targetPlatforms.clear();
-              targetPlatforms.addAll(newSelection);
-            },
-            multiSelectionEnabled: true,
-          ),
-        ],
-      );
-    });
-  }
 
   Widget checkboxListTile() {
     final Value<bool?> checkboxListTile1 = (null as bool?).signal();
@@ -142,31 +103,6 @@ class ButtonAndInput {
           children: <Widget>[
             CheckboxListTile(tristate: true, value: checkboxListTile1.value, title: const Text('tristate: true'), onChanged: (value) => checkboxListTile1.value = value),
             CheckboxListTile(tristate: false, value: checkboxListTile2.value, title: const Text('tristate: false'), onChanged: (value) => checkboxListTile2.value = value!),
-          ],
-        );
-      },
-    );
-  }
-
-  Widget checkbox() {
-    final Value<bool?> checkbox1 = (null as bool?).signal();
-    final Value<bool> checkbox2 = false.signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Row(
-              children: [
-                const Text('tristate: true'),
-                Checkbox(tristate: true, checkColor: Colors.white, value: checkbox1.value, onChanged: (value) => checkbox1.value = value),
-              ],
-            ),
-            Row(
-              children: [
-                const Text('tristate: false'),
-                Checkbox(tristate: false, checkColor: Colors.white, value: checkbox2.value, onChanged: (value) => checkbox2.value = value!),
-              ],
-            ),
           ],
         );
       },
