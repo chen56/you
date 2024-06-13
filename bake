@@ -140,19 +140,19 @@ root.run()              { __run root "$@";                                      
 bake.run()              { __run bake "$@";                                          }
 bake.test()             { __run bake ./test.bash test;                              }
 
-_you_dart_internal.run()     { __run _you_dart_internal "$@";                                 }
-_you_dart_internal.install() { __run _you_dart_internal flutter pub get;                      }
-_you_dart_internal.clean()   { __run _you_dart_internal flutter clean; rm -rf build;          }
+_you_dart_internal.run()     { __run _you_dart_internal "$@";                                   }
+_you_dart_internal.install() { __run _you_dart_internal flutter pub get;                        }
+_you_dart_internal.clean()   { __run _you_dart_internal flutter clean; rm -rf build;            }
 _you_dart_internal.upgrade() { __run _you_dart_internal flutter pub outdated ;
-                               __run _you_dart_internal flutter pub upgrade ;                 }
-_you_dart_internal.test()    { __run _you_dart_internal flutter test;                         }
-_you_dart_internal.publish() { __run _you_dart_internal flutter pub publish;                  }
+                               __run _you_dart_internal flutter pub upgrade --major-versions ;  }
+_you_dart_internal.test()    { __run _you_dart_internal flutter test;                           }
+_you_dart_internal.publish() { __run _you_dart_internal flutter pub publish;                    }
 
 you_dart.run()     { __run you_dart "$@";                                 }
 you_dart.install() { __run you_dart flutter pub get;                      }
 you_dart.clean()   { __run you_dart flutter clean; rm -rf build;          }
 you_dart.upgrade() { __run you_dart flutter pub outdated ;
-                     __run you_dart flutter pub upgrade ;                 }
+                     __run you_dart flutter pub upgrade  --major-versions;                 }
 you_dart.test()    { __run you_dart flutter test;                         }
 you_dart.publish() { __run you_dart flutter pub publish;                  }
 
@@ -160,7 +160,7 @@ you_flutter.run()     { __run you_flutter "$@";                                 
 you_flutter.install() { __run you_flutter flutter pub get;                      }
 you_flutter.clean()   { __run you_flutter flutter clean; rm -rf build;          }
 you_flutter.upgrade() { __run you_flutter flutter pub outdated ;
-                        __run you_flutter flutter pub upgrade ;                 }
+                        __run you_flutter flutter pub upgrade  --major-versions;                 }
 you_flutter.test()    { __run you_flutter flutter test;                         }
 you_flutter.publish() { __run you_flutter flutter pub publish;                  }
 
@@ -169,7 +169,7 @@ you_cli.test()        { __run you_cli dart test;                                
 you_cli.install()     { __run you_cli flutter pub get;                          }
 you_cli.clean()       { __run you_cli flutter clean; rm -rf build;              }
 you_cli.upgrade()     { __run you_cli flutter pub outdated ;
-                        __run you_cli flutter pub upgrade ;                     }
+                        __run you_cli flutter pub upgrade  --major-versions;                     }
 you_cli.publish()     { __run you_cli flutter pub publish;                      }
 
 
@@ -178,7 +178,7 @@ learn_dart.install()    { __run learn_dart dart pub get ;                       
 learn_dart.clean()      { __run learn_dart rm -rf
                           __run learn_dart rm -rf .dart_tool;                        }
 learn_dart.upgrade()    { __run learn_dart flutter pub outdated ;
-                          __run learn_dart dart pub upgrade ;                        }
+                          __run learn_dart dart pub upgrade  --major-versions;                        }
 learn_dart.study()      { __run learn_dart dart test;                                }
 # skwasm无法运行
   #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
@@ -193,7 +193,7 @@ flutter_web.install()     { __run flutter_web flutter pub get ;                 
 flutter_web.clean()       { __run flutter_web flutter clean;
                             rm -rf build;                                       }
 flutter_web.upgrade()     { __run flutter_web flutter pub outdated ;
-                            __run flutter_web flutter pub upgrade ;             }
+                            __run flutter_web flutter pub upgrade  --major-versions;             }
 flutter_web.gen.all()     { __run root dart run packages/you_cli/bin/cli.dart gen all     --dir notes/flutter_web/ ; }
 flutter_web.gen.assets()  { __run root dart run packages/you_cli/bin/cli.dart gen assets  --dir notes/flutter_web/ ; }
 flutter_web.gen.routes()  { __run root dart run packages/you_cli/bin/cli.dart gen routes  --dir notes/flutter_web/ ; }
