@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
@@ -57,8 +59,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "SearchAnchor", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_SearchAnchor_dart, child: const Form_SearchAnchor()),
         FlutterExample(title: "SegmentButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_SegmentButton_dart, child: const Form_SegmentButton()),
         FlutterExample(title: "Checkbox", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart, child: const Form_Checkbox()),
-        FlutterExample(title: "CheckboxListTile", child: buttonAndInput.checkboxListTile()),
-        FlutterExample(title: "Chip", child: buttonAndInput.chip()),
+        FlutterExample(title: "CheckboxListTile", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_CheckboxListTile_dart, child: Form_CheckboxListTile()),
+        FlutterExample(title: "Chip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Chip_dart, child: Form_Chip()),
         FlutterExample(title: "ActionChip", child: buttonAndInput.actionChip()),
         FlutterExample(title: "ChoiceChip", child: buttonAndInput.choiceChip()),
         FlutterExample(title: "FilterChip", child: buttonAndInput.filterChip()),
@@ -93,47 +95,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-
-  Widget checkboxListTile() {
-    final Value<bool?> checkboxListTile1 = (null as bool?).signal();
-    final Value<bool> checkboxListTile2 = false.signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            CheckboxListTile(tristate: true, value: checkboxListTile1.value, title: const Text('tristate: true'), onChanged: (value) => checkboxListTile1.value = value),
-            CheckboxListTile(tristate: false, value: checkboxListTile2.value, title: const Text('tristate: false'), onChanged: (value) => checkboxListTile2.value = value!),
-          ],
-        );
-      },
-    );
-  }
-
-  Widget chip() {
-    final Set<TargetPlatform> targets = Set.of(TargetPlatform.values).signal();
-
-    return Watch(builder: (context) {
-      return Column(children: <Widget>[
-        Wrap(
-          children: [
-            for (var target in targets)
-              Chip(
-                avatar: CircleAvatar(child: Text(target.name[0])),
-                label: Text(target.name),
-                onDeleted: () => targets.remove(target),
-              )
-          ],
-        ),
-        FilledButton(
-            onPressed: () {
-              targets.clear();
-              targets.addAll(TargetPlatform.values);
-            },
-            child: const Text("Reset")),
-      ]);
-    });
-  }
-
   Widget actionChip() {
     final Value<bool> favorite = false.signal();
     return Watch(builder: (context) {
