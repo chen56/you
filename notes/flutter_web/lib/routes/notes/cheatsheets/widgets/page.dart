@@ -5,10 +5,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_Menu.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
 import 'package:you_flutter/state.dart';
@@ -21,7 +25,6 @@ void build(BuildContext context, Cell print) {
   TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
   AdvancedTemplateContainer advancedTemplateContainer = AdvancedTemplateContainer();
   Decorator decorator = Decorator();
-  NavigationAndPage navigationAndPage = NavigationAndPage();
 
   var all = Column(
     children: [
@@ -29,11 +32,11 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "BottomAppBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart, child: const Navigation_BottomAppBar()),
         FlutterExample(title: "NavigationBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart, child: Navigation_NavigationBar()),
         FlutterExample(title: "NavigationDrawer", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart, child: Navigation_NavigationDrawer()),
-        FlutterExample(title: "NavigationRail",source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationRail_dart,  child: Navigation_NavigationRail()),
-        FlutterExample(title: "TabBar", child: navigationAndPage.tabBar()),
-        FlutterExample(title: "MenuCell", child: navigationAndPage.menu()),
-        FlutterExample(title: "AppBar", height: 150, child: navigationAndPage.appBar()),
-        FlutterExample(title: "SliverAppBar", height: 250, child: navigationAndPage.sliverAppBar()),
+        FlutterExample(title: "NavigationRail", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationRail_dart, child: Navigation_NavigationRail()),
+        FlutterExample(title: "TabBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_TabBar_dart, child: const Navigation_TabBar()),
+        FlutterExample(title: "MenuCell", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_Menu_dart, child: const Navigation_Menu()),
+        FlutterExample(title: "AppBar", height: 150, source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart, child: Navigation_AppBar()),
+        FlutterExample(title: "SliverAppBar",height: 200, source: assets.lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart, child: Navigation_SliverAppBar()),
       ]),
       Level1MasonryLayout(title: "分割、填充、留白", cellWidth: 300, children: [
         FlutterExample(title: "Divider", child: spacerAndDivider.divider()),
@@ -1043,108 +1046,6 @@ class Decorator {
               height: 80,
               alignment: Alignment.center,
               child: const Text('Border'),
-            ),
-          ),
-        ],
-      );
-    });
-  }
-}
-
-class NavigationAndPage {
-
-  Widget tabBar() {
-    List<({Tab tab, Widget page})> tabs = [
-      (
-        tab: const Tab(icon: Icon(Icons.cloud_outlined), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's cloudy here")),
-      ),
-      (
-        tab: const Tab(icon: Icon(Icons.beach_access_sharp), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's rainy here")),
-      ),
-      (
-        tab: const Tab(icon: Icon(Icons.brightness_5_sharp), iconMargin: EdgeInsets.all(10)),
-        page: const Center(child: Text("It's sunny here")),
-      ),
-    ];
-
-    return DefaultTabController(
-      initialIndex: 1,
-      length: tabs.length,
-      child: Column(children: [
-        TabBar(tabs: tabs.map((e) => e.tab).toList()),
-        SizedBox(
-          height: 100,
-          child: TabBarView(children: tabs.map((e) => e.page).toList()),
-        )
-      ]),
-    );
-  }
-
-  Widget menu() {
-    return Builder(builder: (BuildContext context) {
-      return MenuAnchor(
-        builder: (context, controller, child) {
-          return FilledButton.tonal(
-            onPressed: () {
-              if (controller.isOpen) {
-                controller.close();
-              } else {
-                controller.open();
-              }
-            },
-            child: const Text('Show menu'),
-          );
-        },
-        menuChildren: [
-          MenuItemButton(leadingIcon: const Icon(Icons.people_alt_outlined), child: const Text('Item 1'), onPressed: () {}),
-          MenuItemButton(leadingIcon: const Icon(Icons.remove_red_eye_outlined), child: const Text('Item 2'), onPressed: () {}),
-          MenuItemButton(leadingIcon: const Icon(Icons.refresh), child: const Text('Item 3'), onPressed: () {}),
-        ],
-      );
-    });
-  }
-
-  Widget appBar() {
-    return Builder(builder: (context) {
-      final colors = Theme.of(context).colorScheme;
-      return Scaffold(
-        appBar: AppBar(backgroundColor: colors.surfaceContainerHighest, leading: const BackButton(), actions: [
-          IconButton(icon: const Icon(Icons.minimize), onPressed: () {}),
-          IconButton(icon: const Icon(Icons.filter_alt_off), onPressed: () {}),
-        ]),
-        body: const Text("Hello\nWorld"),
-      );
-    });
-  }
-
-  Widget sliverAppBar() {
-    var pinned = true.signal();
-    return Watch(builder: (context) {
-      return CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            pinned: pinned.value,
-            expandedHeight: 180.0,
-            actions: [
-              Row(children: [const Text('pinned'), Switch(onChanged: (newValue) => pinned.value = newValue, value: pinned.value)]),
-            ],
-            flexibleSpace: const FlexibleSpaceBar(background: FlutterLogo()),
-          ),
-          const SliverToBoxAdapter(child: Text('Try Scroll to see effect.')),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return Container(
-                  color: index.isOdd ? Colors.white : Colors.black12,
-                  height: 50.0,
-                  child: Center(
-                    child: Text('$index', textScaler: const TextScaler.linear(2)),
-                  ),
-                );
-              },
-              childCount: 10,
             ),
           ),
         ],
