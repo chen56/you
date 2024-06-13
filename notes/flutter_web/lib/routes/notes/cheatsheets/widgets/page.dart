@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ActionChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chip.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ChoiceChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
@@ -61,8 +63,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Checkbox", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart, child: const Form_Checkbox()),
         FlutterExample(title: "CheckboxListTile", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_CheckboxListTile_dart, child: Form_CheckboxListTile()),
         FlutterExample(title: "Chip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Chip_dart, child: Form_Chip()),
-        FlutterExample(title: "ActionChip", child: buttonAndInput.actionChip()),
-        FlutterExample(title: "ChoiceChip", child: buttonAndInput.choiceChip()),
+        FlutterExample(title: "ActionChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_ActionChip_dart, child: Form_ActionChip()),
+        FlutterExample(title: "ChoiceChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_ChoiceChip_dart, child: Form_ChoiceChip()),
         FlutterExample(title: "FilterChip", child: buttonAndInput.filterChip()),
         FlutterExample(title: "InputChip", child: buttonAndInput.inputChip()),
         FlutterExample(title: "datePicker", child: buttonAndInput.datePicker()),
@@ -95,20 +97,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget actionChip() {
-    final Value<bool> favorite = false.signal();
-    return Watch(builder: (context) {
-      return Column(children: <Widget>[
-        Wrap(children: [
-          ActionChip(
-            avatar: Icon(favorite.value ? Icons.favorite : Icons.favorite_border),
-            label: const Text("favorite"),
-            onPressed: () => favorite.value = !favorite.value,
-          ),
-        ]),
-      ]);
-    });
-  }
 
   Widget filterChip() {
     final Set<String> selected = <String>{}.signal();
@@ -139,28 +127,6 @@ class ButtonAndInput {
     );
   }
 
-  Widget choiceChip() {
-    final Value<TargetPlatform?> selected = (null as TargetPlatform?).signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Wrap(
-              children: [
-                for (var t in TargetPlatform.values)
-                  ChoiceChip(
-                      label: Text(t.name),
-                      selected: selected.value == t,
-                      onSelected: (bool value) {
-                        selected.value = value ? t : null;
-                      }),
-              ],
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   Widget inputChip() {
     final TextEditingController controller = TextEditingController();
