@@ -316,6 +316,15 @@
     - 【场景】
       - 适用于需要实现复杂滚动效果的场景,如带有吸顶效果的应用栏、嵌套的列表/网格等。
   - **NestedScrollView**:在同一滚动视图中嵌套其他滚动视图，如顶部有一个固定的AppBar和底部有一个可滚动的列表。
+- **Scrollbar**: 此小部件提供了一个可视化的滚动条，它通常与一个可滚动的小部件（如SingleChildScrollView，ListView等）一起使用，以指示滚动位置并允许用户通过拖动滚动条来滚动内容。Scrollbar本身并不包含滚动逻辑，它依赖于关联的可滚动小部件及其控制器（ScrollController）来工作。
+  - 【场景】
+    - 在许多场景下，直接使用SingleChildScrollView或其他可滚动小部件（如ListView, CustomScrollView）而不附加Scrollbar也是完全可行的，特别是当设计要求简洁或是在移动设备上时，因为移动设备通常依靠直接触摸屏幕滚动，而不需要显式的滚动条
+    - 需要定制滚动条时用Scrollbar包其他SingleChildScrollView/ListView等
+- **Scrollable** Scrollable是一个抽象类，它不直接用于布局构建，但它是实现自定义滚动组件或者理解Flutter中滚动机制的关键。
+  - 【场景】
+    - 直接构造[Scrollable]的情况很少见。相反，请考虑 [ListView] 或 [GridView]，它们结合了滚动、视口和布局模型。要组合布局模型（或使用自定义布局模式），请考虑使用 [CustomScrollView]。
+    - 静态 [Scrollable.of] 和 [Scrollable.ensureVisible] 函数通常用于与 [ListView] 或 [GridView] 内的 [Scrollable] 小部件交互。
+
 - **滚动相关**
   - **ScrollNotification** and **NotificationListener**: which can be used to watch the scroll position without using a [ScrollController].
   - **ScrollController**: 记得dispose

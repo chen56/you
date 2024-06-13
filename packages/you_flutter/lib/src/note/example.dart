@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_syntax_view/flutter_syntax_view.dart';
+import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:you_flutter/asset.dart';
+import 'package:you_flutter/src/note/contents/flutter_highlight.dart';
 import 'package:you_flutter/state.dart';
 
 class FlutterExample extends StatefulWidget {
@@ -41,6 +42,7 @@ class FlutterExampleState extends State<FlutterExample> {
       var result = Container(
         decoration: BoxDecoration(color: colors.surfaceContainerLow, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               height: 36,
@@ -76,15 +78,14 @@ class FlutterExampleState extends State<FlutterExample> {
               child: widget.child,
             ),
             if (showCode.value)
-              SyntaxView(
-                code: code.value == null ? "// loading" : code.value!,
-                syntax: Syntax.DART,
-                syntaxTheme: SyntaxTheme.vscodeDark(),
-                fontSize: 12.0,
-                withZoom: true,
-                withLinesCount: false,
-                expanded: false,
-                selectable: true,
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: HighlightView(
+                  code.value == null ? "// loading" : code.value!,
+                  language: 'dart',
+                  theme: vs2015Theme,
+                  padding: const EdgeInsets.all(6),
+                ),
               ),
           ],
         ),
