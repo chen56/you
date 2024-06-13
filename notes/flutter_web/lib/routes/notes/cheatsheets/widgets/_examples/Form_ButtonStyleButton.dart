@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const MaterialApp(home: Scaffold(body: Input_ButtonStyleButtonExample())));
+  runApp(const MaterialApp(home: Scaffold(body: Form_ButtonStyleButtonExample())));
 }
 
 // ignore: camel_case_types
-class Input_ButtonStyleButtonExample extends StatelessWidget {
-  const Input_ButtonStyleButtonExample({super.key});
+class Form_ButtonStyleButtonExample extends StatelessWidget {
+  const Form_ButtonStyleButtonExample({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const MaterialApp(home: Scaffold(body: Input_FloatingActionButton())));
+  runApp(const MaterialApp(home: Scaffold(body: Form_FloatingActionButton())));
 }
 
 // ignore: camel_case_types
-class Input_FloatingActionButton extends StatelessWidget {
-  const Input_FloatingActionButton({super.key});
+class Form_FloatingActionButton extends StatelessWidget {
+  const Form_FloatingActionButton({super.key});
 
   @override
   Widget build(BuildContext context) {

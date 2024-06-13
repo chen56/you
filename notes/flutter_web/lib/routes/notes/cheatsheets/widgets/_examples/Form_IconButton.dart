@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const MaterialApp(home: Scaffold(body: Input_IconButton())));
+  runApp(const MaterialApp(home: Scaffold(body: Form_IconButton())));
 }
 
 // ignore: camel_case_types
-class Input_IconButton extends StatefulWidget {
-  const Input_IconButton({super.key});
+class Form_IconButton extends StatefulWidget {
+  const Form_IconButton({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -14,7 +14,7 @@ class Input_IconButton extends StatefulWidget {
   }
 }
 
-class _State extends State<Input_IconButton> {
+class _State extends State<Form_IconButton> {
   bool standardSelected = false;
   bool filledSelected = false;
   bool outlinedSelected = false;

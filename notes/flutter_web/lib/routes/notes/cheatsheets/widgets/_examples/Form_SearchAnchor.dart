@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const MaterialApp(home: Scaffold(body: Input_SearchAnchor())));
+  runApp(const MaterialApp(home: Scaffold(body: Form_SearchAnchor())));
 }
 
 // ignore: camel_case_types
-class Input_SearchAnchor extends StatefulWidget {
-  const Input_SearchAnchor({super.key});
+class Form_SearchAnchor extends StatefulWidget {
+  const Form_SearchAnchor({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -16,7 +16,7 @@ class Input_SearchAnchor extends StatefulWidget {
   }
 }
 
-class _State extends State<Input_SearchAnchor> {
+class _State extends State<Form_SearchAnchor> {
   final List<String> searchWords = [
     "中国 China",
     "你好 Hello",
