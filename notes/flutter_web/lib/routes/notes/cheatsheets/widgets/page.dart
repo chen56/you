@@ -7,8 +7,10 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chec
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ChoiceChip.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FilterChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_InputChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
@@ -65,8 +67,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Chip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Chip_dart, child: Form_Chip()),
         FlutterExample(title: "ActionChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_ActionChip_dart, child: Form_ActionChip()),
         FlutterExample(title: "ChoiceChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_ChoiceChip_dart, child: Form_ChoiceChip()),
-        FlutterExample(title: "FilterChip", child: buttonAndInput.filterChip()),
-        FlutterExample(title: "InputChip", child: buttonAndInput.inputChip()),
+        FlutterExample(title: "FilterChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart, child: Form_FilterChip()),
+        FlutterExample(title: "InputChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_InputChip_dart, child: Form_InputChip()),
         FlutterExample(title: "datePicker", child: buttonAndInput.datePicker()),
         FlutterExample(title: "dateRangePicker", child: buttonAndInput.dateRangePicker()),
         FlutterExample(title: "timePicker", child: buttonAndInput.timePicker()),
@@ -98,80 +100,7 @@ void build(BuildContext context, Cell print) {
 
 class ButtonAndInput {
 
-  Widget filterChip() {
-    final Set<String> selected = <String>{}.signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Wrap(
-              children: [
-                for (var t in TargetPlatform.values)
-                  FilterChip(
-                    label: Text(t.name),
-                    selected: selected.contains(t.name),
-                    onSelected: (bool value) {
-                      if (value) {
-                        selected.add(t.name);
-                      } else {
-                        selected.remove(t.name);
-                      }
-                    },
-                  )
-              ],
-            ),
-            FilledButton(onPressed: () => selected.clear(), child: const Text("Reset")),
-          ],
-        );
-      },
-    );
-  }
 
-
-  Widget inputChip() {
-    final TextEditingController controller = TextEditingController();
-    final List<String> tags = <String>[].signal();
-
-    return Watch(
-      watchListenable: controller,
-      onDispose: () {
-        controller.dispose();
-      },
-      builder: (context) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              controller: controller,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.add),
-                hintText: 'Write a tag, enter to add',
-              ),
-              onSubmitted: (_) {
-                if (controller.text.isNotEmpty) {
-                  if (!tags.contains(controller.text)) {
-                    tags.add(controller.text);
-                  }
-                  controller.clear(); // 清空TextField
-                }
-              },
-            ),
-            Wrap(
-              spacing: 8.0,
-              children: tags.map((tag) {
-                return InputChip(
-                  avatar: const Icon(Icons.tag),
-                  label: Text(tag),
-                  onDeleted: () => tags.remove(tag),
-                  deleteIcon: const Icon(Icons.cancel),
-                );
-              }).toList(),
-            )
-          ],
-        );
-      },
-    );
-  }
 
   Widget datePicker() {
     final Value<DateTime?> date = (null as DateTime?).signal();

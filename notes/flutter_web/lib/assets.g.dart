@@ -112,10 +112,12 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_LayoutCore_ContainerCell_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_SearchAnchor_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FilterChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FloatingActionButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_CheckboxListTile_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Spacer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Spacer.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_InputChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_InputChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationRail_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_SegmentButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_IconButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart');
