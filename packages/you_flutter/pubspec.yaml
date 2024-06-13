@@ -31,7 +31,6 @@ dependencies:
   # you_*
   you_dart: ^0.0.6-dev.3
   _you_dart_internal: ^0.0.6-dev.3
-  flutter_syntax_view: ^4.1.0
 
 dev_dependencies:
   flutter_test:
