@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Input_FloatingActionButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_Menu.dart';
@@ -22,7 +23,6 @@ import 'package:you_flutter/state.dart';
 
 @NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
-  LayoutCore layoutCore = LayoutCore();
   ButtonAndInput buttonAndInput = ButtonAndInput();
   TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
   AdvancedTemplateContainer advancedTemplateContainer = AdvancedTemplateContainer();
@@ -46,7 +46,7 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Placeholder", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart, child: const Spacer_Placeholder()),
       ]),
       Level1MasonryLayout(title: "布局,Layout", cellWidth: 500, children: [
-        FlutterExample(title: "Container", child: layoutCore.containerCell()),
+        FlutterExample(title: "Container", source: assets.lib_routes_notes_cheatsheets_widgets__examples_LayoutCore_ContainerCell_dart, child: const LayoutCore_ContainerCell()),
       ]),
       Level1MasonryLayout(title: "button&input&form", cellWidth: 500, children: [
         FlutterExample(title: "ButtonStyleButton", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Input_ButtonStyleButton_dart, child: const Input_ButtonStyleButtonExample()),
@@ -763,24 +763,6 @@ class ButtonAndInput {
         );
       },
     );
-  }
-}
-
-class LayoutCore {
-  Widget containerCell() {
-    return Builder(builder: (context) {
-      var colors = Theme.of(context).colorScheme;
-      return Wrap(children: [
-        Container(
-            width: 100,
-            height: 100,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(color: colors.surface, borderRadius: BorderRadius.circular(4.0), boxShadow: [
-              BoxShadow(color: colors.shadow.withOpacity(0.2), spreadRadius: 2, blurRadius: 2, offset: const Offset(2, 1)),
-            ]),
-            child: const Text("模仿Card\nImitate Card"))
-      ]);
-    });
   }
 }
 
