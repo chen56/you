@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_ProgressIndicator.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_RefreshIndicator.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_SnackBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ActionChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CalendarDatePicker.dart';
@@ -87,19 +89,19 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "Switch", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Switch_dart, child: Form_Switch()),
         FlutterExample(title: "TextField", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_TextField_dart, child: Form_TextField()),
       ]),
-      Level1MasonryLayout(title: "text&info&tip", cellWidth: 300, children: [
-        FlutterExample(title: "Badge", child: textAndInfoAndTip.badgesCell()),
-        FlutterExample(title: "ProgressIndicator", child: textAndInfoAndTip.progressIndicatorCell()),
-        FlutterExample(title: "ProgressIndicator2", child: textAndInfoAndTip.progressIndicator2Cell()),
-        FlutterExample(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar()),
+      Level1MasonryLayout(title: "Feedback", cellWidth: 300, children: [
+        FlutterExample(title: "ProgressIndicator", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_ProgressIndicator_dart, child: Feedback_ProgressIndicator()),
+        FlutterExample(title: "RefreshIndicator", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_RefreshIndicator_dart, child: Feedback_RefreshIndicator()),
+        FlutterExample(title: "SnackBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_SnackBar_dart, child: Feedback_SnackBar()),
       ]),
-      Level1MasonryLayout(title: "高级模版容器,Advanced template container", cellWidth: 500, children: [
-        FlutterExample(title: "SnackBar", child: advancedTemplateContainer.snackBarCell()),
+      Level1MasonryLayout(title: "Overlays", cellWidth: 500, children: [
         FlutterExample(title: "dialog", child: advancedTemplateContainer.dialog()),
         FlutterExample(title: "bottomSheet", child: advancedTemplateContainer.bottomSheetCell()),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
         FlutterExample(title: "Card", child: decorator.cardCell()),
+        FlutterExample(title: "Badge", child: textAndInfoAndTip.badgesCell()),
+        FlutterExample(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar()),
       ]),
     ],
   );
@@ -133,79 +135,9 @@ class TextAndInfoAndTip {
       ),
     ]);
   }
-
-  Widget progressIndicatorCell() {
-    final selected = false.signal();
-    return Watch(builder: (context) {
-      return Row(children: [
-        IconButton(
-          isSelected: selected.value,
-          selectedIcon: const Icon(Icons.pause),
-          icon: const Icon(Icons.play_arrow),
-          onPressed: () {
-            selected.value = !selected.value;
-          },
-        ),
-        CircularProgressIndicator(value: selected.value ? null : 0.9),
-        Expanded(
-          child: LinearProgressIndicator(value: selected.value ? null : 0.9),
-        ),
-      ]);
-    });
-  }
-
-  Widget progressIndicator2Cell() {
-    final selected = false.signal();
-    return Watch(
-      builder: (context) {
-        return Column(children: [
-          const Text("RefreshIndicator 下拉刷新(Pull down to refresh)"),
-          SizedBox(
-            height: 200,
-            child: RefreshIndicator(
-              onRefresh: () async {
-                selected.value = true;
-                await Future.delayed(const Duration(seconds: 3)); // mock delay
-                selected.value = false;
-              },
-              child: ListView.builder(
-                physics: const AlwaysScrollableScrollPhysics(),
-                itemCount: 5, // 示例数据数量
-                itemBuilder: (context, index) {
-                  return ListTile(title: Text('Item ${index + 1}/5'));
-                },
-              ),
-            ),
-          ),
-        ]);
-      },
-    );
-  }
 }
 
 class AdvancedTemplateContainer {
-  Widget snackBarCell() {
-    return Builder(
-        builder: (context) => TextButton(
-              onPressed: () {
-                final snackBar = SnackBar(
-                  behavior: SnackBarBehavior.floating,
-                  content: const Text('SnackBar'),
-                  action: SnackBarAction(
-                    label: 'Close',
-                    onPressed: () {},
-                  ),
-                );
-
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-              child: const Text(
-                'SnackBar',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ));
-  }
 
   Widget bottomSheetCell() {
     Value<PersistentBottomSheetController?> bottomSheetController = (null as PersistentBottomSheetController?).signal();

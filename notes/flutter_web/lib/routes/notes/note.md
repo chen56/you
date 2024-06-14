@@ -152,8 +152,8 @@
 
 ### 装饰器
 
-- 增强
-  - **简介**: 装饰器指外观样式或特性增强
+- **简介**: 装饰器指附加的外观样式或特性增强
+- 增强&包边&轮廓
   - **BoxDecoration**:指定颜色、背景图片、边框`BoxBorder`
   - **PhysicalModel**:用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
     - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
@@ -167,6 +167,8 @@
       - **InkWell**
   - **Card**: 虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
     - 【原理】内部包了个`Material`
+  - **Badge** : A badge's label conveys a small amount of information about its child, like a count or status
+    - 【原理】[api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
 
 - 隐藏&可见性
   - **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
@@ -246,7 +248,7 @@
 - **Icon** 图标
 - Image
 
-### button&input&form
+### form&button&input
 
 - **Button**
   - **ButtonStyleButton**
@@ -282,21 +284,24 @@
   - **YearPicker** The year picker widget is rarely used directly. Instead, consider using [CalendarDatePicker], or [showDatePicker] which create full date pickers.
   - **showDatePicker** 弹出日期选择器Dialog
 
-### Text&信息&提示
+### Text
 
 - **Text**
   - **Text.rich**
   - RichText
 - **TextSelectionToolbar**
-- Markdown
-- SelectionArea 可选择界面一整个区域的文本
-- DefaultTextStyle
-- 进度条Progress indicators
-  - CircularProgressIndicator
-  - LinearProgressIndicator
-- Badges [api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
-- **Tooltip**
-- **SnackBar**
+- **Markdown**
+- **SelectionArea** 可选择界面一整个区域的文本
+- **DefaultTextStyle**
+
+### Feedback
+
+- **ProgressIndicator** 进度指示器的抽象类
+  - **CircularProgressIndicator** 圆形的进度指示器，通常用于表示不确定的等待时间，即你不知道任务何时完成的情况。这个组件展示为一个旋转的环形动画，没有具体的进度百分比显示。适用于页面加载、数据获取等需要等待但不明确等待时长的场景。
+  - **LinearProgressIndicator** 线性的进度条。用于展示任务完成的百分比，与CircularProgressIndicator不同，它能明确显示任务完成的具体进度，因此非常适合于上传、下载或者其他有明确进度的任务。用户可以通过进度条的填充长度直观了解任务的完成情况
+- **RefreshIndicator** 用于实现“下拉刷新”功能的交互。当用户在滚动列表的顶部向下滑动时，会显示一个通常为圆形的进度指示器（默认是CircularProgressIndicator），表明应用正在刷新数据。此组件通常包裹在可滚动的Widget（如ListView）外面，自动处理下拉手势检测、显示刷新指示器以及在数据刷新完成后隐藏指示器。
+- **Tooltip** 用于为其他widgets提供悬停时的文本提示信息。当用户将鼠标指针（在桌面设备上）或触摸并停留（在触摸屏设备上）在一个带有Tooltip的widget上时，会显示一个包含说明性文字的弹出框。
+- **SnackBar** 一种轻量级的反馈机制，用于在屏幕底部短暂显示信息，以通知用户操作的结果或其他非关键信息，比如成功保存、删除某项、或简单的警告信息。
   - 【原理】ScaffoldMessenger.of(context).showSnackBar()
 
 ### 滚动scrolling

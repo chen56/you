@@ -101,6 +101,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_pure_dart_exception_page_dart = Asset('lib/routes/notes/pure_dart/exception/page.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_ActionChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_ActionChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_ButtonStyleButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Feedback_RefreshIndicator_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Feedback_RefreshIndicator.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_Menu_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_Menu.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_DropdownMenu.dart');
@@ -113,6 +114,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_CalendarDatePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_CalendarDatePicker.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_TextField_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_TextField.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Feedback_ProgressIndicator_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Feedback_ProgressIndicator.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_showDatePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Switch_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Switch.dart');
@@ -123,6 +125,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FilterChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FloatingActionButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_CheckboxListTile_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Feedback_SnackBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Feedback_SnackBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Spacer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Spacer.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Radio_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Radio.dart');
