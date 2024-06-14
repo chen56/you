@@ -8,14 +8,17 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chec
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ChoiceChip.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_DropdownMenu.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FilterChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_IconButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_InputChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Radio.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showTimePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
@@ -75,9 +78,9 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "showDateRangePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart, child: Form_showDateRangePicker()),
         FlutterExample(title: "showDatePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showDatePicker_dart, child: Form_showDatePicker()),
         FlutterExample(title: "CalendarDatePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_CalendarDatePicker_dart, child: Form_CalendarDatePicker()),
-        FlutterExample(title: "timePicker", child: buttonAndInput.timePicker()),
-        FlutterExample(title: "DropdownMenu", child: buttonAndInput.dropdownMenu()),
-        FlutterExample(title: "Radio", child: buttonAndInput.radio()),
+        FlutterExample(title: "showTimePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showTimePicker_dart, child: Form_showTimePicker()),
+        FlutterExample(title: "Radio", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Radio_dart, child: Form_Radio()),
+        FlutterExample(title: "DropdownMenu", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart, child: Form_DropdownMenu()),
         FlutterExample(title: "Slider", child: buttonAndInput.slider()),
         FlutterExample(title: "Switch", child: buttonAndInput.switchs()),
         FlutterExample(title: "TextField", child: buttonAndInput.textField()),
@@ -103,95 +106,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget timePicker() {
-    final Value<TimeOfDay?> time = (null as TimeOfDay?).signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Text("date: ${time.value}"),
-            TextButton.icon(
-              onPressed: () async {
-                TimeOfDay? selected = await showTimePicker(
-                  context: context,
-                  initialTime: TimeOfDay.now(),
-                );
-                time.value = selected;
-              },
-              icon: const Icon(Icons.timer_outlined),
-              label: const Text('showTimePicker dialog'),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  Widget dropdownMenu() {
-    return Column(
-      children: [
-        Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
-          const Text("enableFilter: true "),
-          DropdownMenu<TargetPlatform>(
-            label: const Text('platform'),
-            enableFilter: true,
-            onSelected: (value) {},
-            dropdownMenuEntries: TargetPlatform.values.map((e) {
-              return DropdownMenuEntry<TargetPlatform>(value: e, label: e.name);
-            }).toList(),
-          )
-        ]),
-        Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
-          const Text("enableFilter: false"),
-          DropdownMenu<TargetPlatform>(
-            label: const Text('platform'),
-            enableFilter: false,
-            onSelected: (value) {},
-            dropdownMenuEntries: TargetPlatform.values.map((e) {
-              return DropdownMenuEntry<TargetPlatform>(value: e, label: e.name);
-            }).toList(),
-          ),
-        ]),
-      ],
-    );
-  }
-
-  Widget radio() {
-    List<TargetPlatform> targets = List.of([TargetPlatform.linux, TargetPlatform.windows, TargetPlatform.macOS]);
-    final Value<TargetPlatform?> radioListTile = (null as TargetPlatform?).signal();
-    final Value<TargetPlatform?> radio = (null as TargetPlatform?).signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Wrap(
-              children: [
-                const Text("RadioListTile:"),
-                for (var t in targets)
-                  RadioListTile<TargetPlatform>(
-                    title: Text(t.name),
-                    value: t,
-                    groupValue: radioListTile.value,
-                    toggleable: true,
-                    onChanged: (value) => radioListTile.value = value,
-                  ),
-                const Text("Radio:"),
-                for (var t in targets)
-                  ListTile(
-                    title: Text(t.name),
-                    leading: Radio<TargetPlatform>(
-                      value: t,
-                      groupValue: radio.value,
-                      onChanged: (value) => radio.value = value,
-                    ),
-                  ),
-              ],
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   Widget slider() {
     final Value<double> slider1 = 0.0.signal();
