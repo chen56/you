@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_web/app.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ActionChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_ButtonStyleButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CalendarDatePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Chip.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Icon
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_InputChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
@@ -71,7 +73,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "FilterChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart, child: Form_FilterChip()),
         FlutterExample(title: "InputChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_InputChip_dart, child: Form_InputChip()),
         FlutterExample(title: "showDateRangePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart, child: Form_showDateRangePicker()),
-        FlutterExample(title: "datePicker", child: buttonAndInput.datePicker()),
+        FlutterExample(title: "showDatePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showDatePicker_dart, child: Form_showDatePicker()),
+        FlutterExample(title: "CalendarDatePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_CalendarDatePicker_dart, child: Form_CalendarDatePicker()),
         FlutterExample(title: "timePicker", child: buttonAndInput.timePicker()),
         FlutterExample(title: "DropdownMenu", child: buttonAndInput.dropdownMenu()),
         FlutterExample(title: "Radio", child: buttonAndInput.radio()),
@@ -100,38 +103,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-  Widget datePicker() {
-    final Value<DateTime?> date = (null as DateTime?).signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Text("date: ${date.value}"),
-            CalendarDatePicker(
-              initialDate: DateTime.now(),
-              firstDate: DateTime(DateTime.now().year - 1),
-              lastDate: DateTime(DateTime.now().year + 1),
-              onDateChanged: (value) => date.value = value,
-            ),
-            TextButton.icon(
-              onPressed: () async {
-                DateTime? selected = await showDatePicker(
-                  context: context,
-                  initialDate: DateTime.now(),
-                  firstDate: DateTime(DateTime.now().year - 1),
-                  lastDate: DateTime(DateTime.now().year + 1),
-                );
-                date.value = selected;
-              },
-              icon: const Icon(Icons.calendar_month),
-              label: const Text('showDatePicker dialog'),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
   Widget timePicker() {
     final Value<TimeOfDay?> time = (null as TimeOfDay?).signal();
     return Watch(
