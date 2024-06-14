@@ -104,6 +104,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_BottomAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_Menu_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_Menu.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_DropdownMenu.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Slider_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Slider.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_TabBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationDrawer_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationDrawer.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart');

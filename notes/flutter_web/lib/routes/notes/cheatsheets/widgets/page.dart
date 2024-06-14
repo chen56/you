@@ -16,6 +16,7 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Inpu
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Radio.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Slider.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showTimePicker.dart';
@@ -81,7 +82,7 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "showTimePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showTimePicker_dart, child: Form_showTimePicker()),
         FlutterExample(title: "Radio", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Radio_dart, child: Form_Radio()),
         FlutterExample(title: "DropdownMenu", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart, child: Form_DropdownMenu()),
-        FlutterExample(title: "Slider", child: buttonAndInput.slider()),
+        FlutterExample(title: "Slider", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Slider_dart, child: Form_Slider()),
         FlutterExample(title: "Switch", child: buttonAndInput.switchs()),
         FlutterExample(title: "TextField", child: buttonAndInput.textField()),
       ]),
@@ -107,37 +108,6 @@ void build(BuildContext context, Cell print) {
 
 class ButtonAndInput {
 
-  Widget slider() {
-    final Value<double> slider1 = 0.0.signal();
-    final Value<double> slider2 = 0.0.signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Slider(
-              max: 100,
-              value: slider1.value,
-              onChanged: (value) {
-                slider1.value = value;
-              },
-            ),
-            Text(slider1.value.toStringAsFixed(2)),
-            Slider(
-              max: 100,
-              divisions: 5,
-              secondaryTrackValue: 42,
-              value: slider2.value,
-              label: slider2.value.toString(),
-              onChanged: (value) {
-                slider2.value = value;
-              },
-            ),
-            Text("${slider2.value}"),
-          ],
-        );
-      },
-    );
-  }
 
   Widget switchs() {
     final Value<bool> switch1 = false.signal();
