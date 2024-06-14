@@ -108,6 +108,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Spacer_Placeholder_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_ChoiceChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_ChoiceChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_SliverAppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_LayoutCore_ContainerCell_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_AppBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart');

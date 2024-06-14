@@ -13,6 +13,7 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Icon
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_InputChip.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/LayoutCore_ContainerCell.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_AppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_BottomAppBar.dart';
@@ -69,8 +70,8 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "ChoiceChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_ChoiceChip_dart, child: Form_ChoiceChip()),
         FlutterExample(title: "FilterChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart, child: Form_FilterChip()),
         FlutterExample(title: "InputChip", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_InputChip_dart, child: Form_InputChip()),
+        FlutterExample(title: "showDateRangePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart, child: Form_showDateRangePicker()),
         FlutterExample(title: "datePicker", child: buttonAndInput.datePicker()),
-        FlutterExample(title: "dateRangePicker", child: buttonAndInput.dateRangePicker()),
         FlutterExample(title: "timePicker", child: buttonAndInput.timePicker()),
         FlutterExample(title: "DropdownMenu", child: buttonAndInput.dropdownMenu()),
         FlutterExample(title: "Radio", child: buttonAndInput.radio()),
@@ -99,9 +100,6 @@ void build(BuildContext context, Cell print) {
 }
 
 class ButtonAndInput {
-
-
-
   Widget datePicker() {
     final Value<DateTime?> date = (null as DateTime?).signal();
     return Watch(
@@ -127,31 +125,6 @@ class ButtonAndInput {
               },
               icon: const Icon(Icons.calendar_month),
               label: const Text('showDatePicker dialog'),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  Widget dateRangePicker() {
-    final Value<DateTimeRange?> dateRange = (null as DateTimeRange?).signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          children: <Widget>[
-            Text("date: ${dateRange.value}"),
-            TextButton.icon(
-              onPressed: () async {
-                DateTimeRange? selected = await showDateRangePicker(
-                  context: context,
-                  firstDate: DateTime(DateTime.now().year - 1),
-                  lastDate: DateTime(DateTime.now().year + 1),
-                );
-                dateRange.value = selected;
-              },
-              icon: const Icon(Icons.date_range),
-              label: const Text('showDateRangePicker dialog'),
             ),
           ],
         );
