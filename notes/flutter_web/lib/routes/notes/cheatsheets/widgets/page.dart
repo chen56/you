@@ -17,6 +17,8 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Sear
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_SegmentButton.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Radio.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Slider.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_Switch.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_TextField.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Form_showTimePicker.dart';
@@ -38,7 +40,6 @@ import 'package:you_flutter/state.dart';
 
 @NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
-  ButtonAndInput buttonAndInput = ButtonAndInput();
   TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
   AdvancedTemplateContainer advancedTemplateContainer = AdvancedTemplateContainer();
   Decorator decorator = Decorator();
@@ -81,10 +82,10 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "CalendarDatePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_CalendarDatePicker_dart, child: Form_CalendarDatePicker()),
         FlutterExample(title: "showTimePicker", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_showTimePicker_dart, child: Form_showTimePicker()),
         FlutterExample(title: "Radio", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Radio_dart, child: Form_Radio()),
-        FlutterExample(title: "DropdownMenu", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart, child: Form_DropdownMenu()),
+        FlutterExample(title: "DropdownMenu", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_DropdownMenu_dart, child: const Form_DropdownMenu()),
         FlutterExample(title: "Slider", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Slider_dart, child: Form_Slider()),
-        FlutterExample(title: "Switch", child: buttonAndInput.switchs()),
-        FlutterExample(title: "TextField", child: buttonAndInput.textField()),
+        FlutterExample(title: "Switch", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_Switch_dart, child: Form_Switch()),
+        FlutterExample(title: "TextField", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Form_TextField_dart, child: Form_TextField()),
       ]),
       Level1MasonryLayout(title: "text&info&tip", cellWidth: 300, children: [
         FlutterExample(title: "Badge", child: textAndInfoAndTip.badgesCell()),
@@ -104,65 +105,6 @@ void build(BuildContext context, Cell print) {
   );
 
   print(all);
-}
-
-class ButtonAndInput {
-
-
-  Widget switchs() {
-    final Value<bool> switch1 = false.signal();
-    final Value<bool> switchListTile1 = false.signal();
-    return Watch(
-      builder: (context) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const Text("Switch"),
-            Switch(value: switch1.value, onChanged: (value) => switch1.value = value),
-            Switch(value: switch1.value, onChanged: null),
-            const Divider(),
-            const Text("SwitchListTile"),
-            SwitchListTile(title: const Text("enable"), value: switchListTile1.value, onChanged: (value) => switchListTile1.value = value),
-            SwitchListTile(title: const Text("disable"), value: switchListTile1.value, onChanged: null),
-          ],
-        );
-      },
-    );
-  }
-
-  Widget textField() {
-    return Watch(
-      builder: (context) {
-        return const Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Password'),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              maxLength: 10,
-              maxLengthEnforcement: MaxLengthEnforcement.none,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: '手机号/Phone',
-                errorText: '手机号不能为空/phone should not empty',
-              ),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'disable ',
-                enabled: false,
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  }
 }
 
 class TextAndInfoAndTip {
