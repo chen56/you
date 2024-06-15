@@ -148,7 +148,11 @@
 - Drawer 抽屉
   - Drawer 不导航
   - NavigationDrawer 可导航
-- BottomSheet
+- BottomSheet  很少直接使用。用于在屏幕底部展示一个可拖动的半模态弹出界面。它从屏幕底部向上滑出，覆盖部分内容但不阻断与底层界面的交互，为用户提供额外的内容或选项，同时保持上下文的连贯性。
+  - 【特性】 可固定高度或全屏的、可拖动互动、支持模态（阻塞用户与底层交互直到BottomSheet关闭）和非模态（允许用户继续与底层界面交互）两种模式。
+  - 【原理】
+    - **persistent bottom sheet**  用 [ScaffoldState.showBottomSheet] 或 [Scaffold.bottomSheet] 创建持久`BottomSheet`
+    - **modal bottom sheet**  用 [showModalBottomSheet] 创建模态`BottomSheet`。
 
 ### 装饰器
 

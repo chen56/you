@@ -33,17 +33,17 @@ import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigatio
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationRail.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_SliverAppBar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Navigation_TabBar.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Overlays_BottomSheet.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Overlays_Dialog.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Divider.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Placeholder.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Spacer_Spacer.dart';
 import 'package:flutter_web/views/cell_layouts.dart';
 import 'package:you_flutter/note.dart';
-import 'package:you_flutter/state.dart';
 
 @NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
   TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
-  AdvancedTemplateContainer advancedTemplateContainer = AdvancedTemplateContainer();
   Decorator decorator = Decorator();
 
   var all = Column(
@@ -92,11 +92,11 @@ void build(BuildContext context, Cell print) {
       Level1MasonryLayout(title: "Feedback", cellWidth: 300, children: [
         FlutterExample(title: "ProgressIndicator", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_ProgressIndicator_dart, child: Feedback_ProgressIndicator()),
         FlutterExample(title: "RefreshIndicator", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_RefreshIndicator_dart, child: Feedback_RefreshIndicator()),
-        FlutterExample(title: "SnackBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_SnackBar_dart, child: Feedback_SnackBar()),
+        FlutterExample(title: "SnackBar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Feedback_SnackBar_dart, child: const Feedback_SnackBar()),
       ]),
       Level1MasonryLayout(title: "Overlays", cellWidth: 500, children: [
-        FlutterExample(title: "dialog", child: advancedTemplateContainer.dialog()),
-        FlutterExample(title: "bottomSheet", child: advancedTemplateContainer.bottomSheetCell()),
+        FlutterExample(title: "dialog", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Overlays_Dialog_dart, child: const Overlays_Dialog()),
+        FlutterExample(title: "BottomSheet", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Overlays_BottomSheet_dart, child: Overlays_BottomSheet()),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
         FlutterExample(title: "Card", child: decorator.cardCell()),
@@ -134,92 +134,6 @@ class TextAndInfoAndTip {
         ),
       ),
     ]);
-  }
-}
-
-class AdvancedTemplateContainer {
-
-  Widget bottomSheetCell() {
-    Value<PersistentBottomSheetController?> bottomSheetController = (null as PersistentBottomSheetController?).signal();
-
-    final bar = NavigationBar(
-      selectedIndex: 0,
-      destinations: [
-        NavigationDestination(icon: Badge.count(count: 1000, child: const Icon(Icons.mail_outlined)), label: 'Mail'),
-        const NavigationDestination(icon: Badge(label: Text('10'), child: Icon(Icons.chat_bubble_outline)), label: 'Chat'),
-        const NavigationDestination(icon: Badge(child: Icon(Icons.group_outlined)), label: 'Rooms'),
-        NavigationDestination(icon: Badge.count(count: 3, child: const Icon(Icons.videocam_outlined)), label: 'Meet'),
-      ],
-    );
-    return Watch(builder: (context) {
-      return Wrap(
-        alignment: WrapAlignment.spaceEvenly,
-        children: [
-          TextButton(
-            child: const Text('modal bottom sheet'),
-            onPressed: () {
-              showModalBottomSheet<void>(showDragHandle: true, context: context, builder: (context) => bar);
-            },
-          ),
-          TextButton(
-            child: Text(bottomSheetController.value == null ? 'open bottom sheet' : 'close bottom sheet'),
-            onPressed: () {
-              if (bottomSheetController.value != null) {
-                bottomSheetController.value?.close();
-                bottomSheetController.value = null;
-                return;
-              }
-              bottomSheetController.value = showBottomSheet(context: context, builder: (context) => bar);
-            },
-          ),
-        ],
-      );
-    });
-  }
-
-  Widget dialog() {
-    return Builder(builder: (context) {
-      return Wrap(
-        alignment: WrapAlignment.spaceEvenly,
-        children: [
-          TextButton(
-            child: const Text('dialog'),
-            onPressed: () {
-              showDialog<void>(
-                context: context,
-                builder: (context) => AlertDialog(
-                  title: const Text('''AlertDialog'''),
-                  content: const Text('''
-A Material Design alert dialog.
-An alert dialog (also known as a basic dialog) informs the user about
-situations that require acknowledgment. An alert dialog has an optional
-title and an optional list of actions. The title is displayed above the
-content and the actions are displayed below the content.'''),
-                  actions: <Widget>[
-                    FilledButton(child: const Text('Ok'), onPressed: () => Navigator.of(context).pop()),
-                  ],
-                ),
-              );
-            },
-          ),
-          TextButton(
-            child: const Text('Dialog.fullscreen'),
-            onPressed: () {
-              showDialog<void>(
-                context: context,
-                builder: (context) => Dialog.fullscreen(
-                  child: AppBar(
-                    title: const Text('Dialog.fullscreen'),
-                    centerTitle: false,
-                    leading: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
-                  ),
-                ),
-              );
-            },
-          ),
-        ],
-      );
-    });
   }
 }
 

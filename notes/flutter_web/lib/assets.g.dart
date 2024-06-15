@@ -113,6 +113,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_Checkbox_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_Checkbox.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_showDateRangePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_showDateRangePicker.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_CalendarDatePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_CalendarDatePicker.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Overlays_BottomSheet_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Overlays_BottomSheet.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_TextField_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_TextField.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Feedback_ProgressIndicator_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Feedback_ProgressIndicator.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_showDatePicker_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_showDatePicker.dart');
@@ -124,6 +125,7 @@ mixin AssetsMixin {
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_SearchAnchor_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_SearchAnchor.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FilterChip_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FilterChip.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_FloatingActionButton_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_FloatingActionButton.dart');
+  final Asset lib_routes_notes_cheatsheets_widgets__examples_Overlays_Dialog_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Overlays_Dialog.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Form_CheckboxListTile_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Form_CheckboxListTile.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Feedback_SnackBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Feedback_SnackBar.dart');
   final Asset lib_routes_notes_cheatsheets_widgets__examples_Navigation_NavigationBar_dart = Asset('lib/routes/notes/cheatsheets/widgets/_examples/Navigation_NavigationBar.dart');
