@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/app.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Decorator_Badge.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Decorator_Card.dart';
+import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Decorator_CircleAvatar.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_ProgressIndicator.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_RefreshIndicator.dart';
 import 'package:flutter_web/routes/notes/cheatsheets/widgets/_examples/Feedback_SnackBar.dart';
@@ -43,9 +46,6 @@ import 'package:you_flutter/note.dart';
 
 @NoteAnnotation(label: "Widgets", publish: true)
 void build(BuildContext context, Cell print) {
-  TextAndInfoAndTip textAndInfoAndTip = TextAndInfoAndTip();
-  Decorator decorator = Decorator();
-
   var all = Column(
     children: [
       Level1MasonryLayout(title: "导航与页面", cellWidth: 350, children: [
@@ -99,85 +99,12 @@ void build(BuildContext context, Cell print) {
         FlutterExample(title: "BottomSheet", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Overlays_BottomSheet_dart, child: Overlays_BottomSheet()),
       ]),
       Level1MasonryLayout(title: "装饰器,Decorator", cellWidth: 500, children: [
-        FlutterExample(title: "Card", child: decorator.cardCell()),
-        FlutterExample(title: "Badge", child: textAndInfoAndTip.badgesCell()),
-        FlutterExample(title: "CircleAvatar", child: textAndInfoAndTip.circleAvatar()),
+        FlutterExample(title: "Card", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Decorator_Card_dart, child: const Decorator_Card()),
+        FlutterExample(title: "Badge", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Decorator_Badge_dart, child: const Decorator_Badge()),
+        FlutterExample(title: "CircleAvatar", source: assets.lib_routes_notes_cheatsheets_widgets__examples_Decorator_CircleAvatar_dart, child: const Decorator_CircleAvatar()),
       ]),
     ],
   );
 
   print(all);
-}
-
-class TextAndInfoAndTip {
-  Widget circleAvatar() {
-    return const Row(children: [
-      CircleAvatar(child: Text('C')),
-      CircleAvatar(child: Icon(Icons.account_box)),
-      CircleAvatar(backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/2039742')),
-      CircleAvatar(backgroundImage: NetworkImage('https://img2.baidu.com/it/u=3784833129,896943374&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500')),
-    ]);
-  }
-
-  Widget badgesCell() {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-      Badge.count(count: 1000, child: const Icon(Icons.mail_outlined)),
-      const Badge(child: Icon(Icons.sms_failed_outlined)),
-      Badge.count(count: 23, child: ElevatedButton(onPressed: () {}, child: const Text("Button"))),
-      const Badge(
-        label: Text("2000 ¥"),
-        alignment: AlignmentDirectional.bottomCenter,
-        child: Card(
-          elevation: 4,
-          color: Colors.green,
-          child: Padding(padding: EdgeInsets.all(20), child: Text('Card')),
-        ),
-      ),
-    ]);
-  }
-}
-
-class Decorator {
-  Widget cardCell() {
-    return Builder(builder: (context) {
-      var colors = Theme.of(context).colorScheme;
-      return Wrap(
-        children: [
-          Card(
-            elevation: 4,
-            child: Container(
-              width: 80,
-              height: 80,
-              alignment: Alignment.center,
-              padding: const EdgeInsets.fromLTRB(10, 5, 5, 10),
-              child: const Text('Elevated'),
-            ),
-          ),
-          Card(
-            elevation: 0,
-            color: colors.surfaceDim,
-            child: Container(
-              width: 80,
-              height: 80,
-              alignment: Alignment.center,
-              child: const Text('Filled'),
-            ),
-          ),
-          Card(
-            elevation: 4,
-            shape: RoundedRectangleBorder(
-              side: BorderSide(color: colors.outlineVariant),
-              borderRadius: const BorderRadius.all(Radius.circular(12)),
-            ),
-            child: Container(
-              width: 80,
-              height: 80,
-              alignment: Alignment.center,
-              child: const Text('Border'),
-            ),
-          ),
-        ],
-      );
-    });
-  }
 }
