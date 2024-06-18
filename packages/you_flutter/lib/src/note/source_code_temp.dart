@@ -1,11 +1,14 @@
-import 'package:_you_dart_internal/core.dart';
+import 'package:_you_dart_internal/utils.dart';
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
+import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/session.dart';
+import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/memory_file_system.dart';
+
 // ignore: implementation_imports, there is no other way i don t want to copy it .
 import 'package:analyzer/src/test_utilities/mock_sdk.dart';
 import 'package:meta/meta.dart';
@@ -13,20 +16,27 @@ import 'package:path/path.dart' as path_;
 
 typedef _AddCell = ({Block belongTo, MethodInvocation invocation});
 
+
+
 /// SourceCode : dart file
 ///   - List<CodeBlock> manyBlocks; // block cut by Print.xxx
 @internal
-class SourceCode {
+class SourceCodeTemp {
   final String content;
   final FunctionDeclaration? buildFunction;
   final List<({int lineNo, String content, int offset, int end})> lines;
-  final Iterable<(_AddCell, _AddCell?)> addCells;
+  final List<(_AddCell element, _AddCell? next)> cellBlocks;
 
-  SourceCode._(this.content, this.buildFunction, this.addCells) : lines = _lineOffsets(content).toList();
+  SourceCodeTemp._(this.content, this.buildFunction, this.cellBlocks) : lines = _lines(content).toList();
 
-  static SourceCode parseUnit(ResolvedUnitResult resolvedUnitResult) {
-    _CodeVisitor visitor = _CodeVisitor(resolvedUnitResult.content);
-    resolvedUnitResult.unit.visitChildren(visitor);
+  static SourceCodeTemp parse(String content) {
+    final result = parseString(content: content, throwIfDiagnostics: true, featureSet: FeatureSet.latestLanguageVersion());
+    assert(result.errors.isEmpty, "parse code error: ${result.errors}");
+    _CodeVisitorTemp visitor = _CodeVisitorTemp();
+
+    var unit = result.unit;
+    unit.visitChildren(visitor);
+
     Block? findFirstBlockParent(AstNode node) {
       var parent = node.parent;
       if (parent == null) {
@@ -39,7 +49,7 @@ class SourceCode {
     }
 
     List<({MethodInvocation invocation, Block belongTo})> addCells = [];
-    for (var i in visitor.addCells) {
+    for (var i in visitor.cellBlocks) {
       Block? found = findFirstBlockParent(i);
       if (found != null) {
         addCells.add((invocation: i, belongTo: found));
@@ -47,9 +57,10 @@ class SourceCode {
     }
     var addCellWithNextList = collections.combineNext(addCells);
 
-    return SourceCode._(resolvedUnitResult.content, visitor.buildFunction, addCellWithNextList);
+    return SourceCodeTemp._(content, visitor.buildFunction, addCellWithNextList.toList());
   }
 
+  //暂时无用，use case要改
   String findCellCodeByLineNo(int lineNo) {
     assert(lineNo <= lines.length);
 
@@ -66,21 +77,20 @@ class SourceCode {
       }
     }
 
-    if (addCells.isEmpty) {
+    if (cellBlocks.isEmpty) {
       if (buildFunction == null) {
         return "";
       } else {
         var body = buildFunction!.functionExpression.body;
         var result = content.substring(body.beginToken.end, body.endToken.offset);
         return _trimBlankLine(result);
-
       }
     }
 
-    for (var addCellWithNext in addCells) {
+    for (var addCellWithNext in cellBlocks) {
       var (current, next) = addCellWithNext;
-      int beginLine = offsetAtLine(current.invocation.offset);
-      int endLine = offsetAtLine(current.invocation.end);
+      int beginLine = _offsetToLineNo(current.invocation.offset);
+      int endLine = _offsetToLineNo(current.invocation.end);
       if (!(beginLine <= lineNo && lineNo <= endLine)) {
         continue;
       }
@@ -105,10 +115,12 @@ class SourceCode {
     }
     return "";
   }
-  static String _trimBlankLine(String str){
-    return str.split("\n").where((line)=>!strings.isBlank(line)).join("\n");
+
+  static String _trimBlankLine(String str) {
+    return str.split("\n").where((line) => !strings.isBlank(line)).join("\n");
   }
-  int offsetAtLine(int offset) {
+
+  int _offsetToLineNo(int offset) {
     for (var line in lines) {
       if (line.offset <= offset && offset <= line.end) {
         return line.lineNo;
@@ -124,7 +136,7 @@ class SourceCode {
 
   /// return all lines info,
   // line start 1,offset start 0
-  static Iterable<({int lineNo, String content, int offset, int end})> _lineOffsets(String content) sync* {
+  static Iterable<({int lineNo, String content, int offset, int end})> _lines(String content) sync* {
     int offset = 0;
     for (var MapEntry(key: index, value: content) in content.split("\n").asMap().entries) {
       yield (lineNo: index + 1, content: content, offset: offset, end: offset + content.length);
@@ -134,38 +146,12 @@ class SourceCode {
   }
 }
 
-class CodeBlock {
-  final String _compilationUnitContent;
-  final int offset;
-  final int end;
-  final List<CodeBlock> _children = [];
 
-  CodeBlock({required this.offset, required this.end, required String compilationUnitContent}) : _compilationUnitContent = compilationUnitContent;
-
-  int get length => end - offset;
-
-  List<CodeBlock> get children => List.unmodifiable(_children);
-
-  String get code {
-    return _compilationUnitContent.substring(offset, end);
-  }
-
-  bool contains(int anOffset) {
-    return offset <= anOffset && anOffset <= end;
-  }
-
-  @override
-  String toString() {
-    return "$offset:$end";
-  }
-}
-
-class _CodeVisitor extends GeneralizingAstVisitor {
+class _CodeVisitorTemp extends GeneralizingAstVisitor {
   FunctionDeclaration? buildFunction;
-  final String content;
-  List<MethodInvocation> addCells = [];
+  List<MethodInvocation> cellBlocks = [];
 
-  _CodeVisitor(this.content);
+  _CodeVisitorTemp();
 
   @override
   visitFunctionDeclaration(FunctionDeclaration node) {
@@ -178,25 +164,21 @@ class _CodeVisitor extends GeneralizingAstVisitor {
   @override
   visitMethodInvocation(MethodInvocation node) {
     if (<String>{"addCell", "addCellWith"}.contains(node.methodName.name)) {
-      addCells.add(node);
+      cellBlocks.add(node);
     }
     return super.visitMethodInvocation(node);
   }
 
-  // @override
-  // visitNode(AstNode node) {
-  //   print("ssssss node:${node.runtimeType}: ${node.toSource()}");
-  //   return super.visitNode(node);
-  // }
+// @override
+// visitNode(AstNode node) {
+//   print("ssssss node:${node.runtimeType}: ${node.toSource()}");
+//   return super.visitNode(node);
+// }
 }
 
-class FindCellAdd {
-  final InvocationExpression invocation;
-
-  FindCellAdd(this.invocation);
-}
-
-class CodeAnalyzer {
+/// 实验mock sdk 看能否用element模式而不是ast，未成功暂放
+@internal
+class CodeAnalyzerTemp {
   final _resourceProvider = MemoryResourceProvider();
   late final AnalysisSession session;
   final ({String path, String content}) _defaultInitLib = (
@@ -210,7 +192,7 @@ class Cell{
   """
   );
 
-  CodeAnalyzer() {
+  CodeAnalyzerTemp() {
     var libs = [_defaultInitLib];
     for (var lib in libs) {
       _newFile(lib.path, lib.content);

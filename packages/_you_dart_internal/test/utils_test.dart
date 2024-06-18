@@ -1,4 +1,4 @@
-import 'package:_you_dart_internal/core.dart';
+import 'package:_you_dart_internal/utils.dart';
 import 'package:checks/checks.dart';
 import 'package:test/test.dart';
 

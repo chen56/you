@@ -228,6 +228,7 @@ bake.__path_basename() {
   echo "${pathLikeStr##*/}"
 }
 
+# FIXME 重复列出children，bake flutter_web :列出多个gens
 # Samples:
 #    bake.__cmd_children
 #            => list root children

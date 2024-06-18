@@ -1,62 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class CellView extends StatelessWidget {
-  final String title;
-  final Widget child;
-  final double? width;
-  final double? height;
-  final BoxConstraints? constraints;
-
-  const CellView({
-    super.key,
-    required this.title,
-    this.width,
-    this.height,
-    this.constraints,
-    required this.child,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    var colors = Theme.of(context).colorScheme;
-    var textStyle = Theme.of(context).textTheme;
-    return Container(
-      decoration: BoxDecoration(color: colors.surfaceContainerLow, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
-      child: Column(
-        children: [
-          Container(
-            height: 36,
-            color: colors.surfaceContainerHigh,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                const SizedBox(width: 10),
-                Text(title, style: textStyle.titleMedium),
-                const Spacer(),
-                IconButton(icon: const Icon(size: 24, Icons.code), onPressed: () {}),
-                IconButton(icon: const Icon(size: 24, Icons.fullscreen), onPressed: () {}),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            height: height,
-            constraints: constraints,
-            // color: colors.surface,
-
-            padding: const EdgeInsets.all(12),
-            child: child,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class Level1GridLayout extends StatelessWidget {
   final String title;
-  final List<CellView> children;
+  final List<Widget> children;
   final double? cellWidth;
 
   const Level1GridLayout({super.key, required this.title, this.cellWidth, required this.children});
@@ -103,7 +50,7 @@ class Level1GridLayout extends StatelessWidget {
 
 class Level1MasonryLayout extends StatelessWidget {
   final String title;
-  final List<CellView> children;
+  final List<Widget> children;
   final double? cellWidth;
 
   const Level1MasonryLayout({super.key, required this.title, this.cellWidth, required this.children});

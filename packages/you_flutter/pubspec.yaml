@@ -36,7 +36,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   checks: ^0.3.0
-  flutter_lints: ^3.0.2
+  flutter_lints: ^4.0.0
 
 
 dependency_overrides:

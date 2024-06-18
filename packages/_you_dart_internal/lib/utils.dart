@@ -4,8 +4,7 @@ import 'package:meta/meta.dart';
 
 Types types = Types();
 Strings strings = Strings();
-final Collections collections=Collections();
-
+final Collections collections = Collections();
 
 @experimental
 typedef Convert<FROM, TO> = TO Function(FROM from);
@@ -57,7 +56,6 @@ base mixin class Types {
   }
 }
 
-
 /// 范型参数只有在类型内才能看见，比如Map Signal内的key, value类型外部是无法看见的，
 /// 只能通过钩子传出来
 @experimental
@@ -78,6 +76,7 @@ final class TypeHook<T> {
   bool isNullable() {
     return null is T;
   }
+
   bool isNullableOf(T t) {
     return null is T || t == null;
   }
@@ -90,6 +89,7 @@ final class TypeHook<T> {
 @experimental
 class Unique {
   final String name;
+
   Unique(this.name);
 
   String shortHash(Object? object) {
@@ -98,7 +98,6 @@ class Unique {
 
   @override
   String toString() => '[#$name:${shortHash(this)}]';
-
 }
 
 class Strings {
@@ -119,9 +118,7 @@ class Strings {
   }
 }
 
-
-
-class Collections{
+class Collections {
   Iterable<(E value, E? next)> combineNext<E>(Iterable<E> values) sync* {
     var list = values.toList();
     for (int i = 0; i < list.length; i++) {
@@ -132,5 +129,4 @@ class Collections{
       }
     }
   }
-
 }

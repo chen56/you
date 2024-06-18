@@ -1,15 +1,10 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:meta/meta_meta.dart';
-import 'package:stack_trace/stack_trace.dart';
-import 'package:source_map_stack_trace/source_map_stack_trace.dart' as source_map_stack_trace;
-import 'package:path/path.dart' as path;
-import 'package:source_maps/source_maps.dart' as source_map;
 import 'package:you_flutter/router.dart';
 import 'package:you_flutter/src/note/contents/contents.dart';
 import 'package:you_flutter/src/router.dart';
 import 'package:you_flutter/state.dart';
-import 'package:http/http.dart' as http;
 
 typedef NoteBuilder = void Function(BuildContext context, Cell print);
 typedef NoteLayoutBuilder = NoteMixin Function(BuildContext context, NoteMixin child);
@@ -66,6 +61,7 @@ base class ToNote extends To {
   @nonVirtual
   bool get isPublish => pageAnno == null ? false : pageAnno!.publish;
 
+  @override
   @nonVirtual
   String get label => pageAnno == null ? part : pageAnno!.label;
 
@@ -92,7 +88,7 @@ final class _DefaultNote extends StatelessWidget with NoteMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Watch(builder:(context) {
+    return Watch(builder: (context) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,19 +137,6 @@ base class Cell {
     return cell;
   }
 
-  @internal
-  Future<({Trace dartTrace, Frame? callerFrame})> caller() {
-    try {
-      throw Exception("track caller line");
-    } catch (e, trace) {
-      return _findCallerLine(
-        trace: trace,
-        location: Uri.base,
-        jsSourceMapLoader: (uri) async => (await http.get(uri)).body,
-      );
-    }
-  }
-
   @nonVirtual
   bool isCellsEmpty() => _children.isEmpty;
 
@@ -182,51 +165,5 @@ base class Cell {
 
   List<Cell> toList() {
     return List.from(_traverse(this));
-  }
-
-  static Future<({Trace dartTrace, Frame? callerFrame})> _findCallerLine({
-    required StackTrace trace,
-    required Uri location,
-    Future<String> Function(Uri uri)? jsSourceMapLoader,
-  }) async {
-    Uri getJsMapUriFromJsTrace(StackTrace trace) {
-      var parsed = Trace.from(trace);
-      for (var frame in parsed.frames) {
-        // 如果遇到解析不了的行(可能发生在测试中或其他情况)
-        if (frame.line == null || frame.uri.path == "unparsed") {
-          continue;
-        }
-        if (path.basename(frame.uri.path) != "main.dart.js") {
-          return frame.uri.replace(path: "${frame.uri.path}.map");
-        }
-      }
-      throw AssertionError("current only support deferred import page, that uri looks like: http://localhost:8080/you/flutter_web/main.dart.js_24.part.js, but your stack: $trace  ");
-    }
-
-    Frame? findCallerLineInDartTrace(StackTrace stackTrace, Uri location) {
-      var trace = Trace.from(stackTrace);
-      Frame? found;
-      // 找到堆栈中连续出现的本页面中最后一个，就是哪一行实际触发了异常
-      for (var frame in trace.frames) {
-        if (frame.uri.path.endsWith(path.normalize("/notes/${location.fragment}/note.dart"))) {
-          found = frame;
-        } else {
-          if (found != null) {
-            return found;
-          }
-        }
-      }
-      return found;
-    }
-
-    Future<Trace> jsTraceToDartTrace(StackTrace jsTrace, Uri location) async {
-      String sourceMap = await jsSourceMapLoader!(getJsMapUriFromJsTrace(trace));
-      var dartTrace = source_map_stack_trace.mapStackTrace(source_map.parse(sourceMap), jsTrace);
-      return Trace.from(dartTrace);
-    }
-
-    var dartTrace = jsSourceMapLoader == null ? Trace.from(trace) : await jsTraceToDartTrace(trace, location);
-
-    return (dartTrace: dartTrace, callerFrame: findCallerLineInDartTrace(dartTrace, location));
   }
 }

@@ -1,5 +1,5 @@
 @experimental
-library you_router;
+library;
 
 import 'package:meta/meta.dart';
 

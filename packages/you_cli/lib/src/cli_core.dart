@@ -7,13 +7,12 @@ import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:file/file.dart';
 import 'package:path/path.dart' as path;
-import 'package:you_cli/src/analyzer.dart';
-import 'package:you_cli/src/yaml.dart';
+import 'package:_you_dart_internal/analyzer.dart';
 
 // final Glob _PAGE_GLOB = Glob("{**/page.dart,page.dart}");
 class YouCli {
   YouCli({required Directory projectDir})
-      : dir_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
+      : path_project = projectDir.fileSystem.directory(path.normalize(path.absolute(projectDir.path))),
         fs = projectDir.fileSystem;
 
   static const Reference toType = Reference("To", "package:you_flutter/router.dart");
@@ -21,39 +20,59 @@ class YouCli {
   static const Reference forPageType = Reference("To", "package:you_flutter/router.dart");
   static const String layoutFunctionName = "build";
   static const String pageFunctionName = "build";
-  final Directory dir_project;
+  final Directory path_project;
   final FileSystem fs;
   Pubspec? _pubspec;
-  RouteNode? _rootRoute;
+  RouteDir? _rootRoute;
   AnalysisSession? _session;
 
-  Directory get dir_lib => dir_project.childDirectory("lib");
+  Directory get path_lib => path_project.childDirectory("lib");
 
-  Directory get dir_routes => dir_project.childDirectory("lib/routes");
+  Directory get path_routes => path_project.childDirectory("lib/routes");
 
-  Directory get dir_notes => dir_project.childDirectory("lib/routes/notes");
+  Directory get path_notes => path_project.childDirectory("lib/routes/notes");
 
-  File get file_routes_g_dart => dir_project.childFile("lib/routes.g.dart");
+  File get path_routes_g_dart => path_project.childFile("lib/routes.g.dart");
 
-  File get file_pubspec_yaml => dir_project.childFile("pubspec.yaml");
+  File get path_assets_g_dart => path_project.childFile("lib/assets.g.dart");
 
-  Pubspec get pubspec => _pubspec ??= Pubspec.parseFileSync(file_pubspec_yaml);
+  File get path_pubspec_yaml => path_project.childFile("pubspec.yaml");
+
+  Pubspec get pubspec => _pubspec ??= Pubspec.parse(path_pubspec_yaml.readAsStringSync());
+
+  static String pathToFlat(String path$) {
+    if (path$ == "/") {
+      return "root";
+    }
+    var names = path$.split(path.separator).where((e) => e.isNotEmpty);
+    return names
+        .map((e) => e
+            // ignore: unnecessary_string_escapes
+            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
+            .replaceAll(".", "_")
+            .replaceAll("-", "_")
+            .replaceAll("&", "_")
+            .replaceAll("*", "_")
+            .replaceAll("*", "_")
+            .replaceAll("@", "_"))
+        .join("_");
+  }
 
   AnalysisSession get analysisSession {
     return _session ??= AnalysisContextCollection(
-      includedPaths: [dir_lib.path],
+      includedPaths: [path_lib.path],
       resourceProvider: PhysicalResourceProvider(),
     ).contexts[0].currentSession;
   }
 
-  Future<RouteNode> get rootRoute async => _rootRoute ??= await RouteNode.from(this, dir_routes);
+  Future<RouteDir> get rootRoute async => _rootRoute ??= await RouteDir.from(this, path_routes);
 
   Future<FunctionElement?> analyzeLayout(File file) async {
     if (!await file.exists()) {
       return null;
     }
 
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
     return unit.topFunction(layoutFunctionName);
   }
 
@@ -61,41 +80,43 @@ class YouCli {
     if (!await file.exists()) {
       return null;
     }
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
     return unit.topFunction(pageFunctionName);
   }
 
-  Future<PageAnnotationAnalyzer?> analyzePageAnno(File file) async {
+  Future<PageAnnotation?> analyzePageAnno(File file) async {
     if (!await file.exists()) {
       return null;
     }
-    UnitAnalyzer unit = await UnitAnalyzer.resolve(analysisSession, file);
-    return PageAnnotationAnalyzer.find(unit);
+    CompilationUnitReader unit = await CompilationUnitReader.resolve(analysisSession, file.path);
+    return PageAnnotation.find(unit);
   }
 }
 
-class PageAnnotationAnalyzer extends AnnotationAnalyzer {
+class PageAnnotation {
   static const String annoName = "PageAnnotation";
 
-  PageAnnotationAnalyzer(super.annotation, super.dartObject, super.unit);
+  PageAnnotation(this.anno);
 
-  static PageAnnotationAnalyzer? find(UnitAnalyzer unit) {
+  AnnotationReader anno;
+
+  static PageAnnotation? find(CompilationUnitReader unit) {
     var anno = unit.annotationOnTopFunction(funcName: YouCli.pageFunctionName, annoType: annoName);
     if (anno == null) return null;
-    return PageAnnotationAnalyzer(anno.ast, anno.value, unit);
+    return PageAnnotation(AnnotationReader(anno.ast, anno.value, unit));
   }
 
-  String get label => getField("label")!.toStringValue()!;
+  String get label => anno.getField("label")!.toStringValue()!;
 
   Reference? get toType {
-    return getFieldTypeAsRef("toType");
+    return anno.getFieldTypeAsRef("toType");
   }
 
-  String get toSource => annotation.toSource();
+  String get toSource => anno.annotation.toSource();
 }
 
-class RouteNode {
-  RouteNode({
+class RouteDir {
+  RouteDir({
     required this.dir,
     required this.children,
     this.layout,
@@ -112,21 +133,25 @@ class RouteNode {
   static const String layoutDart = "layout.dart";
 
   final YouCli cli;
-  final List<RouteNode> children;
+  final List<RouteDir> children;
   final Directory dir;
   final FunctionElement? layout;
   final FunctionElement? page;
-  late RouteNode _parent = this;
-  final PageAnnotationAnalyzer? pageAnno;
+  late RouteDir _parent = this;
+  final PageAnnotation? pageAnno;
 
-  static Future<RouteNode> from(YouCli cli, Directory dir) async {
+  static Future<RouteDir> from(YouCli cli, Directory dir) async {
     if (!dir.existsSync()) {
-      return RouteNode(cli: cli, dir: dir, children: []);
+      return RouteDir(cli: cli, dir: dir, children: []);
     }
 
-    var children = await Future.wait(dir.listSync(recursive: false).whereType<Directory>().map((e) async => await from(cli, e)));
+    var children = await Future.wait(dir
+        .listSync(recursive: false)
+        //
+        .whereType<Directory>()
+        .map((e) async => await from(cli, e)));
     var layoutFunction = await cli.analyzeLayout(dir.childFile(layoutDart));
-    return RouteNode(
+    return RouteDir(
       cli: cli,
       dir: dir,
       page: await cli.analyzePage(dir.childFile(pageDart)),
@@ -136,17 +161,19 @@ class RouteNode {
     );
   }
 
+  bool get isRoute => !dir.basename.startsWith("_");
+
   get hasPage => page != null;
 
   int get level => isRoot ? 0 : _parent.level + 1;
 
-  RouteNode get root => isRoot ? this : _parent.root;
+  RouteDir get root => isRoot ? this : _parent.root;
 
   bool get isRoot => _parent == this;
 
-  File get file_page_dart => dir.childFile("page.dart");
+  File get path_page_dart => dir.childFile("page.dart");
 
-  File get file_layout_dart => dir.childFile("layout.dart");
+  File get path_layout_dart => dir.childFile("layout.dart");
 
   String get routePath {
     if (isRoot) {
@@ -155,45 +182,35 @@ class RouteNode {
     return "/${path.relative(dir.path, from: root.dir.path)}";
   }
 
+  String get assetPath {
+    if (isRoot) {
+      return "lib/routes/";
+    }
+    return "lib/routes$routePath/";
+  }
+
   String get pagePackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_page_dart.path, from: cli.dir_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(path_page_dart.path, from: cli.path_lib.path)}";
   }
 
   String get layoutPackageUrl {
-    return "package:${cli.pubspec.name}/${path.relative(file_layout_dart.path, from: cli.dir_lib.path)}";
+    return "package:${cli.pubspec.name}/${path.relative(path_layout_dart.path, from: cli.path_lib.path)}";
   }
 
   /// note name平整化,可作为变量名：
   /// lib/routes/1.a/b/page.dart  ---> a_b
-  String get flatName {
-    String p = routePath;
-    if (p == "/") {
-      return "root";
-    }
-    var names = p.split(path.separator).where((e) => e.isNotEmpty);
-    return names
-        .map((e) => e
-            // ignore: unnecessary_string_escapes
-            .replaceAll(RegExp("^\\d+\."), "") // 1.z.about -> note_note-self
-            .replaceAll(".", "_")
-            .replaceAll("-", "_")
-            .replaceAll("&", "_")
-            .replaceAll("*", "_")
-            .replaceAll("*", "_")
-            .replaceAll("@", "_"))
-        .join("_");
-  }
+  String get flatName => YouCli.pathToFlat(routePath);
 
-  List<RouteNode> toList({
+  List<RouteDir> toList({
     bool includeThis = true,
-    bool Function(RouteNode path)? where,
-    Comparator<RouteNode>? sortBy,
+    bool Function(RouteDir path)? where,
+    Comparator<RouteDir>? sortBy,
   }) {
     where = where ?? (e) => true;
     if (!where(this)) {
       return [];
     }
-    List<RouteNode> sorted = List.from(children);
+    List<RouteDir> sorted = List.from(children);
     if (sortBy != null) {
       sorted.sort(sortBy);
     }
@@ -208,8 +225,8 @@ class RouteNode {
     return dir.toString();
   }
 
-  RouteNode? findLayoutSync() {
-    if (file_layout_dart.existsSync()) {
+  RouteDir? findLayoutSync() {
+    if (path_layout_dart.existsSync()) {
       return this;
     }
     if (isRoot) {

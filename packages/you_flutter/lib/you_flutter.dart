@@ -1,3 +1,6 @@
+library ;
+
+export 'package:you_flutter/asset.dart';
 export 'package:you_flutter/better_ui.dart';
 export 'package:you_flutter/ide_style.dart';
 export 'package:you_flutter/note.dart';

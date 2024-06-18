@@ -126,9 +126,11 @@
 ### 获取尺寸的方法
 
 - StatefulWidget在最外层会随着屏幕大小变化自动build
-- 自适应尺寸：/flutter/examples/api/lib/widgets/framework/build_owner.0.dart
+- 自适应尺寸：`flutter/examples/api/lib/widgets/framework/build_owner.0.dart`
 - 组件尺寸：WidgetsBinding.instance.addPostFrameCallback中： (context.findRenderObject() as RenderBox).size
 - 屏幕宽度：`double screenWidth = MediaQuery.of(context).size.width;`
+- 监听屏幕尺寸变化，listen : `WidgetsBindingObserver.didChangeMetrics`
+
 
 ## 展示性组件
 
@@ -146,12 +148,16 @@
 - Drawer 抽屉
   - Drawer 不导航
   - NavigationDrawer 可导航
-- BottomSheet
+- BottomSheet  很少直接使用。用于在屏幕底部展示一个可拖动的半模态弹出界面。它从屏幕底部向上滑出，覆盖部分内容但不阻断与底层界面的交互，为用户提供额外的内容或选项，同时保持上下文的连贯性。
+  - 【特性】 可固定高度或全屏的、可拖动互动、支持模态（阻塞用户与底层交互直到BottomSheet关闭）和非模态（允许用户继续与底层界面交互）两种模式。
+  - 【原理】
+    - **persistent bottom sheet**  用 [ScaffoldState.showBottomSheet] 或 [Scaffold.bottomSheet] 创建持久`BottomSheet`
+    - **modal bottom sheet**  用 [showModalBottomSheet] 创建模态`BottomSheet`。
 
 ### 装饰器
 
-- 增强
-  - **简介**: 装饰器指外观样式或特性增强
+- **简介**: 装饰器指附加的外观样式或特性增强
+- 增强&包边&轮廓
   - **BoxDecoration**:指定颜色、背景图片、边框`BoxBorder`
   - **PhysicalModel**:用于给其子 Widget 添加物理外观属性，如阴影、边界和背景色等，从而使得 UI 具有更加丰富的视觉效果和质感。它主要用于实现Material设计中的“ elevation”（即阴影效果）和颜色叠加效果。
     - 与 Card 相比，PhysicalModel 提供了更多的自定义选项，比如可以自定义阴影颜色，而不仅仅是依赖主题。
@@ -165,6 +171,8 @@
       - **InkWell**
   - **Card**: 虽然不是纯粹的布局组件，但因其提供了统一的矩形框样式和阴影效果，常用于构建卡片式的布局单元，特别是在列表和网格布局中。
     - 【原理】内部包了个`Material`
+  - **Badge** : A badge's label conveys a small amount of information about its child, like a count or status
+    - 【原理】[api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
 
 - 隐藏&可见性
   - **Opacity**: 是一种可以改变其子组件透明度的布局组件。它并不会影响子组件的实际尺寸和布局，而是控制子组件的内容可视性。
@@ -244,7 +252,7 @@
 - **Icon** 图标
 - Image
 
-### button&input&form
+### form&button&input
 
 - **Button**
   - **ButtonStyleButton**
@@ -275,23 +283,29 @@
 - Radio button: Radio、RadioListTile
 - Slider：Used to select from a range of values.
   - ref: <https://m3.material.io/components/sliders/overview>
-- CalendarDatePicker
+- **DateTime相关**
+  - **CalendarDatePicker** 日期选择器，较少使用，直接用`showDatePicker`
+  - **YearPicker** The year picker widget is rarely used directly. Instead, consider using [CalendarDatePicker], or [showDatePicker] which create full date pickers.
+  - **showDatePicker** 弹出日期选择器Dialog
 
-### Text&信息&提示
+### Text
 
 - **Text**
   - **Text.rich**
   - RichText
 - **TextSelectionToolbar**
-- Markdown
-- SelectionArea 可选择界面一整个区域的文本
-- DefaultTextStyle
-- 进度条Progress indicators
-  - CircularProgressIndicator
-  - LinearProgressIndicator
-- Badges [api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
-- **Tooltip**
-- **SnackBar**
+- **Markdown**
+- **SelectionArea** 可选择界面一整个区域的文本
+- **DefaultTextStyle**
+
+### Feedback
+
+- **ProgressIndicator** 进度指示器的抽象类
+  - **CircularProgressIndicator** 圆形的进度指示器，通常用于表示不确定的等待时间，即你不知道任务何时完成的情况。这个组件展示为一个旋转的环形动画，没有具体的进度百分比显示。适用于页面加载、数据获取等需要等待但不明确等待时长的场景。
+  - **LinearProgressIndicator** 线性的进度条。用于展示任务完成的百分比，与CircularProgressIndicator不同，它能明确显示任务完成的具体进度，因此非常适合于上传、下载或者其他有明确进度的任务。用户可以通过进度条的填充长度直观了解任务的完成情况
+- **RefreshIndicator** 用于实现“下拉刷新”功能的交互。当用户在滚动列表的顶部向下滑动时，会显示一个通常为圆形的进度指示器（默认是CircularProgressIndicator），表明应用正在刷新数据。此组件通常包裹在可滚动的Widget（如ListView）外面，自动处理下拉手势检测、显示刷新指示器以及在数据刷新完成后隐藏指示器。
+- **Tooltip** 用于为其他widgets提供悬停时的文本提示信息。当用户将鼠标指针（在桌面设备上）或触摸并停留（在触摸屏设备上）在一个带有Tooltip的widget上时，会显示一个包含说明性文字的弹出框。
+- **SnackBar** 一种轻量级的反馈机制，用于在屏幕底部短暂显示信息，以通知用户操作的结果或其他非关键信息，比如成功保存、删除某项、或简单的警告信息。
   - 【原理】ScaffoldMessenger.of(context).showSnackBar()
 
 ### 滚动scrolling
@@ -314,6 +328,15 @@
     - 【场景】
       - 适用于需要实现复杂滚动效果的场景,如带有吸顶效果的应用栏、嵌套的列表/网格等。
   - **NestedScrollView**:在同一滚动视图中嵌套其他滚动视图，如顶部有一个固定的AppBar和底部有一个可滚动的列表。
+- **Scrollbar**: 此小部件提供了一个可视化的滚动条，它通常与一个可滚动的小部件（如SingleChildScrollView，ListView等）一起使用，以指示滚动位置并允许用户通过拖动滚动条来滚动内容。Scrollbar本身并不包含滚动逻辑，它依赖于关联的可滚动小部件及其控制器（ScrollController）来工作。
+  - 【场景】
+    - 在许多场景下，直接使用SingleChildScrollView或其他可滚动小部件（如ListView, CustomScrollView）而不附加Scrollbar也是完全可行的，特别是当设计要求简洁或是在移动设备上时，因为移动设备通常依靠直接触摸屏幕滚动，而不需要显式的滚动条
+    - 需要定制滚动条时用Scrollbar包其他SingleChildScrollView/ListView等
+- **Scrollable** Scrollable是一个抽象类，它不直接用于布局构建，但它是实现自定义滚动组件或者理解Flutter中滚动机制的关键。
+  - 【场景】
+    - 直接构造[Scrollable]的情况很少见。相反，请考虑 [ListView] 或 [GridView]，它们结合了滚动、视口和布局模型。要组合布局模型（或使用自定义布局模式），请考虑使用 [CustomScrollView]。
+    - 静态 [Scrollable.of] 和 [Scrollable.ensureVisible] 函数通常用于与 [ListView] 或 [GridView] 内的 [Scrollable] 小部件交互。
+
 - **滚动相关**
   - **ScrollNotification** and **NotificationListener**: which can be used to watch the scroll position without using a [ScrollController].
   - **ScrollController**: 记得dispose
