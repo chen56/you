@@ -42,7 +42,8 @@ class FlutterExampleState extends State<FlutterExample> {
       var result = Container(
         decoration: BoxDecoration(color: colors.surfaceContainerLow, borderRadius: BorderRadius.circular(8.0), border: Border.all(width: 1, color: colors.outlineVariant)),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          // fill width
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
               height: 36,
@@ -55,7 +56,9 @@ class FlutterExampleState extends State<FlutterExample> {
                   const Spacer(),
                   IconButton(
                       icon: const Icon(size: 24, Icons.code),
-                      tooltip: "open source code",
+                      selectedIcon: const Icon(size: 24, Icons.code_off),
+                      isSelected: showCode.value,
+                      tooltip: showCode.value ? "close source code" : "open source code",
                       onPressed: () async {
                         showCode.value = !showCode.value;
                         if (code.value == null) {
@@ -86,7 +89,7 @@ class FlutterExampleState extends State<FlutterExample> {
                   theme: vs2015Theme,
                   padding: const EdgeInsets.all(6),
                 ),
-              ),
+              )
           ],
         ),
       );

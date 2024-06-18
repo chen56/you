@@ -91,6 +91,7 @@ class HighlightView extends StatelessWidget {
       _textStyle = _textStyle.merge(textStyle);
     }
 
+    final ThemeData t = Theme.of(context);
     return Container(
       color: theme[_rootKey]?.backgroundColor ?? _defaultBackgroundColor,
       padding: padding,
