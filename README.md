@@ -25,3 +25,4 @@ git clone git@github.com:chen56/note.git
 - 尽量减少对客户代码的干扰，比如给客户程序要求继承某XXXWidget基础类这种设计，违反flutter一般性直觉
 - 无生命期的设计，避免客户代码使用addListener/removeListener、open/close这种需要自己操心打开关闭等生命周期的方法，与其和内存泄漏作斗争，不如避免硬刚
 - 减少class static 函数,类似Types.isType()，应设计为 object method + global var的形式，'types=Types; types.isType()', 给客户程序依赖注入的机会
+
