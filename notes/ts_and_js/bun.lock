@@ -5,6 +5,7 @@
       "name": "study-ts",
       "devDependencies": {
         "@types/bun": "latest",
+        "@types/node": "^22.15.18",
       },
       "peerDependencies": {
         "typescript": "^5",
